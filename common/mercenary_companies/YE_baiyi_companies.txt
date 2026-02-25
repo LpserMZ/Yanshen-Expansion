@@ -1,0 +1,53 @@
+merc_elf_legion_early_stage = { #古代精灵军团
+	mercenary_desc_key = FREE_OF_ARMY_PROFESSIONALISM_COST #提示文字
+
+	cavalry_weight = 0 #骑兵占比
+	artillery_weight = 0 #炮兵占比
+	cavalry_cap = 0 # 骑兵数量上限
+	min_size = 10 #最小规模
+	max_size = 20 #最大规模
+	manpower_pool = 15 #起始人力池
+	#no_additional_manpower_from_max_size = yes #超出max_size的兵存到佣兵人力池
+	counts_towards_force_limit = no #不占用陆军上限
+
+	home_province = 8126 #总部所在地
+	cost_modifier = 0.10 #价格折扣
+	regiments_per_development = 0.05 #每点发展度对军队规模的影响
+
+	sprites = { sun_elf_sprite_pack } #兵模
+
+	trigger = { #可使用条件
+		has_country_flag = allow_merc_elf_legion_early_stage_flag
+	}
+	modifier = { #佣兵团专属修正
+		discipline = 0.05
+		shock_damage_received = -0.10
+	}
+}
+
+merc_redskin_hobgoblin = { #红夷兵
+	mercenary_desc_key = FREE_OF_ARMY_PROFESSIONALISM_COST #提示文字
+
+	cavalry_weight = 0 #骑兵占比
+	artillery_weight = 0 #炮兵占比
+	cavalry_cap = 0 # 骑兵数量上限
+	min_size = 10 #最小规模
+	max_size = 24 #最大规模
+	manpower_pool = 10 #起始人力池
+	#no_additional_manpower_from_max_size = yes #超出max_size的兵存到佣兵人力池
+	#counts_towards_force_limit = no #不占用陆军上限
+
+	home_province = 4532 #总部所在地
+	cost_modifier = 1 #价格折扣
+	regiments_per_development = 0.05 #每点发展度对军队规模的影响
+
+	sprites = { hobgoblin_sprite_pack } #兵模
+
+	trigger = { #可使用条件
+		has_country_flag = allow_merc_redskin_hobgoblin_flag
+	}
+	modifier = { #佣兵团专属修正
+		discipline = 0.025
+		morale_damage_received = -0.05
+	}
+}

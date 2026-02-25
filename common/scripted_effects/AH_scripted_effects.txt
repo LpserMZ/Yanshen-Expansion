@@ -1,0 +1,436 @@
+check_area_dev = { #计算区域发展度、平均发展度。
+	#0.初始化变量
+	set_variable = {
+		which = Num_$squence$
+		value = 0
+	}
+	set_variable = {
+		which = Num_total_$squence$
+		value = 0
+	}
+	set_variable = {
+		which = operator
+		value = 0
+	}
+	set_variable = {
+		which = dev_$squence$
+		value = 0 
+	}
+	set_variable = {
+		which = dev_tax_$squence$
+		value = 0 
+	}
+	set_variable = {
+		which = dev_production_$squence$
+		value = 0 
+	}
+	set_variable = {
+		which = dev_manpower_$squence$
+		value = 0 
+	}
+	#1.导出省份发展度
+	$fuya$ = { #省份数量，税收之和，生产之和，人力之和
+		if = {
+			limit = { owned_by = ROOT }
+			owner = {
+				change_variable = {
+					which = Num_$squence$
+					value = 1
+				}
+				change_variable = {
+					which = Num_total_$squence$
+					value = 1
+				}
+				export_to_variable = {
+					which = operator
+					value = base_tax
+					who = PREV
+				}
+				change_variable = {
+					which = dev_tax_$squence$
+					which = operator
+				}
+				export_to_variable = {
+					which = operator
+					value = base_production
+					who = PREV
+				}
+				change_variable = {
+					which = dev_production_$squence$
+					which = operator
+				}
+				export_to_variable = {
+					which = operator
+					value = base_manpower
+					who = PREV
+				}
+				change_variable = {
+					which = dev_manpower_$squence$
+					which = operator
+				}
+			}
+			
+		}
+		else = {
+			ROOT = {
+				change_variable = {
+					which = Num_total_$squence$
+					value = 1
+				}
+			}
+		}
+	}
+	#2.税收、生产、人力求和，得到总发展度
+	change_variable = { #税收
+		which = dev_$squence$
+		which = dev_tax_$squence$
+	}
+	change_variable = { #生产
+		which = dev_$squence$
+		which = dev_production_$squence$
+	}
+	change_variable = { #人力
+		which = dev_$squence$
+		which = dev_manpower_$squence$
+	}
+	#3.求平均发展度
+	set_variable = {
+		which = mean_dev_$squence$
+		which = dev_$squence$
+	}
+	divide_variable = { 
+		which = mean_dev_$squence$
+		which = Num_$squence$
+	}
+
+	set_variable = {
+		which = mean_dev_tax_$squence$
+		which = dev_tax_$squence$
+	}
+	divide_variable = { 
+		which = mean_dev_tax_$squence$
+		which = Num_$squence$
+	}
+
+	set_variable = {
+		which = mean_dev_production_$squence$
+		which = dev_production_$squence$
+	}
+	divide_variable = { 
+		which = mean_dev_production_$squence$
+		which = Num_$squence$
+	}
+
+	set_variable = {
+		which = mean_dev_manpower_$squence$
+		which = dev_manpower_$squence$
+	}
+	divide_variable = { 
+		which = mean_dev_manpower_$squence$
+		which = Num_$squence$
+	}
+	#4.结束
+	#得到了10个变量
+	
+	#check_area_dev使用说明
+		# $fuya$ #府衙,使用时填入区域名称
+		# $squence$ #序号，使用时填入的内容成为变量名称的一部分，所以要符合变量命名的规范。建议按顺序填数字。
+		# 创建的变量如下
+		# Num_$squence$ ：$fuya$区域全部的省份数量
+		# Num_total_$squence$ ：在$fuya$区域拥有的省份数量
+		# dev_tax_$squence$ ：区域已拥有省份的基础税收之和
+		# dev_production_$squence$ ：区域已拥有省份的基础生产之和
+		# dev_manpower_$squence$ ：区域已拥有省份的基础人力之和
+		# dev_$squence$ ：区域已拥有省份的发展度之和
+		# mean_dev_tax_$squence$ ：区域已拥有省份的平均基础税收
+		# mean_dev_production_$squence$ ：区域已拥有省份的平均基础生产
+		# mean_dev_manpower_$squence$ ：区域已拥有省份的平均基础人力
+		# mean_dev_$squence$ ：区域已拥有省份的平均发展度	
+}
+
+initialize_dev_bonus = { #发展度奖励机制的初始化
+	if = {
+		limit = { NOT = { has_country_flag = dev_bonus_var_already_initialized_flag } }
+		set_country_flag = dev_bonus_var_already_initialized_flag
+		#行省开发状态
+		# set_variable = { which = b1c1p1_status value = 1 }
+		# set_variable = { which = b1c1p2_status value = 1 }
+		# set_variable = { which = b1c2p1_status value = 1 }
+		# set_variable = { which = b1c2p2_status value = 1 }
+		# set_variable = { which = b1c3p1_status value = 1 }
+		# set_variable = { which = b1c3p2_status value = 1 }
+		# set_variable = { which = b1c4p1_status value = 1 }
+		# set_variable = { which = b1c4p2_status value = 1 }
+		# set_variable = { which = b1c4p3_status value = 1 }
+		# set_variable = { which = b1c5p1_status value = 1 }
+		# set_variable = { which = b1c6p1_status value = 1 }
+		# set_variable = { which = b1c6p2_status value = 1 }
+		# set_variable = { which = b1c6p3_status value = 1 }
+		# set_variable = { which = b1c7p1_status value = 1 }
+		# set_variable = { which = b1c7p2_status value = 1 }
+		# set_variable = { which = b1c7p3_status value = 1 }
+		# set_variable = { which = b1c8p1_status value = 1 }
+		# set_variable = { which = b1c8p2_status value = 1 }
+		# set_variable = { which = b1c8p3_status value = 1 }
+
+		set_variable = { which = b1c9p1_status value = 1 }
+		set_variable = { which = b1c10p1_status value = 1 }
+		set_variable = { which = b1c11p1_status value = 1 }
+		set_variable = { which = b1c12p1_status value = 1 }
+		set_variable = { which = b1c13p1_status value = 1 }
+		set_variable = { which = b1c14p1_status value = 1 }
+		set_variable = { which = b1c15p1_status value = 1 }
+		set_variable = { which = b1c16p1_status value = 1 }
+		set_variable = { which = b1c17p1_status value = 1 }
+		set_variable = { which = b1c18p1_status value = 1 }
+		set_variable = { which = b1c19p1_status value = 1 }
+		set_variable = { which = b1c20p1_status value = 1 }
+
+		#行省组的升级点数
+		set_variable = { which = dev_bonus_exotic_upgrade_points value = 0 }
+		# set_variable = { which = b1c1_upgrade_points value = 0 }
+		# set_variable = { which = b1c2_upgrade_points value = 0 }
+		# set_variable = { which = b1c3_upgrade_points value = 0 }
+		# set_variable = { which = b1c4_upgrade_points value = 0 }
+		# set_variable = { which = b1c5_upgrade_points value = 0 }
+		# set_variable = { which = b1c6_upgrade_points value = 0 }
+		# set_variable = { which = b1c7_upgrade_points value = 0 }
+		# set_variable = { which = b1c8_upgrade_points value = 0 }
+
+		set_variable = { which = b1c9_upgrade_points value = 0 }
+		set_variable = { which = b1c10_upgrade_points value = 0 }
+		set_variable = { which = b1c11_upgrade_points value = 0 }
+		set_variable = { which = b1c12_upgrade_points value = 0 }
+		set_variable = { which = b1c13_upgrade_points value = 0 }
+		set_variable = { which = b1c14_upgrade_points value = 0 }
+		set_variable = { which = b1c15_upgrade_points value = 0 }
+		set_variable = { which = b1c16_upgrade_points value = 0 }
+		set_variable = { which = b1c17_upgrade_points value = 0 }
+		set_variable = { which = b1c18_upgrade_points value = 0 }
+		set_variable = { which = b1c19_upgrade_points value = 0 }
+		set_variable = { which = b1c20_upgrade_points value = 0 }
+
+
+		#buff获取情况
+		# set_variable = { which = b1c1_buff_1 value = 0 }
+		# set_variable = { which = b1c1_buff_2 value = 0 }
+		# set_variable = { which = b1c1_buff_3 value = 0 }
+		# set_variable = { which = b1c2_buff_1 value = 0 }
+		# set_variable = { which = b1c2_buff_2 value = 0 }
+		# set_variable = { which = b1c2_buff_3 value = 0 }
+		# set_variable = { which = b1c3_buff_1 value = 0 }
+		# set_variable = { which = b1c3_buff_2 value = 0 }
+		# set_variable = { which = b1c3_buff_3 value = 0 }
+		# set_variable = { which = b1c4_buff_1 value = 0 }
+		# set_variable = { which = b1c4_buff_2 value = 0 }
+		# set_variable = { which = b1c4_buff_3 value = 0 }
+		# set_variable = { which = b1c4_buff_4 value = 0 }
+		# set_variable = { which = b1c4_buff_5 value = 0 }
+		# set_variable = { which = b1c5_buff_1 value = 0 }
+		# set_variable = { which = b1c5_buff_2 value = 0 }
+		# set_variable = { which = b1c6_buff_1 value = 0 }
+		# set_variable = { which = b1c6_buff_2 value = 0 }
+		# set_variable = { which = b1c6_buff_3 value = 0 }
+		# set_variable = { which = b1c6_buff_4 value = 0 }
+		# set_variable = { which = b1c6_buff_5 value = 0 }
+		# set_variable = { which = b1c7_buff_1 value = 0 }
+		# set_variable = { which = b1c7_buff_2 value = 0 }
+		# set_variable = { which = b1c7_buff_3 value = 0 }
+		# set_variable = { which = b1c7_buff_4 value = 0 }
+		# set_variable = { which = b1c7_buff_5 value = 0 }
+		# set_variable = { which = b1c8_buff_1 value = 0 }
+		# set_variable = { which = b1c8_buff_2 value = 0 }
+		# set_variable = { which = b1c8_buff_3 value = 0 }
+		# set_variable = { which = b1c8_buff_4 value = 0 }
+		# set_variable = { which = b1c8_buff_5 value = 0 }
+
+		set_variable = { which = b1c9_buff_1 value = 0 }
+		set_variable = { which = b1c9_buff_2 value = 0 }
+		set_variable = { which = b1c9_buff_3 value = 0 }
+		set_variable = { which = b1c10_buff_1 value = 0 }
+		set_variable = { which = b1c10_buff_2 value = 0 }
+		set_variable = { which = b1c10_buff_3 value = 0 }
+		set_variable = { which = b1c11_buff_1 value = 0 }
+		set_variable = { which = b1c11_buff_2 value = 0 }
+		set_variable = { which = b1c11_buff_3 value = 0 }
+		set_variable = { which = b1c11_buff_4 value = 0 }
+		set_variable = { which = b1c12_buff_1 value = 0 }
+		set_variable = { which = b1c12_buff_2 value = 0 }
+		set_variable = { which = b1c12_buff_3 value = 0 }
+		set_variable = { which = b1c12_buff_4 value = 0 }
+		set_variable = { which = b1c13_buff_1 value = 0 }
+		set_variable = { which = b1c13_buff_2 value = 0 }
+		set_variable = { which = b1c13_buff_3 value = 0 }
+		set_variable = { which = b1c13_buff_4 value = 0 }
+		set_variable = { which = b1c14_buff_1 value = 0 }
+		set_variable = { which = b1c14_buff_2 value = 0 }
+		set_variable = { which = b1c14_buff_3 value = 0 }
+		set_variable = { which = b1c14_buff_4 value = 0 }
+		set_variable = { which = b1c14_buff_5 value = 0 }
+		set_variable = { which = b1c15_buff_1 value = 0 }
+		set_variable = { which = b1c15_buff_2 value = 0 }
+		set_variable = { which = b1c15_buff_3 value = 0 }
+		set_variable = { which = b1c15_buff_4 value = 0 }
+		set_variable = { which = b1c16_buff_1 value = 0 }
+		set_variable = { which = b1c16_buff_2 value = 0 }
+		set_variable = { which = b1c16_buff_3 value = 0 }
+		set_variable = { which = b1c16_buff_4 value = 0 }
+		set_variable = { which = b1c16_buff_5 value = 0 }
+		set_variable = { which = b1c17_buff_1 value = 0 }
+		set_variable = { which = b1c17_buff_2 value = 0 }
+		set_variable = { which = b1c17_buff_3 value = 0 }
+		set_variable = { which = b1c17_buff_4 value = 0 }
+		set_variable = { which = b1c17_buff_5 value = 0 }
+		set_variable = { which = b1c18_buff_1 value = 0 }
+		set_variable = { which = b1c18_buff_2 value = 0 }
+		set_variable = { which = b1c18_buff_3 value = 0 }
+		set_variable = { which = b1c19_buff_1 value = 0 }
+		set_variable = { which = b1c19_buff_2 value = 0 }
+		set_variable = { which = b1c19_buff_3 value = 0 }
+		set_variable = { which = b1c20_buff_1 value = 0 }
+		set_variable = { which = b1c20_buff_2 value = 0 }
+		set_variable = { which = b1c20_buff_3 value = 0 }
+		set_variable = { which = b1c20_buff_4 value = 0 }
+	}
+}
+dev_bonus_buff_upgrade = { #buff名称不能直接和章节划等号，所以得分开写效果
+	if = {
+		limit = { has_country_modifier = $buffname$_II }
+		remove_country_modifier = $buffname$_II
+		add_country_modifier = {
+			name = $buffname$_III
+			duration = -1
+		}
+	}
+	else_if = {
+		limit = { has_country_modifier = $buffname$_I }
+		remove_country_modifier = $buffname$_I
+		add_country_modifier = {
+			name = $buffname$_II
+			duration = -1
+		}
+	}
+	else = {
+		add_country_modifier = {
+			name = $buffname$_I
+			duration = -1
+		}
+	}
+	
+	#下面注释掉的是额外buff的模块
+	# if = { #c1p1
+	# 	limit = {
+	# 		is_variable_equal = { which = dev_bonus_chapter value =1 }
+	# 		is_variable_equal = { which = dev_bonus_page value =1 }
+	# 	}
+	# 	#effect
+	# }
+	# else_if = { #c2p2
+	# 	limit = {}
+	# 	#effect
+	# }
+
+}
+dev_bonus_remove_buff = {
+	# buffname buff名称
+	# mode 选择模式
+	set_variable = { which = dev_bonus_remove_buff_mode value = $mode$ }
+	if = { # mode == 0 ,彻底清除
+		limit = { is_variable_equal = { which = dev_bonus_remove_buff_mode value = 0 } }
+		if = {
+			limit = { has_country_modifier = $buffname$_III }
+			remove_country_modifier = $buffname$_III
+		}
+		if = {
+			limit = { has_country_modifier = $buffname$_II }
+			remove_country_modifier = $buffname$_II
+		}
+		if = {
+			limit = { has_country_modifier = $buffname$_I }
+			remove_country_modifier = $buffname$_I
+		}
+	}
+	if = { # mode == 1 ,降级。也许以后会用的上吧
+		limit = { is_variable_equal = { which = dev_bonus_remove_buff_mode value = 1 } }
+		if = {
+			limit = { has_country_modifier = $buffname$_III }
+			remove_country_modifier = $buffname$_III
+			add_country_modifier = {
+				name = $buffname$_II
+				duration = -1
+			}
+		}
+		else_if = {
+			limit = { has_country_modifier = $buffname$_II }
+			remove_country_modifier = $buffname$_II
+			add_country_modifier = {
+				name = $buffname$_I
+				duration = -1
+			}
+		}
+		else_if = {
+			limit = { has_country_modifier = $buffname$_I }
+			remove_country_modifier = $buffname$_I
+		}
+	}
+}
+dev_bonus_change_upgrade_points_with_rule_4 = {
+	# $chapter$
+	# $page$
+	if = {
+		limit = {
+			is_variable_equal = { which = b1c$chapter$p$page$_status value = 5 }
+		}
+		change_variable = { which = b1c$chapter$_upgrade_points value = 2 }
+	}
+	else_if = {
+		limit = {
+			check_variable = { which = b1c$chapter$p$page$_status value = 1 }
+		}
+		change_variable = { which = b1c$chapter$_upgrade_points value = 1 }
+	}
+	custom_tooltip = dev_bonus_change_upgrade_points_rule_4_tooltip
+}
+dev_bonus_change_upgrade_points_with_rule_5 = {
+	# $chapter$
+	# $page$
+	if = {
+		limit = {
+			is_variable_equal = { which = b1c$chapter$p$page$_status value = 5 }
+		}
+		change_variable = { which = b1c$chapter$_upgrade_points value = 3 }
+	}
+	else_if = {
+		limit = {
+			check_variable = { which = b1c$chapter$p$page$_status value = 3 }
+		}
+		change_variable = { which = b1c$chapter$_upgrade_points value = 2 }
+	}
+	else_if = {
+		limit = {
+			check_variable = { which = b1c$chapter$p$page$_status value = 1 }
+		}
+		change_variable = { which = b1c$chapter$_upgrade_points value = 1 }
+	}
+	custom_tooltip = dev_bonus_change_upgrade_points_rule_5_tooltip
+}
+dev_bonus_change_upgrade_points_with_rule_6 = {
+	# $chapter$
+	# $page$
+	if = {
+		limit = {
+			OR = {
+				is_variable_equal = { which = b1c$chapter$p$page$_status value = 5 }
+				is_variable_equal = { which = b1c$chapter$p$page$_status value = 4 }
+			}
+		}
+		change_variable = { which = b1c$chapter$_upgrade_points value = 3 }
+	}
+	else_if = {
+		limit = {
+			check_variable = { which = b1c$chapter$p$page$_status value = 1 }
+		}
+		change_variable = { which = b1c$chapter$_upgrade_points value = 2 }
+	}
+	custom_tooltip = dev_bonus_change_upgrade_points_rule_6_tooltip
+}

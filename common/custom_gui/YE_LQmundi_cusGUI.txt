@@ -1,0 +1,336 @@
+# 天地灵气
+
+custom_button = { #开关
+	name = "button_lingqi_mundi"
+	tooltip = button_lingqi_mundi_tooltip
+	potential = {
+		religion_group = halessi
+		NOT = { religion = mystic_accord }
+		NOT = { religion = neokttareum }
+	}
+	trigger = { 
+		has_country_flag = LQmundi_initialized_flag
+	}
+	effect = {
+		if = { #关闭
+			limit = {
+				has_country_flag = lingqi_mundi_flag
+			}
+			clr_country_flag = lingqi_mundi_flag
+		}
+		else = { #开启
+			set_country_flag = lingqi_mundi_flag
+		}
+	}
+}
+
+
+##学科总览窗口
+	custom_window = { #学科总览窗口
+		name = window_lingqi_mundi
+		potential = { 
+			has_country_flag = lingqi_mundi_flag
+		}
+	}
+	custom_button = { #关闭窗口
+		name = "lingqi_mundi_ESCAPE"
+		tooltip = lingqi_mundi_ESCAPE_tooltip
+		potential = {}
+		trigger = {}
+		effect = {
+			clr_country_flag = lingqi_mundi_flag # 总览窗口
+			if = { # 学科法术窗口
+				limit = {
+					has_country_flag = LQmundi_discipline_sorcery_flag
+				}
+				clr_country_flag = LQmundi_discipline_sorcery_flag
+			}
+		}
+	}
+	# 学科
+		custom_text_box = { #灵气点数 文本
+			name = TextBox_LQpower_current_GetValue
+			potential = { always = yes }
+		}
+
+		custom_button = { #学科1
+			name = "button_LQmundi_discipline_1"
+			tooltip = button_LQmundi_discipline_1_tooltip
+			potential = {}
+			trigger = {}
+			effect = {
+				set_country_flag = LQmundi_discipline_sorcery_flag
+				set_variable = {
+					which = LQmundi_discipline_x
+					value = 1
+				}
+			}
+		}
+		custom_text_box = { #学科1 经验
+			name = TextBox_LQdspl_1_exp_GetValue
+			potential = { always = yes }
+		}
+		custom_button = { #学科2
+			name = "button_LQmundi_discipline_2"
+			tooltip = button_LQmundi_discipline_2_tooltip
+			potential = {}
+			trigger = {}
+			effect = {
+				set_country_flag = LQmundi_discipline_sorcery_flag
+				set_variable = {
+					which = LQmundi_discipline_x
+					value = 2
+				}
+			}
+		}
+		custom_text_box = { #学科2 经验
+			name = TextBox_LQdspl_2_exp_GetValue
+			potential = { always = yes }
+		}
+		custom_button = { #学科3
+			name = "button_LQmundi_discipline_3"
+			tooltip = button_LQmundi_discipline_3_tooltip
+			potential = {}
+			trigger = {}
+			effect = {
+				set_country_flag = LQmundi_discipline_sorcery_flag
+				set_variable = {
+					which = LQmundi_discipline_x
+					value = 3
+				}
+			}
+		}
+		custom_text_box = { #学科3 经验
+			name = TextBox_LQdspl_3_exp_GetValue
+			potential = { always = yes }
+		}
+		custom_button = { #学科4
+			name = "button_LQmundi_discipline_4"
+			tooltip = button_LQmundi_discipline_4_tooltip
+			potential = {}
+			trigger = {}
+			effect = {
+				set_country_flag = LQmundi_discipline_sorcery_flag
+				set_variable = {
+					which = LQmundi_discipline_x
+					value = 4
+				}
+			}
+		}
+		custom_text_box = { #学科4 经验
+			name = TextBox_LQdspl_4_exp_GetValue
+			potential = { always = yes }
+		}
+		custom_button = { #学科5
+			name = "button_LQmundi_discipline_5"
+			tooltip = button_LQmundi_discipline_5_tooltip
+			potential = {}
+			trigger = {}
+			effect = {
+				set_country_flag = LQmundi_discipline_sorcery_flag
+				set_variable = {
+					which = LQmundi_discipline_x
+					value = 5
+				}
+			}
+		}
+		custom_text_box = { #学科5 经验
+			name = TextBox_LQdspl_5_exp_GetValue
+			potential = { always = yes }
+		}
+		custom_button = { #学科6
+			name = "button_LQmundi_discipline_6"
+			tooltip = button_LQmundi_discipline_6_tooltip
+			potential = {}
+			trigger = {}
+			effect = {
+				set_country_flag = LQmundi_discipline_sorcery_flag
+				set_variable = {
+					which = LQmundi_discipline_x
+					value = 6
+				}
+			}
+		}
+		custom_text_box = { #学科6 经验
+			name = TextBox_LQdspl_6_exp_GetValue
+			potential = { always = yes }
+		}
+		custom_button = { #学科7
+			name = "button_LQmundi_discipline_7"
+			tooltip = button_LQmundi_discipline_7_tooltip
+			potential = {}
+			trigger = {}
+			effect = {
+				set_country_flag = LQmundi_discipline_sorcery_flag
+				set_variable = {
+					which = LQmundi_discipline_x
+					value = 7
+				}
+			}
+		}
+		custom_text_box = { #学科7 经验
+			name = TextBox_LQdspl_7_exp_GetValue
+			potential = { always = yes }
+		}
+		custom_button = { #学科8
+			name = "button_LQmundi_discipline_8"
+			tooltip = button_LQmundi_discipline_8_tooltip
+			potential = {}
+			trigger = {}
+			effect = {
+				set_country_flag = LQmundi_discipline_sorcery_flag
+				set_variable = {
+					which = LQmundi_discipline_x
+					value = 8
+				}
+			}
+		}
+		custom_text_box = { #学科8 经验
+			name = TextBox_LQdspl_8_exp_GetValue
+			potential = { always = yes }
+		}
+	# 常用法术
+		###
+		###
+		###
+
+	##学科法术子窗口
+		custom_window = { #学科法术子窗口
+			name = window_LQmundi_discipline_sorcery
+			potential = { 
+				has_country_flag = LQmundi_discipline_sorcery_flag
+			}
+		}
+		custom_button = { #关闭窗口
+			name = "button_LQmundi_discipline_sorcery_ESCAPE"
+			tooltip = button_LQmundi_discipline_sorcery_ESCAPE_tooltip
+			potential = {}
+			trigger = {}
+			effect = {
+				clr_country_flag = LQmundi_discipline_sorcery_flag
+			}
+		}
+		# 学科1法术列表
+			custom_window = { #学科1
+				name = window_LQmundi_discipline_1
+				potential = { 
+					is_variable_equal = {
+						which = LQmundi_discipline_x
+						value = 1
+					}
+				}
+			}
+			
+			custom_button = { #法术1 效果
+				name = "button_LQmundi_discipline_1_sorcery_1"
+				tooltip = button_LQmundi_discipline_1_sorcery_1_tooltip
+				potential = {}
+				trigger = {}
+				effect = {
+					add_country_modifier = {
+						name = test_modifier_1
+						duration = 3650
+					}
+
+					LQmundi_cost_LQpower_script_effect = { value = 10 penalty = 0 } #消耗灵气
+					LQmundi_gain_effect_LQdspl_x_exp_script_effect = { value = 10 discipline_sequence = 1 } #获取经验
+				}
+			}
+			custom_button = { #法术2 效果
+				name = "button_LQmundi_discipline_1_sorcery_2"
+				tooltip = button_LQmundi_discipline_1_sorcery_2_tooltip
+				potential = {}
+				trigger = {}
+				effect = {
+					add_country_modifier = {
+						name = test_modifier_2
+						duration = 3650
+					}
+					# add_patriarch_authority = -10
+				}
+			}
+			custom_button = { #法术3 效果
+				name = "button_LQmundi_discipline_1_sorcery_3"
+				tooltip = button_LQmundi_discipline_1_sorcery_3_tooltip
+				potential = {}
+				trigger = {}
+				effect = {
+					add_country_modifier = {
+						name = test_modifier_3
+						duration = 3650
+					}
+					# add_patriarch_authority = -10
+				}
+			}
+			custom_button = { #法术4 效果
+				name = "button_LQmundi_discipline_1_sorcery_4"
+				tooltip = button_LQmundi_discipline_1_sorcery_4_tooltip
+				potential = {}
+				trigger = {}
+				effect = {
+					add_country_modifier = {
+						name = test_modifier_4
+						duration = 3650
+					}
+					# add_patriarch_authority = -10
+				}
+			}
+			custom_button = { #法术5 效果
+				name = "button_LQmundi_discipline_1_sorcery_5"
+				tooltip = button_LQmundi_discipline_1_sorcery_5_tooltip
+				potential = {}
+				trigger = {}
+				effect = {
+					add_country_modifier = {
+						name = test_modifier_5
+						duration = 3650
+					}
+					# add_patriarch_authority = -10
+				}
+			}
+			custom_button = { #法术6 效果
+				name = "button_LQmundi_discipline_1_sorcery_6"
+				tooltip = button_LQmundi_discipline_1_sorcery_6_tooltip
+				potential = {}
+				trigger = {}
+				effect = {
+					add_country_modifier = {
+						name = test_modifier_6
+						duration = 3650
+					}
+					# add_patriarch_authority = -10
+				}
+			}
+			custom_button = { #法术7 效果
+				name = "button_LQmundi_discipline_1_sorcery_7"
+				tooltip = button_LQmundi_discipline_1_sorcery_7_tooltip
+				potential = {}
+				trigger = {}
+				effect = {
+					add_country_modifier = {
+						name = test_modifier_7
+						duration = 3650
+					}
+					# add_patriarch_authority = -10
+				}
+			}
+			custom_button = { #法术8 效果
+				name = "button_LQmundi_discipline_1_sorcery_8"
+				tooltip = button_LQmundi_discipline_1_sorcery_8_tooltip
+				potential = {}
+				trigger = {}
+				effect = {
+					add_country_modifier = {
+						name = test_modifier_8
+						duration = 3650
+					}
+					# add_patriarch_authority = -10
+				}
+			}
+
+
+
+
+
+
+

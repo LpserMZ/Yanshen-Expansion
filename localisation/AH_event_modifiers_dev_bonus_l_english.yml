@@ -1,0 +1,263 @@
+﻿l_english:
+ shangan_fire_I:0 "U–uÿNb×Skp›R2O³RI"
+ shangan_fire_II:0 "U–uÿNb×Skp›R2O³RII"
+ shangan_fire_III:0 "U–uÿNb×Skp›R2O³RIII"
+ shangan_shock_I:0 "U–uÿNb×S²QûQ2O³RI"
+ shangan_shock_II:0 "U–uÿNb×S²QûQ2O³RII"
+ shangan_shock_III:0 "U–uÿNb×S²QûQ2O³RIII"
+ shangan_attrition_I:0 "U–uÿF–›QmcwI"
+ shangan_attrition_II:0 "U–uÿF–›QmcwII"
+ shangan_attrition_III:0 "U–uÿF–›QmcwIII"
+ gansu_bonus_modifier:0 "˜YVY±Rÿuƒw"
+ gansu_bonus_modifier_desc:0 "å‹w„v0WWWƒYÿûm RdkagHeœgåNBls^aˆ"
+
+ jinzhi_morale_damage_I:0 "KfôvÿNb×SëXlSbûQI"
+ jinzhi_morale_damage_II:0 "KfôvÿNb×SëXlSbûQII"
+ jinzhi_morale_damage_III:0 "KfôvÿNb×SëXlSbûQIII"
+ jinzhi_drill_I:0 "Kfôvÿè–ÍdÃu¦^mc1YI"
+ jinzhi_drill_II:0 "Kfôvÿè–ÍdÃu¦^mc1YII"
+ jinzhi_drill_III:0 "Kfôvÿè–ÍdÃu¦^mc1YIII"
+ jinzhi_reinforce_I:0 "KfôvÿeˆXT¦^I"
+ jinzhi_reinforce_II:0 "KfôvÿeˆXT¦^II"
+ jinzhi_reinforce_III:0 "KfôvÿeˆXT¦^III"
+
+ qiliao_mandate_I:0 "PŸËÿ)Y‹TžX•îOckI"
+ qiliao_mandate_II:0 "PŸËÿ)Y‹TžX•îOckII"
+ qiliao_mandate_III:0 "PŸËÿ)Y‹TžX•îOckIII"
+ qiliao_harmonize_I:0 "PŸËÿ—RYeTAm¦^I"
+ qiliao_harmonize_II:0 "PŸËÿ—RYeTAm¦^II"
+ qiliao_harmonize_III:0 "PŸËÿ—RYeTAm¦^III"
+ qiliao_build_I:0 "PŸËÿú^.±‚9I"
+ qiliao_build_II:0 "PŸËÿú^.±‚9II"
+ qiliao_build_III:0 "PŸËÿú^.±‚9III"
+
+ huaizhemin_travel_time_I:0 "îmYmý•ÿyrOLˆzöeô•I"
+ huaizhemin_travel_time_II:0 "îmYmý•ÿyrOLˆzöeô•II"
+ huaizhemin_travel_time_III:0 "îmYmý•ÿyrOLˆzöeô•III"
+ huaizhemin_mercanny_I:0 "îmYmý•ÿïS(u„vcYÇ–cO›QâVI"
+ huaizhemin_mercanny_II:0 "îmYmý•ÿïS(u„vcYÇ–cO›QâVII"
+ huaizhemin_mercanny_III:0 "îmYmý•ÿïS(u„vcYÇ–cO›QâVIII"
+ huaizhemin_embargo_I:0 "îmYmý•ÿyÐHe‡sI"
+ huaizhemin_embargo_II:0 "îmYmý•ÿyÐHe‡sII"
+ huaizhemin_embargo_III:0 "îmYmý•ÿyÐHe‡sIII"
+ huaizhemin_autonomy_I:0 "îmYmý•ÿgNOê»l¦^I"
+ huaizhemin_autonomy_II:0 "îmYmý•ÿgNOê»l¦^II"
+ huaizhemin_autonomy_III:0 "îmYmý•ÿgNOê»l¦^III"
+ huaizhemin_expel_I:0 "îmYmý•ÿqšSpeÏe²±‚9I"
+ huaizhemin_expel_II:0 "îmYmý•ÿqšSpeÏe²±‚9II"
+ huaizhemin_expel_III:0 "îmYmý•ÿqšSpeÏe²±‚9III"
+ huaizhemin_diplomat_I:0 "îmYmý•ÿY²N˜RI"
+ huaizhemin_diplomat_II:0 "îmYmý•ÿY²N˜RII"
+ huaizhemin_diplomat_III:0 "îmYmý•ÿY²N˜RIII"
+ nanzhili_bonus_modifier:0 "˜YVY±RÿWSôv¶–"
+ nanzhili_bonus_modifier_desc:0 "å‹w„v0WWWƒYÿûm RdkagHeœgåNBls^aˆ"
+
+ shuxiangyue_idea_I:0 "‡Xn²|ÿtõV±‚9I"
+ shuxiangyue_idea_II:0 "‡Xn²|ÿtõV±‚9II"
+ shuxiangyue_idea_III:0 "‡Xn²|ÿtõV±‚9III"
+ shuxiangyue_culture_promotion_I:0 "‡Xn²|ÿ²‹T‡eS±‚9I"
+ shuxiangyue_culture_promotion_II:0 "‡Xn²|ÿ²‹T‡eS±‚9II"
+ shuxiangyue_culture_promotion_III:0 "‡Xn²|ÿ²‹T‡eS±‚9III"
+ shuxiangyue_culture_conversion_I:0 "‡Xn²|ÿlØS‡eS±‚9I"
+ shuxiangyue_culture_conversion_II:0 "‡Xn²|ÿlØS‡eS±‚9II"
+ shuxiangyue_culture_conversion_III:0 "‡Xn²|ÿlØS‡eS±‚9III"
+ shuxiangyue_innovation_I:0 "‡Xn²|ÿR°e¦^I"
+ shuxiangyue_innovation_II:0 "‡Xn²|ÿR°e¦^II"
+ shuxiangyue_innovation_III:0 "‡Xn²|ÿR°e¦^III"
+ shuxiangyue_institution_I:0 "‡Xn²|ÿ`noI"
+ shuxiangyue_institution_II:0 "‡Xn²|ÿ`noII"
+ shuxiangyue_institution_III:0 "‡Xn²|ÿ`noIII"
+ sichuan_bonus_modifier:0 "˜YVY±RÿÛVÝT"
+ sichuan_bonus_modifier:0 "å‹w„v0WWWƒYÿûm RdkagHeœgåNBls^aˆ"
+ guangdong_bonus_modifier:0 "˜YVY±Rÿ^N"
+ guangdong_bonus_modifier:0 "å‹w„v0WWWƒYÿûm RdkagHeœgåNBls^aˆ"
+
+ yvegan_dev_cost_I:0 "kŒ‘cÿÑSUSb,gI"
+ yvegan_dev_cost_II:0 "kŒ‘cÿÑSUSb,gII"
+ yvegan_dev_cost_III:0 "kŒ‘cÿÑSUSb,gIII"
+ yvegan_build_time_I:0 "kŒ‘cÿú^.öeô•I"
+ yvegan_build_time_II:0 "kŒ‘cÿú^.öeô•II"
+ yvegan_build_time_III:0 "kŒ‘cÿú^.öeô•III"
+ yvegan_governing_I:0 "kŒ‘cÿ»ltb,gI"
+ yvegan_governing_II:0 "kŒ‘cÿ»ltb,gII"
+ yvegan_governing_III:0 "kŒ‘cÿ»ltb,gIII"
+ yvegan_regiment_time_I:0 "kŒ‘cÿßRuQöeô•I"
+ yvegan_regiment_time_II:0 "kŒ‘cÿßRuQöeô•II"
+ yvegan_regiment_time_III:0 "kŒ‘cÿßRuQöeô•III"
+
+ dianqiangui_devastation_I:0 "ÇnÔžBhÿÏQSRƒŸ^¦^I"
+ dianqiangui_devastation_II:0 "ÇnÔžBhÿÏQSRƒŸ^¦^II"
+ dianqiangui_devastation_III:0 "ÇnÔžBhÿÏQSRƒŸ^¦^III"
+ dianqiangui_stability_I:0 "ÇnÔžBhÿ3zšR¦^I"
+ dianqiangui_stability_II:0 "ÇnÔžBhÿ3zšR¦^II"
+ dianqiangui_stability_III:0 "ÇnÔžBhÿ3zšR¦^III"
+ dianqiangui_prosperity_I:0 "ÇnÔžBhÿAucƒ¦^I"
+ dianqiangui_prosperity_II:0 "ÇnÔžBhÿAucƒ¦^II"
+ dianqiangui_prosperity_III:0 "ÇnÔžBhÿAucƒ¦^III"
+ dianqiangui_manpower_recovery_I:0 "ÇnÔžBhÿºN›Rb`Y¦^I"
+ dianqiangui_manpower_recovery_II:0 "ÇnÔžBhÿºN›Rb`Y¦^II"
+ dianqiangui_manpower_recovery_III:0 "ÇnÔžBhÿºN›Rb`Y¦^III"
+ dianqiangui_moral_recovery_I:0 "ÇnÔžBhÿF–›QëXlb`Y¦^I"
+ dianqiangui_moral_recovery_II:0 "ÇnÔžBhÿF–›QëXlb`Y¦^II"
+ dianqiangui_moral_recovery_III:0 "ÇnÔžBhÿF–›QëXlb`Y¦^III"
+ dianqiangui_final_reward_A:0 "ÇnÔžBhIVÿ¸œT"
+ dianqiangui_final_reward_B:0 "ÇnÔžBhIVÿmpýV"
+ dianqiangui_final_reward_C:0 "ÇnÔžBhIVÿ%`­ˆ"
+ dianqiangui_advanced_reward:0 "ÇnÔžBh3.5ÿVg"
+
+ taiwan_colonists_I:0 "ðSÿ–kl–I"
+ taiwan_colonists_II:0 "ðSÿ–kl–II"
+ taiwan_colonists_III:0 "ðSÿ–kl–III"
+ taiwan_naval_I:0 "ðSÿwm›Q.OßuI"
+ taiwan_naval_II:0 "ðSÿwm›Q.OßuII"
+ taiwan_naval_III:0 "ðSÿwm›Q.OßuIII"
+
+ zhaoming_fire_damage_received_I:0 "-ffÿNb×Skp›R2O³RI"
+ zhaoming_fire_damage_received_II:0 "-ffÿNb×Skp›R2O³RII"
+ zhaoming_fire_damage_received_III:0 "-ffÿNb×Skp›R2O³RIII"
+ zhaoming_shock_damage_received_I:0 "-ffÿNb×S²QûQ2O³RI"
+ zhaoming_shock_damage_received_II:0 "-ffÿNb×S²QûQ2O³RII"
+ zhaoming_shock_damage_received_III:0 "-ffÿNb×S²QûQ2O³RIII"
+ zhaoming_land_attrition_I:0 "-ffÿF–›QmcwI"
+ zhaoming_land_attrition_II:0 "-ffÿF–›QmcwII"
+ zhaoming_land_attrition_III:0 "-ffÿF–›QmcwIII"
+
+ tianxi_build_cost_I:0 ")Y‰ÿú^.±‚9I"
+ tianxi_build_cost_II:0 ")Y‰ÿú^.±‚9II"
+ tianxi_build_cost_III:0 ")Y‰ÿú^.±‚9III"
+ tianxi_build_time_I:0 ")Y‰ÿú^.öeô•I"
+ tianxi_build_time_II:0 ")Y‰ÿú^.öeô•II"
+ tianxi_build_time_III:0 ")Y‰ÿú^.öeô•III"
+ tianxi_regiment_time_I:0 ")Y‰ÿßRuQöeô•I"
+ tianxi_regiment_time_II:0 ")Y‰ÿßRuQöeô•II"
+ tianxi_regiment_time_III:0 ")Y‰ÿßRuQöeô•III"
+
+ luzhong_morale_damage_received_I:0 "ï-NÿNb×SëXlSbûQI"
+ luzhong_morale_damage_received_II:0 "ï-NÿNb×SëXlSbûQII"
+ luzhong_morale_damage_received_III:0 "ï-NÿNb×SëXlSbûQIII"
+ luzhong_drill_decay_I:0 "ï-Nÿè–ÍdÃu¦^mc1YI"
+ luzhong_drill_decay_II:0 "ï-Nÿè–ÍdÃu¦^mc1YII"
+ luzhong_drill_decay_III:0 "ï-Nÿè–ÍdÃu¦^mc1YIII"
+ luzhong_reinforce_I:0 "ï-NÿeˆXT¦^I"
+ luzhong_reinforce_II:0 "ï-NÿeˆXT¦^II"
+ luzhong_reinforce_III:0 "ï-NÿeˆXT¦^III"
+ luzhong_condottieri_I:0 "ï-NÿcYÇ–cO›QI"
+ luzhong_condottieri_II:0 "ï-NÿcYÇ–cO›QII"
+ luzhong_condottieri_III:0 "ï-NÿcYÇ–cO›QIII"
+
+ yanxin_idea_I:0 "ßpÃVÿtõV±‚9I"
+ yanxin_idea_II:0 "ßpÃVÿtõV±‚9II"
+ yanxin_idea_III:0 "ßpÃVÿtõV±‚9III"
+ yanxin_dev_cost_I:0 "ßpÃVÿÑSUSb,gI"
+ yanxin_dev_cost_II:0 "ßpÃVÿÑSUSb,gII"
+ yanxin_dev_cost_III:0 "ßpÃVÿÑSUSb,gIII"
+ yanxin_stability_I:0 "ßpÃVÿ3zšR¦^I"
+ yanxin_stability_II:0 "ßpÃVÿ3zšR¦^II"
+ yanxin_stability_III:0 "ßpÃVÿ3zšR¦^III"
+ yanxin_governing_cost_I:0 "ßpÃVÿ»ltb,gI"
+ yanxin_governing_cost_II:0 "ßpÃVÿ»ltb,gII"
+ yanxin_governing_cost_III:0 "ßpÃVÿ»ltb,gIII"
+
+ zhuyue_autonomy_I:0 "às>jÿê»l¦^I"
+ zhuyue_autonomy_II:0 "às>jÿê»l¦^II"
+ zhuyue_autonomy_III:0 "às>jÿê»l¦^III"
+ zhuyue_culture_promotion_I:0 "às>jÿ²‹T‡eS±‚9I"
+ zhuyue_culture_promotion_II:0 "às>jÿ²‹T‡eS±‚9II"
+ zhuyue_culture_promotion_III:0 "às>jÿ²‹T‡eS±‚9III"
+ zhuyue_diplomats_I:0 "às>jÿY²N˜RI"
+ zhuyue_diplomats_II:0 "às>jÿY²N˜RII"
+ zhuyue_diplomats_III:0 "às>jÿY²N˜RIII"
+ zhuyue_reputation_I:0 "às>jÿY²NðX‰ŠI"
+ zhuyue_reputation_II:0 "às>jÿY²NðX‰ŠII"
+ zhuyue_reputation_III:0 "às>jÿY²NðX‰ŠIII"
+
+ yannan_possible_policy_I:0 "ßpWSÿïSLˆ?eVrI"
+ yannan_possible_policy_II:0 "ßpWSÿïSLˆ?eVrII"
+ yannan_possible_policy_III:0 "ßpWSÿïSLˆ?eVrIII"
+ yannan_absolutism_I:0 "ßpWSÿN6R¦^I"
+ yannan_absolutism_II:0 "ßpWSÿN6R¦^II"
+ yannan_absolutism_III:0 "ßpWSÿN6R¦^III"
+ yannan_trade_efficiency_I:0 "ßpWSÿ8fHe‡sI"
+ yannan_trade_efficiency_II:0 "ßpWSÿ8fHe‡sII"
+ yannan_trade_efficiency_III:0 "ßpWSÿ8fHe‡sIII"
+ yannan_diplomatic_annexation_I:0 "ßpWSÿY²NTv^±‚9I"
+ yannan_diplomatic_annexation_II:0 "ßpWSÿY²NTv^±‚9II"
+ yannan_diplomatic_annexation_III:0 "ßpWSÿY²NTv^±‚9III"
+ yannan_spy_I:0 "ßpWSÿô•ŒI"
+ yannan_spy_II:0 "ßpWSÿô•ŒII"
+ yannan_spy_III:0 "ßpWSÿô•ŒIII"
+
+ shaqvan_devastation_I:0 "™lÉlÿÏQSRƒŸ^¦^I"
+ shaqvan_devastation_II:0 "™lÉlÿÏQSRƒŸ^¦^II"
+ shaqvan_devastation_III:0 "™lÉlÿÏQSRƒŸ^¦^III"
+ shaqvan_prosperity_I:0 "™lÉlÿAucƒ¦^I"
+ shaqvan_prosperity_II:0 "™lÉlÿAucƒ¦^II"
+ shaqvan_prosperity_III:0 "™lÉlÿAucƒ¦^III"
+ shaqvan_innovation_I:0 "™lÉlÿR°e¦^I"
+ shaqvan_innovation_II:0 "™lÉlÿR°e¦^II"
+ shaqvan_innovation_III:0 "™lÉlÿR°e¦^III"
+ shaqvan_religion_I:0 "™lÉlÿ—RYeI"
+ shaqvan_religion_II:0 "™lÉlÿ—RYeII"
+ shaqvan_religion_III:0 "™lÉlÿ—RYeIII"
+
+ jindu_institution_I:0 "Ñ‘ýÿ`noI"
+ jindu_institution_II:0 "Ñ‘ýÿ`noII"
+ jindu_institution_III:0 "Ñ‘ýÿ`noIII"
+ jindu_improve_relationship_I:0 "Ñ‘ýÿ9e„UsQû|I"
+ jindu_improve_relationship_II:0 "Ñ‘ýÿ9e„UsQû|II"
+ jindu_improve_relationship_III:0 "Ñ‘ýÿ9e„UsQû|III"
+ jindu_merchant_I:0 "Ñ‘ýÿFUºNI"
+ jindu_merchant_II:0 "Ñ‘ýÿFUºNII"
+ jindu_merchant_III:0 "Ñ‘ýÿFUºNIII"
+ jindu_trade_steer_I:0 "Ñ‘ýÿ8fVüRI"
+ jindu_trade_steer_II:0 "Ñ‘ýÿ8fVüRII"
+ jindu_trade_steer_III:0 "Ñ‘ýÿ8fVüRIII"
+ jindu_trade_goods_I:0 "Ñ‘ýÿFUÁTµNúQI"
+ jindu_trade_goods_II:0 "Ñ‘ýÿFUÁTµNúQII"
+ jindu_trade_goods_III:0 "Ñ‘ýÿFUÁTµNúQIII"
+
+ jiangdong_envoy_I:0 "mlNÿyrOLˆzöeô•I"
+ jiangdong_envoy_II:0 "mlNÿyrOLˆzöeô•II"
+ jiangdong_envoy_III:0 "mlNÿyrOLˆzöeô•III"
+ jiangdong_embargo_I:0 "mlNÿyÐHe‡sI"
+ jiangdong_embargo_II:0 "mlNÿyÐHe‡sII"
+ jiangdong_embargo_III:0 "mlNÿyÐHe‡sIII"
+ jiangdong_colonists_I:0 "mlNÿ–kl–I"
+ jiangdong_colonists_II:0 "mlNÿ–kl–II"
+ jiangdong_colonists_III:0 "mlNÿ–kl–III"
+ jiangdong_sailor_maintenance_I:0 "mlNÿ4lKbôu²b9I"
+ jiangdong_sailor_maintenance_II:0 "mlNÿ4lKbôu²b9II"
+ jiangdong_sailor_maintenance_III:0 "mlNÿ4lKbôu²b9III"
+ jiangdong_naval_tradition_I:0 "mlNÿwm›Q.OßuI"
+ jiangdong_naval_tradition_II:0 "mlNÿwm›Q.OßuII"
+ jiangdong_naval_tradition_III:0 "mlNÿwm›Q.OßuIII"
+
+ maohai_naval_morale_I:0 "Ûwwmÿwm›QëXlI"
+ maohai_naval_morale_II:0 "Ûwwmÿwm›QëXlII"
+ maohai_naval_morale_III:0 "Ûwwmÿwm›QëXlIII"
+ maohai_naval_engagement_I:0 "Ûwwmÿwm›Q¥cbI"
+ maohai_naval_engagement_II:0 "Ûwwmÿwm›Q¥cbII"
+ maohai_naval_engagement_III:0 "Ûwwmÿwm›Q¥cbIII"
+ maohai_flagship_I:0 "Ûwwmÿ×e0‚I"
+ maohai_flagship_II:0 "Ûwwmÿ×e0‚II"
+ maohai_flagship_III:0 "Ûwwmÿ×e0‚III"
+
+ jianwu_general_I:0 "ZWfkÿS†˜I"
+ jianwu_general_II:0 "ZWfkÿS†˜II"
+ jianwu_general_III:0 "ZWfkÿS†˜III"
+ jianwu_manpower_recovery_I:0 "ZWfkÿºN›Rb`Y¦^I"
+ jianwu_manpower_recovery_II:0 "ZWfkÿºN›Rb`Y¦^II"
+ jianwu_manpower_recovery_III:0 "ZWfkÿºN›Rb`Y¦^III"
+ jianwu_morale_recovery_I:0 "ZWfkÿF–›QëXlb`Y¦^I"
+ jianwu_morale_recovery_II:0 "ZWfkÿF–›QëXlb`Y¦^II"
+ jianwu_morale_recovery_III:0 "ZWfkÿF–›QëXlb`Y¦^III"
+
+ moling_manpower_usage_I:0 "T›­Sÿè–ºN›RO(uI"
+ moling_manpower_usage_II:0 "T›­Sÿè–ºN›RO(uII"
+ moling_manpower_usage_III:0 "T›­Sÿè–ºN›RO(uIII"
+ moling_culture_conversion_I:0 "T›­SÿlØS‡eS±‚9I"
+ moling_culture_conversion_II:0 "T›­SÿlØS‡eS±‚9II"
+ moling_culture_conversion_III:0 "T›­SÿlØS‡eS±‚9III"
+ moling_fort_I:0 "T›­Sÿ‰^XI"
+ moling_fort_II:0 "T›­Sÿ‰^XII"
+ moling_fort_III:0 "T›­Sÿ‰^XIII"

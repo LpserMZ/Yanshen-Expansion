@@ -1,0 +1,10 @@
+add_core = V25
+owner = V25
+base_tax = 1
+base_manpower = 1
+base_production = 1
+culture = shuvuush
+trade_goods = wool
+religion = saanorgegh
+controller = V25
+is_city = no

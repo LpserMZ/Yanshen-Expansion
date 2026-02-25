@@ -1,0 +1,485 @@
+b1_chapterx_pagex_with_6_mean_dev_trigger = {
+	# $chapter$ 章节，行省组
+	# $page$ 页码，行省
+	if = {
+		limit = {
+			OR = {
+				NOT = { check_variable = { which = Num_1 which = Num_total_1 } }
+				NOT = { check_variable = { which = Num_2 which = Num_total_2 } }
+				NOT = { check_variable = { which = Num_3 which = Num_total_3 } }
+				NOT = { check_variable = { which = Num_4 which = Num_total_4 } }
+				NOT = { check_variable = { which = Num_5 which = Num_total_5 } }
+				NOT = { check_variable = { which = Num_6 which = Num_total_6 } }
+			}
+		}
+		custom_trigger_tooltip = {
+			tooltip = dev_bonus_not_ctrl_province_tooltip
+			always = no
+		}
+	}
+	else_if = {
+		limit = { is_variable_equal = { which = b1c$chapter$p$page$_status value = 6 } }
+		custom_trigger_tooltip = {
+			tooltip = dev_bonus_already_max_status_tooltip
+			always = no
+		}
+	}
+	else_if = {
+		limit = { is_variable_equal = { which = b1c$chapter$p$page$_status value = 5 } }
+		custom_trigger_tooltip = {
+			tooltip = dev_bonus_mean_dev_reach_41_tooltip
+			check_variable = { which = mean_dev_1 value = 41 }
+			check_variable = { which = mean_dev_2 value = 41 }
+			check_variable = { which = mean_dev_3 value = 41 }
+			check_variable = { which = mean_dev_4 value = 41 }
+			check_variable = { which = mean_dev_5 value = 41 }
+			check_variable = { which = mean_dev_6 value = 41 }
+		}
+	}
+	else_if = {
+		limit = { is_variable_equal = { which = b1c$chapter$p$page$_status value = 4 } }
+		custom_trigger_tooltip = {
+			tooltip = dev_bonus_mean_dev_reach_31_tooltip
+			check_variable = { which = mean_dev_1 value = 31 }
+			check_variable = { which = mean_dev_2 value = 31 }
+			check_variable = { which = mean_dev_3 value = 31 }
+			check_variable = { which = mean_dev_4 value = 31 }
+			check_variable = { which = mean_dev_5 value = 31 }
+			check_variable = { which = mean_dev_6 value = 31 }
+		}
+	}
+	else_if = {
+		limit = { is_variable_equal = { which = b1c$chapter$p$page$_status value = 3 } }
+		custom_trigger_tooltip = {
+			tooltip = dev_bonus_mean_dev_reach_25_tooltip
+			check_variable = { which = mean_dev_1 value = 25 }
+			check_variable = { which = mean_dev_2 value = 25 }
+			check_variable = { which = mean_dev_3 value = 25 }
+			check_variable = { which = mean_dev_4 value = 25 }
+			check_variable = { which = mean_dev_5 value = 25 }
+			check_variable = { which = mean_dev_6 value = 25 }
+		}
+	}
+	else_if = {
+		limit = { is_variable_equal = { which = b1c$chapter$p$page$_status value = 2 } }
+		custom_trigger_tooltip = {
+			tooltip = dev_bonus_mean_dev_reach_17_tooltip
+			check_variable = { which = mean_dev_1 value = 17 }
+			check_variable = { which = mean_dev_2 value = 17 }
+			check_variable = { which = mean_dev_3 value = 17 }
+			check_variable = { which = mean_dev_4 value = 17 }
+			check_variable = { which = mean_dev_5 value = 17 }
+			check_variable = { which = mean_dev_6 value = 17 }
+		}
+	}
+	else_if = {
+		limit = { is_variable_equal = { which = b1c$chapter$p$page$_status value = 1 } }
+		custom_trigger_tooltip = {
+			tooltip = dev_bonus_mean_dev_reach_11_tooltip
+			check_variable = { which = mean_dev_1 value = 11 }
+			check_variable = { which = mean_dev_2 value = 11 }
+			check_variable = { which = mean_dev_3 value = 11 }
+			check_variable = { which = mean_dev_4 value = 11 }
+			check_variable = { which = mean_dev_5 value = 11 }
+			check_variable = { which = mean_dev_6 value = 11 }
+		}
+	}
+}
+b1_chapterx_pagex_with_5_mean_dev_trigger = {
+	# $chapter$ 章节，行省组
+	# $page$ 页码，行省
+	if = {
+		limit = {
+			OR = {
+				NOT = { check_variable = { which = Num_1 which = Num_total_1 } }
+				NOT = { check_variable = { which = Num_2 which = Num_total_2 } }
+				NOT = { check_variable = { which = Num_3 which = Num_total_3 } }
+				NOT = { check_variable = { which = Num_4 which = Num_total_4 } }
+				NOT = { check_variable = { which = Num_5 which = Num_total_5 } }
+			}
+		}
+		custom_trigger_tooltip = {
+			tooltip = dev_bonus_not_ctrl_province_tooltip
+			always = no
+		}
+	}
+	else_if = {
+		limit = { is_variable_equal = { which = b1c$chapter$p$page$_status value = 6 } }
+		custom_trigger_tooltip = {
+			tooltip = dev_bonus_already_max_status_tooltip
+			always = no
+		}
+	}
+	else_if = {
+		limit = { is_variable_equal = { which = b1c$chapter$p$page$_status value = 5 } }
+		custom_trigger_tooltip = {
+			tooltip = dev_bonus_mean_dev_reach_41_tooltip
+			check_variable = { which = mean_dev_1 value = 41 }
+			check_variable = { which = mean_dev_2 value = 41 }
+			check_variable = { which = mean_dev_3 value = 41 }
+			check_variable = { which = mean_dev_4 value = 41 }
+			check_variable = { which = mean_dev_5 value = 41 }
+		}
+	}
+	else_if = {
+		limit = { is_variable_equal = { which = b1c$chapter$p$page$_status value = 4 } }
+		custom_trigger_tooltip = {
+			tooltip = dev_bonus_mean_dev_reach_31_tooltip
+			check_variable = { which = mean_dev_1 value = 31 }
+			check_variable = { which = mean_dev_2 value = 31 }
+			check_variable = { which = mean_dev_3 value = 31 }
+			check_variable = { which = mean_dev_4 value = 31 }
+			check_variable = { which = mean_dev_5 value = 31 }
+		}
+	}
+	else_if = {
+		limit = { is_variable_equal = { which = b1c$chapter$p$page$_status value = 3 } }
+		custom_trigger_tooltip = {
+			tooltip = dev_bonus_mean_dev_reach_25_tooltip
+			check_variable = { which = mean_dev_1 value = 25 }
+			check_variable = { which = mean_dev_2 value = 25 }
+			check_variable = { which = mean_dev_3 value = 25 }
+			check_variable = { which = mean_dev_4 value = 25 }
+			check_variable = { which = mean_dev_5 value = 25 }
+		}
+	}
+	else_if = {
+		limit = { is_variable_equal = { which = b1c$chapter$p$page$_status value = 2 } }
+		custom_trigger_tooltip = {
+			tooltip = dev_bonus_mean_dev_reach_17_tooltip
+			check_variable = { which = mean_dev_1 value = 17 }
+			check_variable = { which = mean_dev_2 value = 17 }
+			check_variable = { which = mean_dev_3 value = 17 }
+			check_variable = { which = mean_dev_4 value = 17 }
+			check_variable = { which = mean_dev_5 value = 17 }
+		}
+	}
+	else_if = {
+		limit = { is_variable_equal = { which = b1c$chapter$p$page$_status value = 1 } }
+		custom_trigger_tooltip = {
+			tooltip = dev_bonus_mean_dev_reach_11_tooltip
+			check_variable = { which = mean_dev_1 value = 11 }
+			check_variable = { which = mean_dev_2 value = 11 }
+			check_variable = { which = mean_dev_3 value = 11 }
+			check_variable = { which = mean_dev_4 value = 11 }
+			check_variable = { which = mean_dev_5 value = 11 }
+		}
+	}
+}
+b1_chapterx_pagex_with_4_mean_dev_trigger = {
+	# $chapter$ 章节，行省组
+	# $page$ 页码，行省
+	if = {
+		limit = {
+			OR = {
+				NOT = { check_variable = { which = Num_1 which = Num_total_1 } }
+				NOT = { check_variable = { which = Num_2 which = Num_total_2 } }
+				NOT = { check_variable = { which = Num_3 which = Num_total_3 } }
+				NOT = { check_variable = { which = Num_4 which = Num_total_4 } }
+			}
+		}
+		custom_trigger_tooltip = {
+			tooltip = dev_bonus_not_ctrl_province_tooltip
+			always = no
+		}
+	}
+	else_if = {
+		limit = { is_variable_equal = { which = b1c$chapter$p$page$_status value = 6 } }
+		custom_trigger_tooltip = {
+			tooltip = dev_bonus_already_max_status_tooltip
+			always = no
+		}
+	}
+	else_if = {
+		limit = { is_variable_equal = { which = b1c$chapter$p$page$_status value = 5 } }
+		custom_trigger_tooltip = {
+			tooltip = dev_bonus_mean_dev_reach_41_tooltip
+			check_variable = { which = mean_dev_1 value = 41 }
+			check_variable = { which = mean_dev_2 value = 41 }
+			check_variable = { which = mean_dev_3 value = 41 }
+			check_variable = { which = mean_dev_4 value = 41 }
+		}
+	}
+	else_if = {
+		limit = { is_variable_equal = { which = b1c$chapter$p$page$_status value = 4 } }
+		custom_trigger_tooltip = {
+			tooltip = dev_bonus_mean_dev_reach_31_tooltip
+			check_variable = { which = mean_dev_1 value = 31 }
+			check_variable = { which = mean_dev_2 value = 31 }
+			check_variable = { which = mean_dev_3 value = 31 }
+			check_variable = { which = mean_dev_4 value = 31 }
+		}
+	}
+	else_if = {
+		limit = { is_variable_equal = { which = b1c$chapter$p$page$_status value = 3 } }
+		custom_trigger_tooltip = {
+			tooltip = dev_bonus_mean_dev_reach_25_tooltip
+			check_variable = { which = mean_dev_1 value = 25 }
+			check_variable = { which = mean_dev_2 value = 25 }
+			check_variable = { which = mean_dev_3 value = 25 }
+			check_variable = { which = mean_dev_4 value = 25 }
+		}
+	}
+	else_if = {
+		limit = { is_variable_equal = { which = b1c$chapter$p$page$_status value = 2 } }
+		custom_trigger_tooltip = {
+			tooltip = dev_bonus_mean_dev_reach_17_tooltip
+			check_variable = { which = mean_dev_1 value = 17 }
+			check_variable = { which = mean_dev_2 value = 17 }
+			check_variable = { which = mean_dev_3 value = 17 }
+			check_variable = { which = mean_dev_4 value = 17 }
+		}
+	}
+	else_if = {
+		limit = { is_variable_equal = { which = b1c$chapter$p$page$_status value = 1 } }
+		custom_trigger_tooltip = {
+			tooltip = dev_bonus_mean_dev_reach_11_tooltip
+			check_variable = { which = mean_dev_1 value = 11 }
+			check_variable = { which = mean_dev_2 value = 11 }
+			check_variable = { which = mean_dev_3 value = 11 }
+			check_variable = { which = mean_dev_4 value = 11 }
+		}
+	}
+}
+b1_chapterx_pagex_with_3_mean_dev_trigger = {
+	# $chapter$ 章节，行省组
+	# $page$ 页码，行省
+	if = {
+		limit = {
+			OR = {
+				NOT = { check_variable = { which = Num_1 which = Num_total_1 } }
+				NOT = { check_variable = { which = Num_2 which = Num_total_2 } }
+				NOT = { check_variable = { which = Num_3 which = Num_total_3 } }
+			}
+		}
+		custom_trigger_tooltip = {
+			tooltip = dev_bonus_not_ctrl_province_tooltip
+			always = no
+		}
+	}
+	else_if = {
+		limit = { is_variable_equal = { which = b1c$chapter$p$page$_status value = 6 } }
+		custom_trigger_tooltip = {
+			tooltip = dev_bonus_already_max_status_tooltip
+			always = no
+		}
+	}
+	else_if = {
+		limit = { is_variable_equal = { which = b1c$chapter$p$page$_status value = 5 } }
+		custom_trigger_tooltip = {
+			tooltip = dev_bonus_mean_dev_reach_41_tooltip
+			check_variable = { which = mean_dev_1 value = 41 }
+			check_variable = { which = mean_dev_2 value = 41 }
+			check_variable = { which = mean_dev_3 value = 41 }
+		}
+	}
+	else_if = {
+		limit = { is_variable_equal = { which = b1c$chapter$p$page$_status value = 4 } }
+		custom_trigger_tooltip = {
+			tooltip = dev_bonus_mean_dev_reach_31_tooltip
+			check_variable = { which = mean_dev_1 value = 31 }
+			check_variable = { which = mean_dev_2 value = 31 }
+			check_variable = { which = mean_dev_3 value = 31 }
+		}
+	}
+	else_if = {
+		limit = { is_variable_equal = { which = b1c$chapter$p$page$_status value = 3 } }
+		custom_trigger_tooltip = {
+			tooltip = dev_bonus_mean_dev_reach_25_tooltip
+			check_variable = { which = mean_dev_1 value = 25 }
+			check_variable = { which = mean_dev_2 value = 25 }
+			check_variable = { which = mean_dev_3 value = 25 }
+		}
+	}
+	else_if = {
+		limit = { is_variable_equal = { which = b1c$chapter$p$page$_status value = 2 } }
+		custom_trigger_tooltip = {
+			tooltip = dev_bonus_mean_dev_reach_17_tooltip
+			check_variable = { which = mean_dev_1 value = 17 }
+			check_variable = { which = mean_dev_2 value = 17 }
+			check_variable = { which = mean_dev_3 value = 17 }
+		}
+	}
+	else_if = {
+		limit = { is_variable_equal = { which = b1c$chapter$p$page$_status value = 1 } }
+		custom_trigger_tooltip = {
+			tooltip = dev_bonus_mean_dev_reach_11_tooltip
+			check_variable = { which = mean_dev_1 value = 11 }
+			check_variable = { which = mean_dev_2 value = 11 }
+			check_variable = { which = mean_dev_3 value = 11 }
+		}
+	}
+}
+b1_chapterx_pagex_with_2_mean_dev_trigger = {
+	# $chapter$ 章节，行省组
+	# $page$ 页码，行省
+	if = {
+		limit = {
+			OR = {
+				NOT = { check_variable = { which = Num_1 which = Num_total_1 } }
+				NOT = { check_variable = { which = Num_2 which = Num_total_2 } }
+			}
+		}
+		custom_trigger_tooltip = {
+			tooltip = dev_bonus_not_ctrl_province_tooltip
+			always = no
+		}
+	}
+	else_if = {
+		limit = { is_variable_equal = { which = b1c$chapter$p$page$_status value = 6 } }
+		custom_trigger_tooltip = {
+			tooltip = dev_bonus_already_max_status_tooltip
+			always = no
+		}
+	}
+	else_if = {
+		limit = { is_variable_equal = { which = b1c$chapter$p$page$_status value = 5 } }
+		custom_trigger_tooltip = {
+			tooltip = dev_bonus_mean_dev_reach_41_tooltip
+			check_variable = { which = mean_dev_1 value = 41 }
+			check_variable = { which = mean_dev_2 value = 41 }
+		}
+	}
+	else_if = {
+		limit = { is_variable_equal = { which = b1c$chapter$p$page$_status value = 4 } }
+		custom_trigger_tooltip = {
+			tooltip = dev_bonus_mean_dev_reach_31_tooltip
+			check_variable = { which = mean_dev_1 value = 31 }
+			check_variable = { which = mean_dev_2 value = 31 }
+		}
+	}
+	else_if = {
+		limit = { is_variable_equal = { which = b1c$chapter$p$page$_status value = 3 } }
+		custom_trigger_tooltip = {
+			tooltip = dev_bonus_mean_dev_reach_25_tooltip
+			check_variable = { which = mean_dev_1 value = 25 }
+			check_variable = { which = mean_dev_2 value = 25 }
+		}
+	}
+	else_if = {
+		limit = { is_variable_equal = { which = b1c$chapter$p$page$_status value = 2 } }
+		custom_trigger_tooltip = {
+			tooltip = dev_bonus_mean_dev_reach_17_tooltip
+			check_variable = { which = mean_dev_1 value = 17 }
+			check_variable = { which = mean_dev_2 value = 17 }
+		}
+	}
+	else_if = {
+		limit = { is_variable_equal = { which = b1c$chapter$p$page$_status value = 1 } }
+		custom_trigger_tooltip = {
+			tooltip = dev_bonus_mean_dev_reach_11_tooltip
+			check_variable = { which = mean_dev_1 value = 11 }
+			check_variable = { which = mean_dev_2 value = 11 }
+		}
+	}
+}
+b1_chapterx_pagex_with_1_mean_dev_trigger = {
+	# $chapter$ 章节，行省组
+	# $page$ 页码，行省
+	if = {
+		limit = {
+			OR = {
+				NOT = { check_variable = { which = Num_1 which = Num_total_1 } }
+			}
+		}
+		custom_trigger_tooltip = {
+			tooltip = dev_bonus_not_ctrl_province_tooltip
+			always = no
+		}
+	}
+	else_if = {
+		limit = { is_variable_equal = { which = b1c$chapter$p$page$_status value = 6 } }
+		custom_trigger_tooltip = {
+			tooltip = dev_bonus_already_max_status_tooltip
+			always = no
+		}
+	}
+	else_if = {
+		limit = { is_variable_equal = { which = b1c$chapter$p$page$_status value = 5 } }
+		custom_trigger_tooltip = {
+			tooltip = dev_bonus_mean_dev_reach_41_tooltip
+			check_variable = { which = mean_dev_1 value = 41 }
+		}
+	}
+	else_if = {
+		limit = { is_variable_equal = { which = b1c$chapter$p$page$_status value = 4 } }
+		custom_trigger_tooltip = {
+			tooltip = dev_bonus_mean_dev_reach_31_tooltip
+			check_variable = { which = mean_dev_1 value = 31 }
+		}
+	}
+	else_if = {
+		limit = { is_variable_equal = { which = b1c$chapter$p$page$_status value = 3 } }
+		custom_trigger_tooltip = {
+			tooltip = dev_bonus_mean_dev_reach_25_tooltip
+			check_variable = { which = mean_dev_1 value = 25 }
+		}
+	}
+	else_if = {
+		limit = { is_variable_equal = { which = b1c$chapter$p$page$_status value = 2 } }
+		custom_trigger_tooltip = {
+			tooltip = dev_bonus_mean_dev_reach_17_tooltip
+			check_variable = { which = mean_dev_1 value = 17 }
+		}
+	}
+	else_if = {
+		limit = { is_variable_equal = { which = b1c$chapter$p$page$_status value = 1 } }
+		custom_trigger_tooltip = {
+			tooltip = dev_bonus_mean_dev_reach_11_tooltip
+			check_variable = { which = mean_dev_1 value = 11 }
+		}
+	}
+}
+
+upgrade_points_frame_with_3_page_trigger = {
+	# $chapter$  $rank$
+	if = {
+		limit = { is_variable_equal = { which = dev_bonus_page value = 1 } }
+		is_variable_equal = { which = b1c$chapter$p1_status value = $rank$ }
+	}
+	else_if = {
+		limit = { is_variable_equal = { which = dev_bonus_page value = 2 } }
+		is_variable_equal = { which = b1c$chapter$p2_status value = $rank$ }
+	}
+	else_if = {
+		limit = { is_variable_equal = { which = dev_bonus_page value = 3 } }
+		is_variable_equal = { which = b1c$chapter$p3_status value = $rank$ }
+	}
+	else = {
+		custom_trigger_tooltip = {
+			tooltip = seems_error_in_page_or_status_of_the_page_tooltip
+			always = no
+		}
+	}
+}
+upgrade_points_frame_with_2_page_trigger = {
+	# $chapter$  $rank$
+	if = {
+		limit = { is_variable_equal = { which = dev_bonus_page value = 1 } }
+		is_variable_equal = { which = b1c$chapter$p1_status value = $rank$ }
+	}
+	else_if = {
+		limit = { is_variable_equal = { which = dev_bonus_page value = 2 } }
+		is_variable_equal = { which = b1c$chapter$p2_status value = $rank$ }
+	}
+	else = {
+		custom_trigger_tooltip = {
+			tooltip = seems_error_in_page_or_status_of_the_page_tooltip
+			always = no
+		}
+	}
+}
+upgrade_points_frame_with_1_page_trigger = {
+	# $chapter$ 章节，行省组的编号 $rank$ 行省开发等级
+	if = {
+		limit = { is_variable_equal = { which = dev_bonus_page value = 1 } }
+		is_variable_equal = { which = b1c$chapter$p1_status value = $rank$ }
+	}
+	else = {
+		custom_trigger_tooltip = {
+			tooltip = seems_error_in_page_or_status_of_the_page_tooltip
+			always = no
+		}
+	}
+}
+

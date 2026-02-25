@@ -1,0 +1,10 @@
+add_core = Y19
+owner = Y19
+controller = Y19
+is_city = no
+culture = gangim
+religion = high_philosophy
+trade_goods = cloth
+base_tax = 6
+base_manpower = 7
+base_production = 7

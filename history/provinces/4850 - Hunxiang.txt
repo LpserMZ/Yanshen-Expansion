@@ -1,0 +1,11 @@
+owner = Y09
+controller = Y09
+add_core = Y09
+add_core = Z59
+culture = jiangszun
+religion = accretive_path
+base_tax = 4
+base_production = 5
+base_manpower = 5
+trade_goods = grain
+is_city = yes

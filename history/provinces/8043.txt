@@ -1,0 +1,11 @@
+add_core = Y24
+owner = Y24
+controller = Y24
+is_city = no
+culture = gangim
+religion = accretive_path
+trade_goods = sugar
+base_tax = 3
+base_manpower = 2
+base_production = 1
+add_core = Y21

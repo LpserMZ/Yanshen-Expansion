@@ -1,0 +1,87 @@
+unloyal_governor_vassal = { #命令的属国类型，驻军大营独立倾向达到50对宗主的影响
+	diplomatic_upkeep = -1
+}
+hegemon_in_west = { #西朝霸业
+	province_warscore_cost = -0.15
+	regiment_recruit_speed = -0.25
+	fort_maintenance_modifier = -0.10
+}
+inexorability_I = { #势不可挡I
+	province_warscore_cost = -0.10
+}
+inexorability_II = { #势不可挡II
+	province_warscore_cost = -0.15
+}
+inexorability_III = { #势不可挡III
+	province_warscore_cost = -0.20
+	all_power_cost = -0.05
+}
+prospect_of_unity = { #统一前景
+	land_morale = 0.15
+	army_tradition_decay = -0.025
+	core_creation = -0.15
+}
+bandit_in_north_wuxun = { #武浔匪患
+	local_monthly_devastation = 0.50
+	local_development_cost = 0.20
+	province_trade_power_modifier = 0.01
+}
+
+alien_commander_from_raj = {
+	discipline = -0.05
+	global_regiment_recruit_speed = 0.25
+}
+rumors_of_wuxun_elven = {
+	diplomatic_reputation = -2
+	ae_impact = 0.20
+}
+
+tax_tax_tax = {
+	tax_income = 24
+	local_unrest = 10
+}
+has_cleared_bandit = {
+	local_core_creation = -0.15
+	local_monthly_devastation = -0.33
+}
+
+defeat_ruin_kingdoms = { #白翼 击败废墟王国
+	prestige_decay = -0.01
+	monthly_splendor = 2
+}
+defeat_kamtarhid = { #白翼 击败剑怛希陀
+	cavalry_cost = -0.15
+	cavalry_shock = 0.50
+}
+defeat_sir_state = { #白翼 击败室利
+	manpower_in_accepted_culture_provinces = 0.10
+	promote_culture_cost = -0.20
+}
+
+baiyi_recuit_soldier = { #白翼 扩军备战
+	land_maintenance_modifier = -0.10
+	regiment_recruit_speed = -0.10
+}
+
+spy_of_south_human_states = { #北方大地精 人类间谍活动
+	defensiveness = -0.10
+}
+
+baiyi_conquer_yvyang = { #征服玉阳
+	core_creation = -0.10
+}
+
+baiyi_tolerante_hobgoblin = {
+	army_tradition_decay = -0.02
+	monthly_splendor = 2
+}
+
+orderly_and_peaceful = {
+	stability_cost_modifier = -0.10
+	manpower_recovery_speed = 0.15
+}
+
+secure_wuxun_safety = {
+	global_prosperity_growth = 0.25
+	defensiveness = 0.10
+}

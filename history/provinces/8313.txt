@@ -1,0 +1,10 @@
+add_core = V02
+owner = V02
+base_tax = 1
+base_manpower = 1
+base_production = 1
+culture = runsukhi
+trade_goods = grain
+religion = levaajan
+controller = V02
+is_city = no

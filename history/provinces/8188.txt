@@ -1,0 +1,10 @@
+add_core = Y90
+owner = Y90
+base_tax = 1
+base_manpower = 1
+base_production = 1
+culture = kuuldaar
+trade_goods = wool
+religion = saanorgegh
+controller = Y90
+is_city = no

@@ -1,0 +1,23 @@
+l_english:
+ string_tag_is_whatever:0 "i dont care tag"
+ string_tag_is_not_FRA:0 "no,not fra"
+ string_tag_is_FRA:0 "yes,is fra"
+ string_var_is_whatever:0 "i dont care var"
+ String_var_is_zero:0 "now,var= 0"
+ String_var_is_not_zero:0 "but,var!= 0"
+
+ string_not_ctrl_whole_area_1_key:0 "§Rå‹ôv^SÞT	g[Root.Num_unowned_1.GetValue]*NwýN*g1u`Oôv¥cµc6Rÿ§!"
+ string_do_ctrl_whole_area_1_key:0 "åb	gwýN([Root.Num_1.GetValue]/[Root.Num_1.GetValue]),I`ÑSUS¦^= [Root.dev_1.GetValue](£adm£[Root.dev_tax_1.GetValue]£dip£[Root.dev_production_1.GetValue]£mil£[Root.dev_manpower_1.GetValue])ÿs^GW= [Root.mean_dev_1.GetValue](£adm£[Root.mean_dev_tax_1.GetValue]£dip£[Root.mean_dev_production_1.GetValue]£mil£[Root.mean_dev_manpower_1.GetValue])"
+
+ not_ctrl_whole_area_2_key:0 "§Rå‹ôv^SÞT	g[Root.Num_unowned_2.GetValue]*NwýN*g1u`Oôv¥cµc6Rÿ§!"
+ do_ctrl_whole_area_2_key:0 "åb	gwýN([Root.Num_2.GetValue]/[Root.Num_2.GetValue]),I`ÑSUS¦^= [Root.dev_2.GetValue](£adm£[Root.dev_tax_2.GetValue]£dip£[Root.dev_production_2.GetValue]£mil£[Root.dev_manpower_2.GetValue]),s^GW= [Root.mean_dev_2.GetValue](£adm£[Root.mean_dev_tax_2.GetValue]£dip£[Root.mean_dev_production_2.GetValue]£mil£[Root.mean_dev_manpower_2.GetValue])"
+
+ not_ctrl_whole_area_3_key:0 "§Rå‹ôv^SÞT	g[Root.Num_unowned_3.GetValue]*NwýN*g1u`Oôv¥cµc6Rÿ§!"
+ do_ctrl_whole_area_3_key:0 "åb	gwýN([Root.Num_3.GetValue]/[Root.Num_3.GetValue]),I`ÑSUS¦^= [Root.dev_3.GetValue](£adm£[Root.dev_tax_3.GetValue]£dip£[Root.dev_production_3.GetValue]£mil£[Root.dev_manpower_3.GetValue]),s^GW= [Root.mean_dev_3.GetValue](£adm£[Root.mean_dev_tax_3.GetValue]£dip£[Root.mean_dev_production_3.GetValue]£mil£[Root.mean_dev_manpower_3.GetValue])"
+
+ not_ctrl_whole_area_4_key:0 "§Rå‹ôv^SÞT	g[Root.Num_unowned_4.GetValue]*NwýN*g1u`Oôv¥cµc6Rÿ§!"
+ do_ctrl_whole_area_4_key:0 "åb	gwýN([Root.Num_4.GetValue]/[Root.Num_4.GetValue]),I`ÑSUS¦^= [Root.dev_4.GetValue](£adm£[Root.dev_tax_4.GetValue]£dip£[Root.dev_production_4.GetValue]£mil£[Root.dev_manpower_4.GetValue]),s^GW= [Root.mean_dev_4.GetValue](£adm£[Root.mean_dev_tax_4.GetValue]£dip£[Root.mean_dev_production_4.GetValue]£mil£[Root.mean_dev_manpower_4.GetValue])"
+
+ not_ctrl_whole_area_5_key:0 "§Rå‹ôv^SÞT	g[Root.Num_unowned_5.GetValue]*NwýN*g1u`Oôv¥cµc6Rÿ§!"
+ do_ctrl_whole_area_5_key:0 "åb	gwýN([Root.Num_5.GetValue]/[Root.Num_5.GetValue]),I`ÑSUS¦^= [Root.dev_5.GetValue](£adm£[Root.dev_tax_5.GetValue]£dip£[Root.dev_production_5.GetValue]£mil£[Root.dev_manpower_5.GetValue]),s^GW= [Root.mean_dev_5.GetValue](£adm£[Root.mean_dev_tax_5.GetValue]£dip£[Root.mean_dev_production_5.GetValue]£mil£[Root.mean_dev_manpower_5.GetValue])"
+

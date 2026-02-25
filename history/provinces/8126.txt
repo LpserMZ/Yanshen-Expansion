@@ -1,0 +1,15 @@
+owner = YB8
+controller = YB8
+is_city = no
+culture = yansu
+religion = accretive_path
+trade_goods = spices
+base_tax = 2
+base_manpower = 2
+base_production = 3
+add_core = YB8
+
+add_permanent_province_modifier = {
+	name = elven_majority_integrated
+	duration = -1
+}

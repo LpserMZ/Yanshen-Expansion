@@ -1,0 +1,10 @@
+add_core = Y30
+owner = Y30
+base_tax = 2
+base_manpower = 2
+base_production = 2
+controller = Y30
+is_city = no
+culture = szitu
+religion = accretive_path
+trade_goods = iron

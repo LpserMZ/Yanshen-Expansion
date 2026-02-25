@@ -1,0 +1,11 @@
+owner = Y02
+controller = Y02
+add_core = Y02
+culture = beikling
+religion = devouring_path
+base_tax = 3
+base_production = 4
+base_manpower = 4
+trade_goods = iron
+is_city = yes
+fort_15th = yes

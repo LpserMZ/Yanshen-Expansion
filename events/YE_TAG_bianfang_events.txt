@@ -1,0 +1,32 @@
+namespace = YE_bianfang
+
+country_event = { #挥师东进
+	id = YE_bianfang.1
+	title = YE_bianfang.1.T
+	desc = YE_bianfang.1.D
+	picture = GREAT_SPIRIT_YANHE_eventPicture
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	trigger = {}
+
+	option = {
+		name = YE_bianfang.1.a
+		ai_chance = { factor = 1 }
+		hidden_effect = { #自治附庸不会拉宗主进战
+			vassalize = Y21
+		}
+		Y21 = {
+			declare_war_with_cb = {
+				who = Y24
+				casus_belli = cb_core
+				war_goal_province = 4949
+			}
+		}
+		create_subject = {
+			subject_type = autonomous_vassal
+			subject = Y21
+		}
+	}
+}

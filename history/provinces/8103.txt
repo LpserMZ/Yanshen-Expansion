@@ -1,0 +1,10 @@
+owner = YB6
+controller = YB6
+is_city = no
+culture = muthadhaya
+religion = high_philosophy
+trade_goods = livestock
+base_tax = 1
+base_manpower = 1
+base_production = 1
+add_core = YB6

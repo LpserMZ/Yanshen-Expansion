@@ -1,0 +1,161 @@
+estate_YE_special = {
+	trigger = { 
+		always = no 
+	}
+	modifier_definition = { #每月灵气恢复
+		type = privileges 
+		key = monthly_LQpower_regen
+		trigger = {}
+	}
+	modifier_definition = { #灵气获取修正
+		type = loyalty
+		key = LQpower_gain_modifier
+		trigger = {}
+	}
+	modifier_definition = { #灵气成本节省
+		type = loyalty
+		key = LQpower_cost_saving_modifier
+		trigger = {}
+	}
+
+	modifier_definition = { #灵气容量
+		type = privileges 
+		key = LQpower_capacity
+		trigger = {}
+	}
+
+
+	# 学科组有点意义不明了
+	modifier_definition = { #每月[学科组1]经验增长
+		type = privileges 
+		key = monthly_LQdspl_group_1_exp_gain
+		trigger = {}
+	}
+	modifier_definition = { #[学科组1]经验获取修正
+		type = loyalty
+		key = LQdspl_group_1_exp_gain_modifier
+		trigger = {}
+	}
+	modifier_definition = { #每月[学科组2]经验增长
+		type = privileges 
+		key = monthly_LQdspl_group_2_exp_gain
+		trigger = {}
+	}
+	modifier_definition = { #[学科组2]经验获取修正
+		type = loyalty
+		key = LQdspl_group_2_exp_gain_modifier
+		trigger = {}
+	}
+	modifier_definition = { #每月[学科组3]经验增长
+		type = privileges 
+		key = monthly_LQdspl_group_3_exp_gain
+		trigger = {}
+	}
+	modifier_definition = { #[学科组3]经验获取修正
+		type = loyalty
+		key = LQdspl_group_3_exp_gain_modifier
+		trigger = {}
+	}
+	modifier_definition = { #每月[学科组4]经验增长
+		type = privileges 
+		key = monthly_LQdspl_group_4_exp_gain
+		trigger = {}
+	}
+	modifier_definition = { #[学科组4]经验获取修正
+		type = loyalty
+		key = LQdspl_group_4_exp_gain_modifier
+		trigger = {}
+	}
+	
+
+
+
+	modifier_definition = { #每月[学科1]经验增长
+		type = privileges 
+		key = monthly_LQdspl_1_exp_gain
+		trigger = {}
+	}
+	modifier_definition = { #[学科1]经验获取修正
+		type = loyalty
+		key = LQdspl_1_exp_gain_modifier
+		trigger = {}
+	}
+
+	modifier_definition = { #每月[学科2]经验增长
+		type = privileges 
+		key = monthly_LQdspl_2_exp_gain
+		trigger = {}
+	}
+	modifier_definition = { #[学科2]经验获取修正
+		type = loyalty
+		key = LQdspl_2_exp_gain_modifier
+		trigger = {}
+	}
+
+	modifier_definition = { #每月[学科3]经验增长
+		type = privileges 
+		key = monthly_LQdspl_3_exp_gain
+		trigger = {}
+	}
+	modifier_definition = { #[学科3]经验获取修正
+		type = loyalty
+		key = LQdspl_3_exp_gain_modifier
+		trigger = {}
+	}
+
+	modifier_definition = { #每月[学科4]经验增长
+		type = privileges 
+		key = monthly_LQdspl_4_exp_gain
+		trigger = {}
+	}
+	modifier_definition = { #[学科4]经验获取修正
+		type = loyalty
+		key = LQdspl_4_exp_gain_modifier
+		trigger = {}
+	}
+
+	modifier_definition = { #每月[学科5]经验增长
+		type = privileges 
+		key = monthly_LQdspl_5_exp_gain
+		trigger = {}
+	}
+	modifier_definition = { #[学科5]经验获取修正
+		type = loyalty
+		key = LQdspl_5_exp_gain_modifier
+		trigger = {}
+	}
+
+	modifier_definition = { #每月[学科6]经验增长
+		type = privileges 
+		key = monthly_LQdspl_6_exp_gain
+		trigger = {}
+	}
+	modifier_definition = { #[学科6]经验获取修正
+		type = loyalty
+		key = LQdspl_6_exp_gain_modifier
+		trigger = {}
+	}
+
+	modifier_definition = { #每月[学科7]经验增长
+		type = privileges 
+		key = monthly_LQdspl_7_exp_gain
+		trigger = {}
+	}
+	modifier_definition = { #[学科7]经验获取修正
+		type = loyalty
+		key = LQdspl_7_exp_gain_modifier
+		trigger = {}
+	}
+
+	modifier_definition = { #每月[学科8]经验增长
+		type = privileges 
+		key = monthly_LQdspl_8_exp_gain
+		trigger = {}
+	}
+	modifier_definition = { #[学科8]经验获取修正
+		type = loyalty
+		key = LQdspl_8_exp_gain_modifier
+		trigger = {}
+	}
+
+}

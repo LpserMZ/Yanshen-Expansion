@@ -1,0 +1,10 @@
+add_core = V04
+owner = V04
+base_tax = 1
+base_manpower = 1
+base_production = 1
+culture = plateau_runsukhi
+trade_goods = livestock
+religion = levaajan
+controller = V04
+is_city = no

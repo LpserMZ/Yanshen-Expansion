@@ -1,0 +1,32 @@
+test_improve_relation_1 = {
+	improve_relation_modifier = 1
+}
+test_improve_relation_2 = {
+	improve_relation_modifier = 2
+}
+
+test_modifier_1 = {
+	monthly_LQdspl_1_exp_gain = 2
+}
+test_modifier_2 = {
+	LQdspl_1_exp_gain_modifier = 0.50
+}
+test_modifier_3 = {
+	monthly_LQdspl_1_exp_gain = 4
+}
+test_modifier_4 = {
+	LQdspl_1_exp_gain_modifier = 0.25
+}
+
+test_modifier_5 = {
+	LQpower_gain_modifier = 0.10
+}
+test_modifier_6 = {
+	LQpower_cost_saving_modifier = 0.50
+}
+test_modifier_7 = {
+	LQpower_capacity = 50
+}
+test_modifier_8 = {
+	monthly_LQpower_regen = 2
+}

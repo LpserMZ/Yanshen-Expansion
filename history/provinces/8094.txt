@@ -1,0 +1,10 @@
+add_core = Y04
+owner = Y04
+controller = Y04
+is_city = no
+culture = jiangszun
+religion = high_philosophy
+trade_goods = glass
+base_tax = 3
+base_manpower = 2
+base_production = 3

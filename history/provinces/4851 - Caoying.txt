@@ -1,0 +1,11 @@
+owner = V22
+controller = V22
+add_core = Y10
+add_core = V22
+culture = beikling
+religion = devouring_path
+base_tax = 3
+base_production = 2
+base_manpower = 1
+trade_goods = grain
+is_city = yes

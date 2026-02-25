@@ -1,0 +1,15 @@
+# No previous file for Anbennar4976
+owner = Y85
+controller = Y85
+add_core = Y85
+culture = goldscale_kobold
+religion = accretive_path
+base_tax = 6
+base_production = 8
+base_manpower = 6
+trade_goods = copper
+is_city = yes
+add_province_modifier = { 
+	name = balris_balkhangfa_palace_province_modifier
+	duration = -1
+}

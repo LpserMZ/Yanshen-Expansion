@@ -1,0 +1,10 @@
+add_core = Y10
+owner = Y10
+controller = Y10
+is_city = no
+culture = jiangszun
+religion = devouring_path
+trade_goods = cloth
+base_tax = 5
+base_manpower = 4
+base_production = 6

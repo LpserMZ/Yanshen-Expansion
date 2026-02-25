@@ -1,0 +1,4208 @@
+custom_button = {
+	name = "button_development_bonus"
+	tooltip = button_development_bonus_tooltip
+	potential = {
+		has_country_flag = YE_allow_dev_bonus_flag
+	}
+	trigger = { 
+		hidden_trigger = {
+			has_country_flag = YE_allow_dev_bonus_flag
+		}
+		
+		#has_country_flag = AH_allow_development_bonus_flag
+	}
+	effect = {
+		if = { #关闭
+			limit = {
+				has_country_flag = development_bonus_flag
+			}
+			clr_country_flag = development_bonus_flag
+		}
+		else = { #开启
+			set_country_flag = development_bonus_flag
+		}
+		hidden_effect = {
+			initialize_dev_bonus = yes #初始化
+		}
+	}
+}
+
+custom_window = {
+	name = "window_development_bonus"
+	potential = {
+		has_country_flag = development_bonus_flag
+	}
+}
+custom_icon = {
+	name = "background_development_bonus"
+	potential = {
+		has_country_flag = development_bonus_flag
+	}
+}
+custom_button = {
+	name = "development_bonus_ESCAPE"
+	tooltip = ""
+	potential = {
+		has_country_flag = development_bonus_flag
+	}
+	trigger = {
+		hidden_trigger = {
+			always = yes
+		}
+	}
+	effect = {
+		clr_country_flag = development_bonus_flag
+		if = {
+			limit = { has_country_flag = dev_buff_details_flag }
+			clr_country_flag = dev_buff_details_flag
+		}
+	}
+}
+custom_text_box = {
+	name = "TextBox_development_bonus_ESCAPE"
+	potential = { has_country_flag = development_bonus_flag }
+	
+}
+# 书本1 《 发展度奖励 ~ dev bonus 》
+# 目录
+	# 章节9 昭明
+		custom_button = {
+			name = "development_bonus_rank_zhaoming"
+			tooltip = development_bonus_rank_zhaoming_tooltip
+			potential = {
+				always = yes
+			}
+			trigger = {
+				always = yes
+			}
+			effect = {
+				hidden_effect = {
+					check_area_dev = { fuya = bianfang_area squence = 1 }
+					check_area_dev = { fuya = bianyuan_area squence = 2 }
+					check_area_dev = { fuya = tunayuan_area squence = 3 }
+					check_area_dev = { fuya = tietyuan_area squence = 4 }
+					set_variable = { which = dev_bonus_chapter value = 9 }
+					set_variable = { which = dev_bonus_page value = 1 }
+				}
+				set_country_flag = dev_buff_details_flag
+			}
+			frame = {
+				number = 1
+				trigger = { is_variable_equal = { which = b1c9p1_status value = 1 } }
+			}
+			frame = {
+				number = 2
+				trigger = { is_variable_equal = { which = b1c9p1_status value = 2 } }
+			}
+			frame = {
+				number = 3
+				trigger = { is_variable_equal = { which = b1c9p1_status value = 3 } }
+			}
+			frame = {
+				number = 4
+				trigger = { is_variable_equal = { which = b1c9p1_status value = 4 } }
+			}
+			frame = {
+				number = 5
+				trigger = { is_variable_equal = { which = b1c9p1_status value = 5 } }
+			}
+			frame = {
+				number = 6
+				trigger = { is_variable_equal = { which = b1c9p1_status value = 6 } }
+			}
+		}
+
+	# 章节10 天西
+		custom_button = {
+			name = "development_bonus_rank_tianxi"
+			tooltip = development_bonus_rank_tianxi_tooltip
+			potential = {
+				always = yes
+			}
+			trigger = {
+				always = yes
+			}
+			effect = {
+				hidden_effect = {
+					check_area_dev = { fuya = jiangszun_area squence = 1 }
+					check_area_dev = { fuya = lamzung_area squence = 2 }
+					check_area_dev = { fuya = jyutsai_area squence = 3 }
+					check_area_dev = { fuya = tianszi_area squence = 4 }
+					set_variable = { which = dev_bonus_chapter value = 10 }
+					set_variable = { which = dev_bonus_page value = 1 }
+				}
+				set_country_flag = dev_buff_details_flag
+			}
+			frame = {
+				number = 1
+				trigger = { is_variable_equal = { which = b1c10p1_status value = 1 } }
+			}
+			frame = {
+				number = 2
+				trigger = { is_variable_equal = { which = b1c10p1_status value = 2 } }
+			}
+			frame = {
+				number = 3
+				trigger = { is_variable_equal = { which = b1c10p1_status value = 3 } }
+			}
+			frame = {
+				number = 4
+				trigger = { is_variable_equal = { which = b1c10p1_status value = 4 } }
+			}
+			frame = {
+				number = 5
+				trigger = { is_variable_equal = { which = b1c10p1_status value = 5 } }
+			}
+			frame = {
+				number = 6
+				trigger = { is_variable_equal = { which = b1c10p1_status value = 6 } }
+			}
+		}
+	# 章节11 路中
+		custom_button = {
+			name = "development_bonus_rank_luzhong"
+			tooltip = development_bonus_rank_luzhong_tooltip
+			potential = {
+				always = yes
+			}
+			trigger = {
+				always = yes
+			}
+			effect = {
+				hidden_effect = {
+					check_area_dev = { fuya = jinqiu_area squence = 1 }
+					check_area_dev = { fuya = balrijin_area squence = 2 }
+					check_area_dev = { fuya = jingai_area squence = 3 }
+					check_area_dev = { fuya = tiaochi_area squence = 4 }
+					check_area_dev = { fuya = hubao_area squence = 5 }
+					set_variable = { which = dev_bonus_chapter value = 11 }
+					set_variable = { which = dev_bonus_page value = 1 }
+				}
+				set_country_flag = dev_buff_details_flag
+			}
+			frame = {
+				number = 1
+				trigger = { is_variable_equal = { which = b1c11p1_status value = 1 } }
+			}
+			frame = {
+				number = 2
+				trigger = { is_variable_equal = { which = b1c11p1_status value = 2 } }
+			}
+			frame = {
+				number = 3
+				trigger = { is_variable_equal = { which = b1c11p1_status value = 3 } }
+			}
+			frame = {
+				number = 4
+				trigger = { is_variable_equal = { which = b1c11p1_status value = 4 } }
+			}
+			frame = {
+				number = 5
+				trigger = { is_variable_equal = { which = b1c11p1_status value = 5 } }
+			}
+			frame = {
+				number = 6
+				trigger = { is_variable_equal = { which = b1c11p1_status value = 6 } }
+			}
+		}
+	# 章节12 烟心
+		custom_button = {
+			name = "development_bonus_rank_yanxin"
+			tooltip = development_bonus_rank_yanxin_tooltip
+			potential = {
+				always = yes
+			}
+			trigger = {
+				always = yes
+			}
+			effect = {
+				hidden_effect = {
+					check_area_dev = { fuya = anjiang_area squence = 1 }
+					check_area_dev = { fuya = yanzhong_area squence = 2 }
+					check_area_dev = { fuya = linyuan_area squence = 3 }
+					check_area_dev = { fuya = yingzhen_area squence = 4 }
+					check_area_dev = { fuya = yangcheng_area squence = 5 }
+					set_variable = { which = dev_bonus_chapter value = 12 }
+					set_variable = { which = dev_bonus_page value = 1 }
+				}
+				set_country_flag = dev_buff_details_flag
+			}
+			frame = {
+				number = 1
+				trigger = { is_variable_equal = { which = b1c12p1_status value = 1 } }
+			}
+			frame = {
+				number = 2
+				trigger = { is_variable_equal = { which = b1c12p1_status value = 2 } }
+			}
+			frame = {
+				number = 3
+				trigger = { is_variable_equal = { which = b1c12p1_status value = 3 } }
+			}
+			frame = {
+				number = 4
+				trigger = { is_variable_equal = { which = b1c12p1_status value = 4 } }
+			}
+			frame = {
+				number = 5
+				trigger = { is_variable_equal = { which = b1c12p1_status value = 5 } }
+			}
+			frame = {
+				number = 6
+				trigger = { is_variable_equal = { which = b1c12p1_status value = 6 } }
+			}
+		}
+	# 章节13 珠樾
+		custom_button = {
+			name = "development_bonus_rank_zhuyue"
+			tooltip = development_bonus_rank_zhuyue_tooltip
+			potential = {
+				always = yes
+			}
+			trigger = {
+				always = yes
+			}
+			effect = {
+				hidden_effect = {
+					check_area_dev = { fuya = shian_area squence = 1 }
+					check_area_dev = { fuya = yueying_area squence = 2 }
+					check_area_dev = { fuya = xiaowu_area squence = 3 }
+					check_area_dev = { fuya = hungngon_area squence = 4 }
+					check_area_dev = { fuya = wanglam_area squence = 5 }
+					set_variable = { which = dev_bonus_chapter value = 13 }
+					set_variable = { which = dev_bonus_page value = 1 }
+				}
+				set_country_flag = dev_buff_details_flag
+			}
+			frame = {
+				number = 1
+				trigger = { is_variable_equal = { which = b1c13p1_status value = 1 } }
+			}
+			frame = {
+				number = 2
+				trigger = { is_variable_equal = { which = b1c13p1_status value = 2 } }
+			}
+			frame = {
+				number = 3
+				trigger = { is_variable_equal = { which = b1c13p1_status value = 3 } }
+			}
+			frame = {
+				number = 4
+				trigger = { is_variable_equal = { which = b1c13p1_status value = 4 } }
+			}
+			frame = {
+				number = 5
+				trigger = { is_variable_equal = { which = b1c13p1_status value = 5 } }
+			}
+			frame = {
+				number = 6
+				trigger = { is_variable_equal = { which = b1c13p1_status value = 6 } }
+			}
+		}
+	# 章节14 烟南
+		custom_button = {
+			name = "development_bonus_rank_yannan"
+			tooltip = development_bonus_rank_yannan_tooltip
+			potential = {
+				always = yes
+			}
+			trigger = {
+				always = yes
+			}
+			effect = {
+				hidden_effect = {
+					check_area_dev = { fuya = xiyun_area squence = 1 }
+					check_area_dev = { fuya = rixi_area squence = 2 }
+					check_area_dev = { fuya = wangyueting_area squence = 3 }
+					check_area_dev = { fuya = luoyip_area squence = 4 }
+					check_area_dev = { fuya = iongsim_area squence = 5 }
+					check_area_dev = { fuya = gungi_area squence = 6 }
+					set_variable = { which = dev_bonus_chapter value = 14 }
+					set_variable = { which = dev_bonus_page value = 1 }
+				}
+				set_country_flag = dev_buff_details_flag
+			}
+			frame = {
+				number = 1
+				trigger = { is_variable_equal = { which = b1c14p1_status value = 1 } }
+			}
+			frame = {
+				number = 2
+				trigger = { is_variable_equal = { which = b1c14p1_status value = 2 } }
+			}
+			frame = {
+				number = 3
+				trigger = { is_variable_equal = { which = b1c14p1_status value = 3 } }
+			}
+			frame = {
+				number = 4
+				trigger = { is_variable_equal = { which = b1c14p1_status value = 4 } }
+			}
+			frame = {
+				number = 5
+				trigger = { is_variable_equal = { which = b1c14p1_status value = 5 } }
+			}
+			frame = {
+				number = 6
+				trigger = { is_variable_equal = { which = b1c14p1_status value = 6 } }
+			}
+		}
+	# 章节15 沙泉
+		custom_button = {
+			name = "development_bonus_rank_shaqvan"
+			tooltip = development_bonus_rank_shaqvan_tooltip
+			potential = {
+				always = yes
+			}
+			trigger = {
+				always = yes
+			}
+			effect = {
+				hidden_effect = {
+					check_area_dev = { fuya = linxiandu_area squence = 1 }
+					check_area_dev = { fuya = guzhan_area squence = 2 }
+					check_area_dev = { fuya = zonglin_area squence = 3 }
+					check_area_dev = { fuya = mulim_area squence = 4 }
+					check_area_dev = { fuya = hongnguan_area squence = 5 }
+					set_variable = { which = dev_bonus_chapter value = 15 }
+					set_variable = { which = dev_bonus_page value = 1 }
+				}
+				set_country_flag = dev_buff_details_flag
+			}
+			frame = {
+				number = 1
+				trigger = { is_variable_equal = { which = b1c15p1_status value = 1 } }
+			}
+			frame = {
+				number = 2
+				trigger = { is_variable_equal = { which = b1c15p1_status value = 2 } }
+			}
+			frame = {
+				number = 3
+				trigger = { is_variable_equal = { which = b1c15p1_status value = 3 } }
+			}
+			frame = {
+				number = 4
+				trigger = { is_variable_equal = { which = b1c15p1_status value = 4 } }
+			}
+			frame = {
+				number = 5
+				trigger = { is_variable_equal = { which = b1c15p1_status value = 5 } }
+			}
+			frame = {
+				number = 6
+				trigger = { is_variable_equal = { which = b1c15p1_status value = 6 } }
+			}
+		}
+	# 章节16 金都
+		custom_button = {
+			name = "development_bonus_rank_jindu"
+			tooltip = development_bonus_rank_jindu_tooltip
+			potential = {
+				always = yes
+			}
+			trigger = {
+				always = yes
+			}
+			effect = {
+				hidden_effect = {
+					check_area_dev = { fuya = tiansai_area squence = 1 }
+					check_area_dev = { fuya = tonglei_area squence = 2 }
+					check_area_dev = { fuya = liuminxiang_area squence = 3 }
+					check_area_dev = { fuya = erluxi_area squence = 4 }
+					check_area_dev = { fuya = jinjiang_area squence = 5 }
+					check_area_dev = { fuya = beikyuan_area squence = 6 }
+					set_variable = { which = dev_bonus_chapter value = 16 }
+					set_variable = { which = dev_bonus_page value = 1 }
+				}
+				set_country_flag = dev_buff_details_flag
+			}
+			frame = {
+				number = 1
+				trigger = { is_variable_equal = { which = b1c16p1_status value = 1 } }
+			}
+			frame = {
+				number = 2
+				trigger = { is_variable_equal = { which = b1c16p1_status value = 2 } }
+			}
+			frame = {
+				number = 3
+				trigger = { is_variable_equal = { which = b1c16p1_status value = 3 } }
+			}
+			frame = {
+				number = 4
+				trigger = { is_variable_equal = { which = b1c16p1_status value = 4 } }
+			}
+			frame = {
+				number = 5
+				trigger = { is_variable_equal = { which = b1c16p1_status value = 5 } }
+			}
+			frame = {
+				number = 6
+				trigger = { is_variable_equal = { which = b1c16p1_status value = 6 } }
+			}
+		}
+	# 章节17 江东
+		custom_button = {
+			name = "development_bonus_rank_jiangdong"
+			tooltip = development_bonus_rank_jiangdong_tooltip
+			potential = {
+				always = yes
+			}
+			trigger = {
+				always = yes
+			}
+			effect = {
+				hidden_effect = {
+					check_area_dev = { fuya = fangzhucheng_area squence = 1 }
+					check_area_dev = { fuya = tianlou_area squence = 2 }
+					check_area_dev = { fuya = tianguan_area squence = 3 }
+					check_area_dev = { fuya = xintian_area squence = 4 }
+					check_area_dev = { fuya = linghui_area squence = 5 }
+					check_area_dev = { fuya = beidugang_area squence = 6 }
+					set_variable = { which = dev_bonus_chapter value = 17 }
+					set_variable = { which = dev_bonus_page value = 1 }
+				}
+				set_country_flag = dev_buff_details_flag
+			}
+			frame = {
+				number = 1
+				trigger = { is_variable_equal = { which = b1c17p1_status value = 1 } }
+			}
+			frame = {
+				number = 2
+				trigger = { is_variable_equal = { which = b1c17p1_status value = 2 } }
+			}
+			frame = {
+				number = 3
+				trigger = { is_variable_equal = { which = b1c17p1_status value = 3 } }
+			}
+			frame = {
+				number = 4
+				trigger = { is_variable_equal = { which = b1c17p1_status value = 4 } }
+			}
+			frame = {
+				number = 5
+				trigger = { is_variable_equal = { which = b1c17p1_status value = 5 } }
+			}
+			frame = {
+				number = 6
+				trigger = { is_variable_equal = { which = b1c17p1_status value = 6 } }
+			}
+		}
+	# 章节18 矛海
+		custom_button = {
+			name = "development_bonus_rank_maohai"
+			tooltip = development_bonus_rank_maohai_tooltip
+			potential = {
+				always = yes
+			}
+			trigger = {
+				always = yes
+			}
+			effect = {
+				hidden_effect = {
+					check_area_dev = { fuya = zhubi_area squence = 1 }
+					check_area_dev = { fuya = xvanbi_area squence = 2 }
+					check_area_dev = { fuya = jianzhong_area squence = 3 }
+					check_area_dev = { fuya = xuanbing_area squence = 4 }
+					set_variable = { which = dev_bonus_chapter value = 18 }
+					set_variable = { which = dev_bonus_page value = 1 }
+				}
+				set_country_flag = dev_buff_details_flag
+			}
+			frame = {
+				number = 1
+				trigger = { is_variable_equal = { which = b1c18p1_status value = 1 } }
+			}
+			frame = {
+				number = 2
+				trigger = { is_variable_equal = { which = b1c18p1_status value = 2 } }
+			}
+			frame = {
+				number = 3
+				trigger = { is_variable_equal = { which = b1c18p1_status value = 3 } }
+			}
+			frame = {
+				number = 4
+				trigger = { is_variable_equal = { which = b1c18p1_status value = 4 } }
+			}
+			frame = {
+				number = 5
+				trigger = { is_variable_equal = { which = b1c18p1_status value = 5 } }
+			}
+			frame = {
+				number = 6
+				trigger = { is_variable_equal = { which = b1c18p1_status value = 6 } }
+			}
+		}
+	# 章节19 坚武
+		custom_button = {
+			name = "development_bonus_rank_jianwu"
+			tooltip = development_bonus_rank_jianwu_tooltip
+			potential = {
+				always = yes
+			}
+			trigger = {
+				always = yes
+			}
+			effect = {
+				hidden_effect = {
+					check_area_dev = { fuya = hanwuguan_area squence = 1 }
+					check_area_dev = { fuya = lishu_area squence = 2 }
+					check_area_dev = { fuya = yiguan_area squence = 3 }
+					check_area_dev = { fuya = jiantsiang_area squence = 4 }
+					set_variable = { which = dev_bonus_chapter value = 19 }
+					set_variable = { which = dev_bonus_page value = 1 }
+				}
+				set_country_flag = dev_buff_details_flag
+			}
+			frame = {
+				number = 1
+				trigger = { is_variable_equal = { which = b1c19p1_status value = 1 } }
+			}
+			frame = {
+				number = 2
+				trigger = { is_variable_equal = { which = b1c19p1_status value = 2 } }
+			}
+			frame = {
+				number = 3
+				trigger = { is_variable_equal = { which = b1c19p1_status value = 3 } }
+			}
+			frame = {
+				number = 4
+				trigger = { is_variable_equal = { which = b1c19p1_status value = 4 } }
+			}
+			frame = {
+				number = 5
+				trigger = { is_variable_equal = { which = b1c19p1_status value = 5 } }
+			}
+			frame = {
+				number = 6
+				trigger = { is_variable_equal = { which = b1c19p1_status value = 6 } }
+			}
+		}
+	# 章节20 魔岭
+		custom_button = {
+			name = "development_bonus_rank_moling"
+			tooltip = development_bonus_rank_moling_tooltip
+			potential = {
+				always = yes
+			}
+			trigger = {
+				always = yes
+			}
+			effect = {
+				hidden_effect = {
+					check_area_dev = { fuya = yambioka_area squence = 1 }
+					check_area_dev = { fuya = sugroltona_area squence = 2 }
+					check_area_dev = { fuya = unbeksu_area squence = 3 }
+					check_area_dev = { fuya = mogutian_area squence = 4 }
+					check_area_dev = { fuya = moryokang_area squence = 5 }
+					set_variable = { which = dev_bonus_chapter value = 20 }
+					set_variable = { which = dev_bonus_page value = 1 }
+				}
+				set_country_flag = dev_buff_details_flag
+			}
+			frame = {
+				number = 1
+				trigger = { is_variable_equal = { which = b1c20p1_status value = 1 } }
+			}
+			frame = {
+				number = 2
+				trigger = { is_variable_equal = { which = b1c20p1_status value = 2 } }
+			}
+			frame = {
+				number = 3
+				trigger = { is_variable_equal = { which = b1c20p1_status value = 3 } }
+			}
+			frame = {
+				number = 4
+				trigger = { is_variable_equal = { which = b1c20p1_status value = 4 } }
+			}
+			frame = {
+				number = 5
+				trigger = { is_variable_equal = { which = b1c20p1_status value = 5 } }
+			}
+			frame = {
+				number = 6
+				trigger = { is_variable_equal = { which = b1c20p1_status value = 6 } }
+			}
+		}	
+	
+	# 结语：目前只做了大明的发展度奖励，所以没有为目录创建windowType
+
+# 正文
+	custom_window = {
+		name = "window_dev_buff_details"
+		potential = { has_country_flag = dev_buff_details_flag }
+	}
+	custom_icon = { #子窗口的背景图
+		name = "GFX_background_subwindow_dev_bonus"
+		potential = { always = yes }
+	}
+	custom_button = { #关闭
+		name = "button_dev_buff_details_CLOSE"
+		tooltip = ""
+		potential = { always = yes }
+		trigger = { hidden_trigger = { always = yes	} }
+		effect = { clr_country_flag = dev_buff_details_flag }
+	}
+	custom_button = { #上一章节
+		name = "button_dev_buff_bookmark_left_arrow"
+		tooltip = ""
+		potential = { always = yes }
+		trigger = { hidden_trigger = { always = yes	} }
+		effect = {
+			hidden_effect = {
+				if = {
+					limit = { is_variable_equal = { which = dev_bonus_chapter value = 9 } }
+					set_variable = { which = dev_bonus_chapter value = 20 }
+				}
+				else = {
+					subtract_variable = { which = dev_bonus_chapter value = 1 }
+				}
+				set_variable = { which = dev_bonus_page value = 0 }
+			}
+		}
+	}
+	custom_button = { #下一章节
+		name = "button_dev_buff_bookmark_right_arrow"
+		tooltip = ""
+		potential = { always = yes }
+		trigger = { hidden_trigger = { always = yes	} }
+		effect = {
+			hidden_effect = {
+				if = {
+					limit = { is_variable_equal = { which = dev_bonus_chapter value = 20 } }
+					set_variable = { which = dev_bonus_chapter value = 9 }
+				}
+				else = { 
+					change_variable = { which = dev_bonus_chapter value = 1 }
+				}
+				set_variable = { which = dev_bonus_page value = 0 }
+			}
+		}
+	}
+	custom_button = { #提示
+		name = "button_dev_buff_bookmark_tip"
+		tooltip = button_dev_buff_bookmark_tip_tooltip
+		potential = { always = yes }
+		trigger = { hidden_trigger = { always = yes	} }
+		effect = {}
+	}
+	custom_text_box = { #文本 页码0
+			name = TextBox_dev_bonus_cxp0
+			potential = { is_variable_equal = { which = dev_bonus_page value = 0 } }
+	}
+
+	#章节9 昭明
+		custom_window = {
+			name = "window_dev_buff_prov_group_zhaoming"
+			potential = { is_variable_equal = { which = dev_bonus_chapter value = 9 } }
+		}
+		custom_button = { #翻到页码1
+			name = "button_dev_buff_bookmark_b1c9p1"
+			tooltip = ""
+			potential = { always = yes }
+			trigger = { hidden_trigger = { always = yes	} }
+			effect = { 
+				hidden_effect = {
+					check_area_dev = { fuya = bianfang_area squence = 1 }
+					check_area_dev = { fuya = bianyuan_area squence = 2 }
+					check_area_dev = { fuya = tunayuan_area squence = 3 }
+					check_area_dev = { fuya = tietyuan_area squence = 4 }
+					set_variable = { which = dev_bonus_page value = 1 }
+				} 
+			}
+			frame = {
+				number = 1
+				trigger = { NOT = { is_variable_equal = { which = dev_bonus_page value = 1 } } }
+			}
+			frame = {
+				number = 2
+				trigger = { is_variable_equal = { which = dev_bonus_page value = 1 } }
+			}
+		}
+		custom_button = { #获取升级点数
+			name = button_dev_buff_c9_upgrade_points
+			tooltip = button_dev_buff_cx_upgrade_points_tooltip
+			potential = { always = yes }
+			trigger = {
+				if = {
+					limit = { is_variable_equal = { which = dev_bonus_page value = 1 } }
+					b1_chapterx_pagex_with_4_mean_dev_trigger = { chapter = 9 page = 1 }
+				}
+				else = { #正常情况下不会这样
+					custom_trigger_tooltip = {
+						tooltip = dev_bonus_please_set_page_num_tooltip
+						always = no
+					}
+				}			
+			}
+			effect = {
+				dev_bonus_change_upgrade_points_with_rule_4 = { chapter = 9 page = 1 }
+				hidden_effect = {
+					if = {
+						limit = { is_variable_equal = { which = dev_bonus_page value = 1 } }
+						change_variable = { which = b1c9p1_status value = 1 }
+					}
+				}
+			}
+			frame = {
+				number = 1
+				trigger = {
+					upgrade_points_frame_with_1_page_trigger = { chapter = 9 rank = 1 }
+				}
+			}
+			frame = {
+				number = 2
+				trigger = {
+					upgrade_points_frame_with_1_page_trigger = { chapter = 9 rank = 2 }
+				}
+			}
+			frame = {
+				number = 3
+				trigger = {
+					upgrade_points_frame_with_1_page_trigger = { chapter = 9 rank = 3 }
+				}
+			}
+			frame = {
+				number = 4
+				trigger = {
+					upgrade_points_frame_with_1_page_trigger = { chapter = 9 rank = 4 }
+				}
+			}
+
+			frame = {
+				number = 5
+				trigger = {
+					upgrade_points_frame_with_1_page_trigger = { chapter = 9 rank = 5 }
+				}
+			}
+			frame = {
+				number = 6
+				trigger = {
+					upgrade_points_frame_with_1_page_trigger = { chapter = 9 rank = 6 }
+				}
+			}
+		}
+		custom_text_box = { #文本 章节信息
+			name = TextBox_dev_bonus_chapter_9_info
+			potential = { always = yes }
+			tooltip = ""
+		}
+		custom_text_box = { #文本 页码1
+			name = TextBox_dev_bonus_c9p1
+			potential = { is_variable_equal = { which = dev_bonus_page value = 1 } }
+		}
+		custom_button = {
+			name = "button_dev_buff_zhaoming_fire_damage_received"
+			tooltip = button_dev_buff_zhaoming_fire_damage_received_tooltip
+			potential = { always = yes }
+			trigger = { hidden_trigger = { always = yes	} }
+			effect = { 
+				if = {
+					limit = { 
+						NOT = { check_variable = { which = b1c9_buff_1 value = 3 } }
+						OR = {
+							check_variable = { which = b1c9_upgrade_points value = 1 } 
+							check_variable = { which = dev_bonus_exotic_upgrade_points value = 1 } 
+						}
+					}
+					#1.更新buff 
+					dev_bonus_buff_upgrade = { buffname = zhaoming_fire_damage_received }
+					#2.更新升级点数 
+					if = {
+						limit = {
+							check_variable = { which = b1c9_upgrade_points value = 1 } 
+						}
+						subtract_variable = { which = b1c9_upgrade_points value = 1 }
+					}
+					else = {
+						subtract_variable = { which = dev_bonus_exotic_upgrade_points value = 1 }
+					}
+					#3.更新buff变量
+					hidden_effect = {
+						change_variable = { which = b1c9_buff_1 value = 1 }
+					}
+				}				
+			}
+			frame = { # 变量的值代表当前buff等级
+				number = 1
+				trigger = { is_variable_equal = { which = b1c9_buff_1 value = 0 } }
+			}
+			frame = {
+				number = 2
+				trigger = { is_variable_equal = { which = b1c9_buff_1 value = 1 } }
+			}
+			frame = {
+				number = 3
+				trigger = { is_variable_equal = { which = b1c9_buff_1 value = 2 } }
+			}
+			frame = {
+				number = 4
+				trigger = { is_variable_equal = { which = b1c9_buff_1 value = 3 } }
+			}
+		}
+		custom_button = {
+			name = "button_dev_buff_zhaoming_shock_damage_received"
+			tooltip = button_dev_buff_zhaoming_shock_damage_received_tooltip
+			potential = { always = yes }
+			trigger = { hidden_trigger = { always = yes	} }
+			effect = { 
+				if = {
+					limit = { 
+						NOT = { check_variable = { which = b1c9_buff_2 value = 3 } }
+						OR = {
+							check_variable = { which = b1c9_upgrade_points value = 1 } 
+							check_variable = { which = dev_bonus_exotic_upgrade_points value = 1 } 
+						}
+					}
+					#1.更新buff 
+					dev_bonus_buff_upgrade = { buffname = zhaoming_shock_damage_received }
+					#2.更新升级点数 
+					if = {
+						limit = {
+							check_variable = { which = b1c9_upgrade_points value = 1 } 
+						}
+						subtract_variable = { which = b1c9_upgrade_points value = 1 }
+					}
+					else = {
+						subtract_variable = { which = dev_bonus_exotic_upgrade_points value = 1 }
+					}
+					#3.更新buff变量
+					hidden_effect = {
+						change_variable = { which = b1c9_buff_2 value = 1 }
+					}
+				}				
+			}
+			frame = { # 变量的值代表当前buff等级
+				number = 1
+				trigger = { is_variable_equal = { which = b1c9_buff_2 value = 0 } }
+			}
+			frame = {
+				number = 2
+				trigger = { is_variable_equal = { which = b1c9_buff_2 value = 1 } }
+			}
+			frame = {
+				number = 3
+				trigger = { is_variable_equal = { which = b1c9_buff_2 value = 2 } }
+			}
+			frame = {
+				number = 4
+				trigger = { is_variable_equal = { which = b1c9_buff_2 value = 3 } }
+			}
+		}
+		custom_button = {
+			name = "button_dev_buff_zhaoming_land_attrition"
+			tooltip = button_dev_buff_zhaoming_land_attrition_tooltip
+			potential = { always = yes }
+			trigger = { hidden_trigger = { always = yes	} }
+			effect = { 
+				if = {
+					limit = { 
+						NOT = { check_variable = { which = b1c9_buff_3 value = 3 } }
+						OR = {
+							check_variable = { which = b1c9_upgrade_points value = 1 } 
+							check_variable = { which = dev_bonus_exotic_upgrade_points value = 1 } 
+						}
+					}
+					#1.更新buff 
+					dev_bonus_buff_upgrade = { buffname = zhaoming_land_attrition }
+					#2.更新升级点数 
+					if = {
+						limit = {
+							check_variable = { which = b1c9_upgrade_points value = 1 } 
+						}
+						subtract_variable = { which = b1c9_upgrade_points value = 1 }
+					}
+					else = {
+						subtract_variable = { which = dev_bonus_exotic_upgrade_points value = 1 }
+					}
+					#3.更新buff变量
+					hidden_effect = {
+						change_variable = { which = b1c9_buff_3 value = 1 }
+					}
+				}				
+			}
+			frame = { # 变量的值代表当前buff等级
+				number = 1
+				trigger = { is_variable_equal = { which = b1c9_buff_3 value = 0 } }
+			}
+			frame = {
+				number = 2
+				trigger = { is_variable_equal = { which = b1c9_buff_3 value = 1 } }
+			}
+			frame = {
+				number = 3
+				trigger = { is_variable_equal = { which = b1c9_buff_3 value = 2 } }
+			}
+			frame = {
+				number = 4
+				trigger = { is_variable_equal = { which = b1c9_buff_3 value = 3 } }
+			}
+		}
+
+	#章节10 天西
+		custom_window = {
+			name = "window_dev_buff_prov_group_tianxi"
+			potential = { is_variable_equal = { which = dev_bonus_chapter value = 10 } }
+		}
+		custom_button = { #翻到页码1
+			name = "button_dev_buff_bookmark_b1c10p1"
+			tooltip = ""
+			potential = { always = yes }
+			trigger = { hidden_trigger = { always = yes	} }
+			effect = { 
+				hidden_effect = {
+					check_area_dev = { fuya = jiangszun_area squence = 1 }
+					check_area_dev = { fuya = lamzung_area squence = 2 }
+					check_area_dev = { fuya = jyutsai_area squence = 3 }
+					check_area_dev = { fuya = tianszi_area squence = 4 }
+					set_variable = { which = dev_bonus_page value = 1 }
+				} 
+			}
+			frame = {
+				number = 1
+				trigger = { NOT = { is_variable_equal = { which = dev_bonus_page value = 1 } } }
+			}
+			frame = {
+				number = 2
+				trigger = { is_variable_equal = { which = dev_bonus_page value = 1 } }
+			}
+		}
+		custom_button = { #获取升级点数
+			name = button_dev_buff_c10_upgrade_points
+			tooltip = button_dev_buff_cx_upgrade_points_tooltip
+			potential = { always = yes }
+			trigger = {
+				if = {
+					limit = { is_variable_equal = { which = dev_bonus_page value = 1 } }
+					b1_chapterx_pagex_with_4_mean_dev_trigger = { chapter = 10 page = 1 }
+				}
+				else = { #正常情况下不会这样
+					custom_trigger_tooltip = {
+						tooltip = dev_bonus_please_set_page_num_tooltip
+						always = no
+					}
+				}			
+			}
+			effect = {
+				dev_bonus_change_upgrade_points_with_rule_4 = { chapter = 10 page = 1 }
+				hidden_effect = {
+					if = {
+						limit = { is_variable_equal = { which = dev_bonus_page value = 1 } }
+						change_variable = { which = b1c10p1_status value = 1 }
+					}
+				}
+			}
+			frame = {
+				number = 1
+				trigger = {
+					upgrade_points_frame_with_1_page_trigger = { chapter = 10 rank = 1 }
+				}
+			}
+			frame = {
+				number = 2
+				trigger = {
+					upgrade_points_frame_with_1_page_trigger = { chapter = 10 rank = 2 }
+				}
+			}
+			frame = {
+				number = 3
+				trigger = {
+					upgrade_points_frame_with_1_page_trigger = { chapter = 10 rank = 3 }
+				}
+			}
+			frame = {
+				number = 4
+				trigger = {
+					upgrade_points_frame_with_1_page_trigger = { chapter = 10 rank = 4 }
+				}
+			}
+			frame = {
+				number = 5
+				trigger = {
+					upgrade_points_frame_with_1_page_trigger = { chapter = 10 rank = 5 }
+				}
+			}
+			frame = {
+				number = 6
+				trigger = {
+					upgrade_points_frame_with_1_page_trigger = { chapter = 10 rank = 6 }
+				}
+			}
+		}
+		custom_text_box = { #文本 章节信息
+			name = TextBox_dev_bonus_chapter_10_info
+			potential = { always = yes }
+			tooltip = ""
+		}
+		custom_text_box = { #文本 页码1
+			name = TextBox_dev_bonus_c10p1
+			potential = { is_variable_equal = { which = dev_bonus_page value = 1 } }
+        }
+		custom_button = {
+			name = "button_dev_buff_tianxi_build_cost"
+			tooltip = button_dev_buff_tianxi_build_cost_tooltip
+			potential = { always = yes }
+			trigger = { hidden_trigger = { always = yes	} }
+			effect = { 
+				if = {
+					limit = { 
+						NOT = { check_variable = { which = b1c10_buff_1 value = 3 } }
+						OR = {
+							check_variable = { which = b1c10_upgrade_points value = 1 } 
+							check_variable = { which = dev_bonus_exotic_upgrade_points value = 1 } 
+						}
+					}
+					#1.更新buff 
+					dev_bonus_buff_upgrade = { buffname = tianxi_build_cost }
+					#2.更新升级点数 
+					if = {
+						limit = {
+							check_variable = { which = b1c10_upgrade_points value = 1 } 
+						}
+						subtract_variable = { which = b1c10_upgrade_points value = 1 }
+					}
+					else = {
+						subtract_variable = { which = dev_bonus_exotic_upgrade_points value = 1 }
+					}
+					#3.更新buff变量
+					hidden_effect = {
+						change_variable = { which = b1c10_buff_1 value = 1 }
+					}
+				}				
+			}
+			frame = { # 变量的值代表当前buff等级
+				number = 1
+				trigger = { is_variable_equal = { which = b1c10_buff_1 value = 0 } }
+			}
+			frame = {
+				number = 2
+				trigger = { is_variable_equal = { which = b1c10_buff_1 value = 1 } }
+			}
+			frame = {
+				number = 3
+				trigger = { is_variable_equal = { which = b1c10_buff_1 value = 2 } }
+			}
+			frame = {
+				number = 4
+				trigger = { is_variable_equal = { which = b1c10_buff_1 value = 3 } }
+			}
+		}
+		custom_button = {
+			name = "button_dev_buff_tianxi_build_time"
+			tooltip = button_dev_buff_tianxi_build_time_tooltip
+			potential = { always = yes }
+			trigger = { hidden_trigger = { always = yes	} }
+			effect = { 
+				if = {
+					limit = { 
+						NOT = { check_variable = { which = b1c10_buff_2 value = 3 } }
+						OR = {
+							check_variable = { which = b1c10_upgrade_points value = 1 } 
+							check_variable = { which = dev_bonus_exotic_upgrade_points value = 1 } 
+						}
+					}
+					#1.更新buff 
+					dev_bonus_buff_upgrade = { buffname = tianxi_build_time }
+					#2.更新升级点数 
+					if = {
+						limit = {
+							check_variable = { which = b1c10_upgrade_points value = 1 } 
+						}
+						subtract_variable = { which = b1c10_upgrade_points value = 1 }
+					}
+					else = {
+						subtract_variable = { which = dev_bonus_exotic_upgrade_points value = 1 }
+					}
+					#3.更新buff变量
+					hidden_effect = {
+						change_variable = { which = b1c10_buff_2 value = 1 }
+					}
+				}				
+			}
+			frame = { # 变量的值代表当前buff等级
+				number = 1
+				trigger = { is_variable_equal = { which = b1c10_buff_2 value = 0 } }
+			}
+			frame = {
+				number = 2
+				trigger = { is_variable_equal = { which = b1c10_buff_2 value = 1 } }
+			}
+			frame = {
+				number = 3
+				trigger = { is_variable_equal = { which = b1c10_buff_2 value = 2 } }
+			}
+			frame = {
+				number = 4
+				trigger = { is_variable_equal = { which = b1c10_buff_2 value = 3 } }
+			}
+		}
+		custom_button = {
+			name = "button_dev_buff_tianxi_regiment_time"
+			tooltip = button_dev_buff_tianxi_regiment_time_tooltip
+			potential = { always = yes }
+			trigger = { hidden_trigger = { always = yes	} }
+			effect = { 
+				if = {
+					limit = { 
+						NOT = { check_variable = { which = b1c10_buff_3 value = 3 } }
+						OR = {
+							check_variable = { which = b1c10_upgrade_points value = 1 } 
+							check_variable = { which = dev_bonus_exotic_upgrade_points value = 1 } 
+						}
+					}
+					#1.更新buff 
+					dev_bonus_buff_upgrade = { buffname = tianxi_regiment_time }
+					#2.更新升级点数 
+					if = {
+						limit = {
+							check_variable = { which = b1c10_upgrade_points value = 1 } 
+						}
+						subtract_variable = { which = b1c10_upgrade_points value = 1 }
+					}
+					else = {
+						subtract_variable = { which = dev_bonus_exotic_upgrade_points value = 1 }
+					}
+					#3.更新buff变量
+					hidden_effect = {
+						change_variable = { which = b1c10_buff_3 value = 1 }
+					}
+				}				
+			}
+			frame = { # 变量的值代表当前buff等级
+				number = 1
+				trigger = { is_variable_equal = { which = b1c10_buff_3 value = 0 } }
+			}
+			frame = {
+				number = 2
+				trigger = { is_variable_equal = { which = b1c10_buff_3 value = 1 } }
+			}
+			frame = {
+				number = 3
+				trigger = { is_variable_equal = { which = b1c10_buff_3 value = 2 } }
+			}
+			frame = {
+				number = 4
+				trigger = { is_variable_equal = { which = b1c10_buff_3 value = 3 } }
+			}
+		}
+
+	#章节11 路中
+		custom_window = {
+			name = "window_dev_buff_prov_group_luzhong"
+			potential = { is_variable_equal = { which = dev_bonus_chapter value = 11 } }
+		}
+		custom_button = { #翻到页码1
+			name = "button_dev_buff_bookmark_b1c11p1"
+			tooltip = ""
+			potential = { always = yes }
+			trigger = { hidden_trigger = { always = yes	} }
+			effect = { 
+				hidden_effect = {
+					check_area_dev = { fuya = jinqiu_area squence = 1 }
+					check_area_dev = { fuya = balrijin_area squence = 2 }
+					check_area_dev = { fuya = jingai_area squence = 3 }
+					check_area_dev = { fuya = tiaochi_area squence = 4 }
+					check_area_dev = { fuya = hubao_area squence = 5 }
+					set_variable = { which = dev_bonus_page value = 1 }
+				} 
+			}
+			frame = {
+				number = 1
+				trigger = { NOT = { is_variable_equal = { which = dev_bonus_page value = 1 } } }
+			}
+			frame = {
+				number = 2
+				trigger = { is_variable_equal = { which = dev_bonus_page value = 1 } }
+			}
+		}
+		custom_button = { #获取升级点数
+			name = button_dev_buff_c11_upgrade_points
+			tooltip = button_dev_buff_cx_upgrade_points_tooltip
+			potential = { always = yes }
+			trigger = {
+				if = {
+					limit = { is_variable_equal = { which = dev_bonus_page value = 1 } }
+					b1_chapterx_pagex_with_5_mean_dev_trigger = { chapter = 11 page = 1 }
+				}
+				else = { #正常情况下不会这样
+					custom_trigger_tooltip = {
+						tooltip = dev_bonus_please_set_page_num_tooltip
+						always = no
+					}
+				}			
+			}
+			effect = {
+				dev_bonus_change_upgrade_points_with_rule_5 = { chapter = 11 page = 1 }
+				hidden_effect = {
+					if = {
+						limit = { is_variable_equal = { which = dev_bonus_page value = 1 } }
+						change_variable = { which = b1c11p1_status value = 1 }
+					}
+				}
+			}
+			frame = {
+				number = 1
+				trigger = {
+					upgrade_points_frame_with_1_page_trigger = { chapter = 11 rank = 1 }
+				}
+			}
+			frame = {
+				number = 2
+				trigger = {
+					upgrade_points_frame_with_1_page_trigger = { chapter = 11 rank = 2 }
+				}
+			}
+			frame = {
+				number = 3
+				trigger = {
+					upgrade_points_frame_with_1_page_trigger = { chapter = 11 rank = 3 }
+				}
+			}
+			frame = {
+				number = 4
+				trigger = {
+					upgrade_points_frame_with_1_page_trigger = { chapter = 11 rank = 4 }
+				}
+			}
+			frame = {
+				number = 5
+				trigger = {
+					upgrade_points_frame_with_1_page_trigger = { chapter = 11 rank = 5 }
+				}
+			}
+			frame = {
+				number = 6
+				trigger = {
+					upgrade_points_frame_with_1_page_trigger = { chapter = 11 rank = 6 }
+				}
+			}
+		}
+		custom_text_box = { #文本 章节信息
+			name = TextBox_dev_bonus_chapter_11_info
+			potential = { always = yes }
+			tooltip = ""
+		}
+		custom_text_box = { #文本 页码1
+			name = TextBox_dev_bonus_c11p1
+			potential = { is_variable_equal = { which = dev_bonus_page value = 1 } }
+        }
+		custom_button = {
+			name = "button_dev_buff_luzhong_morale_damage_received"
+			tooltip = button_dev_buff_luzhong_morale_damage_received_tooltip
+			potential = { always = yes }
+			trigger = { hidden_trigger = { always = yes	} }
+			effect = { 
+				if = {
+					limit = { 
+						NOT = { check_variable = { which = b1c11_buff_1 value = 3 } }
+						OR = {
+							check_variable = { which = b1c11_upgrade_points value = 1 } 
+							check_variable = { which = dev_bonus_exotic_upgrade_points value = 1 } 
+						}
+					}
+					#1.更新buff 
+					dev_bonus_buff_upgrade = { buffname = luzhong_morale_damage_received }
+					#2.更新升级点数 
+					if = {
+						limit = {
+							check_variable = { which = b1c11_upgrade_points value = 1 } 
+						}
+						subtract_variable = { which = b1c11_upgrade_points value = 1 }
+					}
+					else = {
+						subtract_variable = { which = dev_bonus_exotic_upgrade_points value = 1 }
+					}
+					#3.更新buff变量
+					hidden_effect = {
+						change_variable = { which = b1c11_buff_1 value = 1 }
+					}
+				}				
+			}
+			frame = { # 变量的值代表当前buff等级
+				number = 1
+				trigger = { is_variable_equal = { which = b1c11_buff_1 value = 0 } }
+			}
+			frame = {
+				number = 2
+				trigger = { is_variable_equal = { which = b1c11_buff_1 value = 1 } }
+			}
+			frame = {
+				number = 3
+				trigger = { is_variable_equal = { which = b1c11_buff_1 value = 2 } }
+			}
+			frame = {
+				number = 4
+				trigger = { is_variable_equal = { which = b1c11_buff_1 value = 3 } }
+			}
+		}
+		custom_button = {
+			name = "button_dev_buff_luzhong_drill_decay"
+			tooltip = button_dev_buff_luzhong_drill_decay_tooltip
+			potential = { always = yes }
+			trigger = { hidden_trigger = { always = yes	} }
+			effect = { 
+				if = {
+					limit = { 
+						NOT = { check_variable = { which = b1c11_buff_2 value = 3 } }
+						OR = {
+							check_variable = { which = b1c11_upgrade_points value = 1 } 
+							check_variable = { which = dev_bonus_exotic_upgrade_points value = 1 } 
+						}
+					}
+					#1.更新buff 
+					dev_bonus_buff_upgrade = { buffname = luzhong_drill_decay }
+					#2.更新升级点数 
+					if = {
+						limit = {
+							check_variable = { which = b1c11_upgrade_points value = 1 } 
+						}
+						subtract_variable = { which = b1c11_upgrade_points value = 1 }
+					}
+					else = {
+						subtract_variable = { which = dev_bonus_exotic_upgrade_points value = 1 }
+					}
+					#3.更新buff变量
+					hidden_effect = {
+						change_variable = { which = b1c11_buff_2 value = 1 }
+					}
+				}				
+			}
+			frame = { # 变量的值代表当前buff等级
+				number = 1
+				trigger = { is_variable_equal = { which = b1c11_buff_2 value = 0 } }
+			}
+			frame = {
+				number = 2
+				trigger = { is_variable_equal = { which = b1c11_buff_2 value = 1 } }
+			}
+			frame = {
+				number = 3
+				trigger = { is_variable_equal = { which = b1c11_buff_2 value = 2 } }
+			}
+			frame = {
+				number = 4
+				trigger = { is_variable_equal = { which = b1c11_buff_2 value = 3 } }
+			}
+		}
+		custom_button = {
+			name = "button_dev_buff_luzhong_reinforce"
+			tooltip = button_dev_buff_luzhong_reinforce_tooltip
+			potential = { always = yes }
+			trigger = { hidden_trigger = { always = yes	} }
+			effect = { 
+				if = {
+					limit = { 
+						NOT = { check_variable = { which = b1c11_buff_3 value = 3 } }
+						OR = {
+							check_variable = { which = b1c11_upgrade_points value = 1 } 
+							check_variable = { which = dev_bonus_exotic_upgrade_points value = 1 } 
+						}
+					}
+					#1.更新buff 
+					dev_bonus_buff_upgrade = { buffname = luzhong_reinforce }
+					#2.更新升级点数 
+					if = {
+						limit = {
+							check_variable = { which = b1c11_upgrade_points value = 1 } 
+						}
+						subtract_variable = { which = b1c11_upgrade_points value = 1 }
+					}
+					else = {
+						subtract_variable = { which = dev_bonus_exotic_upgrade_points value = 1 }
+					}
+					#3.更新buff变量
+					hidden_effect = {
+						change_variable = { which = b1c11_buff_3 value = 1 }
+					}
+				}				
+			}
+			frame = { # 变量的值代表当前buff等级
+				number = 1
+				trigger = { is_variable_equal = { which = b1c11_buff_3 value = 0 } }
+			}
+			frame = {
+				number = 2
+				trigger = { is_variable_equal = { which = b1c11_buff_3 value = 1 } }
+			}
+			frame = {
+				number = 3
+				trigger = { is_variable_equal = { which = b1c11_buff_3 value = 2 } }
+			}
+			frame = {
+				number = 4
+				trigger = { is_variable_equal = { which = b1c11_buff_3 value = 3 } }
+			}
+		}
+		custom_button = {
+			name = "button_dev_buff_luzhong_condottieri"
+			tooltip = button_dev_buff_luzhong_condottieri_tooltip
+			potential = { always = yes }
+			trigger = { hidden_trigger = { always = yes	} }
+			effect = { 
+				if = {
+					limit = { 
+						NOT = { check_variable = { which = b1c11_buff_4 value = 3 } }
+						OR = {
+							check_variable = { which = b1c11_upgrade_points value = 1 } 
+							check_variable = { which = dev_bonus_exotic_upgrade_points value = 1 } 
+						}
+					}
+					#1.更新buff 
+					dev_bonus_buff_upgrade = { buffname = luzhong_condottieri }
+					#2.更新升级点数 
+					if = {
+						limit = {
+							check_variable = { which = b1c11_upgrade_points value = 1 } 
+						}
+						subtract_variable = { which = b1c11_upgrade_points value = 1 }
+					}
+					else = {
+						subtract_variable = { which = dev_bonus_exotic_upgrade_points value = 1 }
+					}
+					#3.更新buff变量
+					hidden_effect = {
+						change_variable = { which = b1c11_buff_4 value = 1 }
+					}
+				}				
+			}
+			frame = { # 变量的值代表当前buff等级
+				number = 1
+				trigger = { is_variable_equal = { which = b1c11_buff_4 value = 0 } }
+			}
+			frame = {
+				number = 2
+				trigger = { is_variable_equal = { which = b1c11_buff_4 value = 1 } }
+			}
+			frame = {
+				number = 3
+				trigger = { is_variable_equal = { which = b1c11_buff_4 value = 2 } }
+			}
+			frame = {
+				number = 4
+				trigger = { is_variable_equal = { which = b1c11_buff_4 value = 3 } }
+			}
+		}		
+
+	#章节12 烟心
+		custom_window = {
+			name = "window_dev_buff_prov_group_yanxin"
+			potential = { is_variable_equal = { which = dev_bonus_chapter value = 12 } }
+		}
+		custom_button = { #翻到页码1
+			name = "button_dev_buff_bookmark_b1c12p1"
+			tooltip = ""
+			potential = { always = yes }
+			trigger = { hidden_trigger = { always = yes	} }
+			effect = { 
+				hidden_effect = {
+					check_area_dev = { fuya = anjiang_area squence = 1 }
+					check_area_dev = { fuya = yanzhong_area squence = 2 }
+					check_area_dev = { fuya = linyuan_area squence = 3 }
+					check_area_dev = { fuya = yingzhen_area squence = 4 }
+					check_area_dev = { fuya = yangcheng_area squence = 5 }
+					set_variable = { which = dev_bonus_page value = 1 }
+				} 
+			}
+			frame = {
+				number = 1
+				trigger = { NOT = { is_variable_equal = { which = dev_bonus_page value = 1 } } }
+			}
+			frame = {
+				number = 2
+				trigger = { is_variable_equal = { which = dev_bonus_page value = 1 } }
+			}
+		}
+		custom_button = { #获取升级点数
+			name = button_dev_buff_c12_upgrade_points
+			tooltip = button_dev_buff_cx_upgrade_points_tooltip
+			potential = { always = yes }
+			trigger = {
+				if = {
+					limit = { is_variable_equal = { which = dev_bonus_page value = 1 } }
+					b1_chapterx_pagex_with_5_mean_dev_trigger = { chapter = 12 page = 1 }
+				}
+				else = { #正常情况下不会这样
+					custom_trigger_tooltip = {
+						tooltip = dev_bonus_please_set_page_num_tooltip
+						always = no
+					}
+				}			
+			}
+			effect = {
+				dev_bonus_change_upgrade_points_with_rule_5 = { chapter = 12 page = 1 }
+				hidden_effect = {
+					if = {
+						limit = { is_variable_equal = { which = dev_bonus_page value = 1 } }
+						change_variable = { which = b1c12p1_status value = 1 }
+					}
+				}
+			}
+			frame = {
+				number = 1
+				trigger = {
+					upgrade_points_frame_with_1_page_trigger = { chapter = 12 rank = 1 }
+				}
+			}
+			frame = {
+				number = 2
+				trigger = {
+					upgrade_points_frame_with_1_page_trigger = { chapter = 12 rank = 2 }
+				}
+			}
+			frame = {
+				number = 3
+				trigger = {
+					upgrade_points_frame_with_1_page_trigger = { chapter = 12 rank = 3 }
+				}
+			}
+			frame = {
+				number = 4
+				trigger = {
+					upgrade_points_frame_with_1_page_trigger = { chapter = 12 rank = 4 }
+				}
+			}
+			frame = {
+				number = 5
+				trigger = {
+					upgrade_points_frame_with_1_page_trigger = { chapter = 12 rank = 5 }
+				}
+			}
+			frame = {
+				number = 6
+				trigger = {
+					upgrade_points_frame_with_1_page_trigger = { chapter = 12 rank = 6 }
+				}
+			}
+		}
+		custom_text_box = { #文本 章节信息
+			name = TextBox_dev_bonus_chapter_12_info
+			potential = { always = yes }
+			tooltip = ""
+		}
+		custom_text_box = { #文本 页码1
+			name = TextBox_dev_bonus_c12p1
+			potential = { is_variable_equal = { which = dev_bonus_page value = 1 } }
+        }
+		custom_button = {
+			name = "button_dev_buff_yanxin_idea"
+			tooltip = button_dev_buff_yanxin_idea_tooltip
+			potential = { always = yes }
+			trigger = { hidden_trigger = { always = yes	} }
+			effect = { 
+				if = {
+					limit = { 
+						NOT = { check_variable = { which = b1c12_buff_1 value = 3 } }
+						OR = {
+							check_variable = { which = b1c12_upgrade_points value = 1 } 
+							check_variable = { which = dev_bonus_exotic_upgrade_points value = 1 } 
+						}
+					}
+					#1.更新buff 
+					dev_bonus_buff_upgrade = { buffname = yanxin_idea }
+					#2.更新升级点数 
+					if = {
+						limit = {
+							check_variable = { which = b1c12_upgrade_points value = 1 } 
+						}
+						subtract_variable = { which = b1c12_upgrade_points value = 1 }
+					}
+					else = {
+						subtract_variable = { which = dev_bonus_exotic_upgrade_points value = 1 }
+					}
+					#3.更新buff变量
+					hidden_effect = {
+						change_variable = { which = b1c12_buff_1 value = 1 }
+					}
+				}				
+			}
+			frame = { # 变量的值代表当前buff等级
+				number = 1
+				trigger = { is_variable_equal = { which = b1c12_buff_1 value = 0 } }
+			}
+			frame = {
+				number = 2
+				trigger = { is_variable_equal = { which = b1c12_buff_1 value = 1 } }
+			}
+			frame = {
+				number = 3
+				trigger = { is_variable_equal = { which = b1c12_buff_1 value = 2 } }
+			}
+			frame = {
+				number = 4
+				trigger = { is_variable_equal = { which = b1c12_buff_1 value = 3 } }
+			}
+		}
+		custom_button = {
+			name = "button_dev_buff_yanxin_dev_cost"
+			tooltip = button_dev_buff_yanxin_dev_cost_tooltip
+			potential = { always = yes }
+			trigger = { hidden_trigger = { always = yes	} }
+			effect = { 
+				if = {
+					limit = { 
+						NOT = { check_variable = { which = b1c12_buff_2 value = 3 } }
+						OR = {
+							check_variable = { which = b1c12_upgrade_points value = 1 } 
+							check_variable = { which = dev_bonus_exotic_upgrade_points value = 1 } 
+						}
+					}
+					#1.更新buff 
+					dev_bonus_buff_upgrade = { buffname = yanxin_dev_cost }
+					#2.更新升级点数 
+					if = {
+						limit = {
+							check_variable = { which = b1c12_upgrade_points value = 1 } 
+						}
+						subtract_variable = { which = b1c12_upgrade_points value = 1 }
+					}
+					else = {
+						subtract_variable = { which = dev_bonus_exotic_upgrade_points value = 1 }
+					}
+					#3.更新buff变量
+					hidden_effect = {
+						change_variable = { which = b1c12_buff_2 value = 1 }
+					}
+				}				
+			}
+			frame = { # 变量的值代表当前buff等级
+				number = 1
+				trigger = { is_variable_equal = { which = b1c12_buff_2 value = 0 } }
+			}
+			frame = {
+				number = 2
+				trigger = { is_variable_equal = { which = b1c12_buff_2 value = 1 } }
+			}
+			frame = {
+				number = 3
+				trigger = { is_variable_equal = { which = b1c12_buff_2 value = 2 } }
+			}
+			frame = {
+				number = 4
+				trigger = { is_variable_equal = { which = b1c12_buff_2 value = 3 } }
+			}
+		}
+		custom_button = {
+			name = "button_dev_buff_yanxin_stability"
+			tooltip = button_dev_buff_yanxin_stability_tooltip
+			potential = { always = yes }
+			trigger = { hidden_trigger = { always = yes	} }
+			effect = { 
+				if = {
+					limit = { 
+						NOT = { check_variable = { which = b1c12_buff_3 value = 3 } }
+						OR = {
+							check_variable = { which = b1c12_upgrade_points value = 1 } 
+							check_variable = { which = dev_bonus_exotic_upgrade_points value = 1 } 
+						}
+					}
+					#1.更新buff 
+					dev_bonus_buff_upgrade = { buffname = yanxin_stability }
+					#2.更新升级点数 
+					if = {
+						limit = {
+							check_variable = { which = b1c12_upgrade_points value = 1 } 
+						}
+						subtract_variable = { which = b1c12_upgrade_points value = 1 }
+					}
+					else = {
+						subtract_variable = { which = dev_bonus_exotic_upgrade_points value = 1 }
+					}
+					#3.更新buff变量
+					hidden_effect = {
+						change_variable = { which = b1c12_buff_3 value = 1 }
+					}
+				}				
+			}
+			frame = { # 变量的值代表当前buff等级
+				number = 1
+				trigger = { is_variable_equal = { which = b1c12_buff_3 value = 0 } }
+			}
+			frame = {
+				number = 2
+				trigger = { is_variable_equal = { which = b1c12_buff_3 value = 1 } }
+			}
+			frame = {
+				number = 3
+				trigger = { is_variable_equal = { which = b1c12_buff_3 value = 2 } }
+			}
+			frame = {
+				number = 4
+				trigger = { is_variable_equal = { which = b1c12_buff_3 value = 3 } }
+			}
+		}
+		custom_button = {
+			name = "button_dev_buff_yanxin_governing_cost"
+			tooltip = button_dev_buff_yanxin_governing_cost_tooltip
+			potential = { always = yes }
+			trigger = { hidden_trigger = { always = yes	} }
+			effect = { 
+				if = {
+					limit = { 
+						NOT = { check_variable = { which = b1c12_buff_4 value = 3 } }
+						OR = {
+							check_variable = { which = b1c12_upgrade_points value = 1 } 
+							check_variable = { which = dev_bonus_exotic_upgrade_points value = 1 } 
+						}
+					}
+					#1.更新buff 
+					dev_bonus_buff_upgrade = { buffname = yanxin_governing_cost }
+					#2.更新升级点数 
+					if = {
+						limit = {
+							check_variable = { which = b1c12_upgrade_points value = 1 } 
+						}
+						subtract_variable = { which = b1c12_upgrade_points value = 1 }
+					}
+					else = {
+						subtract_variable = { which = dev_bonus_exotic_upgrade_points value = 1 }
+					}
+					#3.更新buff变量
+					hidden_effect = {
+						change_variable = { which = b1c12_buff_4 value = 1 }
+					}
+				}				
+			}
+			frame = { # 变量的值代表当前buff等级
+				number = 1
+				trigger = { is_variable_equal = { which = b1c12_buff_4 value = 0 } }
+			}
+			frame = {
+				number = 2
+				trigger = { is_variable_equal = { which = b1c12_buff_4 value = 1 } }
+			}
+			frame = {
+				number = 3
+				trigger = { is_variable_equal = { which = b1c12_buff_4 value = 2 } }
+			}
+			frame = {
+				number = 4
+				trigger = { is_variable_equal = { which = b1c12_buff_4 value = 3 } }
+			}
+		}
+
+	#章节13 珠樾
+		custom_window = {
+			name = "window_dev_buff_prov_group_zhuyue"
+			potential = { is_variable_equal = { which = dev_bonus_chapter value = 13 } }
+		}
+		custom_button = { #翻到页码1
+			name = "button_dev_buff_bookmark_b1c13p1"
+			tooltip = ""
+			potential = { always = yes }
+			trigger = { hidden_trigger = { always = yes	} }
+			effect = { 
+				hidden_effect = {
+					check_area_dev = { fuya = shian_area squence = 1 }
+					check_area_dev = { fuya = yueying_area squence = 2 }
+					check_area_dev = { fuya = xiaowu_area squence = 3 }
+					check_area_dev = { fuya = hungngon_area squence = 4 }
+					check_area_dev = { fuya = wanglam_area squence = 5 }
+					set_variable = { which = dev_bonus_page value = 1 }
+				} 
+			}
+			frame = {
+				number = 1
+				trigger = { NOT = { is_variable_equal = { which = dev_bonus_page value = 1 } } }
+			}
+			frame = {
+				number = 2
+				trigger = { is_variable_equal = { which = dev_bonus_page value = 1 } }
+			}
+		}
+		custom_button = { #获取升级点数
+			name = button_dev_buff_c13_upgrade_points
+			tooltip = button_dev_buff_cx_upgrade_points_tooltip
+			potential = { always = yes }
+			trigger = {
+				if = {
+					limit = { is_variable_equal = { which = dev_bonus_page value = 1 } }
+					b1_chapterx_pagex_with_5_mean_dev_trigger = { chapter = 13 page = 1 }
+				}
+				else = { #正常情况下不会这样
+					custom_trigger_tooltip = {
+						tooltip = dev_bonus_please_set_page_num_tooltip
+						always = no
+					}
+				}			
+			}
+			effect = {
+				dev_bonus_change_upgrade_points_with_rule_5 = { chapter = 13 page = 1 }
+				hidden_effect = {
+					if = {
+						limit = { is_variable_equal = { which = dev_bonus_page value = 1 } }
+						change_variable = { which = b1c13p1_status value = 1 }
+					}
+				}
+			}
+			frame = {
+				number = 1
+				trigger = {
+					upgrade_points_frame_with_1_page_trigger = { chapter = 13 rank = 1 }
+				}
+			}
+			frame = {
+				number = 2
+				trigger = {
+					upgrade_points_frame_with_1_page_trigger = { chapter = 13 rank = 2 }
+				}
+			}
+			frame = {
+				number = 3
+				trigger = {
+					upgrade_points_frame_with_1_page_trigger = { chapter = 13 rank = 3 }
+				}
+			}
+			frame = {
+				number = 4
+				trigger = {
+					upgrade_points_frame_with_1_page_trigger = { chapter = 13 rank = 4 }
+				}
+			}
+			frame = {
+				number = 5
+				trigger = {
+					upgrade_points_frame_with_1_page_trigger = { chapter = 13 rank = 5 }
+				}
+			}
+			frame = {
+				number = 6
+				trigger = {
+					upgrade_points_frame_with_1_page_trigger = { chapter = 13 rank = 6 }
+				}
+			}
+		}
+		custom_text_box = { #文本 章节信息
+			name = TextBox_dev_bonus_chapter_13_info
+			potential = { always = yes }
+			tooltip = ""
+		}
+		custom_text_box = { #文本 页码1
+			name = TextBox_dev_bonus_c13p1
+			potential = { is_variable_equal = { which = dev_bonus_page value = 1 } }
+        }
+		custom_button = {
+			name = "button_dev_buff_zhuyue_autonomy"
+			tooltip = button_dev_buff_zhuyue_autonomy_tooltip
+			potential = { always = yes }
+			trigger = { hidden_trigger = { always = yes	} }
+			effect = { 
+				if = {
+					limit = { 
+						NOT = { check_variable = { which = b1c13_buff_1 value = 3 } }
+						OR = {
+							check_variable = { which = b1c13_upgrade_points value = 1 } 
+							check_variable = { which = dev_bonus_exotic_upgrade_points value = 1 } 
+						}
+					}
+					#1.更新buff 
+					dev_bonus_buff_upgrade = { buffname = zhuyue_autonomy }
+					#2.更新升级点数 
+					if = {
+						limit = {
+							check_variable = { which = b1c13_upgrade_points value = 1 } 
+						}
+						subtract_variable = { which = b1c13_upgrade_points value = 1 }
+					}
+					else = {
+						subtract_variable = { which = dev_bonus_exotic_upgrade_points value = 1 }
+					}
+					#3.更新buff变量
+					hidden_effect = {
+						change_variable = { which = b1c13_buff_1 value = 1 }
+					}
+				}				
+			}
+			frame = { # 变量的值代表当前buff等级
+				number = 1
+				trigger = { is_variable_equal = { which = b1c13_buff_1 value = 0 } }
+			}
+			frame = {
+				number = 2
+				trigger = { is_variable_equal = { which = b1c13_buff_1 value = 1 } }
+			}
+			frame = {
+				number = 3
+				trigger = { is_variable_equal = { which = b1c13_buff_1 value = 2 } }
+			}
+			frame = {
+				number = 4
+				trigger = { is_variable_equal = { which = b1c13_buff_1 value = 3 } }
+			}
+		}
+		custom_button = {
+			name = "button_dev_buff_zhuyue_culture_promotion"
+			tooltip = button_dev_buff_zhuyue_culture_promotion_tooltip
+			potential = { always = yes }
+			trigger = { hidden_trigger = { always = yes	} }
+			effect = { 
+				if = {
+					limit = { 
+						NOT = { check_variable = { which = b1c13_buff_2 value = 3 } }
+						OR = {
+							check_variable = { which = b1c13_upgrade_points value = 1 } 
+							check_variable = { which = dev_bonus_exotic_upgrade_points value = 1 } 
+						}
+					}
+					#1.更新buff 
+					dev_bonus_buff_upgrade = { buffname = zhuyue_culture_promotion }
+					#2.更新升级点数 
+					if = {
+						limit = {
+							check_variable = { which = b1c13_upgrade_points value = 1 } 
+						}
+						subtract_variable = { which = b1c13_upgrade_points value = 1 }
+					}
+					else = {
+						subtract_variable = { which = dev_bonus_exotic_upgrade_points value = 1 }
+					}
+					#3.更新buff变量
+					hidden_effect = {
+						change_variable = { which = b1c13_buff_2 value = 1 }
+					}
+				}				
+			}
+			frame = { # 变量的值代表当前buff等级
+				number = 1
+				trigger = { is_variable_equal = { which = b1c13_buff_2 value = 0 } }
+			}
+			frame = {
+				number = 2
+				trigger = { is_variable_equal = { which = b1c13_buff_2 value = 1 } }
+			}
+			frame = {
+				number = 3
+				trigger = { is_variable_equal = { which = b1c13_buff_2 value = 2 } }
+			}
+			frame = {
+				number = 4
+				trigger = { is_variable_equal = { which = b1c13_buff_2 value = 3 } }
+			}
+		}
+		custom_button = {
+			name = "button_dev_buff_zhuyue_diplomats"
+			tooltip = button_dev_buff_zhuyue_diplomats_tooltip
+			potential = { always = yes }
+			trigger = { hidden_trigger = { always = yes	} }
+			effect = { 
+				if = {
+					limit = { 
+						NOT = { check_variable = { which = b1c13_buff_3 value = 3 } }
+						OR = {
+							check_variable = { which = b1c13_upgrade_points value = 1 } 
+							check_variable = { which = dev_bonus_exotic_upgrade_points value = 1 } 
+						}
+					}
+					#1.更新buff 
+					dev_bonus_buff_upgrade = { buffname = zhuyue_diplomats }
+					#2.更新升级点数 
+					if = {
+						limit = {
+							check_variable = { which = b1c13_upgrade_points value = 1 } 
+						}
+						subtract_variable = { which = b1c13_upgrade_points value = 1 }
+					}
+					else = {
+						subtract_variable = { which = dev_bonus_exotic_upgrade_points value = 1 }
+					}
+					#3.更新buff变量
+					hidden_effect = {
+						change_variable = { which = b1c13_buff_3 value = 1 }
+					}
+				}				
+			}
+			frame = { # 变量的值代表当前buff等级
+				number = 1
+				trigger = { is_variable_equal = { which = b1c13_buff_3 value = 0 } }
+			}
+			frame = {
+				number = 2
+				trigger = { is_variable_equal = { which = b1c13_buff_3 value = 1 } }
+			}
+			frame = {
+				number = 3
+				trigger = { is_variable_equal = { which = b1c13_buff_3 value = 2 } }
+			}
+			frame = {
+				number = 4
+				trigger = { is_variable_equal = { which = b1c13_buff_3 value = 3 } }
+			}
+		}
+		custom_button = {
+			name = "button_dev_buff_zhuyue_reputation"
+			tooltip = button_dev_buff_zhuyue_reputation_tooltip
+			potential = { always = yes }
+			trigger = { hidden_trigger = { always = yes	} }
+			effect = { 
+				if = {
+					limit = { 
+						NOT = { check_variable = { which = b1c13_buff_4 value = 3 } }
+						OR = {
+							check_variable = { which = b1c13_upgrade_points value = 1 } 
+							check_variable = { which = dev_bonus_exotic_upgrade_points value = 1 } 
+						}
+					}
+					#1.更新buff 
+					dev_bonus_buff_upgrade = { buffname = zhuyue_reputation }
+					#2.更新升级点数 
+					if = {
+						limit = {
+							check_variable = { which = b1c13_upgrade_points value = 1 } 
+						}
+						subtract_variable = { which = b1c13_upgrade_points value = 1 }
+					}
+					else = {
+						subtract_variable = { which = dev_bonus_exotic_upgrade_points value = 1 }
+					}
+					#3.更新buff变量
+					hidden_effect = {
+						change_variable = { which = b1c13_buff_4 value = 1 }
+					}
+				}				
+			}
+			frame = { # 变量的值代表当前buff等级
+				number = 1
+				trigger = { is_variable_equal = { which = b1c13_buff_4 value = 0 } }
+			}
+			frame = {
+				number = 2
+				trigger = { is_variable_equal = { which = b1c13_buff_4 value = 1 } }
+			}
+			frame = {
+				number = 3
+				trigger = { is_variable_equal = { which = b1c13_buff_4 value = 2 } }
+			}
+			frame = {
+				number = 4
+				trigger = { is_variable_equal = { which = b1c13_buff_4 value = 3 } }
+			}
+		}
+
+	#章节14 烟南
+		custom_window = {
+			name = "window_dev_buff_prov_group_yannan"
+			potential = { is_variable_equal = { which = dev_bonus_chapter value = 14 } }
+		}
+		custom_button = { #翻到页码1
+			name = "button_dev_buff_bookmark_b1c14p1"
+			tooltip = ""
+			potential = { always = yes }
+			trigger = { hidden_trigger = { always = yes	} }
+			effect = { 
+				hidden_effect = {
+					check_area_dev = { fuya = xiyun_area squence = 1 }
+					check_area_dev = { fuya = rixi_area squence = 2 }
+					check_area_dev = { fuya = wangyueting_area squence = 3 }
+					check_area_dev = { fuya = luoyip_area squence = 4 }
+					check_area_dev = { fuya = iongsim_area squence = 5 }
+					check_area_dev = { fuya = gungi_area squence = 6 }
+					set_variable = { which = dev_bonus_page value = 1 }
+				} 
+			}
+			frame = {
+				number = 1
+				trigger = { NOT = { is_variable_equal = { which = dev_bonus_page value = 1 } } }
+			}
+			frame = {
+				number = 2
+				trigger = { is_variable_equal = { which = dev_bonus_page value = 1 } }
+			}
+		}
+		custom_button = { #获取升级点数
+			name = button_dev_buff_c14_upgrade_points
+			tooltip = button_dev_buff_cx_upgrade_points_tooltip
+			potential = { always = yes }
+			trigger = {
+				if = {
+					limit = { is_variable_equal = { which = dev_bonus_page value = 1 } }
+					b1_chapterx_pagex_with_6_mean_dev_trigger = { chapter = 14 page = 1 }
+				}
+				else = { #正常情况下不会这样
+					custom_trigger_tooltip = {
+						tooltip = dev_bonus_please_set_page_num_tooltip
+						always = no
+					}
+				}			
+			}
+			effect = {
+				dev_bonus_change_upgrade_points_with_rule_6 = { chapter = 14 page = 1 }
+				hidden_effect = {
+					if = {
+						limit = { is_variable_equal = { which = dev_bonus_page value = 1 } }
+						change_variable = { which = b1c14p1_status value = 1 }
+					}
+				}
+			}
+			frame = {
+				number = 1
+				trigger = {
+					upgrade_points_frame_with_1_page_trigger = { chapter = 14 rank = 1 }
+				}
+			}
+			frame = {
+				number = 2
+				trigger = {
+					upgrade_points_frame_with_1_page_trigger = { chapter = 14 rank = 2 }
+				}
+			}
+			frame = {
+				number = 3
+				trigger = {
+					upgrade_points_frame_with_1_page_trigger = { chapter = 14 rank = 3 }
+				}
+			}
+			frame = {
+				number = 4
+				trigger = {
+					upgrade_points_frame_with_1_page_trigger = { chapter = 14 rank = 4 }
+				}
+			}
+			frame = {
+				number = 5
+				trigger = {
+					upgrade_points_frame_with_1_page_trigger = { chapter = 14 rank = 5 }
+				}
+			}
+			frame = {
+				number = 6
+				trigger = {
+					upgrade_points_frame_with_1_page_trigger = { chapter = 14 rank = 6 }
+				}
+			}
+		}
+		custom_text_box = { #文本 章节信息
+			name = TextBox_dev_bonus_chapter_14_info
+			potential = { always = yes }
+			tooltip = ""
+		}
+		custom_text_box = { #文本 页码1
+			name = TextBox_dev_bonus_c14p1
+			potential = { is_variable_equal = { which = dev_bonus_page value = 1 } }
+        }
+		custom_button = {
+			name = "button_dev_buff_yannan_possible_policy"
+			tooltip = button_dev_buff_yannan_possible_policy_tooltip
+			potential = { always = yes }
+			trigger = { hidden_trigger = { always = yes	} }
+			effect = { 
+				if = {
+					limit = { 
+						NOT = { check_variable = { which = b1c14_buff_1 value = 3 } }
+						OR = {
+							check_variable = { which = b1c14_upgrade_points value = 1 } 
+							check_variable = { which = dev_bonus_exotic_upgrade_points value = 1 } 
+						}
+					}
+					#1.更新buff 
+					dev_bonus_buff_upgrade = { buffname = yannan_possible_policy }
+					#2.更新升级点数 
+					if = {
+						limit = {
+							check_variable = { which = b1c14_upgrade_points value = 1 } 
+						}
+						subtract_variable = { which = b1c14_upgrade_points value = 1 }
+					}
+					else = {
+						subtract_variable = { which = dev_bonus_exotic_upgrade_points value = 1 }
+					}
+					#3.更新buff变量
+					hidden_effect = {
+						change_variable = { which = b1c14_buff_1 value = 1 }
+					}
+				}				
+			}
+			frame = { # 变量的值代表当前buff等级
+				number = 1
+				trigger = { is_variable_equal = { which = b1c14_buff_1 value = 0 } }
+			}
+			frame = {
+				number = 2
+				trigger = { is_variable_equal = { which = b1c14_buff_1 value = 1 } }
+			}
+			frame = {
+				number = 3
+				trigger = { is_variable_equal = { which = b1c14_buff_1 value = 2 } }
+			}
+			frame = {
+				number = 4
+				trigger = { is_variable_equal = { which = b1c14_buff_1 value = 3 } }
+			}
+		}
+		custom_button = {
+			name = "button_dev_buff_yannan_absolutism"
+			tooltip = button_dev_buff_yannan_absolutism_tooltip
+			potential = { always = yes }
+			trigger = { hidden_trigger = { always = yes	} }
+			effect = { 
+				if = {
+					limit = { 
+						NOT = { check_variable = { which = b1c14_buff_2 value = 3 } }
+						OR = {
+							check_variable = { which = b1c14_upgrade_points value = 1 } 
+							check_variable = { which = dev_bonus_exotic_upgrade_points value = 1 } 
+						}
+					}
+					#1.更新buff 
+					dev_bonus_buff_upgrade = { buffname = yannan_absolutism }
+					#2.更新升级点数 
+					if = {
+						limit = {
+							check_variable = { which = b1c14_upgrade_points value = 1 } 
+						}
+						subtract_variable = { which = b1c14_upgrade_points value = 1 }
+					}
+					else = {
+						subtract_variable = { which = dev_bonus_exotic_upgrade_points value = 1 }
+					}
+					#3.更新buff变量
+					hidden_effect = {
+						change_variable = { which = b1c14_buff_2 value = 1 }
+					}
+				}				
+			}
+			frame = { # 变量的值代表当前buff等级
+				number = 1
+				trigger = { is_variable_equal = { which = b1c14_buff_2 value = 0 } }
+			}
+			frame = {
+				number = 2
+				trigger = { is_variable_equal = { which = b1c14_buff_2 value = 1 } }
+			}
+			frame = {
+				number = 3
+				trigger = { is_variable_equal = { which = b1c14_buff_2 value = 2 } }
+			}
+			frame = {
+				number = 4
+				trigger = { is_variable_equal = { which = b1c14_buff_2 value = 3 } }
+			}
+		}
+		custom_button = {
+			name = "button_dev_buff_yannan_trade_efficiency"
+			tooltip = button_dev_buff_yannan_trade_efficiency_tooltip
+			potential = { always = yes }
+			trigger = { hidden_trigger = { always = yes	} }
+			effect = { 
+				if = {
+					limit = { 
+						NOT = { check_variable = { which = b1c14_buff_3 value = 3 } }
+						OR = {
+							check_variable = { which = b1c14_upgrade_points value = 1 } 
+							check_variable = { which = dev_bonus_exotic_upgrade_points value = 1 } 
+						}
+					}
+					#1.更新buff 
+					dev_bonus_buff_upgrade = { buffname = yannan_trade_efficiency }
+					#2.更新升级点数 
+					if = {
+						limit = {
+							check_variable = { which = b1c14_upgrade_points value = 1 } 
+						}
+						subtract_variable = { which = b1c14_upgrade_points value = 1 }
+					}
+					else = {
+						subtract_variable = { which = dev_bonus_exotic_upgrade_points value = 1 }
+					}
+					#3.更新buff变量
+					hidden_effect = {
+						change_variable = { which = b1c14_buff_3 value = 1 }
+					}
+				}				
+			}
+			frame = { # 变量的值代表当前buff等级
+				number = 1
+				trigger = { is_variable_equal = { which = b1c14_buff_3 value = 0 } }
+			}
+			frame = {
+				number = 2
+				trigger = { is_variable_equal = { which = b1c14_buff_3 value = 1 } }
+			}
+			frame = {
+				number = 3
+				trigger = { is_variable_equal = { which = b1c14_buff_3 value = 2 } }
+			}
+			frame = {
+				number = 4
+				trigger = { is_variable_equal = { which = b1c14_buff_3 value = 3 } }
+			}
+		}
+		custom_button = {
+			name = "button_dev_buff_yannan_diplomatic_annexation"
+			tooltip = button_dev_buff_yannan_diplomatic_annexation_tooltip
+			potential = { always = yes }
+			trigger = { hidden_trigger = { always = yes	} }
+			effect = { 
+				if = {
+					limit = { 
+						NOT = { check_variable = { which = b1c14_buff_4 value = 3 } }
+						OR = {
+							check_variable = { which = b1c14_upgrade_points value = 1 } 
+							check_variable = { which = dev_bonus_exotic_upgrade_points value = 1 } 
+						}
+					}
+					#1.更新buff 
+					dev_bonus_buff_upgrade = { buffname = yannan_diplomatic_annexation }
+					#2.更新升级点数 
+					if = {
+						limit = {
+							check_variable = { which = b1c14_upgrade_points value = 1 } 
+						}
+						subtract_variable = { which = b1c14_upgrade_points value = 1 }
+					}
+					else = {
+						subtract_variable = { which = dev_bonus_exotic_upgrade_points value = 1 }
+					}
+					#3.更新buff变量
+					hidden_effect = {
+						change_variable = { which = b1c14_buff_4 value = 1 }
+					}
+				}				
+			}
+			frame = { # 变量的值代表当前buff等级
+				number = 1
+				trigger = { is_variable_equal = { which = b1c14_buff_4 value = 0 } }
+			}
+			frame = {
+				number = 2
+				trigger = { is_variable_equal = { which = b1c14_buff_4 value = 1 } }
+			}
+			frame = {
+				number = 3
+				trigger = { is_variable_equal = { which = b1c14_buff_4 value = 2 } }
+			}
+			frame = {
+				number = 4
+				trigger = { is_variable_equal = { which = b1c14_buff_4 value = 3 } }
+			}
+		}
+		custom_button = {
+			name = "button_dev_buff_yannan_spy"
+			tooltip = button_dev_buff_yannan_spy_tooltip
+			potential = { always = yes }
+			trigger = { hidden_trigger = { always = yes	} }
+			effect = { 
+				if = {
+					limit = { 
+						NOT = { check_variable = { which = b1c14_buff_5 value = 3 } }
+						OR = {
+							check_variable = { which = b1c14_upgrade_points value = 1 } 
+							check_variable = { which = dev_bonus_exotic_upgrade_points value = 1 } 
+						}
+					}
+					#1.更新buff 
+					dev_bonus_buff_upgrade = { buffname = yannan_spy }
+					#2.更新升级点数 
+					if = {
+						limit = {
+							check_variable = { which = b1c14_upgrade_points value = 1 } 
+						}
+						subtract_variable = { which = b1c14_upgrade_points value = 1 }
+					}
+					else = {
+						subtract_variable = { which = dev_bonus_exotic_upgrade_points value = 1 }
+					}
+					#3.更新buff变量
+					hidden_effect = {
+						change_variable = { which = b1c14_buff_5 value = 1 }
+					}
+				}				
+			}
+			frame = { # 变量的值代表当前buff等级
+				number = 1
+				trigger = { is_variable_equal = { which = b1c14_buff_5 value = 0 } }
+			}
+			frame = {
+				number = 2
+				trigger = { is_variable_equal = { which = b1c14_buff_5 value = 1 } }
+			}
+			frame = {
+				number = 3
+				trigger = { is_variable_equal = { which = b1c14_buff_5 value = 2 } }
+			}
+			frame = {
+				number = 4
+				trigger = { is_variable_equal = { which = b1c14_buff_5 value = 3 } }
+			}
+		}
+
+	#章节15 沙泉
+		custom_window = {
+			name = "window_dev_buff_prov_group_shaqvan"
+			potential = { is_variable_equal = { which = dev_bonus_chapter value = 15 } }
+		}
+		custom_button = { #翻到页码1
+			name = "button_dev_buff_bookmark_b1c15p1"
+			tooltip = ""
+			potential = { always = yes }
+			trigger = { hidden_trigger = { always = yes	} }
+			effect = { 
+				hidden_effect = {
+					check_area_dev = { fuya = linxiandu_area squence = 1 }
+					check_area_dev = { fuya = guzhan_area squence = 2 }
+					check_area_dev = { fuya = zonglin_area squence = 3 }
+					check_area_dev = { fuya = mulim_area squence = 4 }
+					check_area_dev = { fuya = hongnguan_area squence = 5 }
+					set_variable = { which = dev_bonus_page value = 1 }
+				} 
+			}
+			frame = {
+				number = 1
+				trigger = { NOT = { is_variable_equal = { which = dev_bonus_page value = 1 } } }
+			}
+			frame = {
+				number = 2
+				trigger = { is_variable_equal = { which = dev_bonus_page value = 1 } }
+			}
+		}
+		custom_button = { #获取升级点数
+			name = button_dev_buff_c15_upgrade_points
+			tooltip = button_dev_buff_cx_upgrade_points_tooltip
+			potential = { always = yes }
+			trigger = {
+				if = {
+					limit = { is_variable_equal = { which = dev_bonus_page value = 1 } }
+					b1_chapterx_pagex_with_5_mean_dev_trigger = { chapter = 15 page = 1 }
+				}
+				else = { #正常情况下不会这样
+					custom_trigger_tooltip = {
+						tooltip = dev_bonus_please_set_page_num_tooltip
+						always = no
+					}
+				}			
+			}
+			effect = {
+				dev_bonus_change_upgrade_points_with_rule_5 = { chapter = 15 page = 1 }
+				hidden_effect = {
+					if = {
+						limit = { is_variable_equal = { which = dev_bonus_page value = 1 } }
+						change_variable = { which = b1c15p1_status value = 1 }
+					}
+				}
+			}
+			frame = {
+				number = 1
+				trigger = {
+					upgrade_points_frame_with_1_page_trigger = { chapter = 15 rank = 1 }
+				}
+			}
+			frame = {
+				number = 2
+				trigger = {
+					upgrade_points_frame_with_1_page_trigger = { chapter = 15 rank = 2 }
+				}
+			}
+			frame = {
+				number = 3
+				trigger = {
+					upgrade_points_frame_with_1_page_trigger = { chapter = 15 rank = 3 }
+				}
+			}
+			frame = {
+				number = 4
+				trigger = {
+					upgrade_points_frame_with_1_page_trigger = { chapter = 15 rank = 4 }
+				}
+			}
+			frame = {
+				number = 5
+				trigger = {
+					upgrade_points_frame_with_1_page_trigger = { chapter = 15 rank = 5 }
+				}
+			}
+			frame = {
+				number = 6
+				trigger = {
+					upgrade_points_frame_with_1_page_trigger = { chapter = 15 rank = 6 }
+				}
+			}
+		}
+		custom_text_box = { #文本 章节信息
+			name = TextBox_dev_bonus_chapter_15_info
+			potential = { always = yes }
+			tooltip = ""
+		}
+		custom_text_box = { #文本 页码1
+			name = TextBox_dev_bonus_c15p1
+			potential = { is_variable_equal = { which = dev_bonus_page value = 1 } }
+        }
+		custom_button = {
+			name = "button_dev_buff_shaqvan_devastation"
+			tooltip = button_dev_buff_shaqvan_devastation_tooltip
+			potential = { always = yes }
+			trigger = { hidden_trigger = { always = yes	} }
+			effect = { 
+				if = {
+					limit = { 
+						NOT = { check_variable = { which = b1c15_buff_1 value = 3 } }
+						OR = {
+							check_variable = { which = b1c15_upgrade_points value = 1 } 
+							check_variable = { which = dev_bonus_exotic_upgrade_points value = 1 } 
+						}
+					}
+					#1.更新buff 
+					dev_bonus_buff_upgrade = { buffname = shaqvan_devastation }
+					#2.更新升级点数 
+					if = {
+						limit = {
+							check_variable = { which = b1c15_upgrade_points value = 1 } 
+						}
+						subtract_variable = { which = b1c15_upgrade_points value = 1 }
+					}
+					else = {
+						subtract_variable = { which = dev_bonus_exotic_upgrade_points value = 1 }
+					}
+					#3.更新buff变量
+					hidden_effect = {
+						change_variable = { which = b1c15_buff_1 value = 1 }
+					}
+				}				
+			}
+			frame = { # 变量的值代表当前buff等级
+				number = 1
+				trigger = { is_variable_equal = { which = b1c15_buff_1 value = 0 } }
+			}
+			frame = {
+				number = 2
+				trigger = { is_variable_equal = { which = b1c15_buff_1 value = 1 } }
+			}
+			frame = {
+				number = 3
+				trigger = { is_variable_equal = { which = b1c15_buff_1 value = 2 } }
+			}
+			frame = {
+				number = 4
+				trigger = { is_variable_equal = { which = b1c15_buff_1 value = 3 } }
+			}
+		}
+		custom_button = {
+			name = "button_dev_buff_shaqvan_prosperity"
+			tooltip = button_dev_buff_shaqvan_prosperity_tooltip
+			potential = { always = yes }
+			trigger = { hidden_trigger = { always = yes	} }
+			effect = { 
+				if = {
+					limit = { 
+						NOT = { check_variable = { which = b1c15_buff_2 value = 3 } }
+						OR = {
+							check_variable = { which = b1c15_upgrade_points value = 1 } 
+							check_variable = { which = dev_bonus_exotic_upgrade_points value = 1 } 
+						}
+					}
+					#1.更新buff 
+					dev_bonus_buff_upgrade = { buffname = shaqvan_prosperity }
+					#2.更新升级点数 
+					if = {
+						limit = {
+							check_variable = { which = b1c15_upgrade_points value = 1 } 
+						}
+						subtract_variable = { which = b1c15_upgrade_points value = 1 }
+					}
+					else = {
+						subtract_variable = { which = dev_bonus_exotic_upgrade_points value = 1 }
+					}
+					#3.更新buff变量
+					hidden_effect = {
+						change_variable = { which = b1c15_buff_2 value = 1 }
+					}
+				}				
+			}
+			frame = { # 变量的值代表当前buff等级
+				number = 1
+				trigger = { is_variable_equal = { which = b1c15_buff_2 value = 0 } }
+			}
+			frame = {
+				number = 2
+				trigger = { is_variable_equal = { which = b1c15_buff_2 value = 1 } }
+			}
+			frame = {
+				number = 3
+				trigger = { is_variable_equal = { which = b1c15_buff_2 value = 2 } }
+			}
+			frame = {
+				number = 4
+				trigger = { is_variable_equal = { which = b1c15_buff_2 value = 3 } }
+			}
+		}
+		custom_button = {
+			name = "button_dev_buff_shaqvan_innovation"
+			tooltip = button_dev_buff_shaqvan_innovation_tooltip
+			potential = { always = yes }
+			trigger = { hidden_trigger = { always = yes	} }
+			effect = { 
+				if = {
+					limit = { 
+						NOT = { check_variable = { which = b1c15_buff_3 value = 3 } }
+						OR = {
+							check_variable = { which = b1c15_upgrade_points value = 1 } 
+							check_variable = { which = dev_bonus_exotic_upgrade_points value = 1 } 
+						}
+					}
+					#1.更新buff 
+					dev_bonus_buff_upgrade = { buffname = shaqvan_innovation }
+					#2.更新升级点数 
+					if = {
+						limit = {
+							check_variable = { which = b1c15_upgrade_points value = 1 } 
+						}
+						subtract_variable = { which = b1c15_upgrade_points value = 1 }
+					}
+					else = {
+						subtract_variable = { which = dev_bonus_exotic_upgrade_points value = 1 }
+					}
+					#3.更新buff变量
+					hidden_effect = {
+						change_variable = { which = b1c15_buff_3 value = 1 }
+					}
+				}				
+			}
+			frame = { # 变量的值代表当前buff等级
+				number = 1
+				trigger = { is_variable_equal = { which = b1c15_buff_3 value = 0 } }
+			}
+			frame = {
+				number = 2
+				trigger = { is_variable_equal = { which = b1c15_buff_3 value = 1 } }
+			}
+			frame = {
+				number = 3
+				trigger = { is_variable_equal = { which = b1c15_buff_3 value = 2 } }
+			}
+			frame = {
+				number = 4
+				trigger = { is_variable_equal = { which = b1c15_buff_3 value = 3 } }
+			}
+		}
+		custom_button = {
+			name = "button_dev_buff_shaqvan_religion"
+			tooltip = button_dev_buff_shaqvan_religion_tooltip
+			potential = { always = yes }
+			trigger = { hidden_trigger = { always = yes	} }
+			effect = { 
+				if = {
+					limit = { 
+						NOT = { check_variable = { which = b1c15_buff_4 value = 3 } }
+						OR = {
+							check_variable = { which = b1c15_upgrade_points value = 1 } 
+							check_variable = { which = dev_bonus_exotic_upgrade_points value = 1 } 
+						}
+					}
+					#1.更新buff 
+					dev_bonus_buff_upgrade = { buffname = shaqvan_religion }
+					#2.更新升级点数 
+					if = {
+						limit = {
+							check_variable = { which = b1c15_upgrade_points value = 1 } 
+						}
+						subtract_variable = { which = b1c15_upgrade_points value = 1 }
+					}
+					else = {
+						subtract_variable = { which = dev_bonus_exotic_upgrade_points value = 1 }
+					}
+					#3.更新buff变量
+					hidden_effect = {
+						change_variable = { which = b1c15_buff_4 value = 1 }
+					}
+				}				
+			}
+			frame = { # 变量的值代表当前buff等级
+				number = 1
+				trigger = { is_variable_equal = { which = b1c15_buff_4 value = 0 } }
+			}
+			frame = {
+				number = 2
+				trigger = { is_variable_equal = { which = b1c15_buff_4 value = 1 } }
+			}
+			frame = {
+				number = 3
+				trigger = { is_variable_equal = { which = b1c15_buff_4 value = 2 } }
+			}
+			frame = {
+				number = 4
+				trigger = { is_variable_equal = { which = b1c15_buff_4 value = 3 } }
+			}
+		}
+
+	#章节16 金都
+		custom_window = {
+			name = "window_dev_buff_prov_group_jindu"
+			potential = { is_variable_equal = { which = dev_bonus_chapter value = 16 } }
+		}
+		custom_button = { #翻到页码1
+			name = "button_dev_buff_bookmark_b1c16p1"
+			tooltip = ""
+			potential = { always = yes }
+			trigger = { hidden_trigger = { always = yes	} }
+			effect = { 
+				hidden_effect = {
+					check_area_dev = { fuya = tiansai_area squence = 1 }
+					check_area_dev = { fuya = tonglei_area squence = 2 }
+					check_area_dev = { fuya = liuminxiang_area squence = 3 }
+					check_area_dev = { fuya = erluxi_area squence = 4 }
+					check_area_dev = { fuya = jinjiang_area squence = 5 }
+					check_area_dev = { fuya = beikyuan_area squence = 6 }
+					set_variable = { which = dev_bonus_page value = 1 }
+				} 
+			}
+			frame = {
+				number = 1
+				trigger = { NOT = { is_variable_equal = { which = dev_bonus_page value = 1 } } }
+			}
+			frame = {
+				number = 2
+				trigger = { is_variable_equal = { which = dev_bonus_page value = 1 } }
+			}
+		}
+		custom_button = { #获取升级点数
+			name = button_dev_buff_c16_upgrade_points
+			tooltip = button_dev_buff_cx_upgrade_points_tooltip
+			potential = { always = yes }
+			trigger = {
+				if = {
+					limit = { is_variable_equal = { which = dev_bonus_page value = 1 } }
+					b1_chapterx_pagex_with_6_mean_dev_trigger = { chapter = 16 page = 1 }
+				}
+				else = { #正常情况下不会这样
+					custom_trigger_tooltip = {
+						tooltip = dev_bonus_please_set_page_num_tooltip
+						always = no
+					}
+				}			
+			}
+			effect = {
+				dev_bonus_change_upgrade_points_with_rule_6 = { chapter = 16 page = 1 }
+				hidden_effect = {
+					if = {
+						limit = { is_variable_equal = { which = dev_bonus_page value = 1 } }
+						change_variable = { which = b1c16p1_status value = 1 }
+					}
+				}
+			}
+			frame = {
+				number = 1
+				trigger = {
+					upgrade_points_frame_with_1_page_trigger = { chapter = 16 rank = 1 }
+				}
+			}
+			frame = {
+				number = 2
+				trigger = {
+					upgrade_points_frame_with_1_page_trigger = { chapter = 16 rank = 2 }
+				}
+			}
+			frame = {
+				number = 3
+				trigger = {
+					upgrade_points_frame_with_1_page_trigger = { chapter = 16 rank = 3 }
+				}
+			}
+			frame = {
+				number = 4
+				trigger = {
+					upgrade_points_frame_with_1_page_trigger = { chapter = 16 rank = 4 }
+				}
+			}
+			frame = {
+				number = 5
+				trigger = {
+					upgrade_points_frame_with_1_page_trigger = { chapter = 16 rank = 5 }
+				}
+			}
+			frame = {
+				number = 6
+				trigger = {
+					upgrade_points_frame_with_1_page_trigger = { chapter = 16 rank = 6 }
+				}
+			}
+		}
+		custom_text_box = { #文本 章节信息
+			name = TextBox_dev_bonus_chapter_16_info
+			potential = { always = yes }
+			tooltip = ""
+		}
+		custom_text_box = { #文本 页码1
+			name = TextBox_dev_bonus_c16p1
+			potential = { is_variable_equal = { which = dev_bonus_page value = 1 } }
+        }
+		custom_button = {
+			name = "button_dev_buff_jindu_institution"
+			tooltip = button_dev_buff_jindu_institution_tooltip
+			potential = { always = yes }
+			trigger = { hidden_trigger = { always = yes	} }
+			effect = { 
+				if = {
+					limit = { 
+						NOT = { check_variable = { which = b1c16_buff_1 value = 3 } }
+						OR = {
+							check_variable = { which = b1c16_upgrade_points value = 1 } 
+							check_variable = { which = dev_bonus_exotic_upgrade_points value = 1 } 
+						}
+					}
+					#1.更新buff 
+					dev_bonus_buff_upgrade = { buffname = jindu_institution }
+					#2.更新升级点数 
+					if = {
+						limit = {
+							check_variable = { which = b1c16_upgrade_points value = 1 } 
+						}
+						subtract_variable = { which = b1c16_upgrade_points value = 1 }
+					}
+					else = {
+						subtract_variable = { which = dev_bonus_exotic_upgrade_points value = 1 }
+					}
+					#3.更新buff变量
+					hidden_effect = {
+						change_variable = { which = b1c16_buff_1 value = 1 }
+					}
+				}				
+			}
+			frame = { # 变量的值代表当前buff等级
+				number = 1
+				trigger = { is_variable_equal = { which = b1c16_buff_1 value = 0 } }
+			}
+			frame = {
+				number = 2
+				trigger = { is_variable_equal = { which = b1c16_buff_1 value = 1 } }
+			}
+			frame = {
+				number = 3
+				trigger = { is_variable_equal = { which = b1c16_buff_1 value = 2 } }
+			}
+			frame = {
+				number = 4
+				trigger = { is_variable_equal = { which = b1c16_buff_1 value = 3 } }
+			}
+		}
+		custom_button = {
+			name = "button_dev_buff_jindu_improve_relationship"
+			tooltip = button_dev_buff_jindu_improve_relationship_tooltip
+			potential = { always = yes }
+			trigger = { hidden_trigger = { always = yes	} }
+			effect = { 
+				if = {
+					limit = { 
+						NOT = { check_variable = { which = b1c16_buff_2 value = 3 } }
+						OR = {
+							check_variable = { which = b1c16_upgrade_points value = 1 } 
+							check_variable = { which = dev_bonus_exotic_upgrade_points value = 1 } 
+						}
+					}
+					#1.更新buff 
+					dev_bonus_buff_upgrade = { buffname = jindu_improve_relationship }
+					#2.更新升级点数 
+					if = {
+						limit = {
+							check_variable = { which = b1c16_upgrade_points value = 1 } 
+						}
+						subtract_variable = { which = b1c16_upgrade_points value = 1 }
+					}
+					else = {
+						subtract_variable = { which = dev_bonus_exotic_upgrade_points value = 1 }
+					}
+					#3.更新buff变量
+					hidden_effect = {
+						change_variable = { which = b1c16_buff_2 value = 1 }
+					}
+				}				
+			}
+			frame = { # 变量的值代表当前buff等级
+				number = 1
+				trigger = { is_variable_equal = { which = b1c16_buff_2 value = 0 } }
+			}
+			frame = {
+				number = 2
+				trigger = { is_variable_equal = { which = b1c16_buff_2 value = 1 } }
+			}
+			frame = {
+				number = 3
+				trigger = { is_variable_equal = { which = b1c16_buff_2 value = 2 } }
+			}
+			frame = {
+				number = 4
+				trigger = { is_variable_equal = { which = b1c16_buff_2 value = 3 } }
+			}
+		}
+		custom_button = {
+			name = "button_dev_buff_jindu_merchant"
+			tooltip = button_dev_buff_jindu_merchant_tooltip
+			potential = { always = yes }
+			trigger = { hidden_trigger = { always = yes	} }
+			effect = { 
+				if = {
+					limit = { 
+						NOT = { check_variable = { which = b1c16_buff_3 value = 3 } }
+						OR = {
+							check_variable = { which = b1c16_upgrade_points value = 1 } 
+							check_variable = { which = dev_bonus_exotic_upgrade_points value = 1 } 
+						}
+					}
+					#1.更新buff 
+					dev_bonus_buff_upgrade = { buffname = jindu_merchant }
+					#2.更新升级点数 
+					if = {
+						limit = {
+							check_variable = { which = b1c16_upgrade_points value = 1 } 
+						}
+						subtract_variable = { which = b1c16_upgrade_points value = 1 }
+					}
+					else = {
+						subtract_variable = { which = dev_bonus_exotic_upgrade_points value = 1 }
+					}
+					#3.更新buff变量
+					hidden_effect = {
+						change_variable = { which = b1c16_buff_3 value = 1 }
+					}
+				}				
+			}
+			frame = { # 变量的值代表当前buff等级
+				number = 1
+				trigger = { is_variable_equal = { which = b1c16_buff_3 value = 0 } }
+			}
+			frame = {
+				number = 2
+				trigger = { is_variable_equal = { which = b1c16_buff_3 value = 1 } }
+			}
+			frame = {
+				number = 3
+				trigger = { is_variable_equal = { which = b1c16_buff_3 value = 2 } }
+			}
+			frame = {
+				number = 4
+				trigger = { is_variable_equal = { which = b1c16_buff_3 value = 3 } }
+			}
+		}
+		custom_button = {
+			name = "button_dev_buff_jindu_trade_steer"
+			tooltip = button_dev_buff_jindu_trade_steer_tooltip
+			potential = { always = yes }
+			trigger = { hidden_trigger = { always = yes	} }
+			effect = { 
+				if = {
+					limit = { 
+						NOT = { check_variable = { which = b1c16_buff_4 value = 3 } }
+						OR = {
+							check_variable = { which = b1c16_upgrade_points value = 1 } 
+							check_variable = { which = dev_bonus_exotic_upgrade_points value = 1 } 
+						}
+					}
+					#1.更新buff 
+					dev_bonus_buff_upgrade = { buffname = jindu_trade_steer }
+					#2.更新升级点数 
+					if = {
+						limit = {
+							check_variable = { which = b1c16_upgrade_points value = 1 } 
+						}
+						subtract_variable = { which = b1c16_upgrade_points value = 1 }
+					}
+					else = {
+						subtract_variable = { which = dev_bonus_exotic_upgrade_points value = 1 }
+					}
+					#3.更新buff变量
+					hidden_effect = {
+						change_variable = { which = b1c16_buff_4 value = 1 }
+					}
+				}				
+			}
+			frame = { # 变量的值代表当前buff等级
+				number = 1
+				trigger = { is_variable_equal = { which = b1c16_buff_4 value = 0 } }
+			}
+			frame = {
+				number = 2
+				trigger = { is_variable_equal = { which = b1c16_buff_4 value = 1 } }
+			}
+			frame = {
+				number = 3
+				trigger = { is_variable_equal = { which = b1c16_buff_4 value = 2 } }
+			}
+			frame = {
+				number = 4
+				trigger = { is_variable_equal = { which = b1c16_buff_4 value = 3 } }
+			}
+		}
+		custom_button = {
+			name = "button_dev_buff_jindu_trade_goods"
+			tooltip = button_dev_buff_jindu_trade_goods_tooltip
+			potential = { always = yes }
+			trigger = { hidden_trigger = { always = yes	} }
+			effect = { 
+				if = {
+					limit = { 
+						NOT = { check_variable = { which = b1c16_buff_5 value = 3 } }
+						OR = {
+							check_variable = { which = b1c16_upgrade_points value = 1 } 
+							check_variable = { which = dev_bonus_exotic_upgrade_points value = 1 } 
+						}
+					}
+					#1.更新buff 
+					dev_bonus_buff_upgrade = { buffname = jindu_trade_goods }
+					#2.更新升级点数 
+					if = {
+						limit = {
+							check_variable = { which = b1c16_upgrade_points value = 1 } 
+						}
+						subtract_variable = { which = b1c16_upgrade_points value = 1 }
+					}
+					else = {
+						subtract_variable = { which = dev_bonus_exotic_upgrade_points value = 1 }
+					}
+					#3.更新buff变量
+					hidden_effect = {
+						change_variable = { which = b1c16_buff_5 value = 1 }
+					}
+				}				
+			}
+			frame = { # 变量的值代表当前buff等级
+				number = 1
+				trigger = { is_variable_equal = { which = b1c16_buff_5 value = 0 } }
+			}
+			frame = {
+				number = 2
+				trigger = { is_variable_equal = { which = b1c16_buff_5 value = 1 } }
+			}
+			frame = {
+				number = 3
+				trigger = { is_variable_equal = { which = b1c16_buff_5 value = 2 } }
+			}
+			frame = {
+				number = 4
+				trigger = { is_variable_equal = { which = b1c16_buff_5 value = 3 } }
+			}
+		}
+
+	#章节17 江东
+		custom_window = {
+			name = "window_dev_buff_prov_group_jiangdong"
+			potential = { is_variable_equal = { which = dev_bonus_chapter value = 17 } }
+		}
+		custom_button = { #翻到页码1
+			name = "button_dev_buff_bookmark_b1c17p1"
+			tooltip = ""
+			potential = { always = yes }
+			trigger = { hidden_trigger = { always = yes	} }
+			effect = { 
+				hidden_effect = {
+					check_area_dev = { fuya = fangzhucheng_area squence = 1 }
+					check_area_dev = { fuya = tianlou_area squence = 2 }
+					check_area_dev = { fuya = tianguan_area squence = 3 }
+					check_area_dev = { fuya = xintian_area squence = 4 }
+					check_area_dev = { fuya = linghui_area squence = 5 }
+					check_area_dev = { fuya = beidugang_area squence = 6 }
+					set_variable = { which = dev_bonus_page value = 1 }
+				} 
+			}
+			frame = {
+				number = 1
+				trigger = { NOT = { is_variable_equal = { which = dev_bonus_page value = 1 } } }
+			}
+			frame = {
+				number = 2
+				trigger = { is_variable_equal = { which = dev_bonus_page value = 1 } }
+			}
+		}
+		custom_button = { #获取升级点数
+			name = button_dev_buff_c17_upgrade_points
+			tooltip = button_dev_buff_cx_upgrade_points_tooltip
+			potential = { always = yes }
+			trigger = {
+				if = {
+					limit = { is_variable_equal = { which = dev_bonus_page value = 1 } }
+					b1_chapterx_pagex_with_6_mean_dev_trigger = { chapter = 17 page = 1 }
+				}
+				else = { #正常情况下不会这样
+					custom_trigger_tooltip = {
+						tooltip = dev_bonus_please_set_page_num_tooltip
+						always = no
+					}
+				}			
+			}
+			effect = {
+				dev_bonus_change_upgrade_points_with_rule_6 = { chapter = 17 page = 1 }
+				hidden_effect = {
+					if = {
+						limit = { is_variable_equal = { which = dev_bonus_page value = 1 } }
+						change_variable = { which = b1c17p1_status value = 1 }
+					}
+				}
+			}
+			frame = {
+				number = 1
+				trigger = {
+					upgrade_points_frame_with_1_page_trigger = { chapter = 17 rank = 1 }
+				}
+			}
+			frame = {
+				number = 2
+				trigger = {
+					upgrade_points_frame_with_1_page_trigger = { chapter = 17 rank = 2 }
+				}
+			}
+			frame = {
+				number = 3
+				trigger = {
+					upgrade_points_frame_with_1_page_trigger = { chapter = 17 rank = 3 }
+				}
+			}
+			frame = {
+				number = 4
+				trigger = {
+					upgrade_points_frame_with_1_page_trigger = { chapter = 17 rank = 4 }
+				}
+			}
+			frame = {
+				number = 5
+				trigger = {
+					upgrade_points_frame_with_1_page_trigger = { chapter = 17 rank = 5 }
+				}
+			}
+			frame = {
+				number = 6
+				trigger = {
+					upgrade_points_frame_with_1_page_trigger = { chapter = 17 rank = 6 }
+				}
+			}
+		}
+		custom_text_box = { #文本 章节信息
+			name = TextBox_dev_bonus_chapter_17_info
+			potential = { always = yes }
+			tooltip = ""
+		}
+		custom_text_box = { #文本 页码1
+			name = TextBox_dev_bonus_c17p1
+			potential = { is_variable_equal = { which = dev_bonus_page value = 1 } }
+        }
+		custom_button = {
+			name = "button_dev_buff_jiangdong_envoy"
+			tooltip = button_dev_buff_jiangdong_envoy_tooltip
+			potential = { always = yes }
+			trigger = { hidden_trigger = { always = yes	} }
+			effect = { 
+				if = {
+					limit = { 
+						NOT = { check_variable = { which = b1c17_buff_1 value = 3 } }
+						OR = {
+							check_variable = { which = b1c17_upgrade_points value = 1 } 
+							check_variable = { which = dev_bonus_exotic_upgrade_points value = 1 } 
+						}
+					}
+					#1.更新buff 
+					dev_bonus_buff_upgrade = { buffname = jiangdong_envoy }
+					#2.更新升级点数 
+					if = {
+						limit = {
+							check_variable = { which = b1c17_upgrade_points value = 1 } 
+						}
+						subtract_variable = { which = b1c17_upgrade_points value = 1 }
+					}
+					else = {
+						subtract_variable = { which = dev_bonus_exotic_upgrade_points value = 1 }
+					}
+					#3.更新buff变量
+					hidden_effect = {
+						change_variable = { which = b1c17_buff_1 value = 1 }
+					}
+				}				
+			}
+			frame = { # 变量的值代表当前buff等级
+				number = 1
+				trigger = { is_variable_equal = { which = b1c17_buff_1 value = 0 } }
+			}
+			frame = {
+				number = 2
+				trigger = { is_variable_equal = { which = b1c17_buff_1 value = 1 } }
+			}
+			frame = {
+				number = 3
+				trigger = { is_variable_equal = { which = b1c17_buff_1 value = 2 } }
+			}
+			frame = {
+				number = 4
+				trigger = { is_variable_equal = { which = b1c17_buff_1 value = 3 } }
+			}
+		}
+		custom_button = {
+			name = "button_dev_buff_jiangdong_embargo"
+			tooltip = button_dev_buff_jiangdong_embargo_tooltip
+			potential = { always = yes }
+			trigger = { hidden_trigger = { always = yes	} }
+			effect = { 
+				if = {
+					limit = { 
+						NOT = { check_variable = { which = b1c17_buff_2 value = 3 } }
+						OR = {
+							check_variable = { which = b1c17_upgrade_points value = 1 } 
+							check_variable = { which = dev_bonus_exotic_upgrade_points value = 1 } 
+						}
+					}
+					#1.更新buff 
+					dev_bonus_buff_upgrade = { buffname = jiangdong_embargo }
+					#2.更新升级点数 
+					if = {
+						limit = {
+							check_variable = { which = b1c17_upgrade_points value = 1 } 
+						}
+						subtract_variable = { which = b1c17_upgrade_points value = 1 }
+					}
+					else = {
+						subtract_variable = { which = dev_bonus_exotic_upgrade_points value = 1 }
+					}
+					#3.更新buff变量
+					hidden_effect = {
+						change_variable = { which = b1c17_buff_2 value = 1 }
+					}
+				}				
+			}
+			frame = { # 变量的值代表当前buff等级
+				number = 1
+				trigger = { is_variable_equal = { which = b1c17_buff_2 value = 0 } }
+			}
+			frame = {
+				number = 2
+				trigger = { is_variable_equal = { which = b1c17_buff_2 value = 1 } }
+			}
+			frame = {
+				number = 3
+				trigger = { is_variable_equal = { which = b1c17_buff_2 value = 2 } }
+			}
+			frame = {
+				number = 4
+				trigger = { is_variable_equal = { which = b1c17_buff_2 value = 3 } }
+			}
+		}
+		custom_button = {
+			name = "button_dev_buff_jiangdong_colonists"
+			tooltip = button_dev_buff_jiangdong_colonists_tooltip
+			potential = { always = yes }
+			trigger = { hidden_trigger = { always = yes	} }
+			effect = { 
+				if = {
+					limit = { 
+						NOT = { check_variable = { which = b1c17_buff_3 value = 3 } }
+						OR = {
+							check_variable = { which = b1c17_upgrade_points value = 1 } 
+							check_variable = { which = dev_bonus_exotic_upgrade_points value = 1 } 
+						}
+					}
+					#1.更新buff 
+					dev_bonus_buff_upgrade = { buffname = jiangdong_colonists }
+					#2.更新升级点数 
+					if = {
+						limit = {
+							check_variable = { which = b1c17_upgrade_points value = 1 } 
+						}
+						subtract_variable = { which = b1c17_upgrade_points value = 1 }
+					}
+					else = {
+						subtract_variable = { which = dev_bonus_exotic_upgrade_points value = 1 }
+					}
+					#3.更新buff变量
+					hidden_effect = {
+						change_variable = { which = b1c17_buff_3 value = 1 }
+					}
+				}				
+			}
+			frame = { # 变量的值代表当前buff等级
+				number = 1
+				trigger = { is_variable_equal = { which = b1c17_buff_3 value = 0 } }
+			}
+			frame = {
+				number = 2
+				trigger = { is_variable_equal = { which = b1c17_buff_3 value = 1 } }
+			}
+			frame = {
+				number = 3
+				trigger = { is_variable_equal = { which = b1c17_buff_3 value = 2 } }
+			}
+			frame = {
+				number = 4
+				trigger = { is_variable_equal = { which = b1c17_buff_3 value = 3 } }
+			}
+		}
+		custom_button = {
+			name = "button_dev_buff_jiangdong_sailor_maintenance"
+			tooltip = button_dev_buff_jiangdong_sailor_maintenance_tooltip
+			potential = { always = yes }
+			trigger = { hidden_trigger = { always = yes	} }
+			effect = { 
+				if = {
+					limit = { 
+						NOT = { check_variable = { which = b1c17_buff_4 value = 3 } }
+						OR = {
+							check_variable = { which = b1c17_upgrade_points value = 1 } 
+							check_variable = { which = dev_bonus_exotic_upgrade_points value = 1 } 
+						}
+					}
+					#1.更新buff 
+					dev_bonus_buff_upgrade = { buffname = jiangdong_sailor_maintenance }
+					#2.更新升级点数 
+					if = {
+						limit = {
+							check_variable = { which = b1c17_upgrade_points value = 1 } 
+						}
+						subtract_variable = { which = b1c17_upgrade_points value = 1 }
+					}
+					else = {
+						subtract_variable = { which = dev_bonus_exotic_upgrade_points value = 1 }
+					}
+					#3.更新buff变量
+					hidden_effect = {
+						change_variable = { which = b1c17_buff_4 value = 1 }
+					}
+				}				
+			}
+			frame = { # 变量的值代表当前buff等级
+				number = 1
+				trigger = { is_variable_equal = { which = b1c17_buff_4 value = 0 } }
+			}
+			frame = {
+				number = 2
+				trigger = { is_variable_equal = { which = b1c17_buff_4 value = 1 } }
+			}
+			frame = {
+				number = 3
+				trigger = { is_variable_equal = { which = b1c17_buff_4 value = 2 } }
+			}
+			frame = {
+				number = 4
+				trigger = { is_variable_equal = { which = b1c17_buff_4 value = 3 } }
+			}
+		}
+		custom_button = {
+			name = "button_dev_buff_jiangdong_naval_tradition"
+			tooltip = button_dev_buff_jiangdong_naval_tradition_tooltip
+			potential = { always = yes }
+			trigger = { hidden_trigger = { always = yes	} }
+			effect = { 
+				if = {
+					limit = { 
+						NOT = { check_variable = { which = b1c17_buff_5 value = 3 } }
+						OR = {
+							check_variable = { which = b1c17_upgrade_points value = 1 } 
+							check_variable = { which = dev_bonus_exotic_upgrade_points value = 1 } 
+						}
+					}
+					#1.更新buff 
+					dev_bonus_buff_upgrade = { buffname = jiangdong_naval_tradition }
+					#2.更新升级点数 
+					if = {
+						limit = {
+							check_variable = { which = b1c17_upgrade_points value = 1 } 
+						}
+						subtract_variable = { which = b1c17_upgrade_points value = 1 }
+					}
+					else = {
+						subtract_variable = { which = dev_bonus_exotic_upgrade_points value = 1 }
+					}
+					#3.更新buff变量
+					hidden_effect = {
+						change_variable = { which = b1c17_buff_5 value = 1 }
+					}
+				}				
+			}
+			frame = { # 变量的值代表当前buff等级
+				number = 1
+				trigger = { is_variable_equal = { which = b1c17_buff_5 value = 0 } }
+			}
+			frame = {
+				number = 2
+				trigger = { is_variable_equal = { which = b1c17_buff_5 value = 1 } }
+			}
+			frame = {
+				number = 3
+				trigger = { is_variable_equal = { which = b1c17_buff_5 value = 2 } }
+			}
+			frame = {
+				number = 4
+				trigger = { is_variable_equal = { which = b1c17_buff_5 value = 3 } }
+			}
+		}
+
+	#章节18 矛海
+		custom_window = {
+			name = "window_dev_buff_prov_group_maohai"
+			potential = { is_variable_equal = { which = dev_bonus_chapter value = 18 } }
+		}
+		custom_button = { #翻到页码1
+			name = "button_dev_buff_bookmark_b1c18p1"
+			tooltip = ""
+			potential = { always = yes }
+			trigger = { hidden_trigger = { always = yes	} }
+			effect = { 
+				hidden_effect = {
+					check_area_dev = { fuya = zhubi_area squence = 1 }
+					check_area_dev = { fuya = xvanbi_area squence = 2 }
+					check_area_dev = { fuya = jianzhong_area squence = 3 }
+					check_area_dev = { fuya = xuanbing_area squence = 4 }
+					set_variable = { which = dev_bonus_page value = 1 }
+				} 
+			}
+			frame = {
+				number = 1
+				trigger = { NOT = { is_variable_equal = { which = dev_bonus_page value = 1 } } }
+			}
+			frame = {
+				number = 2
+				trigger = { is_variable_equal = { which = dev_bonus_page value = 1 } }
+			}
+		}
+		custom_button = { #获取升级点数
+			name = button_dev_buff_c18_upgrade_points
+			tooltip = button_dev_buff_cx_upgrade_points_tooltip
+			potential = { always = yes }
+			trigger = {
+				if = {
+					limit = { is_variable_equal = { which = dev_bonus_page value = 1 } }
+					b1_chapterx_pagex_with_4_mean_dev_trigger = { chapter = 18 page = 1 }
+				}
+				else = { #正常情况下不会这样
+					custom_trigger_tooltip = {
+						tooltip = dev_bonus_please_set_page_num_tooltip
+						always = no
+					}
+				}			
+			}
+			effect = {
+				dev_bonus_change_upgrade_points_with_rule_4 = { chapter = 18 page = 1 }
+				hidden_effect = {
+					if = {
+						limit = { is_variable_equal = { which = dev_bonus_page value = 1 } }
+						change_variable = { which = b1c18p1_status value = 1 }
+					}
+				}
+			}
+			frame = {
+				number = 1
+				trigger = {
+					upgrade_points_frame_with_1_page_trigger = { chapter = 18 rank = 1 }
+				}
+			}
+			frame = {
+				number = 2
+				trigger = {
+					upgrade_points_frame_with_1_page_trigger = { chapter = 18 rank = 2 }
+				}
+			}
+			frame = {
+				number = 3
+				trigger = {
+					upgrade_points_frame_with_1_page_trigger = { chapter = 18 rank = 3 }
+				}
+			}
+			frame = {
+				number = 4
+				trigger = {
+					upgrade_points_frame_with_1_page_trigger = { chapter = 18 rank = 4 }
+				}
+			}
+			frame = {
+				number = 5
+				trigger = {
+					upgrade_points_frame_with_1_page_trigger = { chapter = 18 rank = 5 }
+				}
+			}
+			frame = {
+				number = 6
+				trigger = {
+					upgrade_points_frame_with_1_page_trigger = { chapter = 18 rank = 6 }
+				}
+			}
+		}
+		custom_text_box = { #文本 章节信息
+			name = TextBox_dev_bonus_chapter_18_info
+			potential = { always = yes }
+			tooltip = ""
+		}
+		custom_text_box = { #文本 页码1
+			name = TextBox_dev_bonus_c18p1
+			potential = { is_variable_equal = { which = dev_bonus_page value = 1 } }
+        }
+		custom_button = {
+			name = "button_dev_buff_maohai_naval_morale"
+			tooltip = button_dev_buff_maohai_naval_morale_tooltip
+			potential = { always = yes }
+			trigger = { hidden_trigger = { always = yes	} }
+			effect = { 
+				if = {
+					limit = { 
+						NOT = { check_variable = { which = b1c18_buff_1 value = 3 } }
+						OR = {
+							check_variable = { which = b1c18_upgrade_points value = 1 } 
+							check_variable = { which = dev_bonus_exotic_upgrade_points value = 1 } 
+						}
+					}
+					#1.更新buff 
+					dev_bonus_buff_upgrade = { buffname = maohai_naval_morale }
+					#2.更新升级点数 
+					if = {
+						limit = {
+							check_variable = { which = b1c18_upgrade_points value = 1 } 
+						}
+						subtract_variable = { which = b1c18_upgrade_points value = 1 }
+					}
+					else = {
+						subtract_variable = { which = dev_bonus_exotic_upgrade_points value = 1 }
+					}
+					#3.更新buff变量
+					hidden_effect = {
+						change_variable = { which = b1c18_buff_1 value = 1 }
+					}
+				}				
+			}
+			frame = { # 变量的值代表当前buff等级
+				number = 1
+				trigger = { is_variable_equal = { which = b1c18_buff_1 value = 0 } }
+			}
+			frame = {
+				number = 2
+				trigger = { is_variable_equal = { which = b1c18_buff_1 value = 1 } }
+			}
+			frame = {
+				number = 3
+				trigger = { is_variable_equal = { which = b1c18_buff_1 value = 2 } }
+			}
+			frame = {
+				number = 4
+				trigger = { is_variable_equal = { which = b1c18_buff_1 value = 3 } }
+			}
+		}
+		custom_button = {
+			name = "button_dev_buff_maohai_naval_engagement"
+			tooltip = button_dev_buff_maohai_naval_engagement_tooltip
+			potential = { always = yes }
+			trigger = { hidden_trigger = { always = yes	} }
+			effect = { 
+				if = {
+					limit = { 
+						NOT = { check_variable = { which = b1c18_buff_2 value = 3 } }
+						OR = {
+							check_variable = { which = b1c18_upgrade_points value = 1 } 
+							check_variable = { which = dev_bonus_exotic_upgrade_points value = 1 } 
+						}
+					}
+					#1.更新buff 
+					dev_bonus_buff_upgrade = { buffname = maohai_naval_engagement }
+					#2.更新升级点数 
+					if = {
+						limit = {
+							check_variable = { which = b1c18_upgrade_points value = 1 } 
+						}
+						subtract_variable = { which = b1c18_upgrade_points value = 1 }
+					}
+					else = {
+						subtract_variable = { which = dev_bonus_exotic_upgrade_points value = 1 }
+					}
+					#3.更新buff变量
+					hidden_effect = {
+						change_variable = { which = b1c18_buff_2 value = 1 }
+					}
+				}				
+			}
+			frame = { # 变量的值代表当前buff等级
+				number = 1
+				trigger = { is_variable_equal = { which = b1c18_buff_2 value = 0 } }
+			}
+			frame = {
+				number = 2
+				trigger = { is_variable_equal = { which = b1c18_buff_2 value = 1 } }
+			}
+			frame = {
+				number = 3
+				trigger = { is_variable_equal = { which = b1c18_buff_2 value = 2 } }
+			}
+			frame = {
+				number = 4
+				trigger = { is_variable_equal = { which = b1c18_buff_2 value = 3 } }
+			}
+		}
+		custom_button = {
+			name = "button_dev_buff_maohai_flagship"
+			tooltip = button_dev_buff_maohai_flagship_tooltip
+			potential = { always = yes }
+			trigger = { hidden_trigger = { always = yes	} }
+			effect = { 
+				if = {
+					limit = { 
+						NOT = { check_variable = { which = b1c18_buff_3 value = 3 } }
+						OR = {
+							check_variable = { which = b1c18_upgrade_points value = 1 } 
+							check_variable = { which = dev_bonus_exotic_upgrade_points value = 1 } 
+						}
+					}
+					#1.更新buff 
+					dev_bonus_buff_upgrade = { buffname = maohai_flagship }
+					#2.更新升级点数 
+					if = {
+						limit = {
+							check_variable = { which = b1c18_upgrade_points value = 1 } 
+						}
+						subtract_variable = { which = b1c18_upgrade_points value = 1 }
+					}
+					else = {
+						subtract_variable = { which = dev_bonus_exotic_upgrade_points value = 1 }
+					}
+					#3.更新buff变量
+					hidden_effect = {
+						change_variable = { which = b1c18_buff_3 value = 1 }
+					}
+				}				
+			}
+			frame = { # 变量的值代表当前buff等级
+				number = 1
+				trigger = { is_variable_equal = { which = b1c18_buff_3 value = 0 } }
+			}
+			frame = {
+				number = 2
+				trigger = { is_variable_equal = { which = b1c18_buff_3 value = 1 } }
+			}
+			frame = {
+				number = 3
+				trigger = { is_variable_equal = { which = b1c18_buff_3 value = 2 } }
+			}
+			frame = {
+				number = 4
+				trigger = { is_variable_equal = { which = b1c18_buff_3 value = 3 } }
+			}
+		}
+		
+	#章节19 坚武
+		custom_window = {
+			name = "window_dev_buff_prov_group_jianwu"
+			potential = { is_variable_equal = { which = dev_bonus_chapter value = 19 } }
+		}
+		custom_button = { #翻到页码1
+			name = "button_dev_buff_bookmark_b1c19p1"
+			tooltip = ""
+			potential = { always = yes }
+			trigger = { hidden_trigger = { always = yes	} }
+			effect = { 
+				hidden_effect = {
+					check_area_dev = { fuya = hanwuguan_area squence = 1 }
+					check_area_dev = { fuya = lishu_area squence = 2 }
+					check_area_dev = { fuya = yiguan_area squence = 3 }
+					check_area_dev = { fuya = jiantsiang_area squence = 4 }
+					set_variable = { which = dev_bonus_page value = 1 }
+				} 
+			}
+			frame = {
+				number = 1
+				trigger = { NOT = { is_variable_equal = { which = dev_bonus_page value = 1 } } }
+			}
+			frame = {
+				number = 2
+				trigger = { is_variable_equal = { which = dev_bonus_page value = 1 } }
+			}
+		}
+		custom_button = { #获取升级点数
+			name = button_dev_buff_c19_upgrade_points
+			tooltip = button_dev_buff_cx_upgrade_points_tooltip
+			potential = { always = yes }
+			trigger = {
+				if = {
+					limit = { is_variable_equal = { which = dev_bonus_page value = 1 } }
+					b1_chapterx_pagex_with_4_mean_dev_trigger = { chapter = 19 page = 1 }
+				}
+				else = { #正常情况下不会这样
+					custom_trigger_tooltip = {
+						tooltip = dev_bonus_please_set_page_num_tooltip
+						always = no
+					}
+				}			
+			}
+			effect = {
+				dev_bonus_change_upgrade_points_with_rule_4 = { chapter = 19 page = 1 }
+				hidden_effect = {
+					if = {
+						limit = { is_variable_equal = { which = dev_bonus_page value = 1 } }
+						change_variable = { which = b1c19p1_status value = 1 }
+					}
+				}
+			}
+			frame = {
+				number = 1
+				trigger = {
+					upgrade_points_frame_with_1_page_trigger = { chapter = 19 rank = 1 }
+				}
+			}
+			frame = {
+				number = 2
+				trigger = {
+					upgrade_points_frame_with_1_page_trigger = { chapter = 19 rank = 2 }
+				}
+			}
+			frame = {
+				number = 3
+				trigger = {
+					upgrade_points_frame_with_1_page_trigger = { chapter = 19 rank = 3 }
+				}
+			}
+			frame = {
+				number = 4
+				trigger = {
+					upgrade_points_frame_with_1_page_trigger = { chapter = 19 rank = 4 }
+				}
+			}
+			frame = {
+				number = 5
+				trigger = {
+					upgrade_points_frame_with_1_page_trigger = { chapter = 19 rank = 5 }
+				}
+			}
+			frame = {
+				number = 6
+				trigger = {
+					upgrade_points_frame_with_1_page_trigger = { chapter = 19 rank = 6 }
+				}
+			}
+		}
+		custom_text_box = { #文本 章节信息
+			name = TextBox_dev_bonus_chapter_19_info
+			potential = { always = yes }
+			tooltip = ""
+		}
+		custom_text_box = { #文本 页码1
+			name = TextBox_dev_bonus_c19p1
+			potential = { is_variable_equal = { which = dev_bonus_page value = 1 } }
+        }
+		custom_button = {
+			name = "button_dev_buff_jianwu_general"
+			tooltip = button_dev_buff_jianwu_general_tooltip
+			potential = { always = yes }
+			trigger = { hidden_trigger = { always = yes	} }
+			effect = { 
+				if = {
+					limit = { 
+						NOT = { check_variable = { which = b1c19_buff_1 value = 3 } }
+						OR = {
+							check_variable = { which = b1c19_upgrade_points value = 1 } 
+							check_variable = { which = dev_bonus_exotic_upgrade_points value = 1 } 
+						}
+					}
+					#1.更新buff 
+					dev_bonus_buff_upgrade = { buffname = jianwu_general }
+					#2.更新升级点数 
+					if = {
+						limit = {
+							check_variable = { which = b1c19_upgrade_points value = 1 } 
+						}
+						subtract_variable = { which = b1c19_upgrade_points value = 1 }
+					}
+					else = {
+						subtract_variable = { which = dev_bonus_exotic_upgrade_points value = 1 }
+					}
+					#3.更新buff变量
+					hidden_effect = {
+						change_variable = { which = b1c19_buff_1 value = 1 }
+					}
+				}				
+			}
+			frame = { # 变量的值代表当前buff等级
+				number = 1
+				trigger = { is_variable_equal = { which = b1c19_buff_1 value = 0 } }
+			}
+			frame = {
+				number = 2
+				trigger = { is_variable_equal = { which = b1c19_buff_1 value = 1 } }
+			}
+			frame = {
+				number = 3
+				trigger = { is_variable_equal = { which = b1c19_buff_1 value = 2 } }
+			}
+			frame = {
+				number = 4
+				trigger = { is_variable_equal = { which = b1c19_buff_1 value = 3 } }
+			}
+		}
+		custom_button = {
+			name = "button_dev_buff_jianwu_manpower_recovery"
+			tooltip = button_dev_buff_jianwu_manpower_recovery_tooltip
+			potential = { always = yes }
+			trigger = { hidden_trigger = { always = yes	} }
+			effect = { 
+				if = {
+					limit = { 
+						NOT = { check_variable = { which = b1c19_buff_2 value = 3 } }
+						OR = {
+							check_variable = { which = b1c19_upgrade_points value = 1 } 
+							check_variable = { which = dev_bonus_exotic_upgrade_points value = 1 } 
+						}
+					}
+					#1.更新buff 
+					dev_bonus_buff_upgrade = { buffname = jianwu_manpower_recovery }
+					#2.更新升级点数 
+					if = {
+						limit = {
+							check_variable = { which = b1c19_upgrade_points value = 1 } 
+						}
+						subtract_variable = { which = b1c19_upgrade_points value = 1 }
+					}
+					else = {
+						subtract_variable = { which = dev_bonus_exotic_upgrade_points value = 1 }
+					}
+					#3.更新buff变量
+					hidden_effect = {
+						change_variable = { which = b1c19_buff_2 value = 1 }
+					}
+				}				
+			}
+			frame = { # 变量的值代表当前buff等级
+				number = 1
+				trigger = { is_variable_equal = { which = b1c19_buff_2 value = 0 } }
+			}
+			frame = {
+				number = 2
+				trigger = { is_variable_equal = { which = b1c19_buff_2 value = 1 } }
+			}
+			frame = {
+				number = 3
+				trigger = { is_variable_equal = { which = b1c19_buff_2 value = 2 } }
+			}
+			frame = {
+				number = 4
+				trigger = { is_variable_equal = { which = b1c19_buff_2 value = 3 } }
+			}
+		}
+		custom_button = {
+			name = "button_dev_buff_jianwu_morale_recovery"
+			tooltip = button_dev_buff_jianwu_morale_recovery_tooltip
+			potential = { always = yes }
+			trigger = { hidden_trigger = { always = yes	} }
+			effect = { 
+				if = {
+					limit = { 
+						NOT = { check_variable = { which = b1c19_buff_3 value = 3 } }
+						OR = {
+							check_variable = { which = b1c19_upgrade_points value = 1 } 
+							check_variable = { which = dev_bonus_exotic_upgrade_points value = 1 } 
+						}
+					}
+					#1.更新buff 
+					dev_bonus_buff_upgrade = { buffname = jianwu_morale_recovery }
+					#2.更新升级点数 
+					if = {
+						limit = {
+							check_variable = { which = b1c19_upgrade_points value = 1 } 
+						}
+						subtract_variable = { which = b1c19_upgrade_points value = 1 }
+					}
+					else = {
+						subtract_variable = { which = dev_bonus_exotic_upgrade_points value = 1 }
+					}
+					#3.更新buff变量
+					hidden_effect = {
+						change_variable = { which = b1c19_buff_3 value = 1 }
+					}
+				}				
+			}
+			frame = { # 变量的值代表当前buff等级
+				number = 1
+				trigger = { is_variable_equal = { which = b1c19_buff_3 value = 0 } }
+			}
+			frame = {
+				number = 2
+				trigger = { is_variable_equal = { which = b1c19_buff_3 value = 1 } }
+			}
+			frame = {
+				number = 3
+				trigger = { is_variable_equal = { which = b1c19_buff_3 value = 2 } }
+			}
+			frame = {
+				number = 4
+				trigger = { is_variable_equal = { which = b1c19_buff_3 value = 3 } }
+			}
+		}
+
+	#章节20 魔岭
+		custom_window = {
+			name = "window_dev_buff_prov_group_moling"
+			potential = { is_variable_equal = { which = dev_bonus_chapter value = 20 } }
+		}
+		custom_button = { #翻到页码1
+			name = "button_dev_buff_bookmark_b1c20p1"
+			tooltip = ""
+			potential = { always = yes }
+			trigger = { hidden_trigger = { always = yes	} }
+			effect = { 
+				hidden_effect = {
+					check_area_dev = { fuya = yambioka_area squence = 1 }
+					check_area_dev = { fuya = sugroltona_area squence = 2 }
+					check_area_dev = { fuya = unbeksu_area squence = 3 }
+					check_area_dev = { fuya = mogutian_area squence = 4 }
+					check_area_dev = { fuya = moryokang_area squence = 5 }
+					set_variable = { which = dev_bonus_page value = 1 }
+				} 
+			}
+			frame = {
+				number = 1
+				trigger = { NOT = { is_variable_equal = { which = dev_bonus_page value = 1 } } }
+			}
+			frame = {
+				number = 2
+				trigger = { is_variable_equal = { which = dev_bonus_page value = 1 } }
+			}
+		}
+		custom_button = { #获取升级点数
+			name = button_dev_buff_c20_upgrade_points
+			tooltip = button_dev_buff_cx_upgrade_points_tooltip
+			potential = { always = yes }
+			trigger = {
+				if = {
+					limit = { is_variable_equal = { which = dev_bonus_page value = 1 } }
+					b1_chapterx_pagex_with_5_mean_dev_trigger = { chapter = 20 page = 1 }
+				}
+				else = { #正常情况下不会这样
+					custom_trigger_tooltip = {
+						tooltip = dev_bonus_please_set_page_num_tooltip
+						always = no
+					}
+				}			
+			}
+			effect = {
+				dev_bonus_change_upgrade_points_with_rule_5 = { chapter = 20 page = 1 }
+				hidden_effect = {
+					if = {
+						limit = { is_variable_equal = { which = dev_bonus_page value = 1 } }
+						change_variable = { which = b1c20p1_status value = 1 }
+					}
+				}
+			}
+			frame = {
+				number = 1
+				trigger = {
+					upgrade_points_frame_with_1_page_trigger = { chapter = 20 rank = 1 }
+				}
+			}
+			frame = {
+				number = 2
+				trigger = {
+					upgrade_points_frame_with_1_page_trigger = { chapter = 20 rank = 2 }
+				}
+			}
+			frame = {
+				number = 3
+				trigger = {
+					upgrade_points_frame_with_1_page_trigger = { chapter = 20 rank = 3 }
+				}
+			}
+			frame = {
+				number = 4
+				trigger = {
+					upgrade_points_frame_with_1_page_trigger = { chapter = 20 rank = 4 }
+				}
+			}
+			frame = {
+				number = 5
+				trigger = {
+					upgrade_points_frame_with_1_page_trigger = { chapter = 20 rank = 5 }
+				}
+			}
+			frame = {
+				number = 6
+				trigger = {
+					upgrade_points_frame_with_1_page_trigger = { chapter = 20 rank = 6 }
+				}
+			}
+		}
+		custom_text_box = { #文本 章节信息
+			name = TextBox_dev_bonus_chapter_20_info
+			potential = { always = yes }
+			tooltip = ""
+		}
+		custom_text_box = { #文本 页码1
+			name = TextBox_dev_bonus_c20p1
+			potential = { is_variable_equal = { which = dev_bonus_page value = 1 } }
+        }
+		custom_button = {
+			name = "button_dev_buff_moling_manpower_usage"
+			tooltip = button_dev_buff_moling_manpower_usage_tooltip
+			potential = { always = yes }
+			trigger = { hidden_trigger = { always = yes	} }
+			effect = { 
+				if = {
+					limit = { 
+						NOT = { check_variable = { which = b1c20_buff_1 value = 3 } }
+						OR = {
+							check_variable = { which = b1c20_upgrade_points value = 1 } 
+							check_variable = { which = dev_bonus_exotic_upgrade_points value = 1 } 
+						}
+					}
+					#1.更新buff 
+					dev_bonus_buff_upgrade = { buffname = moling_manpower_usage }
+					#2.更新升级点数 
+					if = {
+						limit = {
+							check_variable = { which = b1c20_upgrade_points value = 1 } 
+						}
+						subtract_variable = { which = b1c20_upgrade_points value = 1 }
+					}
+					else = {
+						subtract_variable = { which = dev_bonus_exotic_upgrade_points value = 1 }
+					}
+					#3.更新buff变量
+					hidden_effect = {
+						change_variable = { which = b1c20_buff_1 value = 1 }
+					}
+				}				
+			}
+			frame = { # 变量的值代表当前buff等级
+				number = 1
+				trigger = { is_variable_equal = { which = b1c20_buff_1 value = 0 } }
+			}
+			frame = {
+				number = 2
+				trigger = { is_variable_equal = { which = b1c20_buff_1 value = 1 } }
+			}
+			frame = {
+				number = 3
+				trigger = { is_variable_equal = { which = b1c20_buff_1 value = 2 } }
+			}
+			frame = {
+				number = 4
+				trigger = { is_variable_equal = { which = b1c20_buff_1 value = 3 } }
+			}
+		}
+		custom_button = {
+			name = "button_dev_buff_moling_culture_conversion"
+			tooltip = button_dev_buff_moling_culture_conversion_tooltip
+			potential = { always = yes }
+			trigger = { hidden_trigger = { always = yes	} }
+			effect = { 
+				if = {
+					limit = { 
+						NOT = { check_variable = { which = b1c20_buff_2 value = 3 } }
+						OR = {
+							check_variable = { which = b1c20_upgrade_points value = 1 } 
+							check_variable = { which = dev_bonus_exotic_upgrade_points value = 1 } 
+						}
+					}
+					#1.更新buff 
+					dev_bonus_buff_upgrade = { buffname = moling_culture_conversion }
+					#2.更新升级点数 
+					if = {
+						limit = {
+							check_variable = { which = b1c20_upgrade_points value = 1 } 
+						}
+						subtract_variable = { which = b1c20_upgrade_points value = 1 }
+					}
+					else = {
+						subtract_variable = { which = dev_bonus_exotic_upgrade_points value = 1 }
+					}
+					#3.更新buff变量
+					hidden_effect = {
+						change_variable = { which = b1c20_buff_2 value = 1 }
+					}
+				}				
+			}
+			frame = { # 变量的值代表当前buff等级
+				number = 1
+				trigger = { is_variable_equal = { which = b1c20_buff_2 value = 0 } }
+			}
+			frame = {
+				number = 2
+				trigger = { is_variable_equal = { which = b1c20_buff_2 value = 1 } }
+			}
+			frame = {
+				number = 3
+				trigger = { is_variable_equal = { which = b1c20_buff_2 value = 2 } }
+			}
+			frame = {
+				number = 4
+				trigger = { is_variable_equal = { which = b1c20_buff_2 value = 3 } }
+			}
+		}
+		custom_button = {
+			name = "button_dev_buff_moling_fort"
+			tooltip = button_dev_buff_moling_fort_tooltip
+			potential = { always = yes }
+			trigger = { hidden_trigger = { always = yes	} }
+			effect = { 
+				if = {
+					limit = { 
+						NOT = { check_variable = { which = b1c20_buff_3 value = 3 } }
+						OR = {
+							check_variable = { which = b1c20_upgrade_points value = 1 } 
+							check_variable = { which = dev_bonus_exotic_upgrade_points value = 1 } 
+						}
+					}
+					#1.更新buff 
+					dev_bonus_buff_upgrade = { buffname = moling_fort }
+					#2.更新升级点数 
+					if = {
+						limit = {
+							check_variable = { which = b1c20_upgrade_points value = 1 } 
+						}
+						subtract_variable = { which = b1c20_upgrade_points value = 1 }
+					}
+					else = {
+						subtract_variable = { which = dev_bonus_exotic_upgrade_points value = 1 }
+					}
+					#3.更新buff变量
+					hidden_effect = {
+						change_variable = { which = b1c20_buff_3 value = 1 }
+					}
+				}				
+			}
+			frame = { # 变量的值代表当前buff等级
+				number = 1
+				trigger = { is_variable_equal = { which = b1c20_buff_3 value = 0 } }
+			}
+			frame = {
+				number = 2
+				trigger = { is_variable_equal = { which = b1c20_buff_3 value = 1 } }
+			}
+			frame = {
+				number = 3
+				trigger = { is_variable_equal = { which = b1c20_buff_3 value = 2 } }
+			}
+			frame = {
+				number = 4
+				trigger = { is_variable_equal = { which = b1c20_buff_3 value = 3 } }
+			}
+		}
+		custom_button = {
+			name = "button_dev_buff_moling_upgrade"
+			tooltip = button_dev_buff_moling_upgrade_tooltip
+			potential = { always = yes }
+			trigger = { hidden_trigger = { always = yes	} }
+			effect = { 
+				if = {
+					limit = { 
+						NOT = { check_variable = { which = b1c20_buff_4 value = 3 } }
+						check_variable = { which = b1c20_upgrade_points value = 1 } 
+						# OR = {
+							
+						# 	check_variable = { which = dev_bonus_exotic_upgrade_points value = 1 } 
+						# }
+					}
+					#1.更新buff 
+					change_variable = { which = dev_bonus_exotic_upgrade_points value = 1 } 
+					#2.更新升级点数 
+					subtract_variable = { which = b1c20_upgrade_points value = 1 }
+					#3.更新buff变量
+					hidden_effect = {
+						change_variable = { which = b1c20_buff_4 value = 1 }
+					}
+				}				
+			}
+			frame = { # 变量的值代表当前buff等级
+				number = 1
+				trigger = { is_variable_equal = { which = b1c20_buff_4 value = 0 } }
+			}
+			frame = {
+				number = 2
+				trigger = { is_variable_equal = { which = b1c20_buff_4 value = 1 } }
+			}
+			frame = {
+				number = 3
+				trigger = { is_variable_equal = { which = b1c20_buff_4 value = 2 } }
+			}
+			frame = {
+				number = 4
+				trigger = { is_variable_equal = { which = b1c20_buff_4 value = 3 } }
+			}
+		}
+
+
+

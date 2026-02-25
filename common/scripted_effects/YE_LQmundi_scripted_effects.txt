@@ -1,0 +1,260 @@
+LQmundi_initialize_script_effect = { #灵气初始化
+
+	
+	set_variable = { which = LQpower_current value = 0 } #灵气点数
+	set_variable = { which = monthly_LQpower_regen_var value = 0 } #每月获取
+	set_variable = { which = LQpower_gain_modifier_var value = 0 } #获取修正
+
+	set_variable = { which = LQpower_capacity value = 0 } #灵气容量
+
+	set_variable = { which = LQdspl_1_exp value = 0 } #学科1经验
+	set_variable = { which = LQdspl_2_exp value = 0 } #学科2经验
+	set_variable = { which = LQdspl_3_exp value = 0 } #学科3经验
+	set_variable = { which = LQdspl_4_exp value = 0 } #学科4经验
+	set_variable = { which = LQdspl_5_exp value = 0 } #学科5经验
+	set_variable = { which = LQdspl_6_exp value = 0 } #学科6经验
+	set_variable = { which = LQdspl_7_exp value = 0 } #学科7经验
+	set_variable = { which = LQdspl_8_exp value = 0 } #学科8经验
+	
+}
+
+# 灵气点数
+
+	LQmundi_calc_LQpower_capacity = { #更新容量
+		export_to_variable = {
+			variable_name = LQpower_capacity
+			value = modifier:LQpower_capacity
+		}
+		###
+		# 暂不支持灵气容量上限修正
+		###
+	}
+
+	LQmundi_check_if_LQpower_overflow_and_deal_with = { #点数溢出
+		if = {
+			limit = {
+				check_variable = {
+					which = LQpower_current
+					which = LQpower_capacity
+				}
+			}
+			set_variable = { #只抹去溢出部分
+				which = LQpower_current
+				which = LQpower_capacity
+			}
+		}
+	}
+	LQmundi_calc_monthly_LQpower_regen_script_effect = { #月度获取
+		export_to_variable = {
+			variable_name = monthly_LQpower_regen_var
+			value = modifier:monthly_LQpower_regen
+		}
+
+		export_to_variable = {
+			variable_name = LQpower_gain_modifier_var
+			value = modifier:LQpower_gain_modifier
+		}
+		change_variable = {
+			which = LQpower_gain_modifier_var
+			value = 1
+		}
+		multiply_variable = {
+			which = monthly_LQpower_regen_var
+			which = LQpower_gain_modifier_var
+		}
+		
+		change_variable = {
+			which = LQpower_current
+			which = monthly_LQpower_regen_var
+		}
+
+		LQmundi_check_if_LQpower_overflow_and_deal_with = yes
+	}
+	LQmundi_gain_effect_LQpower_script_effect = { # $$ #效果获取
+		## $value$ 基础数值
+
+		set_variable = {
+			which = LQpower_value_of_effect
+			value = $value$
+		}
+		export_to_variable = {
+			variable_name = LQpower_gain_modifier_var
+			value = modifier:LQpower_gain_modifier
+		}
+		change_variable = {
+			which = LQpower_gain_modifier_var
+			value = 1
+		}
+		multiply_variable = {
+			which = LQpower_value_of_effect
+			which = LQpower_gain_modifier_var
+		}
+
+		change_variable = {
+			which = LQpower_current
+			which = LQpower_value_of_effect
+		}
+
+		LQmundi_check_if_LQpower_overflow_and_deal_with = yes
+	}
+
+	LQmundi_check_if_LQpower_negative_and_deal_with = { #点数为负
+		if = {
+			limit = {
+				NOT = {
+					check_variable= {
+						which = LQpower_current
+						value = 0
+					}
+				}
+			}
+			set_variable = {
+				which = LQpower_current
+				value = 0
+			}
+		}
+	}
+	LQmundi_cost_LQpower_script_effect = { # $$ #消耗点数 惩罚/消费双模式
+		# $value$ 需要使用的基础灵气点数
+		# $penalty$ 1,为惩罚模式，灵气花费修正不生效。0，为消费模式，灵气花费修正生效。
+		set_variable = {
+			which = LQpower_value_of_cost
+			value = $value$
+		}
+
+		set_variable = {
+			which = var_tmp
+			value = 0
+		}
+		if = { #消费模式，仅当penalty = 0时生效
+			limit = {
+				is_variable_equal = { which = var_tmp value = $penalty$ }
+			}
+			export_to_variable = {
+				variable_name = LQpower_cost_saving_modifier_var
+				value = modifier:LQpower_cost_saving_modifier
+			}
+			multiply_variable  = {
+				which = LQpower_cost_saving_modifier_var
+				value = -1
+			}
+			change_variable = {
+				which = LQpower_cost_saving_modifier_var
+				value = 1
+
+			}
+			multiply_variable = {
+				which = LQpower_value_of_cost
+				which = LQpower_cost_saving_modifier_var
+			}
+		}
+		subtract_variable  = {
+			which = LQpower_current
+			which = LQpower_value_of_cost
+		}
+
+		LQmundi_check_if_LQpower_negative_and_deal_with = yes
+	}
+
+# 法术经验
+
+	LQmundi_check_if_LQdspl_x_exp_overflow_and_deal_with = { # $$ #经验溢出（上限固定为1000），学科编号$discipline_sequence$ 
+		# $discipline_sequence$ 法术学科编号
+
+		if = {
+			limit = {
+				check_variable = {
+					which = LQdspl_$discipline_sequence$_exp
+					value = 1000
+				}
+			}
+			set_variable = { #只抹去溢出部分
+				which = LQdspl_$discipline_sequence$_exp
+				value = 1000
+			}
+		}
+	}
+	LQmundi_calc_monthly_LQdspl_x_exp_gain_script_effect = { # $$ #经验来自月度获取，学科编号$discipline_sequence$
+		# $discipline_sequence$ 法术学科编号
+
+		export_to_variable = {
+			variable_name = monthly_LQdspl_$discipline_sequence$_exp_gain_var
+			value = modifier:monthly_LQdspl_$discipline_sequence$_exp_gain
+		}
+
+		export_to_variable = {
+			variable_name = LQdspl_$discipline_sequence$_exp_gain_modifier_var
+			value = modifier:LQdspl_$discipline_sequence$_exp_gain_modifier
+		}
+		change_variable = {
+			which = LQdspl_$discipline_sequence$_exp_gain_modifier_var
+			value = 1
+		}
+		multiply_variable = {
+			which = monthly_LQdspl_$discipline_sequence$_exp_gain_var
+			which = LQdspl_$discipline_sequence$_exp_gain_modifier_var
+		}
+
+		change_variable = {
+			which = LQdspl_$discipline_sequence$_exp
+			which = monthly_LQdspl_$discipline_sequence$_exp_gain_var
+		}
+
+		LQmundi_check_if_LQdspl_x_exp_overflow_and_deal_with = { discipline_sequence = $discipline_sequence$ }
+	}
+	LQmundi_gain_effect_LQdspl_x_exp_script_effect = { # $$ #经验来自效果获取，学科编号$discipline_sequence$
+		# $value$ 获取经验的基础数值
+		# $discipline_sequence$ 法术学科编号
+
+		set_variable = {
+			which = LQdspl_$discipline_sequence$_exp_value_of_effect
+			value = $value$
+		}
+
+		export_to_variable = {
+			variable_name = LQdspl_$discipline_sequence$_exp_gain_modifier_var
+			value = modifier:LQdspl_$discipline_sequence$_exp_gain_modifier
+		}
+		change_variable = {
+			which = LQdspl_$discipline_sequence$_exp_gain_modifier_var
+			value = 1
+		}
+		multiply_variable = {
+			which = LQdspl_$discipline_sequence$_exp_value_of_effect
+			which = LQdspl_$discipline_sequence$_exp_gain_modifier_var
+		}
+
+		change_variable = {
+			which = LQdspl_$discipline_sequence$_exp
+			which = LQdspl_$discipline_sequence$_exp_value_of_effect
+		}
+	}
+
+	LQmundi_LQdspl_x_exp_penalty_script_effect = { # $$ #经验惩罚，学科编号$discipline_sequence$
+		# $value$ 给予的惩罚数值
+		# $discipline_sequence$ 法术学科编号
+		subtract_variable  = {
+			which = LQdspl_$discipline_sequence$_exp
+			which = $value$
+		}
+		if = {
+			limit = {
+				NOT = {
+					check_variable = {
+						which = LQdspl_$discipline_sequence$_exp
+						value = 0
+					}
+				}
+			}
+			set_variable = {
+				which = LQdspl_$discipline_sequence$_exp
+				value = 0
+			}
+		}
+
+	}
+
+
+
+
+

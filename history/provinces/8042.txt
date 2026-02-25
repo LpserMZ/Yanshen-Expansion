@@ -1,0 +1,10 @@
+add_core = Y21
+owner = Y21
+controller = Y21
+is_city = no
+culture = gangim
+religion = accretive_path
+trade_goods = cloth
+base_tax = 6
+base_manpower = 7
+base_production = 5

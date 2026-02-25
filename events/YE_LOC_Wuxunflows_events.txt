@@ -1,0 +1,897 @@
+namespace = YE_Wuxunflows # 蜃武源流
+# 武浔局势相关事件
+
+country_event = { # 1000  背景介绍，开局触发 未实装
+	id = YE_Wuxunflows.1000
+	title = YE_Wuxunflows.1000.T
+	desc = YE_Wuxunflows.1000.D
+	picture = BAD_WITH_MONARCH_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = YE_Wuxunflows.1000.a
+		ai_chance = { factor = 1 }
+	}
+
+}	
+
+# 战后事件
+country_event = { # 1 土匪猖獗
+	id = YE_Wuxunflows.1
+	title = YE_Wuxunflows.1.T
+	desc = YE_Wuxunflows.1.D
+	picture = BAD_WITH_MONARCH_eventPicture
+
+	is_triggered_only = yes
+
+	immediate = {
+		every_owned_province = {
+			limit = {
+				region = wuxun_region
+			}
+			add_province_modifier = {
+				name = bandit_in_north_wuxun
+				duration = 10950
+			}
+		}
+	}
+	trigger = {
+		any_owned_province = {
+			region = wuxun_region		
+			NOT = { area = zhicha_area }
+			NOT = { area = yodhilakra_area }
+			NOT = { area = sir_area }
+			NOT = { area = pharata_area }
+			NOT = { area = chuhui_area }
+			NOT = { area = nadida_area }
+		}
+		NOT = { tag = R94 }
+		NOT = { tag = R95 }
+		NOT = { tag = R96 }
+		NOT = { tag = YA1 }
+		NOT = { tag = YA2 }
+	}
+
+	option = {
+		name = YE_Wuxunflows.1.a
+		ai_chance = { 
+			factor = 1 
+			modifier = {
+				factor = 0
+				tag = R80
+			}
+		}
+
+	}
+	option = {
+		name = YE_Wuxunflows.1.b
+		ai_chance = { factor = 1 }
+		trigger = {
+			tag = R80
+		}
+
+	}
+
+}
+
+
+# 白翼-娑梨婆罗汉
+province_event = { # 2 黍离之悲-诸圣城
+	id = YE_Wuxunflows.2
+	title = YE_Wuxunflows.2.T
+	desc = YE_Wuxunflows.2.D
+	picture = BAD_WITH_MONARCH_eventPicture
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	immediate = {
+		add_base_tax = -3
+		add_base_production = -3
+		add_base_manpower = -3
+		add_permanent_province_modifier = { name = command_picking_through_ruin duration = 18250 }
+		hidden_effect = {
+			YB8 = {
+				country_event = {
+					id = YE_baiyi.2
+					days = 1
+				}
+			}
+			owner = {
+				country_event = { # 卧榻之侧
+					id = YE_Wuxunflows.4
+					days = 10
+					#random = 60
+				}
+			}
+			owner = {
+				country_event = { # 加税
+					id = YE_Wuxunflows.3
+					days = 10
+					#random = 60
+				}
+			}
+			
+		}
+	}
+
+	option = { # 留下大地精
+		name = YE_Wuxunflows.2.a
+		ai_chance = { factor = 1 }
+		owner = {
+			add_manpower = 1
+			add_treasury = 10
+		}
+	}
+	option = { # 驱逐大地精
+		name = YE_Wuxunflows.2.b
+		ai_chance = { factor = 0 }
+		generic_remove_race_minority_size_effect = { race = hobgoblin }
+	}
+}	
+country_event = { # 3 加税-娑梨婆罗汉 内政
+	id = YE_Wuxunflows.3
+	title = YE_Wuxunflows.3.T
+	desc = YE_Wuxunflows.3.D
+	picture = BAD_WITH_MONARCH_eventPicture
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		YB8 = { exists = yes }
+		R80 = { exists = yes }
+	}
+
+	option = {
+		name = YE_Wuxunflows.3.a
+		ai_chance = { factor = 1 }
+		capital_scope = {
+			add_province_modifier = {
+				name = tax_tax_tax
+				duration = 10950
+			}
+		}
+	}
+
+}
+
+# 明争暗斗
+country_event = { # 4 卧榻之侧-娑梨婆罗汉
+	id = YE_Wuxunflows.4
+	title = YE_Wuxunflows.4.T
+	desc = YE_Wuxunflows.4.D
+	picture = BAD_WITH_MONARCH_eventPicture
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	immediate = {
+		country_event = {
+			id = YE_Wuxunflows.6
+			days = 30
+		}
+	}
+	option = {
+		name = YE_Wuxunflows.4.a
+		ai_chance = { factor = 1 }
+
+	}
+
+}
+country_event = { # 5 重建军团-白翼
+	id = YE_Wuxunflows.5
+	title = YE_Wuxunflows.5.T
+	desc = YE_Wuxunflows.5.D
+	picture = BAD_WITH_MONARCH_eventPicture
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = YE_Wuxunflows.5.a
+		ai_chance = { factor = 1 }
+	}
+
+}
+
+# 发动战争必须师出有名。
+
+# 一不义：亲近奸佞 钦差事件
+# 二不义：言而无信 夺城事件
+# 三不义：鱼肉百姓 断粮事件
+# 四不义：通敌卖国 大地精入城事件
+# 五不义：杀死使者 外交谈判事件
+
+# 钦差
+country_event = { # 6 委任钦差-娑梨婆罗汉
+	id = YE_Wuxunflows.6
+	title = YE_Wuxunflows.6.T
+	desc = YE_Wuxunflows.6.D
+	picture = BAD_WITH_MONARCH_eventPicture
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+	}
+
+	option = { #学者
+		name = YE_Wuxunflows.6.a
+		ai_chance = { factor = 1 }
+		add_adm_power = -20
+	}
+	option = { #王族
+		name = YE_Wuxunflows.6.b
+		ai_chance = { factor = 1 }
+		add_dip_power = -20
+	}
+	option = { #将军
+		name = YE_Wuxunflows.6.c
+		ai_chance = { factor = 1 }
+		add_mil_power = -20
+	}
+
+	after = { 
+		YB8 = {
+			country_event = {
+				id = YE_Wuxunflows.7
+				days = 1
+			}
+		}
+		country_event = {
+			id = YE_Wuxunflows.8
+			days = 180
+			random = 30
+		}
+	}
+
+}
+country_event = { # 7 钦差到来-白翼
+	id = YE_Wuxunflows.7
+	title = YE_Wuxunflows.7.T
+	desc = YE_Wuxunflows.7.D
+	picture = BAD_WITH_MONARCH_eventPicture
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+	}
+
+	option = { # 服从王命？
+		name = YE_Wuxunflows.7.a
+		ai_chance = { factor = 0 }
+		#监军大闹一通
+		add_country_modifier = {
+			name = alien_commander_from_raj
+			duration = 5475
+		}
+		set_country_flag = renyi_alien_commander_flag
+
+	}
+	option = { # 他也不看看咱的兵是什么人
+		name = YE_Wuxunflows.7.b
+		ai_chance = { factor = 10 }
+		#监军散布谣言
+		add_prestige = -5
+		add_country_modifier = {
+			name = rumors_of_wuxun_elven
+			duration = 5475
+		}
+		set_country_flag = renyi_alien_commander_flag
+	}
+	option = { # 让他到敌营视察去吧
+		name = YE_Wuxunflows.7.c
+		ai_chance = { factor = 0 }
+		#监军一命呜呼
+		add_prestige = -20
+	}
+
+}
+
+# 勒令北伐
+country_event = { # 8 驱虎吞狼-娑梨婆罗汉
+	id = YE_Wuxunflows.8
+	title = YE_Wuxunflows.8.T
+	desc = YE_Wuxunflows.8.D
+	picture = BAD_WITH_MONARCH_eventPicture
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+	}
+
+	option = { #要求北伐
+		name = YE_Wuxunflows.8.a
+		ai_chance = { factor = 1 }
+		YB8 = {
+			country_event = {
+				id = YE_Wuxunflows.9
+				days = 1
+			}
+		}
+	}
+	after = {
+		country_event = {
+			id = YE_Wuxunflows.14
+			days = 1095
+			random = 90
+		}
+	}
+
+}
+country_event = { # 9 受命北伐-白翼
+	id = YE_Wuxunflows.9
+	title = YE_Wuxunflows.9.T
+	desc = YE_Wuxunflows.9.D
+	picture = BAD_WITH_MONARCH_eventPicture
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+	}
+
+	option = { #遵旨 
+		name = YE_Wuxunflows.9.a
+		ai_chance = { factor = 1 }
+		4535 = {
+			add_claim = ROOT
+		}
+		8129 = {
+			add_claim = ROOT
+		}
+		4536 = {
+			add_claim = ROOT
+		}
+		every_neighbor_country = {
+			limit = {
+				culture_group = hobgoblin
+			}
+			ROOT = {
+				declare_war_with_cb = {
+					casus_belli = cb_civ_vs_monster
+					who = PREV
+				}
+			}
+		}
+		
+		set_country_flag = YB8_obey_order_flag
+		R80 = {
+			country_event = {
+				id = YE_Wuxunflows.11
+				days = 1
+			}
+		}
+	}
+	option = { #抗命
+		name = YE_Wuxunflows.9.b
+		ai_chance = { factor = 0 }
+		add_prestige = -20
+
+		set_country_flag = YB8_disobey_order_flag
+		R80 = {
+			country_event = {
+				id = YE_Wuxunflows.10
+				days = 1
+			}
+		}	
+	}
+}
+country_event = { # 10 拒不出兵
+	id = YE_Wuxunflows.10
+	title = YE_Wuxunflows.10.T
+	desc = YE_Wuxunflows.10.D
+	picture = BAD_WITH_MONARCH_eventPicture
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+	}
+	option = { 
+		name = YE_Wuxunflows.10.a
+		ai_chance = { factor = 1 }
+	}
+}
+country_event = { # 11 服从命令
+	id = YE_Wuxunflows.11
+	title = YE_Wuxunflows.11.T
+	desc = YE_Wuxunflows.11.D
+	picture = BAD_WITH_MONARCH_eventPicture
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+	}
+	option = { 
+		name = YE_Wuxunflows.11.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = { # 12 解救奴隶-白翼   仁义
+	id = YE_Wuxunflows.12
+	title = YE_Wuxunflows.12.T
+	desc = YE_Wuxunflows.12.D
+	picture = BAD_WITH_MONARCH_eventPicture
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		tag = YB8
+	}
+
+	option = { # 送回诸圣城   若奴隶回到诸圣城，则触发通知事件
+		name = YE_Wuxunflows.12.a
+		ai_chance = { factor = 1 }
+		add_prestige = 50
+		4630 = {
+			province_event = { 
+				id = YE_Wuxunflows.13
+				days = 1
+			}
+		}
+	}
+	option = { # 安置到溯回谷
+		name = YE_Wuxunflows.12.b
+		ai_chance = { factor = 1 }
+		capital_scope = {
+			add_base_tax = 3
+			add_base_production = 3
+			add_base_manpower = 3
+		}
+	}
+	option = { # 放他们自由  仁义
+		name = YE_Wuxunflows.12.c
+		ai_chance = { factor = 1 }
+		random_list = {
+			50 = {
+				capital_scope = {
+					add_base_tax = 3
+					add_base_production = 3
+					add_base_manpower = 3
+				}
+			}
+			50 = {
+				4630 = {
+					province_event = { 
+						id = YE_Wuxunflows.13
+						days = 1
+					}
+				}
+			}
+		}
+	}
+
+	after = {
+		4532 = {
+			add_base_tax = -3
+			add_base_production = -3
+			add_base_manpower = -3
+		}
+	}
+}
+province_event = { # 13 失而复得-娑梨婆罗汉-通知
+	id = YE_Wuxunflows.13
+	title = YE_Wuxunflows.13.T
+	desc = YE_Wuxunflows.13.D
+	picture = BAD_WITH_MONARCH_eventPicture
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = YE_Wuxunflows.13.a
+		ai_chance = { factor = 1 }
+		add_base_tax = 3
+		add_base_production = 3
+		add_base_manpower = 3
+	}
+
+}
+
+
+# 颓垣事变-宗教/族群冲突 物种冲突
+country_event = { # 14 颓垣事变-娑梨婆罗汉  
+	id = YE_Wuxunflows.14
+	title = YE_Wuxunflows.14.T
+	desc = YE_Wuxunflows.14.D
+	picture = BAD_WITH_MONARCH_eventPicture
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+	}
+
+	option = { # 没收
+		name = YE_Wuxunflows.14.a
+		ai_chance = { factor = 1 }
+		trigger = {
+			YB8 = {
+				has_country_flag = YB8_disobey_order_flag
+			}
+		}
+
+		add_prestige = 5
+		YB8 = {
+			country_event = {
+				id = YE_Wuxunflows.15
+				days = 1
+			}
+		}
+	}
+	option = { # 偷袭
+		name = YE_Wuxunflows.14.b
+		ai_chance = { factor = 1 }
+		trigger = {
+			YB8 = {
+				has_country_flag = YB8_obey_order_flag
+			}
+		}
+
+		add_prestige = -5
+		4529 = {
+			add_territorial_core = ROOT
+			cede_province = ROOT
+		}
+		8124 = {
+			add_territorial_core = ROOT
+			cede_province = ROOT
+		}
+		YB8 = {
+			country_event = {
+				id = YE_Wuxunflows.16
+				days = 1
+			}
+		}
+	}
+	after = {
+		country_event = {
+			id = YE_Wuxunflows.17
+			days = 365
+			random = 30
+		}		
+	}
+}
+country_event = { # 15 被没收-白翼
+	id = YE_Wuxunflows.15
+	title = YE_Wuxunflows.15.T
+	desc = YE_Wuxunflows.15.D
+	picture = BAD_WITH_MONARCH_eventPicture
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+	}
+
+	option = { #屈服
+		name = YE_Wuxunflows.15.a
+		ai_chance = { factor = 0 }
+		4529 = {
+			add_territorial_core = R80
+			cede_province = R80
+		}
+		8124 = {
+			add_territorial_core = R80
+			cede_province = R80
+		}
+		R80 = {
+			vassalize = ROOT
+		}
+	}
+	option = { #反抗
+		name = YE_Wuxunflows.15.b
+		ai_chance = { factor = 1 }
+
+		R80 = {
+			every_owned_province = {
+				add_claim = ROOT
+			}
+		}
+		country_event = {
+			id = YE_Wuxunflows.24
+		}
+	}
+
+}
+country_event = { # 16 被偷袭-白翼
+	id = YE_Wuxunflows.16
+	title = YE_Wuxunflows.16.T
+	desc = YE_Wuxunflows.16.D
+	picture = BAD_WITH_MONARCH_eventPicture
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+	}
+	
+	immediate = {
+		set_country_flag = renyi_territorial_conflict_flag
+	}
+	option = { #忍耐
+		name = YE_Wuxunflows.16.a
+		ai_chance = { factor = 1 }
+	}
+	option = { #反抗
+		name = YE_Wuxunflows.16.b
+		ai_chance = { factor = 1 }
+
+		R80 = {
+			every_owned_province = {
+				add_claim = ROOT
+			}
+		}
+		declare_war_with_cb = {
+			casus_belli = cb_imperial
+			who = R80
+		}
+	}
+
+}
+
+# 粮食不足
+country_event = { # 17 粮食不足-娑梨婆罗汉
+	id = YE_Wuxunflows.17
+	title = YE_Wuxunflows.17.T
+	desc = YE_Wuxunflows.17.D
+	picture = BAD_WITH_MONARCH_eventPicture
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+	}
+
+	option = {
+		name = YE_Wuxunflows.17.a
+		ai_chance = { factor = 1 }
+		add_stability = -2
+	}
+	after = {
+		country_event = {
+			id = YE_Wuxunflows.20
+			days = 10
+		}
+		YB8 = {
+			country_event = {
+				id = YE_Wuxunflows.18
+				days = 1
+			}
+		}
+		
+	}
+}
+country_event = { # 18 粮食援助-白翼   仁义
+	id = YE_Wuxunflows.18
+	title = YE_Wuxunflows.18.T
+	desc = YE_Wuxunflows.18.D
+	picture = BAD_WITH_MONARCH_eventPicture
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		num_of_owned_provinces_with = {
+			value = 2
+			trade_goods = grain
+		}
+	}
+
+	option = { #援助
+		name = YE_Wuxunflows.18.a
+		ai_chance = { factor = 1 }
+		add_treasury = -50
+		4630 = {
+			province_event = {
+				id = YE_Wuxunflows.19
+				days = 1
+			}
+		}
+		set_country_flag = renyi_grain_aid_flag
+	}
+	option = { #不援助
+		name = YE_Wuxunflows.18.b
+		ai_chance = { factor = 0 }
+		add_stability = 1
+	}
+
+}
+province_event = { # 19 处理援助粮-娑梨婆罗汉
+	id = YE_Wuxunflows.19
+	title = YE_Wuxunflows.19.T
+	desc = YE_Wuxunflows.19.D
+	picture = BAD_WITH_MONARCH_eventPicture
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+	}
+
+	option = { #分给百姓
+		name = YE_Wuxunflows.19.a
+		ai_chance = { factor = 0 }
+		owner = {
+			add_stability = 1
+		}
+	}
+	option = { #卖给百姓
+		name = YE_Wuxunflows.19.b
+		ai_chance = { factor = 1 }
+		owner = {
+			add_treasury = 150
+			add_prestige = -15
+		}
+	}
+}
+
+# 诸圣动乱
+country_event = { # 20 军队镇压-娑梨婆罗汉
+	id = YE_Wuxunflows.20
+	title = YE_Wuxunflows.20.T
+	desc = YE_Wuxunflows.20.D
+	picture = BAD_WITH_MONARCH_eventPicture
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+	}
+
+	option = { #调大地精士兵进城
+		name = YE_Wuxunflows.20.a
+		ai_chance = { factor = 5 }
+		YB8 = {
+			country_event = {
+				id = YE_Wuxunflows.21
+				days = 1
+			}
+		}
+	}
+	option = { #城内驻军足矣
+		name = YE_Wuxunflows.20.b
+		ai_chance = { factor = 5 }
+		add_manpower = -3
+	}
+	after = {
+		country_event = {
+			id = YE_Wuxunflows.22
+			days = 7
+		}
+	}
+
+
+}
+country_event = { # 21 大地精进城-白翼
+	id = YE_Wuxunflows.21
+	title = YE_Wuxunflows.21.T
+	desc = YE_Wuxunflows.21.D
+	picture = BAD_WITH_MONARCH_eventPicture
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = YE_Wuxunflows.21.a
+		ai_chance = { factor = 1 }
+		set_country_flag = renyi_hobgoblin_soldier_flag
+	}
+
+}
+
+# 使者在混乱中遇害
+country_event = { # 22 娑梨
+	id = YE_Wuxunflows.22
+	title = YE_Wuxunflows.22.T
+	desc = YE_Wuxunflows.22.D
+	picture = BAD_WITH_MONARCH_eventPicture
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	trigger = {}
+
+	option = {
+		name = YE_Wuxunflows.22.a
+		ai_chance = { factor = 1 }
+		add_prestige = -10
+	}
+	after = {
+		YB8 = {
+			country_event = {
+				id = YE_Wuxunflows.23
+				days = 1
+			}
+		}
+	}
+
+}
+country_event = { # 23 白翼
+	id = YE_Wuxunflows.23
+	title = YE_Wuxunflows.23.T
+	desc = YE_Wuxunflows.23.D
+	picture = BAD_WITH_MONARCH_eventPicture
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	trigger = {}
+	immediate = {
+		set_country_flag = renyi_embassy_executed_flag
+	}
+
+	option = { #
+		name = YE_Wuxunflows.23.a
+		ai_chance = { factor = 1 }
+		country_event = {
+			id = YE_Wuxunflows.24
+		}
+	}
+
+}
+
+#开战事件 列举罪状
+country_event = { # 24 白翼
+	id = YE_Wuxunflows.24
+	title = YE_Wuxunflows.24.T
+	desc = YE_Wuxunflows.24.D
+	picture = BAD_WITH_MONARCH_eventPicture
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	trigger = {}
+
+	immediate = {
+		R80 = {
+			set_country_flag = disable_call_military_allies_flag
+		}
+	}
+	after = {
+		
+		declare_war_with_cb = {
+			casus_belli = cb_imperial
+			who = R80
+		}
+	}
+
+	option = { 
+		name = YE_Wuxunflows.24.a
+		ai_chance = { factor = 1 }
+		highlight = yes
+		trigger = {
+			has_country_flag = renyi_alien_commander_flag
+		}
+	}
+	option = { 
+		name = YE_Wuxunflows.24.b
+		ai_chance = { factor = 1 }
+		highlight = yes
+		trigger = {
+			has_country_flag = renyi_territorial_conflict_flag
+		}
+	}
+	option = { 
+		name = YE_Wuxunflows.24.c
+		ai_chance = { factor = 1 }
+		highlight = yes
+		trigger = {
+			has_country_flag = renyi_grain_aid_flag
+		}
+	}
+	option = { 
+		name = YE_Wuxunflows.24.d
+		ai_chance = { factor = 1 }
+		highlight = yes
+		trigger = {
+			has_country_flag = renyi_hobgoblin_soldier_flag
+		}
+	}
+	option = { 
+		name = YE_Wuxunflows.24.e
+		ai_chance = { factor = 1 }
+		highlight = yes
+		trigger = {
+			has_country_flag = renyi_embassy_executed_flag
+		}
+	}
+	option = { 
+		name = YE_Wuxunflows.24.f
+		ai_chance = { factor = 1 }
+	}
+
+}

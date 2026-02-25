@@ -1,0 +1,27 @@
+setup_vision = yes
+
+government = monarchy
+add_government_reform = autocracy_reform
+government_rank = 1
+
+primary_culture = sun_elf
+add_accepted_culture = yansu
+
+religion = accretive_path
+
+technology_group = tech_halessi
+
+capital = 8126
+
+1444.11.10 = {
+	override_country_name = YB8_COLONY_NAME
+	monarch = {
+		name = "Adila"
+		dynasty = "Duhzuir"
+		birth_date = 1399.8.26
+		adm = 4
+		dip = 6
+		mil = 4
+		culture = sun_elf
+	}
+}

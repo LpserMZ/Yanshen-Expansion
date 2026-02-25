@@ -1,0 +1,484 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_button_development_bonus"	
+		texturefile = "gfx//interface//button_development_bonus.dds"
+		loadType = "INGAME"
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+
+	spriteType = {
+		name = "GFX_background_development_bonus"
+		texturefile = "gfx/interface/background_development_bonus.dds"
+		transparencecheck = yes
+	}
+
+	spriteType = {
+		name = "GFX_development_bonus_ESCAPE"
+		texturefile = "gfx/interface/AH_custom_GUI/development_bonus/standard_button_71.dds"
+	}
+		spriteType = {
+		name = "GFX_development_bonus_rank_yellow"
+		texturefile = "gfx/interface/AH_custom_GUI/development_bonus/province_status_rank/dev_bonus_province_status_rank_6_tiers.dds"
+		noOfFrames = 6
+	}
+	spriteType = {
+		name = "GFX_development_bonus_rank_red"
+		texturefile = "gfx/interface/AH_custom_GUI/development_bonus/province_status_rank/dev_bonus_province_status_rank_6_tiers.dds"
+		noOfFrames = 6
+	}
+	spriteType = {
+		name = "GFX_development_bonus_rank_green"
+		texturefile = "gfx/interface/AH_custom_GUI/development_bonus/province_status_rank/dev_bonus_province_status_rank_6_tiers.dds"
+		noOfFrames = 6
+	}
+	spriteType = {
+		name = "GFX_development_bonus_rank_blue"
+		texturefile = "gfx/interface/AH_custom_GUI/development_bonus/province_status_rank/dev_bonus_province_status_rank_6_tiers.dds"
+		noOfFrames = 6
+	}
+	spriteType = {
+		name = "GFX_development_bonus_rank_purple"
+		texturefile = "gfx/interface/AH_custom_GUI/development_bonus/province_status_rank/dev_bonus_province_status_rank_6_tiers.dds"
+		noOfFrames = 6
+	}
+	spriteType = {
+		name = "GFX_development_bonus_rank_orange"
+		texturefile = "gfx/interface/AH_custom_GUI/development_bonus/province_status_rank/dev_bonus_province_status_rank_6_tiers.dds"
+		noOfFrames = 6
+	}
+	spriteType = {
+		name = "GFX_development_bonus_rank_grey"
+		texturefile = "gfx/interface/AH_custom_GUI/development_bonus/province_status_rank/dev_bonus_province_status_rank_6_tiers.dds"
+		noOfFrames = 6
+	}
+	spriteType = {
+		name = "GFX_development_bonus_rank_white"
+		texturefile = "gfx/interface/AH_custom_GUI/development_bonus/province_status_rank/dev_bonus_province_status_rank_6_tiers.dds"
+		noOfFrames = 6
+	}
+	spriteType = {
+		name = "GFX_development_bonus_rank_blue_deep"
+		texturefile = "gfx/interface/AH_custom_GUI/development_bonus/province_status_rank/dev_bonus_province_status_rank_6_tiers.dds"
+		noOfFrames = 6
+	}
+	spriteType = {
+		name = "GFX_development_bonus_rank_blue_medium"
+		texturefile = "gfx/interface/AH_custom_GUI/development_bonus/province_status_rank/dev_bonus_province_status_rank_6_tiers.dds"
+		noOfFrames = 6
+	}
+	spriteType = {
+		name = "GFX_development_bonus_rank_black"
+		texturefile = "gfx/interface/AH_custom_GUI/development_bonus/province_status_rank/dev_bonus_province_status_rank_6_tiers.dds"
+		noOfFrames = 6
+	}
+	spriteType = {
+		name = "GFX_development_bonus_rank_yellow_green"
+		texturefile = "gfx/interface/AH_custom_GUI/development_bonus/province_status_rank/dev_bonus_province_status_rank_6_tiers.dds"
+		noOfFrames = 6
+	}
+	spriteType = {
+		name = "GFX_development_bonus_rank_purple_light"
+		texturefile = "gfx/interface/AH_custom_GUI/development_bonus/province_status_rank/dev_bonus_province_status_rank_6_tiers.dds"
+		noOfFrames = 6
+	}
+	spriteType = {
+		name = "GFX_development_bonus_rank_pink"
+		texturefile = "gfx/interface/AH_custom_GUI/development_bonus/province_status_rank/dev_bonus_province_status_rank_6_tiers.dds"
+		noOfFrames = 6
+	}
+	# spriteType = {
+	# 	name = "GFX_development_bonus_rank_yellow"
+	# 	texturefile = "gfx/interface/AH_custom_GUI/development_bonus/province_status_rank/dev_bonus_province_status_rank_yellow.dds"
+	# 	noOfFrames = 6
+	# }
+	# spriteType = {
+	# 	name = "GFX_development_bonus_rank_red"
+	# 	texturefile = "gfx/interface/AH_custom_GUI/development_bonus/province_status_rank/dev_bonus_province_status_rank_red.dds"
+	# 	noOfFrames = 6
+	# }
+	# spriteType = {
+	# 	name = "GFX_development_bonus_rank_green"
+	# 	texturefile = "gfx/interface/AH_custom_GUI/development_bonus/province_status_rank/dev_bonus_province_status_rank_green.dds"
+	# 	noOfFrames = 6
+	# }
+	# spriteType = {
+	# 	name = "GFX_development_bonus_rank_blue"
+	# 	texturefile = "gfx/interface/AH_custom_GUI/development_bonus/province_status_rank/dev_bonus_province_status_rank_blue.dds"
+	# 	noOfFrames = 6
+	# }
+	# spriteType = {
+	# 	name = "GFX_development_bonus_rank_purple"
+	# 	texturefile = "gfx/interface/AH_custom_GUI/development_bonus/province_status_rank/dev_bonus_province_status_rank_purple.dds"
+	# 	noOfFrames = 6
+	# }
+	# spriteType = {
+	# 	name = "GFX_development_bonus_rank_orange"
+	# 	texturefile = "gfx/interface/AH_custom_GUI/development_bonus/province_status_rank/dev_bonus_province_status_rank_orange.dds"
+	# 	noOfFrames = 6
+	# }
+	# spriteType = {
+	# 	name = "GFX_development_bonus_rank_grey"
+	# 	texturefile = "gfx/interface/AH_custom_GUI/development_bonus/province_status_rank/dev_bonus_province_status_rank_grey.dds"
+	# 	noOfFrames = 6
+	# }
+	# spriteType = {
+	# 	name = "GFX_development_bonus_rank_white"
+	# 	texturefile = "gfx/interface/AH_custom_GUI/development_bonus/province_status_rank/dev_bonus_province_status_rank_white.dds"
+	# 	noOfFrames = 6
+	# }
+	# spriteType = {
+	# 	name = "GFX_development_bonus_rank_blue_deep"
+	# 	texturefile = "gfx/interface/AH_custom_GUI/development_bonus/province_status_rank/dev_bonus_province_status_rank_blue_deep.dds"
+	# 	noOfFrames = 6
+	# }
+	# spriteType = {
+	# 	name = "GFX_development_bonus_rank_blue_medium"
+	# 	texturefile = "gfx/interface/AH_custom_GUI/development_bonus/province_status_rank/dev_bonus_province_status_rank_blue_medium.dds"
+	# 	noOfFrames = 6
+	# }
+	# spriteType = {
+	# 	name = "GFX_development_bonus_rank_black"
+	# 	texturefile = "gfx/interface/AH_custom_GUI/development_bonus/province_status_rank/dev_bonus_province_status_rank_black.dds"
+	# 	noOfFrames = 6
+	# }
+	# spriteType = {
+	# 	name = "GFX_development_bonus_rank_yellow_green"
+	# 	texturefile = "gfx/interface/AH_custom_GUI/development_bonus/province_status_rank/dev_bonus_province_status_rank_yellow_green.dds"
+	# 	noOfFrames = 6
+	# }
+	# spriteType = {
+	# 	name = "GFX_development_bonus_rank_purple_light"
+	# 	texturefile = "gfx/interface/AH_custom_GUI/development_bonus/province_status_rank/dev_bonus_province_status_rank_purple_light.dds"
+	# 	noOfFrames = 6
+	# }
+	# spriteType = {
+	# 	name = "GFX_development_bonus_rank_pink"
+	# 	texturefile = "gfx/interface/AH_custom_GUI/development_bonus/province_status_rank/dev_bonus_province_status_rank_pink.dds"
+	# 	noOfFrames = 6
+	# }
+
+	spriteType = {
+		name = "GFX_background_subwindow_dev_bonus"
+		texturefile = "gfx/interface/AH_custom_GUI/development_bonus/background_subwindow.dds"
+	}
+	spriteType = {
+		name = "GFX_button_dev_buff_details_CLOSE" 
+		texturefile = "gfx/interface/AH_custom_GUI/development_bonus/closebutton.dds"
+	}
+	spriteType = {
+		name = "GFX_button_dev_buff_bookmark_tip" 
+		texturefile = "gfx/interface/AH_custom_GUI/development_bonus/tip.dds"
+	}
+	spriteType = {
+		name = "GFX_button_dev_buff_bookmark_left_arrow" 
+		texturefile = "gfx/interface/AH_custom_GUI/development_bonus/left_arrow.dds"
+	}
+	spriteType = {
+		name = "GFX_button_dev_buff_bookmark_right_arrow" 
+		texturefile = "gfx/interface/AH_custom_GUI/development_bonus/right_arrow.dds"
+	}
+
+	spriteType = {
+		name = "GFX_button_dev_buff_zhaoming_fire_damage_received" 
+		texturefile = "gfx/interface/AH_custom_GUI/development_bonus/dev_buff_frame/chapter9/dev_buff_frame_fire_damage_received.dds"
+		noOfFrames = 4
+	}
+	spriteType = {
+		name = "GFX_button_dev_buff_zhaoming_shock_damage_received" 
+		texturefile = "gfx/interface/AH_custom_GUI/development_bonus/dev_buff_frame/chapter9/dev_buff_frame_shock_damage_received.dds"
+		noOfFrames = 4
+	}
+	spriteType = {
+		name = "GFX_button_dev_buff_zhaoming_land_attrition" 
+		texturefile = "gfx/interface/AH_custom_GUI/development_bonus/dev_buff_frame/chapter9/dev_buff_frame_land_attrition.dds"
+		noOfFrames = 4
+	}
+	spriteType = {
+		name = "GFX_button_dev_buff_tianxi_build_cost"
+		texturefile = "gfx/interface/AH_custom_GUI/development_bonus/dev_buff_frame/chapter10/dev_buff_frame_build_cost.dds"
+		noOfFrames = 4
+	}
+	spriteType = {
+		name = "GFX_button_dev_buff_tianxi_build_time"
+		texturefile = "gfx/interface/AH_custom_GUI/development_bonus/dev_buff_frame/chapter10/dev_buff_frame_build_time.dds"
+		noOfFrames = 4
+	}
+	spriteType = {
+		name = "GFX_button_dev_buff_tianxi_regiment_time"
+		texturefile = "gfx/interface/AH_custom_GUI/development_bonus/dev_buff_frame/chapter10/dev_buff_frame_regiment_time.dds"
+		noOfFrames = 4
+	}
+	spriteType = {
+		name = "GFX_button_dev_buff_luzhong_morale_damage_received"
+		texturefile = "gfx/interface/AH_custom_GUI/development_bonus/dev_buff_frame/chapter11/dev_buff_frame_morale_damage_received.dds"
+		noOfFrames = 4
+	}
+	spriteType = {
+		name = "GFX_button_dev_buff_luzhong_drill_decay"
+		texturefile = "gfx/interface/AH_custom_GUI/development_bonus/dev_buff_frame/chapter11/dev_buff_frame_drill_decay.dds"
+		noOfFrames = 4
+	}
+	spriteType = {
+		name = "GFX_button_dev_buff_luzhong_reinforce"
+		texturefile = "gfx/interface/AH_custom_GUI/development_bonus/dev_buff_frame/chapter11/dev_buff_frame_reinforce.dds"
+		noOfFrames = 4
+	}
+	spriteType = {
+		name = "GFX_button_dev_buff_luzhong_condottieri"
+		texturefile = "gfx/interface/AH_custom_GUI/development_bonus/dev_buff_frame/chapter11/dev_buff_frame_condottieri.dds"
+		noOfFrames = 4
+	}
+	spriteType = {
+		name = "GFX_button_dev_buff_yanxin_idea"
+		texturefile = "gfx/interface/AH_custom_GUI/development_bonus/dev_buff_frame/chapter12/dev_buff_frame_idea.dds"
+		noOfFrames = 4
+	}
+	spriteType = {
+		name = "GFX_button_dev_buff_yanxin_dev_cost"
+		texturefile = "gfx/interface/AH_custom_GUI/development_bonus/dev_buff_frame/chapter12/dev_buff_frame_dev_cost.dds"
+		noOfFrames = 4
+	}
+	spriteType = {
+		name = "GFX_button_dev_buff_yanxin_stability"
+		texturefile = "gfx/interface/AH_custom_GUI/development_bonus/dev_buff_frame/chapter12/dev_buff_frame_stability.dds"
+		noOfFrames = 4
+	}
+	spriteType = {
+		name = "GFX_button_dev_buff_yanxin_governing_cost"
+		texturefile = "gfx/interface/AH_custom_GUI/development_bonus/dev_buff_frame/chapter12/dev_buff_frame_governing_cost.dds"
+		noOfFrames = 4
+	}
+	spriteType = {
+		name = "GFX_button_dev_buff_zhuyue_autonomy"
+		texturefile = "gfx/interface/AH_custom_GUI/development_bonus/dev_buff_frame/chapter13/dev_buff_frame_autonomy.dds"
+		noOfFrames = 4
+	}
+	spriteType = {
+		name = "GFX_button_dev_buff_zhuyue_culture_promotion"
+		texturefile = "gfx/interface/AH_custom_GUI/development_bonus/dev_buff_frame/chapter13/dev_buff_frame_culture_promotion.dds"
+		noOfFrames = 4
+	}
+	spriteType = {
+		name = "GFX_button_dev_buff_zhuyue_diplomats"
+		texturefile = "gfx/interface/AH_custom_GUI/development_bonus/dev_buff_frame/chapter13/dev_buff_frame_diplomats.dds"
+		noOfFrames = 4
+	}
+	spriteType = {
+		name = "GFX_button_dev_buff_zhuyue_reputation"
+		texturefile = "gfx/interface/AH_custom_GUI/development_bonus/dev_buff_frame/chapter13/dev_buff_frame_reputation.dds"
+		noOfFrames = 4
+	}
+	spriteType = {
+		name = "GFX_button_dev_buff_yannan_possible_policy"
+		texturefile = "gfx/interface/AH_custom_GUI/development_bonus/dev_buff_frame/chapter14/dev_buff_frame_possible_policy.dds"
+		noOfFrames = 4
+	}
+	spriteType = {
+		name = "GFX_button_dev_buff_yannan_absolutism"
+		texturefile = "gfx/interface/AH_custom_GUI/development_bonus/dev_buff_frame/chapter14/dev_buff_frame_absolutism.dds"
+		noOfFrames = 4
+	}
+	spriteType = {
+		name = "GFX_button_dev_buff_yannan_trade_efficiency"
+		texturefile = "gfx/interface/AH_custom_GUI/development_bonus/dev_buff_frame/chapter14/dev_buff_frame_trade_efficiency.dds"
+		noOfFrames = 4
+	}
+	spriteType = {
+		name = "GFX_button_dev_buff_yannan_diplomatic_annexation"
+		texturefile = "gfx/interface/AH_custom_GUI/development_bonus/dev_buff_frame/chapter14/dev_buff_frame_diplomatic_annexation.dds"
+		noOfFrames = 4
+	}
+	spriteType = {
+		name = "GFX_button_dev_buff_yannan_spy"
+		texturefile = "gfx/interface/AH_custom_GUI/development_bonus/dev_buff_frame/chapter14/dev_buff_frame_spy.dds"
+		noOfFrames = 4
+	}
+	spriteType = {
+		name = "GFX_button_dev_buff_shaqvan_devastation"
+		texturefile = "gfx/interface/AH_custom_GUI/development_bonus/dev_buff_frame/chapter15/dev_buff_frame_devastation.dds"
+		noOfFrames = 4
+	}
+	spriteType = {
+		name = "GFX_button_dev_buff_shaqvan_prosperity"
+		texturefile = "gfx/interface/AH_custom_GUI/development_bonus/dev_buff_frame/chapter15/dev_buff_frame_prosperity.dds"
+		noOfFrames = 4
+	}
+	spriteType = {
+		name = "GFX_button_dev_buff_shaqvan_innovation"
+		texturefile = "gfx/interface/AH_custom_GUI/development_bonus/dev_buff_frame/chapter15/dev_buff_frame_innovation.dds"
+		noOfFrames = 4
+	}
+	spriteType = {
+		name = "GFX_button_dev_buff_shaqvan_religion"
+		texturefile = "gfx/interface/AH_custom_GUI/development_bonus/dev_buff_frame/chapter15/dev_buff_frame_religion.dds"
+		noOfFrames = 4
+	}
+	spriteType = {
+		name = "GFX_button_dev_buff_jindu_institution"
+		texturefile = "gfx/interface/AH_custom_GUI/development_bonus/dev_buff_frame/chapter16/dev_buff_frame_institution.dds"
+		noOfFrames = 4
+	}
+	spriteType = {
+		name = "GFX_button_dev_buff_jindu_improve_relationship"
+		texturefile = "gfx/interface/AH_custom_GUI/development_bonus/dev_buff_frame/chapter16/dev_buff_frame_improve_relationship.dds"
+		noOfFrames = 4
+	}
+	spriteType = {
+		name = "GFX_button_dev_buff_jindu_merchant"
+		texturefile = "gfx/interface/AH_custom_GUI/development_bonus/dev_buff_frame/chapter16/dev_buff_frame_merchant.dds"
+		noOfFrames = 4
+	}
+	spriteType = {
+		name = "GFX_button_dev_buff_jindu_trade_steer"
+		texturefile = "gfx/interface/AH_custom_GUI/development_bonus/dev_buff_frame/chapter16/dev_buff_frame_trade_steer.dds"
+		noOfFrames = 4
+	}
+	spriteType = {
+		name = "GFX_button_dev_buff_jindu_trade_goods"
+		texturefile = "gfx/interface/AH_custom_GUI/development_bonus/dev_buff_frame/chapter16/dev_buff_frame_trade_goods.dds"
+		noOfFrames = 4
+	}
+	spriteType = {
+		name = "GFX_button_dev_buff_jiangdong_envoy"
+		texturefile = "gfx/interface/AH_custom_GUI/development_bonus/dev_buff_frame/chapter17/dev_buff_frame_envoy.dds"
+		noOfFrames = 4
+	}
+	spriteType = {
+		name = "GFX_button_dev_buff_jiangdong_embargo"
+		texturefile = "gfx/interface/AH_custom_GUI/development_bonus/dev_buff_frame/chapter17/dev_buff_frame_embargo.dds"
+		noOfFrames = 4
+	}
+	spriteType = {
+		name = "GFX_button_dev_buff_jiangdong_colonists"
+		texturefile = "gfx/interface/AH_custom_GUI/development_bonus/dev_buff_frame/chapter17/dev_buff_frame_colonists.dds"
+		noOfFrames = 4
+	}
+	spriteType = {
+		name = "GFX_button_dev_buff_jiangdong_sailor_maintenance"
+		texturefile = "gfx/interface/AH_custom_GUI/development_bonus/dev_buff_frame/chapter17/dev_buff_frame_sailor_maintenance.dds"
+		noOfFrames = 4
+	}
+	spriteType = {
+		name = "GFX_button_dev_buff_jiangdong_naval_tradition"
+		texturefile = "gfx/interface/AH_custom_GUI/development_bonus/dev_buff_frame/chapter17/dev_buff_frame_naval_tradition.dds"
+		noOfFrames = 4
+	}
+	spriteType = {
+		name = "GFX_button_dev_buff_maohai_naval_morale"
+		texturefile = "gfx/interface/AH_custom_GUI/development_bonus/dev_buff_frame/chapter18/dev_buff_frame_naval_morale.dds"
+		noOfFrames = 4
+	}
+	spriteType = {
+		name = "GFX_button_dev_buff_maohai_naval_engagement"
+		texturefile = "gfx/interface/AH_custom_GUI/development_bonus/dev_buff_frame/chapter18/dev_buff_frame_naval_engagement.dds"
+		noOfFrames = 4
+	}
+	spriteType = {
+		name = "GFX_button_dev_buff_maohai_flagship"
+		texturefile = "gfx/interface/AH_custom_GUI/development_bonus/dev_buff_frame/chapter18/dev_buff_frame_flagship.dds"
+		noOfFrames = 4
+	}
+	spriteType = {
+		name = "GFX_button_dev_buff_jianwu_general"
+		texturefile = "gfx/interface/AH_custom_GUI/development_bonus/dev_buff_frame/chapter19/dev_buff_frame_general.dds"
+		noOfFrames = 4
+	}
+	spriteType = {
+		name = "GFX_button_dev_buff_jianwu_manpower_recovery"
+		texturefile = "gfx/interface/AH_custom_GUI/development_bonus/dev_buff_frame/chapter19/dev_buff_frame_manpower_recovery.dds"
+		noOfFrames = 4
+	}
+	spriteType = {
+		name = "GFX_button_dev_buff_jianwu_morale_recovery"
+		texturefile = "gfx/interface/AH_custom_GUI/development_bonus/dev_buff_frame/chapter19/dev_buff_frame_morale_recovery.dds"
+		noOfFrames = 4
+	}
+	spriteType = {
+		name = "GFX_button_dev_buff_moling_manpower_usage"
+		texturefile = "gfx/interface/AH_custom_GUI/development_bonus/dev_buff_frame/chapter20/dev_buff_frame_manpower_usage.dds"
+		noOfFrames = 4
+	}
+	spriteType = {
+		name = "GFX_button_dev_buff_moling_culture_conversion"
+		texturefile = "gfx/interface/AH_custom_GUI/development_bonus/dev_buff_frame/chapter20/dev_buff_frame_culture_conversion.dds"
+		noOfFrames = 4
+	}
+	spriteType = {
+		name = "GFX_button_dev_buff_moling_fort"
+		texturefile = "gfx/interface/AH_custom_GUI/development_bonus/dev_buff_frame/chapter20/dev_buff_frame_fort.dds"
+		noOfFrames = 4
+	}
+	spriteType = {
+		name = "GFX_button_dev_buff_moling_upgrade"
+		texturefile = "gfx/interface/AH_custom_GUI/development_bonus/dev_buff_frame/chapter20/dev_buff_frame_upgrade.dds"
+		noOfFrames = 4
+	}
+
+
+	spriteType = {
+		name = "GFX_button_dev_buff_bookmark_b1c9p1" 
+		texturefile = "gfx/interface/AH_custom_GUI/development_bonus/button_bookmark/button_bookmark_b1c9p1.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_button_dev_buff_bookmark_b1c10p1" 
+		texturefile = "gfx/interface/AH_custom_GUI/development_bonus/button_bookmark/button_bookmark_b1c10p1.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_button_dev_buff_bookmark_b1c11p1" 
+		texturefile = "gfx/interface/AH_custom_GUI/development_bonus/button_bookmark/button_bookmark_b1c11p1.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_button_dev_buff_bookmark_b1c12p1" 
+		texturefile = "gfx/interface/AH_custom_GUI/development_bonus/button_bookmark/button_bookmark_b1c12p1.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_button_dev_buff_bookmark_b1c13p1" 
+		texturefile = "gfx/interface/AH_custom_GUI/development_bonus/button_bookmark/button_bookmark_b1c13p1.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_button_dev_buff_bookmark_b1c14p1" 
+		texturefile = "gfx/interface/AH_custom_GUI/development_bonus/button_bookmark/button_bookmark_b1c14p1.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_button_dev_buff_bookmark_b1c15p1" 
+		texturefile = "gfx/interface/AH_custom_GUI/development_bonus/button_bookmark/button_bookmark_b1c15p1.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_button_dev_buff_bookmark_b1c16p1" 
+		texturefile = "gfx/interface/AH_custom_GUI/development_bonus/button_bookmark/button_bookmark_b1c16p1.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_button_dev_buff_bookmark_b1c17p1" 
+		texturefile = "gfx/interface/AH_custom_GUI/development_bonus/button_bookmark/button_bookmark_b1c17p1.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_button_dev_buff_bookmark_b1c18p1" 
+		texturefile = "gfx/interface/AH_custom_GUI/development_bonus/button_bookmark/button_bookmark_b1c18p1.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_button_dev_buff_bookmark_b1c19p1" 
+		texturefile = "gfx/interface/AH_custom_GUI/development_bonus/button_bookmark/button_bookmark_b1c19p1.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_button_dev_buff_bookmark_b1c20p1" 
+		texturefile = "gfx/interface/AH_custom_GUI/development_bonus/button_bookmark/button_bookmark_b1c20p1.dds"
+		noOfFrames = 2
+	}
+
+	spriteType = {
+		name = "GFX_button_dev_buff_upgrade_points" 
+		texturefile = "gfx/interface/AH_custom_GUI/development_bonus/upgrade_points.dds"
+		noOfFrames = 6
+	}
+}

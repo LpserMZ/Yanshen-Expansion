@@ -1,0 +1,280 @@
+the_commond_governor_vassal = { #AH 伊比利亚总督区
+	count = vassal
+	
+	sprite = GFX_icon_vassal
+	diplomacy_overlord_sprite = GFX_diplomacy_leadvassal
+	diplomacy_subject_sprite = GFX_diplomacy_amvassal
+
+	has_overlords_ruler = no			#同一君主 联统国
+	can_fight_independence_war = yes    #发动独立战争
+	is_voluntary = no					#附庸国主动分手			# Whether they can leave the relationship whenever they want
+	transfer_trade_power = yes           #转移贸易竞争力
+	transfer_trade_if_merchant_republic = yes #宗主如果是商共，转不转贸易
+	joins_overlords_wars = yes            	#加入宗主战争
+	can_be_co_belligerented =  no  		    #加入防御战争，跟上一条有关    #Enemies can force this subject to join its overlord into the defense war. Only used when the subject has the "joins_overlords_wars = no". By default it's "no".
+	must_accept_cta_from_overlord =  no     #召唤属国参战，机制同盟友，与上上条有关 #Overlord can ask subject to join wars like it could ask allies to join. You would require favors  to call them to wars. Only used when the subject has the "joins_overlords_wars = no". By default it's "no"
+	favors_cost_to_join_offensive_wars = 0  #参战扣人情 #Defines how much favors the overlord need to invest to call the subject into an offensive war
+	favors_cost_to_join_defensive_wars = 0  #参战扣人情           #Defines how much favors the overlord need to invest to call the subject into a defensive war
+	opinion_cost_to_join_offensive_wars = 0 #参战扣好感  #Defines how much opinion the subject loses of the overlord to call the subject into an offensive war. Applied if you do not have Leviathan
+	opinion_cost_to_join_defensive_wars = 0 #参战扣好感  #Defines how much opinion the subject loses of the overlord to call the subject into a defensive war. Applied if you do not have Leviathan
+	opinion_cost_instead_of_favors_cost = no #参战扣好感还是扣人情  #Determines if the subject requires favors or opinion to join a the war. If set "yes" then it requires the aforementioned opinion costs - regardless if Leviathan is active or not. "No" is the default setting
+	opinion_on_subject_integration = 30      #吞附庸掉多少好感   #Determines how much opinion they actually lose when a fellow subject gets integrated.
+	joins_colonial_wars = no                 #附属国是否参与殖民地战争 与上一条 加入宗主战争 相似，启用时宗主宣战会有一个“宣布殖民战争”的选项，勾选后将不能召唤启用了上一条的附属国，但是会召唤启用了本条的附属国
+	can_be_integrated = no                   #能否吞并，似乎条件不同于吞并机制  联统国
+	can_release_and_play = no				 #释放并扮演			# "Release Colony" in SubjectView
+	uses_tariffs = no                        #关税
+	dynamically_created_during_history = no	 #如果附属国是自定义建立的则是否考虑动态历史关系，如后期剧本殖民地国家归属宗主的问题			# If the country is automatically created. ( Makes for special checks during history )
+	eats_overlords_colonies = no			 #附属国是否可以接收宗主的海外殖民地；给殖民地用的		# Wheter subject assumes control of overlord's colonies in same colonial region.
+	has_colonial_parent = no				 #殖民地用的			# Regulates most rules that should hold only for colonies
+	overlord_can_attack = yes                #能否被宗主国宣战
+	overlord_can_be_subject = no             #宗主能否是个附属国
+	can_have_subjects_of_other_types = no    #该类型附属国能否拥有其他类型的附属国
+	can_be_annexed = yes                      #能否被吞并 ，与合并机制相同，似乎条件不同 附庸国
+	takes_diplo_slot = no                   #占用外交关系
+	has_power_projection = no               #是否拥有力量投射，联通好像没有
+	can_release_in_peace = yes               #是否可被和平释放，与cb有关
+	uses_military_focus = yes                #是否应用军事焦点（围攻，防守，懒惰）   建议与改变附属国军事焦点的互动方式一同使用；由于界面覆盖问题，不可与朝贡机制一同使用。
+	overlord_protects_external = yes			 #被宣战后强制宗主入站			# Whether overlord always gets called (declinable) against countries without the same overlord. When this is 'no' overlord will only join if the defender would have been blocked (by its subject type) from attacking the attacker.
+	counts_for_borders = yes				 #计算边界距离时包不包括附属国 朝贡国常用此机制			# Whether distance between borders counts this subject type as part of its overlord's borders.
+	overlord_enforce_peace_attacking = no	 #强制白和			# Whether the overlord can enforce peace on the subject's enemy even when the subject is the attacker
+	can_use_claims = yes					 #宗主用附庸的宣称或核心宣战			# Whether the overlord can use the subject's claims and cores for declaring war
+	gives_daimyo_bonuses = no				 #大名buff
+	gets_help_with_rebels = yes			     #附属国是否会帮助宗主剿灭叛军		# Only for AI. Bidirectional.
+	share_rebel_popup = yes					 #宗主能不能看见属国的叛军 朝贡国机制			# Whether the Overlord gets popups about Subject's rebels and sees them in Stability View.
+	separatists_become_subjects = no		 #分离主义者能否成为领主的附庸			# Whether separatist rebels enforcing demands will become subjects of the overlord.
+	allows_taking_land_without_independence = no   #独立战争只拿宗主的地但不独立
+	can_transfer_in_peace = no					   #附属国是否可以成为时代能力“转移附属国”的主体   			# Whether this subject type can be made into a vassal with the "Transfer Subject" Age Ability.
+	can_set_mil_focus = yes                        #附属国是否可以被宗主改变军事焦点（围攻，防守，懒惰） 与朝贡国ui冲突
+	can_send_missionary_to_subject = yes		   #帮附庸传教		# Requires Cradle of Civilization
+	can_union_break = no						   #仅在君主是同一人时有效              	# Only works together with has_overlords_ruler
+	overlord_can_fabricate_for = yes               #宗主帮忙修建筑
+	does_overlord_size_count_for_warscore_cost = yes  #只有 朝贡，贸易保护国，文化圈 是no
+	is_colony_subtype = no                            #是殖民地吗？
+	is_march = no                                     #是卫戍吗？
+	forms_trade_companies = no                       #只有 附庸，卫戍，大名，行省 是no
+	can_concentrate_development = yes                 #宗主对附庸的直属州集中发展度
+	can_have_great_projects_moved_by_overlord = yes   #宗主搬走奇观
+	extend_trading_range = yes                         #宗主借助附庸扩大贸易范围
+	can_gain_favors = no                              #人情
+
+	max_government_rank = 2							  #		# 0 means no limit
+	cities_required_for_bonuses = 0					  #   	# How many cities the subject needs before giving bonuses to overlord
+	trust_on_start = 0								  #  	# Overlord and subject will each get this much extra trust with each other at game start
+
+	base_liberty_desire = 25.0
+	liberty_desire_negative_prestige = 0.0
+	liberty_desire_development_ratio = 0.20
+	liberty_desire_same_dynasty = -5.0
+	liberty_desire_revolution = 30.0					# Liberty desire at 100% revolution spread in country
+	pays_overlord = 1.0									# 1.0 represents the amount payed by vassals
+	forcelimit_to_overlord = 0.1						# Percent of subject FL to use as base for modifiers
+	naval_forcelimit_to_overlord = 0.0					# Percent of subject FL to use as base for modifiers
+	manpower_to_overlord = 0.0							# Percent of subject FL to use as base for modifiers
+	sailors_to_overlord = 0.0							# Percent of subject FL to use as base for modifiers
+	military_focus = 1.0								# How much the AI subject should spend etc. on army and forts. 0 should make them spend nothing. Very high values will probably not make a big difference since there will be sanity checks.
+	annex_cost_per_development = 8.0					# annex/integrate cost per development
+
+	relative_power_class = 1 							# See description above
+	should_quit_wars_on_activation = yes
+	diplomacy_view_class = 1							# See description above
+
+	can_fight = {
+	}
+	can_rival = {
+	}
+	can_ally = {
+	}
+	can_marry = {
+	}
+	# Subject Interactions:   #属国互动
+	# (continuous)            #长期生效
+	embargo_rivals = yes	  #禁运宿敌
+	support_loyalists = yes    #资助效忠派
+	subsidize_armies = yes     #资助军队
+	scutage = no              #免服兵役税
+	send_officers = yes 		  #派遣军官
+	divert_trade= yes          #引导贸易？
+	# (immediate)           			  #立即生效
+	placate_rulers = yes				  #安抚统治者
+	place_relative_on_throne = no		  #扶植宗亲
+	enforce_religion = no				  #强迫改变宗教
+	customize_subject = no                   #允许自定义属国，比如改殖民地名字
+	replace_governor = no                 #替换统治者
+	grant_province = yes                  #授予省份
+	enforce_culture = yes                  #强迫改变宗教
+	siphon_income = no                    #榨取国库
+	fortify_march = no	 				  #为卫戍建设要塞
+	seize_territory = yes                  #强占领土
+	start_colonial_war = no               #发动殖民战争
+	grant_core_claim = yes                #授予核心
+	sacrifice_ruler = no                  #献祭
+	sacrifice_heir = no                   #献祭
+	increase_tariffs = no                 #殖民地关税
+	decrease_tariffs = no                 #殖民地关税
+	takeondebt = yes                      #承担债务
+	bestow_gifts = no                     #赏赐礼物
+	send_additional_troops = yes           #派遣额外部队
+	demand_artifacts = no                 #朝贡
+	demand_additional_tribute = no        #朝贡
+	force_seppuku = no                    #大名切腹
+	press_sailors = no                    #征用水手
+	contribute_to_capital = no            #要求贡献给首都
+	force_isolation = no                  #神道教孤立倾向
+	return_land = no                      #归还土地
+	conscript_general = yes                #征召陆军将领
+	knowledge_sharing = yes               #思潮分享
+	block_settlement_growth = no         #垦殖
+	allow_settlement_growth = no         #垦殖
+	change_colonial_type = no
+	upgrade_subject_type = no
+	seize_court_resources = no            #榨取君主点数
+	request_extra_levies = no             #榨取一个月的水手
+	grant_administrative_autonomy = no    #改革点数换独立倾向
+
+	# disable_inheritance = yes # Use this for Personal Union types of subjects to disallow the inheriting mechanic
+
+	# (special)
+	sword_hunt = no                       #日本 刀狩令
+	sankin_kotai = no                     #日本 参觐交代
+	expel_ronin = no                      #日本 驱逐浪人
+
+
+	#restoration_cb = cb_disloyal_vassal
+
+	# Modifiers:
+	modifier_subject = {
+		modifier = vassal_nation
+	}
+	modifier_overlord = {
+		modifier = vassal_subject
+	}
+	modifier_overlord = {
+		modifier = pirate_subject
+		trigger = {
+			has_government_attribute = is_pirate_republic_reform
+			overlord = {
+				has_government_attribute = pirate_vassal_bonus
+			}
+		}
+	}
+	modifier_overlord = {
+		modifier = unloyal_governor_vassal
+		trigger = {
+			liberty_desire = 50
+		}
+	}
+
+	modifier_subject = {
+		modifier = subject_tax_modifier
+		trigger = {
+			overlord = {
+				has_government_attribute = subject_tax_modifier_25
+			}
+		}
+	}
+	modifier_subject = {
+		modifier = same_religion_subject_bonus_mod
+		trigger = {
+			overlord = {
+				has_government_attribute = same_religion_subject_bonus
+				religion = PREV
+			}
+		}
+	}
+	modifier_subject = {
+		modifier = GER_extra_prov_trade_power
+		trigger = {
+			overlord = {
+				has_estate_privilege = estate_burghers_GER_customs_union
+			}
+		}
+	}
+
+	overlord_opinion_modifier = is_vassal
+	subject_opinion_modifier = is_vassal
+}
+
+YE_autonomous_vassal = { #不能通过外交行动转为原版附庸
+	copy_from = autonomous_vassal
+
+	sprite = GFX_icon_autonomousvassal
+	diplomacy_overlord_sprite = GFX_diplomacy_leadautonomousvassal
+	diplomacy_subject_sprite = GFX_diplomacy_weakautonomousvassal
+
+		# Modifiers:
+	overlord_opinion_modifier = is_vassal
+	subject_opinion_modifier = is_vassal
+	
+	modifier_overlord = clear #We don't want to duplicate the ones inherited from default
+	modifier_subject = clear
+	modifier_overlord = {
+		modifier = vassal_subject
+	}
+	
+	modifier_overlord = {
+		modifier = aelnar_holy_knight_maintenance
+		trigger = {
+			FROM = { tag = Z43 }
+			ROOT = { tag = Z44 }
+		}
+	}
+	
+	modifier_overlord = {	#Removed due to tribal growth being currently too high
+		modifier = cheshoshi_vassal_tribute_overlord
+		trigger = {
+			FROM = { religion = death_cult_of_cheshosh }
+			ROOT = { religion = death_cult_of_cheshosh }
+		}
+	}
+	
+	modifier_subject = {
+		modifier = cheshoshi_vassal_tribute_subject
+		trigger = {
+			FROM = { religion = death_cult_of_cheshosh }
+			ROOT = { religion = death_cult_of_cheshosh }
+		}
+	}
+
+	modifier_overlord = {
+		modifier = Y63_brainwashed
+		trigger = {
+			overlord = {
+				tag = Y63
+				mission_completed = Y63_runic_domination
+			}
+			any_owned_province = {
+				has_building = mage_tower
+			}
+		}
+	}
+	
+	modifier_overlord = {
+		modifier = hobgoblin_funding_of_the_jade_march
+		trigger = {
+			tag = R81 # Jade March
+			is_subject_of = R62 # The Command
+			hidden_trigger = { overlord = { NOT = { has_country_flag = funding_of_the_jade_march_upgraded_flag } } }
+		}
+	}
+	modifier_overlord = {
+		modifier = hobgoblin_funding_of_the_jade_march_upgraded
+		trigger = {
+			tag = R81 # Jade March
+			is_subject_of = R62 # The Command
+			hidden_trigger = { overlord = { has_country_flag = funding_of_the_jade_march_upgraded_flag } }
+		}
+	}
+	
+	can_fight = {
+		independent_nations = yes
+		other_overlord = all
+	}
+	can_rival = {
+		independent_nations = yes
+		other_overlord = all
+	}
+	can_marry = {
+		independent_nations = yes
+		other_overlord = all
+	}
+}

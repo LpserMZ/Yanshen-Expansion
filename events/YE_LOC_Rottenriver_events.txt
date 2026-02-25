@@ -1,0 +1,19 @@
+namespace = YE_Rottenriver
+
+country_event = { #腐水长流
+	id = YE_Rottenriver.1
+	title = YE_Rottenriver.1.T
+	desc = YE_Rottenriver.1.D
+	picture = BAD_WITH_MONARCH_eventPicture
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	trigger = {}
+
+	option = {
+		name = YE_Rottenriver.1.a
+		ai_chance = { factor = 1 }
+	}
+
+}

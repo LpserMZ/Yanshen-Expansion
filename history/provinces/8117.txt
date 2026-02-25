@@ -1,0 +1,10 @@
+add_core = Y45
+owner = Y45
+controller = Y45
+is_city = no
+culture = szitu
+religion = accretive_path
+trade_goods = spices
+base_tax = 2
+base_manpower = 2
+base_production = 1

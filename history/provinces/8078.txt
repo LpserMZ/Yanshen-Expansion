@@ -1,0 +1,10 @@
+add_core = Y19
+owner = Y19
+controller = Y19
+is_city = no
+culture = gangim
+religion = accretive_path
+trade_goods = iron
+base_tax = 3
+base_manpower = 3
+base_production = 2

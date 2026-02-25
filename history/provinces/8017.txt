@@ -1,0 +1,10 @@
+add_core = Y23
+owner = Y23
+controller = Y23
+is_city = no
+culture = naamjyut
+religion = transmutative_path
+trade_goods = cloth
+base_tax = 3
+base_manpower = 2
+base_production = 3

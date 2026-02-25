@@ -1,0 +1,760 @@
+YE_baiyi_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = YB8
+	} 
+
+	YE_baiyi_1_1 = {
+		icon = mission_alliances
+		position = 1
+		provinces_to_highlight = { }
+
+		trigger = { 
+			army_size_percentage = 0.90
+		}
+
+		effect = { 
+			add_country_modifier = {
+				name = baiyi_recuit_soldier
+				duration = 7300
+			}
+		}
+	}
+
+	YE_baiyi_1_2 = {
+		icon = mission_alliances
+		position = 2
+		required_missions = { YE_baiyi_1_1 YE_baiyi_2_1 } 
+		provinces_to_highlight = { 
+			culture_group = hobgoblin
+			NOT = {
+				owned_by = ROOT
+			}
+		}
+
+		trigger = { 
+			num_of_owned_provinces_with = {
+				value = 7
+				culture_group = hobgoblin
+			}
+		}
+
+		effect = { 
+			country_event = {
+				id = YE_baiyi.4
+			}
+		}
+	}
+
+	YE_baiyi_1_3 = {
+		icon = mission_alliances
+		position = 3
+		required_missions = { YE_baiyi_1_2 }
+		provinces_to_highlight = {
+			OR = {
+				area = tamvihar_area
+				area = kradhungur_area
+				area = khamarutar_area
+			} 
+			NOT = {
+				owned_by = ROOT
+			}
+		}
+
+		trigger = { 
+			tamvihar_area = {
+				type = all
+				owned_by = ROOT
+			}
+			kradhungur_area = {
+				type = all
+				owned_by = ROOT
+			}
+			khamarutar_area = {
+				type = all
+				owned_by = ROOT
+			}
+		}
+
+		effect = { 
+			add_war_exhaustion = -2
+			add_country_modifier = {
+				name = baiyi_conquer_yvyang
+				duration = 10950
+			}
+		}
+	}
+
+	YE_baiyi_1_5 = {
+		icon = mission_alliances
+		position = 5
+		required_missions = { YE_baiyi_1_3 }
+		provinces_to_highlight = { 
+			region = wuxun_region
+			culture_group = hobgoblin
+		}
+
+		trigger = { 
+			OR = {
+				accepted_culture = wolf_command
+				accepted_culture = boar_command
+				accepted_culture = lion_command
+			}
+			num_of_owned_provinces_with = {
+				value = 5
+				region = wuxun_region
+				culture_group = hobgoblin
+				OR = {
+					has_building = barracks
+					has_building = training_fields
+				}
+			}
+		}
+
+		effect = { 
+			custom_tooltip = allow_merc_redskin_hobgoblin_tooltip
+			set_country_flag = allow_merc_redskin_hobgoblin_flag
+		}
+	}
+}
+YE_baiyi_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = YB8
+	} 
+
+	YE_baiyi_2_1 = {
+		icon = mission_alliances
+		position = 1
+		provinces_to_highlight = { 
+			owner = {
+				culture_group = hobgoblin
+			}
+		}
+
+		trigger = { 
+			any_known_country = {
+				culture_group = hobgoblin
+				has_spy_network_from = {
+					who = ROOT
+					value = 40
+				}
+			}
+		}
+
+		effect = {
+			custom_tooltip = YE_baiyi_2_1_mission_tooltip
+			every_known_country = {
+				limit = {
+					culture_group = hobgoblin
+					has_spy_network_from = {
+						who = ROOT
+						value = 40
+					}
+				}
+				add_country_modifier = {
+					name = spy_of_south_human_states
+					duration = 1825
+				}
+				add_spy_network_from = {
+					who = ROOT
+					value = -40
+				}
+			}
+		}
+	}
+
+	YE_baiyi_2_3 = {
+		icon = mission_alliances
+		position = 3
+		required_missions = { YE_baiyi_3_2 }
+		provinces_to_highlight = { 
+			OR = {
+				area = munlanan_area
+				area = jietan_area
+				area = xvfei_area
+				province_id = 8118
+				province_id = 4513
+			}
+			NOT = {
+				owned_by = ROOT
+			}
+		}
+
+		trigger = { 
+			munlanan_area = {
+				type = all
+				owned_by = ROOT
+			}
+			jietan_area = {
+				type = all
+				owned_by = ROOT
+			}
+			xvfei_area = {
+				type = all
+				owned_by = ROOT
+			}
+			owns = 8118
+			owns = 4513
+		}
+
+		effect = { 
+			add_country_modifier = {
+				name = defeat_ruin_kingdoms
+				duration = 7300
+			}
+		}
+	}
+
+	YE_baiyi_2_4 = {
+		icon = mission_alliances
+		position = 4
+		required_missions = { YE_baiyi_1_3 }
+		provinces_to_highlight = { }
+
+		trigger = { 
+			custom_trigger_tooltip = {
+				tooltip = YE_baiyi_2_4_mission_tooltip
+				check_variable = { which = hobgoblin_race_tolerance value = 75 }
+			}
+			
+		}
+
+		effect = { 
+			add_country_modifier = {
+				name = baiyi_tolerante_hobgoblin
+				duration = 10950
+			}
+		}
+	}
+}
+YE_baiyi_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = YB8
+	} 
+
+	YE_baiyi_3_1 = {
+		icon = mission_alliances
+		position = 1
+		provinces_to_highlight = { }
+
+		trigger = { 
+			is_subject = no
+		}
+
+		effect = { 
+			add_prestige = 15
+			add_war_exhaustion = -2
+		}
+	}
+
+	YE_baiyi_3_2 = {
+		icon = mission_alliances
+		position = 2
+		required_missions = { YE_baiyi_3_1 YE_baiyi_4_1 }
+		provinces_to_highlight = {
+			area = raghajandi_area 
+			NOT = { owned_by = ROOT }
+		}
+
+		trigger = { 
+			raghajandi_area = {
+				type = all
+				owned_by = ROOT
+			}
+		}
+
+		effect = { 
+			add_stability = 1
+			munlanan_area = {
+				add_permanent_claim = ROOT
+			}
+			jietan_area = {
+				add_permanent_claim = ROOT
+			}
+			xvfei_area = {
+				add_permanent_claim = ROOT
+			}
+
+			khasardul_area = {
+				add_permanent_claim = ROOT
+			}
+			xiangducheng_area = {
+				add_permanent_claim = ROOT
+			}
+
+			marudhoj_area = {
+				add_permanent_claim = ROOT
+			}
+			ghatasak_area = {
+				add_permanent_claim = ROOT
+			}
+			chiguchang_area = {
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+
+	YE_baiyi_3_3 = {
+		icon = mission_alliances
+		position = 3
+		required_missions = { YE_baiyi_3_2 }
+		provinces_to_highlight = { 
+			OR = {
+				area = khasardul_area
+				province_id = 8122
+				province_id = 4525
+			}
+		}
+
+		trigger = {
+			khasardul_area = {
+				type = all
+				owned_by = ROOT
+			}
+			owns = 8122
+			owns = 4525
+		}
+
+		effect = { 
+
+			chuhui_area = {
+				add_permanent_claim = ROOT
+			}
+			zhicha_area = {
+				add_permanent_claim = ROOT
+			}
+			yodhilakra_area = {
+				add_permanent_claim = ROOT
+			}
+			if = {
+				limit = {
+					mission_completed = YE_baiyi_4_3
+				}
+				sir_area = {
+					add_permanent_claim = ROOT
+				}
+			}
+		}
+	}
+
+	YE_baiyi_3_4 = {
+		icon = mission_alliances
+		position = 4
+		required_missions = { YE_baiyi_3_3 YE_baiyi_4_3 }
+		provinces_to_highlight = {
+			province_id = 4633
+		}
+
+		trigger = { 
+			owns = 4633
+		}
+
+		effect = { 
+			add_country_modifier = {
+				name = defeat_sir_state
+				duration = 7300
+			}
+			zuoxv_area = {
+				add_permanent_claim = ROOT
+			}
+			mogutian_area = {
+				add_permanent_claim = ROOT
+			}
+			demon_hills_region = {
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+
+	YE_baiyi_3_5 = {
+		icon = mission_alliances
+		position = 5
+		required_missions = { YE_baiyi_2_4 YE_baiyi_3_4 YE_baiyi_4_4 }
+		provinces_to_highlight = { }
+
+		trigger = { }
+
+		effect = { 
+			custom_tooltip = YE_baiyi_3_5_mission_tooltip
+			add_adm_power = 200
+			add_dip_power = 200
+			add_mil_power = 200
+			yanshen_superregion = {
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+}
+YE_baiyi_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = YB8
+	} 
+
+	YE_baiyi_4_1 = {
+		icon = mission_alliances
+		position = 1
+		provinces_to_highlight = { }
+
+		trigger = { 
+			custom_trigger_tooltip = {
+				tooltip = YE_baiyi_4_1_mission_tooltip
+				always = no
+			}
+		}
+
+		effect = { 
+			#add_army_tradition = 20
+		}
+	}
+
+	YE_baiyi_4_3 = {
+		icon = mission_alliances
+		position = 3
+		required_missions = { YE_baiyi_3_2 }
+		provinces_to_highlight = { 
+			OR = {
+				area = marudhoj_area
+				area = ghatasak_area
+				area = chiguchang_area
+			}
+			NOT = {
+				owned_by = ROOT
+			}
+		}
+
+		trigger = { 
+			marudhoj_area = {
+				type = all
+				owned_by = ROOT
+			}
+			ghatasak_area = {
+				type = all
+				owned_by = ROOT
+			}
+			chiguchang_area = {
+				type = all
+				owned_by = ROOT
+			}
+		}
+
+		effect = { 
+			add_country_modifier = {
+				name = defeat_kamtarhid
+				duration = 10950
+			}
+			nadida_area = {
+				add_permanent_claim = ROOT
+			}
+			chuhui_area = {
+				add_permanent_claim = ROOT
+			}
+			pharata_area = {
+				add_permanent_claim = ROOT
+			}
+			if = {
+				limit = {
+					mission_completed = YE_baiyi_3_3
+				}
+				sir_area = {
+					add_permanent_claim = ROOT
+				}
+			}
+		}
+	}
+
+	YE_baiyi_4_4 = {
+		icon = mission_alliances
+		position = 4
+		provinces_to_highlight = { 
+			OR = {
+				area = yanbohu_area
+				area = raghajandi_area
+				area = khasardul_area
+				area = xiangducheng_area
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				is_prosperous = no
+			}
+		}
+
+		trigger = { 
+			yanbohu_area = {
+				type = all
+				owned_by = ROOT
+				is_prosperous = yes
+			}
+			raghajandi_area = {
+				type = all
+				owned_by = ROOT
+				is_prosperous = yes
+			}
+			khasardul_area = {
+				type = all
+				owned_by = ROOT
+				is_prosperous = yes
+			}
+			xiangducheng_area = {
+				type = all
+				owned_by = ROOT
+				is_prosperous = yes
+			}
+		}
+
+		effect = { 
+			8126 = {
+				if = {
+					limit = {
+						province_has_center_of_trade_of_level = 3
+					}
+					ROOT = { add_dip_power = 100 }
+					
+				}
+				else_if = {
+					limit = {
+						province_has_center_of_trade_of_level = 2
+					}
+					ROOT = { add_dip_power = 50 }
+				}
+				else_if = {
+					limit = {
+						province_has_center_of_trade_of_level = 1
+					}
+					add_center_of_trade_level = 1
+					ROOT = { add_treasury = -100 }
+				}
+				else = {
+					center_of_trade = 1
+					ROOT = { add_treasury = -50 }
+				}
+			}
+			4630 = {
+				if = {
+					limit = {
+						province_has_center_of_trade_of_level = 3
+					}
+					ROOT = { add_dip_power = 100 }
+					
+				}
+				else_if = {
+					limit = {
+						province_has_center_of_trade_of_level = 2
+					}
+					ROOT = { add_dip_power = 50 }
+				}
+				else_if = {
+					limit = {
+						province_has_center_of_trade_of_level = 1
+					}
+					add_center_of_trade_level = 1
+					ROOT = { add_treasury = -100 }
+				}
+				else = {
+					center_of_trade = 1
+					ROOT = { add_treasury = -50 }
+				}
+			}
+			4528 = {
+				if = {
+					limit = {
+						province_has_center_of_trade_of_level = 3
+					}
+					ROOT = { add_dip_power = 100 }
+					
+				}
+				else_if = {
+					limit = {
+						province_has_center_of_trade_of_level = 2
+					}
+					ROOT = { add_dip_power = 50 }
+				}
+				else_if = {
+					limit = {
+						province_has_center_of_trade_of_level = 1
+					}
+					add_center_of_trade_level = 1
+					ROOT = { add_treasury = -100 }
+				}
+				else = {
+					center_of_trade = 1
+					ROOT = { add_treasury = -50 }
+				}
+			}
+			4525 = {
+				if = {
+					limit = {
+						province_has_center_of_trade_of_level = 3
+					}
+					ROOT = { add_dip_power = 100 }
+					
+				}
+				else_if = {
+					limit = {
+						province_has_center_of_trade_of_level = 2
+					}
+					ROOT = { add_dip_power = 50 }
+				}
+				else_if = {
+					limit = {
+						province_has_center_of_trade_of_level = 1
+					}
+					add_center_of_trade_level = 1
+					ROOT = { add_treasury = -100 }
+				}
+				else = {
+					center_of_trade = 1
+					ROOT = { add_treasury = -50 }
+				}
+			}
+		}
+	}
+}
+YE_baiyi_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = YB8
+	} 
+
+	YE_baiyi_5_1 = {
+		icon = mission_alliances
+		position = 1
+		provinces_to_highlight = { }
+
+		trigger = { 
+			any_owned_province = {
+				NOT = {
+					has_province_modifier = bandit_in_north_wuxun
+				}
+			}
+			num_of_owned_provinces_with = {
+				value = 6
+				is_core = ROOT
+				NOT = {
+					culture_group = hobgoblin
+				}
+			}
+		}
+
+		effect = { 
+			add_country_modifier = {
+				name = orderly_and_peaceful
+				duration = 18250
+			}
+		}
+	}
+
+	YE_baiyi_5_2 = {
+		icon = mission_alliances
+		position = 2
+		required_missions = { YE_baiyi_5_1 }
+		provinces_to_highlight = { }
+
+		trigger = { 
+			capital_scope = {
+				development = 25
+			}
+			num_of_owned_provinces_with = {
+				value = 5
+				development = 15
+				has_building = barracks
+				has_building = temple
+				has_building = workshop
+			}
+			is_institution_enabled = renaissance
+		}
+
+		effect = { 
+			custom_tooltip = YE_baiyi_5_2_mission_tooltip
+			if = {
+				limit = {
+					has_unembraced_institution = renaissance
+				}
+				capital_scope = {
+					add_institution_embracement = {
+						which = renaissance
+						value = 100
+					}
+					add_base_tax = 1
+					add_base_production = 1
+					add_base_manpower = 1
+				}
+			}
+			else = {
+				add_adm_power = 50
+				add_splendor = 200
+				capital_scope = {
+					add_base_tax = 1
+					add_base_production = 1
+					add_base_manpower = 1
+				}
+			}
+			
+		}
+	}
+
+	YE_baiyi_5_3 = {
+		icon = mission_alliances
+		position = 3
+		required_missions = { YE_baiyi_5_2 }
+		provinces_to_highlight = { }
+
+		trigger = { 
+			custom_trigger_tooltip = {
+				tooltip = YE_baiyi_5_3_mission_tooltip
+				all_owned_province = {
+					OR = {
+						has_influencing_fort = yes
+						any_neighbor_province = {
+							has_influencing_fort = yes
+						}
+					}
+				}
+			}
+			
+		}
+
+		effect = { 
+			add_country_modifier = {
+				name = secure_wuxun_safety
+				duration = 18250
+			}
+		}
+	}
+
+	YE_baiyi_5_5 = {
+		icon = mission_alliances
+		position = 5
+		required_missions = { YE_baiyi_5_3 YE_baiyi_4_4 }
+		provinces_to_highlight = {
+			province_id = 8126
+		}
+
+		trigger = { 
+			treasury = 1000
+			total_development = 600
+		}
+
+		effect = { 
+			custom_tooltip = allow_monument_suhuigong_tooltip
+			set_country_flag = allow_monument_suhuigong_flag
+		}
+	}
+}

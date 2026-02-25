@@ -1,0 +1,10 @@
+add_core = Y14
+owner = Y91
+controller = Y91
+is_city = no
+culture = jiangyang
+religion = accretive_path
+trade_goods = livestock
+base_tax = 2
+base_manpower = 2
+base_production = 2

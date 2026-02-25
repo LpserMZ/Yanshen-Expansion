@@ -1,0 +1,10 @@
+add_core = Y09
+owner = Y09
+controller = Y09
+is_city = no
+culture = jiangszun
+religion = accretive_path
+trade_goods = cloves
+base_tax = 5
+base_manpower = 5
+base_production = 6

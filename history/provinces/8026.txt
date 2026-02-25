@@ -1,0 +1,10 @@
+add_core = V22
+owner = V22
+controller = V22
+is_city = no
+culture = jiangszun
+religion = accretive_path
+trade_goods = cloves
+base_tax = 9
+base_manpower = 9
+base_production = 8

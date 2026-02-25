@@ -1,0 +1,10 @@
+add_core = Y26
+owner = Y26
+controller = Y26
+is_city = no
+culture = gangim
+religion = accretive_path
+trade_goods = livestock
+base_tax = 2
+base_manpower = 2
+base_production = 1

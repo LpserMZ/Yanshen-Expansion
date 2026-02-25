@@ -1,0 +1,18 @@
+#「武浔源流」专用
+
+on_province_owner_change = {
+	if = { # 解救狼令掳走的奴隶
+		limit = {
+			province_id = 4532
+		}
+		owner = {
+			country_event = {
+				id = YE_Wuxunflows.12
+			}
+		}
+	}
+}
+
+
+
+

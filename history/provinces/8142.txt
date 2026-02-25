@@ -1,0 +1,10 @@
+add_core = Y07
+owner = Y07
+controller = Y07
+is_city = no
+culture = jiangszun
+religion = accretive_path
+trade_goods = dyes
+base_tax = 2
+base_manpower = 3
+base_production = 3

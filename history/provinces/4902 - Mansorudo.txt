@@ -1,0 +1,10 @@
+owner = V21
+controller = V21
+add_core = V21
+culture = beikling
+religion = devouring_path
+base_tax = 2
+base_production = 2
+base_manpower = 2
+trade_goods = tea
+is_city = yes

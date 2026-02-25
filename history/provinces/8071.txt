@@ -1,0 +1,10 @@
+add_core = Y16
+owner = Y16
+controller = Y16
+is_city = no
+culture = jiangyang
+religion = accretive_path
+trade_goods = paper
+base_tax = 3
+base_manpower = 1
+base_production = 1

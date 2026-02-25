@@ -1,0 +1,10 @@
+add_core = Y12
+owner = Y12
+controller = Y12
+is_city = no
+culture = serene_harimari
+religion = accretive_path
+trade_goods = spices
+base_tax = 2
+base_manpower = 3
+base_production = 2

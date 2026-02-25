@@ -1,0 +1,10 @@
+add_core = Y06
+owner = Y06
+controller = Y06
+is_city = no
+culture = jiangszun
+religion = high_philosophy
+trade_goods = cloves
+base_tax = 7
+base_manpower = 7
+base_production = 6

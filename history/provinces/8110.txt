@@ -1,0 +1,10 @@
+owner = YB7
+controller = YB7
+is_city = no
+culture = jichuan
+religion = accretive_path
+trade_goods = incense
+base_tax = 1
+base_manpower = 1
+base_production = 1
+add_core = YB7

@@ -1,0 +1,18 @@
+setup_vision = yes
+
+government = monarchy
+add_government_reform = autocracy_reform
+government_rank = 1
+primary_culture = jichuan
+
+religion = accretive_path
+
+technology_group = tech_halessi
+
+capital = 8136
+
+
+1000.1.1 = {
+	set_estate_privilege = estate_mages_organization_state
+	set_country_flag = anti_eunuch_country
+}

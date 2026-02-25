@@ -1,0 +1,215 @@
+namespace = YE_baiyi
+
+country_event = { #1 北方起义开战事件
+	id = YE_baiyi.1
+	title = YE_baiyi.1.T
+	desc = YE_baiyi.1.D
+	picture = BAD_WITH_MONARCH_eventPicture
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	#trigger = {}
+
+	option = {
+		name = YE_baiyi.1.a
+		ai_chance = { factor = 1 }
+		set_country_flag = allow_merc_elf_legion_early_stage_flag
+	}
+
+}
+country_event = { #2 北方起义胜利事件
+	id = YE_baiyi.2
+	title = YE_baiyi.2.T
+	desc = YE_baiyi.2.D
+	picture = BAD_WITH_MONARCH_eventPicture
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	#trigger = {}
+
+	immediate = {
+		R80 = {
+			create_subject = {
+				subject = ROOT
+				subject_type = YE_autonomous_vassal
+			}
+		}
+	}
+
+	option = {
+		name = YE_baiyi.2.a
+		ai_chance = { factor = 1 }
+		if = {
+			limit = {
+				NOT = {
+					mission_completed = YE_baiyi_4_1
+				}
+			}
+			complete_mission = YE_baiyi_4_1
+		}
+	}
+
+}
+
+country_event = { #3 勇冠三军
+	id = YE_baiyi.3
+	title = YE_baiyi.3.T
+	desc = YE_baiyi.3.D
+	picture = BAD_WITH_MONARCH_eventPicture
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = YE_baiyi.3.a
+		ai_chance = { factor = 1 }
+		define_general = {
+			fire = 5
+			shock = 5
+			manuever = 2
+			siege = 2
+		}
+		complete_mission = YE_baiyi_4_1
+	}
+
+}
+
+country_event = { #4 二败大地精
+	id = YE_baiyi.4
+	title = YE_baiyi.4.T
+	desc = YE_baiyi.4.D
+	picture = BAD_WITH_MONARCH_eventPicture
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	#trigger = {}
+
+	option = {
+		name = YE_baiyi.4.a
+		ai_chance = { factor = 1 }
+		add_power_projection = {
+			type = mission_rewards_power_projection
+			amount = 15
+		}
+		wuxun_region = {
+			limit = {
+				culture_group = hobgoblin
+			}
+			add_permanent_claim = ROOT
+		}
+	}
+
+}
+
+#空白事件模板
+
+country_event = { # 
+	id = YE_baiyi.5
+	title = YE_baiyi.5.T
+	desc = YE_baiyi.5.D
+	picture = BAD_WITH_MONARCH_eventPicture
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	#trigger = {}
+
+	option = {
+		name = YE_baiyi.5.a
+		ai_chance = { factor = 1 }
+	}
+
+}
+
+country_event = { # 
+	id = YE_baiyi.6
+	title = YE_baiyi.6.T
+	desc = YE_baiyi.6.D
+	picture = BAD_WITH_MONARCH_eventPicture
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	#trigger = {}
+
+	option = {
+		name = YE_baiyi.6.a
+		ai_chance = { factor = 1 }
+	}
+
+}
+
+country_event = { # 
+	id = YE_baiyi.7
+	title = YE_baiyi.7.T
+	desc = YE_baiyi.7.D
+	picture = BAD_WITH_MONARCH_eventPicture
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	#trigger = {}
+
+	option = {
+		name = YE_baiyi.7.a
+		ai_chance = { factor = 1 }
+	}
+
+}
+
+country_event = { # 
+	id = YE_baiyi.8
+	title = YE_baiyi.8.T
+	desc = YE_baiyi.8.D
+	picture = BAD_WITH_MONARCH_eventPicture
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	#trigger = {}
+
+	option = {
+		name = YE_baiyi.8.a
+		ai_chance = { factor = 1 }
+	}
+
+}
+
+country_event = { # 
+	id = YE_baiyi.9
+	title = YE_baiyi.9.T
+	desc = YE_baiyi.9.D
+	picture = BAD_WITH_MONARCH_eventPicture
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	#trigger = {}
+
+	option = {
+		name = YE_baiyi.9.a
+		ai_chance = { factor = 1 }
+	}
+
+}
+
+country_event = { # 
+	id = YE_baiyi.10
+	title = YE_baiyi.10.T
+	desc = YE_baiyi.10.D
+	picture = BAD_WITH_MONARCH_eventPicture
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	#trigger = {}
+
+	option = {
+		name = YE_baiyi.10.a
+		ai_chance = { factor = 1 }
+	}
+
+}

@@ -1,0 +1,10 @@
+add_core = Y85
+owner = Y85
+controller = Y85
+is_city = no
+culture = goldscale_kobold
+religion = accretive_path
+trade_goods = gems
+base_tax = 2
+base_manpower = 3
+base_production = 3

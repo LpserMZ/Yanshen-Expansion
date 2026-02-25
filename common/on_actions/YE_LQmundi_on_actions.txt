@@ -1,0 +1,58 @@
+on_monthly_pulse = {
+	if = {
+		limit = {
+			religion_group = halessi
+			NOT = { religion = mystic_accord }
+			NOT = { religion = neokttareum }
+		}
+		
+		if = {
+			limit = {
+				NOT = { has_country_flag = LQmundi_initialized_flag }
+			}
+			LQmundi_initialize_script_effect = yes
+			set_country_flag = LQmundi_initialized_flag
+		}
+		else = {
+			#更新容量
+			LQmundi_calc_LQpower_capacity = yes 
+
+			#更新点数
+			LQmundi_calc_monthly_LQpower_regen_script_effect = yes 
+
+			#更新经验
+			LQmundi_calc_monthly_LQdspl_x_exp_gain_script_effect = { discipline_sequence = 1 }
+			LQmundi_calc_monthly_LQdspl_x_exp_gain_script_effect = { discipline_sequence = 2 }
+			LQmundi_calc_monthly_LQdspl_x_exp_gain_script_effect = { discipline_sequence = 3 }
+			LQmundi_calc_monthly_LQdspl_x_exp_gain_script_effect = { discipline_sequence = 4 }
+			LQmundi_calc_monthly_LQdspl_x_exp_gain_script_effect = { discipline_sequence = 5 }
+			LQmundi_calc_monthly_LQdspl_x_exp_gain_script_effect = { discipline_sequence = 6 }
+			LQmundi_calc_monthly_LQdspl_x_exp_gain_script_effect = { discipline_sequence = 7 }
+			LQmundi_calc_monthly_LQdspl_x_exp_gain_script_effect = { discipline_sequence = 8 }
+
+		}
+	}
+}
+on_religion_change = {
+	if = {
+		limit = {
+			has_country_flag = LQmundi_initialized_flag
+		}
+		if = {
+			limit = {
+				NOT = {
+					OR = {
+						religion = accretive_path
+						religion = transmutative_path
+						religion = devouring_path
+						religion = gu_path
+						religion = jue_path
+						religion = huan_path
+					}
+				}
+			}
+			clr_country_flag = LQmundi_initialized_flag
+		}
+
+	}
+}

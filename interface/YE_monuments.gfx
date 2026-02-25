@@ -1,0 +1,470 @@
+spriteTypes = {
+	spriteType = {
+        name = "GFX_great_project_prov4826_infrastructure"	
+        texturefile = "gfx//interface//great_projects//great_project_infrastructure.dds"
+    }
+}
+spriteTypes = {
+	spriteType = {
+        name = "GFX_great_project_prov4819_infrastructure"	
+        texturefile = "gfx//interface//great_projects//great_project_infrastructure.dds"
+    }
+}
+spriteTypes = {
+	spriteType = {
+        name = "GFX_great_project_prov4899_infrastructure"	
+        texturefile = "gfx//interface//great_projects//great_project_infrastructure.dds"
+    }
+}
+spriteTypes = {
+	spriteType = {
+        name = "GFX_great_project_prov4900_infrastructure"	
+        texturefile = "gfx//interface//great_projects//great_project_infrastructure.dds"
+    }
+}
+
+spriteTypes = {
+	spriteType = {
+        name = "GFX_great_project_prov4842_infrastructure"	
+        texturefile = "gfx//interface//great_projects//great_project_infrastructure.dds"
+    }
+}
+spriteTypes = {
+	spriteType = {
+        name = "GFX_great_project_prov4846_infrastructure"	
+        texturefile = "gfx//interface//great_projects//great_project_infrastructure.dds"
+    }
+}
+spriteTypes = {
+	spriteType = {
+        name = "GFX_great_project_prov4951_infrastructure"	
+        texturefile = "gfx//interface//great_projects//great_project_infrastructure.dds"
+    }
+}
+spriteTypes = {
+	spriteType = {
+        name = "GFX_great_project_prov4984_infrastructure"	
+        texturefile = "gfx//interface//great_projects//great_project_infrastructure.dds"
+    }
+}
+
+spriteTypes = {
+	spriteType = {
+        name = "GFX_great_project_prov8014_infrastructure"	
+        texturefile = "gfx//interface//great_projects//great_project_infrastructure.dds"
+    }
+}
+spriteTypes = {
+	spriteType = {
+        name = "GFX_great_project_prov4835_infrastructure"	
+        texturefile = "gfx//interface//great_projects//great_project_infrastructure.dds"
+    }
+}
+spriteTypes = {
+	spriteType = {
+        name = "GFX_great_project_prov4838_infrastructure"	
+        texturefile = "gfx//interface//great_projects//great_project_infrastructure.dds"
+    }
+}
+spriteTypes = {
+	spriteType = {
+        name = "GFX_great_project_prov4836_infrastructure"	
+        texturefile = "gfx//interface//great_projects//great_project_infrastructure.dds"
+    }
+}
+spriteTypes = {
+	spriteType = {
+        name = "GFX_great_project_prov4884_infrastructure"	
+        texturefile = "gfx//interface//great_projects//great_project_infrastructure.dds"
+    }
+}
+
+spriteTypes = {
+	spriteType = {
+        name = "GFX_great_project_prov4892_infrastructure"	
+        texturefile = "gfx//interface//great_projects//great_project_infrastructure.dds"
+    }
+}
+spriteTypes = {
+	spriteType = {
+        name = "GFX_great_project_prov4893_infrastructure"	
+        texturefile = "gfx//interface//great_projects//great_project_infrastructure.dds"
+    }
+}
+spriteTypes = {
+	spriteType = {
+        name = "GFX_great_project_prov8041_infrastructure"	
+        texturefile = "gfx//interface//great_projects//great_project_infrastructure.dds"
+    }
+}
+spriteTypes = {
+	spriteType = {
+        name = "GFX_great_project_prov4887_infrastructure"	
+        texturefile = "gfx//interface//great_projects//great_project_infrastructure.dds"
+    }
+}
+spriteTypes = {
+	spriteType = {
+        name = "GFX_great_project_prov4949_infrastructure"	
+        texturefile = "gfx//interface//great_projects//great_project_infrastructure.dds"
+    }
+}
+spriteTypes = {
+	spriteType = {
+        name = "GFX_great_project_prov4879_infrastructure"	
+        texturefile = "gfx//interface//great_projects//great_project_infrastructure.dds"
+    }
+}
+
+spriteTypes = {
+	spriteType = {
+        name = "GFX_great_project_prov4901_infrastructure"	
+        texturefile = "gfx//interface//great_projects//great_project_infrastructure.dds"
+    }
+}
+spriteTypes = {
+	spriteType = {
+        name = "GFX_great_project_prov4848_infrastructure"	
+        texturefile = "gfx//interface//great_projects//great_project_infrastructure.dds"
+    }
+}
+spriteTypes = {
+	spriteType = {
+        name = "GFX_great_project_prov8001_infrastructure"	
+        texturefile = "gfx//interface//great_projects//great_project_infrastructure.dds"
+    }
+}
+spriteTypes = {
+	spriteType = {
+        name = "GFX_great_project_prov4852_infrastructure"	
+        texturefile = "gfx//interface//great_projects//great_project_infrastructure.dds"
+    }
+}
+spriteTypes = {
+	spriteType = {
+        name = "GFX_great_project_prov4976_infrastructure"	
+        texturefile = "gfx//interface//great_projects//great_project_infrastructure.dds"
+    }
+}
+
+spriteTypes = {
+	spriteType = {
+        name = "GFX_great_project_prov4849_infrastructure"	
+        texturefile = "gfx//interface//great_projects//great_project_infrastructure.dds"
+    }
+}
+spriteTypes = {
+	spriteType = {
+        name = "GFX_great_project_prov4853_infrastructure"	
+        texturefile = "gfx//interface//great_projects//great_project_infrastructure.dds"
+    }
+}
+spriteTypes = {
+	spriteType = {
+        name = "GFX_great_project_prov4859_infrastructure"	
+        texturefile = "gfx//interface//great_projects//great_project_infrastructure.dds"
+    }
+}
+spriteTypes = {
+	spriteType = {
+        name = "GFX_great_project_prov4950_infrastructure"	
+        texturefile = "gfx//interface//great_projects//great_project_infrastructure.dds"
+    }
+}
+spriteTypes = {
+	spriteType = {
+        name = "GFX_great_project_prov4861_infrastructure"	
+        texturefile = "gfx//interface//great_projects//great_project_infrastructure.dds"
+    }
+}
+
+spriteTypes = {
+	spriteType = {
+        name = "GFX_great_project_prov4896_infrastructure"	
+        texturefile = "gfx//interface//great_projects//great_project_infrastructure.dds"
+    }
+}
+spriteTypes = {
+	spriteType = {
+        name = "GFX_great_project_prov8049_infrastructure"	
+        texturefile = "gfx//interface//great_projects//great_project_infrastructure.dds"
+    }
+}
+spriteTypes = {
+	spriteType = {
+        name = "GFX_great_project_prov4931_infrastructure"	
+        texturefile = "gfx//interface//great_projects//great_project_infrastructure.dds"
+    }
+}
+spriteTypes = {
+	spriteType = {
+        name = "GFX_great_project_prov4875_infrastructure"	
+        texturefile = "gfx//interface//great_projects//great_project_infrastructure.dds"
+    }
+}
+spriteTypes = {
+	spriteType = {
+        name = "GFX_great_project_prov8077_infrastructure"	
+        texturefile = "gfx//interface//great_projects//great_project_infrastructure.dds"
+    }
+}
+
+spriteTypes = {
+	spriteType = {
+        name = "GFX_great_project_prov8151_infrastructure"	
+        texturefile = "gfx//interface//great_projects//great_project_infrastructure.dds"
+    }
+}
+spriteTypes = {
+	spriteType = {
+        name = "GFX_great_project_prov8051_infrastructure"	
+        texturefile = "gfx//interface//great_projects//great_project_infrastructure.dds"
+    }
+}
+spriteTypes = {
+	spriteType = {
+        name = "GFX_great_project_prov4930_infrastructure"	
+        texturefile = "gfx//interface//great_projects//great_project_infrastructure.dds"
+    }
+}
+spriteTypes = {
+	spriteType = {
+        name = "GFX_great_project_prov4867_infrastructure"	
+        texturefile = "gfx//interface//great_projects//great_project_infrastructure.dds"
+    }
+}
+spriteTypes = {
+	spriteType = {
+        name = "GFX_great_project_prov4914_infrastructure"	
+        texturefile = "gfx//interface//great_projects//great_project_infrastructure.dds"
+    }
+}
+spriteTypes = {
+	spriteType = {
+        name = "GFX_great_project_prov4868_infrastructure"	
+        texturefile = "gfx//interface//great_projects//great_project_infrastructure.dds"
+    }
+}
+
+spriteTypes = {
+	spriteType = {
+        name = "GFX_great_project_prov4877_infrastructure"	
+        texturefile = "gfx//interface//great_projects//great_project_infrastructure.dds"
+    }
+}
+spriteTypes = {
+	spriteType = {
+        name = "GFX_great_project_prov4871_infrastructure"	
+        texturefile = "gfx//interface//great_projects//great_project_infrastructure.dds"
+    }
+}
+spriteTypes = {
+	spriteType = {
+        name = "GFX_great_project_prov4913_infrastructure"	
+        texturefile = "gfx//interface//great_projects//great_project_infrastructure.dds"
+    }
+}
+spriteTypes = {
+	spriteType = {
+        name = "GFX_great_project_prov4907_infrastructure"	
+        texturefile = "gfx//interface//great_projects//great_project_infrastructure.dds"
+    }
+}
+spriteTypes = {
+	spriteType = {
+        name = "GFX_great_project_prov8154_infrastructure"	
+        texturefile = "gfx//interface//great_projects//great_project_infrastructure.dds"
+    }
+}
+spriteTypes = {
+	spriteType = {
+        name = "GFX_great_project_prov4977_infrastructure"	
+        texturefile = "gfx//interface//great_projects//great_project_infrastructure.dds"
+    }
+}
+
+spriteTypes = {
+	spriteType = {
+        name = "GFX_great_project_prov4919_infrastructure"	
+        texturefile = "gfx//interface//great_projects//great_project_infrastructure.dds"
+    }
+}
+spriteTypes = {
+	spriteType = {
+        name = "GFX_great_project_prov4921_infrastructure"	
+        texturefile = "gfx//interface//great_projects//great_project_infrastructure.dds"
+    }
+}
+spriteTypes = {
+	spriteType = {
+        name = "GFX_great_project_prov8155_infrastructure"	
+        texturefile = "gfx//interface//great_projects//great_project_infrastructure.dds"
+    }
+}
+spriteTypes = {
+	spriteType = {
+        name = "GFX_great_project_prov4979_infrastructure"	
+        texturefile = "gfx//interface//great_projects//great_project_infrastructure.dds"
+    }
+}
+
+spriteTypes = {
+	spriteType = {
+        name = "GFX_great_project_prov4925_infrastructure"	
+        texturefile = "gfx//interface//great_projects//great_project_infrastructure.dds"
+    }
+}
+spriteTypes = {
+	spriteType = {
+        name = "GFX_great_project_prov8072_infrastructure"	
+        texturefile = "gfx//interface//great_projects//great_project_infrastructure.dds"
+    }
+}
+spriteTypes = {
+	spriteType = {
+        name = "GFX_great_project_prov4923_infrastructure"	
+        texturefile = "gfx//interface//great_projects//great_project_infrastructure.dds"
+    }
+}
+spriteTypes = {
+	spriteType = {
+        name = "GFX_great_project_prov4920_infrastructure"	
+        texturefile = "gfx//interface//great_projects//great_project_infrastructure.dds"
+    }
+}
+
+spriteTypes = {
+	spriteType = {
+        name = "GFX_great_project_prov4828_infrastructure"	
+        texturefile = "gfx//interface//great_projects//great_project_infrastructure.dds"
+    }
+}
+spriteTypes = {
+	spriteType = {
+        name = "GFX_great_project_prov4813_infrastructure"	
+        texturefile = "gfx//interface//great_projects//great_project_infrastructure.dds"
+    }
+}
+spriteTypes = {
+	spriteType = {
+        name = "GFX_great_project_prov4829_infrastructure"	
+        texturefile = "gfx//interface//great_projects//great_project_infrastructure.dds"
+    }
+}
+spriteTypes = {
+	spriteType = {
+        name = "GFX_great_project_prov5430_infrastructure"	
+        texturefile = "gfx//interface//great_projects//great_project_infrastructure.dds"
+    }
+}
+spriteTypes = {
+	spriteType = {
+        name = "GFX_great_project_prov4832_infrastructure"	
+        texturefile = "gfx//interface//great_projects//great_project_infrastructure.dds"
+    }
+}
+
+spriteTypes = {
+	spriteType = {
+        name = "GFX_great_project_prov4633_infrastructure"	
+        texturefile = "gfx//interface//great_projects//great_project_infrastructure.dds"
+    }
+}
+spriteTypes = {
+	spriteType = {
+        name = "GFX_great_project_prov4631_infrastructure"	
+        texturefile = "gfx//interface//great_projects//great_project_infrastructure.dds"
+    }
+}
+spriteTypes = {
+	spriteType = {
+        name = "GFX_great_project_prov8138_infrastructure"	
+        texturefile = "gfx//interface//great_projects//great_project_infrastructure.dds"
+    }
+}
+spriteTypes = {
+	spriteType = {
+        name = "GFX_great_project_prov4525_infrastructure"	
+        texturefile = "gfx//interface//great_projects//great_project_infrastructure.dds"
+    }
+}
+spriteTypes = {
+	spriteType = {
+        name = "GFX_great_project_prov4528_infrastructure"	
+        texturefile = "gfx//interface//great_projects//great_project_infrastructure.dds"
+    }
+}
+spriteTypes = {
+	spriteType = {
+        name = "GFX_great_project_prov4630_infrastructure"	
+        texturefile = "gfx//interface//great_projects//great_project_infrastructure.dds"
+    }
+}
+spriteTypes = {
+	spriteType = {
+        name = "GFX_great_project_prov8126_infrastructure"	
+        texturefile = "gfx//interface//great_projects//great_project_infrastructure.dds"
+    }
+}
+spriteTypes = {
+	spriteType = {
+        name = "GFX_great_project_prov4532_infrastructure"	
+        texturefile = "gfx//interface//great_projects//great_project_infrastructure.dds"
+    }
+}
+spriteTypes = {
+	spriteType = {
+        name = "GFX_great_project_prov4538_infrastructure"	
+        texturefile = "gfx//interface//great_projects//great_project_infrastructure.dds"
+    }
+}
+
+spriteTypes = {
+	spriteType = {
+        name = "GFX_great_project_prov4816_infrastructure"	
+        texturefile = "gfx//interface//great_projects//great_project_infrastructure.dds"
+    }
+}
+spriteTypes = {
+	spriteType = {
+        name = "GFX_great_project_prov4641_infrastructure"	
+        texturefile = "gfx//interface//great_projects//great_project_infrastructure.dds"
+    }
+}
+spriteTypes = {
+	spriteType = {
+        name = "GFX_great_project_prov4618_infrastructure"	
+        texturefile = "gfx//interface//great_projects//great_project_infrastructure.dds"
+    }
+}
+spriteTypes = {
+	spriteType = {
+        name = "GFX_great_project_prov4559_infrastructure"	
+        texturefile = "gfx//interface//great_projects//great_project_infrastructure.dds"
+    }
+}
+spriteTypes = {
+	spriteType = {
+        name = "GFX_great_project_prov4611_infrastructure"	
+        texturefile = "gfx//interface//great_projects//great_project_infrastructure.dds"
+    }
+}
+
+spriteTypes = {
+	spriteType = {
+        name = "GFX_great_project_suihuigong"	
+        texturefile = "gfx//interface//great_projects//great_project_palace_of_divine_call.dds"
+    }
+}
+# spriteTypes = {
+# 	spriteType = {
+#         name = "GFX_great_project_prov_infrastructure"	
+#         texturefile = "gfx//interface//great_projects//great_project_infrastructure.dds"
+#     }
+# }
+# spriteTypes = {
+# 	spriteType = {
+#         name = "GFX_great_project_prov_infrastructure"	
+#         texturefile = "gfx//interface//great_projects//great_project_infrastructure.dds"
+#     }
+# }

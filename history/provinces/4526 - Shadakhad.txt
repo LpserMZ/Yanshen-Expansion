@@ -1,0 +1,16 @@
+# No previous file for Banten 173
+owner = YA3
+controller = YA3
+add_core = R80
+culture = royal_harimari
+religion = high_philosophy
+base_tax = 4
+base_production = 4
+base_manpower = 3
+trade_goods = tea
+is_city = yes
+add_permanent_province_modifier = { 
+	name = hobgoblin_minority_integrated_small
+	duration = -1
+}
+add_core = YA3

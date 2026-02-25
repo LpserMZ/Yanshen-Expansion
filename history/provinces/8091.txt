@@ -1,0 +1,10 @@
+add_core = Y17
+owner = Y17
+controller = Y17
+is_city = no
+culture = jiangszun
+religion = accretive_path
+trade_goods = glass
+base_tax = 2
+base_manpower = 1
+base_production = 1

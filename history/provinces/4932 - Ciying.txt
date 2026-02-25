@@ -1,0 +1,12 @@
+owner = Y05
+controller = Y05
+add_core = Y05
+add_core = Y13
+culture = jiangszun
+religion = accretive_path
+base_tax = 4
+base_production = 4
+base_manpower = 1
+trade_goods = cloth
+is_city = yes
+add_local_autonomy = 50

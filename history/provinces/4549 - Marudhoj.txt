@@ -1,0 +1,11 @@
+# No previous file for Banten
+owner = YA8
+controller = YA8
+culture = jichuan
+religion = accretive_path
+base_tax = 1
+base_production = 1
+base_manpower = 2
+trade_goods = wool
+is_city = yes
+add_core = YA8

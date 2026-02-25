@@ -1,0 +1,29 @@
+country_decisions = {
+	test_decision_001 = {
+		potential = { ai = no }
+		allow = { ai = no }
+		effect = {
+			set_country_flag = YE_allow_dev_bonus_flag
+		}
+		ai_will_do = { factor = 1 }
+	}
+	test_decision_002 = {
+		potential = { ai = no }
+		allow = { ai = no }
+		effect = {
+			change_variable = {
+				which = testvar_01
+				value = 1
+			}
+		}
+		ai_will_do = { factor = 1 }
+	}
+	test_decision_003 = {
+		potential = { ai = no }
+		allow = { ai = no }
+		effect = {
+			
+		}
+		ai_will_do = { factor = 1 }
+	}
+}	

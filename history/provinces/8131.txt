@@ -1,0 +1,10 @@
+owner = R94
+controller = R94
+is_city = no
+culture = boar_command
+religion = godlost
+trade_goods = livestock
+base_tax = 2
+base_manpower = 3
+base_production = 3
+add_core = R94

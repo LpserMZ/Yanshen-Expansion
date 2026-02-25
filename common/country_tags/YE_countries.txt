@@ -1,0 +1,21 @@
+YA1 = "countries/Bei4ling4.txt"
+YA2 = "countries/Xiongling.txt"
+
+YA3 = "countries/Qvsaduluo.txt"
+YA4 = "countries/Xiangdu.txt"
+YA5 = "countries/Jiaduoda.txt"
+YA6 = "countries/Jiaduofujai.txt"
+
+YA7 = "countries/Chili.txt"
+YA8 = "countries/Hehuan.txt"
+YA9 = "countries/Tuisheng.txt"
+
+YB1 = "countries/Hanjialuofu.txt"
+YB2 = "countries/Shannapo.txt"
+YB3 = "countries/Duoluoboluo.txt"
+YB4 = "countries/Qiluobuluo.txt"
+YB5 = "countries/Qvduomixie.txt"
+YB6 = "countries/Sajiatuoye.txt"
+
+YB7 = "countries/Zhongcha.txt"
+YB8 = "countries/Baiyi.txt"

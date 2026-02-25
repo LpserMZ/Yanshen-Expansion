@@ -1,0 +1,10 @@
+owner = YB4
+controller = YB4
+is_city = no
+culture = jichuan
+religion = devouring_path
+trade_goods = dyes
+base_tax = 6
+base_manpower = 6
+base_production = 7
+add_core = YB4

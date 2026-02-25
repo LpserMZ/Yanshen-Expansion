@@ -1,0 +1,10 @@
+add_core = Z61
+owner = Z61
+controller = Z61
+is_city = no
+culture = beikling
+religion = devouring_path
+trade_goods = salt
+base_tax = 2
+base_manpower = 1
+base_production = 2

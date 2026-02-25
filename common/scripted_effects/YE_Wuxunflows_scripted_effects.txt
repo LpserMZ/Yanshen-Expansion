@@ -1,0 +1,50 @@
+north_revolt_reset_country_effect = {
+	restore_country_name = yes
+	#1. 君主
+	#2. 政府
+	#3. 文化
+	#4. 宗教
+	#5. 兵种组
+
+	# 契陀利驮
+	# R84
+
+	# 沙摩羯
+	# YB3
+	# YB4
+	# YB5
+
+	# YA6
+
+	# 牟他陀耶
+	# YB6
+
+	# 剑怛希陀
+	# YA5
+	# YB1
+	# YB2
+
+
+
+
+
+
+
+
+
+
+
+	# 虎人
+	# YA3
+	# YA4
+
+	# 大地精
+	# YA1
+	# YA2
+
+	# 半兽人
+	# YB7
+
+	# 精灵
+	# YB8
+}

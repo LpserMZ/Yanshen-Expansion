@@ -1,0 +1,587 @@
+#昭明9
+	zhaoming_fire_damage_received_I = { #所受火力伤害
+		fire_damage_received = -0.025 
+	}
+	zhaoming_fire_damage_received_II = {
+		fire_damage_received = -0.075
+	}
+	zhaoming_fire_damage_received_III = {
+		fire_damage_received = -0.15
+	}
+	zhaoming_shock_damage_received_I = { #所受冲击伤害
+		shock_damage_received = -0.025
+	}
+	zhaoming_shock_damage_received_II = {
+		shock_damage_received = -0.075
+	}
+	zhaoming_shock_damage_received_III = {
+		shock_damage_received = -0.15
+	}
+	zhaoming_land_attrition_I = { #陆军损耗
+		land_attrition = -0.05
+	}
+	zhaoming_land_attrition_II = {
+		land_attrition = -0.10
+	}
+	zhaoming_land_attrition_III = {
+		land_attrition = -0.20
+	}
+#天西10
+	tianxi_build_cost_I = { #建造花费
+		build_cost = -0.10
+	}
+	tianxi_build_cost_II = {
+		build_cost = -0.20
+	}
+	tianxi_build_cost_III = {
+		build_cost = -0.33
+	}
+	tianxi_build_time_I = { #建造时间
+		build_time = -0.10 #
+	}
+	tianxi_build_time_II = {
+		build_time = -0.15
+	}
+	tianxi_build_time_III = {
+		build_time = -0.25
+	}
+	tianxi_regiment_time_I = { #募兵时间
+		global_regiment_recruit_speed = -0.1
+	}
+	tianxi_regiment_time_II = {
+		global_regiment_recruit_speed = -0.2
+	}
+	tianxi_regiment_time_III = {
+		global_regiment_recruit_speed = -0.4
+	}
+#路中11
+	luzhong_morale_damage_received_I = { #所受士气打击
+		morale_damage_received = -0.025
+	}
+	luzhong_morale_damage_received_II = {
+		morale_damage_received = -0.075
+	}
+	luzhong_morale_damage_received_III = {
+		morale_damage_received = -0.15
+	}
+	luzhong_drill_decay_I = { #部队操练度损失
+		drill_decay_modifier = -0.10
+	}
+	luzhong_drill_decay_II = {
+		drill_decay_modifier = -0.25
+	}
+	luzhong_drill_decay_III = {
+		drill_decay_modifier = -0.40
+	}
+	luzhong_reinforce_I = { #补员速度
+		reinforce_speed = 0.05 
+	}
+	luzhong_reinforce_II = {
+		reinforce_speed = 0.15 
+	}
+	luzhong_reinforce_III = {
+		reinforce_speed = 0.25 
+	}
+	luzhong_condottieri_I = { #遣外雇佣军
+		global_colonial_growth = 5
+		possible_condottieri = 0.50
+	}
+	luzhong_condottieri_II = {
+		possible_condottieri = 0.75
+		global_colonial_growth = 10
+	}
+	luzhong_condottieri_III = {
+		possible_condottieri = 1.5
+		global_colonial_growth = 10
+	}
+#烟心12
+	yanxin_idea_I = { #理念花费
+		idea_cost = -0.075
+	}
+	yanxin_idea_II = {
+		idea_cost = -0.125
+	}
+	yanxin_idea_III = {
+		idea_cost = -0.20
+	}
+	yanxin_dev_cost_I = { #发展成本
+		development_cost = -0.10
+	}
+	yanxin_dev_cost_II = {
+		development_cost = -0.15
+		development_cost_modifier = -0.05
+	}
+	yanxin_dev_cost_III = {
+		development_cost = -0.15
+		development_cost_modifier = -0.10
+	}
+	yanxin_stability_I = { #稳定度
+		stability_cost_modifier = -0.10
+	}
+	yanxin_stability_II = { 
+		stability_cost_modifier = -0.15
+		no_stability_loss_on_monarch_death = yes
+	}
+	yanxin_stability_III = { 
+		stability_cost_modifier = -0.15
+		stability_cost_to_declare_war = -1
+	}
+	yanxin_governing_cost_I = { #治理成本
+		governing_cost = -0.10
+	}
+	yanxin_governing_cost_II = {
+		governing_cost = -0.15
+	}
+	yanxin_governing_cost_III = {
+		governing_cost = -0.25
+	}
+#珠樾13
+	zhuyue_autonomy_I = { #自治度
+		min_autonomy_in_territories = -0.05
+		global_colonial_growth = 10
+	}
+	zhuyue_autonomy_II = {
+		min_autonomy_in_territories = -0.10
+		global_colonial_growth = 15
+	}
+	zhuyue_autonomy_III = {
+		min_autonomy_in_territories = -0.15
+		global_colonial_growth = 15
+	}
+	zhuyue_culture_promotion_I = { #认同文化花费
+		promote_culture_cost = -0.10
+		num_accepted_cultures = 1 
+	}
+	zhuyue_culture_promotion_II = { 
+		promote_culture_cost = -0.15
+		num_accepted_cultures = 2
+	}
+	zhuyue_culture_promotion_III = { 
+		promote_culture_cost = -0.25
+		num_accepted_cultures = 3
+	}
+	zhuyue_diplomats_I = { #外交官
+		diplomats = 1
+		ae_impact = -0.10
+	}
+	zhuyue_diplomats_II = {
+		diplomats = 2
+		ae_impact = -0.10
+	}
+	zhuyue_diplomats_III = {
+		diplomats = 2 
+		ae_impact = -0.20
+	}
+	zhuyue_reputation_I = { #外交声誉
+		diplomatic_reputation = 1
+	}
+	zhuyue_reputation_II = {
+		diplomatic_reputation = 1.5
+		monthly_splendor = 2
+	}
+	zhuyue_reputation_III = {
+		diplomatic_reputation = 2
+		monthly_splendor = 4
+	}
+#烟南14 可行政策/免费政策possible_policy ## 专制度max_absolutism ## 贸易效率 ## 外交合并花费 ## 间谍 ##
+	yannan_possible_policy_I = { #可行政策
+		possible_policy = 1
+	}
+	yannan_possible_policy_II = {
+		possible_policy = 1
+		free_adm_policy = 1
+	}
+	yannan_possible_policy_III = {
+		possible_policy = 1
+		free_policy = 1
+	}
+	yannan_absolutism_I = { #专制度
+		max_absolutism = 10
+	}
+	yannan_absolutism_II = {
+		max_absolutism = 10
+		max_absolutism_effect = 0.05
+	}
+	yannan_absolutism_III = {
+		max_absolutism = 10
+		max_absolutism_effect = 0.15
+	}
+	yannan_trade_efficiency_I = { #贸易效率
+		trade_efficiency = 0.10
+	}
+	yannan_trade_efficiency_II = {
+		trade_efficiency = 0.15
+	}
+	yannan_trade_efficiency_III = {
+		trade_efficiency = 0.20
+	}
+	yannan_diplomatic_annexation_I = { #外交合并花费
+		diplomatic_annexation_cost = -0.10
+	}
+	yannan_diplomatic_annexation_II = { 
+		diplomatic_annexation_cost = -0.10
+		diplomatic_upkeep = 1
+	}
+	yannan_diplomatic_annexation_III = {
+		diplomatic_annexation_cost = -0.20
+		diplomatic_upkeep = 1
+	}
+	yannan_spy_I = { #间谍
+		spy_offence = 0.10
+	}
+	yannan_spy_II = {
+		spy_offence = 0.10
+		global_spy_defence = 0.20
+	}
+	yannan_spy_III = {
+		spy_offence = 0.20
+		global_spy_defence = 0.20
+	}
+
+#沙泉15 宗教 ##
+	shaqvan_devastation_I = { #减少荒废度
+		global_monthly_devastation = -0.20
+	}
+	shaqvan_devastation_II = { 
+		global_monthly_devastation = -0.33
+	}
+	shaqvan_devastation_III = { 
+		global_monthly_devastation = -0.50
+		defensiveness = 0.10
+	}
+	shaqvan_prosperity_I = { #繁荣度
+		global_prosperity_growth = 0.20
+	}
+	shaqvan_prosperity_II = {
+		global_prosperity_growth = 0.33
+		development_cost_modifier = -0.05
+	}
+	shaqvan_prosperity_III = {
+		global_prosperity_growth = 0.50
+		development_cost_modifier = -0.05
+	}
+	shaqvan_innovation_I = { #创新度
+		innovativeness_gain = 0.25
+	}
+	shaqvan_innovation_II = {
+		innovativeness_gain = 0.50
+	}
+	shaqvan_innovation_III = {
+		innovativeness_gain = 0.50
+		all_power_cost = -0.025
+	}
+	shaqvan_religion_I = { #宗教
+		church_power_modifier = 0.10
+	}
+	shaqvan_religion_II = {
+		church_power_modifier = 0.10
+		global_missionary_strength = 0.02
+	}
+	shaqvan_religion_III = {
+		church_power_modifier = 0.10
+		global_missionary_strength = 0.02
+		missionaries = 1
+	}
+#金都16 改善关系improve_relation_modifier ## 商人## 贸易引导trade_steering ## 商品产出 ##
+	jindu_institution_I = { #思潮
+		institution_spread_from_true_faith = 0.25
+		embracement_cost = -0.10
+	}
+	jindu_institution_II = {
+		institution_spread_from_true_faith = 0.40 
+		embracement_cost = -0.10
+	}
+	jindu_institution_III = {
+		global_institution_spread = 0.50
+		embracement_cost = -0.10
+	}
+	jindu_improve_relationship_I = { #改善关系
+		improve_relation_modifier = 0.15
+	}
+	jindu_improve_relationship_II = {
+		improve_relation_modifier = 0.30
+	}
+	jindu_improve_relationship_III = {
+		improve_relation_modifier = 0.50
+	}
+	jindu_merchant_I = { #商人
+		merchants = 1
+	}
+	jindu_merchant_II = {
+		merchants = 2
+	}
+	jindu_merchant_III = {
+		merchants = 3
+		trade_efficiency = 0.10
+	}
+	jindu_trade_steer_I = { #贸易引导
+		trade_steering = 0.05
+	}
+	jindu_trade_steer_II = {
+		trade_steering = 0.05
+		global_trade_power = 0.15
+	}
+	jindu_trade_steer_III = {
+		trade_steering = 0.15
+		global_trade_power = 0.15
+	}
+	jindu_trade_goods_I = { #商品产出
+		global_trade_goods_size = 0.10
+	}
+	jindu_trade_goods_II = {
+		global_trade_goods_size = 0.20
+	}
+	jindu_trade_goods_III = {
+		global_trade_goods_size = 0.40
+		development_cost_modifier = -0.05
+	}
+#江东17 水手维护费## 
+	jiangdong_envoy_I = { #特使行程时间
+		global_colonial_growth = 10
+		envoy_travel_time = -0.10
+	}
+	jiangdong_envoy_II = {
+		global_colonial_growth = 10
+		envoy_travel_time = -0.20
+	}
+	jiangdong_envoy_III = {
+		global_colonial_growth = 30
+		envoy_travel_time = -0.30
+	}
+	jiangdong_embargo_I = { #禁运效率
+		embargo_efficiency = 0.50
+		global_colonial_growth = 10
+	}
+	jiangdong_embargo_II = {
+		embargo_efficiency = 1
+		global_colonial_growth = 25
+	}
+	jiangdong_embargo_III = {
+		embargo_efficiency = 2
+		global_colonial_growth = 35
+	}
+	jiangdong_colonists_I = { #殖民队
+		colonists = 1 
+	}
+	jiangdong_colonists_II = {
+		colonists = 2
+		global_colonial_growth = 10
+	}
+	jiangdong_colonists_III = {
+		colonists = 2
+		global_colonial_growth = 30
+	}
+	jiangdong_sailor_maintenance_I  = { #水手维护费
+		sailor_maintenance_modifer = -0.10
+		global_colonial_growth = 10
+	}
+	jiangdong_sailor_maintenance_II  = {
+		sailor_maintenance_modifer = -0.15
+		global_colonial_growth = 10
+	}
+	jiangdong_sailor_maintenance_III  = {
+		sailor_maintenance_modifer = -0.20
+		global_ship_recruit_speed = -0.15
+		global_colonial_growth = 10
+	}
+	jiangdong_naval_tradition_I = { #海军传统
+		naval_tradition_from_trade = 0.33
+	}
+	jiangdong_naval_tradition_II = {
+		naval_tradition_from_trade = 0.50
+	}
+	jiangdong_naval_tradition_III = {
+		naval_tradition_from_trade = 0.50
+		navy_tradition = 0.5
+	}
+
+#矛海18 海军士气 ## 海军接战## 旗舰上限##
+	maohai_naval_morale_I = { #海军士气
+		naval_morale = 0.10
+	}
+	maohai_naval_morale_II = {
+		naval_morale = 0.10
+		naval_morale_damage = 0.10
+	}
+	maohai_naval_morale_III = {
+		naval_morale = 0.15
+		naval_morale_damage = 0.10
+		navy_tradition_decay = -0.01
+	}
+	maohai_naval_engagement_I = { #海军接战
+		global_naval_engagement_modifier = 0.05
+	}
+	maohai_naval_engagement_II = {
+		global_naval_engagement_modifier = 0.10
+	}
+	maohai_naval_engagement_III = {
+		global_naval_engagement_modifier = 0.10
+		navy_tradition_decay = -0.01
+	}
+	maohai_flagship_I = { #旗舰
+		max_flagships = 1
+	}
+	maohai_flagship_II = {
+		max_flagships = 1
+		navy_tradition_decay = -0.01
+	}
+	maohai_flagship_III = {
+		max_flagships = 2
+		navy_tradition_decay = -0.01
+	}
+#坚武19 陆军将领点数/海军将领点数## 
+	jianwu_general_I = { #将领
+		leader_land_shock = 1
+	}
+	jianwu_general_II = {
+		leader_land_fire = 1
+		leader_land_shock = 1
+		leader_land_manuever = 1
+		leader_siege = 1
+	}
+	jianwu_general_III = {
+		max_general_fire = 1
+		max_general_shock = 1
+		max_general_maneuver = 1
+		max_general_siege = 1
+	}
+	jianwu_manpower_recovery_I = { #人力恢复速度
+		manpower_recovery_speed = 0.10
+	}
+	jianwu_manpower_recovery_II = {
+		manpower_recovery_speed = 0.15
+	}
+	jianwu_manpower_recovery_III = {
+		manpower_recovery_speed = 0.20
+	}
+	jianwu_morale_recovery_I = { #陆军士气恢复速度
+		recover_army_morale_speed = 0.10
+	}
+	jianwu_morale_recovery_II = {
+		recover_army_morale_speed = 0.15
+	}
+	jianwu_morale_recovery_III = {
+		recover_army_morale_speed = 0.25
+	}
+#魔岭20 部队人力使用 ## 要塞等 ##
+	moling_manpower_usage_I = { #部队人力使用
+		regiment_manpower_usage = -0.10
+	}
+	moling_manpower_usage_II = {
+		regiment_manpower_usage = -0.10
+		army_tradition_decay = -0.01
+	}
+	moling_manpower_usage_III = {
+		regiment_manpower_usage = -0.15
+		army_tradition_decay = -0.01
+	}
+	moling_culture_conversion_I = { #转变文化花费
+		culture_conversion_cost = -0.075
+	}
+	moling_culture_conversion_II = {
+		culture_conversion_cost = -0.125
+	}
+	moling_culture_conversion_III = {
+		culture_conversion_cost = -0.20
+	}
+	moling_fort_I = { #要塞
+		fort_maintenance_modifier = -0.10
+		defensiveness = 0.05
+	}
+	moling_fort_II = {
+		fort_maintenance_modifier = -0.15
+		defensiveness = 0.10
+	}
+	moling_fort_III = {
+		fort_maintenance_modifier = -0.20
+		defensiveness = 0.15
+	}
+#全局！
+
+
+
+
+################################
+#####大明开发各行省的任务奖励#####
+################################
+
+#陕甘
+
+gansu_bonus_modifier = {
+	development_cost_modifier = -0.15
+}
+
+
+#淮浙闽
+
+nanzhili_bonus_modifier = {
+	colonists = 1
+}
+#蜀湘粤
+
+
+
+
+sichuan_bonus_modifier = {
+	technology_cost = -0.075
+}
+guangdong_bonus_modifier = {
+	technology_cost = -0.075
+}
+#豫鄂赣
+
+
+
+
+#滇黔桂  #由于地形debuff，这里应该是最后种完的地区，所以奖励应该为度过后续灾难而设计
+
+
+dianqiangui_final_reward_A = {
+	province_warscore_cost = -0.30
+	core_creation = -0.10
+}
+dianqiangui_final_reward_B = {
+	stability_cost_to_declare_war = -2
+	core_creation = -0.20
+}
+dianqiangui_final_reward_C = {
+	can_bypass_forts = yes
+	siege_ability = 0.40
+	core_creation = -0.15
+}
+dianqiangui_advanced_reward = {
+	core_creation = -0.25
+	province_warscore_cost = -0.05
+}
+#台
+
+
+
+##############################################################
+########################以下都是废案###########################
+
+	# dianqiangui_merchant_I = {
+	# 	merchants = 1
+	# 	trade_range_modifier = 0.15
+	# }
+	# dianqiangui_merchant_II = {
+	# 	merchants = 2
+	# 	trade_range_modifier = 0.25
+	# }
+	# dianqiangui_merchant_III = {
+	# 	merchants = 2
+	# 	trade_range_modifier = 0.40
+	# }
+	huaizhemin_expel_I = { #驱逐少数族群花费
+		expel_minorities_cost = -0.10
+		global_colonial_growth = 15
+	}
+	huaizhemin_expel_II = {
+		expel_minorities_cost = -0.15
+		global_colonial_growth = 15
+	}
+	huaizhemin_expel_III = {
+		expel_minorities_cost = -0.25
+		global_colonial_growth = 15
+	}
+##############################################################

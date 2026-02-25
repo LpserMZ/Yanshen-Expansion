@@ -1,0 +1,10 @@
+owner = R96
+controller = R96
+is_city = no
+culture = wolf_command
+religion = high_philosophy
+trade_goods = fish
+base_tax = 3
+base_manpower = 3
+base_production = 3
+add_core = R96

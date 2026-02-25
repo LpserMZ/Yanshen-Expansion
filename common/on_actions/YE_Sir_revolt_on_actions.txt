@@ -1,0 +1,34 @@
+# 对原版on_action 中三战营围城部分的修改
+on_siege_lost_country = {
+	if = {
+		limit = { 
+			OR = { 
+				tag = R95
+				tag = R94
+				tag = R96
+				tag = R62 # 狼战营不在狼令
+			}
+			
+		}
+		YB8 = {
+			if = {
+				limit = {
+					OR = {
+						controls = 4630
+						controls = 4311
+						controls = 4538
+					}				
+				}
+				country_event = { #将军
+					id = YE_baiyi.3
+				}
+			}
+		}
+		R62 = {
+			command_siege_lost_effect = yes
+		}
+ 
+
+		
+	}
+}

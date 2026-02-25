@@ -1,0 +1,17 @@
+# No previous file for Banten
+owner = YB1
+controller = YB1
+add_core = R80
+add_core = R79
+culture = kamtarhid
+religion = high_philosophy
+base_tax = 1
+base_production = 1
+base_manpower = 1
+trade_goods = incense
+is_city = yes
+add_permanent_province_modifier = { 
+	name = orcish_minority_integrated_small
+	duration = -1
+}
+add_core = YB1

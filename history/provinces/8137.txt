@@ -1,0 +1,10 @@
+owner = YA9
+controller = YA9
+is_city = no
+culture = jichuan
+religion = devouring_path
+trade_goods = dyes
+base_tax = 2
+base_manpower = 1
+base_production = 3
+add_core = YA9

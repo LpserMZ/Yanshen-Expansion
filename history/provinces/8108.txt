@@ -1,0 +1,10 @@
+add_core = R64
+owner = R64
+controller = R64
+is_city = no
+culture = jichuan
+religion = accretive_path
+trade_goods = slaves
+base_tax = 1
+base_manpower = 2
+base_production = 1

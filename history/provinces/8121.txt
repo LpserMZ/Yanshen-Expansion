@@ -1,0 +1,10 @@
+owner = YB2
+controller = YB2
+is_city = no
+culture = kamtarhid
+religion = gu_path
+trade_goods = livestock
+base_tax = 2
+base_manpower = 1
+base_production = 1
+add_core = YB2

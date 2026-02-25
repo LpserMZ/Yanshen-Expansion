@@ -1,0 +1,10 @@
+add_core = Y27
+owner = Y27
+controller = Y27
+is_city = no
+culture = gangim
+religion = accretive_path
+trade_goods = livestock
+base_tax = 3
+base_manpower = 4
+base_production = 2

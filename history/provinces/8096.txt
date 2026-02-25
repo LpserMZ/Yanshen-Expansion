@@ -1,0 +1,10 @@
+add_core = V22
+owner = V22
+controller = V22
+is_city = no
+culture = beikling
+religion = devouring_path
+trade_goods = glass
+base_tax = 2
+base_manpower = 2
+base_production = 1

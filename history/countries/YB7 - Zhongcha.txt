@@ -1,0 +1,13 @@
+setup_vision = yes
+
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+primary_culture = yan_half_orc
+religion = accretive_path
+technology_group = tech_halessi
+capital = 4628
+
+1444.11.10 = {
+	override_country_name = YB7_COLONY_NAME
+}

@@ -1,0 +1,135 @@
+defined_text = {
+	name = GetIfCtrlWholeArea_1
+	random = no
+	text = {
+		localisation_key = "string_not_ctrl_whole_area_1_key"
+		trigger = {
+			# ROOT = {
+			# 	check_variable = { which = Num_unowned_1 value = 1 } 
+			# }	
+			tag = MNG
+		}
+	}
+	text = {
+		localisation_key = string_do_ctrl_whole_area_1_key
+		trigger = {
+			# NOT = { ROOT = { check_variable = { which = Num_unowned_1 value = 1 } } }
+			NOT = { tag = MNG }
+		}
+	}
+}
+defined_text = {
+	name = IfCtrlWholeArea_2
+	text = {
+		localisation_key = not_ctrl_whole_area_2_key
+		trigger = {
+			check_variable = { which = Num_unowned_2 value = 1 } 
+		}
+	}
+	text = {
+		localisation_key = do_ctrl_whole_area_2_key
+		trigger = {
+			NOT = { check_variable = { which = Num_unowned_2 value = 1 } }
+		}
+	}
+}
+defined_text = {
+	name = IfCtrlWholeArea_3
+	text = {
+		localisation_key = not_ctrl_whole_area_3_key
+		trigger = {
+			check_variable = { which = Num_unowned_3 value = 1 } 
+		}
+	}
+	text = {
+		localisation_key = do_ctrl_whole_area_3_key
+		trigger = {
+			NOT = { check_variable = { which = Num_unowned_3 value = 1 } }
+		}
+	}
+}
+defined_text = {
+	name = IfCtrlWholeArea_4
+	text = {
+		localisation_key = not_ctrl_whole_area_4_key
+		trigger = {
+			check_variable = { which = Num_unowned_4 value = 1 } 
+		}
+	}
+	text = {
+		localisation_key = do_ctrl_whole_area_4_key
+		trigger = {
+			NOT = { check_variable = { which = Num_unowned_4 value = 1 } }
+		}
+	}
+}
+defined_text = {
+	name = IfCtrlWholeArea_5
+	text = {
+		localisation_key = not_ctrl_whole_area_5_key
+		trigger = {
+			check_variable = { which = Num_unowned_5 value = 1 } 
+		}
+	}
+	text = {
+		localisation_key = do_ctrl_whole_area_5_key
+		trigger = {
+			NOT = { check_variable = { which = Num_unowned_5 value = 1 } }
+		}
+	}
+}
+
+
+defined_text = {
+	name = GetTaginfopage
+	random = no
+	text = {
+		localisation_key = string_tag_is_whatever
+		trigger = {
+			always = yes
+		}
+	}
+	text = {
+		localisation_key = string_tag_is_not_FRA
+		trigger = {
+			NOT = { tag = FRA }
+		}
+	}
+	text = {
+		localisation_key = string_tag_is_FRA
+		trigger = {
+			tag = FRA
+		}
+	}
+}
+
+defined_text = {
+	name = GetCheckvarpage
+	random = no
+	text = {
+		localisation_key = string_var_is_whatever
+		trigger = {
+			always = yes
+		}
+	}
+	text = {
+		localisation_key = String_var_is_zero
+		trigger = {
+			is_variable_equal = {
+				which = Num_unowned_1
+				value = 0
+			}
+		}
+	}
+	text = {
+		localisation_key = String_var_is_not_zero
+		trigger = {
+			NOT = {
+				is_variable_equal = {
+					which = Num_unowned_1
+					value = 0
+				}
+			}
+		}
+	}
+}

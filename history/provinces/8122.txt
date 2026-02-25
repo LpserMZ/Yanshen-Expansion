@@ -1,0 +1,10 @@
+owner = YA4
+controller = YA4
+is_city = no
+culture = shamadhan
+religion = high_philosophy
+trade_goods = gems
+base_tax = 2
+base_manpower = 1
+base_production = 3
+add_core = YA4

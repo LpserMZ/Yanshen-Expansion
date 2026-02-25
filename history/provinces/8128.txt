@@ -1,0 +1,11 @@
+owner = R84
+controller = R84
+is_city = no
+culture = yansu
+religion = accretive_path
+trade_goods = fish
+base_tax = 2
+base_manpower = 2
+base_production = 2
+add_core = R84
+add_core = R11
