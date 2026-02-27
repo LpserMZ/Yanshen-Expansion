@@ -15,6 +15,9 @@ LQmundi_initialize_script_effect = { #灵气初始化
 	set_variable = { which = LQdspl_6_exp value = 0 } #学科6经验
 	set_variable = { which = LQdspl_7_exp value = 0 } #学科7经验
 	set_variable = { which = LQdspl_8_exp value = 0 } #学科8经验
+
+	set_variable = { which = LQpower_current_percentage value = 0 } #灵气点数进度条
+	
 	
 }
 
@@ -28,6 +31,16 @@ LQmundi_initialize_script_effect = { #灵气初始化
 		###
 		# 暂不支持灵气容量上限修正
 		###
+	}
+	LQmundi_update_LQpower_progressbar = { #更新进度条
+		set_variable = {
+			which = LQpower_current_percentage
+			which = LQpower_current
+		}
+		divide_variable = {
+			which = LQpower_current_percentage
+			which = LQpower_capacity
+		}
 	}
 
 	LQmundi_check_if_LQpower_overflow_and_deal_with = { #点数溢出
@@ -68,7 +81,9 @@ LQmundi_initialize_script_effect = { #灵气初始化
 			which = monthly_LQpower_regen_var
 		}
 
-		LQmundi_check_if_LQpower_overflow_and_deal_with = yes
+		LQmundi_check_if_LQpower_overflow_and_deal_with = yes # 检测溢出
+
+		LQmundi_update_LQpower_progressbar = yes #更新进度条
 	}
 	LQmundi_gain_effect_LQpower_script_effect = { # $$ #效果获取
 		## $value$ 基础数值
@@ -95,7 +110,9 @@ LQmundi_initialize_script_effect = { #灵气初始化
 			which = LQpower_value_of_effect
 		}
 
-		LQmundi_check_if_LQpower_overflow_and_deal_with = yes
+		LQmundi_check_if_LQpower_overflow_and_deal_with = yes # 检测溢出
+
+		LQmundi_update_LQpower_progressbar = yes #更新进度条
 	}
 
 	LQmundi_check_if_LQpower_negative_and_deal_with = { #点数为负
@@ -153,7 +170,9 @@ LQmundi_initialize_script_effect = { #灵气初始化
 			which = LQpower_value_of_cost
 		}
 
-		LQmundi_check_if_LQpower_negative_and_deal_with = yes
+		LQmundi_check_if_LQpower_negative_and_deal_with = yes #检测触底
+
+		LQmundi_update_LQpower_progressbar = yes #更新进度条
 	}
 
 # 法术经验

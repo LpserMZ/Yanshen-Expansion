@@ -1,0 +1,340 @@
+defined_text = {
+	name = GetLQdsplLevel
+	random = no
+	text = {
+		localisation_key = GetLQdsplLevel_level_1
+		trigger = {
+			if = {
+				limit = {
+					is_variable_equal = { which = LQmundi_discipline_x value = 1 }
+				}
+				NOT = { check_variable = { which = LQdspl_1_exp value = 100 } } 
+			}
+			else_if = {
+				limit = {
+					is_variable_equal = { which = LQmundi_discipline_x value = 2 }
+				}
+				NOT = { check_variable = { which = LQdspl_2_exp value = 100 } } 
+			}
+			else_if = {
+				limit = {
+					is_variable_equal = { which = LQmundi_discipline_x value = 3 }
+				}
+				NOT = { check_variable = { which = LQdspl_3_exp value = 100 } } 
+			}
+			else_if = {
+				limit = {
+					is_variable_equal = { which = LQmundi_discipline_x value = 4 }
+				}
+				NOT = { check_variable = { which = LQdspl_4_exp value = 100 } } 
+			}
+			else_if = {
+				limit = {
+					is_variable_equal = { which = LQmundi_discipline_x value = 5 }
+				}
+				NOT = { check_variable = { which = LQdspl_5_exp value = 100 } } 
+			}
+			else_if = {
+				limit = {
+					is_variable_equal = { which = LQmundi_discipline_x value = 6 }
+				}
+				NOT = { check_variable = { which = LQdspl_6_exp value = 100 } } 
+			}
+			else_if = {
+				limit = {
+					is_variable_equal = { which = LQmundi_discipline_x value = 7 }
+				}
+				NOT = { check_variable = { which = LQdspl_7_exp value = 100 } } 
+			}
+			else_if = {
+				limit = {
+					is_variable_equal = { which = LQmundi_discipline_x value = 8 }
+				}
+				NOT = { check_variable = { which = LQdspl_8_exp value = 100 } } 
+			}
+			else = {
+				always = no
+			}
+		}
+	}
+	text = {
+		localisation_key = GetLQdsplLevel_level_2
+		trigger = {
+			if = {
+				limit = {
+					is_variable_equal = { which = LQmundi_discipline_x value = 1 }
+				}
+				NOT = { check_variable = { which = LQdspl_1_exp value = 250 } } 
+			}
+			else_if = {
+				limit = {
+					is_variable_equal = { which = LQmundi_discipline_x value = 2 }
+				}
+				NOT = { check_variable = { which = LQdspl_2_exp value = 250 } } 
+			}
+			else_if = {
+				limit = {
+					is_variable_equal = { which = LQmundi_discipline_x value = 3 }
+				}
+				NOT = { check_variable = { which = LQdspl_3_exp value = 250 } } 
+			}
+			else_if = {
+				limit = {
+					is_variable_equal = { which = LQmundi_discipline_x value = 4 }
+				}
+				NOT = { check_variable = { which = LQdspl_4_exp value = 250 } } 
+			}
+			else_if = {
+				limit = {
+					is_variable_equal = { which = LQmundi_discipline_x value = 5 }
+				}
+				NOT = { check_variable = { which = LQdspl_5_exp value = 250 } } 
+			}
+			else_if = {
+				limit = {
+					is_variable_equal = { which = LQmundi_discipline_x value = 6 }
+				}
+				NOT = { check_variable = { which = LQdspl_6_exp value = 250 } } 
+			}
+			else_if = {
+				limit = {
+					is_variable_equal = { which = LQmundi_discipline_x value = 7 }
+				}
+				NOT = { check_variable = { which = LQdspl_7_exp value = 250 } } 
+			}
+			else_if = {
+				limit = {
+					is_variable_equal = { which = LQmundi_discipline_x value = 8 }
+				}
+				NOT = { check_variable = { which = LQdspl_8_exp value = 250 } } 
+			}
+			else = {
+				always = no
+			}
+		}
+	}
+	text = {
+		localisation_key = GetLQdsplLevel_level_3
+		trigger = {
+			if = {
+				limit = {
+					is_variable_equal = { which = LQmundi_discipline_x value = 1 }
+				}
+				NOT = { check_variable = { which = LQdspl_1_exp value = 450 } } 
+			}
+			else_if = {
+				limit = {
+					is_variable_equal = { which = LQmundi_discipline_x value = 2 }
+				}
+				NOT = { check_variable = { which = LQdspl_2_exp value = 450 } } 
+			}
+			else_if = {
+				limit = {
+					is_variable_equal = { which = LQmundi_discipline_x value = 3 }
+				}
+				NOT = { check_variable = { which = LQdspl_3_exp value = 450 } } 
+			}
+			else_if = {
+				limit = {
+					is_variable_equal = { which = LQmundi_discipline_x value = 4 }
+				}
+				NOT = { check_variable = { which = LQdspl_4_exp value = 450 } } 
+			}
+			else_if = {
+				limit = {
+					is_variable_equal = { which = LQmundi_discipline_x value = 5 }
+				}
+				NOT = { check_variable = { which = LQdspl_5_exp value = 450 } } 
+			}
+			else_if = {
+				limit = {
+					is_variable_equal = { which = LQmundi_discipline_x value = 6 }
+				}
+				NOT = { check_variable = { which = LQdspl_6_exp value = 450 } } 
+			}
+			else_if = {
+				limit = {
+					is_variable_equal = { which = LQmundi_discipline_x value = 7 }
+				}
+				NOT = { check_variable = { which = LQdspl_7_exp value = 450 } } 
+			}
+			else_if = {
+				limit = {
+					is_variable_equal = { which = LQmundi_discipline_x value = 8 }
+				}
+				NOT = { check_variable = { which = LQdspl_8_exp value = 450 } } 
+			}
+			else = {
+				always = no
+			}
+		}
+	}
+	text = {
+		localisation_key = GetLQdsplLevel_level_4
+		trigger = {
+			if = {
+				limit = {
+					is_variable_equal = { which = LQmundi_discipline_x value = 1 }
+				}
+				NOT = { check_variable = { which = LQdspl_1_exp value = 700 } } 
+			}
+			else_if = {
+				limit = {
+					is_variable_equal = { which = LQmundi_discipline_x value = 2 }
+				}
+				NOT = { check_variable = { which = LQdspl_2_exp value = 700 } } 
+			}
+			else_if = {
+				limit = {
+					is_variable_equal = { which = LQmundi_discipline_x value = 3 }
+				}
+				NOT = { check_variable = { which = LQdspl_3_exp value = 700 } } 
+			}
+			else_if = {
+				limit = {
+					is_variable_equal = { which = LQmundi_discipline_x value = 4 }
+				}
+				NOT = { check_variable = { which = LQdspl_4_exp value = 700 } } 
+			}
+			else_if = {
+				limit = {
+					is_variable_equal = { which = LQmundi_discipline_x value = 5 }
+				}
+				NOT = { check_variable = { which = LQdspl_5_exp value = 700 } } 
+			}
+			else_if = {
+				limit = {
+					is_variable_equal = { which = LQmundi_discipline_x value = 6 }
+				}
+				NOT = { check_variable = { which = LQdspl_6_exp value = 700 } } 
+			}
+			else_if = {
+				limit = {
+					is_variable_equal = { which = LQmundi_discipline_x value = 7 }
+				}
+				NOT = { check_variable = { which = LQdspl_7_exp value = 700 } } 
+			}
+			else_if = {
+				limit = {
+					is_variable_equal = { which = LQmundi_discipline_x value = 8 }
+				}
+				NOT = { check_variable = { which = LQdspl_8_exp value = 700 } } 
+			}
+			else = {
+				always = no
+			}
+		}
+	}
+	text = {
+		localisation_key = GetLQdsplLevel_level_5
+		trigger = {
+			if = {
+				limit = {
+					is_variable_equal = { which = LQmundi_discipline_x value = 1 }
+				}
+				NOT = { check_variable = { which = LQdspl_1_exp value = 1000 } } 
+			}
+			else_if = {
+				limit = {
+					is_variable_equal = { which = LQmundi_discipline_x value = 2 }
+				}
+				NOT = { check_variable = { which = LQdspl_2_exp value = 1000 } } 
+			}
+			else_if = {
+				limit = {
+					is_variable_equal = { which = LQmundi_discipline_x value = 3 }
+				}
+				NOT = { check_variable = { which = LQdspl_3_exp value = 1000 } } 
+			}
+			else_if = {
+				limit = {
+					is_variable_equal = { which = LQmundi_discipline_x value = 4 }
+				}
+				NOT = { check_variable = { which = LQdspl_4_exp value = 1000 } } 
+			}
+			else_if = {
+				limit = {
+					is_variable_equal = { which = LQmundi_discipline_x value = 5 }
+				}
+				NOT = { check_variable = { which = LQdspl_5_exp value = 1000 } } 
+			}
+			else_if = {
+				limit = {
+					is_variable_equal = { which = LQmundi_discipline_x value = 6 }
+				}
+				NOT = { check_variable = { which = LQdspl_6_exp value = 1000 } } 
+			}
+			else_if = {
+				limit = {
+					is_variable_equal = { which = LQmundi_discipline_x value = 7 }
+				}
+				NOT = { check_variable = { which = LQdspl_7_exp value = 1000 } } 
+			}
+			else_if = {
+				limit = {
+					is_variable_equal = { which = LQmundi_discipline_x value = 8 }
+				}
+				NOT = { check_variable = { which = LQdspl_8_exp value = 1000 } } 
+			}
+			else = {
+				always = no
+			}
+		}
+	}
+	text = {
+		localisation_key = GetLQdsplLevel_level_6
+		trigger = {
+			if = {
+				limit = {
+					is_variable_equal = { which = LQmundi_discipline_x value = 1 }
+				}
+				check_variable = { which = LQdspl_1_exp value = 1000 }
+			}
+			else_if = {
+				limit = {
+					is_variable_equal = { which = LQmundi_discipline_x value = 2 }
+				}
+				check_variable = { which = LQdspl_1_exp value = 1000 }
+			}
+			else_if = {
+				limit = {
+					is_variable_equal = { which = LQmundi_discipline_x value = 3 }
+				}
+				check_variable = { which = LQdspl_1_exp value = 1000 }
+			}
+			else_if = {
+				limit = {
+					is_variable_equal = { which = LQmundi_discipline_x value = 4 }
+				}
+				check_variable = { which = LQdspl_1_exp value = 1000 }
+			}
+			else_if = {
+				limit = {
+					is_variable_equal = { which = LQmundi_discipline_x value = 5 }
+				}
+				check_variable = { which = LQdspl_1_exp value = 1000 }
+			}
+			else_if = {
+				limit = {
+					is_variable_equal = { which = LQmundi_discipline_x value = 6 }
+				}
+				check_variable = { which = LQdspl_1_exp value = 1000 }
+			}
+			else_if = {
+				limit = {
+					is_variable_equal = { which = LQmundi_discipline_x value = 7 }
+				}
+				check_variable = { which = LQdspl_1_exp value = 1000 }
+			}
+			else_if = {
+				limit = {
+					is_variable_equal = { which = LQmundi_discipline_x value = 8 }
+				}
+				check_variable = { which = LQdspl_1_exp value = 1000 }
+			}
+			else = {
+				always = no
+			}
+		}
+	}
+}

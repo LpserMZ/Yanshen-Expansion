@@ -8,7 +8,7 @@ YA6 = "countries/Jiaduofujai.txt"
 
 YA7 = "countries/Chili.txt"
 YA8 = "countries/Hehuan.txt"
-YA9 = "countries/Tuisheng.txt"
+YA9 = "countries/Lingfang.txt"
 
 YB1 = "countries/Hanjialuofu.txt"
 YB2 = "countries/Shannapo.txt"

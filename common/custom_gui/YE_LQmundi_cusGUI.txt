@@ -35,7 +35,11 @@ custom_button = { #开关
 	custom_button = { #关闭窗口
 		name = "lingqi_mundi_ESCAPE"
 		tooltip = lingqi_mundi_ESCAPE_tooltip
-		potential = {}
+		potential = {
+			NOT = {
+				has_country_flag = LQmundi_discipline_sorcery_flag
+			}
+		}
 		trigger = {}
 		effect = {
 			clr_country_flag = lingqi_mundi_flag # 总览窗口
@@ -48,14 +52,103 @@ custom_button = { #开关
 		}
 	}
 	# 学科
+		custom_icon = { #灵气点数进度条
+			name = "icon_progressbar_LQpower"
+			potential = {}
+			frame = {
+				number = 21
+				trigger = { check_variable = { which = LQpower_current_percentage value = 1 } }
+			}
+			frame = {
+				number = 20
+				trigger = { check_variable = { which = LQpower_current_percentage value = 0.95 } }
+			}
+			frame = {
+				number = 19
+				trigger = { check_variable = { which = LQpower_current_percentage value = 0.90 } }
+			}
+			frame = {
+				number = 18
+				trigger = { check_variable = { which = LQpower_current_percentage value = 0.85 } }
+			}
+			frame = {
+				number = 17
+				trigger = { check_variable = { which = LQpower_current_percentage value = 0.80 } }
+			}
+			frame = {
+				number = 16
+				trigger = { check_variable = { which = LQpower_current_percentage value = 0.75 } }
+			}
+			frame = {
+				number = 15
+				trigger = { check_variable = { which = LQpower_current_percentage value = 0.70 } }
+			}
+			frame = {
+				number = 14
+				trigger = { check_variable = { which = LQpower_current_percentage value = 0.65 } }
+			}
+			frame = {
+				number = 13
+				trigger = { check_variable = { which = LQpower_current_percentage value = 0.60 } }
+			}
+			frame = {
+				number = 12
+				trigger = { check_variable = { which = LQpower_current_percentage value = 0.55 } }
+			}
+			frame = {
+				number = 11
+				trigger = { check_variable = { which = LQpower_current_percentage value = 0.50 } }
+			}
+			frame = {
+				number = 10
+				trigger = { check_variable = { which = LQpower_current_percentage value = 0.45 } }
+			}
+			frame = {
+				number = 9
+				trigger = { check_variable = { which = LQpower_current_percentage value = 0.40 } }
+			}
+			frame = {
+				number = 8
+				trigger = { check_variable = { which = LQpower_current_percentage value = 0.35 } }
+			}
+			frame = {
+				number = 7
+				trigger = { check_variable = { which = LQpower_current_percentage value = 0.30 } }
+			}
+			frame = {
+				number = 6
+				trigger = { check_variable = { which = LQpower_current_percentage value = 0.25 } }
+			}
+			frame = {
+				number = 5
+				trigger = { check_variable = { which = LQpower_current_percentage value = 0.20 } }
+			}
+			frame = {
+				number = 4
+				trigger = { check_variable = { which = LQpower_current_percentage value = 0.15 } }
+			}
+			frame = {
+				number = 3
+				trigger = { check_variable = { which = LQpower_current_percentage value = 0.10 } }
+			}
+			frame = {
+				number = 2
+				trigger = { check_variable = { which = LQpower_current_percentage value = 0.01 } }
+			}
+			frame = {
+				number = 1
+				trigger = { always = yes }
+			}
+		}
 		custom_text_box = { #灵气点数 文本
 			name = TextBox_LQpower_current_GetValue
 			potential = { always = yes }
 		}
+		
 
 		custom_button = { #学科1
-			name = "button_LQmundi_discipline_1"
-			tooltip = button_LQmundi_discipline_1_tooltip
+			name = "button_exp_LQmundi_discipline_1"
+			tooltip = button_exp_LQmundi_discipline_1_tooltip
 			potential = {}
 			trigger = {}
 			effect = {
@@ -65,14 +158,350 @@ custom_button = { #开关
 					value = 1
 				}
 			}
+			frame = { 
+				number = 13 # 100% 
+				trigger = {
+					check_variable = { which = LQdspl_1_exp value = 1000 }
+				}
+				
+			}
+			frame = {
+				number = 12 # 95%
+				trigger = {
+					OR = {
+						check_variable = { which = LQdspl_1_exp value = 985 }
+						AND = {
+							check_variable = { which = LQdspl_1_exp value = 687 }
+							NOT = { check_variable = { which = LQdspl_1_exp value = 700 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_1_exp value = 440 }
+							NOT = { check_variable = { which = LQdspl_1_exp value = 450 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_1_exp value = 242 }
+							NOT = { check_variable = { which = LQdspl_1_exp value = 250 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_1_exp value = 95 }
+							NOT = { check_variable = { which = LQdspl_1_exp value = 100 } }
+						}
+					}
+				}
+			}
+			frame = {
+				number = 11 # 90%
+				trigger = {
+					OR = {
+						AND = {
+							check_variable = { which = LQdspl_1_exp value = 970 }
+							NOT = { check_variable = { which = LQdspl_1_exp value = 985 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_1_exp value = 675 }
+							NOT = { check_variable = { which = LQdspl_1_exp value = 687 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_1_exp value = 430 }
+							NOT = { check_variable = { which = LQdspl_1_exp value = 440 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_1_exp value = 235 }
+							NOT = { check_variable = { which = LQdspl_1_exp value = 242 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_1_exp value = 90 }
+							NOT = { check_variable = { which = LQdspl_1_exp value = 95 } }
+						}
+					}
+				}
+			}
+			frame = {
+				number = 10 # 80%
+				trigger = {
+					OR = {
+						AND = {
+							check_variable = { which = LQdspl_1_exp value = 940 }
+							NOT = { check_variable = { which = LQdspl_1_exp value = 970 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_1_exp value = 650 }
+							NOT = { check_variable = { which = LQdspl_1_exp value = 675 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_1_exp value = 410 }
+							NOT = { check_variable = { which = LQdspl_1_exp value = 430 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_1_exp value = 220 }
+							NOT = { check_variable = { which = LQdspl_1_exp value = 235 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_1_exp value = 80 }
+							NOT = { check_variable = { which = LQdspl_1_exp value = 90 } }
+						}
+					}
+				}
+			}
+			frame = {
+				number = 9 # 70%
+				trigger = {
+					OR = {
+						AND = {
+							check_variable = { which = LQdspl_1_exp value = 910 }
+							NOT = { check_variable = { which = LQdspl_1_exp value = 940 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_1_exp value = 625 }
+							NOT = { check_variable = { which = LQdspl_1_exp value = 650 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_1_exp value = 390 }
+							NOT = { check_variable = { which = LQdspl_1_exp value = 410 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_1_exp value = 205 }
+							NOT = { check_variable = { which = LQdspl_1_exp value = 220 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_1_exp value = 70 }
+							NOT = { check_variable = { which = LQdspl_1_exp value = 80 } }
+						}
+					}
+				}
+			}
+			frame = {
+				number = 8 # 60%
+				trigger = {
+					OR = {
+						AND = {
+							check_variable = { which = LQdspl_1_exp value = 880 }
+							NOT = { check_variable = { which = LQdspl_1_exp value = 910 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_1_exp value = 600 }
+							NOT = { check_variable = { which = LQdspl_1_exp value = 625 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_1_exp value = 370 }
+							NOT = { check_variable = { which = LQdspl_1_exp value = 390 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_1_exp value = 190 }
+							NOT = { check_variable = { which = LQdspl_1_exp value = 205 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_1_exp value = 60 }
+							NOT = { check_variable = { which = LQdspl_1_exp value = 70 } }
+						}
+					}
+				}
+			}
+			frame = {
+				number = 7 # 50%
+				trigger = {
+					OR = {
+						AND = {
+							check_variable = { which = LQdspl_1_exp value = 850 }
+							NOT = { check_variable = { which = LQdspl_1_exp value = 880 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_1_exp value = 575 }
+							NOT = { check_variable = { which = LQdspl_1_exp value = 600 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_1_exp value = 350 }
+							NOT = { check_variable = { which = LQdspl_1_exp value = 370 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_1_exp value = 175 }
+							NOT = { check_variable = { which = LQdspl_1_exp value = 190 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_1_exp value = 50 }
+							NOT = { check_variable = { which = LQdspl_1_exp value = 60 } }
+						}
+					}
+				}
+			}
+			frame = {
+				number = 6 # 40%
+				trigger = {
+					OR = {
+						AND = {
+							check_variable = { which = LQdspl_1_exp value = 820 }
+							NOT = { check_variable = { which = LQdspl_1_exp value = 850 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_1_exp value = 550 }
+							NOT = { check_variable = { which = LQdspl_1_exp value = 575 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_1_exp value = 330 }
+							NOT = { check_variable = { which = LQdspl_1_exp value = 350 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_1_exp value = 160 }
+							NOT = { check_variable = { which = LQdspl_1_exp value = 175 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_1_exp value = 40 }
+							NOT = { check_variable = { which = LQdspl_1_exp value = 50 } }
+						}
+					}
+				}
+			}
+			frame = {
+				number = 5 # 30%
+				trigger = {
+					OR = {
+						AND = {
+							check_variable = { which = LQdspl_1_exp value = 790 }
+							NOT = { check_variable = { which = LQdspl_1_exp value = 820 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_1_exp value = 525 }
+							NOT = { check_variable = { which = LQdspl_1_exp value = 550 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_1_exp value = 310 }
+							NOT = { check_variable = { which = LQdspl_1_exp value = 330 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_1_exp value = 145 }
+							NOT = { check_variable = { which = LQdspl_1_exp value = 160 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_1_exp value = 30 }
+							NOT = { check_variable = { which = LQdspl_1_exp value = 40 } }
+						}
+					}
+				}
+			}
+			frame = {
+				number = 4 # 20%
+				trigger = {
+					OR = {
+						AND = {
+							check_variable = { which = LQdspl_1_exp value = 760 }
+							NOT = { check_variable = { which = LQdspl_1_exp value = 790 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_1_exp value = 500 }
+							NOT = { check_variable = { which = LQdspl_1_exp value = 525 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_1_exp value = 290 }
+							NOT = { check_variable = { which = LQdspl_1_exp value = 310 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_1_exp value = 130 }
+							NOT = { check_variable = { which = LQdspl_1_exp value = 145 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_1_exp value = 20 }
+							NOT = { check_variable = { which = LQdspl_1_exp value = 30 } }
+						}
+					}
+				}
+			}
+			frame = {
+				number = 3 # 10%
+				trigger = {
+					OR = {
+						AND = {
+							check_variable = { which = LQdspl_1_exp value = 730 }
+							NOT = { check_variable = { which = LQdspl_1_exp value = 760 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_1_exp value = 475 }
+							NOT = { check_variable = { which = LQdspl_1_exp value = 500 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_1_exp value = 270 }
+							NOT = { check_variable = { which = LQdspl_1_exp value = 290 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_1_exp value = 115 }
+							NOT = { check_variable = { which = LQdspl_1_exp value = 130 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_1_exp value = 10 }
+							NOT = { check_variable = { which = LQdspl_1_exp value = 20 } }
+						}
+					}
+				}
+			}
+			frame = {
+				number = 2 # 5%
+				trigger = {
+					OR = {
+						AND = {
+							check_variable = { which = LQdspl_1_exp value = 701 } 
+							NOT = { check_variable = { which = LQdspl_1_exp value = 730 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_1_exp value = 451 } 
+							NOT = { check_variable = { which = LQdspl_1_exp value = 475 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_1_exp value = 251 } 
+							NOT = { check_variable = { which = LQdspl_1_exp value = 270 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_1_exp value = 101 } 
+							NOT = { check_variable = { which = LQdspl_1_exp value = 115 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_1_exp value = 1 } 
+							NOT = { check_variable = { which = LQdspl_1_exp value = 10 } }
+						}
+					}
+				}
+			}
+			frame = {
+				number = 1 # 0%
+				trigger = {
+					always = yes
+				}
+			}
 		}
-		custom_text_box = { #学科1 经验
-			name = TextBox_LQdspl_1_exp_GetValue
-			potential = { always = yes }
+		custom_icon = { #等级
+			name = "icon_level_LQmundi_discipline_1"
+			potential = {}
+			frame = {
+				number = 6
+				trigger = { check_variable = { which = LQdspl_1_exp value = 1000 } }
+			}
+			frame = {
+				number = 5
+				trigger = { check_variable = { which = LQdspl_1_exp value = 700 } }
+			}
+			frame = {
+				number = 4
+				trigger = { check_variable = { which = LQdspl_1_exp value = 450 } }
+			}
+			frame = {
+				number = 3
+				trigger = { check_variable = { which = LQdspl_1_exp value = 250 } }
+			}
+			frame = {
+				number = 2
+				trigger = { check_variable = { which = LQdspl_1_exp value = 100 } }
+			}
+			frame = {
+				number = 1
+				trigger = { always = yes }
+			}
 		}
+		custom_icon = {
+			name = "icon_name_LQmundi_discipline_1"
+			potential = {}
+		}
+
 		custom_button = { #学科2
-			name = "button_LQmundi_discipline_2"
-			tooltip = button_LQmundi_discipline_2_tooltip
+			name = "button_exp_LQmundi_discipline_2"
+			tooltip = button_exp_LQmundi_discipline_2_tooltip
 			potential = {}
 			trigger = {}
 			effect = {
@@ -82,14 +511,350 @@ custom_button = { #开关
 					value = 2
 				}
 			}
+			frame = { 
+				number = 13 # 100% 
+				trigger = {
+					check_variable = { which = LQdspl_2_exp value = 1000 }
+				}
+				
+			}
+			frame = {
+				number = 12 # 95%
+				trigger = {
+					OR = {
+						check_variable = { which = LQdspl_2_exp value = 985 }
+						AND = {
+							check_variable = { which = LQdspl_2_exp value = 687 }
+							NOT = { check_variable = { which = LQdspl_2_exp value = 700 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_2_exp value = 440 }
+							NOT = { check_variable = { which = LQdspl_2_exp value = 450 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_2_exp value = 242 }
+							NOT = { check_variable = { which = LQdspl_2_exp value = 250 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_2_exp value = 95 }
+							NOT = { check_variable = { which = LQdspl_2_exp value = 100 } }
+						}
+					}
+				}
+			}
+			frame = {
+				number = 11 # 90%
+				trigger = {
+					OR = {
+						AND = {
+							check_variable = { which = LQdspl_2_exp value = 970 }
+							NOT = { check_variable = { which = LQdspl_2_exp value = 985 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_2_exp value = 675 }
+							NOT = { check_variable = { which = LQdspl_2_exp value = 687 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_2_exp value = 430 }
+							NOT = { check_variable = { which = LQdspl_2_exp value = 440 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_2_exp value = 235 }
+							NOT = { check_variable = { which = LQdspl_2_exp value = 242 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_2_exp value = 90 }
+							NOT = { check_variable = { which = LQdspl_2_exp value = 95 } }
+						}
+					}
+				}
+			}
+			frame = {
+				number = 10 # 80%
+				trigger = {
+					OR = {
+						AND = {
+							check_variable = { which = LQdspl_2_exp value = 940 }
+							NOT = { check_variable = { which = LQdspl_2_exp value = 970 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_2_exp value = 650 }
+							NOT = { check_variable = { which = LQdspl_2_exp value = 675 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_2_exp value = 410 }
+							NOT = { check_variable = { which = LQdspl_2_exp value = 430 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_2_exp value = 220 }
+							NOT = { check_variable = { which = LQdspl_2_exp value = 235 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_2_exp value = 80 }
+							NOT = { check_variable = { which = LQdspl_2_exp value = 90 } }
+						}
+					}
+				}
+			}
+			frame = {
+				number = 9 # 70%
+				trigger = {
+					OR = {
+						AND = {
+							check_variable = { which = LQdspl_2_exp value = 910 }
+							NOT = { check_variable = { which = LQdspl_2_exp value = 940 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_2_exp value = 625 }
+							NOT = { check_variable = { which = LQdspl_2_exp value = 650 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_2_exp value = 390 }
+							NOT = { check_variable = { which = LQdspl_2_exp value = 410 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_2_exp value = 205 }
+							NOT = { check_variable = { which = LQdspl_2_exp value = 220 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_2_exp value = 70 }
+							NOT = { check_variable = { which = LQdspl_2_exp value = 80 } }
+						}
+					}
+				}
+			}
+			frame = {
+				number = 8 # 60%
+				trigger = {
+					OR = {
+						AND = {
+							check_variable = { which = LQdspl_2_exp value = 880 }
+							NOT = { check_variable = { which = LQdspl_2_exp value = 910 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_2_exp value = 600 }
+							NOT = { check_variable = { which = LQdspl_2_exp value = 625 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_2_exp value = 370 }
+							NOT = { check_variable = { which = LQdspl_2_exp value = 390 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_2_exp value = 190 }
+							NOT = { check_variable = { which = LQdspl_2_exp value = 205 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_2_exp value = 60 }
+							NOT = { check_variable = { which = LQdspl_2_exp value = 70 } }
+						}
+					}
+				}
+			}
+			frame = {
+				number = 7 # 50%
+				trigger = {
+					OR = {
+						AND = {
+							check_variable = { which = LQdspl_2_exp value = 850 }
+							NOT = { check_variable = { which = LQdspl_2_exp value = 880 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_2_exp value = 575 }
+							NOT = { check_variable = { which = LQdspl_2_exp value = 600 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_2_exp value = 350 }
+							NOT = { check_variable = { which = LQdspl_2_exp value = 370 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_2_exp value = 175 }
+							NOT = { check_variable = { which = LQdspl_2_exp value = 190 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_2_exp value = 50 }
+							NOT = { check_variable = { which = LQdspl_2_exp value = 60 } }
+						}
+					}
+				}
+			}
+			frame = {
+				number = 6 # 40%
+				trigger = {
+					OR = {
+						AND = {
+							check_variable = { which = LQdspl_2_exp value = 820 }
+							NOT = { check_variable = { which = LQdspl_2_exp value = 850 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_2_exp value = 550 }
+							NOT = { check_variable = { which = LQdspl_2_exp value = 575 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_2_exp value = 330 }
+							NOT = { check_variable = { which = LQdspl_2_exp value = 350 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_2_exp value = 160 }
+							NOT = { check_variable = { which = LQdspl_2_exp value = 175 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_2_exp value = 40 }
+							NOT = { check_variable = { which = LQdspl_2_exp value = 50 } }
+						}
+					}
+				}
+			}
+			frame = {
+				number = 5 # 30%
+				trigger = {
+					OR = {
+						AND = {
+							check_variable = { which = LQdspl_2_exp value = 790 }
+							NOT = { check_variable = { which = LQdspl_2_exp value = 820 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_2_exp value = 525 }
+							NOT = { check_variable = { which = LQdspl_2_exp value = 550 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_2_exp value = 310 }
+							NOT = { check_variable = { which = LQdspl_2_exp value = 330 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_2_exp value = 145 }
+							NOT = { check_variable = { which = LQdspl_2_exp value = 160 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_2_exp value = 30 }
+							NOT = { check_variable = { which = LQdspl_2_exp value = 40 } }
+						}
+					}
+				}
+			}
+			frame = {
+				number = 4 # 20%
+				trigger = {
+					OR = {
+						AND = {
+							check_variable = { which = LQdspl_2_exp value = 760 }
+							NOT = { check_variable = { which = LQdspl_2_exp value = 790 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_2_exp value = 500 }
+							NOT = { check_variable = { which = LQdspl_2_exp value = 525 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_2_exp value = 290 }
+							NOT = { check_variable = { which = LQdspl_2_exp value = 310 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_2_exp value = 130 }
+							NOT = { check_variable = { which = LQdspl_2_exp value = 145 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_2_exp value = 20 }
+							NOT = { check_variable = { which = LQdspl_2_exp value = 30 } }
+						}
+					}
+				}
+			}
+			frame = {
+				number = 3 # 10%
+				trigger = {
+					OR = {
+						AND = {
+							check_variable = { which = LQdspl_2_exp value = 730 }
+							NOT = { check_variable = { which = LQdspl_2_exp value = 760 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_2_exp value = 475 }
+							NOT = { check_variable = { which = LQdspl_2_exp value = 500 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_2_exp value = 270 }
+							NOT = { check_variable = { which = LQdspl_2_exp value = 290 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_2_exp value = 115 }
+							NOT = { check_variable = { which = LQdspl_2_exp value = 130 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_2_exp value = 10 }
+							NOT = { check_variable = { which = LQdspl_2_exp value = 20 } }
+						}
+					}
+				}
+			}
+			frame = {
+				number = 2 # 5%
+				trigger = {
+					OR = {
+						AND = {
+							check_variable = { which = LQdspl_2_exp value = 701 } 
+							NOT = { check_variable = { which = LQdspl_2_exp value = 730 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_2_exp value = 451 } 
+							NOT = { check_variable = { which = LQdspl_2_exp value = 475 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_2_exp value = 251 } 
+							NOT = { check_variable = { which = LQdspl_2_exp value = 270 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_2_exp value = 101 } 
+							NOT = { check_variable = { which = LQdspl_2_exp value = 115 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_2_exp value = 1 } 
+							NOT = { check_variable = { which = LQdspl_2_exp value = 10 } }
+						}
+					}
+				}
+			}
+			frame = {
+				number = 1 # 0%
+				trigger = {
+					always = yes
+				}
+			}
 		}
-		custom_text_box = { #学科2 经验
-			name = TextBox_LQdspl_2_exp_GetValue
-			potential = { always = yes }
+		custom_icon = { #等级
+			name = "icon_level_LQmundi_discipline_2"
+			potential = {}
+			frame = {
+				number = 6
+				trigger = { check_variable = { which = LQdspl_2_exp value = 1000 } }
+			}
+			frame = {
+				number = 5
+				trigger = { check_variable = { which = LQdspl_2_exp value = 700 } }
+			}
+			frame = {
+				number = 4
+				trigger = { check_variable = { which = LQdspl_2_exp value = 450 } }
+			}
+			frame = {
+				number = 3
+				trigger = { check_variable = { which = LQdspl_2_exp value = 250 } }
+			}
+			frame = {
+				number = 2
+				trigger = { check_variable = { which = LQdspl_2_exp value = 100 } }
+			}
+			frame = {
+				number = 1
+				trigger = { always = yes }
+			}
 		}
+		custom_icon = {
+			name = "icon_name_LQmundi_discipline_2"
+			potential = {}
+		}
+
 		custom_button = { #学科3
-			name = "button_LQmundi_discipline_3"
-			tooltip = button_LQmundi_discipline_3_tooltip
+			name = "button_exp_LQmundi_discipline_3"
+			tooltip = button_exp_LQmundi_discipline_3_tooltip
 			potential = {}
 			trigger = {}
 			effect = {
@@ -99,14 +864,351 @@ custom_button = { #开关
 					value = 3
 				}
 			}
+			frame = { 
+				number = 13 # 100% 
+				trigger = {
+					check_variable = { which = LQdspl_3_exp value = 1000 }
+				}
+				
+			}
+			frame = {
+				number = 12 # 95%
+				trigger = {
+					OR = {
+						check_variable = { which = LQdspl_3_exp value = 985 }
+						AND = {
+							check_variable = { which = LQdspl_3_exp value = 687 }
+							NOT = { check_variable = { which = LQdspl_3_exp value = 700 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_3_exp value = 440 }
+							NOT = { check_variable = { which = LQdspl_3_exp value = 450 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_3_exp value = 242 }
+							NOT = { check_variable = { which = LQdspl_3_exp value = 250 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_3_exp value = 95 }
+							NOT = { check_variable = { which = LQdspl_3_exp value = 100 } }
+						}
+					}
+				}
+			}
+			frame = {
+				number = 11 # 90%
+				trigger = {
+					OR = {
+						AND = {
+							check_variable = { which = LQdspl_3_exp value = 970 }
+							NOT = { check_variable = { which = LQdspl_3_exp value = 985 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_3_exp value = 675 }
+							NOT = { check_variable = { which = LQdspl_3_exp value = 687 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_3_exp value = 430 }
+							NOT = { check_variable = { which = LQdspl_3_exp value = 440 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_3_exp value = 235 }
+							NOT = { check_variable = { which = LQdspl_3_exp value = 242 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_3_exp value = 90 }
+							NOT = { check_variable = { which = LQdspl_3_exp value = 95 } }
+						}
+					}
+				}
+			}
+			frame = {
+				number = 10 # 80%
+				trigger = {
+					OR = {
+						AND = {
+							check_variable = { which = LQdspl_3_exp value = 940 }
+							NOT = { check_variable = { which = LQdspl_3_exp value = 970 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_3_exp value = 650 }
+							NOT = { check_variable = { which = LQdspl_3_exp value = 675 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_3_exp value = 410 }
+							NOT = { check_variable = { which = LQdspl_3_exp value = 430 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_3_exp value = 220 }
+							NOT = { check_variable = { which = LQdspl_3_exp value = 235 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_3_exp value = 80 }
+							NOT = { check_variable = { which = LQdspl_3_exp value = 90 } }
+						}
+					}
+				}
+			}
+			frame = {
+				number = 9 # 70%
+				trigger = {
+					OR = {
+						AND = {
+							check_variable = { which = LQdspl_3_exp value = 910 }
+							NOT = { check_variable = { which = LQdspl_3_exp value = 940 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_3_exp value = 625 }
+							NOT = { check_variable = { which = LQdspl_3_exp value = 650 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_3_exp value = 390 }
+							NOT = { check_variable = { which = LQdspl_3_exp value = 410 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_3_exp value = 205 }
+							NOT = { check_variable = { which = LQdspl_3_exp value = 220 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_3_exp value = 70 }
+							NOT = { check_variable = { which = LQdspl_3_exp value = 80 } }
+						}
+					}
+				}
+			}
+			frame = {
+				number = 8 # 60%
+				trigger = {
+					OR = {
+						AND = {
+							check_variable = { which = LQdspl_3_exp value = 880 }
+							NOT = { check_variable = { which = LQdspl_3_exp value = 910 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_3_exp value = 600 }
+							NOT = { check_variable = { which = LQdspl_3_exp value = 625 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_3_exp value = 370 }
+							NOT = { check_variable = { which = LQdspl_3_exp value = 390 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_3_exp value = 190 }
+							NOT = { check_variable = { which = LQdspl_3_exp value = 205 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_3_exp value = 60 }
+							NOT = { check_variable = { which = LQdspl_3_exp value = 70 } }
+						}
+					}
+				}
+			}
+			frame = {
+				number = 7 # 50%
+				trigger = {
+					OR = {
+						AND = {
+							check_variable = { which = LQdspl_3_exp value = 850 }
+							NOT = { check_variable = { which = LQdspl_3_exp value = 880 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_3_exp value = 575 }
+							NOT = { check_variable = { which = LQdspl_3_exp value = 600 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_3_exp value = 350 }
+							NOT = { check_variable = { which = LQdspl_3_exp value = 370 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_3_exp value = 175 }
+							NOT = { check_variable = { which = LQdspl_3_exp value = 190 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_3_exp value = 50 }
+							NOT = { check_variable = { which = LQdspl_3_exp value = 60 } }
+						}
+					}
+				}
+			}
+			frame = {
+				number = 6 # 40%
+				trigger = {
+					OR = {
+						AND = {
+							check_variable = { which = LQdspl_3_exp value = 820 }
+							NOT = { check_variable = { which = LQdspl_3_exp value = 850 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_3_exp value = 550 }
+							NOT = { check_variable = { which = LQdspl_3_exp value = 575 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_3_exp value = 330 }
+							NOT = { check_variable = { which = LQdspl_3_exp value = 350 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_3_exp value = 160 }
+							NOT = { check_variable = { which = LQdspl_3_exp value = 175 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_3_exp value = 40 }
+							NOT = { check_variable = { which = LQdspl_3_exp value = 50 } }
+						}
+					}
+				}
+			}
+			frame = {
+				number = 5 # 30%
+				trigger = {
+					OR = {
+						AND = {
+							check_variable = { which = LQdspl_3_exp value = 790 }
+							NOT = { check_variable = { which = LQdspl_3_exp value = 820 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_3_exp value = 525 }
+							NOT = { check_variable = { which = LQdspl_3_exp value = 550 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_3_exp value = 310 }
+							NOT = { check_variable = { which = LQdspl_3_exp value = 330 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_3_exp value = 145 }
+							NOT = { check_variable = { which = LQdspl_3_exp value = 160 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_3_exp value = 30 }
+							NOT = { check_variable = { which = LQdspl_3_exp value = 40 } }
+						}
+					}
+				}
+			}
+			frame = {
+				number = 4 # 20%
+				trigger = {
+					OR = {
+						AND = {
+							check_variable = { which = LQdspl_3_exp value = 760 }
+							NOT = { check_variable = { which = LQdspl_3_exp value = 790 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_3_exp value = 500 }
+							NOT = { check_variable = { which = LQdspl_3_exp value = 525 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_3_exp value = 290 }
+							NOT = { check_variable = { which = LQdspl_3_exp value = 310 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_3_exp value = 130 }
+							NOT = { check_variable = { which = LQdspl_3_exp value = 145 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_3_exp value = 20 }
+							NOT = { check_variable = { which = LQdspl_3_exp value = 30 } }
+						}
+					}
+				}
+			}
+			frame = {
+				number = 3 # 10%
+				trigger = {
+					OR = {
+						AND = {
+							check_variable = { which = LQdspl_3_exp value = 730 }
+							NOT = { check_variable = { which = LQdspl_3_exp value = 760 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_3_exp value = 475 }
+							NOT = { check_variable = { which = LQdspl_3_exp value = 500 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_3_exp value = 270 }
+							NOT = { check_variable = { which = LQdspl_3_exp value = 290 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_3_exp value = 115 }
+							NOT = { check_variable = { which = LQdspl_3_exp value = 130 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_3_exp value = 10 }
+							NOT = { check_variable = { which = LQdspl_3_exp value = 20 } }
+						}
+					}
+				}
+			}
+			frame = {
+				number = 2 # 5%
+				trigger = {
+					OR = {
+						AND = {
+							check_variable = { which = LQdspl_3_exp value = 701 } 
+							NOT = { check_variable = { which = LQdspl_3_exp value = 730 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_3_exp value = 451 } 
+							NOT = { check_variable = { which = LQdspl_3_exp value = 475 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_3_exp value = 251 } 
+							NOT = { check_variable = { which = LQdspl_3_exp value = 270 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_3_exp value = 101 } 
+							NOT = { check_variable = { which = LQdspl_3_exp value = 115 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_3_exp value = 1 } 
+							NOT = { check_variable = { which = LQdspl_3_exp value = 10 } }
+						}
+					}
+				}
+			}
+			frame = {
+				number = 1 # 0%
+				trigger = {
+					always = yes
+				}
+			}
 		}
-		custom_text_box = { #学科3 经验
-			name = TextBox_LQdspl_3_exp_GetValue
-			potential = { always = yes }
+		custom_icon = { #等级
+			name = "icon_level_LQmundi_discipline_3"
+			potential = {}
+			frame = {
+				number = 6
+				trigger = { check_variable = { which = LQdspl_3_exp value = 1000 } }
+			}
+			frame = {
+				number = 5
+				trigger = { check_variable = { which = LQdspl_3_exp value = 700 } }
+			}
+			frame = {
+				number = 4
+				trigger = { check_variable = { which = LQdspl_3_exp value = 450 } }
+			}
+			frame = {
+				number = 3
+				trigger = { check_variable = { which = LQdspl_3_exp value = 250 } }
+			}
+			frame = {
+				number = 2
+				trigger = { check_variable = { which = LQdspl_3_exp value = 100 } }
+			}
+			frame = {
+				number = 1
+				trigger = { always = yes }
+			}
+
 		}
+		custom_icon = {
+			name = "icon_name_LQmundi_discipline_3"
+			potential = {}
+		}
+
 		custom_button = { #学科4
-			name = "button_LQmundi_discipline_4"
-			tooltip = button_LQmundi_discipline_4_tooltip
+			name = "button_exp_LQmundi_discipline_4"
+			tooltip = button_exp_LQmundi_discipline_4_tooltip
 			potential = {}
 			trigger = {}
 			effect = {
@@ -116,14 +1218,350 @@ custom_button = { #开关
 					value = 4
 				}
 			}
+			frame = { 
+				number = 13 # 100% 
+				trigger = {
+					check_variable = { which = LQdspl_4_exp value = 1000 }
+				}
+				
+			}
+			frame = {
+				number = 12 # 95%
+				trigger = {
+					OR = {
+						check_variable = { which = LQdspl_4_exp value = 985 }
+						AND = {
+							check_variable = { which = LQdspl_4_exp value = 687 }
+							NOT = { check_variable = { which = LQdspl_4_exp value = 700 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_4_exp value = 440 }
+							NOT = { check_variable = { which = LQdspl_4_exp value = 450 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_4_exp value = 242 }
+							NOT = { check_variable = { which = LQdspl_4_exp value = 250 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_4_exp value = 95 }
+							NOT = { check_variable = { which = LQdspl_4_exp value = 100 } }
+						}
+					}
+				}
+			}
+			frame = {
+				number = 11 # 90%
+				trigger = {
+					OR = {
+						AND = {
+							check_variable = { which = LQdspl_4_exp value = 970 }
+							NOT = { check_variable = { which = LQdspl_4_exp value = 985 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_4_exp value = 675 }
+							NOT = { check_variable = { which = LQdspl_4_exp value = 687 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_4_exp value = 430 }
+							NOT = { check_variable = { which = LQdspl_4_exp value = 440 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_4_exp value = 235 }
+							NOT = { check_variable = { which = LQdspl_4_exp value = 242 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_4_exp value = 90 }
+							NOT = { check_variable = { which = LQdspl_4_exp value = 95 } }
+						}
+					}
+				}
+			}
+			frame = {
+				number = 10 # 80%
+				trigger = {
+					OR = {
+						AND = {
+							check_variable = { which = LQdspl_4_exp value = 940 }
+							NOT = { check_variable = { which = LQdspl_4_exp value = 970 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_4_exp value = 650 }
+							NOT = { check_variable = { which = LQdspl_4_exp value = 675 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_4_exp value = 410 }
+							NOT = { check_variable = { which = LQdspl_4_exp value = 430 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_4_exp value = 220 }
+							NOT = { check_variable = { which = LQdspl_4_exp value = 235 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_4_exp value = 80 }
+							NOT = { check_variable = { which = LQdspl_4_exp value = 90 } }
+						}
+					}
+				}
+			}
+			frame = {
+				number = 9 # 70%
+				trigger = {
+					OR = {
+						AND = {
+							check_variable = { which = LQdspl_4_exp value = 910 }
+							NOT = { check_variable = { which = LQdspl_4_exp value = 940 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_4_exp value = 625 }
+							NOT = { check_variable = { which = LQdspl_4_exp value = 650 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_4_exp value = 390 }
+							NOT = { check_variable = { which = LQdspl_4_exp value = 410 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_4_exp value = 205 }
+							NOT = { check_variable = { which = LQdspl_4_exp value = 220 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_4_exp value = 70 }
+							NOT = { check_variable = { which = LQdspl_4_exp value = 80 } }
+						}
+					}
+				}
+			}
+			frame = {
+				number = 8 # 60%
+				trigger = {
+					OR = {
+						AND = {
+							check_variable = { which = LQdspl_4_exp value = 880 }
+							NOT = { check_variable = { which = LQdspl_4_exp value = 910 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_4_exp value = 600 }
+							NOT = { check_variable = { which = LQdspl_4_exp value = 625 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_4_exp value = 370 }
+							NOT = { check_variable = { which = LQdspl_4_exp value = 390 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_4_exp value = 190 }
+							NOT = { check_variable = { which = LQdspl_4_exp value = 205 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_4_exp value = 60 }
+							NOT = { check_variable = { which = LQdspl_4_exp value = 70 } }
+						}
+					}
+				}
+			}
+			frame = {
+				number = 7 # 50%
+				trigger = {
+					OR = {
+						AND = {
+							check_variable = { which = LQdspl_4_exp value = 850 }
+							NOT = { check_variable = { which = LQdspl_4_exp value = 880 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_4_exp value = 575 }
+							NOT = { check_variable = { which = LQdspl_4_exp value = 600 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_4_exp value = 350 }
+							NOT = { check_variable = { which = LQdspl_4_exp value = 370 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_4_exp value = 175 }
+							NOT = { check_variable = { which = LQdspl_4_exp value = 190 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_4_exp value = 50 }
+							NOT = { check_variable = { which = LQdspl_4_exp value = 60 } }
+						}
+					}
+				}
+			}
+			frame = {
+				number = 6 # 40%
+				trigger = {
+					OR = {
+						AND = {
+							check_variable = { which = LQdspl_4_exp value = 820 }
+							NOT = { check_variable = { which = LQdspl_4_exp value = 850 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_4_exp value = 550 }
+							NOT = { check_variable = { which = LQdspl_4_exp value = 575 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_4_exp value = 330 }
+							NOT = { check_variable = { which = LQdspl_4_exp value = 350 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_4_exp value = 160 }
+							NOT = { check_variable = { which = LQdspl_4_exp value = 175 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_4_exp value = 40 }
+							NOT = { check_variable = { which = LQdspl_4_exp value = 50 } }
+						}
+					}
+				}
+			}
+			frame = {
+				number = 5 # 30%
+				trigger = {
+					OR = {
+						AND = {
+							check_variable = { which = LQdspl_4_exp value = 790 }
+							NOT = { check_variable = { which = LQdspl_4_exp value = 820 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_4_exp value = 525 }
+							NOT = { check_variable = { which = LQdspl_4_exp value = 550 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_4_exp value = 310 }
+							NOT = { check_variable = { which = LQdspl_4_exp value = 330 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_4_exp value = 145 }
+							NOT = { check_variable = { which = LQdspl_4_exp value = 160 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_4_exp value = 30 }
+							NOT = { check_variable = { which = LQdspl_4_exp value = 40 } }
+						}
+					}
+				}
+			}
+			frame = {
+				number = 4 # 20%
+				trigger = {
+					OR = {
+						AND = {
+							check_variable = { which = LQdspl_4_exp value = 760 }
+							NOT = { check_variable = { which = LQdspl_4_exp value = 790 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_4_exp value = 500 }
+							NOT = { check_variable = { which = LQdspl_4_exp value = 525 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_4_exp value = 290 }
+							NOT = { check_variable = { which = LQdspl_4_exp value = 310 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_4_exp value = 130 }
+							NOT = { check_variable = { which = LQdspl_4_exp value = 145 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_4_exp value = 20 }
+							NOT = { check_variable = { which = LQdspl_4_exp value = 30 } }
+						}
+					}
+				}
+			}
+			frame = {
+				number = 3 # 10%
+				trigger = {
+					OR = {
+						AND = {
+							check_variable = { which = LQdspl_4_exp value = 730 }
+							NOT = { check_variable = { which = LQdspl_4_exp value = 760 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_4_exp value = 475 }
+							NOT = { check_variable = { which = LQdspl_4_exp value = 500 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_4_exp value = 270 }
+							NOT = { check_variable = { which = LQdspl_4_exp value = 290 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_4_exp value = 115 }
+							NOT = { check_variable = { which = LQdspl_4_exp value = 130 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_4_exp value = 10 }
+							NOT = { check_variable = { which = LQdspl_4_exp value = 20 } }
+						}
+					}
+				}
+			}
+			frame = {
+				number = 2 # 5%
+				trigger = {
+					OR = {
+						AND = {
+							check_variable = { which = LQdspl_4_exp value = 701 } 
+							NOT = { check_variable = { which = LQdspl_4_exp value = 730 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_4_exp value = 451 } 
+							NOT = { check_variable = { which = LQdspl_4_exp value = 475 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_4_exp value = 251 } 
+							NOT = { check_variable = { which = LQdspl_4_exp value = 270 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_4_exp value = 101 } 
+							NOT = { check_variable = { which = LQdspl_4_exp value = 115 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_4_exp value = 1 } 
+							NOT = { check_variable = { which = LQdspl_4_exp value = 10 } }
+						}
+					}
+				}
+			}
+			frame = {
+				number = 1 # 0%
+				trigger = {
+					always = yes
+				}
+			}
 		}
-		custom_text_box = { #学科4 经验
-			name = TextBox_LQdspl_4_exp_GetValue
-			potential = { always = yes }
+		custom_icon = { #等级
+			name = "icon_level_LQmundi_discipline_4"
+			potential = {}
+			frame = {
+				number = 6
+				trigger = { check_variable = { which = LQdspl_4_exp value = 1000 } }
+			}
+			frame = {
+				number = 5
+				trigger = { check_variable = { which = LQdspl_4_exp value = 700 } }
+			}
+			frame = {
+				number = 4
+				trigger = { check_variable = { which = LQdspl_4_exp value = 450 } }
+			}
+			frame = {
+				number = 3
+				trigger = { check_variable = { which = LQdspl_4_exp value = 250 } }
+			}
+			frame = {
+				number = 2
+				trigger = { check_variable = { which = LQdspl_4_exp value = 100 } }
+			}
+			frame = {
+				number = 1
+				trigger = { always = yes }
+			}
 		}
+		custom_icon = {
+			name = "icon_name_LQmundi_discipline_4"
+			potential = {}
+		}
+
 		custom_button = { #学科5
-			name = "button_LQmundi_discipline_5"
-			tooltip = button_LQmundi_discipline_5_tooltip
+			name = "button_exp_LQmundi_discipline_5"
+			tooltip = button_exp_LQmundi_discipline_5_tooltip
 			potential = {}
 			trigger = {}
 			effect = {
@@ -133,14 +1571,350 @@ custom_button = { #开关
 					value = 5
 				}
 			}
+			frame = { 
+				number = 13 # 100% 
+				trigger = {
+					check_variable = { which = LQdspl_5_exp value = 1000 }
+				}
+				
+			}
+			frame = {
+				number = 12 # 95%
+				trigger = {
+					OR = {
+						check_variable = { which = LQdspl_5_exp value = 985 }
+						AND = {
+							check_variable = { which = LQdspl_5_exp value = 687 }
+							NOT = { check_variable = { which = LQdspl_5_exp value = 700 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_5_exp value = 440 }
+							NOT = { check_variable = { which = LQdspl_5_exp value = 450 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_5_exp value = 242 }
+							NOT = { check_variable = { which = LQdspl_5_exp value = 250 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_5_exp value = 95 }
+							NOT = { check_variable = { which = LQdspl_5_exp value = 100 } }
+						}
+					}
+				}
+			}
+			frame = {
+				number = 11 # 90%
+				trigger = {
+					OR = {
+						AND = {
+							check_variable = { which = LQdspl_5_exp value = 970 }
+							NOT = { check_variable = { which = LQdspl_5_exp value = 985 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_5_exp value = 675 }
+							NOT = { check_variable = { which = LQdspl_5_exp value = 687 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_5_exp value = 430 }
+							NOT = { check_variable = { which = LQdspl_5_exp value = 440 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_5_exp value = 235 }
+							NOT = { check_variable = { which = LQdspl_5_exp value = 242 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_5_exp value = 90 }
+							NOT = { check_variable = { which = LQdspl_5_exp value = 95 } }
+						}
+					}
+				}
+			}
+			frame = {
+				number = 10 # 80%
+				trigger = {
+					OR = {
+						AND = {
+							check_variable = { which = LQdspl_5_exp value = 940 }
+							NOT = { check_variable = { which = LQdspl_5_exp value = 970 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_5_exp value = 650 }
+							NOT = { check_variable = { which = LQdspl_5_exp value = 675 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_5_exp value = 410 }
+							NOT = { check_variable = { which = LQdspl_5_exp value = 430 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_5_exp value = 220 }
+							NOT = { check_variable = { which = LQdspl_5_exp value = 235 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_5_exp value = 80 }
+							NOT = { check_variable = { which = LQdspl_5_exp value = 90 } }
+						}
+					}
+				}
+			}
+			frame = {
+				number = 9 # 70%
+				trigger = {
+					OR = {
+						AND = {
+							check_variable = { which = LQdspl_5_exp value = 910 }
+							NOT = { check_variable = { which = LQdspl_5_exp value = 940 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_5_exp value = 625 }
+							NOT = { check_variable = { which = LQdspl_5_exp value = 650 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_5_exp value = 390 }
+							NOT = { check_variable = { which = LQdspl_5_exp value = 410 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_5_exp value = 205 }
+							NOT = { check_variable = { which = LQdspl_5_exp value = 220 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_5_exp value = 70 }
+							NOT = { check_variable = { which = LQdspl_5_exp value = 80 } }
+						}
+					}
+				}
+			}
+			frame = {
+				number = 8 # 60%
+				trigger = {
+					OR = {
+						AND = {
+							check_variable = { which = LQdspl_5_exp value = 880 }
+							NOT = { check_variable = { which = LQdspl_5_exp value = 910 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_5_exp value = 600 }
+							NOT = { check_variable = { which = LQdspl_5_exp value = 625 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_5_exp value = 370 }
+							NOT = { check_variable = { which = LQdspl_5_exp value = 390 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_5_exp value = 190 }
+							NOT = { check_variable = { which = LQdspl_5_exp value = 205 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_5_exp value = 60 }
+							NOT = { check_variable = { which = LQdspl_5_exp value = 70 } }
+						}
+					}
+				}
+			}
+			frame = {
+				number = 7 # 50%
+				trigger = {
+					OR = {
+						AND = {
+							check_variable = { which = LQdspl_5_exp value = 850 }
+							NOT = { check_variable = { which = LQdspl_5_exp value = 880 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_5_exp value = 575 }
+							NOT = { check_variable = { which = LQdspl_5_exp value = 600 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_5_exp value = 350 }
+							NOT = { check_variable = { which = LQdspl_5_exp value = 370 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_5_exp value = 175 }
+							NOT = { check_variable = { which = LQdspl_5_exp value = 190 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_5_exp value = 50 }
+							NOT = { check_variable = { which = LQdspl_5_exp value = 60 } }
+						}
+					}
+				}
+			}
+			frame = {
+				number = 6 # 40%
+				trigger = {
+					OR = {
+						AND = {
+							check_variable = { which = LQdspl_5_exp value = 820 }
+							NOT = { check_variable = { which = LQdspl_5_exp value = 850 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_5_exp value = 550 }
+							NOT = { check_variable = { which = LQdspl_5_exp value = 575 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_5_exp value = 330 }
+							NOT = { check_variable = { which = LQdspl_5_exp value = 350 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_5_exp value = 160 }
+							NOT = { check_variable = { which = LQdspl_5_exp value = 175 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_5_exp value = 40 }
+							NOT = { check_variable = { which = LQdspl_5_exp value = 50 } }
+						}
+					}
+				}
+			}
+			frame = {
+				number = 5 # 30%
+				trigger = {
+					OR = {
+						AND = {
+							check_variable = { which = LQdspl_5_exp value = 790 }
+							NOT = { check_variable = { which = LQdspl_5_exp value = 820 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_5_exp value = 525 }
+							NOT = { check_variable = { which = LQdspl_5_exp value = 550 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_5_exp value = 310 }
+							NOT = { check_variable = { which = LQdspl_5_exp value = 330 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_5_exp value = 145 }
+							NOT = { check_variable = { which = LQdspl_5_exp value = 160 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_5_exp value = 30 }
+							NOT = { check_variable = { which = LQdspl_5_exp value = 40 } }
+						}
+					}
+				}
+			}
+			frame = {
+				number = 4 # 20%
+				trigger = {
+					OR = {
+						AND = {
+							check_variable = { which = LQdspl_5_exp value = 760 }
+							NOT = { check_variable = { which = LQdspl_5_exp value = 790 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_5_exp value = 500 }
+							NOT = { check_variable = { which = LQdspl_5_exp value = 525 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_5_exp value = 290 }
+							NOT = { check_variable = { which = LQdspl_5_exp value = 310 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_5_exp value = 130 }
+							NOT = { check_variable = { which = LQdspl_5_exp value = 145 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_5_exp value = 20 }
+							NOT = { check_variable = { which = LQdspl_5_exp value = 30 } }
+						}
+					}
+				}
+			}
+			frame = {
+				number = 3 # 10%
+				trigger = {
+					OR = {
+						AND = {
+							check_variable = { which = LQdspl_5_exp value = 730 }
+							NOT = { check_variable = { which = LQdspl_5_exp value = 760 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_5_exp value = 475 }
+							NOT = { check_variable = { which = LQdspl_5_exp value = 500 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_5_exp value = 270 }
+							NOT = { check_variable = { which = LQdspl_5_exp value = 290 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_5_exp value = 115 }
+							NOT = { check_variable = { which = LQdspl_5_exp value = 130 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_5_exp value = 10 }
+							NOT = { check_variable = { which = LQdspl_5_exp value = 20 } }
+						}
+					}
+				}
+			}
+			frame = {
+				number = 2 # 5%
+				trigger = {
+					OR = {
+						AND = {
+							check_variable = { which = LQdspl_5_exp value = 701 } 
+							NOT = { check_variable = { which = LQdspl_5_exp value = 730 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_5_exp value = 451 } 
+							NOT = { check_variable = { which = LQdspl_5_exp value = 475 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_5_exp value = 251 } 
+							NOT = { check_variable = { which = LQdspl_5_exp value = 270 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_5_exp value = 101 } 
+							NOT = { check_variable = { which = LQdspl_5_exp value = 115 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_5_exp value = 1 } 
+							NOT = { check_variable = { which = LQdspl_5_exp value = 10 } }
+						}
+					}
+				}
+			}
+			frame = {
+				number = 1 # 0%
+				trigger = {
+					always = yes
+				}
+			}
 		}
-		custom_text_box = { #学科5 经验
-			name = TextBox_LQdspl_5_exp_GetValue
-			potential = { always = yes }
+		custom_icon = { #等级
+			name = "icon_level_LQmundi_discipline_5"
+			potential = {}
+			frame = {
+				number = 6
+				trigger = { check_variable = { which = LQdspl_5_exp value = 1000 } }
+			}
+			frame = {
+				number = 5
+				trigger = { check_variable = { which = LQdspl_5_exp value = 700 } }
+			}
+			frame = {
+				number = 4
+				trigger = { check_variable = { which = LQdspl_5_exp value = 450 } }
+			}
+			frame = {
+				number = 3
+				trigger = { check_variable = { which = LQdspl_5_exp value = 250 } }
+			}
+			frame = {
+				number = 2
+				trigger = { check_variable = { which = LQdspl_5_exp value = 100 } }
+			}
+			frame = {
+				number = 1
+				trigger = { always = yes }
+			}
 		}
+		custom_icon = {
+			name = "icon_name_LQmundi_discipline_5"
+			potential = {}
+		}
+
 		custom_button = { #学科6
-			name = "button_LQmundi_discipline_6"
-			tooltip = button_LQmundi_discipline_6_tooltip
+			name = "button_exp_LQmundi_discipline_6"
+			tooltip = button_exp_LQmundi_discipline_6_tooltip
 			potential = {}
 			trigger = {}
 			effect = {
@@ -150,14 +1924,351 @@ custom_button = { #开关
 					value = 6
 				}
 			}
+			frame = { 
+				number = 13 # 100% 
+				trigger = {
+					check_variable = { which = LQdspl_6_exp value = 1000 }
+				}
+				
+			}
+			frame = {
+				number = 12 # 95%
+				trigger = {
+					OR = {
+						check_variable = { which = LQdspl_6_exp value = 985 }
+						AND = {
+							check_variable = { which = LQdspl_6_exp value = 687 }
+							NOT = { check_variable = { which = LQdspl_6_exp value = 700 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_6_exp value = 440 }
+							NOT = { check_variable = { which = LQdspl_6_exp value = 450 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_6_exp value = 242 }
+							NOT = { check_variable = { which = LQdspl_6_exp value = 250 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_6_exp value = 95 }
+							NOT = { check_variable = { which = LQdspl_6_exp value = 100 } }
+						}
+					}
+				}
+			}
+			frame = {
+				number = 11 # 90%
+				trigger = {
+					OR = {
+						AND = {
+							check_variable = { which = LQdspl_6_exp value = 970 }
+							NOT = { check_variable = { which = LQdspl_6_exp value = 985 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_6_exp value = 675 }
+							NOT = { check_variable = { which = LQdspl_6_exp value = 687 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_6_exp value = 430 }
+							NOT = { check_variable = { which = LQdspl_6_exp value = 440 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_6_exp value = 235 }
+							NOT = { check_variable = { which = LQdspl_6_exp value = 242 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_6_exp value = 90 }
+							NOT = { check_variable = { which = LQdspl_6_exp value = 95 } }
+						}
+					}
+				}
+			}
+			frame = {
+				number = 10 # 80%
+				trigger = {
+					OR = {
+						AND = {
+							check_variable = { which = LQdspl_6_exp value = 940 }
+							NOT = { check_variable = { which = LQdspl_6_exp value = 970 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_6_exp value = 650 }
+							NOT = { check_variable = { which = LQdspl_6_exp value = 675 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_6_exp value = 410 }
+							NOT = { check_variable = { which = LQdspl_6_exp value = 430 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_6_exp value = 220 }
+							NOT = { check_variable = { which = LQdspl_6_exp value = 235 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_6_exp value = 80 }
+							NOT = { check_variable = { which = LQdspl_6_exp value = 90 } }
+						}
+					}
+				}
+			}
+			frame = {
+				number = 9 # 70%
+				trigger = {
+					OR = {
+						AND = {
+							check_variable = { which = LQdspl_6_exp value = 910 }
+							NOT = { check_variable = { which = LQdspl_6_exp value = 940 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_6_exp value = 625 }
+							NOT = { check_variable = { which = LQdspl_6_exp value = 650 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_6_exp value = 390 }
+							NOT = { check_variable = { which = LQdspl_6_exp value = 410 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_6_exp value = 205 }
+							NOT = { check_variable = { which = LQdspl_6_exp value = 220 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_6_exp value = 70 }
+							NOT = { check_variable = { which = LQdspl_6_exp value = 80 } }
+						}
+					}
+				}
+			}
+			frame = {
+				number = 8 # 60%
+				trigger = {
+					OR = {
+						AND = {
+							check_variable = { which = LQdspl_6_exp value = 880 }
+							NOT = { check_variable = { which = LQdspl_6_exp value = 910 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_6_exp value = 600 }
+							NOT = { check_variable = { which = LQdspl_6_exp value = 625 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_6_exp value = 370 }
+							NOT = { check_variable = { which = LQdspl_6_exp value = 390 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_6_exp value = 190 }
+							NOT = { check_variable = { which = LQdspl_6_exp value = 205 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_6_exp value = 60 }
+							NOT = { check_variable = { which = LQdspl_6_exp value = 70 } }
+						}
+					}
+				}
+			}
+			frame = {
+				number = 7 # 50%
+				trigger = {
+					OR = {
+						AND = {
+							check_variable = { which = LQdspl_6_exp value = 850 }
+							NOT = { check_variable = { which = LQdspl_6_exp value = 880 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_6_exp value = 575 }
+							NOT = { check_variable = { which = LQdspl_6_exp value = 600 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_6_exp value = 350 }
+							NOT = { check_variable = { which = LQdspl_6_exp value = 370 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_6_exp value = 175 }
+							NOT = { check_variable = { which = LQdspl_6_exp value = 190 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_6_exp value = 50 }
+							NOT = { check_variable = { which = LQdspl_6_exp value = 60 } }
+						}
+					}
+				}
+			}
+			frame = {
+				number = 6 # 40%
+				trigger = {
+					OR = {
+						AND = {
+							check_variable = { which = LQdspl_6_exp value = 820 }
+							NOT = { check_variable = { which = LQdspl_6_exp value = 850 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_6_exp value = 550 }
+							NOT = { check_variable = { which = LQdspl_6_exp value = 575 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_6_exp value = 330 }
+							NOT = { check_variable = { which = LQdspl_6_exp value = 350 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_6_exp value = 160 }
+							NOT = { check_variable = { which = LQdspl_6_exp value = 175 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_6_exp value = 40 }
+							NOT = { check_variable = { which = LQdspl_6_exp value = 50 } }
+						}
+					}
+				}
+			}
+			frame = {
+				number = 5 # 30%
+				trigger = {
+					OR = {
+						AND = {
+							check_variable = { which = LQdspl_6_exp value = 790 }
+							NOT = { check_variable = { which = LQdspl_6_exp value = 820 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_6_exp value = 525 }
+							NOT = { check_variable = { which = LQdspl_6_exp value = 550 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_6_exp value = 310 }
+							NOT = { check_variable = { which = LQdspl_6_exp value = 330 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_6_exp value = 145 }
+							NOT = { check_variable = { which = LQdspl_6_exp value = 160 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_6_exp value = 30 }
+							NOT = { check_variable = { which = LQdspl_6_exp value = 40 } }
+						}
+					}
+				}
+			}
+			frame = {
+				number = 4 # 20%
+				trigger = {
+					OR = {
+						AND = {
+							check_variable = { which = LQdspl_6_exp value = 760 }
+							NOT = { check_variable = { which = LQdspl_6_exp value = 790 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_6_exp value = 500 }
+							NOT = { check_variable = { which = LQdspl_6_exp value = 525 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_6_exp value = 290 }
+							NOT = { check_variable = { which = LQdspl_6_exp value = 310 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_6_exp value = 130 }
+							NOT = { check_variable = { which = LQdspl_6_exp value = 145 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_6_exp value = 20 }
+							NOT = { check_variable = { which = LQdspl_6_exp value = 30 } }
+						}
+					}
+				}
+			}
+			frame = {
+				number = 3 # 10%
+				trigger = {
+					OR = {
+						AND = {
+							check_variable = { which = LQdspl_6_exp value = 730 }
+							NOT = { check_variable = { which = LQdspl_6_exp value = 760 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_6_exp value = 475 }
+							NOT = { check_variable = { which = LQdspl_6_exp value = 500 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_6_exp value = 270 }
+							NOT = { check_variable = { which = LQdspl_6_exp value = 290 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_6_exp value = 115 }
+							NOT = { check_variable = { which = LQdspl_6_exp value = 130 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_6_exp value = 10 }
+							NOT = { check_variable = { which = LQdspl_6_exp value = 20 } }
+						}
+					}
+				}
+			}
+			frame = {
+				number = 2 # 5%
+				trigger = {
+					OR = {
+						AND = {
+							check_variable = { which = LQdspl_6_exp value = 701 } 
+							NOT = { check_variable = { which = LQdspl_6_exp value = 730 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_6_exp value = 451 } 
+							NOT = { check_variable = { which = LQdspl_6_exp value = 475 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_6_exp value = 251 } 
+							NOT = { check_variable = { which = LQdspl_6_exp value = 270 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_6_exp value = 101 } 
+							NOT = { check_variable = { which = LQdspl_6_exp value = 115 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_6_exp value = 1 } 
+							NOT = { check_variable = { which = LQdspl_6_exp value = 10 } }
+						}
+					}
+				}
+			}
+			frame = {
+				number = 1 # 0%
+				trigger = {
+					always = yes
+				}
+			}
 		}
-		custom_text_box = { #学科6 经验
-			name = TextBox_LQdspl_6_exp_GetValue
-			potential = { always = yes }
+		custom_icon = { #等级
+			name = "icon_level_LQmundi_discipline_6"
+			potential = {}
+			frame = {
+				number = 6
+				trigger = { check_variable = { which = LQdspl_6_exp value = 1000 } }
+			}
+			frame = {
+				number = 5
+				trigger = { check_variable = { which = LQdspl_6_exp value = 700 } }
+			}
+			frame = {
+				number = 4
+				trigger = { check_variable = { which = LQdspl_6_exp value = 450 } }
+			}
+			frame = {
+				number = 3
+				trigger = { check_variable = { which = LQdspl_6_exp value = 250 } }
+			}
+			frame = {
+				number = 2
+				trigger = { check_variable = { which = LQdspl_6_exp value = 100 } }
+			}
+			frame = {
+				number = 1
+				trigger = { always = yes }
+			}
+			
 		}
+		custom_icon = {
+			name = "icon_name_LQmundi_discipline_6"
+			potential = {}
+		}
+
 		custom_button = { #学科7
-			name = "button_LQmundi_discipline_7"
-			tooltip = button_LQmundi_discipline_7_tooltip
+			name = "button_exp_LQmundi_discipline_7"
+			tooltip = button_exp_LQmundi_discipline_7_tooltip
 			potential = {}
 			trigger = {}
 			effect = {
@@ -167,14 +2278,351 @@ custom_button = { #开关
 					value = 7
 				}
 			}
+			frame = { 
+				number = 13 # 100% 
+				trigger = {
+					check_variable = { which = LQdspl_7_exp value = 1000 }
+				}
+				
+			}
+			frame = {
+				number = 12 # 95%
+				trigger = {
+					OR = {
+						check_variable = { which = LQdspl_7_exp value = 985 }
+						AND = {
+							check_variable = { which = LQdspl_7_exp value = 687 }
+							NOT = { check_variable = { which = LQdspl_7_exp value = 700 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_7_exp value = 440 }
+							NOT = { check_variable = { which = LQdspl_7_exp value = 450 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_7_exp value = 242 }
+							NOT = { check_variable = { which = LQdspl_7_exp value = 250 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_7_exp value = 95 }
+							NOT = { check_variable = { which = LQdspl_7_exp value = 100 } }
+						}
+					}
+				}
+			}
+			frame = {
+				number = 11 # 90%
+				trigger = {
+					OR = {
+						AND = {
+							check_variable = { which = LQdspl_7_exp value = 970 }
+							NOT = { check_variable = { which = LQdspl_7_exp value = 985 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_7_exp value = 675 }
+							NOT = { check_variable = { which = LQdspl_7_exp value = 687 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_7_exp value = 430 }
+							NOT = { check_variable = { which = LQdspl_7_exp value = 440 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_7_exp value = 235 }
+							NOT = { check_variable = { which = LQdspl_7_exp value = 242 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_7_exp value = 90 }
+							NOT = { check_variable = { which = LQdspl_7_exp value = 95 } }
+						}
+					}
+				}
+			}
+			frame = {
+				number = 10 # 80%
+				trigger = {
+					OR = {
+						AND = {
+							check_variable = { which = LQdspl_7_exp value = 940 }
+							NOT = { check_variable = { which = LQdspl_7_exp value = 970 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_7_exp value = 650 }
+							NOT = { check_variable = { which = LQdspl_7_exp value = 675 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_7_exp value = 410 }
+							NOT = { check_variable = { which = LQdspl_7_exp value = 430 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_7_exp value = 220 }
+							NOT = { check_variable = { which = LQdspl_7_exp value = 235 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_7_exp value = 80 }
+							NOT = { check_variable = { which = LQdspl_7_exp value = 90 } }
+						}
+					}
+				}
+			}
+			frame = {
+				number = 9 # 70%
+				trigger = {
+					OR = {
+						AND = {
+							check_variable = { which = LQdspl_7_exp value = 910 }
+							NOT = { check_variable = { which = LQdspl_7_exp value = 940 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_7_exp value = 625 }
+							NOT = { check_variable = { which = LQdspl_7_exp value = 650 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_7_exp value = 390 }
+							NOT = { check_variable = { which = LQdspl_7_exp value = 410 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_7_exp value = 205 }
+							NOT = { check_variable = { which = LQdspl_7_exp value = 220 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_7_exp value = 70 }
+							NOT = { check_variable = { which = LQdspl_7_exp value = 80 } }
+						}
+					}
+				}
+			}
+			frame = {
+				number = 8 # 60%
+				trigger = {
+					OR = {
+						AND = {
+							check_variable = { which = LQdspl_7_exp value = 880 }
+							NOT = { check_variable = { which = LQdspl_7_exp value = 910 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_7_exp value = 600 }
+							NOT = { check_variable = { which = LQdspl_7_exp value = 625 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_7_exp value = 370 }
+							NOT = { check_variable = { which = LQdspl_7_exp value = 390 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_7_exp value = 190 }
+							NOT = { check_variable = { which = LQdspl_7_exp value = 205 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_7_exp value = 60 }
+							NOT = { check_variable = { which = LQdspl_7_exp value = 70 } }
+						}
+					}
+				}
+			}
+			frame = {
+				number = 7 # 50%
+				trigger = {
+					OR = {
+						AND = {
+							check_variable = { which = LQdspl_7_exp value = 850 }
+							NOT = { check_variable = { which = LQdspl_7_exp value = 880 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_7_exp value = 575 }
+							NOT = { check_variable = { which = LQdspl_7_exp value = 600 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_7_exp value = 350 }
+							NOT = { check_variable = { which = LQdspl_7_exp value = 370 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_7_exp value = 175 }
+							NOT = { check_variable = { which = LQdspl_7_exp value = 190 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_7_exp value = 50 }
+							NOT = { check_variable = { which = LQdspl_7_exp value = 60 } }
+						}
+					}
+				}
+			}
+			frame = {
+				number = 6 # 40%
+				trigger = {
+					OR = {
+						AND = {
+							check_variable = { which = LQdspl_7_exp value = 820 }
+							NOT = { check_variable = { which = LQdspl_7_exp value = 850 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_7_exp value = 550 }
+							NOT = { check_variable = { which = LQdspl_7_exp value = 575 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_7_exp value = 330 }
+							NOT = { check_variable = { which = LQdspl_7_exp value = 350 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_7_exp value = 160 }
+							NOT = { check_variable = { which = LQdspl_7_exp value = 175 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_7_exp value = 40 }
+							NOT = { check_variable = { which = LQdspl_7_exp value = 50 } }
+						}
+					}
+				}
+			}
+			frame = {
+				number = 5 # 30%
+				trigger = {
+					OR = {
+						AND = {
+							check_variable = { which = LQdspl_7_exp value = 790 }
+							NOT = { check_variable = { which = LQdspl_7_exp value = 820 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_7_exp value = 525 }
+							NOT = { check_variable = { which = LQdspl_7_exp value = 550 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_7_exp value = 310 }
+							NOT = { check_variable = { which = LQdspl_7_exp value = 330 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_7_exp value = 145 }
+							NOT = { check_variable = { which = LQdspl_7_exp value = 160 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_7_exp value = 30 }
+							NOT = { check_variable = { which = LQdspl_7_exp value = 40 } }
+						}
+					}
+				}
+			}
+			frame = {
+				number = 4 # 20%
+				trigger = {
+					OR = {
+						AND = {
+							check_variable = { which = LQdspl_7_exp value = 760 }
+							NOT = { check_variable = { which = LQdspl_7_exp value = 790 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_7_exp value = 500 }
+							NOT = { check_variable = { which = LQdspl_7_exp value = 525 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_7_exp value = 290 }
+							NOT = { check_variable = { which = LQdspl_7_exp value = 310 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_7_exp value = 130 }
+							NOT = { check_variable = { which = LQdspl_7_exp value = 145 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_7_exp value = 20 }
+							NOT = { check_variable = { which = LQdspl_7_exp value = 30 } }
+						}
+					}
+				}
+			}
+			frame = {
+				number = 3 # 10%
+				trigger = {
+					OR = {
+						AND = {
+							check_variable = { which = LQdspl_7_exp value = 730 }
+							NOT = { check_variable = { which = LQdspl_7_exp value = 760 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_7_exp value = 475 }
+							NOT = { check_variable = { which = LQdspl_7_exp value = 500 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_7_exp value = 270 }
+							NOT = { check_variable = { which = LQdspl_7_exp value = 290 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_7_exp value = 115 }
+							NOT = { check_variable = { which = LQdspl_7_exp value = 130 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_7_exp value = 10 }
+							NOT = { check_variable = { which = LQdspl_7_exp value = 20 } }
+						}
+					}
+				}
+			}
+			frame = {
+				number = 2 # 5%
+				trigger = {
+					OR = {
+						AND = {
+							check_variable = { which = LQdspl_7_exp value = 701 } 
+							NOT = { check_variable = { which = LQdspl_7_exp value = 730 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_7_exp value = 451 } 
+							NOT = { check_variable = { which = LQdspl_7_exp value = 475 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_7_exp value = 251 } 
+							NOT = { check_variable = { which = LQdspl_7_exp value = 270 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_7_exp value = 101 } 
+							NOT = { check_variable = { which = LQdspl_7_exp value = 115 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_7_exp value = 1 } 
+							NOT = { check_variable = { which = LQdspl_7_exp value = 10 } }
+						}
+					}
+				}
+			}
+			frame = {
+				number = 1 # 0%
+				trigger = {
+					always = yes
+				}
+			}
+
 		}
-		custom_text_box = { #学科7 经验
-			name = TextBox_LQdspl_7_exp_GetValue
-			potential = { always = yes }
+		custom_icon = { #等级
+			name = "icon_level_LQmundi_discipline_7"
+			potential = {}
+			frame = {
+				number = 6
+				trigger = { check_variable = { which = LQdspl_7_exp value = 1000 } }
+			}
+			frame = {
+				number = 5
+				trigger = { check_variable = { which = LQdspl_7_exp value = 700 } }
+			}
+			frame = {
+				number = 4
+				trigger = { check_variable = { which = LQdspl_7_exp value = 450 } }
+			}
+			frame = {
+				number = 3
+				trigger = { check_variable = { which = LQdspl_7_exp value = 250 } }
+			}
+			frame = {
+				number = 2
+				trigger = { check_variable = { which = LQdspl_7_exp value = 100 } }
+			}
+			frame = {
+				number = 1
+				trigger = { always = yes }
+			}
 		}
+		custom_icon = {
+			name = "icon_name_LQmundi_discipline_7"
+			potential = {}
+		}
+
 		custom_button = { #学科8
-			name = "button_LQmundi_discipline_8"
-			tooltip = button_LQmundi_discipline_8_tooltip
+			name = "button_exp_LQmundi_discipline_8"
+			tooltip = button_exp_LQmundi_discipline_8_tooltip
 			potential = {}
 			trigger = {}
 			effect = {
@@ -184,11 +2632,347 @@ custom_button = { #开关
 					value = 8
 				}
 			}
+			frame = { 
+				number = 13 # 100% 
+				trigger = {
+					check_variable = { which = LQdspl_8_exp value = 1000 }
+				}
+				
+			}
+			frame = {
+				number = 12 # 95%
+				trigger = {
+					OR = {
+						check_variable = { which = LQdspl_8_exp value = 985 }
+						AND = {
+							check_variable = { which = LQdspl_8_exp value = 687 }
+							NOT = { check_variable = { which = LQdspl_8_exp value = 700 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_8_exp value = 440 }
+							NOT = { check_variable = { which = LQdspl_8_exp value = 450 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_8_exp value = 242 }
+							NOT = { check_variable = { which = LQdspl_8_exp value = 250 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_8_exp value = 95 }
+							NOT = { check_variable = { which = LQdspl_8_exp value = 100 } }
+						}
+					}
+				}
+			}
+			frame = {
+				number = 11 # 90%
+				trigger = {
+					OR = {
+						AND = {
+							check_variable = { which = LQdspl_8_exp value = 970 }
+							NOT = { check_variable = { which = LQdspl_8_exp value = 985 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_8_exp value = 675 }
+							NOT = { check_variable = { which = LQdspl_8_exp value = 687 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_8_exp value = 430 }
+							NOT = { check_variable = { which = LQdspl_8_exp value = 440 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_8_exp value = 235 }
+							NOT = { check_variable = { which = LQdspl_8_exp value = 242 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_8_exp value = 90 }
+							NOT = { check_variable = { which = LQdspl_8_exp value = 95 } }
+						}
+					}
+				}
+			}
+			frame = {
+				number = 10 # 80%
+				trigger = {
+					OR = {
+						AND = {
+							check_variable = { which = LQdspl_8_exp value = 940 }
+							NOT = { check_variable = { which = LQdspl_8_exp value = 970 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_8_exp value = 650 }
+							NOT = { check_variable = { which = LQdspl_8_exp value = 675 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_8_exp value = 410 }
+							NOT = { check_variable = { which = LQdspl_8_exp value = 430 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_8_exp value = 220 }
+							NOT = { check_variable = { which = LQdspl_8_exp value = 235 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_8_exp value = 80 }
+							NOT = { check_variable = { which = LQdspl_8_exp value = 90 } }
+						}
+					}
+				}
+			}
+			frame = {
+				number = 9 # 70%
+				trigger = {
+					OR = {
+						AND = {
+							check_variable = { which = LQdspl_8_exp value = 910 }
+							NOT = { check_variable = { which = LQdspl_8_exp value = 940 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_8_exp value = 625 }
+							NOT = { check_variable = { which = LQdspl_8_exp value = 650 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_8_exp value = 390 }
+							NOT = { check_variable = { which = LQdspl_8_exp value = 410 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_8_exp value = 205 }
+							NOT = { check_variable = { which = LQdspl_8_exp value = 220 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_8_exp value = 70 }
+							NOT = { check_variable = { which = LQdspl_8_exp value = 80 } }
+						}
+					}
+				}
+			}
+			frame = {
+				number = 8 # 60%
+				trigger = {
+					OR = {
+						AND = {
+							check_variable = { which = LQdspl_8_exp value = 880 }
+							NOT = { check_variable = { which = LQdspl_8_exp value = 910 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_8_exp value = 600 }
+							NOT = { check_variable = { which = LQdspl_8_exp value = 625 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_8_exp value = 370 }
+							NOT = { check_variable = { which = LQdspl_8_exp value = 390 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_8_exp value = 190 }
+							NOT = { check_variable = { which = LQdspl_8_exp value = 205 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_8_exp value = 60 }
+							NOT = { check_variable = { which = LQdspl_8_exp value = 70 } }
+						}
+					}
+				}
+			}
+			frame = {
+				number = 7 # 50%
+				trigger = {
+					OR = {
+						AND = {
+							check_variable = { which = LQdspl_8_exp value = 850 }
+							NOT = { check_variable = { which = LQdspl_8_exp value = 880 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_8_exp value = 575 }
+							NOT = { check_variable = { which = LQdspl_8_exp value = 600 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_8_exp value = 350 }
+							NOT = { check_variable = { which = LQdspl_8_exp value = 370 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_8_exp value = 175 }
+							NOT = { check_variable = { which = LQdspl_8_exp value = 190 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_8_exp value = 50 }
+							NOT = { check_variable = { which = LQdspl_8_exp value = 60 } }
+						}
+					}
+				}
+			}
+			frame = {
+				number = 6 # 40%
+				trigger = {
+					OR = {
+						AND = {
+							check_variable = { which = LQdspl_8_exp value = 820 }
+							NOT = { check_variable = { which = LQdspl_8_exp value = 850 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_8_exp value = 550 }
+							NOT = { check_variable = { which = LQdspl_8_exp value = 575 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_8_exp value = 330 }
+							NOT = { check_variable = { which = LQdspl_8_exp value = 350 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_8_exp value = 160 }
+							NOT = { check_variable = { which = LQdspl_8_exp value = 175 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_8_exp value = 40 }
+							NOT = { check_variable = { which = LQdspl_8_exp value = 50 } }
+						}
+					}
+				}
+			}
+			frame = {
+				number = 5 # 30%
+				trigger = {
+					OR = {
+						AND = {
+							check_variable = { which = LQdspl_8_exp value = 790 }
+							NOT = { check_variable = { which = LQdspl_8_exp value = 820 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_8_exp value = 525 }
+							NOT = { check_variable = { which = LQdspl_8_exp value = 550 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_8_exp value = 310 }
+							NOT = { check_variable = { which = LQdspl_8_exp value = 330 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_8_exp value = 145 }
+							NOT = { check_variable = { which = LQdspl_8_exp value = 160 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_8_exp value = 30 }
+							NOT = { check_variable = { which = LQdspl_8_exp value = 40 } }
+						}
+					}
+				}
+			}
+			frame = {
+				number = 4 # 20%
+				trigger = {
+					OR = {
+						AND = {
+							check_variable = { which = LQdspl_8_exp value = 760 }
+							NOT = { check_variable = { which = LQdspl_8_exp value = 790 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_8_exp value = 500 }
+							NOT = { check_variable = { which = LQdspl_8_exp value = 525 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_8_exp value = 290 }
+							NOT = { check_variable = { which = LQdspl_8_exp value = 310 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_8_exp value = 130 }
+							NOT = { check_variable = { which = LQdspl_8_exp value = 145 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_8_exp value = 20 }
+							NOT = { check_variable = { which = LQdspl_8_exp value = 30 } }
+						}
+					}
+				}
+			}
+			frame = {
+				number = 3 # 10%
+				trigger = {
+					OR = {
+						AND = {
+							check_variable = { which = LQdspl_8_exp value = 730 }
+							NOT = { check_variable = { which = LQdspl_8_exp value = 760 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_8_exp value = 475 }
+							NOT = { check_variable = { which = LQdspl_8_exp value = 500 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_8_exp value = 270 }
+							NOT = { check_variable = { which = LQdspl_8_exp value = 290 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_8_exp value = 115 }
+							NOT = { check_variable = { which = LQdspl_8_exp value = 130 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_8_exp value = 10 }
+							NOT = { check_variable = { which = LQdspl_8_exp value = 20 } }
+						}
+					}
+				}
+			}
+			frame = {
+				number = 2 # 5%
+				trigger = {
+					OR = {
+						AND = {
+							check_variable = { which = LQdspl_8_exp value = 701 } 
+							NOT = { check_variable = { which = LQdspl_8_exp value = 730 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_8_exp value = 451 } 
+							NOT = { check_variable = { which = LQdspl_8_exp value = 475 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_8_exp value = 251 } 
+							NOT = { check_variable = { which = LQdspl_8_exp value = 270 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_8_exp value = 101 } 
+							NOT = { check_variable = { which = LQdspl_8_exp value = 115 } }
+						}
+						AND = {
+							check_variable = { which = LQdspl_8_exp value = 1 } 
+							NOT = { check_variable = { which = LQdspl_8_exp value = 10 } }
+						}
+					}
+				}
+			}
+			frame = {
+				number = 1 # 0%
+				trigger = {
+					always = yes
+				}
+			}
 		}
-		custom_text_box = { #学科8 经验
-			name = TextBox_LQdspl_8_exp_GetValue
-			potential = { always = yes }
+		custom_icon = { #等级
+			name = "icon_level_LQmundi_discipline_8"
+			potential = {}
+			frame = {
+				number = 6
+				trigger = { check_variable = { which = LQdspl_8_exp value = 1000 } }
+			}
+			frame = {
+				number = 5
+				trigger = { check_variable = { which = LQdspl_8_exp value = 700 } }
+			}
+			frame = {
+				number = 4
+				trigger = { check_variable = { which = LQdspl_8_exp value = 450 } }
+			}
+			frame = {
+				number = 3
+				trigger = { check_variable = { which = LQdspl_8_exp value = 250 } }
+			}
+			frame = {
+				number = 2
+				trigger = { check_variable = { which = LQdspl_8_exp value = 100 } }
+			}
+			frame = {
+				number = 1
+				trigger = { always = yes }
+			}
 		}
+		custom_icon = {
+			name = "icon_name_LQmundi_discipline_8"
+			potential = {}
+		}
+
 	# 常用法术
 		###
 		###
@@ -196,137 +2980,536 @@ custom_button = { #开关
 
 	##学科法术子窗口
 		custom_window = { #学科法术子窗口
-			name = window_LQmundi_discipline_sorcery
+			name = window_LQmundi_sorcery
 			potential = { 
 				has_country_flag = LQmundi_discipline_sorcery_flag
 			}
 		}
 		custom_button = { #关闭窗口
-			name = "button_LQmundi_discipline_sorcery_ESCAPE"
-			tooltip = button_LQmundi_discipline_sorcery_ESCAPE_tooltip
+			name = "button_LQmundi_sorcery_ESCAPE"
+			tooltip = button_LQmundi_sorcery_ESCAPE_tooltip
 			potential = {}
 			trigger = {}
 			effect = {
 				clr_country_flag = LQmundi_discipline_sorcery_flag
 			}
 		}
-		# 学科1法术列表
-			custom_window = { #学科1
-				name = window_LQmundi_discipline_1
-				potential = { 
-					is_variable_equal = {
-						which = LQmundi_discipline_x
-						value = 1
-					}
+
+		# 学科1
+			custom_window = { # 学科1 法术与状态
+				name = window_LQdspl_1_sorcery
+				potential = {
+					is_variable_equal = { which = LQmundi_discipline_x value = 1 }
 				}
+			}
+			custom_text_box = { # 学科1 当前经验
+				name = TextBox_LQdspl_1_exp
+				potential = { always = yes }
+			}
+
+			custom_button = { # 学科1 常用 1
+				name = button_LQdspl_1_sorceryclass_common_Sequence_1
+				tooltip = button_LQdspl_1_sorceryclass_common_Sequence_1_tooltip
+				potential = { }
+				trigger = { }
+				effect = { }
+			}
+			custom_button = { # 学科1 常用 2
+				name = button_LQdspl_1_sorceryclass_common_Sequence_2
+				tooltip = button_LQdspl_1_sorceryclass_common_Sequence_2_tooltip
+				potential = { }
+				trigger = { }
+				effect = { }
+			}
+			custom_button = { # 学科1 常用 3
+				name = button_LQdspl_1_sorceryclass_common_Sequence_3
+				tooltip = button_LQdspl_1_sorceryclass_common_Sequence_3_tooltip
+				potential = { }
+				trigger = { }
+				effect = { }
+			}
+			custom_button = { # 学科1 常用 4
+				name = button_LQdspl_1_sorceryclass_common_Sequence_4
+				tooltip = button_LQdspl_1_sorceryclass_common_Sequence_4_tooltip
+				potential = { }
+				trigger = { }
+				effect = { }
+			}
+			custom_button = { # 学科1 常用 5
+				name = button_LQdspl_1_sorceryclass_common_Sequence_5
+				tooltip = button_LQdspl_1_sorceryclass_common_Sequence_5_tooltip
+				potential = { }
+				trigger = { }
+				effect = { }
+			}
+
+			custom_window = { # 学科1 信仰法术-侠道
+				name = window_LQdspl_1_sorceryclass_religion_accretive
+				potential = {
+					religion = accretive_path
+				}
+			}
+			custom_window = { # 学科1 信仰法术-化道
+				name = window_LQdspl_1_sorceryclass_religion_transmutative
+				potential = {
+					religion = transmutative_path
+				}
+			}
+			custom_window = { # 学科1 信仰法术-噬道
+				name = window_LQdspl_1_sorceryclass_religion_devouring
+				potential = {
+					religion = devouring_path
+				}
+			}
+			custom_window = { # 学科1 信仰法术-蛊道
+				name = window_LQdspl_1_sorceryclass_religion_gu
+				potential = {
+					religion = gu_path
+				}
+			}
+			custom_window = { # 学科1 信仰法术-决道
+				name = window_LQdspl_1_sorceryclass_religion_jue
+				potential = {
+					religion = jue_path
+				}
+			}
+			custom_window = { # 学科1 信仰法术-环道
+				name = window_LQdspl_1_sorceryclass_religion_huan
+				potential = {
+					religion = huan_path
+				}
+			}
+		# 学科2
+			custom_window = { # 学科2 法术与状态
+				name = window_LQdspl_2_sorcery
+				potential = {
+					is_variable_equal = { which = LQmundi_discipline_x value = 2 }
+				}
+			}
+			custom_text_box = { # 学科2 当前经验
+				name = TextBox_LQdspl_2_exp
+				potential = { always = yes }
+			}
+			custom_button = { # 学科1 常用 1
+				name = button_LQdspl_1_sorceryclass_common_Sequence_1
+				tooltip = button_LQdspl_1_sorceryclass_common_Sequence_1_tooltip
+				potential = { }
+				trigger = { }
+				effect = { }
+			}
+			custom_button = { # 学科1 常用 2
+				name = button_LQdspl_1_sorceryclass_common_Sequence_2
+				tooltip = button_LQdspl_1_sorceryclass_common_Sequence_2_tooltip
+				potential = { }
+				trigger = { }
+				effect = { }
+			}
+			custom_button = { # 学科1 常用 3
+				name = button_LQdspl_1_sorceryclass_common_Sequence_3
+				tooltip = button_LQdspl_1_sorceryclass_common_Sequence_3_tooltip
+				potential = { }
+				trigger = { }
+				effect = { }
+			}
+			custom_button = { # 学科1 常用 4
+				name = button_LQdspl_1_sorceryclass_common_Sequence_4
+				tooltip = button_LQdspl_1_sorceryclass_common_Sequence_4_tooltip
+				potential = { }
+				trigger = { }
+				effect = { }
+			}
+			custom_button = { # 学科1 常用 5
+				name = button_LQdspl_1_sorceryclass_common_Sequence_5
+				tooltip = button_LQdspl_1_sorceryclass_common_Sequence_5_tooltip
+				potential = { }
+				trigger = { }
+				effect = { }
 			}
 			
-			custom_button = { #法术1 效果
-				name = "button_LQmundi_discipline_1_sorcery_1"
-				tooltip = button_LQmundi_discipline_1_sorcery_1_tooltip
-				potential = {}
-				trigger = {}
-				effect = {
-					add_country_modifier = {
-						name = test_modifier_1
-						duration = 3650
-					}
+			custom_window = { # 学科2 信仰法术-侠道
+				name = window_LQdspl_2_sorceryclass_religion_accretive
+				potential = {
+					religion = accretive_path
+				}
+			}
+			custom_window = { # 学科2 信仰法术-化道
+				name = window_LQdspl_2_sorceryclass_religion_transmutative
+				potential = {
+					religion = transmutative_path
+				}
+			}
+			custom_window = { # 学科2 信仰法术-噬道
+				name = window_LQdspl_2_sorceryclass_religion_devouring
+				potential = {
+					religion = devouring_path
+				}
+			}
+			custom_window = { # 学科2 信仰法术-蛊道
+				name = window_LQdspl_2_sorceryclass_religion_gu
+				potential = {
+					religion = gu_path
+				}
+			}
+			custom_window = { # 学科2 信仰法术-决道
+				name = window_LQdspl_2_sorceryclass_religion_jue
+				potential = {
+					religion = jue_path
+				}
+			}
+			custom_window = { # 学科2 信仰法术-环道
+				name = window_LQdspl_2_sorceryclass_religion_huan
+				potential = {
+					religion = huan_path
+				}
+			}
+		# 学科3
+			custom_window = { # 学科3 法术与状态
+				name = window_LQdspl_3_sorcery
+				potential = {
+					is_variable_equal = { which = LQmundi_discipline_x value = 3 }
+				}
+			}
+			custom_text_box = { # 学科3 当前经验
+				name = TextBox_LQdspl_3_exp
+				potential = { always = yes }
+			}
+			custom_window = { # 学科3 信仰法术-侠道
+				name = window_LQdspl_3_sorceryclass_religion_accretive
+				potential = {
+					religion = accretive_path
+				}
+			}
+			custom_window = { # 学科3 信仰法术-化道
+				name = window_LQdspl_3_sorceryclass_religion_transmutative
+				potential = {
+					religion = transmutative_path
+				}
+			}
+			custom_window = { # 学科3 信仰法术-噬道
+				name = window_LQdspl_3_sorceryclass_religion_devouring
+				potential = {
+					religion = devouring_path
+				}
+			}
+			custom_window = { # 学科3 信仰法术-蛊道
+				name = window_LQdspl_3_sorceryclass_religion_gu
+				potential = {
+					religion = gu_path
+				}
+			}
+			custom_window = { # 学科3 信仰法术-决道
+				name = window_LQdspl_3_sorceryclass_religion_jue
+				potential = {
+					religion = jue_path
+				}
+			}
+			custom_window = { # 学科3 信仰法术-环道
+				name = window_LQdspl_3_sorceryclass_religion_huan
+				potential = {
+					religion = huan_path
+				}
+			}
+		# 学科4
+			custom_window = { # 学科4 法术与状态
+				name = window_LQdspl_4_sorcery
+				potential = {
+					is_variable_equal = { which = LQmundi_discipline_x value = 4 }
+				}
+			}
+			custom_text_box = { # 学科4 当前经验
+				name = TextBox_LQdspl_4_exp
+				potential = { always = yes }
+			}
+			custom_window = { # 学科4 信仰法术-侠道
+				name = window_LQdspl_4_sorceryclass_religion_accretive
+				potential = {
+					religion = accretive_path
+				}
+			}
+			custom_window = { # 学科4 信仰法术-化道
+				name = window_LQdspl_4_sorceryclass_religion_transmutative
+				potential = {
+					religion = transmutative_path
+				}
+			}
+			custom_window = { # 学科4 信仰法术-噬道
+				name = window_LQdspl_4_sorceryclass_religion_devouring
+				potential = {
+					religion = devouring_path
+				}
+			}
+			custom_window = { # 学科4 信仰法术-蛊道
+				name = window_LQdspl_4_sorceryclass_religion_gu
+				potential = {
+					religion = gu_path
+				}
+			}
+			custom_window = { # 学科4 信仰法术-决道
+				name = window_LQdspl_4_sorceryclass_religion_jue
+				potential = {
+					religion = jue_path
+				}
+			}
+			custom_window = { # 学科4 信仰法术-环道
+				name = window_LQdspl_4_sorceryclass_religion_huan
+				potential = {
+					religion = huan_path
+				}
+			}
+		# 学科5
+			custom_window = { # 学科5 法术与状态
+				name = window_LQdspl_5_sorcery
+				potential = {
+					is_variable_equal = { which = LQmundi_discipline_x value = 5 }
+				}
+			}
+			custom_text_box = { # 学科5 当前经验
+				name = TextBox_LQdspl_5_exp
+				potential = { always = yes }
+			}
+			custom_window = { # 学科5 信仰法术-侠道
+				name = window_LQdspl_5_sorceryclass_religion_accretive
+				potential = {
+					religion = accretive_path
+				}
+			}
+			custom_window = { # 学科5 信仰法术-化道
+				name = window_LQdspl_5_sorceryclass_religion_transmutative
+				potential = {
+					religion = transmutative_path
+				}
+			}
+			custom_window = { # 学科5 信仰法术-噬道
+				name = window_LQdspl_5_sorceryclass_religion_devouring
+				potential = {
+					religion = devouring_path
+				}
+			}
+			custom_window = { # 学科5 信仰法术-蛊道
+				name = window_LQdspl_5_sorceryclass_religion_gu
+				potential = {
+					religion = gu_path
+				}
+			}
+			custom_window = { # 学科5 信仰法术-决道
+				name = window_LQdspl_5_sorceryclass_religion_jue
+				potential = {
+					religion = jue_path
+				}
+			}
+			custom_window = { # 学科5 信仰法术-环道
+				name = window_LQdspl_5_sorceryclass_religion_huan
+				potential = {
+					religion = huan_path
+				}
+			}
+		# 学科6
+			custom_window = { # 学科6 法术与状态
+				name = window_LQdspl_6_sorcery
+				potential = {
+					is_variable_equal = { which = LQmundi_discipline_x value = 6 }
+				}
+			}
+			custom_text_box = { # 学科6 当前经验
+				name = TextBox_LQdspl_6_exp
+				potential = { always = yes }
+			}
+			custom_window = { # 学科6 信仰法术-侠道
+				name = window_LQdspl_6_sorceryclass_religion_accretive
+				potential = {
+					religion = accretive_path
+				}
+			}
+			custom_window = { # 学科6 信仰法术-化道
+				name = window_LQdspl_6_sorceryclass_religion_transmutative
+				potential = {
+					religion = transmutative_path
+				}
+			}
+			custom_window = { # 学科6 信仰法术-噬道
+				name = window_LQdspl_6_sorceryclass_religion_devouring
+				potential = {
+					religion = devouring_path
+				}
+			}
+			custom_window = { # 学科6 信仰法术-蛊道
+				name = window_LQdspl_6_sorceryclass_religion_gu
+				potential = {
+					religion = gu_path
+				}
+			}
+			custom_window = { # 学科6 信仰法术-决道
+				name = window_LQdspl_6_sorceryclass_religion_jue
+				potential = {
+					religion = jue_path
+				}
+			}
+			custom_window = { # 学科6 信仰法术-环道
+				name = window_LQdspl_6_sorceryclass_religion_huan
+				potential = {
+					religion = huan_path
+				}
+			}
+		# 学科7
+			custom_window = { # 学科7 法术与状态
+				name = window_LQdspl_7_sorcery
+				potential = {
+					is_variable_equal = { which = LQmundi_discipline_x value = 7 }
+				}
+			}
+			custom_text_box = { # 学科7 当前经验
+				name = TextBox_LQdspl_7_exp
+				potential = { always = yes }
+			}
+			custom_window = { # 学科7 信仰法术-侠道
+				name = window_LQdspl_7_sorceryclass_religion_accretive
+				potential = {
+					religion = accretive_path
+				}
+			}
+			custom_window = { # 学科7 信仰法术-化道
+				name = window_LQdspl_7_sorceryclass_religion_transmutative
+				potential = {
+					religion = transmutative_path
+				}
+			}
+			custom_window = { # 学科7 信仰法术-噬道
+				name = window_LQdspl_7_sorceryclass_religion_devouring
+				potential = {
+					religion = devouring_path
+				}
+			}
+			custom_window = { # 学科7 信仰法术-蛊道
+				name = window_LQdspl_7_sorceryclass_religion_gu
+				potential = {
+					religion = gu_path
+				}
+			}
+			custom_window = { # 学科7 信仰法术-决道
+				name = window_LQdspl_7_sorceryclass_religion_jue
+				potential = {
+					religion = jue_path
+				}
+			}
+			custom_window = { # 学科7 信仰法术-环道
+				name = window_LQdspl_7_sorceryclass_religion_huan
+				potential = {
+					religion = huan_path
+				}
+			}
+		# 学科8
+			custom_window = { # 学科8 法术与状态
+				name = window_LQdspl_8_sorcery
+				potential = {
+					is_variable_equal = { which = LQmundi_discipline_x value = 8 }
+				}
+			}
+			custom_text_box = { # 学科8 当前经验
+				name = TextBox_LQdspl_8_exp
+				potential = { always = yes }
+			}
+			custom_window = { # 学科8 信仰法术-侠道
+				name = window_LQdspl_8_sorceryclass_religion_accretive
+				potential = {
+					religion = accretive_path
+				}
+			}
+			custom_window = { # 学科8 信仰法术-化道
+				name = window_LQdspl_8_sorceryclass_religion_transmutative
+				potential = {
+					religion = transmutative_path
+				}
+			}
+			custom_window = { # 学科8 信仰法术-噬道
+				name = window_LQdspl_8_sorceryclass_religion_devouring
+				potential = {
+					religion = devouring_path
+				}
+			}
+			custom_window = { # 学科8 信仰法术-蛊道
+				name = window_LQdspl_8_sorceryclass_religion_gu
+				potential = {
+					religion = gu_path
+				}
+			}
+			custom_window = { # 学科8 信仰法术-决道
+				name = window_LQdspl_8_sorceryclass_religion_jue
+				potential = {
+					religion = jue_path
+				}
+			}
+			custom_window = { # 学科8 信仰法术-环道
+				name = window_LQdspl_8_sorceryclass_religion_huan
+				potential = {
+					religion = huan_path
+				}
+			}
 
-					LQmundi_cost_LQpower_script_effect = { value = 10 penalty = 0 } #消耗灵气
-					LQmundi_gain_effect_LQdspl_x_exp_script_effect = { value = 10 discipline_sequence = 1 } #获取经验
-				}
-			}
-			custom_button = { #法术2 效果
-				name = "button_LQmundi_discipline_1_sorcery_2"
-				tooltip = button_LQmundi_discipline_1_sorcery_2_tooltip
-				potential = {}
-				trigger = {}
-				effect = {
-					add_country_modifier = {
-						name = test_modifier_2
-						duration = 3650
-					}
-					# add_patriarch_authority = -10
-				}
-			}
-			custom_button = { #法术3 效果
-				name = "button_LQmundi_discipline_1_sorcery_3"
-				tooltip = button_LQmundi_discipline_1_sorcery_3_tooltip
-				potential = {}
-				trigger = {}
-				effect = {
-					add_country_modifier = {
-						name = test_modifier_3
-						duration = 3650
-					}
-					# add_patriarch_authority = -10
-				}
-			}
-			custom_button = { #法术4 效果
-				name = "button_LQmundi_discipline_1_sorcery_4"
-				tooltip = button_LQmundi_discipline_1_sorcery_4_tooltip
-				potential = {}
-				trigger = {}
-				effect = {
-					add_country_modifier = {
-						name = test_modifier_4
-						duration = 3650
-					}
-					# add_patriarch_authority = -10
-				}
-			}
-			custom_button = { #法术5 效果
-				name = "button_LQmundi_discipline_1_sorcery_5"
-				tooltip = button_LQmundi_discipline_1_sorcery_5_tooltip
-				potential = {}
-				trigger = {}
-				effect = {
-					add_country_modifier = {
-						name = test_modifier_5
-						duration = 3650
-					}
-					# add_patriarch_authority = -10
-				}
-			}
-			custom_button = { #法术6 效果
-				name = "button_LQmundi_discipline_1_sorcery_6"
-				tooltip = button_LQmundi_discipline_1_sorcery_6_tooltip
-				potential = {}
-				trigger = {}
-				effect = {
-					add_country_modifier = {
-						name = test_modifier_6
-						duration = 3650
-					}
-					# add_patriarch_authority = -10
-				}
-			}
-			custom_button = { #法术7 效果
-				name = "button_LQmundi_discipline_1_sorcery_7"
-				tooltip = button_LQmundi_discipline_1_sorcery_7_tooltip
-				potential = {}
-				trigger = {}
-				effect = {
-					add_country_modifier = {
-						name = test_modifier_7
-						duration = 3650
-					}
-					# add_patriarch_authority = -10
-				}
-			}
-			custom_button = { #法术8 效果
-				name = "button_LQmundi_discipline_1_sorcery_8"
-				tooltip = button_LQmundi_discipline_1_sorcery_8_tooltip
-				potential = {}
-				trigger = {}
-				effect = {
-					add_country_modifier = {
-						name = test_modifier_8
-						duration = 3650
-					}
-					# add_patriarch_authority = -10
-				}
-			}
+
+
+
+
+
+
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		###################################
+
+
+		# custom_window = { #
+		# 	name = 
+		# 	potential = {}
+		# }
+		# custom_window = { #
+		# 	name = 
+		# 	potential = {}
+		# }
+		# custom_window = { #
+		# 	name = 
+		# 	potential = {}
+		# }
+		# custom_window = { #
+		# 	name = 
+		# 	potential = {}
+		# }
+		# custom_window = { #
+		# 	name = 
+		# 	potential = {}
+		# }
+		# custom_window = { #
+		# 	name = 
+		# 	potential = {}
+		# }
+		# custom_window = { #
+		# 	name = 
+		# 	potential = {}
+		# }
+		# custom_window = { #
+		# 	name = 
+		# 	potential = {}
+		# }
+		# custom_window = { #
+		# 	name = 
+		# 	potential = {}
+		# }
+		# custom_window = { #
+		# 	name = 
+		# 	potential = {}
+		# }
 
 
 

@@ -1,8 +1,8 @@
 ﻿l_english:
  test_decision_002_title:0 "desicion002:LQpower_current=[Root.LQpower_current.GetValue]"
  test_decision_002_desc:0 "desicion002:LQpower_current=[Root.LQpower_current.GetValue]"
- test_decision_003_title:0 "desicion003:monthly_LQpower_regen_var=[Root.monthly_LQpower_regen_var.GetValue]"
- test_decision_003_desc:0 "desicion003:monthly_LQpower_regen_var=[Root.monthly_LQpower_regen_var.GetValue]"
+ test_decision_003_title:0 "desicion003:LQpower_current_percentage=[Root.LQpower_current_percentage.GetValue]"
+ test_decision_003_desc:0 "desicion003:LQpower_current_percentage=[Root.LQpower_current_percentage.GetValue]"
 
  test_shaliu:0 "™lAm"
  test_yvyang:0 "‰s3–"

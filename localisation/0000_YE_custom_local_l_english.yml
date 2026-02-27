@@ -1,4 +1,8 @@
 l_english:
+ 
+
+
+ # 下面不知道干什么用的
  string_tag_is_whatever:0 "i dont care tag"
  string_tag_is_not_FRA:0 "no,not fra"
  string_tag_is_FRA:0 "yes,is fra"

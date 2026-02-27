@@ -9,7 +9,7 @@ religion = accretive_path
 
 technology_group = tech_halessi
 
-capital = 8137
+capital = 8273
 
 
 1000.1.1 = {

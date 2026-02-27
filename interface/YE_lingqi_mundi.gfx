@@ -7,80 +7,195 @@ spriteTypes = {
 		name = "GFX_background_lingqi_mundi"
 		texturefile = "gfx/interface/AH_custom_GUI/lingqi_mundi/background_lingqi_mundi.dds"
 	}
-	spriteType = {
-		name = "GFX_button_LQmundi_discipline_1"
-		texturefile = "gfx/interface/AH_custom_GUI/lingqi_mundi/button_LQmundi_discipline_x/button_LQmundi_discipline_1.dds"
-	}
-	spriteType = {
-		name = "GFX_button_LQmundi_discipline_2"
-		texturefile = "gfx/interface/AH_custom_GUI/lingqi_mundi/button_LQmundi_discipline_x/button_LQmundi_discipline_2.dds"
-	}
-	spriteType = {
-		name = "GFX_button_LQmundi_discipline_3"
-		texturefile = "gfx/interface/AH_custom_GUI/lingqi_mundi/button_LQmundi_discipline_x/button_LQmundi_discipline_3.dds"
-	}
-	spriteType = {
-		name = "GFX_button_LQmundi_discipline_4"
-		texturefile = "gfx/interface/AH_custom_GUI/lingqi_mundi/button_LQmundi_discipline_x/button_LQmundi_discipline_4.dds"
-	}
-	spriteType = {
-		name = "GFX_button_LQmundi_discipline_5"
-		texturefile = "gfx/interface/AH_custom_GUI/lingqi_mundi/button_LQmundi_discipline_x/button_LQmundi_discipline_5.dds"
-	}
-	spriteType = {
-		name = "GFX_button_LQmundi_discipline_6"
-		texturefile = "gfx/interface/AH_custom_GUI/lingqi_mundi/button_LQmundi_discipline_x/button_LQmundi_discipline_6.dds"
-	}
-	spriteType = {
-		name = "GFX_button_LQmundi_discipline_7"
-		texturefile = "gfx/interface/AH_custom_GUI/lingqi_mundi/button_LQmundi_discipline_x/button_LQmundi_discipline_7.dds"
-	}
-	spriteType = {
-		name = "GFX_button_LQmundi_discipline_8"
-		texturefile = "gfx/interface/AH_custom_GUI/lingqi_mundi/button_LQmundi_discipline_x/button_LQmundi_discipline_8.dds"
-	}
 
-
-	spriteType = {
-		name = "GFX_background_LQmundi_discipline_sorcery"
-		texturefile = "gfx/interface/AH_custom_GUI/lingqi_mundi/discipline_x_sorcery_x/background_LQmundi_discipline_sorcery.dds"
-	}
-	spriteType = {
-		name = "GFX_button_LQmundi_discipline_1_sorcery_x"
-		texturefile = "gfx/interface/AH_custom_GUI/lingqi_mundi/discipline_x_sorcery_x/button_LQmundi_discipline_x_sorcery_x.dds"
-	}
 	
 	spriteType = {
-		name = "GFX_icon_LQmundi_discipline_1_sorcery_1_text"
-		texturefile = "gfx/interface/AH_custom_GUI/lingqi_mundi/discipline_x_sorcery_x/icon_LQmundi_discipline_x_sorcery_1_text.dds"
+		name = "GFX_icon_progressbar_LQpower"
+		texturefile = "gfx/interface/AH_custom_GUI/lingqi_mundi/icon_progressbar_LQpower.dds"
+		noOfFrames = 21
+	}
+
+	spriteType = {
+		name = "GFX_button_exp_LQmundi_discipline_x_color_1"
+		texturefile = "gfx/interface/AH_custom_GUI/lingqi_mundi/button_LQmundi_discipline_x/button_exp_LQmundi_discipline_x_color_1.dds"
+		noOfFrames = 13
 	}
 	spriteType = {
-		name = "GFX_icon_LQmundi_discipline_1_sorcery_2_text"
-		texturefile = "gfx/interface/AH_custom_GUI/lingqi_mundi/discipline_x_sorcery_x/icon_LQmundi_discipline_x_sorcery_2_text.dds"
+		name = "GFX_button_exp_LQmundi_discipline_x_color_2"
+		texturefile = "gfx/interface/AH_custom_GUI/lingqi_mundi/button_LQmundi_discipline_x/button_exp_LQmundi_discipline_x_color_2.dds"
+		noOfFrames = 13
 	}
 	spriteType = {
-		name = "GFX_icon_LQmundi_discipline_1_sorcery_3_text"
-		texturefile = "gfx/interface/AH_custom_GUI/lingqi_mundi/discipline_x_sorcery_x/icon_LQmundi_discipline_x_sorcery_3_text.dds"
+		name = "GFX_button_exp_LQmundi_discipline_x_color_3"
+		texturefile = "gfx/interface/AH_custom_GUI/lingqi_mundi/button_LQmundi_discipline_x/button_exp_LQmundi_discipline_x_color_3.dds"
+		noOfFrames = 13
 	}
 	spriteType = {
-		name = "GFX_icon_LQmundi_discipline_1_sorcery_4_text"
-		texturefile = "gfx/interface/AH_custom_GUI/lingqi_mundi/discipline_x_sorcery_x/icon_LQmundi_discipline_x_sorcery_4_text.dds"
+		name = "GFX_button_exp_LQmundi_discipline_x_color_4"
+		texturefile = "gfx/interface/AH_custom_GUI/lingqi_mundi/button_LQmundi_discipline_x/button_exp_LQmundi_discipline_x_color_4.dds"
+		noOfFrames = 13
+	}
+
+	spriteType = {
+		name = "GFX_icon_level_LQmundi_discipline_x"
+		texturefile = "gfx/interface/AH_custom_GUI/lingqi_mundi/button_LQmundi_discipline_x/icon_level_LQmundi_discipline_x.dds"
+		noOfFrames = 6
+	}
+
+	
+	spriteType = {
+		name = "GFX_icon_name_LQmundi_discipline_1"
+		texturefile = "gfx/interface/AH_custom_GUI/lingqi_mundi/button_LQmundi_discipline_x/icon_name_LQmundi_discipline_1.dds"
 	}
 	spriteType = {
-		name = "GFX_icon_LQmundi_discipline_1_sorcery_5_text"
-		texturefile = "gfx/interface/AH_custom_GUI/lingqi_mundi/discipline_x_sorcery_x/icon_LQmundi_discipline_x_sorcery_5_text.dds"
+		name = "GFX_icon_name_LQmundi_discipline_2"
+		texturefile = "gfx/interface/AH_custom_GUI/lingqi_mundi/button_LQmundi_discipline_x/icon_name_LQmundi_discipline_2.dds"
 	}
 	spriteType = {
-		name = "GFX_icon_LQmundi_discipline_1_sorcery_6_text"
-		texturefile = "gfx/interface/AH_custom_GUI/lingqi_mundi/discipline_x_sorcery_x/icon_LQmundi_discipline_x_sorcery_6_text.dds"
+		name = "GFX_icon_name_LQmundi_discipline_3"
+		texturefile = "gfx/interface/AH_custom_GUI/lingqi_mundi/button_LQmundi_discipline_x/icon_name_LQmundi_discipline_3.dds"
 	}
 	spriteType = {
-		name = "GFX_icon_LQmundi_discipline_1_sorcery_7_text"
-		texturefile = "gfx/interface/AH_custom_GUI/lingqi_mundi/discipline_x_sorcery_x/icon_LQmundi_discipline_x_sorcery_7_text.dds"
+		name = "GFX_icon_name_LQmundi_discipline_4"
+		texturefile = "gfx/interface/AH_custom_GUI/lingqi_mundi/button_LQmundi_discipline_x/icon_name_LQmundi_discipline_4.dds"
 	}
 	spriteType = {
-		name = "GFX_icon_LQmundi_discipline_1_sorcery_8_text"
-		texturefile = "gfx/interface/AH_custom_GUI/lingqi_mundi/discipline_x_sorcery_x/icon_LQmundi_discipline_x_sorcery_8_text.dds"
+		name = "GFX_icon_name_LQmundi_discipline_5"
+		texturefile = "gfx/interface/AH_custom_GUI/lingqi_mundi/button_LQmundi_discipline_x/icon_name_LQmundi_discipline_5.dds"
 	}
+	spriteType = {
+		name = "GFX_icon_name_LQmundi_discipline_6"
+		texturefile = "gfx/interface/AH_custom_GUI/lingqi_mundi/button_LQmundi_discipline_x/icon_name_LQmundi_discipline_6.dds"
+	}
+	spriteType = {
+		name = "GFX_icon_name_LQmundi_discipline_7"
+		texturefile = "gfx/interface/AH_custom_GUI/lingqi_mundi/button_LQmundi_discipline_x/icon_name_LQmundi_discipline_7.dds"
+	}
+	spriteType = {
+		name = "GFX_icon_name_LQmundi_discipline_8"
+		texturefile = "gfx/interface/AH_custom_GUI/lingqi_mundi/button_LQmundi_discipline_x/icon_name_LQmundi_discipline_8.dds"
+	}
+
+
+
+
+
+	spriteType = {
+		name = "GFX_background_LQmundi_sorcery"
+		texturefile = "gfx/interface/AH_custom_GUI/lingqi_mundi/sorcery_subwindow/background_LQmundi_sorcery.dds"
+	}
+	spriteType = {
+		name = "GFX_button_LQmundi_sorcery_ESCAPE"
+		texturefile = "gfx/interface/AH_custom_GUI/lingqi_mundi/sorcery_subwindow/button_LQmundi_sorcery_ESCAPE.dds"
+	}
+
+	spriteType = {
+		name = "GFX_icon_progressbar_exp_LQmundi_discipline_x"
+		texturefile = "gfx/interface/AH_custom_GUI/lingqi_mundi/sorcery_subwindow/exp_bar/icon_progressbar_exp_LQmundi_discipline_x.dds"
+	}
+	spriteType = {
+		name = "GFX_icon_category_name_LQmindi_discipline_1"
+		texturefile = "gfx/interface/AH_custom_GUI/lingqi_mundi/sorcery_subwindow/exp_bar/icon_category_name_LQmindi_discipline_1.dds"
+	}
+	spriteType = {
+		name = "GFX_icon_category_name_LQmindi_discipline_2"
+		texturefile = "gfx/interface/AH_custom_GUI/lingqi_mundi/sorcery_subwindow/exp_bar/icon_category_name_LQmindi_discipline_2.dds"
+	}
+	spriteType = {
+		name = "GFX_icon_category_name_LQmindi_discipline_3"
+		texturefile = "gfx/interface/AH_custom_GUI/lingqi_mundi/sorcery_subwindow/exp_bar/icon_category_name_LQmindi_discipline_3.dds"
+	}
+	spriteType = {
+		name = "GFX_icon_category_name_LQmindi_discipline_4"
+		texturefile = "gfx/interface/AH_custom_GUI/lingqi_mundi/sorcery_subwindow/exp_bar/icon_category_name_LQmindi_discipline_4.dds"
+	}
+	spriteType = {
+		name = "GFX_icon_category_name_LQmindi_discipline_5"
+		texturefile = "gfx/interface/AH_custom_GUI/lingqi_mundi/sorcery_subwindow/exp_bar/icon_category_name_LQmindi_discipline_5.dds"
+	}
+	spriteType = {
+		name = "GFX_icon_category_name_LQmindi_discipline_6"
+		texturefile = "gfx/interface/AH_custom_GUI/lingqi_mundi/sorcery_subwindow/exp_bar/icon_category_name_LQmindi_discipline_6.dds"
+	}
+	spriteType = {
+		name = "GFX_icon_category_name_LQmindi_discipline_7"
+		texturefile = "gfx/interface/AH_custom_GUI/lingqi_mundi/sorcery_subwindow/exp_bar/icon_category_name_LQmindi_discipline_7.dds"
+	}
+	spriteType = {
+		name = "GFX_icon_category_name_LQmindi_discipline_8"
+		texturefile = "gfx/interface/AH_custom_GUI/lingqi_mundi/sorcery_subwindow/exp_bar/icon_category_name_LQmindi_discipline_8.dds"
+	}
+
+	spriteType = {
+		name = "GFX_icon_sorceryclass_common"
+		texturefile = "gfx/interface/AH_custom_GUI/lingqi_mundi/sorcery_subwindow/sorceryclass_common/icon_sorceryclass_common.dds"
+	}
+	spriteType = {
+		name = "GFX_icon_sorceryclass_religion_accretive"
+		texturefile = "gfx/interface/AH_custom_GUI/lingqi_mundi/sorcery_subwindow/sorceryclass_religion/icon_sorceryclass_religion_accretive.dds"
+	}
+	spriteType = {
+		name = "GFX_icon_sorceryclass_religion_transmutative"
+		texturefile = "gfx/interface/AH_custom_GUI/lingqi_mundi/sorcery_subwindow/sorceryclass_religion/icon_sorceryclass_religion_transmutative.dds"
+	}
+	spriteType = {
+		name = "GFX_icon_sorceryclass_religion_devouring"
+		texturefile = "gfx/interface/AH_custom_GUI/lingqi_mundi/sorcery_subwindow/sorceryclass_religion/icon_sorceryclass_religion_devouring.dds"
+	}
+	spriteType = {
+		name = "GFX_icon_sorceryclass_religion_gu"
+		texturefile = "gfx/interface/AH_custom_GUI/lingqi_mundi/sorcery_subwindow/sorceryclass_religion/icon_sorceryclass_religion_gu.dds"
+	}
+	spriteType = {
+		name = "GFX_icon_sorceryclass_religion_jue"
+		texturefile = "gfx/interface/AH_custom_GUI/lingqi_mundi/sorcery_subwindow/sorceryclass_religion/icon_sorceryclass_religion_jue.dds"
+	}
+	spriteType = {
+		name = "GFX_icon_sorceryclass_religion_huan"
+		texturefile = "gfx/interface/AH_custom_GUI/lingqi_mundi/sorcery_subwindow/sorceryclass_religion/icon_sorceryclass_religion_huan.dds"
+	}
+	spriteType = {
+		name = "GFX_icon_sorceryclass_locked"
+		texturefile = "gfx/interface/AH_custom_GUI/lingqi_mundi/sorcery_subwindow/sorceryclass_locked/icon_sorceryclass_locked.dds"
+	}
+	spriteType = {
+		name = "GFX_icon_sorceryclass_secret"
+		texturefile = "gfx/interface/AH_custom_GUI/lingqi_mundi/sorcery_subwindow/sorceryclass_secret/icon_sorceryclass_secret.dds"
+	}
+
+	spriteType = {
+		name = "GFX_button_LQdspl_x_sorceryclass_y_Sequence_z"
+		texturefile = "gfx/interface/AH_custom_GUI/lingqi_mundi/sorcery_subwindow/button_LQdspl_x_sorceryclass_y_Sequence_z.dds"
+	}
+	# spriteType = {
+	# 	name = ""
+	# 	texturefile = ""
+	# }
+
+	# spriteType = {
+	# 	name = ""
+	# 	texturefile = ""
+	# }
+	# spriteType = {
+	# 	name = ""
+	# 	texturefile = ""
+	# }
+	# spriteType = {
+	# 	name = ""
+	# 	texturefile = ""
+	# }
+	# spriteType = {
+	# 	name = ""
+	# 	texturefile = ""
+	# }
+	# spriteType = {
+	# 	name = ""
+	# 	texturefile = ""
+	# }
+	# spriteType = {
+	# 	name = ""
+	# 	texturefile = ""
+	# }
+
 
 }

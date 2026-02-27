@@ -1,10 +1,10 @@
-owner = YB2
-controller = YB2
+owner = YA9
+controller = YA9
 is_city = no
-culture = jichuan
+culture = beikling
 religion = devouring_path
-trade_goods = dyes
+trade_goods = grain
 base_tax = 2
 base_manpower = 1
 base_production = 3
-add_core = YB2
+add_core = YA9
