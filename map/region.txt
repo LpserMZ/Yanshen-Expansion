@@ -2093,6 +2093,7 @@ luojiang_region = {
 		lj4_area
 		lj5_area
 		lj6_area
+		lj7_area
 		hongnguan_area
 		mulim_area
 		iongsim_area
@@ -2128,6 +2129,7 @@ jinxun_region = {
 		jx5_area
 		jx6_area
 		jx7_area
+		jx8_area
 		erluxi_area
 		liuminxiang_area
 		balrijin_area

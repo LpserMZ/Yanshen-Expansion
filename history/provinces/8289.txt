@@ -1,0 +1,10 @@
+owner = Y08
+controller = Y08
+add_core = Y08
+culture = jiangszun
+religion = accretive_path
+base_tax = 9
+base_production = 7
+base_manpower = 6
+trade_goods = silk
+is_city = yes

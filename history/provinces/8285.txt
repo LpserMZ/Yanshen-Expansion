@@ -1,0 +1,10 @@
+add_core = Y03
+owner = Y03
+culture = beikling
+religion = devouring_path
+controller = Y03
+is_city = no
+trade_goods = grain
+base_tax = 2
+base_manpower = 2
+base_production = 4
