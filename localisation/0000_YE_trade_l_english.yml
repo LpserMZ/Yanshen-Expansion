@@ -1,0 +1,16 @@
+﻿l_english:
+ qingjiang:0 "nml"
+ jianwu:0 "ZWfk"
+ jvanfa_isles:0 "wSÑS²›S"
+
+ trade_company_qingjiang:0 "nmlyr¸‹8f:S"
+ TRADE_COMPANY_QINGJIANG_Root_GetName:0 "[Root.GetAdjective]nmllQøS"
+ TRADE_COMPANY_QINGJIANG_Qingjiang_Trade_Company:0 "nml8flQøS"
+
+ trade_company_jianwu:0 "ZWfkyr¸‹8f:S"
+ TRADE_COMPANY_JIANWU_Root_GetName:0 "[Root.GetAdjective]ZWfklQøS"
+ TRADE_COMPANY_JIANWU_Jianwu_Trade_Company:0 "ZWfk8flQøS"
+
+ trade_company_jvanfa_isles:0 "wSÑS²›Syr¸‹8f:S"
+ TRADE_COMPANY_JVANFA_ISLES_Root_GetName:0 "[Root.GetAdjective]wSÑS²›SlQøS"
+ TRADE_COMPANY_JVANFA_ISLES_Jvanfa_Isles_Trade_Company:0 "wSÑS²›S8flQøS"

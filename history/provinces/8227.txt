@@ -1,0 +1,10 @@
+add_core = R65
+owner = R65
+base_tax = 1
+base_manpower = 1
+base_production = 1
+culture = undergrowth_goblin
+trade_goods = serpentbloom
+religion = goblinic_shamanism
+controller = R65
+is_city = no

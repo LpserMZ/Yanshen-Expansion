@@ -2,8 +2,8 @@
 owner = R78
 controller = R78
 add_core = R78
-culture = royal_harimari
-religion = high_philosophy
+culture = shamadhan
+religion = accretive_path
 base_tax = 4
 base_production = 4
 base_manpower = 3

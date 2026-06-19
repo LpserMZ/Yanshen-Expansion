@@ -37,20 +37,19 @@ country_event = { # 1 土匪猖獗
 		}
 	}
 	trigger = {
-		any_owned_province = {
-			region = wuxun_region		
-			NOT = { area = zhicha_area }
-			NOT = { area = yodhilakra_area }
-			NOT = { area = sir_area }
-			NOT = { area = pharata_area }
-			NOT = { area = chuhui_area }
-			NOT = { area = nadida_area }
-		}
-		NOT = { tag = R94 }
-		NOT = { tag = R95 }
-		NOT = { tag = R96 }
-		NOT = { tag = YA1 }
-		NOT = { tag = YA2 }
+		# any_owned_province = {
+		# 	region = wuxun_region		
+		# 	NOT = { area = wx4_area }
+		# 	NOT = { area = yodhilakra_area }
+		# 	NOT = { area = sir_area }
+		# 	NOT = { area = pharata_area }
+		# 	NOT = { area = tietyuan_area }
+		# 	NOT = { area = mogutian_area }
+		# }
+		# NOT = { tag = R94 }
+		# NOT = { tag = R95 }
+		# NOT = { tag = R96 }
+		always = no
 	}
 
 	option = {
@@ -87,10 +86,11 @@ province_event = { # 2 黍离之悲-诸圣城
 	is_triggered_only = yes
 
 	immediate = {
-		add_base_tax = -3
-		add_base_production = -3
-		add_base_manpower = -3
-		add_permanent_province_modifier = { name = command_picking_through_ruin duration = 18250 }
+		# add_base_tax = -3
+		# add_base_production = -3
+		# add_base_manpower = -3
+		# add_permanent_province_modifier = { name = command_picking_through_ruin duration = 18250 }
+		generic_remove_race_minority_size_effect = { race = hobgoblin }
 		hidden_effect = {
 			YB8 = {
 				country_event = {
@@ -116,18 +116,20 @@ province_event = { # 2 黍离之悲-诸圣城
 		}
 	}
 
-	option = { # 留下大地精
+	option = { # 遵守诺言
 		name = YE_Wuxunflows.2.a
 		ai_chance = { factor = 1 }
 		owner = {
 			add_manpower = 1
 			add_treasury = 10
 		}
+		8004 = { remove_core = R80 add_core = YB8 cede_province = YB8 }
+		4529 = { remove_core = R80 add_core = YB8 cede_province = YB8 }
 	}
-	option = { # 驱逐大地精
+	option = { # 拒不交付
 		name = YE_Wuxunflows.2.b
 		ai_chance = { factor = 0 }
-		generic_remove_race_minority_size_effect = { race = hobgoblin }
+		
 	}
 }	
 country_event = { # 3 加税-娑梨婆罗汉 内政
@@ -333,14 +335,13 @@ country_event = { # 9 受命北伐-白翼
 	option = { #遵旨 
 		name = YE_Wuxunflows.9.a
 		ai_chance = { factor = 1 }
-		4535 = {
-			add_claim = ROOT
-		}
-		8129 = {
-			add_claim = ROOT
-		}
-		4536 = {
-			add_claim = ROOT
+		every_neighbor_province = {
+			limit = {
+				owner = {
+					culture_group = hobgoblin
+				}
+			}
+			add_permanent_claim = ROOT
 		}
 		every_neighbor_country = {
 			limit = {
@@ -532,10 +533,10 @@ country_event = { # 14 颓垣事变-娑梨婆罗汉
 			add_territorial_core = ROOT
 			cede_province = ROOT
 		}
-		8124 = {
-			add_territorial_core = ROOT
-			cede_province = ROOT
-		}
+		# 8124 = {
+		# 	add_territorial_core = ROOT
+		# 	cede_province = ROOT
+		# }
 		YB8 = {
 			country_event = {
 				id = YE_Wuxunflows.16
@@ -569,10 +570,10 @@ country_event = { # 15 被没收-白翼
 			add_territorial_core = R80
 			cede_province = R80
 		}
-		8124 = {
-			add_territorial_core = R80
-			cede_province = R80
-		}
+		# 8124 = {
+		# 	add_territorial_core = R80
+		# 	cede_province = R80
+		# }
 		R80 = {
 			vassalize = ROOT
 		}
@@ -838,7 +839,7 @@ country_event = { # 24 白翼
 
 	immediate = {
 		R80 = {
-			set_country_flag = disable_call_military_allies_flag
+			set_country_flag = no_callaction
 		}
 	}
 	after = {

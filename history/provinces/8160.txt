@@ -1,17 +1,10 @@
-owner = Y01
-controller = Y01
-add_core = Y01
-culture = horned_ogre
-religion = devouring_path
-
-hre = no
-
-base_tax = 1
-base_production = 1
-base_manpower = 1
-
-trade_goods = incense
-
-capital = ""
-
-is_city = yes
+add_core = Y16
+owner = Y16
+culture = jiangyang
+religion = accretive_path
+controller = Y16
+is_city = no
+trade_goods = grain
+base_tax = 2
+base_manpower = 3
+base_production = 2

@@ -1,10 +1,10 @@
 add_core = Y14
 owner = Y14
-controller = Y14
-is_city = no
 culture = jiangyang
 religion = accretive_path
-trade_goods = tea
-base_tax = 1
-base_manpower = 3
+controller = Y14
+is_city = no
+trade_goods = livestock
+base_tax = 2
+base_manpower = 2
 base_production = 3

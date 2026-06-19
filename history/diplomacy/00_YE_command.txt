@@ -1,21 +1,8 @@
+
 dependency = {
-	subject_type = vassal
+	subject_type = the_commond_governor_vassal
 	first = R62
-	second = R94
-	start_date = 1444.1.1
-	end_date = 1500.1.1
-}
-dependency = {
-	subject_type = vassal
-	first = R62
-	second = R95
-	start_date = 1444.1.1
-	end_date = 1500.1.1
-}
-dependency = {
-	subject_type = vassal
-	first = R62
-	second = R96
+	second = R79
 	start_date = 1444.1.1
 	end_date = 1500.1.1
 }
@@ -37,20 +24,6 @@ dependency = {
 }
 
 
-dependency = {
-	subject_type = the_commond_governor_vassal
-	first = R62
-	second = YA1
-	start_date = 1444.1.1
-	end_date = 1500.1.1
-}
-dependency = {
-	subject_type = the_commond_governor_vassal
-	first = R62
-	second = YA2
-	start_date = 1444.1.1
-	end_date = 1500.1.1
-}
 dependency = {
 	subject_type = the_commond_governor_vassal
 	first = R62
@@ -136,25 +109,3 @@ dependency = {
 	start_date = 1444.1.1
 	end_date = 1500.1.1
 }
-
-# dependency = {
-	subject_type = the_commond_governor_vassal
-# 	first = R62
-# 	second = 
-# 	start_date = 1444.1.1
-# 	end_date = 1500.1.1
-# }
-# dependency = {
-	subject_type = the_commond_governor_vassal
-# 	first = R62
-# 	second = 
-# 	start_date = 1444.1.1
-# 	end_date = 1500.1.1
-# }
-# dependency = {
-	subject_type = the_commond_governor_vassal
-# 	first = R62
-# 	second = 
-# 	start_date = 1444.1.1
-# 	end_date = 1500.1.1
-# }

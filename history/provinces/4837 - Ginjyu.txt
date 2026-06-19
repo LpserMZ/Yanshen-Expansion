@@ -1,17 +1,10 @@
 owner = Y23
 controller = Y23
 add_core = Y23
-culture = bokai 
+culture = naamjyut
 religion = transmutative_path
-
-hre = no
-
-base_tax = 1
-base_production = 1
-base_manpower = 1
-
+base_tax = 3
+base_production = 3
+base_manpower = 2
 trade_goods = iron
-
-capital = ""
-
 is_city = yes

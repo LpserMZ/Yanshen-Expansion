@@ -1,21 +1,25 @@
-YA1 = "countries/Bei4ling4.txt"
-YA2 = "countries/Xiongling.txt"
+YA1 = "countries/State_Xiajie.txt"
+YA2 = "countries/State_Shannan.txt"
 
-YA3 = "countries/Qvsaduluo.txt"
-YA4 = "countries/Xiangdu.txt"
-YA5 = "countries/Jiaduoda.txt"
-YA6 = "countries/Jiaduofujai.txt"
+YA3 = "countries/Qvsaduluo.txt" 
+YB1 = "countries/Hanjialuofu.txt" 
+YB6 = "countries/Sajiatuoye.txt" 
+YB8 = "countries/Baiyi.txt"
+
 
 YA7 = "countries/Chili.txt"
 YA8 = "countries/Hehuan.txt"
 YA9 = "countries/Lingfang.txt"
 
-YB1 = "countries/Hanjialuofu.txt"
-YB2 = "countries/Shannapo.txt"
-YB3 = "countries/Duoluoboluo.txt"
-YB4 = "countries/Qiluobuluo.txt"
-YB5 = "countries/Qvduomixie.txt"
-YB6 = "countries/Sajiatuoye.txt"
 
-YB7 = "countries/Zhongcha.txt"
-YB8 = "countries/Baiyi.txt"
+YA4 = "countries/Colony_Liuxv.txt"
+YA5 = "countries/Colony_Shayuan.txt"
+YA6 = "countries/Colony_Canglian.txt"
+YB2 = "countries/Colony_Haiqing.txt"
+
+YB3 = "countries/Colony_Mangtan.txt"
+YB4 = "countries/Colony_Shuanghe.txt"
+YB5 = "countries/Colony_Lufan.txt"
+
+YB7 = "countries/Colony_Yvying.txt"
+YB9 = "countries/Duhu_Xvanzhou.txt"

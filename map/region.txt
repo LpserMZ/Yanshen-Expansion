@@ -79,6 +79,7 @@ haraf_region = {
 		taldoud_kaysa_area
 		gommiochand_area
 		drabs_cambann_area
+		cialliande_area
 	}
 }
 
@@ -580,7 +581,6 @@ sarmadfar_region = {
 		gaenosca_area
 		toreiel_area
 		dubpar_area
-		cialliande_area
 	}
 }
 
@@ -1030,7 +1030,7 @@ dao_nako_region = {
 		dao_nako_coast_area
 		masirijiri_area
 		ninki_nanka_bada_area
-		asanbosom_tu_area
+		asanbosam_tu_area
 		azziza_tu_area
 		dogo_babolo_area
 		narawan_jigin_area
@@ -1183,7 +1183,7 @@ katala_raz_region = {
 		kakhaz_raktata_area
 		yassa_tara_area
 		karach_area
-		batal_area
+		zatal_area
 		gasha_area
 		ishyaga_area
 		peta_ra_thusk_area
@@ -2015,292 +2015,156 @@ deepwoods_portal_region = {
 ########################################
 # Haless			                   #
 ########################################
-xun_region = {
-	areas = {
-		bianfang_area
-		bianyuan_area
-		tietyuan_area
 
-		jinqiu_area
-		jingai_area
-		tiaochi_area
-		hubao_area
-		balrijin_area
+wuxun_region = {
+	areas = {
+		wx1_area
+		wx2_area
+		wx3_area
+		wx4_area
 		
+		khadisrapur_area
+		nakara_area
+		munlanan_area
+		khasardul_area
+		raghajandi_area
+		kradhungur_area
+		tamvihar_area
+		khamarutar_area
+		ghatasak_area
+		marudhoj_area
+		nadida_area
+		pharata_area
+		sir_area
+		yodhilakra_area
+		tietyuan_area
+		mogutian_area
+	}
+	monsoon = {
+		00.07.01
+		00.08.30
+	}
+}
+zhaoxun_region = {
+	areas = {
+		zx1_area
+		zx2_area
+		zx3_area
+		zx4_area
+		zx5_area
+		zx6_area
+		ml_cave5_area
+		moryokang_area
+		jinqiu_area
+		bianyuan_area
+		bianfang_area
 		jiangszun_area
 		tianszi_area
-		
-		yangcheng_area
-		linyuan_area
-		yingzhen_area
-		anjiang_area
-		yanzhong_area	
-		
-		moryokang_area
 	}
-		monsoon = {
+	monsoon = {
 		00.05.01
 		00.06.30
 	}
 }
-yue_region = {
+zhuyue_region = {
 	areas = {
-		tunayuan_area
-
-		lamzung_area
+		zy1_area
+		zy2_area
+		zy3_area
+		zy4_area
+		zy5_area
+		zy6_area
 		jyutsai_area
-		
-		shian_area
-		xiaowu_area
-		yueying_area
+		lamzung_area
 		wanglam_area
-		hungngon_area		
+		hungngon_area
+
 	}
-		monsoon = {
+	monsoon = {
 		00.05.01
 		00.06.30
 	}
 }
-luo_region = {
+luojiang_region = {
 	areas = {
-		rixi_area
+		lj1_area
+		lj2_area
+		lj3_area
+		lj4_area
+		lj5_area
+		lj6_area
+		hongnguan_area
+		mulim_area
+		iongsim_area
 		gungi_area
 		xiyun_area
 		luoyip_area
-		wangyueting_area
-		iongsim_area
 
-		guzhan_area
-		linxiandu_area
-		mulim_area
-		hongnguan_area
-		zonglin_area		
 	}
-		monsoon = {
+	monsoon = {
 		00.05.01
 		00.06.30
 	}
 }
-jin_region = {
+yanxin_region = {
 	areas = {
-		jinjiang_area
+		yx1_area
+		yx2_area
+		anjiang_area
+		yanzhong_area
+		linyuan_area
+	}
+	monsoon = {
+		00.05.01
+		00.06.30
+	}
+}
+jinxun_region = {
+	areas = {
+		jx1_area
+		jx2_area
+		jx3_area
+		jx4_area
+		jx5_area
+		jx6_area
+		jx7_area
 		erluxi_area
 		liuminxiang_area
-		tiansai_area
-		tonglei_area
-		beikyuan_area
-
-		tianlou_area
-		tianguan_area
-		xintian_area
+		balrijin_area
 		linghui_area
+		beikyuan_area
+		jinjiang_area
+		tianlou_area
 		beidugang_area
-		fangzhucheng_area		
 	}
-		monsoon = {
+	monsoon = {
 		00.05.01
 		00.06.30
 	}
 }
-jian_region = {
+jianwu_region = {
 	areas = {
-		zhubi_area
-		xvanbi_area
+		jw1_area
+		jw2_area
+		jw3_area
+		jw4_area
+		jw5_area
+		jw6_area
+		yiguan_area
+		jiantsiang_area
 		xuanbing_area
 		jianzhong_area
-		yiguan_area
-		lishu_area
-		hanwuguan_area
-		jiantsiang_area
-	}
-		monsoon = {
-		00.05.01
-		00.06.30
-	}
-}
-
-
-
-# zhaoming_region = {
-# 	areas = {
-# 		tunayuan_area
-# 		bianfang_area
-# 		bianyuan_area
-# 		tietyuan_area
-# 	}
-
-# 	monsoon = {
-# 		00.05.01
-# 		00.06.30
-# 	}
-# }
-# luzhong_region = {
-# 	areas = {
-# 		jinqiu_area
-# 		jingai_area
-# 		tiaochi_area
-# 		hubao_area
-# 		balrijin_area
-# 	}
-
-# 	monsoon = {
-# 		00.05.01
-# 		00.06.30
-# 	}
-# }
-# tianxi_region = {
-# 	areas = {
-# 		jiangszun_area
-# 		tianszi_area
-# 		lamzung_area
-# 		jyutsai_area
-# 	}
-
-# 	monsoon = {
-# 		00.05.01
-# 		00.06.30
-# 	}
-
-# }
-# zhuyue_region = {
-# 	areas = {
-# 		shian_area
-# 		xiaowu_area
-# 		yueying_area
-# 		wanglam_area
-# 		hungngon_area
-# 	}
-
-# 	monsoon = {
-# 		00.05.01
-# 		00.06.30
-# 	}
-# }
-# yannan_region = {
-# 	areas = {
-# 		rixi_area
-# 		gungi_area
-# 		xiyun_area
-# 		luoyip_area
-# 		wangyueting_area
-# 		iongsim_area
-# 	}
-
-# 	monsoon = {
-# 		00.05.01
-# 		00.06.30
-# 	}
-# }
-# shaqvan_region = {
-# 	areas = {
-# 		guzhan_area
-# 		linxiandu_area
-# 		mulim_area
-# 		hongnguan_area
-# 		zonglin_area
-# 	}
-
-# 	monsoon = {
-# 		00.05.01
-# 		00.06.30
-# 	}
-# }
-# yanxin_region = {
-# 	areas = {
-# 		yangcheng_area
-# 		linyuan_area
-# 		yingzhen_area
-# 		anjiang_area
-# 		yanzhong_area
-# 	}
-# 	monsoon = {
-# 		00.05.01
-# 		00.06.30
-# 	}
-# }
-# jindu_region = {
-# 	areas = {
-# 		jinjiang_area
-# 		erluxi_area
-# 		liuminxiang_area
-# 		tiansai_area
-# 		tonglei_area
-# 		beikyuan_area
-# 	}
-
-# 	monsoon = {
-# 		00.05.01
-# 		00.06.30
-# 	}
-# }
-# jiangdong_region = {
-# 	areas = {
-# 		tianlou_area
-# 		tianguan_area
-# 		xintian_area
-# 		linghui_area
-# 		beidugang_area
-# 		fangzhucheng_area
-# 	}
-
-# 	monsoon = {
-# 		00.05.01
-# 		00.06.30
-# 	}
-# }
-# jianzhou_region = {
-# 	areas = {
-# 		zhubi_area
-# 		xvanbi_area
-# 		xuanbing_area
-# 		jianzhong_area
-# 		yiguan_area
-# 		lishu_area
-# 		hanwuguan_area
-# 		jiantsiang_area
-# 	}
-
-# 	monsoon = {
-# 		00.05.01
-# 		00.06.30
-# 	}
-# }
-
-
-
-upper_yanshen_region = { #弃用
-	areas = {
 
 	}
 	monsoon = {
 		00.05.01
 		00.06.30
-	}
+	}	
 }
-
-north_yanshen_region = { #弃用
-	areas = {
-	}
-	monsoon = {
-		00.05.01
-		00.06.30
-	}
-}
-
-lower_yanshen_region = { #弃用
-	areas = {
-
-	}
-	monsoon = {
-		00.05.01
-		00.06.30
-	}
-}
-
 
 rahen_coast_region = {
 	areas = {
-		satarsaya_area
+		
 		avhavubhiya_area
 		sarkhashabid_area
 		ascension_cape_area
@@ -2308,17 +2172,8 @@ rahen_coast_region = {
 		harimars_cradle_area
 		bharagha_area
 		tujgal_area
-		dhenbasana_estuary_area
-		kharunyana_estuary_area
-		lower_dhenbasana_area
-		rhamirta_area
-		middle_dhenbasana_area
-		inner_rahen_area
-		reanthung_area
-		li_btei_area
-		lower_telebei_area
-		cmor_krueng_area
-		khindi_area
+		
+		
 	}
 	monsoon = {
 		00.07.01
@@ -2334,63 +2189,37 @@ rakhadesh_region = {
 		south_marutha_area
 		south_ghankedhen_area
 		middle_ghankedhen_area
-		north_ghankedhen_area
-		babhagama_area
-		ghattub_area
-	}
-	monsoon = {
-		00.07.01
-		00.08.30
-	}
-}
-
-wuxun_region = {
-	areas = {
-		yanbohu_area
-		chiguchang_area
-		xiangducheng_area
-		zhicha_area
-		chuhui_area
-		zuoxv_area
-		jietan_area
-		xvfei_area
-
-		new_area
 		
-		munlanan_area
-		mogutian_area
-		kradhungur_area
-		tamvihar_area
-		khamarutar_area
-		ghatasak_area
-		khasardul_area
-		marudhoj_area
-		nadida_area
-		pharata_area
-		sir_area
-		raghajandi_area
-		yodhilakra_area
+		
+		satarsaya_area
+		middle_dhenbasana_area
+		inner_rahen_area
+		rhamirta_area
+		lower_dhenbasana_area
+		kharunyana_estuary_area
+		dhenbasana_estuary_area
 	}
 	monsoon = {
 		00.07.01
 		00.08.30
-	}	
+	}
 }
 
 shamakhad_region = {
 	areas = {
+		ghattub_area
+		babhagama_area
+		north_ghankedhen_area
 
 		west_rajnadhaga_area
-		tiltaghar_area
-		east_rajnadhaga_area
 		khadirnadi_area
-		khadisrapur_area
+		east_rajnadhaga_area
+		tiltaghar_area
 		middle_nadimraj_area
-		bidhilar_area
-		tilathi_area
-		nakara_area
-		
+		bidhilar_area	
 
+		
+		
 	}
 	monsoon = {
 		00.07.01
@@ -2400,9 +2229,9 @@ shamakhad_region = {
 
 lupulan_rainforest_region = {
 	areas = {
-		hoangdesinh_area
-		sawuladan_area
-		harumbasai_area
+		
+		
+		
 		rewirang_area
 		tlagukit_area
 		agluwadai_area
@@ -2425,6 +2254,13 @@ lupulan_rainforest_region = {
 
 bomdan_region = {
 	areas = {
+		phangban_area
+		li_btei_area
+		reanthung_area
+		lower_telebei_area
+		cmor_krueng_area
+		khindi_area
+
 		phaemtuek_area
 		khabtei_teleni_area
 		khangleu_thuing_area
@@ -2446,19 +2282,19 @@ dhujat_region = {
 	areas = {
 		kramitra_area
 		maharaaja_area
-		khiraspid_area
-		tughayasa_area
+		
+		
 		buhaanjirgal_area
 		ghavaghuundakhan_area
 		maldeelakhan_area
 		banjisbid_area
 		banjiraal_area
-		khirnadhiman_area
-		thadarsaghol_area
-		semphrerong_area
-		sarisung_area
-		phangban_area
-		rangadevi_area
+		
+		
+		
+		
+		
+		
 		dhurajaghan_area
 	}
 	monsoon = {
@@ -2467,8 +2303,17 @@ dhujat_region = {
 	}
 }
 
-moduk_region = { #莫杜克 +1
-	areas = { 
+lower_yanshen_region = {
+	areas = {
+	}
+	# monsoon = {
+	# 	00.05.01
+	# 	00.06.30
+	# }
+}
+
+moduk_region = {
+	areas = {
 		jiaogongmo_area
 
 		bagdagerin_area
@@ -2481,13 +2326,30 @@ moduk_region = { #莫杜克 +1
 	}
 }
 
-demon_hills_region = {
+upper_yanshen_region = {
 	areas = {
 		
+	}
+	# monsoon = {
+	# 	00.05.01
+	# 	00.06.30
+	# }
+}
 
+demon_hills_region = {
+	areas = {
+		ml1_area
+		ml2_area
+		ml3_area
+		ml4_area
+		ml_cave1_area
+		ml_cave2_area
+		ml_cave3_area
+		ml_cave4_area
 		yambioka_area
 		sugroltona_area
-		unbeksu_area 
+		unbeksu_area
+		 
 		
 	}
 	monsoon = {
@@ -2498,13 +2360,20 @@ demon_hills_region = {
 
 xianjie_region = {
 	areas = {
-		dimengluan_area
-		jiuniugong_area
-		
+		khiraspid_area
+		semphrerong_area
+		khirnadhiman_area
+		rangadevi_area
+		sarisung_area
+		thadarsaghol_area
+		tughayasa_area
+		tilathi_area
+
 		pevyirer_area
 		jiezhong_area
 		shanyutian_area
 		qianzhaolin_area
+		
 		tzingyuan_area
 		wangqiu_area
 		aoshan_area
@@ -2520,11 +2389,6 @@ xianjie_region = {
 
 thidinkai_region = {
 	areas = {
-		nagon_area
-		nui_phom_area
-		khom_ma_area
-		loratana_area
-		sirtan_area
 		binhrunghin_area
 		yemakaibo_area
 		kasainam_area
@@ -2559,20 +2423,30 @@ ringlet_isles_region = {
 	}
 }
 
-shuvuushudi_region = { # 中舒武什 - 舒武什地
+shuvuushudi_region = {
 	areas = {
-		suolungacha_area
-		alejin_area
 		haoteleyin_area
-		halintala_area
 		axiagale_area
 		yihebashi_area
-
 		baztazhad_area
+
+		wuersuri_area
+		bagebilu_area
+		alinyingashun_area
+
+		zunkazhad_area
+		zirariik_area
+		joolgimudi_area
+		chegorgtai_area
+
+		suolungacha_area
+		alejin_area
+		halintala_area
 		zhunmudi_area
 	}
 }
-south_shuvuushudi_region = { # 南舒武什 - 浩高努格
+
+nudanhan_region = {
 	areas = {
 		wenbuxi_area
 		tuyinende_area
@@ -2582,18 +2456,8 @@ south_shuvuushudi_region = { # 南舒武什 - 浩高努格
 		choogiaza_area
 		kheizavho_area
 		yunghuun_area
-	}
-}
-east_shuvuushudi_region = { # 东舒武什 - 杜尔高希
-	areas = {
-		wuersuri_area
-		bagebilu_area
-		alinyingashun_area
 
-		zunkazhad_area
-		zirariik_area
-		joolgimudi_area
-		chegorgtai_area
+
 	}
 }
 
@@ -2609,7 +2473,7 @@ gowon_region = {
 	}
 }
 
-khaashalg_region = { # 哈夏勒格
+khaashalg_region = {
 	areas = {
 		eerguhesi_area
 		hehegede_area
@@ -2628,12 +2492,24 @@ khaashalg_region = { # 哈夏勒格
 		huujoolgin_area
 		chaneuusk_area
 		iron_gate_area
-		bazuniezar_area
+		bazuneizar_area
 		northern_peaks_area
 		southern_shield_area
 	}
 }
 
+north_yanshen_region = {
+	areas = {
+		
+		
+		
+
+	}
+	# monsoon = {
+	# 	00.05.01
+	# 	00.06.30
+	# }
+}
 
 nomsyulhan_region = {
 	areas = {
@@ -2651,6 +2527,23 @@ nomsyulhan_region = {
 	}
 }
 
+shuanghe_region = {
+	areas = {
+		nui_phom_area
+		tamran_ma_area
+		nagon_area
+		hoangdesinh_area
+		sawuladan_area
+		harumbasai_area
+		loratana_area
+		sirtan_area
+	}
+	monsoon = {
+		00.05.01
+		00.06.30
+	}
+}
+
 
 ########################################
 # Insyaa			                   #
@@ -2662,15 +2555,12 @@ debug_region = {
 	}
 }
 
-insyaa_ocean_region = {
+#Sea Region
+barrier_islands_region = {
 	areas = {
 		barrier_islands_area
-		south_insyaan_sea_area
-		bay_of_insyaa_area
-		insyaa_western_ocean_area 
 	}
 }
-
 
 cotlkae_region = {
 	areas = {
@@ -2682,6 +2572,10 @@ cotlkae_region = {
 		homanaya_area
 		quizatakua_area
 	}
+	monsoon = {
+		00.02.01
+		00.04.30
+	}
 }
 
 insyaan_mushroom_forest_region = {
@@ -2690,20 +2584,9 @@ insyaan_mushroom_forest_region = {
 		puhutua_area
 		taoropari_area
 	}
-}
-
-yanacotlele_region = {
-	areas = {
-		hapalinaina_area
-		quahopilo_area
-		wachiquilli_area
-		taupotzalpan_area
-		kiaxipalco_area
-		yakautla_area
-		satriaalam_area
-		muatlaqua_area
-		nazule_area
-		pulekohu_area
+	monsoon = {
+		00.01.01
+		00.03.31
 	}
 }
 
@@ -2729,6 +2612,29 @@ anakuele_region = {
 		kona_iwiiwi_area
 		kiamokae_area
 	}
+	monsoon = {
+		00.01.01
+		00.03.31
+	}
+}
+
+yanacotlele_region = {
+	areas = {
+		hapalinaina_area
+		quahopilo_area
+		wachiquilli_area
+		taupotzalpan_area
+		kiaxipalco_area
+		yakautla_area
+		satriaalam_area
+		muatlaqua_area
+		nazule_area
+		pulekohu_area
+	}
+	monsoon = {
+		00.02.01
+		00.04.30
+	}
 }
 
 great_plateau_region = {
@@ -2753,18 +2659,24 @@ malogadin_coast_region = {
 		malogadin_coast_2_area
 		malogadin_coast_3_area
 	}
+	monsoon = {
+		00.05.01
+		00.07.31
+	}
 }
 
 tagaala_mangroves_region = {
 	areas = {
-		tagaala_mangroves_1_area
-		tagaala_mangroves_2_area
-		tagaala_mangroves_3_area
-		tagaala_mangroves_4_area
+		uluai_felloai_area
+		votuli_matumanu_area
+		fataulu_telemanu_area
+		manavalagi_area
+	}
+	monsoon = {
+		00.04.01
+		00.06.30
 	}
 }
-
-
 
 west_insyaan_lowlands_region = {
 	areas = {
@@ -2779,10 +2691,13 @@ west_insyaan_lowlands_region = {
 		west_insyaan_lowlands_9_area
 		west_insyaan_lowlands_10_area
 	}
+	monsoon = {
+		00.04.01
+		00.06.30
+	}
 }
 
-
-west_charkuchar_region = {
+jalaarkuchar_region = {
 	areas = {
 		west_charkuchar_1_area
 		west_charkuchar_2_area
@@ -2793,11 +2708,43 @@ west_charkuchar_region = {
 		west_charkuchar_7_area
 		west_charkuchar_8_area
 		west_charkuchar_9_area
-		west_charkuchar_10_area
+	}
+	monsoon = {
+		00.03.01
+		00.05.31
 	}
 }
 
-central_charkuchar_region = {
+pirzakuchar_region = {
+	areas = {
+		east_charkuchar_1_area
+		east_charkuchar_2_area
+		east_charkuchar_3_area
+		east_charkuchar_4_area
+		east_charkuchar_5_area
+		east_charkuchar_6_area
+		east_charkuchar_7_area
+		east_charkuchar_8_area
+	}
+	monsoon = {
+		00.10.01
+		00.12.31
+	}
+}
+
+wayamokuchar_region = {
+	areas = {
+		south_charkuchar_1_area
+		south_charkuchar_2_area
+		south_charkuchar_3_area
+		south_charkuchar_4_area
+		south_charkuchar_5_area
+		south_charkuchar_6_area
+		south_charkuchar_7_area
+	}
+}
+
+gamunkuchar_region = {
 	areas = {
 		central_charkuchar_1_area
 		central_charkuchar_2_area
@@ -2809,41 +2756,30 @@ central_charkuchar_region = {
 		central_charkuchar_8_area
 		central_charkuchar_9_area
 		central_charkuchar_10_area
+		central_charkuchar_11_area
 	}
 }
 
-south_charkuchar_region = {
+titanoflora_forests_region = {
 	areas = {
-		south_charkuchar_1_area
-		south_charkuchar_2_area
-		south_charkuchar_3_area
-		south_charkuchar_4_area
-		south_charkuchar_5_area
-		south_charkuchar_6_area
-		south_charkuchar_7_area
-		south_charkuchar_8_area
+		arihan_area
+		manuata_area
+		turuputai_area
+		wakataputai_area
+		korawaw_area
+		mohanoworo_area
+		whakahamanu_area
+		matehunu_area
+		alaputai_area
+		ahini_kimo_area
+		kanahehi_area
+		hahakata_area
+		woromanuwa_area
+		pitoho_area
 	}
-}
-
-east_charkuchar_region = {
-	areas = {
-		east_charkuchar_1_area
-		east_charkuchar_2_area
-		east_charkuchar_3_area
-		east_charkuchar_4_area
-		east_charkuchar_5_area
-		east_charkuchar_6_area
-		east_charkuchar_7_area
-		east_charkuchar_8_area
-	}
-}
-
-horn_of_insyaa_region = {
-	areas = {
-		horn_of_insyaa_1_area
-		horn_of_insyaa_2_area
-		horn_of_insyaa_3_area
-		horn_of_insyaa_4_area
+	monsoon = {
+		00.10.01
+		00.12.31
 	}
 }
 
@@ -2869,6 +2805,10 @@ titanoflora_savanna_region = {
 		titanoflora_savanna_11_area
 		titanoflora_savanna_12_area
 	}
+	monsoon = {
+		00.07.01
+		00.09.30
+	}
 }
 
 titanoflora_lakelands_region = {
@@ -2889,6 +2829,10 @@ titanoflora_lakelands_region = {
 		titanoflora_lakelands_14_area
 		titanoflora_lakelands_15_area
 		titanoflora_lakelands_16_area
+	}
+	monsoon = {
+		00.9.01
+		00.11.30
 	}
 }
 
@@ -2913,28 +2857,26 @@ titanoflora_riverlands_region = {
 		titanoflora_riverlands_16_area
 		titanoflora_riverlands_17_area
 	}
-}
-
-titanoflora_forests_region = {
-	areas = {
-		titanoflora_forest_1_area
-		titanoflora_forest_2_area
-		titanoflora_forest_3_area
-		titanoflora_forest_4_area
-		titanoflora_forest_5_area
-		titanoflora_forest_6_area
-		titanoflora_forest_7_area
-		titanoflora_forest_8_area
-		titanoflora_forest_9_area
-		titanoflora_forest_10_area
-		titanoflora_forest_11_area
-		titanoflora_forest_12_area
-		titanoflora_forest_13_area
-		titanoflora_forest_14_area
+	monsoon = {
+		00.10.01
+		00.12.31
 	}
 }
 
-ankae_region = {
+horn_of_insyaa_region = {
+	areas = {
+		horn_of_insyaa_1_area
+		horn_of_insyaa_2_area
+		horn_of_insyaa_3_area
+		horn_of_insyaa_4_area
+	}
+	monsoon = {
+		00.03.01
+		00.05.31
+	}
+}
+
+anakae_region = {
 	areas = {
 		kahiyotl_area
 		hakapai_area
@@ -2942,9 +2884,32 @@ ankae_region = {
 		hopilina_area
 		nalokai_area
 	}
+	monsoon = {
+		00.01.01
+		00.03.31
+	}
 }
 
+#Sea Region
+great_insyaan_bight_region = {
+	areas = {
+		great_insyaan_bight_area
+	}
+}
 
+#Sea Region
+south_insyaan_sea_region = {
+	areas = {
+		south_insyaan_sea_area
+	}
+}
+
+#Sea Region
+mangrove_coast_region = {
+	areas = {
+		mangrove_coast_area 
+	}
+}
 
 # Deprecated Stuff to prevent [triggerimplementation.cpp:15371]: Unknown region used in a trigger horn_of_africa_region crashes
 

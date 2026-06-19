@@ -25,47 +25,47 @@ estate_YE_special = {
 	}
 
 
-	# 学科组有点意义不明了
-	modifier_definition = { #每月[学科组1]经验增长
-		type = privileges 
-		key = monthly_LQdspl_group_1_exp_gain
-		trigger = {}
-	}
-	modifier_definition = { #[学科组1]经验获取修正
-		type = loyalty
-		key = LQdspl_group_1_exp_gain_modifier
-		trigger = {}
-	}
-	modifier_definition = { #每月[学科组2]经验增长
-		type = privileges 
-		key = monthly_LQdspl_group_2_exp_gain
-		trigger = {}
-	}
-	modifier_definition = { #[学科组2]经验获取修正
-		type = loyalty
-		key = LQdspl_group_2_exp_gain_modifier
-		trigger = {}
-	}
-	modifier_definition = { #每月[学科组3]经验增长
-		type = privileges 
-		key = monthly_LQdspl_group_3_exp_gain
-		trigger = {}
-	}
-	modifier_definition = { #[学科组3]经验获取修正
-		type = loyalty
-		key = LQdspl_group_3_exp_gain_modifier
-		trigger = {}
-	}
-	modifier_definition = { #每月[学科组4]经验增长
-		type = privileges 
-		key = monthly_LQdspl_group_4_exp_gain
-		trigger = {}
-	}
-	modifier_definition = { #[学科组4]经验获取修正
-		type = loyalty
-		key = LQdspl_group_4_exp_gain_modifier
-		trigger = {}
-	}
+	# # 学科组有点意义不明了
+	# modifier_definition = { #每月[学科组1]经验增长
+	# 	type = privileges 
+	# 	key = monthly_LQdspl_group_1_exp_gain
+	# 	trigger = {}
+	# }
+	# modifier_definition = { #[学科组1]经验获取修正
+	# 	type = loyalty
+	# 	key = LQdspl_group_1_exp_gain_modifier
+	# 	trigger = {}
+	# }
+	# modifier_definition = { #每月[学科组2]经验增长
+	# 	type = privileges 
+	# 	key = monthly_LQdspl_group_2_exp_gain
+	# 	trigger = {}
+	# }
+	# modifier_definition = { #[学科组2]经验获取修正
+	# 	type = loyalty
+	# 	key = LQdspl_group_2_exp_gain_modifier
+	# 	trigger = {}
+	# }
+	# modifier_definition = { #每月[学科组3]经验增长
+	# 	type = privileges 
+	# 	key = monthly_LQdspl_group_3_exp_gain
+	# 	trigger = {}
+	# }
+	# modifier_definition = { #[学科组3]经验获取修正
+	# 	type = loyalty
+	# 	key = LQdspl_group_3_exp_gain_modifier
+	# 	trigger = {}
+	# }
+	# modifier_definition = { #每月[学科组4]经验增长
+	# 	type = privileges 
+	# 	key = monthly_LQdspl_group_4_exp_gain
+	# 	trigger = {}
+	# }
+	# modifier_definition = { #[学科组4]经验获取修正
+	# 	type = loyalty
+	# 	key = LQdspl_group_4_exp_gain_modifier
+	# 	trigger = {}
+	# }
 	
 
 

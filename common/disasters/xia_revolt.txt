@@ -1,0 +1,99 @@
+great_revolt_of_xiajie = {
+	ended_by_country_breaking_to_rebels = no
+	potential = {
+		OR = {
+			any_owned_province = {
+				has_province_modifier = rightful_xia_territory_occupied
+			}
+			any_subject_country = {
+				any_owned_province = {
+					has_province_modifier = rightful_xia_territory_occupied
+				}
+			}
+		}
+		NOT = { has_country_modifier = discard_xiajie_territory }
+	}
+	can_start = {
+		calc_true_if = {
+			xianjie_region = {
+				type = all
+				country_or_subject_holds = ROOT
+				has_province_modifier = rightful_xia_territory_occupied
+			}
+			amount = 30
+		}
+		NOT = {
+			YA1 = { is_subject_of = ROOT }
+		}
+		NOT = { tag = YA1 }
+	} 
+    can_stop = {
+        AND = {
+            all_owned_province = {
+                NOT = { has_province_modifier = rightful_xia_territory_occupied }
+            }
+            all_subject_country = {
+                all_owned_province = {
+                    NOT = { has_province_modifier = rightful_xia_territory_occupied }
+                    NOT = { has_province_modifier = rightful_xia_territory_occupied }
+                }
+            }
+        }
+    }
+	can_end = {
+		OR = {
+			has_country_modifier = discard_xiajie_territory
+			YA1 = { is_subject_of = ROOT }
+			AND = {
+				all_owned_province = {
+					NOT = { has_province_modifier = rightful_xia_territory_occupied }
+				}
+				all_subject_country = {
+					all_owned_province = {
+						NOT = { has_province_modifier = rightful_xia_territory_occupied }
+						NOT = { has_province_modifier = rightful_xia_territory_occupied }
+					}
+				}
+			}
+
+		}
+		
+	}
+
+	progress = {
+		modifier = {
+			factor = 5
+			always = yes
+		}
+	}
+
+	modifier = {
+		infantry_power = -0.05
+		fort_maintenance_modifier = 0.25
+	}
+
+	on_start = YE_GRY.25
+	on_end = YE_GRY.38
+
+	on_monthly = {
+		events = {
+		}
+		random_events = {
+			750 = 0
+			
+			# 100 省份叛乱
+			50 = YE_GRY.26
+			25 = YE_GRY.27
+			25 = YE_GRY.28
+
+			# 50 特殊事件
+			50 = YE_GRY.29
+			
+			# 100 治理
+			33 = YE_GRY.30
+			34 = YE_GRY.31
+			33 = YE_GRY.32
+
+		}
+	}
+}

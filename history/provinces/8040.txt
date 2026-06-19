@@ -1,10 +1,10 @@
-add_core = Y21
-owner = Y21
-controller = Y21
+add_core = Y02
+owner = Y02
+culture = jiangszun
+religion = devouring_path
+controller = Y02
 is_city = no
-culture = gangim
-religion = accretive_path
-trade_goods = dyes
-base_tax = 3
+trade_goods = tea
+base_tax = 5
 base_manpower = 2
 base_production = 3

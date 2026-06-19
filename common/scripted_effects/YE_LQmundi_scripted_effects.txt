@@ -87,7 +87,36 @@ LQmundi_initialize_script_effect = { #灵气初始化
 	}
 	LQmundi_gain_effect_LQpower_script_effect = { # $$ #效果获取
 		## $value$ 基础数值
+		hidden_effect = {
+			set_variable = {
+				which = LQpower_value_of_effect
+				value = $value$
+			}
+			export_to_variable = {
+				variable_name = LQpower_gain_modifier_var
+				value = modifier:LQpower_gain_modifier
+			}
+			change_variable = {
+				which = LQpower_gain_modifier_var
+				value = 1
+			}
+			multiply_variable = {
+				which = LQpower_value_of_effect
+				which = LQpower_gain_modifier_var
+			}
 
+			change_variable = {
+				which = LQpower_current
+				which = LQpower_value_of_effect
+			}
+
+			LQmundi_check_if_LQpower_overflow_and_deal_with = yes # 检测溢出
+
+			LQmundi_update_LQpower_progressbar = yes #更新进度条			
+		}
+	}
+	LQmundi_gain_effect_LQpower_script_effect_ONLY_FOR_RUN = { # $$ #效果获取
+		## $value$ 基础数值
 		set_variable = {
 			which = LQpower_value_of_effect
 			value = $value$
@@ -112,7 +141,8 @@ LQmundi_initialize_script_effect = { #灵气初始化
 
 		LQmundi_check_if_LQpower_overflow_and_deal_with = yes # 检测溢出
 
-		LQmundi_update_LQpower_progressbar = yes #更新进度条
+		LQmundi_update_LQpower_progressbar = yes #更新进度条			
+		
 	}
 
 	LQmundi_check_if_LQpower_negative_and_deal_with = { #点数为负
@@ -134,45 +164,47 @@ LQmundi_initialize_script_effect = { #灵气初始化
 	LQmundi_cost_LQpower_script_effect = { # $$ #消耗点数 惩罚/消费双模式
 		# $value$ 需要使用的基础灵气点数
 		# $penalty$ 1,为惩罚模式，灵气花费修正不生效。0，为消费模式，灵气花费修正生效。
-		set_variable = {
-			which = LQpower_value_of_cost
-			value = $value$
-		}
-
-		set_variable = {
-			which = var_tmp
-			value = 0
-		}
-		if = { #消费模式，仅当penalty = 0时生效
-			limit = {
-				is_variable_equal = { which = var_tmp value = $penalty$ }
-			}
-			export_to_variable = {
-				variable_name = LQpower_cost_saving_modifier_var
-				value = modifier:LQpower_cost_saving_modifier
-			}
-			multiply_variable  = {
-				which = LQpower_cost_saving_modifier_var
-				value = -1
-			}
-			change_variable = {
-				which = LQpower_cost_saving_modifier_var
-				value = 1
-
-			}
-			multiply_variable = {
+		hidden_effect = {
+			set_variable = {
 				which = LQpower_value_of_cost
-				which = LQpower_cost_saving_modifier_var
+				value = $value$
 			}
-		}
-		subtract_variable  = {
-			which = LQpower_current
-			which = LQpower_value_of_cost
-		}
 
-		LQmundi_check_if_LQpower_negative_and_deal_with = yes #检测触底
+			set_variable = {
+				which = var_tmp
+				value = 0
+			}
+			if = { #消费模式，仅当penalty = 0时生效
+				limit = {
+					is_variable_equal = { which = var_tmp value = $penalty$ }
+				}
+				export_to_variable = {
+					variable_name = LQpower_cost_saving_modifier_var
+					value = modifier:LQpower_cost_saving_modifier
+				}
+				multiply_variable  = {
+					which = LQpower_cost_saving_modifier_var
+					value = -1
+				}
+				change_variable = {
+					which = LQpower_cost_saving_modifier_var
+					value = 1
+				}
+				multiply_variable = {
+					which = LQpower_value_of_cost
+					which = LQpower_cost_saving_modifier_var
+				}
+			}
+			subtract_variable  = {
+				which = LQpower_current
+				which = LQpower_value_of_cost
+			}
 
-		LQmundi_update_LQpower_progressbar = yes #更新进度条
+			LQmundi_check_if_LQpower_negative_and_deal_with = yes #检测触底
+
+			LQmundi_update_LQpower_progressbar = yes #更新进度条
+		}
+		
 	}
 
 # 法术经验
@@ -224,29 +256,32 @@ LQmundi_initialize_script_effect = { #灵气初始化
 	LQmundi_gain_effect_LQdspl_x_exp_script_effect = { # $$ #经验来自效果获取，学科编号$discipline_sequence$
 		# $value$ 获取经验的基础数值
 		# $discipline_sequence$ 法术学科编号
+		hidden_effect = {
+			set_variable = {
+				which = LQdspl_$discipline_sequence$_exp_value_of_effect
+				value = $value$
+			}
 
-		set_variable = {
-			which = LQdspl_$discipline_sequence$_exp_value_of_effect
-			value = $value$
+			export_to_variable = {
+				variable_name = LQdspl_$discipline_sequence$_exp_gain_modifier_var
+				value = modifier:LQdspl_$discipline_sequence$_exp_gain_modifier
+			}
+			change_variable = {
+				which = LQdspl_$discipline_sequence$_exp_gain_modifier_var
+				value = 1
+			}
+			multiply_variable = {
+				which = LQdspl_$discipline_sequence$_exp_value_of_effect
+				which = LQdspl_$discipline_sequence$_exp_gain_modifier_var
+			}
+
+			change_variable = {
+				which = LQdspl_$discipline_sequence$_exp
+				which = LQdspl_$discipline_sequence$_exp_value_of_effect
+			}
 		}
 
-		export_to_variable = {
-			variable_name = LQdspl_$discipline_sequence$_exp_gain_modifier_var
-			value = modifier:LQdspl_$discipline_sequence$_exp_gain_modifier
-		}
-		change_variable = {
-			which = LQdspl_$discipline_sequence$_exp_gain_modifier_var
-			value = 1
-		}
-		multiply_variable = {
-			which = LQdspl_$discipline_sequence$_exp_value_of_effect
-			which = LQdspl_$discipline_sequence$_exp_gain_modifier_var
-		}
-
-		change_variable = {
-			which = LQdspl_$discipline_sequence$_exp
-			which = LQdspl_$discipline_sequence$_exp_value_of_effect
-		}
+		
 	}
 
 	LQmundi_LQdspl_x_exp_penalty_script_effect = { # $$ #经验惩罚，学科编号$discipline_sequence$
@@ -273,7 +308,1734 @@ LQmundi_initialize_script_effect = { #灵气初始化
 
 	}
 
+LQ_d_1_c_common_s_1_script_effect = {
+	if = {
+		limit = {
+			OR = {
+				has_country_modifier = LQ_d_1_c_common_s_1_1
+				has_country_modifier = LQ_d_1_c_common_s_1_2
+				has_country_modifier = LQ_d_1_c_common_s_1_3
+				has_country_modifier = LQ_d_1_c_common_s_1_4
+				has_country_modifier = LQ_d_1_c_common_s_1_5
+				has_country_modifier = LQ_d_1_c_common_s_1_6
+			}
+		}
+		custom_tooltip = LQmundi_wait_for_cooldown_tooltip
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				check_variable = { which = LQpower_current value = 50 }
+			}
+		}
+		custom_tooltip = LQpower_require_50_tooltip
+	}
+	else = {
+		if = { # 6级
+			limit = {
+				check_variable = { which = LQdspl_1_exp value = 1000 }
+			}
+			add_country_modifier = { name = LQ_d_1_c_common_s_1_6 duration = 3650 }
+		}
+		else_if = { #5级
+			limit = {
+				check_variable = { which = LQdspl_1_exp value = 700 }
+			}
+			add_country_modifier = { name = LQ_d_1_c_common_s_1_5 duration = 3650 }
+		}
+		else_if = { #4级
+			limit = {
+				check_variable = { which = LQdspl_1_exp value = 450 }
+			}
+			add_country_modifier = { name = LQ_d_1_c_common_s_1_4 duration = 3650 }
+		}
+		else_if = { #3级
+			limit = {
+				check_variable = { which = LQdspl_1_exp value = 250 }
+			}
+			add_country_modifier = { name = LQ_d_1_c_common_s_1_3 duration = 3650 }
+		}
+		else_if = { #2级
+			limit = {
+				check_variable = { which = LQdspl_1_exp value = 100 }
+			}
+			add_country_modifier = { name = LQ_d_1_c_common_s_1_2 duration = 3650 }
+		}
+		else = { #1级
+			add_country_modifier = { name = LQ_d_1_c_common_s_1_1 duration = 3650 }
+		}
+		add_years_of_income = -0.1
+		LQmundi_cost_LQpower_script_effect = { value=25 penalty=0 }
+		LQmundi_gain_effect_LQdspl_x_exp_script_effect = { value=1 discipline_sequence=1 }
+	}
+}
+LQ_d_1_c_common_s_2_script_effect = {
+	if = {
+		limit = {
+			OR = {
+				has_country_modifier = LQ_d_1_c_common_s_2_1
+				has_country_modifier = LQ_d_1_c_common_s_2_2
+				has_country_modifier = LQ_d_1_c_common_s_2_3
+				has_country_modifier = LQ_d_1_c_common_s_2_4
+				has_country_modifier = LQ_d_1_c_common_s_2_5
+				has_country_modifier = LQ_d_1_c_common_s_2_6
+			}
+		}
+		custom_tooltip = LQmundi_wait_for_cooldown_tooltip
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				check_variable = { which = LQpower_current value = 50 }
+			}
+		}
+		custom_tooltip = LQpower_require_50_tooltip
+	}
+	else = {
+		if = { # 6级
+			limit = {
+				check_variable = { which = LQdspl_1_exp value = 1000 }
+			}
+			add_country_modifier = { name = LQ_d_1_c_common_s_2_6 duration = 3650 }
+		}
+		else_if = { #5级
+			limit = {
+				check_variable = { which = LQdspl_1_exp value = 700 }
+			}
+			add_country_modifier = { name = LQ_d_1_c_common_s_2_5 duration = 3650 }
+		}
+		else_if = { #4级
+			limit = {
+				check_variable = { which = LQdspl_1_exp value = 450 }
+			}
+			add_country_modifier = { name = LQ_d_1_c_common_s_2_4 duration = 3650 }
+		}
+		else_if = { #3级
+			limit = {
+				check_variable = { which = LQdspl_1_exp value = 250 }
+			}
+			add_country_modifier = { name = LQ_d_1_c_common_s_2_3 duration = 3650 }
+		}
+		else_if = { #2级
+			limit = {
+				check_variable = { which = LQdspl_1_exp value = 100 }
+			}
+			add_country_modifier = { name = LQ_d_1_c_common_s_2_2 duration = 3650 }
+		}
+		else = { #1级
+			add_country_modifier = { name = LQ_d_1_c_common_s_2_1 duration = 3650 }
+		}
+		add_years_of_income = -0.1
+		LQmundi_cost_LQpower_script_effect = { value=25 penalty=0 }
+		LQmundi_gain_effect_LQdspl_x_exp_script_effect = { value=1 discipline_sequence=1 }
+	}
+}
+LQ_d_1_c_common_s_3_script_effect = {
+	if = {
+		limit = {
+			OR = {
+				has_country_modifier = LQ_d_1_c_common_s_3_1
+				has_country_modifier = LQ_d_1_c_common_s_3_2
+				has_country_modifier = LQ_d_1_c_common_s_3_3
+				has_country_modifier = LQ_d_1_c_common_s_3_4
+				has_country_modifier = LQ_d_1_c_common_s_3_5
+				has_country_modifier = LQ_d_1_c_common_s_3_6
+			}
+		}
+		custom_tooltip = LQmundi_wait_for_cooldown_tooltip
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				check_variable = { which = LQpower_current value = 50 }
+			}
+		}
+		custom_tooltip = LQpower_require_50_tooltip
+	}
+	else = {
+		if = { # 6级
+			limit = {
+				check_variable = { which = LQdspl_1_exp value = 1000 }
+			}
+			add_country_modifier = { name = LQ_d_1_c_common_s_3_6 duration = 3650 }
+		}
+		else_if = { #5级
+			limit = {
+				check_variable = { which = LQdspl_1_exp value = 700 }
+			}
+			add_country_modifier = { name = LQ_d_1_c_common_s_3_5 duration = 3650 }
+		}
+		else_if = { #4级
+			limit = {
+				check_variable = { which = LQdspl_1_exp value = 450 }
+			}
+			add_country_modifier = { name = LQ_d_1_c_common_s_3_4 duration = 3650 }
+		}
+		else_if = { #3级
+			limit = {
+				check_variable = { which = LQdspl_1_exp value = 250 }
+			}
+			add_country_modifier = { name = LQ_d_1_c_common_s_3_3 duration = 3650 }
+		}
+		else_if = { #2级
+			limit = {
+				check_variable = { which = LQdspl_1_exp value = 100 }
+			}
+			add_country_modifier = { name = LQ_d_1_c_common_s_3_2 duration = 3650 }
+		}
+		else = { #1级
+			add_country_modifier = { name = LQ_d_1_c_common_s_3_1 duration = 3650 }
+		}
+		add_years_of_income = -0.1
+		LQmundi_cost_LQpower_script_effect = { value=25 penalty=0 }
+		LQmundi_gain_effect_LQdspl_x_exp_script_effect = { value=1 discipline_sequence=1 }
+	}	
+}
+LQ_d_1_c_common_s_4_script_effect = {
+	if = {
+		limit = {
+			OR = {
+				has_country_modifier = LQ_d_1_c_common_s_4_1
+				has_country_modifier = LQ_d_1_c_common_s_4_2
+				has_country_modifier = LQ_d_1_c_common_s_4_3
+				has_country_modifier = LQ_d_1_c_common_s_4_4
+				has_country_modifier = LQ_d_1_c_common_s_4_5
+				has_country_modifier = LQ_d_1_c_common_s_4_6
+			}
+		}
+		custom_tooltip = LQmundi_wait_for_cooldown_tooltip
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				check_variable = { which = LQpower_current value = 50 }
+			}
+		}
+		custom_tooltip = LQpower_require_50_tooltip
+	}
+	else = {
+		if = { # 6级
+			limit = {
+				check_variable = { which = LQdspl_1_exp value = 1000 }
+			}
+			add_country_modifier = { name = LQ_d_1_c_common_s_4_6 duration = 3650 }
+		}
+		else_if = { #5级
+			limit = {
+				check_variable = { which = LQdspl_1_exp value = 700 }
+			}
+			add_country_modifier = { name = LQ_d_1_c_common_s_4_5 duration = 3650 }
+		}
+		else_if = { #4级
+			limit = {
+				check_variable = { which = LQdspl_1_exp value = 450 }
+			}
+			add_country_modifier = { name = LQ_d_1_c_common_s_4_4 duration = 3650 }
+		}
+		else_if = { #3级
+			limit = {
+				check_variable = { which = LQdspl_1_exp value = 250 }
+			}
+			add_country_modifier = { name = LQ_d_1_c_common_s_4_3 duration = 3650 }
+		}
+		else_if = { #2级
+			limit = {
+				check_variable = { which = LQdspl_1_exp value = 100 }
+			}
+			add_country_modifier = { name = LQ_d_1_c_common_s_4_2 duration = 3650 }
+		}
+		else = { #1级
+			add_country_modifier = { name = LQ_d_1_c_common_s_4_1 duration = 3650 }
+		}
+		add_years_of_income = -0.1
+		LQmundi_cost_LQpower_script_effect = { value=25 penalty=0 }
+		LQmundi_gain_effect_LQdspl_x_exp_script_effect = { value=1 discipline_sequence=1 }
+	}
+}
+LQ_d_1_c_common_s_5_script_effect = {
+	if = {
+		limit = {
+			OR = {
+				has_country_modifier = LQ_d_1_c_common_s_5_1
+				has_country_modifier = LQ_d_1_c_common_s_5_2
+				has_country_modifier = LQ_d_1_c_common_s_5_3
+				has_country_modifier = LQ_d_1_c_common_s_5_4
+				has_country_modifier = LQ_d_1_c_common_s_5_5
+				has_country_modifier = LQ_d_1_c_common_s_5_6
+			}
+		}
+		custom_tooltip = LQmundi_wait_for_cooldown_tooltip
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				check_variable = { which = LQpower_current value = 50 }
+			}
+		}
+		custom_tooltip = LQpower_require_50_tooltip
+	}
+	else = {
+		if = { # 6级
+			limit = {
+				check_variable = { which = LQdspl_1_exp value = 1000 }
+			}
+			add_country_modifier = { name = LQ_d_1_c_common_s_5_6 duration = 3650 }
+		}
+		else_if = { #5级
+			limit = {
+				check_variable = { which = LQdspl_1_exp value = 700 }
+			}
+			add_country_modifier = { name = LQ_d_1_c_common_s_5_5 duration = 3650 }
+		}
+		else_if = { #4级
+			limit = {
+				check_variable = { which = LQdspl_1_exp value = 450 }
+			}
+			add_country_modifier = { name = LQ_d_1_c_common_s_5_4 duration = 3650 }
+		}
+		else_if = { #3级
+			limit = {
+				check_variable = { which = LQdspl_1_exp value = 250 }
+			}
+			add_country_modifier = { name = LQ_d_1_c_common_s_5_3 duration = 3650 }
+		}
+		else_if = { #2级
+			limit = {
+				check_variable = { which = LQdspl_1_exp value = 100 }
+			}
+			add_country_modifier = { name = LQ_d_1_c_common_s_5_2 duration = 3650 }
+		}
+		else = { #1级
+			add_country_modifier = { name = LQ_d_1_c_common_s_5_1 duration = 3650 }
+		}
+		add_years_of_income = -0.1
+		LQmundi_cost_LQpower_script_effect = { value=25 penalty=0 }
+		LQmundi_gain_effect_LQdspl_x_exp_script_effect = { value=1 discipline_sequence=1 }
+	}
+}
 
+LQ_d_2_c_common_s_1_script_effect = {
+	if = {
+		limit = {
+			OR = {
+				has_country_modifier = LQ_d_2_c_common_s_1_1
+				has_country_modifier = LQ_d_2_c_common_s_1_2
+				has_country_modifier = LQ_d_2_c_common_s_1_3
+				has_country_modifier = LQ_d_2_c_common_s_1_4
+				has_country_modifier = LQ_d_2_c_common_s_1_5
+				has_country_modifier = LQ_d_2_c_common_s_1_6
+			}
+		}
+		custom_tooltip = LQmundi_wait_for_cooldown_tooltip
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				check_variable = { which = LQpower_current value = 50 }
+			}
+		}
+		custom_tooltip = LQpower_require_50_tooltip
+	}
+	else = {
+		if = { # 6级
+			limit = {
+				check_variable = { which = LQdspl_2_exp value = 1000 }
+			}
+			add_country_modifier = { name = LQ_d_2_c_common_s_1_6 duration = 3650 }
+		}
+		else_if = { #5级
+			limit = {
+				check_variable = { which = LQdspl_2_exp value = 700 }
+			}
+			add_country_modifier = { name = LQ_d_2_c_common_s_1_5 duration = 3650 }
+		}
+		else_if = { #4级
+			limit = {
+				check_variable = { which = LQdspl_2_exp value = 450 }
+			}
+			add_country_modifier = { name = LQ_d_2_c_common_s_1_4 duration = 3650 }
+		}
+		else_if = { #3级
+			limit = {
+				check_variable = { which = LQdspl_2_exp value = 250 }
+			}
+			add_country_modifier = { name = LQ_d_2_c_common_s_1_3 duration = 3650 }
+		}
+		else_if = { #2级
+			limit = {
+				check_variable = { which = LQdspl_2_exp value = 100 }
+			}
+			add_country_modifier = { name = LQ_d_2_c_common_s_1_2 duration = 3650 }
+		}
+		else = { #1级
+			add_country_modifier = { name = LQ_d_2_c_common_s_1_1 duration = 3650 }
+		}
+		add_years_of_income = -0.1
+		LQmundi_cost_LQpower_script_effect = { value=30 penalty=0 }
+		LQmundi_gain_effect_LQdspl_x_exp_script_effect = { value=1 discipline_sequence=2 }
+	}
+}
+LQ_d_2_c_common_s_2_script_effect = {
+	if = {
+		limit = {
+			OR = {
+				has_country_modifier = LQ_d_2_c_common_s_2_1
+				has_country_modifier = LQ_d_2_c_common_s_2_2
+				has_country_modifier = LQ_d_2_c_common_s_2_3
+				has_country_modifier = LQ_d_2_c_common_s_2_4
+				has_country_modifier = LQ_d_2_c_common_s_2_5
+				has_country_modifier = LQ_d_2_c_common_s_2_6
+			}
+		}
+		custom_tooltip = LQmundi_wait_for_cooldown_tooltip
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				check_variable = { which = LQpower_current value = 50 }
+			}
+		}
+		custom_tooltip = LQpower_require_50_tooltip
+	}
+	else = {
+		if = { # 6级
+			limit = {
+				check_variable = { which = LQdspl_2_exp value = 1000 }
+			}
+			add_country_modifier = { name = LQ_d_2_c_common_s_2_6 duration = 3650 }
+		}
+		else_if = { #5级
+			limit = {
+				check_variable = { which = LQdspl_2_exp value = 700 }
+			}
+			add_country_modifier = { name = LQ_d_2_c_common_s_2_5 duration = 3650 }
+		}
+		else_if = { #4级
+			limit = {
+				check_variable = { which = LQdspl_2_exp value = 450 }
+			}
+			add_country_modifier = { name = LQ_d_2_c_common_s_2_4 duration = 3650 }
+		}
+		else_if = { #3级
+			limit = {
+				check_variable = { which = LQdspl_2_exp value = 250 }
+			}
+			add_country_modifier = { name = LQ_d_2_c_common_s_2_3 duration = 3650 }
+		}
+		else_if = { #2级
+			limit = {
+				check_variable = { which = LQdspl_2_exp value = 100 }
+			}
+			add_country_modifier = { name = LQ_d_2_c_common_s_2_2 duration = 3650 }
+		}
+		else = { #1级
+			add_country_modifier = { name = LQ_d_2_c_common_s_2_1 duration = 3650 }
+		}
+		add_years_of_income = -0.1
+		LQmundi_cost_LQpower_script_effect = { value=30 penalty=0 }
+		LQmundi_gain_effect_LQdspl_x_exp_script_effect = { value=1 discipline_sequence=2 }
+	}
+}
+LQ_d_2_c_common_s_3_script_effect = {
+	if = {
+		limit = {
+			OR = {
+				has_country_modifier = LQ_d_2_c_common_s_3_1
+				has_country_modifier = LQ_d_2_c_common_s_3_2
+				has_country_modifier = LQ_d_2_c_common_s_3_3
+				has_country_modifier = LQ_d_2_c_common_s_3_4
+				has_country_modifier = LQ_d_2_c_common_s_3_5
+				has_country_modifier = LQ_d_2_c_common_s_3_6
+			}
+		}
+		custom_tooltip = LQmundi_wait_for_cooldown_tooltip
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				check_variable = { which = LQpower_current value = 50 }
+			}
+		}
+		custom_tooltip = LQpower_require_50_tooltip
+	}
+	else = {
+		if = { # 6级
+			limit = {
+				check_variable = { which = LQdspl_2_exp value = 1000 }
+			}
+			add_country_modifier = { name = LQ_d_2_c_common_s_3_6 duration = 3650 }
+		}
+		else_if = { #5级
+			limit = {
+				check_variable = { which = LQdspl_2_exp value = 700 }
+			}
+			add_country_modifier = { name = LQ_d_2_c_common_s_3_5 duration = 3650 }
+		}
+		else_if = { #4级
+			limit = {
+				check_variable = { which = LQdspl_2_exp value = 450 }
+			}
+			add_country_modifier = { name = LQ_d_2_c_common_s_3_4 duration = 3650 }
+		}
+		else_if = { #3级
+			limit = {
+				check_variable = { which = LQdspl_2_exp value = 250 }
+			}
+			add_country_modifier = { name = LQ_d_2_c_common_s_3_3 duration = 3650 }
+		}
+		else_if = { #2级
+			limit = {
+				check_variable = { which = LQdspl_2_exp value = 100 }
+			}
+			add_country_modifier = { name = LQ_d_2_c_common_s_3_2 duration = 3650 }
+		}
+		else = { #1级
+			add_country_modifier = { name = LQ_d_2_c_common_s_3_1 duration = 3650 }
+		}
+		add_years_of_income = -0.1
+		LQmundi_cost_LQpower_script_effect = { value=30 penalty=0 }
+		LQmundi_gain_effect_LQdspl_x_exp_script_effect = { value=1 discipline_sequence=2 }
+	}
+}
+LQ_d_2_c_common_s_4_script_effect = {
+	if = {
+		limit = {
+			OR = {
+				has_country_modifier = LQ_d_2_c_common_s_4_1
+				has_country_modifier = LQ_d_2_c_common_s_4_2
+				has_country_modifier = LQ_d_2_c_common_s_4_3
+				has_country_modifier = LQ_d_2_c_common_s_4_4
+				has_country_modifier = LQ_d_2_c_common_s_4_5
+				has_country_modifier = LQ_d_2_c_common_s_4_6
+			}
+		}
+		custom_tooltip = LQmundi_wait_for_cooldown_tooltip
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				check_variable = { which = LQpower_current value = 50 }
+			}
+		}
+		custom_tooltip = LQpower_require_50_tooltip
+	}
+	else = {
+		if = { # 6级
+			limit = {
+				check_variable = { which = LQdspl_2_exp value = 1000 }
+			}
+			add_country_modifier = { name = LQ_d_2_c_common_s_4_6 duration = 3650 }
+		}
+		else_if = { #5级
+			limit = {
+				check_variable = { which = LQdspl_2_exp value = 700 }
+			}
+			add_country_modifier = { name = LQ_d_2_c_common_s_4_5 duration = 3650 }
+		}
+		else_if = { #4级
+			limit = {
+				check_variable = { which = LQdspl_2_exp value = 450 }
+			}
+			add_country_modifier = { name = LQ_d_2_c_common_s_4_4 duration = 3650 }
+		}
+		else_if = { #3级
+			limit = {
+				check_variable = { which = LQdspl_2_exp value = 250 }
+			}
+			add_country_modifier = { name = LQ_d_2_c_common_s_4_3 duration = 3650 }
+		}
+		else_if = { #2级
+			limit = {
+				check_variable = { which = LQdspl_2_exp value = 100 }
+			}
+			add_country_modifier = { name = LQ_d_2_c_common_s_4_2 duration = 3650 }
+		}
+		else = { #1级
+			add_country_modifier = { name = LQ_d_2_c_common_s_4_1 duration = 3650 }
+		}
+		add_years_of_income = -0.1
+		LQmundi_cost_LQpower_script_effect = { value=30 penalty=0 }
+		LQmundi_gain_effect_LQdspl_x_exp_script_effect = { value=1 discipline_sequence=2 }
+	}
+}
+LQ_d_2_c_common_s_5_script_effect = {
+	if = {
+		limit = {
+			OR = {
+				has_country_modifier = LQ_d_2_c_common_s_5_1
+				has_country_modifier = LQ_d_2_c_common_s_5_2
+				has_country_modifier = LQ_d_2_c_common_s_5_3
+				has_country_modifier = LQ_d_2_c_common_s_5_4
+				has_country_modifier = LQ_d_2_c_common_s_5_5
+				has_country_modifier = LQ_d_2_c_common_s_5_6
+			}
+		}
+		custom_tooltip = LQmundi_wait_for_cooldown_tooltip
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				check_variable = { which = LQpower_current value = 50 }
+			}
+		}
+		custom_tooltip = LQpower_require_50_tooltip
+	}
+	else = {
+		if = { # 6级
+			limit = {
+				check_variable = { which = LQdspl_2_exp value = 1000 }
+			}
+			add_country_modifier = { name = LQ_d_2_c_common_s_5_6 duration = 3650 }
+		}
+		else_if = { #5级
+			limit = {
+				check_variable = { which = LQdspl_2_exp value = 700 }
+			}
+			add_country_modifier = { name = LQ_d_2_c_common_s_5_5 duration = 3650 }
+		}
+		else_if = { #4级
+			limit = {
+				check_variable = { which = LQdspl_2_exp value = 450 }
+			}
+			add_country_modifier = { name = LQ_d_2_c_common_s_5_4 duration = 3650 }
+		}
+		else_if = { #3级
+			limit = {
+				check_variable = { which = LQdspl_2_exp value = 250 }
+			}
+			add_country_modifier = { name = LQ_d_2_c_common_s_5_3 duration = 3650 }
+		}
+		else_if = { #2级
+			limit = {
+				check_variable = { which = LQdspl_2_exp value = 100 }
+			}
+			add_country_modifier = { name = LQ_d_2_c_common_s_5_2 duration = 3650 }
+		}
+		else = { #1级
+			add_country_modifier = { name = LQ_d_2_c_common_s_5_1 duration = 3650 }
+		}
+		add_years_of_income = -0.1
+		LQmundi_cost_LQpower_script_effect = { value=30 penalty=0 }
+		LQmundi_gain_effect_LQdspl_x_exp_script_effect = { value=1 discipline_sequence=2 }
+	}
+}
 
+LQ_d_3_c_common_s_1_script_effect = {
+	if = {
+		limit = {
+			OR = {
+				has_country_modifier = LQ_d_3_c_common_s_1_1
+				has_country_modifier = LQ_d_3_c_common_s_1_2
+				has_country_modifier = LQ_d_3_c_common_s_1_3
+				has_country_modifier = LQ_d_3_c_common_s_1_4
+				has_country_modifier = LQ_d_3_c_common_s_1_5
+				has_country_modifier = LQ_d_3_c_common_s_1_6
+			}
+		}
+		custom_tooltip = LQmundi_wait_for_cooldown_tooltip
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				check_variable = { which = LQpower_current value = 50 }
+			}
+		}
+		custom_tooltip = LQpower_require_50_tooltip
+	}
+	else = {
+		if = { # 6级
+			limit = {
+				check_variable = { which = LQdspl_3_exp value = 1000 }
+			}
+			add_country_modifier = { name = LQ_d_3_c_common_s_1_6 duration = 3650 }
+		}
+		else_if = { #5级
+			limit = {
+				check_variable = { which = LQdspl_3_exp value = 700 }
+			}
+			add_country_modifier = { name = LQ_d_3_c_common_s_1_5 duration = 3650 }
+		}
+		else_if = { #4级
+			limit = {
+				check_variable = { which = LQdspl_3_exp value = 450 }
+			}
+			add_country_modifier = { name = LQ_d_3_c_common_s_1_4 duration = 3650 }
+		}
+		else_if = { #3级
+			limit = {
+				check_variable = { which = LQdspl_3_exp value = 250 }
+			}
+			add_country_modifier = { name = LQ_d_3_c_common_s_1_3 duration = 3650 }
+		}
+		else_if = { #2级
+			limit = {
+				check_variable = { which = LQdspl_3_exp value = 100 }
+			}
+			add_country_modifier = { name = LQ_d_3_c_common_s_1_2 duration = 3650 }
+		}
+		else = { #1级
+			add_country_modifier = { name = LQ_d_3_c_common_s_1_1 duration = 3650 }
+		}
+		add_years_of_income = -0.1
+		LQmundi_cost_LQpower_script_effect = { value=20 penalty=0 }
+		LQmundi_gain_effect_LQdspl_x_exp_script_effect = { value=1 discipline_sequence=3 }
+	}
+}
+LQ_d_3_c_common_s_2_script_effect = {
+	if = {
+		limit = {
+			OR = {
+				has_country_modifier = LQ_d_3_c_common_s_2_1
+				has_country_modifier = LQ_d_3_c_common_s_2_2
+				has_country_modifier = LQ_d_3_c_common_s_2_3
+				has_country_modifier = LQ_d_3_c_common_s_2_4
+				has_country_modifier = LQ_d_3_c_common_s_2_5
+				has_country_modifier = LQ_d_3_c_common_s_2_6
+			}
+		}
+		custom_tooltip = LQmundi_wait_for_cooldown_tooltip
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				check_variable = { which = LQpower_current value = 50 }
+			}
+		}
+		custom_tooltip = LQpower_require_50_tooltip
+	}
+	else = {
+		if = { # 6级
+			limit = {
+				check_variable = { which = LQdspl_3_exp value = 1000 }
+			}
+			add_country_modifier = { name = LQ_d_3_c_common_s_2_6 duration = 3650 }
+		}
+		else_if = { #5级
+			limit = {
+				check_variable = { which = LQdspl_3_exp value = 700 }
+			}
+			add_country_modifier = { name = LQ_d_3_c_common_s_2_5 duration = 3650 }
+		}
+		else_if = { #4级
+			limit = {
+				check_variable = { which = LQdspl_3_exp value = 450 }
+			}
+			add_country_modifier = { name = LQ_d_3_c_common_s_2_4 duration = 3650 }
+		}
+		else_if = { #3级
+			limit = {
+				check_variable = { which = LQdspl_3_exp value = 250 }
+			}
+			add_country_modifier = { name = LQ_d_3_c_common_s_2_3 duration = 3650 }
+		}
+		else_if = { #2级
+			limit = {
+				check_variable = { which = LQdspl_3_exp value = 100 }
+			}
+			add_country_modifier = { name = LQ_d_3_c_common_s_2_2 duration = 3650 }
+		}
+		else = { #1级
+			add_country_modifier = { name = LQ_d_3_c_common_s_2_1 duration = 3650 }
+		}
+		add_years_of_income = -0.1
+		LQmundi_cost_LQpower_script_effect = { value=20 penalty=0 }
+		LQmundi_gain_effect_LQdspl_x_exp_script_effect = { value=1 discipline_sequence=3 }
+	}
+}
+LQ_d_3_c_common_s_3_script_effect = {
+	if = {
+		limit = {
+			OR = {
+				has_country_modifier = LQ_d_3_c_common_s_3_1
+				has_country_modifier = LQ_d_3_c_common_s_3_2
+				has_country_modifier = LQ_d_3_c_common_s_3_3
+				has_country_modifier = LQ_d_3_c_common_s_3_4
+				has_country_modifier = LQ_d_3_c_common_s_3_5
+				has_country_modifier = LQ_d_3_c_common_s_3_6
+			}
+		}
+		custom_tooltip = LQmundi_wait_for_cooldown_tooltip
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				check_variable = { which = LQpower_current value = 50 }
+			}
+		}
+		custom_tooltip = LQpower_require_50_tooltip
+	}
+	else = {
+		if = { # 6级
+			limit = {
+				check_variable = { which = LQdspl_3_exp value = 1000 }
+			}
+			add_country_modifier = { name = LQ_d_3_c_common_s_3_6 duration = 3650 }
+		}
+		else_if = { #5级
+			limit = {
+				check_variable = { which = LQdspl_3_exp value = 700 }
+			}
+			add_country_modifier = { name = LQ_d_3_c_common_s_3_5 duration = 3650 }
+		}
+		else_if = { #4级
+			limit = {
+				check_variable = { which = LQdspl_3_exp value = 450 }
+			}
+			add_country_modifier = { name = LQ_d_3_c_common_s_3_4 duration = 3650 }
+		}
+		else_if = { #3级
+			limit = {
+				check_variable = { which = LQdspl_3_exp value = 250 }
+			}
+			add_country_modifier = { name = LQ_d_3_c_common_s_3_3 duration = 3650 }
+		}
+		else_if = { #2级
+			limit = {
+				check_variable = { which = LQdspl_3_exp value = 100 }
+			}
+			add_country_modifier = { name = LQ_d_3_c_common_s_3_2 duration = 3650 }
+		}
+		else = { #1级
+			add_country_modifier = { name = LQ_d_3_c_common_s_3_1 duration = 3650 }
+		}
+		add_years_of_income = -0.1
+		LQmundi_cost_LQpower_script_effect = { value=20 penalty=0 }
+		LQmundi_gain_effect_LQdspl_x_exp_script_effect = { value=1 discipline_sequence=3 }
+	}
+}
+LQ_d_3_c_common_s_4_script_effect = {
+	if = {
+		limit = {
+			OR = {
+				has_country_modifier = LQ_d_3_c_common_s_4_1
+				has_country_modifier = LQ_d_3_c_common_s_4_2
+				has_country_modifier = LQ_d_3_c_common_s_4_3
+				has_country_modifier = LQ_d_3_c_common_s_4_4
+				has_country_modifier = LQ_d_3_c_common_s_4_5
+				has_country_modifier = LQ_d_3_c_common_s_4_6
+			}
+		}
+		custom_tooltip = LQmundi_wait_for_cooldown_tooltip
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				check_variable = { which = LQpower_current value = 50 }
+			}
+		}
+		custom_tooltip = LQpower_require_50_tooltip
+	}
+	else = {
+		if = { # 6级
+			limit = {
+				check_variable = { which = LQdspl_3_exp value = 1000 }
+			}
+			add_country_modifier = { name = LQ_d_3_c_common_s_4_6 duration = 3650 }
+		}
+		else_if = { #5级
+			limit = {
+				check_variable = { which = LQdspl_3_exp value = 700 }
+			}
+			add_country_modifier = { name = LQ_d_3_c_common_s_4_5 duration = 3650 }
+		}
+		else_if = { #4级
+			limit = {
+				check_variable = { which = LQdspl_3_exp value = 450 }
+			}
+			add_country_modifier = { name = LQ_d_3_c_common_s_4_4 duration = 3650 }
+		}
+		else_if = { #3级
+			limit = {
+				check_variable = { which = LQdspl_3_exp value = 250 }
+			}
+			add_country_modifier = { name = LQ_d_3_c_common_s_4_3 duration = 3650 }
+		}
+		else_if = { #2级
+			limit = {
+				check_variable = { which = LQdspl_3_exp value = 100 }
+			}
+			add_country_modifier = { name = LQ_d_3_c_common_s_4_2 duration = 3650 }
+		}
+		else = { #1级
+			add_country_modifier = { name = LQ_d_3_c_common_s_4_1 duration = 3650 }
+		}
+		add_years_of_income = -0.1
+		LQmundi_cost_LQpower_script_effect = { value=20 penalty=0 }
+		LQmundi_gain_effect_LQdspl_x_exp_script_effect = { value=1 discipline_sequence=3 }
+	}
+}
+LQ_d_3_c_common_s_5_script_effect = {} # 3-5 未实装
 
+LQ_d_4_c_common_s_1_script_effect = {
+	if = {
+		limit = {
+			OR = {
+				has_country_modifier = LQ_d_4_c_common_s_1_1
+				has_country_modifier = LQ_d_4_c_common_s_1_2
+				has_country_modifier = LQ_d_4_c_common_s_1_3
+				has_country_modifier = LQ_d_4_c_common_s_1_4
+				has_country_modifier = LQ_d_4_c_common_s_1_5
+				has_country_modifier = LQ_d_4_c_common_s_1_6
+			}
+		}
+		custom_tooltip = LQmundi_wait_for_cooldown_tooltip
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				check_variable = { which = LQpower_current value = 50 }
+			}
+		}
+		custom_tooltip = LQpower_require_50_tooltip
+	}
+	else = {
+		if = { # 6级
+			limit = {
+				check_variable = { which = LQdspl_4_exp value = 1000 }
+			}
+			add_country_modifier = { name = LQ_d_4_c_common_s_1_6 duration = 3650 }
+		}
+		else_if = { #5级
+			limit = {
+				check_variable = { which = LQdspl_4_exp value = 700 }
+			}
+			add_country_modifier = { name = LQ_d_4_c_common_s_1_5 duration = 3650 }
+		}
+		else_if = { #4级
+			limit = {
+				check_variable = { which = LQdspl_4_exp value = 450 }
+			}
+			add_country_modifier = { name = LQ_d_4_c_common_s_1_4 duration = 3650 }
+		}
+		else_if = { #3级
+			limit = {
+				check_variable = { which = LQdspl_4_exp value = 250 }
+			}
+			add_country_modifier = { name = LQ_d_4_c_common_s_1_3 duration = 3650 }
+		}
+		else_if = { #2级
+			limit = {
+				check_variable = { which = LQdspl_4_exp value = 100 }
+			}
+			add_country_modifier = { name = LQ_d_4_c_common_s_1_2 duration = 3650 }
+		}
+		else = { #1级
+			add_country_modifier = { name = LQ_d_4_c_common_s_1_1 duration = 3650 }
+		}
+		add_years_of_income = -0.1
+		LQmundi_cost_LQpower_script_effect = { value=20 penalty=0 }
+		LQmundi_gain_effect_LQdspl_x_exp_script_effect = { value=1 discipline_sequence=4 }
+	}
+}
+LQ_d_4_c_common_s_2_script_effect = {
+	if = {
+		limit = {
+			OR = {
+				has_country_modifier = LQ_d_4_c_common_s_2_1
+				has_country_modifier = LQ_d_4_c_common_s_2_2
+				has_country_modifier = LQ_d_4_c_common_s_2_3
+				has_country_modifier = LQ_d_4_c_common_s_2_4
+				has_country_modifier = LQ_d_4_c_common_s_2_5
+				has_country_modifier = LQ_d_4_c_common_s_2_6
+			}
+		}
+		custom_tooltip = LQmundi_wait_for_cooldown_tooltip
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				check_variable = { which = LQpower_current value = 50 }
+			}
+		}
+		custom_tooltip = LQpower_require_50_tooltip
+	}
+	else = {
+		if = { # 6级
+			limit = {
+				check_variable = { which = LQdspl_4_exp value = 1000 }
+			}
+			add_country_modifier = { name = LQ_d_4_c_common_s_2_6 duration = 3650 }
+		}
+		else_if = { #5级
+			limit = {
+				check_variable = { which = LQdspl_4_exp value = 700 }
+			}
+			add_country_modifier = { name = LQ_d_4_c_common_s_2_5 duration = 3650 }
+		}
+		else_if = { #4级
+			limit = {
+				check_variable = { which = LQdspl_4_exp value = 450 }
+			}
+			add_country_modifier = { name = LQ_d_4_c_common_s_2_4 duration = 3650 }
+		}
+		else_if = { #3级
+			limit = {
+				check_variable = { which = LQdspl_4_exp value = 250 }
+			}
+			add_country_modifier = { name = LQ_d_4_c_common_s_2_3 duration = 3650 }
+		}
+		else_if = { #2级
+			limit = {
+				check_variable = { which = LQdspl_4_exp value = 100 }
+			}
+			add_country_modifier = { name = LQ_d_4_c_common_s_2_2 duration = 3650 }
+		}
+		else = { #1级
+			add_country_modifier = { name = LQ_d_4_c_common_s_2_1 duration = 3650 }
+		}
+		add_years_of_income = -0.1
+		LQmundi_cost_LQpower_script_effect = { value=20 penalty=0 }
+		LQmundi_gain_effect_LQdspl_x_exp_script_effect = { value=1 discipline_sequence=4 }
+	}
+}
+LQ_d_4_c_common_s_3_script_effect = {} #已移入cusGui
+LQ_d_4_c_common_s_4_script_effect = {} #已移入cusGui
+LQ_d_4_c_common_s_5_script_effect = {} #已移入cusGui
 
+LQ_d_5_c_common_s_1_script_effect = {} #已移入cusGui
+LQ_d_5_c_common_s_2_script_effect = {} #已移入cusGui
+LQ_d_5_c_common_s_3_script_effect = {} #已移入cusGui
+LQ_d_5_c_common_s_4_script_effect = {} #已移入cusGui
+LQ_d_5_c_common_s_5_script_effect = {} #已移入cusGui
+
+LQ_d_5_c_common_s_6_script_effect = {} # 5-6 未实装
+
+LQ_d_6_c_common_s_1_script_effect = {
+	if = {
+		limit = {
+			OR = {
+				has_country_modifier = LQ_d_6_c_common_s_1_1
+				has_country_modifier = LQ_d_6_c_common_s_1_2
+				has_country_modifier = LQ_d_6_c_common_s_1_3
+				has_country_modifier = LQ_d_6_c_common_s_1_4
+				has_country_modifier = LQ_d_6_c_common_s_1_5
+				has_country_modifier = LQ_d_6_c_common_s_1_6
+			}
+		}
+		custom_tooltip = LQmundi_wait_for_cooldown_tooltip
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				check_variable = { which = LQpower_current value = 50 }
+			}
+		}
+		custom_tooltip = LQpower_require_50_tooltip
+	}
+	else = {
+		if = { # 6级
+			limit = {
+				check_variable = { which = LQdspl_6_exp value = 1000 }
+			}
+			add_country_modifier = { name = LQ_d_6_c_common_s_1_6 duration = 3650 }
+		}
+		else_if = { #5级
+			limit = {
+				check_variable = { which = LQdspl_6_exp value = 700 }
+			}
+			add_country_modifier = { name = LQ_d_6_c_common_s_1_5 duration = 3650 }
+		}
+		else_if = { #4级
+			limit = {
+				check_variable = { which = LQdspl_6_exp value = 450 }
+			}
+			add_country_modifier = { name = LQ_d_6_c_common_s_1_4 duration = 3650 }
+		}
+		else_if = { #3级
+			limit = {
+				check_variable = { which = LQdspl_6_exp value = 250 }
+			}
+			add_country_modifier = { name = LQ_d_6_c_common_s_1_3 duration = 3650 }
+		}
+		else_if = { #2级
+			limit = {
+				check_variable = { which = LQdspl_6_exp value = 100 }
+			}
+			add_country_modifier = { name = LQ_d_6_c_common_s_1_2 duration = 3650 }
+		}
+		else = { #1级
+			add_country_modifier = { name = LQ_d_6_c_common_s_1_1 duration = 3650 }
+		}
+		add_years_of_income = -0.1
+		LQmundi_cost_LQpower_script_effect = { value=20 penalty=0 }
+		LQmundi_gain_effect_LQdspl_x_exp_script_effect = { value=1 discipline_sequence=6 }
+	}
+}
+LQ_d_6_c_common_s_2_script_effect = {
+	if = {
+		limit = {
+			OR = {
+				has_country_modifier = LQ_d_6_c_common_s_2_1
+				has_country_modifier = LQ_d_6_c_common_s_2_2
+				has_country_modifier = LQ_d_6_c_common_s_2_3
+				has_country_modifier = LQ_d_6_c_common_s_2_4
+				has_country_modifier = LQ_d_6_c_common_s_2_5
+				has_country_modifier = LQ_d_6_c_common_s_2_6
+			}
+		}
+		custom_tooltip = LQmundi_wait_for_cooldown_tooltip
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				check_variable = { which = LQpower_current value = 50 }
+			}
+		}
+		custom_tooltip = LQpower_require_50_tooltip
+	}
+	else = {
+		if = { # 6级
+			limit = {
+				check_variable = { which = LQdspl_6_exp value = 1000 }
+			}
+			add_country_modifier = { name = LQ_d_6_c_common_s_2_6 duration = 3650 }
+		}
+		else_if = { #5级
+			limit = {
+				check_variable = { which = LQdspl_6_exp value = 700 }
+			}
+			add_country_modifier = { name = LQ_d_6_c_common_s_2_5 duration = 3650 }
+		}
+		else_if = { #4级
+			limit = {
+				check_variable = { which = LQdspl_6_exp value = 450 }
+			}
+			add_country_modifier = { name = LQ_d_6_c_common_s_2_4 duration = 3650 }
+		}
+		else_if = { #3级
+			limit = {
+				check_variable = { which = LQdspl_6_exp value = 250 }
+			}
+			add_country_modifier = { name = LQ_d_6_c_common_s_2_3 duration = 3650 }
+		}
+		else_if = { #2级
+			limit = {
+				check_variable = { which = LQdspl_6_exp value = 100 }
+			}
+			add_country_modifier = { name = LQ_d_6_c_common_s_2_2 duration = 3650 }
+		}
+		else = { #1级
+			add_country_modifier = { name = LQ_d_6_c_common_s_2_1 duration = 3650 }
+		}
+		add_years_of_income = -0.1
+		LQmundi_cost_LQpower_script_effect = { value=20 penalty=0 }
+		LQmundi_gain_effect_LQdspl_x_exp_script_effect = { value=1 discipline_sequence=6 }
+	}
+}
+LQ_d_6_c_common_s_3_script_effect = {
+	if = {
+		limit = {
+			OR = {
+				has_country_modifier = LQ_d_6_c_common_s_3_1
+				has_country_modifier = LQ_d_6_c_common_s_3_2
+				has_country_modifier = LQ_d_6_c_common_s_3_3
+				has_country_modifier = LQ_d_6_c_common_s_3_4
+				has_country_modifier = LQ_d_6_c_common_s_3_5
+				has_country_modifier = LQ_d_6_c_common_s_3_6
+			}
+		}
+		custom_tooltip = LQmundi_wait_for_cooldown_tooltip
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				check_variable = { which = LQpower_current value = 50 }
+			}
+		}
+		custom_tooltip = LQpower_require_50_tooltip
+	}
+	else = {
+		if = { # 6级
+			limit = {
+				check_variable = { which = LQdspl_6_exp value = 1000 }
+			}
+			add_country_modifier = { name = LQ_d_6_c_common_s_3_6 duration = 3650 }
+		}
+		else_if = { #5级
+			limit = {
+				check_variable = { which = LQdspl_6_exp value = 700 }
+			}
+			add_country_modifier = { name = LQ_d_6_c_common_s_3_5 duration = 3650 }
+		}
+		else_if = { #4级
+			limit = {
+				check_variable = { which = LQdspl_6_exp value = 450 }
+			}
+			add_country_modifier = { name = LQ_d_6_c_common_s_3_4 duration = 3650 }
+		}
+		else_if = { #3级
+			limit = {
+				check_variable = { which = LQdspl_6_exp value = 250 }
+			}
+			add_country_modifier = { name = LQ_d_6_c_common_s_3_3 duration = 3650 }
+		}
+		else_if = { #2级
+			limit = {
+				check_variable = { which = LQdspl_6_exp value = 100 }
+			}
+			add_country_modifier = { name = LQ_d_6_c_common_s_3_2 duration = 3650 }
+		}
+		else = { #1级
+			add_country_modifier = { name = LQ_d_6_c_common_s_3_1 duration = 3650 }
+		}
+		add_years_of_income = -0.1
+		LQmundi_cost_LQpower_script_effect = { value=20 penalty=0 }
+		LQmundi_gain_effect_LQdspl_x_exp_script_effect = { value=1 discipline_sequence=6 }
+	}
+}
+LQ_d_6_c_common_s_4_script_effect = {} # 6-4 未实装
+LQ_d_6_c_common_s_5_script_effect = {} # 6-5 未实装
+LQ_d_6_c_common_s_6_script_effect = {} # 6-6 未实装
+
+LQ_d_7_c_common_s_1_script_effect = {
+	if = {
+		limit = {
+			OR = {
+				has_country_modifier = LQ_d_7_c_common_s_1_1
+				has_country_modifier = LQ_d_7_c_common_s_1_2
+				has_country_modifier = LQ_d_7_c_common_s_1_3
+				has_country_modifier = LQ_d_7_c_common_s_1_4
+				has_country_modifier = LQ_d_7_c_common_s_1_5
+				has_country_modifier = LQ_d_7_c_common_s_1_6
+			}
+		}
+		custom_tooltip = LQmundi_wait_for_cooldown_tooltip
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				check_variable = { which = LQpower_current value = 50 }
+			}
+		}
+		custom_tooltip = LQpower_require_50_tooltip
+	}
+	else = {
+		if = { # 6级
+			limit = {
+				check_variable = { which = LQdspl_7_exp value = 1000 }
+			}
+			add_country_modifier = { name = LQ_d_7_c_common_s_1_6 duration = 3650 }
+		}
+		else_if = { #5级
+			limit = {
+				check_variable = { which = LQdspl_7_exp value = 700 }
+			}
+			add_country_modifier = { name = LQ_d_7_c_common_s_1_5 duration = 3650 }
+		}
+		else_if = { #4级
+			limit = {
+				check_variable = { which = LQdspl_7_exp value = 450 }
+			}
+			add_country_modifier = { name = LQ_d_7_c_common_s_1_4 duration = 3650 }
+		}
+		else_if = { #3级
+			limit = {
+				check_variable = { which = LQdspl_7_exp value = 250 }
+			}
+			add_country_modifier = { name = LQ_d_7_c_common_s_1_3 duration = 3650 }
+		}
+		else_if = { #2级
+			limit = {
+				check_variable = { which = LQdspl_7_exp value = 100 }
+			}
+			add_country_modifier = { name = LQ_d_7_c_common_s_1_2 duration = 3650 }
+		}
+		else = { #1级
+			add_country_modifier = { name = LQ_d_7_c_common_s_1_1 duration = 3650 }
+		}
+		add_years_of_income = -0.1
+		LQmundi_cost_LQpower_script_effect = { value=25 penalty=0 }
+		LQmundi_gain_effect_LQdspl_x_exp_script_effect = { value=1 discipline_sequence=7 }
+	}
+}
+LQ_d_7_c_common_s_2_script_effect = {
+	if = {
+		limit = {
+			OR = {
+				has_country_modifier = LQ_d_7_c_common_s_2_1
+				has_country_modifier = LQ_d_7_c_common_s_2_2
+				has_country_modifier = LQ_d_7_c_common_s_2_3
+				has_country_modifier = LQ_d_7_c_common_s_2_4
+				has_country_modifier = LQ_d_7_c_common_s_2_5
+				has_country_modifier = LQ_d_7_c_common_s_2_6
+			}
+		}
+		custom_tooltip = LQmundi_wait_for_cooldown_tooltip
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				check_variable = { which = LQpower_current value = 50 }
+			}
+		}
+		custom_tooltip = LQpower_require_50_tooltip
+	}
+	else = {
+		if = { # 6级
+			limit = {
+				check_variable = { which = LQdspl_7_exp value = 1000 }
+			}
+			add_country_modifier = { name = LQ_d_7_c_common_s_2_6 duration = 3650 }
+		}
+		else_if = { #5级
+			limit = {
+				check_variable = { which = LQdspl_7_exp value = 700 }
+			}
+			add_country_modifier = { name = LQ_d_7_c_common_s_2_5 duration = 3650 }
+		}
+		else_if = { #4级
+			limit = {
+				check_variable = { which = LQdspl_7_exp value = 450 }
+			}
+			add_country_modifier = { name = LQ_d_7_c_common_s_2_4 duration = 3650 }
+		}
+		else_if = { #3级
+			limit = {
+				check_variable = { which = LQdspl_7_exp value = 250 }
+			}
+			add_country_modifier = { name = LQ_d_7_c_common_s_2_3 duration = 3650 }
+		}
+		else_if = { #2级
+			limit = {
+				check_variable = { which = LQdspl_7_exp value = 100 }
+			}
+			add_country_modifier = { name = LQ_d_7_c_common_s_2_2 duration = 3650 }
+		}
+		else = { #1级
+			add_country_modifier = { name = LQ_d_7_c_common_s_2_1 duration = 3650 }
+		}
+		add_years_of_income = -0.1
+		LQmundi_cost_LQpower_script_effect = { value=25 penalty=0 }
+		LQmundi_gain_effect_LQdspl_x_exp_script_effect = { value=1 discipline_sequence=7 }
+	}
+}
+LQ_d_7_c_common_s_3_script_effect = {
+	if = {
+		limit = {
+			OR = {
+				has_country_modifier = LQ_d_7_c_common_s_3_1
+				has_country_modifier = LQ_d_7_c_common_s_3_2
+				has_country_modifier = LQ_d_7_c_common_s_3_3
+				has_country_modifier = LQ_d_7_c_common_s_3_4
+				has_country_modifier = LQ_d_7_c_common_s_3_5
+				has_country_modifier = LQ_d_7_c_common_s_3_6
+			}
+		}
+		custom_tooltip = LQmundi_wait_for_cooldown_tooltip
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				check_variable = { which = LQpower_current value = 50 }
+			}
+		}
+		custom_tooltip = LQpower_require_50_tooltip
+	}
+	else = {
+		if = { # 6级
+			limit = {
+				check_variable = { which = LQdspl_7_exp value = 1000 }
+			}
+			add_country_modifier = { name = LQ_d_7_c_common_s_3_6 duration = 3650 }
+		}
+		else_if = { #5级
+			limit = {
+				check_variable = { which = LQdspl_7_exp value = 700 }
+			}
+			add_country_modifier = { name = LQ_d_7_c_common_s_3_5 duration = 3650 }
+		}
+		else_if = { #4级
+			limit = {
+				check_variable = { which = LQdspl_7_exp value = 450 }
+			}
+			add_country_modifier = { name = LQ_d_7_c_common_s_3_4 duration = 3650 }
+		}
+		else_if = { #3级
+			limit = {
+				check_variable = { which = LQdspl_7_exp value = 250 }
+			}
+			add_country_modifier = { name = LQ_d_7_c_common_s_3_3 duration = 3650 }
+		}
+		else_if = { #2级
+			limit = {
+				check_variable = { which = LQdspl_7_exp value = 100 }
+			}
+			add_country_modifier = { name = LQ_d_7_c_common_s_3_2 duration = 3650 }
+		}
+		else = { #1级
+			add_country_modifier = { name = LQ_d_7_c_common_s_3_1 duration = 3650 }
+		}
+		add_years_of_income = -0.1
+		LQmundi_cost_LQpower_script_effect = { value=25 penalty=0 }
+		LQmundi_gain_effect_LQdspl_x_exp_script_effect = { value=1 discipline_sequence=7 }
+	}
+}
+LQ_d_7_c_common_s_4_script_effect = {} # 7-4 未实装
+LQ_d_7_c_common_s_5_script_effect = {
+	if = {
+		limit = {
+			OR = {
+				has_country_modifier = LQ_d_7_c_common_s_5_1
+				has_country_modifier = LQ_d_7_c_common_s_5_2
+				has_country_modifier = LQ_d_7_c_common_s_5_3
+				has_country_modifier = LQ_d_7_c_common_s_5_4
+				has_country_modifier = LQ_d_7_c_common_s_5_5
+				has_country_modifier = LQ_d_7_c_common_s_5_6
+			}
+		}
+		custom_tooltip = LQmundi_wait_for_cooldown_tooltip
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				check_variable = { which = LQpower_current value = 50 }
+			}
+		}
+		custom_tooltip = LQpower_require_50_tooltip
+	}
+	else = {
+		if = { # 6级
+			limit = {
+				check_variable = { which = LQdspl_7_exp value = 1000 }
+			}
+			add_country_modifier = { name = LQ_d_7_c_common_s_5_6 duration = 3650 }
+		}
+		else_if = { #5级
+			limit = {
+				check_variable = { which = LQdspl_7_exp value = 700 }
+			}
+			add_country_modifier = { name = LQ_d_7_c_common_s_5_5 duration = 3650 }
+		}
+		else_if = { #4级
+			limit = {
+				check_variable = { which = LQdspl_7_exp value = 450 }
+			}
+			add_country_modifier = { name = LQ_d_7_c_common_s_5_4 duration = 3650 }
+		}
+		else_if = { #3级
+			limit = {
+				check_variable = { which = LQdspl_7_exp value = 250 }
+			}
+			add_country_modifier = { name = LQ_d_7_c_common_s_5_3 duration = 3650 }
+		}
+		else_if = { #2级
+			limit = {
+				check_variable = { which = LQdspl_7_exp value = 100 }
+			}
+			add_country_modifier = { name = LQ_d_7_c_common_s_5_2 duration = 3650 }
+		}
+		else = { #1级
+			add_country_modifier = { name = LQ_d_7_c_common_s_5_1 duration = 3650 }
+		}
+		add_years_of_income = -0.05
+		LQmundi_cost_LQpower_script_effect = { value=30 penalty=0 }
+		LQmundi_gain_effect_LQdspl_x_exp_script_effect = { value=1 discipline_sequence=7 }
+	}
+}
+LQ_d_7_c_common_s_6_script_effect = {
+	if = {
+		limit = {
+			OR = {
+				has_country_modifier = LQ_d_7_c_common_s_6_1
+				has_country_modifier = LQ_d_7_c_common_s_6_2
+				has_country_modifier = LQ_d_7_c_common_s_6_3
+				has_country_modifier = LQ_d_7_c_common_s_6_4
+				has_country_modifier = LQ_d_7_c_common_s_6_5
+				has_country_modifier = LQ_d_7_c_common_s_6_6
+			}
+		}
+		custom_tooltip = LQmundi_wait_for_cooldown_tooltip
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				check_variable = { which = LQpower_current value = 50 }
+			}
+		}
+		custom_tooltip = LQpower_require_50_tooltip
+	}
+	else = {
+		if = { # 6级
+			limit = {
+				check_variable = { which = LQdspl_7_exp value = 1000 }
+			}
+			add_country_modifier = { name = LQ_d_7_c_common_s_6_6 duration = 3650 }
+		}
+		else_if = { #5级
+			limit = {
+				check_variable = { which = LQdspl_7_exp value = 700 }
+			}
+			add_country_modifier = { name = LQ_d_7_c_common_s_6_5 duration = 3650 }
+		}
+		else_if = { #4级
+			limit = {
+				check_variable = { which = LQdspl_7_exp value = 450 }
+			}
+			add_country_modifier = { name = LQ_d_7_c_common_s_6_4 duration = 3650 }
+		}
+		else_if = { #3级
+			limit = {
+				check_variable = { which = LQdspl_7_exp value = 250 }
+			}
+			add_country_modifier = { name = LQ_d_7_c_common_s_6_3 duration = 3650 }
+		}
+		else_if = { #2级
+			limit = {
+				check_variable = { which = LQdspl_7_exp value = 100 }
+			}
+			add_country_modifier = { name = LQ_d_7_c_common_s_6_2 duration = 3650 }
+		}
+		else = { #1级
+			add_country_modifier = { name = LQ_d_7_c_common_s_6_1 duration = 3650 }
+		}
+		add_treasury = -100
+		LQmundi_cost_LQpower_script_effect = { value=30 penalty=0 }
+		LQmundi_gain_effect_LQdspl_x_exp_script_effect = { value=1 discipline_sequence=7 }
+	}
+}
+
+LQ_d_8_c_common_s_1_script_effect = {
+	if = {
+		limit = {
+			OR = {
+				has_country_modifier = LQ_d_8_c_common_s_1_1
+				has_country_modifier = LQ_d_8_c_common_s_1_2
+				has_country_modifier = LQ_d_8_c_common_s_1_3
+				has_country_modifier = LQ_d_8_c_common_s_1_4
+				has_country_modifier = LQ_d_8_c_common_s_1_5
+				has_country_modifier = LQ_d_8_c_common_s_1_6
+			}
+		}
+		custom_tooltip = LQmundi_wait_for_cooldown_tooltip
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				check_variable = { which = LQpower_current value = 50 }
+			}
+		}
+		custom_tooltip = LQpower_require_50_tooltip
+	}
+	else = {
+		if = { # 6级
+			limit = {
+				check_variable = { which = LQdspl_8_exp value = 1000 }
+			}
+			add_country_modifier = { name = LQ_d_8_c_common_s_1_6 duration = 3650 }
+		}
+		else_if = { #5级
+			limit = {
+				check_variable = { which = LQdspl_8_exp value = 700 }
+			}
+			add_country_modifier = { name = LQ_d_8_c_common_s_1_5 duration = 3650 }
+		}
+		else_if = { #4级
+			limit = {
+				check_variable = { which = LQdspl_8_exp value = 450 }
+			}
+			add_country_modifier = { name = LQ_d_8_c_common_s_1_4 duration = 3650 }
+		}
+		else_if = { #3级
+			limit = {
+				check_variable = { which = LQdspl_8_exp value = 250 }
+			}
+			add_country_modifier = { name = LQ_d_8_c_common_s_1_3 duration = 3650 }
+		}
+		else_if = { #2级
+			limit = {
+				check_variable = { which = LQdspl_8_exp value = 100 }
+			}
+			add_country_modifier = { name = LQ_d_8_c_common_s_1_2 duration = 3650 }
+		}
+		else = { #1级
+			add_country_modifier = { name = LQ_d_8_c_common_s_1_1 duration = 3650 }
+		}
+		add_years_of_income = -0.1
+		LQmundi_cost_LQpower_script_effect = { value=30 penalty=0 }
+		LQmundi_gain_effect_LQdspl_x_exp_script_effect = { value=1 discipline_sequence=8 }
+	}
+}
+LQ_d_8_c_common_s_2_script_effect = {
+	if = {
+		limit = {
+			OR = {
+				has_country_modifier = LQ_d_8_c_common_s_2_1
+				has_country_modifier = LQ_d_8_c_common_s_2_2
+				has_country_modifier = LQ_d_8_c_common_s_2_3
+				has_country_modifier = LQ_d_8_c_common_s_2_4
+				has_country_modifier = LQ_d_8_c_common_s_2_5
+				has_country_modifier = LQ_d_8_c_common_s_2_6
+			}
+		}
+		custom_tooltip = LQmundi_wait_for_cooldown_tooltip
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				check_variable = { which = LQpower_current value = 50 }
+			}
+		}
+		custom_tooltip = LQpower_require_50_tooltip
+	}
+	else = {
+		if = { # 6级
+			limit = {
+				check_variable = { which = LQdspl_8_exp value = 1000 }
+			}
+			add_country_modifier = { name = LQ_d_8_c_common_s_2_6 duration = 3650 }
+		}
+		else_if = { #5级
+			limit = {
+				check_variable = { which = LQdspl_8_exp value = 700 }
+			}
+			add_country_modifier = { name = LQ_d_8_c_common_s_2_5 duration = 3650 }
+		}
+		else_if = { #4级
+			limit = {
+				check_variable = { which = LQdspl_8_exp value = 450 }
+			}
+			add_country_modifier = { name = LQ_d_8_c_common_s_2_4 duration = 3650 }
+		}
+		else_if = { #3级
+			limit = {
+				check_variable = { which = LQdspl_8_exp value = 250 }
+			}
+			add_country_modifier = { name = LQ_d_8_c_common_s_2_3 duration = 3650 }
+		}
+		else_if = { #2级
+			limit = {
+				check_variable = { which = LQdspl_8_exp value = 100 }
+			}
+			add_country_modifier = { name = LQ_d_8_c_common_s_2_2 duration = 3650 }
+		}
+		else = { #1级
+			add_country_modifier = { name = LQ_d_8_c_common_s_2_1 duration = 3650 }
+		}
+		add_treasury = -100
+		LQmundi_cost_LQpower_script_effect = { value=30 penalty=0 }
+		LQmundi_gain_effect_LQdspl_x_exp_script_effect = { value=1 discipline_sequence=8 }
+	}
+}
+LQ_d_8_c_common_s_3_script_effect = {
+	if = {
+		limit = {
+			OR = {
+				has_country_modifier = LQ_d_8_c_common_s_3_1
+				has_country_modifier = LQ_d_8_c_common_s_3_2
+				has_country_modifier = LQ_d_8_c_common_s_3_3
+				has_country_modifier = LQ_d_8_c_common_s_3_4
+				has_country_modifier = LQ_d_8_c_common_s_3_5
+				has_country_modifier = LQ_d_8_c_common_s_3_6
+			}
+		}
+		custom_tooltip = LQmundi_wait_for_cooldown_tooltip
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				check_variable = { which = LQpower_current value = 50 }
+			}
+		}
+		custom_tooltip = LQpower_require_50_tooltip
+	}
+	else = {
+		if = { # 6级
+			limit = {
+				check_variable = { which = LQdspl_8_exp value = 1000 }
+			}
+			add_country_modifier = { name = LQ_d_8_c_common_s_3_6 duration = 3650 }
+		}
+		else_if = { #5级
+			limit = {
+				check_variable = { which = LQdspl_8_exp value = 700 }
+			}
+			add_country_modifier = { name = LQ_d_8_c_common_s_3_5 duration = 3650 }
+		}
+		else_if = { #4级
+			limit = {
+				check_variable = { which = LQdspl_8_exp value = 450 }
+			}
+			add_country_modifier = { name = LQ_d_8_c_common_s_3_4 duration = 3650 }
+		}
+		else_if = { #3级
+			limit = {
+				check_variable = { which = LQdspl_8_exp value = 250 }
+			}
+			add_country_modifier = { name = LQ_d_8_c_common_s_3_3 duration = 3650 }
+		}
+		else_if = { #2级
+			limit = {
+				check_variable = { which = LQdspl_8_exp value = 100 }
+			}
+			add_country_modifier = { name = LQ_d_8_c_common_s_3_2 duration = 3650 }
+		}
+		else = { #1级
+			add_country_modifier = { name = LQ_d_8_c_common_s_3_1 duration = 3650 }
+		}
+		add_years_of_income = -0.1
+		LQmundi_cost_LQpower_script_effect = { value=30 penalty=0 }
+		LQmundi_gain_effect_LQdspl_x_exp_script_effect = { value=1 discipline_sequence=8 }
+	}
+}
+LQ_d_8_c_common_s_4_script_effect = {} #已移入cusGui
+LQ_d_8_c_common_s_5_script_effect = {
+	if = {
+		limit = {
+			OR = {
+				has_country_modifier = LQ_d_8_c_common_s_5_1
+				has_country_modifier = LQ_d_8_c_common_s_5_2
+				has_country_modifier = LQ_d_8_c_common_s_5_3
+				has_country_modifier = LQ_d_8_c_common_s_5_4
+				has_country_modifier = LQ_d_8_c_common_s_5_5
+				has_country_modifier = LQ_d_8_c_common_s_5_6
+			}
+		}
+		custom_tooltip = LQmundi_wait_for_cooldown_tooltip
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				check_variable = { which = LQpower_current value = 50 }
+			}
+		}
+		custom_tooltip = LQpower_require_50_tooltip
+	}
+	else = {
+		if = { # 6级
+			limit = {
+				check_variable = { which = LQdspl_8_exp value = 1000 }
+			}
+			add_country_modifier = { name = LQ_d_8_c_common_s_5_6 duration = 3650 }
+		}
+		else_if = { #5级
+			limit = {
+				check_variable = { which = LQdspl_8_exp value = 700 }
+			}
+			add_country_modifier = { name = LQ_d_8_c_common_s_5_5 duration = 3650 }
+		}
+		else_if = { #4级
+			limit = {
+				check_variable = { which = LQdspl_8_exp value = 450 }
+			}
+			add_country_modifier = { name = LQ_d_8_c_common_s_5_4 duration = 3650 }
+		}
+		else_if = { #3级
+			limit = {
+				check_variable = { which = LQdspl_8_exp value = 250 }
+			}
+			add_country_modifier = { name = LQ_d_8_c_common_s_5_3 duration = 3650 }
+		}
+		else_if = { #2级
+			limit = {
+				check_variable = { which = LQdspl_8_exp value = 100 }
+			}
+			add_country_modifier = { name = LQ_d_8_c_common_s_5_2 duration = 3650 }
+		}
+		else = { #1级
+			add_country_modifier = { name = LQ_d_8_c_common_s_5_1 duration = 3650 }
+		}
+		add_years_of_income = -0.1
+		LQmundi_cost_LQpower_script_effect = { value=30 penalty=0 }
+		LQmundi_gain_effect_LQdspl_x_exp_script_effect = { value=1 discipline_sequence=8 }
+	}
+}

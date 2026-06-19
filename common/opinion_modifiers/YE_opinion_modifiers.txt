@@ -1,0 +1,4 @@
+destructive_action_of_oni_special_operations_team = {
+	opinion = -50
+	yearly_decay = 2.5
+}

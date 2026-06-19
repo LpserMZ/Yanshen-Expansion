@@ -1,10 +1,10 @@
-owner = YA6
-controller = YA6
+add_core = Y14
+owner = Y14
+culture = jiangyang
+religion = accretive_path
+controller = Y14
 is_city = no
-culture = kamtarhid
-religion = devouring_path
 trade_goods = grain
-base_tax = 3
-base_manpower = 4
+base_tax = 4
+base_manpower = 2
 base_production = 3
-add_core = YA6

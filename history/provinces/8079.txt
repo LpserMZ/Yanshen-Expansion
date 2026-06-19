@@ -1,10 +1,11 @@
-add_core = Y19
-owner = Y19
-controller = Y19
-is_city = no
+add_core = Y21
+owner = Y21
 culture = gangim
 religion = accretive_path
-trade_goods = wine
-base_tax = 3
+controller = Y21
+is_city = no
+trade_goods = gems
+base_tax = 4
 base_manpower = 2
 base_production = 3
+add_core = Y24

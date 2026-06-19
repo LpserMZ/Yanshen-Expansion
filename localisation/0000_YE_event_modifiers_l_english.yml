@@ -22,3 +22,63 @@
  spy_of_south_human_states:0 "ºN‰|ô•Œ"
  orderly_and_peaceful:0 "éy^NŒTs^"
  secure_wuxun_safety:0 "fkTm‰RR"
+
+ YE_Y01_special_buff:0 "T›­Sá‹Øy"
+ YE_scholar_from_luojiang:0 "WmlTëXSÑNÀs²‹fR0W"
+ YE_scholar_from_luojiang_desc:0 "SÑNleg0Ræf‘NýVTšRESW‘ÿÏeºNv^NïygÂS?eÿlwNÃVxvz9Noƒÿ(WßpÞT¼p9N¶R„v#W0WNW»yŒNLˆ«R-N‡˜wQZg0æf‘N	–¦R…Qbgô•ÿNW»yŒNLˆ«R«ˆ	–¦RÑvÆ‰ÿSÑNlmNwSeQ·u‰N0SÑNÀs/fÏe-NR—t^MbÊOÿNbk¾|¼p9N/gÿuó(W&rÆrfRNmN‡˜	gb1Sÿg¦^ŒSv`	–¦Rÿ:NhˆfNNKNTjO„v`¦^ÿ³QšR»yVW‘ÿ‘N8nÛV¹e0"
+ taixuegong:0 "ðlfR«R"
+
+ yanzhou_forbid_alliance_minor:0 "ßpÞTY²NNS¿Rÿ1VS	ÿ"
+ desc_yanzhou_forbid_alliance_minor:0 ""
+ yanzhou_forbid_alliance_medium:0 "ßpÞTY²NNS¿Rÿ-NIr	ÿ"
+ desc_yanzhou_forbid_alliance_medium:0 ""
+ yanzhou_forbid_alliance_major:0 "ßpÞTY²NNS¿Rÿ:VCg	ÿ"
+ desc_yanzhou_forbid_alliance_major:0 ""
+
+ YE_administrative_district_reform:0 "0W¹e:SR9ei—"
+ YE_administrative_district_reform_desc:0 ""
+ Yanzhou_dynasty_bureaucracy:0 "ßpg˜R6R"
+ Yanzhou_dynasty_bureaucracy_desc:0 ""
+ Yanzhou_court_deliberation:0 "gX®‹?e"
+ yanzhou_court_deliberation_desc:0 ""
+
+
+ southern_coastal_yanzhou_sailors:0 ">jwm4luQ"
+
+ naval_galley_focus:0 "èlÍ‘b0‚"
+ naval_light_ship_focus:0 "èlÍ‘‰0‚"
+
+ visit_official_university_cooldown:0 "¢c¿‹˜RfRÿ·QtSg"
+
+ yan_imperial_garrison_system:0 "˜R›Q‰š2–SOû|"
+
+ free_snow_leopard_cavalry:0 "ê1uê–yŒ‘šuQ"
+
+ YE_biangfang_cataphract_buff:0 "¹¹ewQÅˆ‘šuQ"
+
+ send_oni_special_operations_team_cooldown:0 ">mcyr¡R–³Q®‹·QtSg"
+
+ rightful_xia_territory_occupied:0 "1Y¿R Oè•†˜0W"
+ rightful_xia_territory_occupied_desc:0 "Ù*NwýNXR(W'YGr Oè•†˜0WÿFO Oè•„vßu»l«ˆëÈuÓu0\nÖNìN³QNO„UbuO0"
+ discard_xiajie_territory:0 ">eV OLu"
+ xiajie_directly_administered_territory_I:0 " OLuôv–0Wÿ§g*guHe§!"
+ xiajie_directly_administered_territory_I_desc:0 "Œp¾–0 OLu'YwIN0rÑSöeÿNb	gôv¥cåb	g„v Oè•wýNO·ƒ—VdkîOckÿŒp¾–gô•ÿ·ƒ—V°e Oè•wýNmNO·ƒ—VdkîOckÿFO0N1YwýNOˆmd–dkîOck0\nÓumgŒp¾–öeÿgÈuVY±R:NÀoImdkîOckÿÀoIm„vIrµu9hncôv¥cc	g„vwýN-NdkîOck„vI`peeg2RšR0\n \nèlaÿÇTv^^SýV·ƒ—V„vwýNNO·ƒ—VdkîOckÿŒp¾–ÓumgöeêS	gXR(W,gîOck„vwýNÿO—V0RÀoIm„vîOLˆ0"
+ xiajie_directly_administered_territory_II:0 " OLuôv–0Wÿ§J Oè•©‹MO§!" 
+ xiajie_directly_administered_territory_II_desc:0 "NS¿RòTÏu3zšRÿ OLu¥c×S†N°eéy^N„vŒTs^0 Oè•ÏQS†NùRN×Oßu»l„vr^„˜ÿFO(Wlô•ÍN	g:V'Y„vqVÍT›R0"
+ xiajie_directly_administered_territory_III:0 " OLuôv–0Wÿ§T Oè•V®V§!" 
+ xiajie_directly_administered_territory_III_desc:0 "NS¿RòTÏu3zšRÿ OLu¥c×S†N°eéy^N„vŒTs^0 Oè•‰LqNQÿ8n¹e O¢RåeÊvzS0"
+ xiajie_directly_administered_territory_IV:0 " OLuôv–0Wÿ§O Oè•ˆm¡N§!" 
+ xiajie_directly_administered_territory_IV_desc:0 "NS¿RòTÏu3zšRÿ OLu¥c×S†N°eéy^N„vŒTs^0åRåRàQY Oè•'YúRÍN(WÐlÿdRìr0WÞVÆVŽVf0"
+
+ qingwu_central_city:0 "nfkÍ‘G•"
+ deus_wall_stone_inscription:0 "^yÁXówIRÿ™Ÿ	KNn"
+ deus_wall_stone_inscription_PLVS_VLTRA:0 "^yÁXówIRÿàeÜVJS"
+ explore_caves_in_moling:0 "T›­SmŸz¢ci–"
+ moling_mana_industry_zone:0 "CQ(åTN:S"
+ moling_spell_academic_center:0 "T›­SÕl/gxvzNb"
+ xiajie_Z66_bonus:0 " OLuRVÃV"
+ wuxun_Z66_bonus:0 "fkTmRVÃV"
+ moling_Z66_bonus:0 "8lG•T›­S"
+
+ empire_of_haless_Z66:0 "-f‰^ýV"
+ YanShen_industralization:0 "ßp‡åTNS"

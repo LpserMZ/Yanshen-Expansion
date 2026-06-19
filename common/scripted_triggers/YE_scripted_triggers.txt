@@ -1,0 +1,11 @@
+employed_advisors_of_level = {
+	# $type$
+	# $levle$
+	custom_trigger_tooltip = {
+		tooltip = employed_$type$_advisors_of_$level$_level_tooltip
+		employed_advisor = {
+			category = $type$
+			skill = $level$
+		}
+	}
+}

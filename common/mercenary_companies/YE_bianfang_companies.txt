@@ -1,0 +1,27 @@
+merc_raptor_cavalry_squadron = { #猛禽骑兵大队
+	mercenary_desc_key = FREE_OF_ARMY_PROFESSIONALISM_COST #提示文字
+
+	cavalry_weight = 1 #骑兵占比
+	artillery_weight = 0 #炮兵占比
+	#cavalry_cap = 100 # 骑兵数量上限
+	min_size = 30 #最小规模
+	max_size = 50 #最大规模
+	manpower_pool = 30 #起始人力池
+	#no_additional_manpower_from_max_size = yes #超出max_size的兵存到佣兵人力池
+	#counts_towards_force_limit = no #不占用陆军上限
+
+	home_province = 4826 #总部所在地
+	cost_modifier = 1.5 #价格折扣
+	regiments_per_development = 0.01 #每点发展度对军队规模的影响
+
+	sprites = { shuvuush_sprite_pack } #兵模
+
+	trigger = { #可使用条件
+		has_country_flag = allow_merc_raptor_cavalry_squadron_flag
+	}
+	modifier = { #佣兵团专属修正
+		cavalry_shock = 1
+		morale_damage = 0.10
+		cav_to_inf_ratio = 1
+	}
+}

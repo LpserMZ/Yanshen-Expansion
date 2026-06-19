@@ -1,17 +1,10 @@
-owner = Y01
-controller = Y01
-add_core = Y01
-culture = horned_ogre
-religion = devouring_path
-
-hre = no
-
+owner = Y89
+controller = Y89
+culture = jichuan
+religion = accretive_path
 base_tax = 3
 base_production = 2
 base_manpower = 2
-
 trade_goods = wool
-
-capital = ""
-
 is_city = yes
+add_core = Y89

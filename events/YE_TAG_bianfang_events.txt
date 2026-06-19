@@ -30,3 +30,74 @@ country_event = { #挥师东进
 		}
 	}
 }
+country_event = { #白龙皇朝
+	id = YE_bianfang.2
+	title = YE_bianfang.2.T
+	desc = YE_bianfang.2.D
+	picture = GREAT_SPIRIT_YANHE_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {}
+
+	option = {
+		name = YE_bianfang.2.a
+		ai_chance = { factor = 1 }
+		change_adm = 3
+		change_dip = 3
+		change_mil = 3
+
+		if = {
+			limit = {
+				has_heir = yes
+			}
+			change_heir_adm = 1
+			change_heir_dip = 1
+			change_heir_mil = 1
+		}
+		else = {
+			add_adm_power = 200
+			add_dip_power = 200
+			add_mil_power = 200
+		}
+		custom_tooltip = qingwu_the_gate_of_wuxun_tooltip
+		hidden_effect = {
+			country_event = { id = YE_bianfang.3 days = 365 random = 365 }
+		}
+		
+	}
+}
+country_event = { #清武战略
+	id = YE_bianfang.3
+	title = YE_bianfang.3.T
+	desc = YE_bianfang.3.D
+	picture = GREAT_SPIRIT_YANHE_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {}
+
+	option = {
+		name = YE_bianfang.3.a
+		ai_chance = { factor = 1 }
+		yodhilakra_area = {
+			add_permanent_claim = ROOT
+		}
+		wx4_area = {
+			add_permanent_claim = ROOT
+		}
+		pharata_area = {
+			add_permanent_claim = ROOT
+		}
+		sir_area = {
+			add_permanent_claim = ROOT
+		}
+		mogutian_area = {
+			add_permanent_claim = ROOT
+		}
+		tietyuan_area = {
+			add_permanent_claim = ROOT
+		}
+	}
+}
+			

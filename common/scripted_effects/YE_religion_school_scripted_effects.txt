@@ -1,0 +1,13 @@
+YE_clear_religious_scholar_modifiers_effect = {
+	remove_country_modifier = xia_school_modifier
+	remove_country_modifier = wu_school_modifier
+	remove_country_modifier = kanli_school_modifier
+	remove_country_modifier = lingjue_school_modifier
+
+	remove_country_modifier = qingliu_school_modifier
+	remove_country_modifier = mushi_school_modifier
+	remove_country_modifier = mozhen_school_modifier
+	remove_country_modifier = guifu_school_modifier
+
+	remove_country_modifier = has_invited_scholar_recently
+}

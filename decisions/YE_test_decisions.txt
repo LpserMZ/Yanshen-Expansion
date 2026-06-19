@@ -1,29 +1,425 @@
 country_decisions = {
-	test_decision_001 = {
-		potential = { ai = no }
-		allow = { ai = no }
-		effect = {
-			set_country_flag = YE_allow_dev_bonus_flag
-		}
-		ai_will_do = { factor = 1 }
-	}
-	test_decision_002 = {
-		potential = { ai = no }
-		allow = { ai = no }
-		effect = {
-			change_variable = {
-				which = testvar_01
-				value = 1
+	# test_decision_001 = {
+	# 	potential = { ai = no }
+	# 	allow = {
+	# 		ai = no
+	# 	}
+	# 	effect = {
+	# 		yanshen_superregion = {
+	# 			add_core = ROOT
+	# 			cede_province = ROOT
+	# 		} 
+	# 		add_adm_tech = 4
+	# 	}
+	# 	ai_will_do = { factor = 1 }
+	# }
+	# test_decision_002 = {
+	# 	potential = { ai = no }
+	# 	allow = { ai = no }
+	# 	effect = {
+	# 		if = {
+	# 			limit = {
+	# 				has_country_flag = YE_dahui_branch_moling_flag
+	# 			}
+	# 			add_treasury = 1
+	# 			clr_country_flag = YE_dahui_branch_moling_flag
+	# 			set_country_flag = YE_dahui_branch_xiajie_flag
+	# 		}
+	# 		else_if = {
+	# 			limit = {
+	# 				has_country_flag = YE_dahui_branch_wuxun_flag
+	# 			}
+	# 			add_treasury = 3
+	# 			clr_country_flag = YE_dahui_branch_wuxun_flag
+	# 			set_country_flag = YE_dahui_branch_moling_flag
+	# 		}
+	# 		else_if = {
+	# 			limit = {
+	# 				has_country_flag = YE_dahui_branch_xiajie_flag
+	# 			}
+	# 			add_treasury = 2
+	# 			clr_country_flag = YE_dahui_branch_xiajie_flag
+	# 			set_country_flag = YE_dahui_branch_wuxun_flag
+	# 		}
+	# 		else = {
+	# 			add_treasury = 1
+	# 			set_country_flag = YE_dahui_branch_xiajie_flag
+	# 		}
+	# 		swap_non_generic_missions = yes
+
+	# 	}
+	# 	ai_will_do = { factor = 1 }
+	# }
+	# test_decision_003 = {
+	# 	potential = { ai = no }
+	# 	allow = { ai = no }
+	# 	effect = {
+	# 	}
+	# 	ai_will_do = { factor = 1 }
+	# }
+
+	YE_invest_academic_center = { #学者任务
+		major = yes
+		potential = {
+			event_target:loc_of_scholar_from_luojiang = {
+				owned_by = ROOT
+				NOT = { has_building = university }
 			}
 		}
-		ai_will_do = { factor = 1 }
-	}
-	test_decision_003 = {
-		potential = { ai = no }
-		allow = { ai = no }
+		provinces_to_highlight = {
+			province_id = event_target:loc_of_scholar_from_luojiang
+		}
+		allow = {
+			event_target:loc_of_scholar_from_luojiang = {
+				num_of_times_improved_by_owner = 4
+				if = {
+					limit = {
+						adm_tech = 4
+					}
+					has_building = temple
+				}
+			}
+			treasury = 200
+		}
 		effect = {
-			
+			add_treasury = -200
+			event_target:loc_of_scholar_from_luojiang = {
+				add_building = university
+			}
+		}
+		ai_importance = 300
+		ai_will_do = {
+			factor = 300
+		}
+	}
+	dahui_nation = { #成立大辉
+		major = yes
+		potential = {
+			government = monarchy
+			culture_group = yan
+			NOT = {
+				AND = {
+					primary_culture = beikling
+					religion = devouring_path
+				}
+			}
+			NOT = { exists = Z66 }
+			NOT = { 
+				OR = {
+					has_country_flag = formed_yanshen_flag
+					has_country_flag = formed_liang_flag
+					has_country_flag = formed_di_yichan_flag
+					primary_culture = szitu
+					primary_culture = pinghoi
+					primary_culture = haiwai
+				}
+			}
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+		}
+		provinces_to_highlight = {
+			superregion = yanshen_superregion
+			NOT = { owned_by = ROOT }
+		}
+		allow = {
+			hidden_trigger = {
+				culture_group = yan
+			}
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			adm_tech = 7
+			num_of_owned_provinces_with = {
+				value = 100
+				superregion = yanshen_superregion
+			}
+			#mission_completed = YE_bianfang_3_5
+		}
+		effect = {
+			change_tag = Z66
+			hidden_effect = { restore_country_name = yes }
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						is_part_of_hre = yes
+					}
+					set_in_empire = no
+				}
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+				}
+			set_government_rank_scripted_effect = { rank = 3 }
+			add_prestige = 35
+			set_country_flag = formed_liang_flag
+			set_capital = 8038
+			# if = {
+			# 	limit = {
+			# 		NOT = {
+			# 			capital = 4871
+			# 			OR = {
+			# 				primary_culture = naamjyut
+			# 				primary_culture = gangim
+			# 			}
+			# 		}
+			# 	}
+			# 	capital_scope = {
+			# 		change_province_name = "Zhaoming"
+			# 	}
+			# }
+			# else_if = {
+			# 	limit = {
+			# 		NOT = {
+			# 			capital = 4871
+			# 		}
+			# 		primary_culture = naamjyut
+			# 	}
+			# 	capital_scope = {
+			# 		change_province_name = "Ciuming"
+			# 	}
+			# }
+			# else_if = {
+			# 	limit = {
+			# 		NOT = {
+			# 			capital = 4871
+			# 		}
+			# 		primary_culture = gangim
+			# 	}
+			# 	capital_scope = {
+			# 		change_province_name = "Chiaubeng"
+			# 	}
+			# }
+			if = {
+				limit = { has_custom_ideas = no }
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			if = {
+				limit = { primary_culture = naamjyut }
+				override_country_name = DAAIFAI
+			}
+			else_if = {
+				limit = { primary_culture = gangim }
+				override_country_name = DUAHUI
+			}
+			if = {
+				limit = { NOT = { has_reform = eunuch_dynasty_reform } }
+				add_government_reform = yan_empire_reform
+			}
+			yanshen_superregion = {
+				add_permanent_claim = ROOT
+			}
+			if = { limit = { was_tag = Y09 } swap_non_generic_missions = yes }
+		}
+		ai_will_do = {
+			factor = 400
+		}
+	}
+	visit_official_university = { #探访官学
+		potential = {
+			has_country_flag = allow_visit_official_university_flag
+		}
+		provinces_to_highlight = {
+			is_capital_of = ROOT
+		}
+		allow = {
+			NOT = {
+				has_country_modifier = visit_official_university_cooldown
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = visit_official_university_cooldown
+				duration = 1825
+			}
+			country_event = {
+				id = YE_GRY.15
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						check_variable = { which = visit_official_university_counter value = 1 }
+					}
+					change_variable = { which = visit_official_university_counter value = 1 }
+				}
+				else = {
+					set_variable = { which = visit_official_university_counter value = 1 }
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 400
+		}
+	}
+	send_oni_special_operations_team = { #赤鬼特务队
+		potential = {
+			tag = Y01
+			#NOT = { has_country_flag = YE_allow_Y01_special_buff_flag }
+		}
+		provinces_to_highlight = {
+
+		}
+		allow = {
+			NOT = {
+				has_country_modifier = send_oni_special_operations_team_cooldown
+			}
+		}
+		effect = {
+			country_event = { id = YE_GRY.19 }
+			add_country_modifier = {
+				name = send_oni_special_operations_team_cooldown
+				duration = 730 
+			}
+		}
+		ai_will_do = {
+			factor = 400
+		}
+	}
+	AI_YA1_form_onexia = {
+		potential = {
+			tag = YA1
+		}
+		provinces_to_highlight = {
+
+		}
+		allow = {
+			is_subject = no
+		}
+		effect = {
+			if = {
+				limit = {
+					Y99 = {
+						exists = yes
+					}
+				}
+				Y99 = {
+					inherit = ROOT
+				}
+			}
+			else = {
+				change_tag = Y99
+				country_event = { id = YE_GRY.39 days = 1 }
+			}
+			restore_country_name = yes
+			restore_country_color = yes
+		}
+		ai_will_do = {
+			factor = 400
+		}
+	}
+	halessi_subject_management_event = {
+		major = yes
+		potential = {
+			tag = Z66
+			ai = no
+			NOT = {
+				has_country_flag = halessi_subject_management_event_flag
+			}
+		}
+		provinces_to_highlight = {
+
+		}
+		allow = {
+			always = yes
+		}
+		
+		effect = {
+			country_event = { id = YE_GRY.42 }
+			hidden_effect = {
+				set_country_flag = halessi_subject_management_event_flag
+			}
+		}
+		ai_will_do = {
+			factor = 400
+		}
+	}
+	switch_mission_branch_Z66 = { #切换任务分支 大辉
+		major = yes
+		potential = { tag= Z66 }
+		allow = { always = yes }
+		effect = {
+			if = {
+				limit = {
+					has_country_flag = YE_dahui_branch_moling_flag
+				}
+				custom_tooltip = switch_mission_branch_xianjie_Z66_tooltip
+				clr_country_flag = YE_dahui_branch_moling_flag
+				set_country_flag = YE_dahui_branch_xiajie_flag
+			}
+			else_if = {
+				limit = {
+					has_country_flag = YE_dahui_branch_wuxun_flag
+				}
+				custom_tooltip = switch_mission_branch_moling_Z66_tooltip
+				clr_country_flag = YE_dahui_branch_wuxun_flag
+				set_country_flag = YE_dahui_branch_moling_flag
+			}
+			else_if = {
+				limit = {
+					has_country_flag = YE_dahui_branch_xiajie_flag
+				}
+				custom_tooltip = switch_mission_branch_wuxun_Z66_tooltip
+				clr_country_flag = YE_dahui_branch_xiajie_flag
+				set_country_flag = YE_dahui_branch_wuxun_flag
+			}
+			else = {
+				custom_tooltip = switch_mission_branch_xianjie_Z66_tooltip
+				set_country_flag = YE_dahui_branch_xiajie_flag
+			}
+			swap_non_generic_missions = yes
+
 		}
 		ai_will_do = { factor = 1 }
 	}
+	form_yanszin = {
+		major = yes
+		potential = {
+			capital_scope = {
+				region = yanxin_region
+			}
+			OR = {
+				tag = Y10
+				tag = Y04
+				tag = Y08
+				tag = Y07
+				tag = Y06
+				tag = Z59
+				tag = V22
+			}
+		}
+		provinces_to_highlight = {
+			province_group = original_yanszin
+			NOT = { owned_by = ROOT }
+		}
+		allow = {
+			# has_reform = eunuch_republic
+			# has_estate = estate_eunuchs_anb
+			# hidden_trigger = {
+			# 	OR = {
+			# 		tag = Y10
+			# 		tag = Y04
+			# 		tag = Y08
+			# 		tag = Y07
+			# 		tag = Y06
+			# 		tag = Z59
+			# 		tag = V22
+			# 	}
+			# }
+			NOT = { exists = V19 }
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			original_yanszin = {
+				type = all
+				owned_by = ROOT
+			}
+		}
+		effect = {
+			change_tag = V19
+			swap_non_generic_missions = yes
+			country_event = { id = ideagroups.1 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
 }	

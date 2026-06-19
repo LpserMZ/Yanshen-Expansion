@@ -1,0 +1,23 @@
+xiake_supression_edit = {
+	potential = {
+		has_country_flag = allow_xiake_supression_edit_flag
+	}
+	allow = {
+		OR = {
+			FROM = {
+				has_province_modifier = rightful_xia_territory_occupied
+			}
+			FROM = {
+				region = xianjie_region
+			}
+		}
+	}
+	modifier = {
+		local_state_maintenance_modifier = 0.75
+		local_fort_maintenance_modifier = 2
+	}
+	color = { 215 13 13 }
+	ai_will_do = {
+		factor = 100
+	}
+}

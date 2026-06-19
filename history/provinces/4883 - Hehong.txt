@@ -3,14 +3,8 @@ controller = Y20
 add_core = Y20
 culture = gangim
 religion = accretive_path
-hre = no
-
-base_tax = 2
-base_production = 2
-base_manpower = 1
-
+base_tax = 3
+base_production = 3
+base_manpower = 2
 trade_goods = grain
-
-capital = ""
-
 is_city = yes

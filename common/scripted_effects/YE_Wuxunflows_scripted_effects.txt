@@ -39,7 +39,7 @@ north_revolt_reset_country_effect = {
 	# YA4
 
 	# 大地精
-	# YA1
+	# YA2
 	# YA2
 
 	# 半兽人
@@ -48,3 +48,4 @@ north_revolt_reset_country_effect = {
 	# 精灵
 	# YB8
 }
+

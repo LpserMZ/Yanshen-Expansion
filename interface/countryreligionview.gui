@@ -268,7 +268,7 @@ guiTypes = {
 		}
 	}
 		
-	windowType = { # 一级窗口
+	windowType = {
 		name = "countryreligionview"
 		#position = { x=0 y=140 }	
 		position = { x=-600 y=140 }	
@@ -475,13 +475,13 @@ guiTypes = {
 			hint_tag = "hint_changereligion"
 		}
 		
-		iconType = {
-				name = "secondary_religion_blocked_steward"
-				spriteType = "GFX_religion_secondary_convert_blocked_button"
-				position = { x= 180 y = 148 }
-				Orientation = "UPPER_LEFT"
-				scripted = yes
-			}
+		# iconType = {
+		# 		name = "secondary_religion_blocked_steward"
+		# 		spriteType = "GFX_religion_secondary_convert_blocked_button"
+		# 		position = { x= 180 y = 148 }
+		# 		Orientation = "UPPER_LEFT"
+		# 		scripted = yes
+		# 	}
 		
 		###Tolerance
 		instantTextBoxType = {
@@ -560,6 +560,13 @@ guiTypes = {
 			quadTextureSprite ="GFX_swap_deity_button"
 			scripted = yes
 		}
+		
+		guiButtonType = {
+			name = "swap_cult_button"
+			position = { x = 55 y = 251 }
+			quadTextureSprite ="GFX_swap_deity_button"
+			scripted = yes
+		}
 
 		guiButtonType = {
 			name = "shadow_pact_reroll_portent"
@@ -568,8 +575,7 @@ guiTypes = {
 			scripted = yes
 		}
 
-
-		####### ORTHODOX PATRIARCH AUTHORITY	###### 
+############## ORTHODOX PATRIARCH AUTHORITY	###### 
 
 		windowType = {
 			name = "orthodox_specific_window"
@@ -675,7 +681,6 @@ guiTypes = {
 			
 			
 		}
-
 
 		guiButtonType = {
 			name = "xhazobkult_light_the_pyres"
@@ -960,7 +965,7 @@ guiTypes = {
 			}
 		}
 
-		###### COPTIC HOLY SITES	###### 
+############## COPTIC HOLY SITES	###### 
 
 		windowType = {
 			name = "coptic_specific_window"
@@ -1136,7 +1141,7 @@ guiTypes = {
 			}
 		}
 		
-		######### noukahi pantheon pilgrimage
+################# noukahi pantheon pilgrimage
 		windowType = {
 			name = "noukahi_pantheon_pilgrimage_window"
 			backGround =""
@@ -1618,7 +1623,7 @@ guiTypes = {
 		}
 
 
-		########## MUSLIM PIETY		
+################# MUSLIM PIETY		
 		windowType = {
 			name = "muslim_specific_window"
 			backGround =""
@@ -1727,289 +1732,341 @@ guiTypes = {
 		}
 
 		
-		######### Runefather deity tier meters
+################# Runefather deity tier meters
 
-		iconType = {
-			name = runefather_bar_shadowhammer_1
-			spriteType = "GFX_runefather_bar_shadowhammer_1"
-			position = { x=27 y=159 }
+		windowType = {
+			name = "runefather_bar_window"
+			position = { x = 0 y = 0 }
 			scripted = yes
+			Orientation = "UPPER_LEFT"
+
+			iconType = {
+				name = runefather_bar_shadowhammer_1
+				spriteType = "GFX_runefather_bar_shadowhammer_1"
+				position = { x=27 y=159 }
+				scripted = yes
+			}
+
+			iconType = {
+				name = runefather_bar_shadowhammer_2
+				spriteType = "GFX_runefather_bar_shadowhammer_2"
+				position = { x=27 y=159 }
+				scripted = yes
+			}
+
+			iconType = {
+				name = runefather_bar_shadowhammer_3
+				spriteType = "GFX_runefather_bar_shadowhammer_3"
+				position = { x=27 y=159 }
+				scripted = yes
+			}
+
+			iconType = {
+				name = runefather_bar_shadowhammer_4
+				spriteType = "GFX_runefather_bar_shadowhammer_4"
+				position = { x=27 y=159 }
+				scripted = yes
+			}
+
+			iconType = {
+				name = runefather_bar_shadowhammer_5
+				spriteType = "GFX_runefather_bar_shadowhammer_5"
+				position = { x=27 y=159 }
+				scripted = yes
+			}
+
+			iconType = {
+				name = runefather_bar_darkstone_1
+				spriteType = "GFX_runefather_bar_darkstone_1"
+				position = { x=27 y=172 }
+				scripted = yes
+			}
+
+			iconType = {
+				name = runefather_bar_darkstone_2
+				spriteType = "GFX_runefather_bar_darkstone_2"
+				position = { x=27 y=172 }
+				scripted = yes
+			}
+
+			iconType = {
+				name = runefather_bar_darkstone_3
+				spriteType = "GFX_runefather_bar_darkstone_3"
+				position = { x=27 y=172 }
+				scripted = yes
+			}
+
+			iconType = {
+				name = runefather_bar_darkstone_4
+				spriteType = "GFX_runefather_bar_darkstone_4"
+				position = { x=27 y=172 }
+				scripted = yes
+			}
+
+			iconType = {
+				name = runefather_bar_darkstone_5
+				spriteType = "GFX_runefather_bar_darkstone_5"
+				position = { x=27 y=172 }
+				scripted = yes
+			}
+
+			iconType = {
+				name = runefather_bar_groedi_az_an_1
+				spriteType = "GFX_runefather_bar_groedi_az_an_1"
+				position = { x=27 y=185 }
+				scripted = yes
+			}
+
+			iconType = {
+				name = runefather_bar_groedi_az_an_2
+				spriteType = "GFX_runefather_bar_groedi_az_an_2"
+				position = { x=27 y=185 }
+				scripted = yes
+			}
+
+			iconType = {
+				name = runefather_bar_groedi_az_an_3
+				spriteType = "GFX_runefather_bar_groedi_az_an_3"
+				position = { x=27 y=185 }
+				scripted = yes
+			}
+
+			iconType = {
+				name = runefather_bar_groedi_az_an_4
+				spriteType = "GFX_runefather_bar_groedi_az_an_4"
+				position = { x=27 y=185 }
+				scripted = yes
+			}
+
+			iconType = {
+				name = runefather_bar_groedi_az_an_5
+				spriteType = "GFX_runefather_bar_groedi_az_an_5"
+				position = { x=27 y=185 }
+				scripted = yes
+			}
+
+			iconType = {
+				name = runefather_bar_amlruzskappa_1
+				spriteType = "GFX_runefather_bar_amlruzskappa_1"
+				position = { x=27 y=198 }
+				scripted = yes
+			}
+
+			iconType = {
+				name = runefather_bar_amlruzskappa_2
+				spriteType = "GFX_runefather_bar_amlruzskappa_2"
+				position = { x=27 y=198 }
+				scripted = yes
+			}
+
+			iconType = {
+				name = runefather_bar_amlruzskappa_3
+				spriteType = "GFX_runefather_bar_amlruzskappa_3"
+				position = { x=27 y=198 }
+				scripted = yes
+			}
+
+			iconType = {
+				name = runefather_bar_amlruzskappa_4
+				spriteType = "GFX_runefather_bar_amlruzskappa_4"
+				position = { x=27 y=198 }
+				scripted = yes
+			}
+
+			iconType = {
+				name = runefather_bar_amlruzskappa_5
+				spriteType = "GFX_runefather_bar_amlruzskappa_5"
+				position = { x=27 y=198 }
+				scripted = yes
+			}
+
+			iconType = {
+				name = runefather_bar_furdanhund_1
+				spriteType = "GFX_runefather_bar_furdanhund_1"
+				position = { x=27 y=211 }
+				scripted = yes
+			}
+
+			iconType = {
+				name = runefather_bar_furdanhund_2
+				spriteType = "GFX_runefather_bar_furdanhund_2"
+				position = { x=27 y=211 }
+				scripted = yes
+			}
+
+			iconType = {
+				name = runefather_bar_furdanhund_3
+				spriteType = "GFX_runefather_bar_furdanhund_3"
+				position = { x=27 y=211 }
+				scripted = yes
+			}
+
+			iconType = {
+				name = runefather_bar_furdanhund_4
+				spriteType = "GFX_runefather_bar_furdanhund_4"
+				position = { x=27 y=211 }
+				scripted = yes
+			}
+
+			iconType = {
+				name = runefather_bar_furdanhund_5
+				spriteType = "GFX_runefather_bar_furdanhund_5"
+				position = { x=27 y=211 }
+				scripted = yes
+			}
+
+			iconType = {
+				name = runefather_bar_might_1
+				spriteType = "GFX_runefather_bar_might_1"
+				position = { x=27 y=185 }
+				scripted = yes
+			}
+
+			iconType = {
+				name = runefather_bar_might_2
+				spriteType = "GFX_runefather_bar_might_2"
+				position = { x=27 y=185 }
+				scripted = yes
+			}
+
+			iconType = {
+				name = runefather_bar_might_3
+				spriteType = "GFX_runefather_bar_might_3"
+				position = { x=27 y=185 }
+				scripted = yes
+			}
+
+			iconType = {
+				name = runefather_bar_might_4
+				spriteType = "GFX_runefather_bar_might_4"
+				position = { x=27 y=185 }
+				scripted = yes
+			}
+
+			iconType = {
+				name = runefather_bar_might_5
+				spriteType = "GFX_runefather_bar_might_5"
+				position = { x=27 y=185 }
+				scripted = yes
+			}
+
+			iconType = {
+				name = runefather_bar_mercy_1
+				spriteType = "GFX_runefather_bar_mercy_1"
+				position = { x=27 y=198 }
+				scripted = yes
+			}
+
+			iconType = {
+				name = runefather_bar_mercy_2
+				spriteType = "GFX_runefather_bar_mercy_2"
+				position = { x=27 y=198 }
+				scripted = yes
+			}
+
+			iconType = {
+				name = runefather_bar_mercy_3
+				spriteType = "GFX_runefather_bar_mercy_3"
+				position = { x=27 y=198 }
+				scripted = yes
+			}
+
+			iconType = {
+				name = runefather_bar_mercy_4
+				spriteType = "GFX_runefather_bar_mercy_4"
+				position = { x=27 y=198 }
+				scripted = yes
+			}
+
+			iconType = {
+				name = runefather_bar_mercy_5
+				spriteType = "GFX_runefather_bar_mercy_5"
+				position = { x=27 y=198 }
+				scripted = yes
+			}
+
+			iconType = {
+				name = runefather_bar_majesty_1
+				spriteType = "GFX_runefather_bar_majesty_1"
+				position = { x=27 y=211 }
+				scripted = yes
+			}
+
+			iconType = {
+				name = runefather_bar_majesty_2
+				spriteType = "GFX_runefather_bar_majesty_2"
+				position = { x=27 y=211 }
+				scripted = yes
+			}
+
+			iconType = {
+				name = runefather_bar_majesty_3
+				spriteType = "GFX_runefather_bar_majesty_3"
+				position = { x=27 y=211 }
+				scripted = yes
+			}
+
+			iconType = {
+				name = runefather_bar_majesty_4
+				spriteType = "GFX_runefather_bar_majesty_4"
+				position = { x=27 y=211 }
+				scripted = yes
+			}
+
+			iconType = {
+				name = runefather_bar_majesty_5
+				spriteType = "GFX_runefather_bar_majesty_5"
+				position = { x=27 y=211 }
+				scripted = yes
+			}
 		}
 
-		iconType = {
-			name = runefather_bar_shadowhammer_2
-			spriteType = "GFX_runefather_bar_shadowhammer_2"
-			position = { x=27 y=159 }
+################# SPEAKING MEMORY
+
+		windowType = {
+			name = "speaking_memory_memory_window"
+			backGround = ""
+			position = { x = -510 y = -302 }	
 			scripted = yes
+			Orientation = "CENTER"
+
+			iconType = {
+				name = "speaking_memory_ancestory_background"
+				spriteType = "GFX_speaking_memory_ancestor"
+				position = { x= 260 y = 283 }
+				scale = 0.8
+				scripted = yes
+			}
+
+			instantTextBoxType = {
+				name = "speaking_memory_ancestory_text"
+				position = { x= 283 y = 288 }
+				font = "vic_18"
+				borderSize = {x = 0 y = 0}
+				text = ""	
+				maxWidth = 32
+				maxHeight = 24
+				Orientation = "UPPER_LEFT"
+				format = centre
+				scripted = yes
+			}
+
+			instantTextBoxType = {
+				name = "speaking_memory_ancestory_top_text"
+				position = { x= 281 y = 263 }
+				font = "vic_18"
+				borderSize = {x = 0 y = 0}
+				text = ""	
+				maxWidth = 32
+				maxHeight = 24
+				Orientation = "UPPER_LEFT"
+				format = centre
+				scripted = yes
+			}
+
 		}
 
-		iconType = {
-			name = runefather_bar_shadowhammer_3
-			spriteType = "GFX_runefather_bar_shadowhammer_3"
-			position = { x=27 y=159 }
-			scripted = yes
-		}
-
-		iconType = {
-			name = runefather_bar_shadowhammer_4
-			spriteType = "GFX_runefather_bar_shadowhammer_4"
-			position = { x=27 y=159 }
-			scripted = yes
-		}
-
-		iconType = {
-			name = runefather_bar_shadowhammer_5
-			spriteType = "GFX_runefather_bar_shadowhammer_5"
-			position = { x=27 y=159 }
-			scripted = yes
-		}
-
-		iconType = {
-			name = runefather_bar_darkstone_1
-			spriteType = "GFX_runefather_bar_darkstone_1"
-			position = { x=27 y=172 }
-			scripted = yes
-		}
-
-		iconType = {
-			name = runefather_bar_darkstone_2
-			spriteType = "GFX_runefather_bar_darkstone_2"
-			position = { x=27 y=172 }
-			scripted = yes
-		}
-
-		iconType = {
-			name = runefather_bar_darkstone_3
-			spriteType = "GFX_runefather_bar_darkstone_3"
-			position = { x=27 y=172 }
-			scripted = yes
-		}
-
-		iconType = {
-			name = runefather_bar_darkstone_4
-			spriteType = "GFX_runefather_bar_darkstone_4"
-			position = { x=27 y=172 }
-			scripted = yes
-		}
-
-		iconType = {
-			name = runefather_bar_darkstone_5
-			spriteType = "GFX_runefather_bar_darkstone_5"
-			position = { x=27 y=172 }
-			scripted = yes
-		}
-
-		iconType = {
-			name = runefather_bar_groedi_az_an_1
-			spriteType = "GFX_runefather_bar_groedi_az_an_1"
-			position = { x=27 y=185 }
-			scripted = yes
-		}
-
-		iconType = {
-			name = runefather_bar_groedi_az_an_2
-			spriteType = "GFX_runefather_bar_groedi_az_an_2"
-			position = { x=27 y=185 }
-			scripted = yes
-		}
-
-		iconType = {
-			name = runefather_bar_groedi_az_an_3
-			spriteType = "GFX_runefather_bar_groedi_az_an_3"
-			position = { x=27 y=185 }
-			scripted = yes
-		}
-
-		iconType = {
-			name = runefather_bar_groedi_az_an_4
-			spriteType = "GFX_runefather_bar_groedi_az_an_4"
-			position = { x=27 y=185 }
-			scripted = yes
-		}
-
-		iconType = {
-			name = runefather_bar_groedi_az_an_5
-			spriteType = "GFX_runefather_bar_groedi_az_an_5"
-			position = { x=27 y=185 }
-			scripted = yes
-		}
-
-		iconType = {
-			name = runefather_bar_amlruzskappa_1
-			spriteType = "GFX_runefather_bar_amlruzskappa_1"
-			position = { x=27 y=198 }
-			scripted = yes
-		}
-
-		iconType = {
-			name = runefather_bar_amlruzskappa_2
-			spriteType = "GFX_runefather_bar_amlruzskappa_2"
-			position = { x=27 y=198 }
-			scripted = yes
-		}
-
-		iconType = {
-			name = runefather_bar_amlruzskappa_3
-			spriteType = "GFX_runefather_bar_amlruzskappa_3"
-			position = { x=27 y=198 }
-			scripted = yes
-		}
-
-		iconType = {
-			name = runefather_bar_amlruzskappa_4
-			spriteType = "GFX_runefather_bar_amlruzskappa_4"
-			position = { x=27 y=198 }
-			scripted = yes
-		}
-
-		iconType = {
-			name = runefather_bar_amlruzskappa_5
-			spriteType = "GFX_runefather_bar_amlruzskappa_5"
-			position = { x=27 y=198 }
-			scripted = yes
-		}
-
-		iconType = {
-			name = runefather_bar_furdanhund_1
-			spriteType = "GFX_runefather_bar_furdanhund_1"
-			position = { x=27 y=211 }
-			scripted = yes
-		}
-
-		iconType = {
-			name = runefather_bar_furdanhund_2
-			spriteType = "GFX_runefather_bar_furdanhund_2"
-			position = { x=27 y=211 }
-			scripted = yes
-		}
-
-		iconType = {
-			name = runefather_bar_furdanhund_3
-			spriteType = "GFX_runefather_bar_furdanhund_3"
-			position = { x=27 y=211 }
-			scripted = yes
-		}
-
-		iconType = {
-			name = runefather_bar_furdanhund_4
-			spriteType = "GFX_runefather_bar_furdanhund_4"
-			position = { x=27 y=211 }
-			scripted = yes
-		}
-
-		iconType = {
-			name = runefather_bar_furdanhund_5
-			spriteType = "GFX_runefather_bar_furdanhund_5"
-			position = { x=27 y=211 }
-			scripted = yes
-		}
-
-		iconType = {
-			name = runefather_bar_might_1
-			spriteType = "GFX_runefather_bar_might_1"
-			position = { x=27 y=185 }
-			scripted = yes
-		}
-
-		iconType = {
-			name = runefather_bar_might_2
-			spriteType = "GFX_runefather_bar_might_2"
-			position = { x=27 y=185 }
-			scripted = yes
-		}
-
-		iconType = {
-			name = runefather_bar_might_3
-			spriteType = "GFX_runefather_bar_might_3"
-			position = { x=27 y=185 }
-			scripted = yes
-		}
-
-		iconType = {
-			name = runefather_bar_might_4
-			spriteType = "GFX_runefather_bar_might_4"
-			position = { x=27 y=185 }
-			scripted = yes
-		}
-
-		iconType = {
-			name = runefather_bar_might_5
-			spriteType = "GFX_runefather_bar_might_5"
-			position = { x=27 y=185 }
-			scripted = yes
-		}
-
-		iconType = {
-			name = runefather_bar_mercy_1
-			spriteType = "GFX_runefather_bar_mercy_1"
-			position = { x=27 y=198 }
-			scripted = yes
-		}
-
-		iconType = {
-			name = runefather_bar_mercy_2
-			spriteType = "GFX_runefather_bar_mercy_2"
-			position = { x=27 y=198 }
-			scripted = yes
-		}
-
-		iconType = {
-			name = runefather_bar_mercy_3
-			spriteType = "GFX_runefather_bar_mercy_3"
-			position = { x=27 y=198 }
-			scripted = yes
-		}
-
-		iconType = {
-			name = runefather_bar_mercy_4
-			spriteType = "GFX_runefather_bar_mercy_4"
-			position = { x=27 y=198 }
-			scripted = yes
-		}
-
-		iconType = {
-			name = runefather_bar_mercy_5
-			spriteType = "GFX_runefather_bar_mercy_5"
-			position = { x=27 y=198 }
-			scripted = yes
-		}
-
-		iconType = {
-			name = runefather_bar_majesty_1
-			spriteType = "GFX_runefather_bar_majesty_1"
-			position = { x=27 y=211 }
-			scripted = yes
-		}
-
-		iconType = {
-			name = runefather_bar_majesty_2
-			spriteType = "GFX_runefather_bar_majesty_2"
-			position = { x=27 y=211 }
-			scripted = yes
-		}
-
-		iconType = {
-			name = runefather_bar_majesty_3
-			spriteType = "GFX_runefather_bar_majesty_3"
-			position = { x=27 y=211 }
-			scripted = yes
-		}
-
-		iconType = {
-			name = runefather_bar_majesty_4
-			spriteType = "GFX_runefather_bar_majesty_4"
-			position = { x=27 y=211 }
-			scripted = yes
-		}
-
-		iconType = {
-			name = runefather_bar_majesty_5
-			spriteType = "GFX_runefather_bar_majesty_5"
-			position = { x=27 y=211 }
-			scripted = yes
-		}
-
-		######### BUDDHIST KARMA		
+################# BUDDHIST KARMA		
 		windowType = {
 			name = "buddhist_specific_window"
 			backGround =""
@@ -2212,7 +2269,7 @@ guiTypes = {
 			{
 				name ="cult_icon"
 				spriteType = "GFX_fetishists_strip"
-				position = { x= 25 y = -41 }
+				position = { x= 29 y = -39 }
 				alwaystransparent = yes
 			}
 			
@@ -2230,7 +2287,7 @@ guiTypes = {
 			
 			instantTextBoxType = {
 				name = "cult_effect"
-				position = { x = 78 y = -25 }
+				position = { x = 88 y = -25 }
 				font = "vic_18"
 				borderSize = {x = 0 y = 0}
 				text = ""	
@@ -2351,20 +2408,18 @@ guiTypes = {
 				}
 			}
 		}
-		################# Anzalkatsa School Fight Icon
-		iconType = {
-			name = "AnzalkatsaClashIconNeutralFate"
-			spriteType = "GFX_icon_lizard_school_fate_sculptors"
-                position = { x = 305 y = 256 }
-                scripted = yes
-        }
+		# Yudunyovi Quests Button
+		guiButtonType = {
+			name = "yudunyovi_quests_button"
+			quadTextureSprite = "GFX_button_straight_67_32"
+			buttonText = "Quests"
+			buttonFont = "vic_18"
+			position = { x = 266 y = 236 }
+			Orientation = "UPPER_LEFT"
+			clicksound = click
+			scripted = yes
+		}
 
-		iconType = {
-			name = "AnzalkatsaClashIconNeutralBeing"
-			spriteType = "GFX_icon_lizard_school_being_sculptors"
-                position = { x = 305 y = 256 }
-                scripted = yes
-        }
 		############## TOTEMISM ANCESTORS ##############
 		windowType = {
 			name = "totemism_ancestor_window"
@@ -2605,6 +2660,7 @@ guiTypes = {
 			
 			guiButtonType = {
 				name = "view_aspects"
+				scripted = yes
 				position = { x=8 y = -22}
 				quadTextureSprite ="GFX_protestant_aspects_icon"
 				Orientation = "LEFT"
@@ -2743,6 +2799,7 @@ guiTypes = {
 			
 			guiButtonType = {
 				name = "view_aspects"
+				scripted = yes
 				position = { x=10 y = -43}
 				quadTextureSprite ="GFX_anglican_aspects_icon"
 				Orientation = "LEFT"
@@ -2959,7 +3016,7 @@ guiTypes = {
 			Orientation = "UPPER_LEFT"
 		}
 
-		# Needs location linking and button linking		
+# Needs location linking and button linking		
 		guiButtonType = {
 			name = "sort_mission"
 			position = { x = 430 y =374 }
@@ -3222,7 +3279,7 @@ guiTypes = {
 	#		scale = 0.75
 		}
 
-		# Needs txt linking	
+# Needs txt linking	
 		instantTextBoxType = {
 				name = "defender_title"
 				position = { x = 350 y = 235 }
@@ -3265,7 +3322,7 @@ guiTypes = {
 
 			guiButtonType = {
 				name = "taychendi_window_button_close"
-				position = { x = 410 y = 100 }
+				position = { x = 470 y = 100 }
 				quadTextureSprite = "GFX_button_close"
 				scripted = yes
 				Orientation = "CENTER"
@@ -3274,7 +3331,7 @@ guiTypes = {
 
 			instantTextBoxType = {
 				name = "taychendi_religious_reform_text"
-				position = { x = 155 y = 115 }
+				position = { x = 180 y = 125 }
 				textureFile = ""
 				font = "vic_18"
 				borderSize = {x = 4 y = 4}	
@@ -3288,100 +3345,100 @@ guiTypes = {
 
 			guiButtonType = {
 				name = "taychendi_reform_1"
-				position = { x = 105 y = 155 }
+				position = { x = 130 y = 180 }
 				spriteType = "GFX_stability_button"
 				buttonFont = "vic_18"
 				scripted = yes
-				scale = 1
+				scale = 1.1
 				Orientation = "UPPER_LEFT"
 			}
 
 			iconType = {
 				name = "taychendi_got_reform_1"
-				position = { x = 105 y = 155 }
+				position = { x = 130 y = 180 }
 				spriteType = "GFX_stability_button"
 				scripted = yes
-				scale = 1
+				scale = 1.1
 				Orientation = "UPPER_LEFT"
 				alwaystransparent = no
 			}
 
 			guiButtonType = {
 				name = "taychendi_reform_2"
-				position = { x = 210 y = 155 }
+				position = { x = 235 y = 180 }
 				spriteType = "GFX_TTF_button"
 				buttonFont = "vic_18"
 				scripted = yes
-				scale = 1
+				scale = 1.1
 				Orientation = "UPPER_LEFT"
 			}
 
 			iconType = {
 				name = "taychendi_got_reform_2"
-				position = { x = 210 y = 155 }
+				position = { x = 235 y = 180 }
 				spriteType = "GFX_TTF_button"
 				scripted = yes
-				scale = 1
+				scale = 1.1
 				Orientation = "UPPER_LEFT"
 				alwaystransparent = no
 			}
 			
 			guiButtonType = {
 				name = "taychendi_reform_3"
-				position = { x = 315 y = 155 }
+				position = { x = 340 y = 180 }
 				spriteType = "GFX_autonomy_button"
 				buttonFont = "vic_18"
 				scripted = yes
-				scale = 1
+				scale = 1.1
 				Orientation = "UPPER_LEFT" 
 			}
 
 			iconType = {
 				name = "taychendi_got_reform_3"
-				position = { x = 315 y = 155 }
+				position = { x = 340 y = 180 }
 				spriteType = "GFX_autonomy_button"
 				scripted = yes
-				scale = 1
+				scale = 1.1
 				Orientation = "UPPER_LEFT"
 				alwaystransparent = no 
 			}
 			
 			guiButtonType = {
 				name = "taychendi_reform_4"
-				position = { x = 155 y = 225 }
+				position = { x = 180 y = 265 }
 				spriteType = "GFX_idea_cost_button"
 				buttonFont = "vic_18"
 				scripted = yes
-				scale = 1
+				scale = 1.1
 				Orientation = "UPPER_LEFT"
 			}
 
 			iconType = {
 				name = "taychendi_got_reform_4"
-				position = { x = 155 y = 225 }
+				position = { x = 180 y = 265 }
 				spriteType = "GFX_idea_cost_button"
 				scripted = yes
-				scale = 1
+				scale = 1.1
 				Orientation = "UPPER_LEFT"
 				alwaystransparent = no
 			}
 
 			guiButtonType = {
 				name = "taychendi_reform_5"
-				position = { x = 265 y = 225 }
+				position = { x = 290 y = 265 }
 				spriteType = "GFX_reform_progress_button"
 				buttonFont = "vic_18"
 				scripted = yes
-				scale = 1
+				scale = 1.1
 				Orientation = "UPPER_LEFT"
 			}
 			
 			iconType = {
 				name = "taychendi_got_reform_5"
-				position = { x = 265 y = 225 }
+				position = { x = 290 y = 265 }
 				spriteType = "GFX_reform_progress_button"
 				scripted = yes
-				scale = 1
+				scale = 1.1
 				Orientation = "UPPER_LEFT"
 				alwaystransparent = no
 			}
@@ -3732,6 +3789,19 @@ guiTypes = {
 				scrollbartype = "standardlistbox_slider"
 				borderSize = {x = 10 y = 10}
 			}
+
+			# Irdaeos Worship Chose Practice Button
+
+			guiButtonType = {
+				name = "IW_focused_religious_practice_button"
+				quadTextureSprite = "GFX_button_type_246"
+				position = { x = -33 y = 151 }
+				buttonText = "Select a Focused Religious Practice"
+				buttonFont = "vic_18"
+				Orientation = "CENTER"
+				clicksound = click
+				scripted = yes
+			}
 			
 			guiButtonType = {
 				name = "cancel"
@@ -3741,8 +3811,6 @@ guiTypes = {
 				buttonFont = "vic_18"
 			}
 		}
-	
-	
 		###############################
 		########### 天地灵气 ###########
 			# 写在底部的窗口浮在上层
@@ -3799,6 +3867,20 @@ guiTypes = {
 						text = ""
 						font = ""
 						maxWidth = 150
+						maxHeight = 20
+						format = left
+						alwaystransparent = yes
+
+						scripted = yes
+					}
+					instantTextBoxType = { #灵气每月回复与获取修正
+						name = TextBox_LQpower_monthly_regen_and_gain_modifier_GetValue
+						position = { x = 216  y = 110 }
+						textureFile = ""
+						Orientation = "UPPER_LEFT"
+						text = ""
+						font = ""
+						maxWidth = 400
 						maxHeight = 20
 						format = left
 						alwaystransparent = yes
@@ -4110,7 +4192,7 @@ guiTypes = {
 									# 类别 common
 									# 序号 1
 									name ="button_LQdspl_1_sorceryclass_common_Sequence_1"
-									quadTextureSprite = "GFX_button_LQdspl_x_sorceryclass_y_Sequence_z"
+									quadTextureSprite = "GFX_button_LQdspl_1_sorceryclass_commmon_Sequence_1"
 									position = { x= 93 y = 85 }
 									Orientation = "UPPER_LEFT"
 
@@ -4121,7 +4203,7 @@ guiTypes = {
 									# 类别 common
 									# 序号 2
 									name ="button_LQdspl_1_sorceryclass_common_Sequence_2"
-									quadTextureSprite = "GFX_button_LQdspl_x_sorceryclass_y_Sequence_z"
+									quadTextureSprite = "GFX_button_LQdspl_1_sorceryclass_commmon_Sequence_2"
 									position = { x= 170 y = 85 }
 									Orientation = "UPPER_LEFT"
 
@@ -4132,7 +4214,7 @@ guiTypes = {
 									# 类别 common
 									# 序号 3
 									name ="button_LQdspl_1_sorceryclass_common_Sequence_3"
-									quadTextureSprite = "GFX_button_LQdspl_x_sorceryclass_y_Sequence_z"
+									quadTextureSprite = "GFX_button_LQdspl_1_sorceryclass_commmon_Sequence_3"
 									position = { x= 247 y = 85 }
 									Orientation = "UPPER_LEFT"
 
@@ -4143,7 +4225,7 @@ guiTypes = {
 									# 类别 common
 									# 序号 4
 									name ="button_LQdspl_1_sorceryclass_common_Sequence_4"
-									quadTextureSprite = "GFX_button_LQdspl_x_sorceryclass_y_Sequence_z"
+									quadTextureSprite = "GFX_button_LQdspl_1_sorceryclass_commmon_Sequence_4"
 									position = { x= 324 y = 85 }
 									Orientation = "UPPER_LEFT"
 
@@ -4154,7 +4236,7 @@ guiTypes = {
 									# 类别 common
 									# 序号 5
 									name ="button_LQdspl_1_sorceryclass_common_Sequence_5"
-									quadTextureSprite = "GFX_button_LQdspl_x_sorceryclass_y_Sequence_z"
+									quadTextureSprite = "GFX_button_LQdspl_1_sorceryclass_commmon_Sequence_5"
 									position = { x= 401 y = 85 }
 									Orientation = "UPPER_LEFT"
 
@@ -4220,48 +4302,6 @@ guiTypes = {
 									iconType = {
 										name ="icon_LQdspl_1_sorceryclass_religion_devouring"
 										spriteType = "GFX_icon_sorceryclass_religion_devouring"
-										position = { x = 9 y = 4}
-										Orientation = "UPPER_LEFT"
-									}
-									#guiButtonType = {} #法术
-								}
-								windowType = { #信仰法术-蛊道
-									name = "window_LQdspl_1_sorceryclass_religion_gu"
-									backGround=""
-									position = { x=12 y=174 }
-									size = { x=546 y=88 }
-									moveable = 0
-									dontRender = ""
-									horizontalBorder= ""
-									verticalBorder= ""
-									fullScreen = no
-									Orientation = "UPPER_LEFT"
-									scripted = yes
-
-									iconType = {
-										name ="icon_LQdspl_1_sorceryclass_religion_gu"
-										spriteType = "GFX_icon_sorceryclass_religion_gu"
-										position = { x = 9 y = 4}
-										Orientation = "UPPER_LEFT"
-									}
-									#guiButtonType = {} #法术
-								}
-								windowType = { #信仰法术-决道
-									name = "window_LQdspl_1_sorceryclass_religion_jue"
-									backGround=""
-									position = { x=12 y=174 }
-									size = { x=546 y=88 }
-									moveable = 0
-									dontRender = ""
-									horizontalBorder= ""
-									verticalBorder= ""
-									fullScreen = no
-									Orientation = "UPPER_LEFT"
-									scripted = yes
-
-									iconType = {
-										name ="icon_LQdspl_1_sorceryclass_religion_jue"
-										spriteType = "GFX_icon_sorceryclass_religion_jue"
 										position = { x = 9 y = 4}
 										Orientation = "UPPER_LEFT"
 									}
@@ -4352,7 +4392,7 @@ guiTypes = {
 									# 类别 common
 									# 序号 1
 									name ="button_LQdspl_2_sorceryclass_common_Sequence_1"
-									quadTextureSprite = "GFX_button_LQdspl_x_sorceryclass_y_Sequence_z"
+									quadTextureSprite = "GFX_button_LQdspl_2_sorceryclass_commmon_Sequence_1"
 									position = { x= 93 y = 85 }
 									Orientation = "UPPER_LEFT"
 
@@ -4363,7 +4403,7 @@ guiTypes = {
 									# 类别 common
 									# 序号 2
 									name ="button_LQdspl_2_sorceryclass_common_Sequence_2"
-									quadTextureSprite = "GFX_button_LQdspl_x_sorceryclass_y_Sequence_z"
+									quadTextureSprite = "GFX_button_LQdspl_2_sorceryclass_commmon_Sequence_2"
 									position = { x= 170 y = 85 }
 									Orientation = "UPPER_LEFT"
 
@@ -4374,7 +4414,7 @@ guiTypes = {
 									# 类别 common
 									# 序号 3
 									name ="button_LQdspl_2_sorceryclass_common_Sequence_3"
-									quadTextureSprite = "GFX_button_LQdspl_x_sorceryclass_y_Sequence_z"
+									quadTextureSprite = "GFX_button_LQdspl_2_sorceryclass_commmon_Sequence_3"
 									position = { x= 247 y = 85 }
 									Orientation = "UPPER_LEFT"
 
@@ -4385,7 +4425,7 @@ guiTypes = {
 									# 类别 common
 									# 序号 4
 									name ="button_LQdspl_2_sorceryclass_common_Sequence_4"
-									quadTextureSprite = "GFX_button_LQdspl_x_sorceryclass_y_Sequence_z"
+									quadTextureSprite = "GFX_button_LQdspl_2_sorceryclass_commmon_Sequence_4"
 									position = { x= 324 y = 85 }
 									Orientation = "UPPER_LEFT"
 
@@ -4396,7 +4436,7 @@ guiTypes = {
 									# 类别 common
 									# 序号 5
 									name ="button_LQdspl_2_sorceryclass_common_Sequence_5"
-									quadTextureSprite = "GFX_button_LQdspl_x_sorceryclass_y_Sequence_z"
+									quadTextureSprite = "GFX_button_LQdspl_2_sorceryclass_commmon_Sequence_5"
 									position = { x= 401 y = 85 }
 									Orientation = "UPPER_LEFT"
 
@@ -4463,48 +4503,6 @@ guiTypes = {
 									iconType = {
 										name ="icon_LQdspl_2_sorceryclass_religion_devouring"
 										spriteType = "GFX_icon_sorceryclass_religion_devouring"
-										position = { x = 9 y = 4}
-										Orientation = "UPPER_LEFT"
-									}
-									#guiButtonType = {} #法术
-								}
-								windowType = { #信仰法术-蛊道
-									name = "window_LQdspl_2_sorceryclass_religion_gu"
-									backGround=""
-									position = { x=12 y=174 }
-									size = { x=546 y=88 }
-									moveable = 0
-									dontRender = ""
-									horizontalBorder= ""
-									verticalBorder= ""
-									fullScreen = no
-									Orientation = "UPPER_LEFT"
-									scripted = yes
-
-									iconType = {
-										name ="icon_LQdspl_2_sorceryclass_religion_gu"
-										spriteType = "GFX_icon_sorceryclass_religion_gu"
-										position = { x = 9 y = 4}
-										Orientation = "UPPER_LEFT"
-									}
-									#guiButtonType = {} #法术
-								}
-								windowType = { #信仰法术-决道
-									name = "window_LQdspl_2_sorceryclass_religion_jue"
-									backGround=""
-									position = { x=12 y=174 }
-									size = { x=546 y=88 }
-									moveable = 0
-									dontRender = ""
-									horizontalBorder= ""
-									verticalBorder= ""
-									fullScreen = no
-									Orientation = "UPPER_LEFT"
-									scripted = yes
-
-									iconType = {
-										name ="icon_LQdspl_2_sorceryclass_religion_jue"
-										spriteType = "GFX_icon_sorceryclass_religion_jue"
 										position = { x = 9 y = 4}
 										Orientation = "UPPER_LEFT"
 									}
@@ -4595,7 +4593,7 @@ guiTypes = {
 									# 类别 common
 									# 序号 1
 									name ="button_LQdspl_3_sorceryclass_common_Sequence_1"
-									quadTextureSprite = "GFX_button_LQdspl_x_sorceryclass_y_Sequence_z"
+									quadTextureSprite = "GFX_button_LQdspl_3_sorceryclass_commmon_Sequence_1"
 									position = { x= 93 y = 85 }
 									Orientation = "UPPER_LEFT"
 
@@ -4606,7 +4604,7 @@ guiTypes = {
 									# 类别 common
 									# 序号 2
 									name ="button_LQdspl_3_sorceryclass_common_Sequence_2"
-									quadTextureSprite = "GFX_button_LQdspl_x_sorceryclass_y_Sequence_z"
+									quadTextureSprite = "GFX_button_LQdspl_3_sorceryclass_commmon_Sequence_2"
 									position = { x= 170 y = 85 }
 									Orientation = "UPPER_LEFT"
 
@@ -4617,7 +4615,7 @@ guiTypes = {
 									# 类别 common
 									# 序号 3
 									name ="button_LQdspl_3_sorceryclass_common_Sequence_3"
-									quadTextureSprite = "GFX_button_LQdspl_x_sorceryclass_y_Sequence_z"
+									quadTextureSprite = "GFX_button_LQdspl_3_sorceryclass_commmon_Sequence_3"
 									position = { x= 247 y = 85 }
 									Orientation = "UPPER_LEFT"
 
@@ -4628,7 +4626,7 @@ guiTypes = {
 									# 类别 common
 									# 序号 4
 									name ="button_LQdspl_3_sorceryclass_common_Sequence_4"
-									quadTextureSprite = "GFX_button_LQdspl_x_sorceryclass_y_Sequence_z"
+									quadTextureSprite = "GFX_button_LQdspl_3_sorceryclass_commmon_Sequence_4"
 									position = { x= 324 y = 85 }
 									Orientation = "UPPER_LEFT"
 
@@ -4639,7 +4637,7 @@ guiTypes = {
 									# 类别 common
 									# 序号 5
 									name ="button_LQdspl_3_sorceryclass_common_Sequence_5"
-									quadTextureSprite = "GFX_button_LQdspl_x_sorceryclass_y_Sequence_z"
+									quadTextureSprite = "GFX_button_LQdspl_3_sorceryclass_commmon_Sequence_5"
 									position = { x= 401 y = 85 }
 									Orientation = "UPPER_LEFT"
 
@@ -4705,48 +4703,6 @@ guiTypes = {
 									iconType = {
 										name ="icon_LQdspl_3_sorceryclass_religion_devouring"
 										spriteType = "GFX_icon_sorceryclass_religion_devouring"
-										position = { x = 9 y = 4}
-										Orientation = "UPPER_LEFT"
-									}
-									#guiButtonType = {} #法术
-								}
-								windowType = { #信仰法术-蛊道
-									name = "window_LQdspl_3_sorceryclass_religion_gu"
-									backGround=""
-									position = { x=12 y=174 }
-									size = { x=546 y=88 }
-									moveable = 0
-									dontRender = ""
-									horizontalBorder= ""
-									verticalBorder= ""
-									fullScreen = no
-									Orientation = "UPPER_LEFT"
-									scripted = yes
-
-									iconType = {
-										name ="icon_LQdspl_3_sorceryclass_religion_gu"
-										spriteType = "GFX_icon_sorceryclass_religion_gu"
-										position = { x = 9 y = 4}
-										Orientation = "UPPER_LEFT"
-									}
-									#guiButtonType = {} #法术
-								}
-								windowType = { #信仰法术-决道
-									name = "window_LQdspl_3_sorceryclass_religion_jue"
-									backGround=""
-									position = { x=12 y=174 }
-									size = { x=546 y=88 }
-									moveable = 0
-									dontRender = ""
-									horizontalBorder= ""
-									verticalBorder= ""
-									fullScreen = no
-									Orientation = "UPPER_LEFT"
-									scripted = yes
-
-									iconType = {
-										name ="icon_LQdspl_3_sorceryclass_religion_jue"
-										spriteType = "GFX_icon_sorceryclass_religion_jue"
 										position = { x = 9 y = 4}
 										Orientation = "UPPER_LEFT"
 									}
@@ -4837,7 +4793,7 @@ guiTypes = {
 									# 类别 common
 									# 序号 1
 									name ="button_LQdspl_4_sorceryclass_common_Sequence_1"
-									quadTextureSprite = "GFX_button_LQdspl_x_sorceryclass_y_Sequence_z"
+									quadTextureSprite = "GFX_button_LQdspl_4_sorceryclass_commmon_Sequence_1"
 									position = { x= 93 y = 85 }
 									Orientation = "UPPER_LEFT"
 
@@ -4848,7 +4804,7 @@ guiTypes = {
 									# 类别 common
 									# 序号 2
 									name ="button_LQdspl_4_sorceryclass_common_Sequence_2"
-									quadTextureSprite = "GFX_button_LQdspl_x_sorceryclass_y_Sequence_z"
+									quadTextureSprite = "GFX_button_LQdspl_4_sorceryclass_commmon_Sequence_2"
 									position = { x= 170 y = 85 }
 									Orientation = "UPPER_LEFT"
 
@@ -4859,7 +4815,7 @@ guiTypes = {
 									# 类别 common
 									# 序号 3
 									name ="button_LQdspl_4_sorceryclass_common_Sequence_3"
-									quadTextureSprite = "GFX_button_LQdspl_x_sorceryclass_y_Sequence_z"
+									quadTextureSprite = "GFX_button_LQdspl_4_sorceryclass_commmon_Sequence_3"
 									position = { x= 247 y = 85 }
 									Orientation = "UPPER_LEFT"
 
@@ -4870,7 +4826,7 @@ guiTypes = {
 									# 类别 common
 									# 序号 4
 									name ="button_LQdspl_4_sorceryclass_common_Sequence_4"
-									quadTextureSprite = "GFX_button_LQdspl_x_sorceryclass_y_Sequence_z"
+									quadTextureSprite = "GFX_button_LQdspl_4_sorceryclass_commmon_Sequence_4"
 									position = { x= 324 y = 85 }
 									Orientation = "UPPER_LEFT"
 
@@ -4881,7 +4837,7 @@ guiTypes = {
 									# 类别 common
 									# 序号 5
 									name ="button_LQdspl_4_sorceryclass_common_Sequence_5"
-									quadTextureSprite = "GFX_button_LQdspl_x_sorceryclass_y_Sequence_z"
+									quadTextureSprite = "GFX_button_LQdspl_4_sorceryclass_commmon_Sequence_5"
 									position = { x= 401 y = 85 }
 									Orientation = "UPPER_LEFT"
 
@@ -4947,48 +4903,6 @@ guiTypes = {
 									iconType = {
 										name ="icon_LQdspl_4_sorceryclass_religion_devouring"
 										spriteType = "GFX_icon_sorceryclass_religion_devouring"
-										position = { x = 9 y = 4}
-										Orientation = "UPPER_LEFT"
-									}
-									#guiButtonType = {} #法术
-								}
-								windowType = { #信仰法术-蛊道
-									name = "window_LQdspl_4_sorceryclass_religion_gu"
-									backGround=""
-									position = { x=12 y=174 }
-									size = { x=546 y=88 }
-									moveable = 0
-									dontRender = ""
-									horizontalBorder= ""
-									verticalBorder= ""
-									fullScreen = no
-									Orientation = "UPPER_LEFT"
-									scripted = yes
-
-									iconType = {
-										name ="icon_LQdspl_4_sorceryclass_religion_gu"
-										spriteType = "GFX_icon_sorceryclass_religion_gu"
-										position = { x = 9 y = 4}
-										Orientation = "UPPER_LEFT"
-									}
-									#guiButtonType = {} #法术
-								}
-								windowType = { #信仰法术-决道
-									name = "window_LQdspl_4_sorceryclass_religion_jue"
-									backGround=""
-									position = { x=12 y=174 }
-									size = { x=546 y=88 }
-									moveable = 0
-									dontRender = ""
-									horizontalBorder= ""
-									verticalBorder= ""
-									fullScreen = no
-									Orientation = "UPPER_LEFT"
-									scripted = yes
-
-									iconType = {
-										name ="icon_LQdspl_4_sorceryclass_religion_jue"
-										spriteType = "GFX_icon_sorceryclass_religion_jue"
 										position = { x = 9 y = 4}
 										Orientation = "UPPER_LEFT"
 									}
@@ -5079,7 +4993,7 @@ guiTypes = {
 									# 类别 common
 									# 序号 1
 									name ="button_LQdspl_5_sorceryclass_common_Sequence_1"
-									quadTextureSprite = "GFX_button_LQdspl_x_sorceryclass_y_Sequence_z"
+									quadTextureSprite = "GFX_button_LQdspl_5_sorceryclass_commmon_Sequence_1"
 									position = { x= 93 y = 85 }
 									Orientation = "UPPER_LEFT"
 
@@ -5090,7 +5004,7 @@ guiTypes = {
 									# 类别 common
 									# 序号 2
 									name ="button_LQdspl_5_sorceryclass_common_Sequence_2"
-									quadTextureSprite = "GFX_button_LQdspl_x_sorceryclass_y_Sequence_z"
+									quadTextureSprite = "GFX_button_LQdspl_5_sorceryclass_commmon_Sequence_2"
 									position = { x= 170 y = 85 }
 									Orientation = "UPPER_LEFT"
 
@@ -5101,7 +5015,7 @@ guiTypes = {
 									# 类别 common
 									# 序号 3
 									name ="button_LQdspl_5_sorceryclass_common_Sequence_3"
-									quadTextureSprite = "GFX_button_LQdspl_x_sorceryclass_y_Sequence_z"
+									quadTextureSprite = "GFX_button_LQdspl_5_sorceryclass_commmon_Sequence_3"
 									position = { x= 247 y = 85 }
 									Orientation = "UPPER_LEFT"
 
@@ -5112,7 +5026,7 @@ guiTypes = {
 									# 类别 common
 									# 序号 4
 									name ="button_LQdspl_5_sorceryclass_common_Sequence_4"
-									quadTextureSprite = "GFX_button_LQdspl_x_sorceryclass_y_Sequence_z"
+									quadTextureSprite = "GFX_button_LQdspl_5_sorceryclass_commmon_Sequence_4"
 									position = { x= 324 y = 85 }
 									Orientation = "UPPER_LEFT"
 
@@ -5123,7 +5037,7 @@ guiTypes = {
 									# 类别 common
 									# 序号 5
 									name ="button_LQdspl_5_sorceryclass_common_Sequence_5"
-									quadTextureSprite = "GFX_button_LQdspl_x_sorceryclass_y_Sequence_z"
+									quadTextureSprite = "GFX_button_LQdspl_5_sorceryclass_commmon_Sequence_5"
 									position = { x= 401 y = 85 }
 									Orientation = "UPPER_LEFT"
 
@@ -5201,48 +5115,6 @@ guiTypes = {
 									iconType = {
 										name ="icon_LQdspl_5_sorceryclass_religion_devouring"
 										spriteType = "GFX_icon_sorceryclass_religion_devouring"
-										position = { x = 9 y = 4}
-										Orientation = "UPPER_LEFT"
-									}
-									#guiButtonType = {} #法术
-								}
-								windowType = { #信仰法术-蛊道
-									name = "window_LQdspl_5_sorceryclass_religion_gu"
-									backGround=""
-									position = { x=12 y=174 }
-									size = { x=546 y=88 }
-									moveable = 0
-									dontRender = ""
-									horizontalBorder= ""
-									verticalBorder= ""
-									fullScreen = no
-									Orientation = "UPPER_LEFT"
-									scripted = yes
-
-									iconType = {
-										name ="icon_LQdspl_5_sorceryclass_religion_gu"
-										spriteType = "GFX_icon_sorceryclass_religion_gu"
-										position = { x = 9 y = 4}
-										Orientation = "UPPER_LEFT"
-									}
-									#guiButtonType = {} #法术
-								}
-								windowType = { #信仰法术-决道
-									name = "window_LQdspl_5_sorceryclass_religion_jue"
-									backGround=""
-									position = { x=12 y=174 }
-									size = { x=546 y=88 }
-									moveable = 0
-									dontRender = ""
-									horizontalBorder= ""
-									verticalBorder= ""
-									fullScreen = no
-									Orientation = "UPPER_LEFT"
-									scripted = yes
-
-									iconType = {
-										name ="icon_LQdspl_5_sorceryclass_religion_jue"
-										spriteType = "GFX_icon_sorceryclass_religion_jue"
 										position = { x = 9 y = 4}
 										Orientation = "UPPER_LEFT"
 									}
@@ -5333,7 +5205,7 @@ guiTypes = {
 									# 类别 common
 									# 序号 1
 									name ="button_LQdspl_6_sorceryclass_common_Sequence_1"
-									quadTextureSprite = "GFX_button_LQdspl_x_sorceryclass_y_Sequence_z"
+									quadTextureSprite = "GFX_button_LQdspl_6_sorceryclass_commmon_Sequence_1"
 									position = { x= 93 y = 85 }
 									Orientation = "UPPER_LEFT"
 
@@ -5344,7 +5216,7 @@ guiTypes = {
 									# 类别 common
 									# 序号 2
 									name ="button_LQdspl_6_sorceryclass_common_Sequence_2"
-									quadTextureSprite = "GFX_button_LQdspl_x_sorceryclass_y_Sequence_z"
+									quadTextureSprite = "GFX_button_LQdspl_6_sorceryclass_commmon_Sequence_2"
 									position = { x= 170 y = 85 }
 									Orientation = "UPPER_LEFT"
 
@@ -5355,7 +5227,7 @@ guiTypes = {
 									# 类别 common
 									# 序号 3
 									name ="button_LQdspl_6_sorceryclass_common_Sequence_3"
-									quadTextureSprite = "GFX_button_LQdspl_x_sorceryclass_y_Sequence_z"
+									quadTextureSprite = "GFX_button_LQdspl_6_sorceryclass_commmon_Sequence_3"
 									position = { x= 247 y = 85 }
 									Orientation = "UPPER_LEFT"
 
@@ -5460,48 +5332,6 @@ guiTypes = {
 									}
 									#guiButtonType = {} #法术
 								}
-								windowType = { #信仰法术-蛊道
-									name = "window_LQdspl_6_sorceryclass_religion_gu"
-									backGround=""
-									position = { x=12 y=174 }
-									size = { x=546 y=88 }
-									moveable = 0
-									dontRender = ""
-									horizontalBorder= ""
-									verticalBorder= ""
-									fullScreen = no
-									Orientation = "UPPER_LEFT"
-									scripted = yes
-
-									iconType = {
-										name ="icon_LQdspl_6_sorceryclass_religion_gu"
-										spriteType = "GFX_icon_sorceryclass_religion_gu"
-										position = { x = 9 y = 4}
-										Orientation = "UPPER_LEFT"
-									}
-									#guiButtonType = {} #法术
-								}
-								windowType = { #信仰法术-决道
-									name = "window_LQdspl_6_sorceryclass_religion_jue"
-									backGround=""
-									position = { x=12 y=174 }
-									size = { x=546 y=88 }
-									moveable = 0
-									dontRender = ""
-									horizontalBorder= ""
-									verticalBorder= ""
-									fullScreen = no
-									Orientation = "UPPER_LEFT"
-									scripted = yes
-
-									iconType = {
-										name ="icon_LQdspl_6_sorceryclass_religion_jue"
-										spriteType = "GFX_icon_sorceryclass_religion_jue"
-										position = { x = 9 y = 4}
-										Orientation = "UPPER_LEFT"
-									}
-									#guiButtonType = {} #法术
-								}
 								windowType = { #信仰法术-环道
 									name = "window_LQdspl_6_sorceryclass_religion_huan"
 									backGround=""
@@ -5587,7 +5417,7 @@ guiTypes = {
 									# 类别 common
 									# 序号 1
 									name ="button_LQdspl_7_sorceryclass_common_Sequence_1"
-									quadTextureSprite = "GFX_button_LQdspl_x_sorceryclass_y_Sequence_z"
+									quadTextureSprite = "GFX_button_LQdspl_7_sorceryclass_commmon_Sequence_1"
 									position = { x= 93 y = 85 }
 									Orientation = "UPPER_LEFT"
 
@@ -5598,7 +5428,7 @@ guiTypes = {
 									# 类别 common
 									# 序号 2
 									name ="button_LQdspl_7_sorceryclass_common_Sequence_2"
-									quadTextureSprite = "GFX_button_LQdspl_x_sorceryclass_y_Sequence_z"
+									quadTextureSprite = "GFX_button_LQdspl_7_sorceryclass_commmon_Sequence_2"
 									position = { x= 170 y = 85 }
 									Orientation = "UPPER_LEFT"
 
@@ -5609,7 +5439,7 @@ guiTypes = {
 									# 类别 common
 									# 序号 3
 									name ="button_LQdspl_7_sorceryclass_common_Sequence_3"
-									quadTextureSprite = "GFX_button_LQdspl_x_sorceryclass_y_Sequence_z"
+									quadTextureSprite = "GFX_button_LQdspl_7_sorceryclass_commmon_Sequence_3"
 									position = { x= 247 y = 85 }
 									Orientation = "UPPER_LEFT"
 
@@ -5620,7 +5450,7 @@ guiTypes = {
 									# 类别 common
 									# 序号 4
 									name ="button_LQdspl_7_sorceryclass_common_Sequence_4"
-									quadTextureSprite = "GFX_button_LQdspl_x_sorceryclass_y_Sequence_z"
+									quadTextureSprite = "GFX_button_LQdspl_7_sorceryclass_commmon_Sequence_4"
 									position = { x= 324 y = 85 }
 									Orientation = "UPPER_LEFT"
 
@@ -5631,7 +5461,7 @@ guiTypes = {
 									# 类别 common
 									# 序号 5
 									name ="button_LQdspl_7_sorceryclass_common_Sequence_5"
-									quadTextureSprite = "GFX_button_LQdspl_x_sorceryclass_y_Sequence_z"
+									quadTextureSprite = "GFX_button_LQdspl_7_sorceryclass_commmon_Sequence_5"
 									position = { x= 401 y = 85 }
 									Orientation = "UPPER_LEFT"
 
@@ -5642,7 +5472,7 @@ guiTypes = {
 									# 类别 common
 									# 序号 6
 									name ="button_LQdspl_7_sorceryclass_common_Sequence_6"
-									quadTextureSprite = "GFX_button_LQdspl_x_sorceryclass_y_Sequence_z"
+									quadTextureSprite = "GFX_button_LQdspl_7_sorceryclass_commmon_Sequence_6"
 									position = { x= 478 y = 85 }
 									Orientation = "UPPER_LEFT"
 
@@ -5709,48 +5539,6 @@ guiTypes = {
 									iconType = {
 										name ="icon_LQdspl_7_sorceryclass_religion_devouring"
 										spriteType = "GFX_icon_sorceryclass_religion_devouring"
-										position = { x = 9 y = 4}
-										Orientation = "UPPER_LEFT"
-									}
-									#guiButtonType = {} #法术
-								}
-								windowType = { #信仰法术-蛊道
-									name = "window_LQdspl_7_sorceryclass_religion_gu"
-									backGround=""
-									position = { x=12 y=174 }
-									size = { x=546 y=88 }
-									moveable = 0
-									dontRender = ""
-									horizontalBorder= ""
-									verticalBorder= ""
-									fullScreen = no
-									Orientation = "UPPER_LEFT"
-									scripted = yes
-
-									iconType = {
-										name ="icon_LQdspl_7_sorceryclass_religion_gu"
-										spriteType = "GFX_icon_sorceryclass_religion_gu"
-										position = { x = 9 y = 4}
-										Orientation = "UPPER_LEFT"
-									}
-									#guiButtonType = {} #法术
-								}
-								windowType = { #信仰法术-决道
-									name = "window_LQdspl_7_sorceryclass_religion_jue"
-									backGround=""
-									position = { x=12 y=174 }
-									size = { x=546 y=88 }
-									moveable = 0
-									dontRender = ""
-									horizontalBorder= ""
-									verticalBorder= ""
-									fullScreen = no
-									Orientation = "UPPER_LEFT"
-									scripted = yes
-
-									iconType = {
-										name ="icon_LQdspl_7_sorceryclass_religion_jue"
-										spriteType = "GFX_icon_sorceryclass_religion_jue"
 										position = { x = 9 y = 4}
 										Orientation = "UPPER_LEFT"
 									}
@@ -5841,7 +5629,7 @@ guiTypes = {
 									# 类别 common
 									# 序号 1
 									name ="button_LQdspl_8_sorceryclass_common_Sequence_1"
-									quadTextureSprite = "GFX_button_LQdspl_x_sorceryclass_y_Sequence_z"
+									quadTextureSprite = "GFX_button_LQdspl_8_sorceryclass_commmon_Sequence_1"
 									position = { x= 93 y = 85 }
 									Orientation = "UPPER_LEFT"
 
@@ -5852,7 +5640,7 @@ guiTypes = {
 									# 类别 common
 									# 序号 2
 									name ="button_LQdspl_8_sorceryclass_common_Sequence_2"
-									quadTextureSprite = "GFX_button_LQdspl_x_sorceryclass_y_Sequence_z"
+									quadTextureSprite = "GFX_button_LQdspl_8_sorceryclass_commmon_Sequence_2"
 									position = { x= 170 y = 85 }
 									Orientation = "UPPER_LEFT"
 
@@ -5863,7 +5651,7 @@ guiTypes = {
 									# 类别 common
 									# 序号 3
 									name ="button_LQdspl_8_sorceryclass_common_Sequence_3"
-									quadTextureSprite = "GFX_button_LQdspl_x_sorceryclass_y_Sequence_z"
+									quadTextureSprite = "GFX_button_LQdspl_8_sorceryclass_commmon_Sequence_3"
 									position = { x= 247 y = 85 }
 									Orientation = "UPPER_LEFT"
 
@@ -5874,7 +5662,7 @@ guiTypes = {
 									# 类别 common
 									# 序号 4
 									name ="button_LQdspl_8_sorceryclass_common_Sequence_4"
-									quadTextureSprite = "GFX_button_LQdspl_x_sorceryclass_y_Sequence_z"
+									quadTextureSprite = "GFX_button_LQdspl_8_sorceryclass_commmon_Sequence_4"
 									position = { x= 324 y = 85 }
 									Orientation = "UPPER_LEFT"
 
@@ -5885,7 +5673,7 @@ guiTypes = {
 									# 类别 common
 									# 序号 5
 									name ="button_LQdspl_8_sorceryclass_common_Sequence_5"
-									quadTextureSprite = "GFX_button_LQdspl_x_sorceryclass_y_Sequence_z"
+									quadTextureSprite = "GFX_button_LQdspl_8_sorceryclass_commmon_Sequence_5"
 									position = { x= 401 y = 85 }
 									Orientation = "UPPER_LEFT"
 
@@ -5956,48 +5744,6 @@ guiTypes = {
 									}
 									#guiButtonType = {} #法术
 								}
-								windowType = { #信仰法术-蛊道
-									name = "window_LQdspl_8_sorceryclass_religion_gu"
-									backGround=""
-									position = { x=12 y=174 }
-									size = { x=546 y=88 }
-									moveable = 0
-									dontRender = ""
-									horizontalBorder= ""
-									verticalBorder= ""
-									fullScreen = no
-									Orientation = "UPPER_LEFT"
-									scripted = yes
-
-									iconType = {
-										name ="icon_LQdspl_8_sorceryclass_religion_gu"
-										spriteType = "GFX_icon_sorceryclass_religion_gu"
-										position = { x = 9 y = 4}
-										Orientation = "UPPER_LEFT"
-									}
-									#guiButtonType = {} #法术
-								}
-								windowType = { #信仰法术-决道
-									name = "window_LQdspl_8_sorceryclass_religion_jue"
-									backGround=""
-									position = { x=12 y=174 }
-									size = { x=546 y=88 }
-									moveable = 0
-									dontRender = ""
-									horizontalBorder= ""
-									verticalBorder= ""
-									fullScreen = no
-									Orientation = "UPPER_LEFT"
-									scripted = yes
-
-									iconType = {
-										name ="icon_LQdspl_8_sorceryclass_religion_jue"
-										spriteType = "GFX_icon_sorceryclass_religion_jue"
-										position = { x = 9 y = 4}
-										Orientation = "UPPER_LEFT"
-									}
-									#guiButtonType = {} #法术
-								}
 								windowType = { #信仰法术-环道
 									name = "window_LQdspl_8_sorceryclass_religion_huan"
 									backGround=""
@@ -6058,15 +5804,11 @@ guiTypes = {
 				
 			}
 
-		###############################
+		###############################	
+
+
 	}
 	
-
-
-
-
-
-
 	################# personal deity		
 	windowType = {
 		name = "personal_deity_item"
@@ -6967,6 +6709,59 @@ moveable = 0
 		}
 	}
 
+	################################################################################################
+	################# Church aspect item (for selection) For Reformed Oren Nayiru
+	windowType = {
+		name = "countryreligionview_aspectitem_oren_nayiru_reformed"
+		backGround =""
+		position = { x = 10 y = -30 }
+		size = { x = 50 y = 46 }
+		moveable = 0
+		dontRender = ""
+		horizontalBorder = ""
+		Orientation = "UPPER_LEFT"
+
+		iconType =
+		{
+			name ="aspect_icon"
+			spriteType = "GFX_hindu_deities_strip"
+			position = { x = 12 y = -14 }	#anbennar, x was 43
+		}
+
+		instantTextBoxType = {
+			name = "aspect_name"
+			position = { x = -69 y = 6 }		#anbennar, x was -42
+			font = "vic_18"
+			borderSize = { x = 0 y = 0 }
+			text = "AspectName"
+			maxWidth = 98					#anbennar, x was 102
+			maxHeight = 24
+			Orientation = "UPPER_LEFT"
+			format = left
+		}
+
+		instantTextBoxType = {
+			name = "aspect_effect"
+			position = { x = 71 y = -2 }	#anbennar, x was 98
+			font = "vic_18"
+			borderSize = { x = 0 y = 0 }
+			text = "AspectEffect"	
+			maxWidth = 280					#anbennar, x was 206
+			maxHeight = 24
+			Orientation = "UPPER_LEFT"
+			format = left
+		}
+
+		guiButtonType = {
+			name = "pick_aspect"
+			position = { x = 328 y = 1 }		#anbennar, x was 301
+			quadTextureSprite = "GFX_standard_button_71"
+			buttonText = "SELECT"
+			buttonFont = "vic_18"
+			Orientation = "LEFT"
+		}
+	}
+
 
 	################################################################################################
 	################# Church aspect item (for selection) For Black Doctrine
@@ -7289,6 +7084,59 @@ moveable = 0
 	################# Church aspect item (for selection) For Dwarven Pantheon
 	windowType = {
 		name = "countryreligionview_aspectitem_dwarven_pantheon"
+		backGround =""
+		position = { x=10 y=-30 }	
+		size = { x=50 y=46 }
+		moveable = 0
+		dontRender = ""
+		horizontalBorder = ""
+		Orientation = "UPPER_LEFT"
+		
+		iconType =
+		{
+			name ="aspect_icon"
+			spriteType = "GFX_hindu_deities_strip"
+			position = { x= 12 y = -14 }	#anbennar, x was 43
+		}
+		
+		instantTextBoxType = {
+			name = "aspect_name"
+			position = { x= -69 y = 6 }		#anbennar, x was -42
+			font = "vic_18"
+			borderSize = {x = 0 y = 0}
+			text = "AspectName"	
+			maxWidth = 98					#anbennar, x was 102
+			maxHeight = 24
+			Orientation = "UPPER_LEFT"
+			format = left
+		}
+		
+		instantTextBoxType = {
+			name = "aspect_effect"
+			position = { x = 71 y = -2 }	#anbennar, x was 98
+			font = "vic_18"
+			borderSize = {x = 0 y = 0}
+			text = "AspectEffect"	
+			maxWidth = 280					#anbennar, x was 206
+			maxHeight = 24
+			Orientation = "UPPER_LEFT"
+			format = left
+		}
+		
+		guiButtonType = {
+			name = "pick_aspect"
+			position = { x=328 y = 1}		#anbennar, x was 301
+			quadTextureSprite ="GFX_standard_button_71"
+			buttonText = "SELECT"
+			buttonFont = "vic_18"
+			Orientation = "LEFT"
+		}
+	}
+
+		################################################################################################
+	################# Church aspect item (for selection) For OSC
+	windowType = {
+		name = "countryreligionview_aspectitem_old_bulwari_sun_cult"
 		backGround =""
 		position = { x=10 y=-30 }	
 		size = { x=50 y=46 }
@@ -7859,7 +7707,110 @@ moveable = 0
 			buttonFont = "vic_18"
 			Orientation = "LEFT"
 		}
+	}
 
+	################################################################################################
+	################# Church aspect item (for selection) Fangaulan Pantheon
+	windowType = {
+		name = "countryreligionview_aspectitem_fangaulan_pantheon"
+		backGround =""
+		position = { x=10 y=-30 }	
+		size = { x=50 y=55 }
+		moveable = 0
+		dontRender = ""
+		horizontalBorder = ""
+		Orientation = "UPPER_LEFT"
+		
+		iconType = {
+			name ="aspect_icon"
+			spriteType = "GFX_hindu_deities_strip"
+			position = { x= -75 y = -10 }		#anbennar, x was -51
+		}
+		
+		instantTextBoxType = {
+			name = "aspect_name"
+			position = { x=-12 y = -7 }			#anbennar, x was 11
+			font = "vic_18"
+			borderSize = {x = 0 y = 0}
+			text = "AspectName"	
+			maxWidth = 340						#anbennar, was 300
+			maxHeight = 24
+			Orientation = "UPPER_LEFT"
+			format = left
+		}
+		
+		instantTextBoxType = {
+			name = "aspect_effect"
+			position = { x = -12 y = 11 }		#anbennar, x was 11
+			font = "vic_18"
+			borderSize = {x = 0 y = 0}
+			text = "AspectEffect"	
+			maxWidth = 340						#anbennar, was 300
+			maxHeight = 24
+			Orientation = "UPPER_LEFT"
+			format = left
+		}
+		
+		guiButtonType = {
+			name = "pick_aspect"
+			position = { x=328 y = 6}			#anbennar, x was 316
+			quadTextureSprite ="GFX_standard_button_71"
+			buttonText = "SELECT"
+			buttonFont = "vic_18"
+			Orientation = "LEFT"
+		}
+	}
+	################################################################################################
+	################# Church aspect item (for selection) For Elven Forebears
+	windowType = {
+		name = "countryreligionview_aspectitem_endless_ocean"
+		backGround =""
+		position = { x=10 y=-30 }	
+		size = { x=50 y=46 }
+		moveable = 0
+		dontRender = ""
+		horizontalBorder = ""
+		Orientation = "UPPER_LEFT"
+		
+		iconType =
+		{
+			name ="aspect_icon"
+			spriteType = "GFX_hindu_deities_strip"
+			position = { x= 12 y = -14 }	#anbennar, x was 43
+		}
+		
+		instantTextBoxType = {
+			name = "aspect_name"
+			position = { x= -69 y = 6 }		#anbennar, x was -42
+			font = "vic_18"
+			borderSize = {x = 0 y = 0}
+			text = "AspectName"	
+			maxWidth = 98					#anbennar, x was 102
+			maxHeight = 24
+			Orientation = "UPPER_LEFT"
+			format = left
+		}
+		
+		instantTextBoxType = {
+			name = "aspect_effect"
+			position = { x = 71 y = -2 }	#anbennar, x was 98
+			font = "vic_18"
+			borderSize = {x = 0 y = 0}
+			text = "AspectEffect"	
+			maxWidth = 280					#anbennar, x was 206
+			maxHeight = 24
+			Orientation = "UPPER_LEFT"
+			format = left
+		}
+		
+		guiButtonType = {
+			name = "pick_aspect"
+			position = { x=328 y = 1}		#anbennar, x was 301
+			quadTextureSprite ="GFX_standard_button_71"
+			buttonText = "SELECT"
+			buttonFont = "vic_18"
+			Orientation = "LEFT"
+		}
 	}
 	
 	################################################################################################
@@ -8428,6 +8379,114 @@ moveable = 0
 	}
 
 	################################################################################################
+	################# Church aspect item (for selection) For Dunborgula Religion
+	windowType = {
+		name = "countryreligionview_aspectitem_dunborgula"
+		backGround =""
+		position = { x=10 y=-30 }	
+		size = { x=50 y=55 }
+		moveable = 0
+		dontRender = ""
+		horizontalBorder = ""
+		Orientation = "UPPER_LEFT"
+		
+		iconType =
+		{
+			name ="aspect_icon"
+			spriteType = "GFX_hindu_deities_strip"
+			position = { x= -75 y = -10 }		#anbennar, x was -51
+		}
+		
+		instantTextBoxType = {
+			name = "aspect_name"
+			position = { x=-12 y = -7 }			#anbennar, x was 11
+			font = "vic_18"
+			borderSize = {x = 0 y = 0}
+			text = "AspectName"	
+			maxWidth = 340						#anbennar, was 300
+			maxHeight = 24
+			Orientation = "UPPER_LEFT"
+			format = left
+		}
+				
+		instantTextBoxType = {
+			name = "aspect_effect"
+			position = { x = -12 y = 11 }		#anbennar, x was 11
+			font = "vic_18"
+			borderSize = {x = 0 y = 0}
+			text = "AspectEffect"	
+			maxWidth = 340						#anbennar, was 300
+			maxHeight = 24
+			Orientation = "UPPER_LEFT"
+			format = left
+		}
+		
+		guiButtonType = {
+			name = "pick_aspect"
+			position = { x=328 y = 6}			#anbennar, x was 316
+			quadTextureSprite ="GFX_standard_button_71"
+			buttonText = "SELECT"
+			buttonFont = "vic_18"
+			Orientation = "LEFT"
+		}
+	}
+
+#####TEMPORARY STUFF BELOW, MAKE SURE TO DELETE!!!####
+	################################################################################################
+	################# Church aspect item (for selection) For Mumambarra Religion
+	windowType = {
+		name = "countryreligionview_aspectitem_mumambarra"
+		backGround =""
+		position = { x=10 y=-30 }	
+		size = { x=50 y=55 }
+		moveable = 0
+		dontRender = ""
+		horizontalBorder = ""
+		Orientation = "UPPER_LEFT"
+		
+		iconType =
+		{
+			name ="aspect_icon"
+			spriteType = "GFX_hindu_deities_strip"
+			position = { x= -75 y = -10 }		#anbennar, x was -51
+		}
+		
+		instantTextBoxType = {
+			name = "aspect_name"
+			position = { x=-12 y = -7 }			#anbennar, x was 11
+			font = "vic_18"
+			borderSize = {x = 0 y = 0}
+			text = "AspectName"	
+			maxWidth = 340						#anbennar, was 300
+			maxHeight = 24
+			Orientation = "UPPER_LEFT"
+			format = left
+		}
+				
+		instantTextBoxType = {
+			name = "aspect_effect"
+			position = { x = -12 y = 11 }		#anbennar, x was 11
+			font = "vic_18"
+			borderSize = {x = 0 y = 0}
+			text = "AspectEffect"	
+			maxWidth = 340						#anbennar, was 300
+			maxHeight = 24
+			Orientation = "UPPER_LEFT"
+			format = left
+		}
+		
+		guiButtonType = {
+			name = "pick_aspect"
+			position = { x=328 y = 6}			#anbennar, x was 316
+			quadTextureSprite ="GFX_standard_button_71"
+			buttonText = "SELECT"
+			buttonFont = "vic_18"
+			Orientation = "LEFT"
+		}
+	}
+#####TEMPORARY STUFF ABOVE, MAKE SURE TO DELETE!!!####
+
+	################################################################################################
 	################# Church aspect item (for selection) For Mazhthramazh
 	windowType = {
 		name = "countryreligionview_aspectitem_mazhthramazh"
@@ -8712,4 +8771,214 @@ moveable = 0
 		}
 	}
 
+	################################################################################################
+	################# Church aspect item (for selection) For Aycha Alpa
+	windowType = {
+		name = "countryreligionview_aspectitem_aycha_alpa"
+		backGround =""
+		position = { x=10 y=-30 }	
+		size = { x=50 y=55 }
+		moveable = 0
+		dontRender = ""
+		horizontalBorder = ""
+		Orientation = "UPPER_LEFT"
+		
+		iconType =
+		{
+			name ="aspect_icon"
+			spriteType = "GFX_hindu_deities_strip"
+			position = { x= -75 y = -10 }		#anbennar, x was -51
+		}
+		
+		instantTextBoxType = {
+			name = "aspect_name"
+			position = { x=-12 y = -7 }			#anbennar, x was 11
+			font = "vic_18"
+			borderSize = {x = 0 y = 0}
+			text = "AspectName"	
+			maxWidth = 340						#anbennar, was 300
+			maxHeight = 24
+			Orientation = "UPPER_LEFT"
+			format = left
+		}
+				
+		instantTextBoxType = {
+			name = "aspect_effect"
+			position = { x = -12 y = 11 }		#anbennar, x was 11
+			font = "vic_18"
+			borderSize = {x = 0 y = 0}
+			text = "AspectEffect"	
+			maxWidth = 340						#anbennar, was 300
+			maxHeight = 24
+			Orientation = "UPPER_LEFT"
+			format = left
+		}
+		
+		guiButtonType = {
+			name = "pick_aspect"
+			position = { x=328 y = 6}			#anbennar, x was 316
+			quadTextureSprite ="GFX_standard_button_71"
+			buttonText = "SELECT"
+			buttonFont = "vic_18"
+			Orientation = "LEFT"
+		}
+	}
+	################################################################################################
+	################# Church aspect item (for selection) For Manago Poku
+
+	windowType = {
+		name = "countryreligionview_aspectitem_manago_poku"
+		backGround =""
+		position = { x=10 y=-30 }	
+		size = { x=50 y=55 }
+		moveable = 0
+		dontRender = ""
+		horizontalBorder = ""
+		Orientation = "UPPER_LEFT"
+		
+		iconType =
+		{
+			name ="aspect_icon"
+			spriteType = "GFX_hindu_deities_strip"
+			position = { x= -75 y = -10 }		#anbennar, x was -51
+		}
+		
+		instantTextBoxType = {
+			name = "aspect_name"
+			position = { x=-12 y = -7 }			#anbennar, x was 11
+			font = "vic_18"
+			borderSize = {x = 0 y = 0}
+			text = "AspectName"	
+			maxWidth = 340						#anbennar, was 300
+			maxHeight = 24
+			Orientation = "UPPER_LEFT"
+			format = left
+		}
+				
+		instantTextBoxType = {
+			name = "aspect_effect"
+			position = { x = -12 y = 11 }		#anbennar, x was 11
+			font = "vic_18"
+			borderSize = {x = 0 y = 0}
+			text = "AspectEffect"	
+			maxWidth = 340						#anbennar, was 300
+			maxHeight = 24
+			Orientation = "UPPER_LEFT"
+			format = left
+		}
+		
+		guiButtonType = {
+			name = "pick_aspect"
+			position = { x=328 y = 6}			#anbennar, x was 316
+			quadTextureSprite ="GFX_standard_button_71"
+			buttonText = "SELECT"
+			buttonFont = "vic_18"
+			Orientation = "LEFT"
+		}
+	}
+	################################################################################################
+	################# Church aspect item (for selection) For Foundationism
+	windowType = {
+		name = "countryreligionview_aspectitem_foundationism"
+		backGround =""
+		position = { x=10 y=-30 }	
+		size = { x=50 y=56 }
+		moveable = 0
+		dontRender = ""
+		horizontalBorder = ""
+		Orientation = "UPPER_LEFT"
+		
+		iconType =
+		{
+			name ="aspect_icon"
+			spriteType = "GFX_hindu_deities_strip"
+			position = { x= 12 y = -12 }	#anbennar, x was 43
+		}
+		
+		instantTextBoxType = {
+			name = "aspect_name"
+			position = { x= -69 y = 0 }		#anbennar, x was -42
+			font = "vic_18"
+			borderSize = {x = 0 y = 0}
+			text = "AspectName"	
+			maxWidth = 98					#anbennar, x was 102
+			maxHeight = 24
+			Orientation = "UPPER_LEFT"
+			format = left
+		}
+		
+		instantTextBoxType = {
+			name = "aspect_effect"
+			position = { x = 71 y = -6 }	#anbennar, x was 98
+			font = "vic_18"
+			borderSize = {x = 0 y = 0}
+			text = "AspectEffect"	
+			maxWidth = 280					#anbennar, x was 206
+			maxHeight = 24
+			Orientation = "UPPER_LEFT"
+			format = left
+		}
+		
+		guiButtonType = {
+			name = "pick_aspect"
+			position = { x=328 y = 1}		#anbennar, x was 301
+			quadTextureSprite ="GFX_standard_button_71"
+			buttonText = "SELECT"
+			buttonFont = "vic_18"
+			Orientation = "LEFT"
+		}
+	}
+	
+	################################################################################################
+	################# Church aspect item (for selection) For Speaking Memory
+	windowType = {
+		name = "countryreligionview_aspectitem_speaking_memory"
+		backGround =""
+		position = { x=10 y=-30 }	
+		size = { x=50 y=55 }
+		moveable = 0
+		dontRender = ""
+		horizontalBorder = ""
+		Orientation = "UPPER_LEFT"
+		
+		iconType =
+		{
+			name ="aspect_icon"
+			spriteType = "GFX_hindu_deities_strip"
+			position = { x= -75 y = -10 }		#anbennar, x was -51
+		}
+		
+		instantTextBoxType = {
+			name = "aspect_name"
+			position = { x=-12 y = -7 }			#anbennar, x was 11
+			font = "vic_18"
+			borderSize = {x = 0 y = 0}
+			text = "AspectName"	
+			maxWidth = 340						#anbennar, was 300
+			maxHeight = 24
+			Orientation = "UPPER_LEFT"
+			format = left
+		}
+				
+		instantTextBoxType = {
+			name = "aspect_effect"
+			position = { x = -12 y = 11 }		#anbennar, x was 11
+			font = "vic_18"
+			borderSize = {x = 0 y = 0}
+			text = "AspectEffect"	
+			maxWidth = 340						#anbennar, was 300
+			maxHeight = 24
+			Orientation = "UPPER_LEFT"
+			format = left
+		}
+		
+		guiButtonType = {
+			name = "pick_aspect"
+			position = { x=328 y = 6}			#anbennar, x was 316
+			quadTextureSprite ="GFX_standard_button_71"
+			buttonText = "SELECT"
+			buttonFont = "vic_18"
+			Orientation = "LEFT"
+		}
+	}
 }

@@ -1,0 +1,432 @@
+YE_jinjian_rpblc_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { 
+		tag = Y05
+		NOT = {
+			has_country_flag = YE_lanjinuhi_mission_stage__completed_flag
+		}
+	} 
+	YE_jinjian_rpblc_1_2 = {
+		icon = mission_asian_city
+		position = 2
+		required_missions = { 
+			YE_jinjian_rpblc_3_1
+		} 
+		provinces_to_highlight = {
+		} 
+
+		trigger = {
+
+		} 
+
+		effect = {
+
+		} 
+	}
+	YE_jinjian_rpblc_1_3 = {
+		icon = mission_asian_city
+		position = 3
+		required_missions = { 
+			YE_jinjian_rpblc_1_2
+		} 
+		provinces_to_highlight = {
+		} 
+
+		trigger = {
+		} 
+
+		effect = {
+		} 
+	}
+	YE_jinjian_rpblc_1_4 = {
+		icon = mission_asian_city
+		position = 4
+		required_missions = { 
+			YE_jinjian_rpblc_1_3
+		} 
+		provinces_to_highlight = {
+		} 
+
+		trigger = {
+
+		} 
+
+		effect = {
+		} 
+	}
+	YE_jinjian_rpblc_1_5 = {
+		icon = mission_asian_city
+		position = 5
+		required_missions = { 
+			YE_jinjian_rpblc_1_4
+		} 
+		provinces_to_highlight = {
+		} 
+
+		trigger = {
+
+		} 
+
+		effect = {
+		} 
+	}
+}
+YE_jinjian_rpblc_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { 
+		tag = Y05
+		NOT = {
+			has_country_flag = YE_lanjinuhi_mission_stage__completed_flag
+		}
+	} 
+	YE_jinjian_rpblc_2_2 = {
+		icon = mission_asian_city
+		position = 2
+		required_missions = { 
+			YE_jinjian_rpblc_3_1
+		} 
+		provinces_to_highlight = {
+		} 
+
+		trigger = {
+
+		} 
+
+		effect = {
+
+		} 
+	}
+	YE_jinjian_rpblc_2_3 = {
+		icon = mission_asian_city
+		position = 3
+		required_missions = { 
+			YE_jinjian_rpblc_2_2
+		} 
+		provinces_to_highlight = {
+		} 
+
+		trigger = {
+		} 
+
+		effect = {
+		} 
+	}
+	YE_jinjian_rpblc_2_4 = {
+		icon = mission_asian_city
+		position = 4
+		required_missions = { 
+		} 
+		provinces_to_highlight = {
+		} 
+
+		trigger = {
+
+		} 
+
+		effect = {
+		} 
+	}
+	YE_jinjian_rpblc_2_5 = {
+		icon = mission_asian_city
+		position = 5
+		required_missions = { 
+			YE_jinjian_rpblc_2_4
+		} 
+		provinces_to_highlight = {
+			
+		} 
+
+		trigger = {
+
+		} 
+
+		effect = {
+		} 
+	}
+}
+YE_jinjian_rpblc_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { 
+		tag = Y05
+		NOT = {
+			has_country_flag = YE_lanjinuhi_mission_stage__completed_flag
+		}
+	} 
+	YE_jinjian_rpblc_3_1 = {
+		icon = mission_asian_city
+		position = 1
+		required_missions = { 
+			
+		} 
+		provinces_to_highlight = {
+		} 
+
+		trigger = {
+
+		} 
+
+		effect = {
+
+		} 
+	}
+	YE_jinjian_rpblc_3_2 = {
+		icon = mission_asian_city
+		position = 2
+		required_missions = { 
+			YE_jinjian_rpblc_3_1
+		} 
+		provinces_to_highlight = {
+		} 
+
+		trigger = {
+
+		} 
+
+		effect = {
+
+		} 
+	}
+	YE_jinjian_rpblc_3_3 = {
+		icon = mission_asian_city
+		position = 3
+		required_missions = { 
+			YE_jinjian_rpblc_3_2
+		} 
+		provinces_to_highlight = {
+		} 
+
+		trigger = {
+		} 
+
+		effect = {
+		} 
+	}
+	YE_jinjian_rpblc_3_4 = {
+		icon = mission_asian_city
+		position = 4
+		required_missions = { 
+			YE_jinjian_rpblc_3_3
+		} 
+		provinces_to_highlight = {
+		} 
+
+		trigger = {
+
+		} 
+
+		effect = {
+		} 
+	}
+	YE_jinjian_rpblc_3_5 = {
+		icon = mission_asian_city
+		position = 5
+		required_missions = { 
+			YE_jinjian_rpblc_3_4
+		} 
+		provinces_to_highlight = {
+		} 
+
+		trigger = {
+
+		} 
+
+		effect = {
+		} 
+	}
+	YE_jinjian_rpblc_3_6 = {
+		icon = mission_asian_city
+		position = 6
+		required_missions = { 
+			YE_jinjian_rpblc_2_5
+			YE_jinjian_rpblc_3_5
+			YE_jinjian_rpblc_4_5
+		} 
+		provinces_to_highlight = {
+		} 
+
+		trigger = {
+
+		} 
+
+		effect = {
+		} 
+	}
+}
+YE_jinjian_rpblc_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { 
+		tag = Y05
+		NOT = {
+			has_country_flag = YE_lanjinuhi_mission_stage__completed_flag
+		}
+	} 
+	YE_jinjian_rpblc_4_1 = {
+		icon = mission_asian_city
+		position = 1
+		required_missions = { 
+			
+		} 
+		provinces_to_highlight = {
+		} 
+
+		trigger = {
+
+		} 
+
+		effect = {
+
+		} 
+	}
+	YE_jinjian_rpblc_4_2 = {
+		icon = mission_asian_city
+		position = 2
+		required_missions = { 
+			YE_jinjian_rpblc_3_1
+		} 
+		provinces_to_highlight = {
+		} 
+
+		trigger = {
+
+		} 
+
+		effect = {
+
+		} 
+	}
+	YE_jinjian_rpblc_4_3 = {
+		icon = mission_asian_city
+		position = 3
+		required_missions = { 
+		} 
+		provinces_to_highlight = {
+		} 
+
+		trigger = {
+		} 
+
+		effect = {
+		} 
+	}
+	YE_jinjian_rpblc_4_4 = {
+		icon = mission_asian_city
+		position = 4
+		required_missions = { 
+			YE_jinjian_rpblc_3_3
+			YE_jinjian_rpblc_4_3
+			YE_jinjian_rpblc_5_3
+		} 
+		provinces_to_highlight = {
+		} 
+
+		trigger = {
+
+		} 
+
+		effect = {
+		} 
+	}
+	YE_jinjian_rpblc_4_5 = {
+		icon = mission_asian_city
+		position = 5
+		required_missions = { 
+			YE_jinjian_rpblc_4_4
+		} 
+		provinces_to_highlight = {
+		} 
+
+		trigger = {
+
+		} 
+
+		effect = {
+		} 
+	}
+}
+YE_jinjian_rpblc_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { 
+		tag = Y05
+		NOT = {
+			has_country_flag = YE_lanjinuhi_mission_stage__completed_flag
+		}
+	} 
+	YE_jinjian_rpblc_5_1 = {
+		icon = mission_asian_city
+		position = 1
+		required_missions = { 
+			
+		} 
+		provinces_to_highlight = {
+		} 
+
+		trigger = {
+
+		} 
+
+		effect = {
+
+		} 
+	}
+	YE_jinjian_rpblc_5_2 = {
+		icon = mission_asian_city
+		position = 2
+		required_missions = { 
+			
+		} 
+		provinces_to_highlight = {
+		} 
+
+		trigger = {
+
+		} 
+
+		effect = {
+
+		} 
+	}
+	YE_jinjian_rpblc_5_3 = {
+		icon = mission_asian_city
+		position = 3
+		required_missions = { 
+			YE_jinjian_rpblc_5_2
+		} 
+		provinces_to_highlight = {
+		} 
+
+		trigger = {
+		} 
+
+		effect = {
+		} 
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

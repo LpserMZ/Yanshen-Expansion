@@ -1,38 +1,6 @@
 # A region can only belong to one super region.
 # Regions need to show up in a specific order for the colours to be right. When inserting a new superregion, either put them at the bottom or swap out an empty one and move that to the bottom of the file.
 
-shenzhou_superregion = {
-	wuxun_region
-	xianjie_region
-	demon_hills_region
-}
-yanshen_superregion = {
-	lower_yanshen_region
-	upper_yanshen_region
-	north_yanshen_region
-
-
-	xun_region
-	yue_region
-	luo_region
-	jin_region
-	jian_region
-	# zhaoming_region
-	# luzhong_region
-	# tianxi_region
-	# zhuyue_region
-	# yannan_region
-	# shaqvan_region
-	# yanxin_region
-	# jindu_region
-	# jiangdong_region
-	# jianzhou_region
-
-}
-
-
-
-
 africa_superregion = {
 
 }
@@ -149,7 +117,23 @@ eastern_europe_superregion = {
 	
 }
 
+yanshen_superregion = {
+	lower_yanshen_region
+	upper_yanshen_region
+	north_yanshen_region
+	zhaoxun_region
+	zhuyue_region
+	luojiang_region
+	yanxin_region
+	jinxun_region
+	jianwu_region
 
+}
+shenzhou_superregion = {
+	demon_hills_region
+	wuxun_region
+	xianjie_region
+}
 
 east_serpentspine_superregion = {
 	tree_of_stone_region
@@ -209,14 +193,15 @@ rahen_superregion = {
 }
 
 gozengun_superregion = {
-	south_shuvuushudi_region
-	east_shuvuushudi_region
-	
-	shuvuushudi_region
-	gowon_region
 	khaashalg_region
 	moduk_region
 	nomsyulhan_region
+}
+
+xvanzhou_superregion = {
+	shuvuushudi_region
+	nudanhan_region
+	gowon_region
 }
 
 china_superregion = {
@@ -236,6 +221,7 @@ far_east_superregion = {
 }
 
 vimdatrong_superregion = {
+	shuanghe_region
 	
 	thidinkai_region
 	bomdan_region
@@ -317,27 +303,30 @@ kanolowele_superregion = {
 	insyaan_mushroom_forest_region
 	yanacotlele_region
 	anakuele_region
-	ankae_region
+	anakae_region
 	great_plateau_region
 }
 
-south_insyaa_superregion = {
+insyaan_lowlands_superregion = {
 	horn_of_insyaa_region
 	tagaala_mangroves_region
 	west_insyaan_lowlands_region
 	malogadin_coast_region
-	central_charkuchar_region
-	west_charkuchar_region
-	east_charkuchar_region
-	south_charkuchar_region
-	titanoflora_valley_region
-	titanoflora_savanna_region
+}
+
+charkuchar_superregion = {
+	gamunkuchar_region
+	jalaarkuchar_region
+	pirzakuchar_region
+	wayamokuchar_region
 }
 
 hinuilands_superregion = {
 	titanoflora_riverlands_region
 	titanoflora_lakelands_region
 	titanoflora_forests_region
+	titanoflora_valley_region
+	titanoflora_savanna_region
 }
 
 central_america_superregion = {

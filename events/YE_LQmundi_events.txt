@@ -1,0 +1,1085 @@
+namespace = YE_LQmundi
+
+country_event = { #丹药-开悟丹
+	id = YE_LQmundi.1
+	title = YE_LQmundi.1.T
+	desc = YE_LQmundi.1.D
+
+	picture = BAD_WITH_MONARCH_eventPicture
+
+	is_triggered_only = yes
+	immediate = {
+		hidden_effect = {
+			if = {
+				limit = {
+					check_variable = { which = LQdspl_4_exp value = 1000 } # 1000+
+				}
+				random_list = {
+					80 = { set_country_flag = LQdspl_4_c_common_s_3_high_reward_flag }
+					20 = { set_country_flag = LQdspl_4_c_common_s_3_humble_reward_flag }
+				}
+			}
+			else_if = {
+				limit = {
+					check_variable = { which = LQdspl_4_exp value = 700 } # 700-999
+				}
+				random_list = {
+					50 = { set_country_flag = LQdspl_4_c_common_s_3_high_reward_flag }
+					50 = { set_country_flag = LQdspl_4_c_common_s_3_humble_reward_flag }
+				}
+			}
+			else_if = {
+				limit = {
+					check_variable = { which = LQdspl_4_exp value = 450 } # 450-699
+				}
+				random_list = {
+					30 = { set_country_flag = LQdspl_4_c_common_s_3_high_reward_flag }
+					70 = { set_country_flag = LQdspl_4_c_common_s_3_humble_reward_flag }
+				}
+			}
+			else_if = {
+				limit = {
+					check_variable = { which = LQdspl_4_exp value = 250 } # 250-449
+				}
+				random_list = {
+					20 = { set_country_flag = LQdspl_4_c_common_s_3_high_reward_flag }
+					70 = { set_country_flag = LQdspl_4_c_common_s_3_humble_reward_flag }
+					10 = { set_country_flag = LQdspl_4_c_common_s_3_no_reward_flag }
+				}
+			}
+			else_if = {
+				limit = {
+					check_variable = { which = LQdspl_4_exp value = 100 } # 100-199
+				}
+				random_list = {
+					20 = { set_country_flag = LQdspl_4_c_common_s_3_high_reward_flag }
+					50 = { set_country_flag = LQdspl_4_c_common_s_3_humble_reward_flag }
+					30 = { set_country_flag = LQdspl_4_c_common_s_3_no_reward_flag }
+				}
+			}
+			else = { # 0-99
+				random_list = {
+					20 = { set_country_flag = LQdspl_4_c_common_s_3_high_reward_flag }
+					30 = { set_country_flag = LQdspl_4_c_common_s_3_humble_reward_flag }
+					50 = { set_country_flag = LQdspl_4_c_common_s_3_no_reward_flag }
+				}
+			}		
+		}
+	}
+
+	option = {
+		name = YE_LQmundi.1.a
+		trigger = {
+			has_country_flag = LQdspl_4_c_common_s_3_high_reward_flag
+		}
+		add_adm_power = 50
+		add_dip_power = 50
+		add_mil_power = 50
+	}
+	option = {
+		name = YE_LQmundi.1.b
+		trigger = {
+			has_country_flag = LQdspl_4_c_common_s_3_humble_reward_flag
+		}
+		add_adm_power = 25
+		add_dip_power = 25
+		add_mil_power = 25
+	}
+	option = {
+		name = YE_LQmundi.1.c
+		trigger = {
+			has_country_flag = LQdspl_4_c_common_s_3_no_reward_flag
+		}
+	}
+
+	after = {
+		clr_country_flag = LQdspl_4_c_common_s_3_high_reward_flag
+		clr_country_flag = LQdspl_4_c_common_s_3_humble_reward_flag
+		clr_country_flag = LQdspl_4_c_common_s_3_no_reward_flag
+	}
+}
+
+country_event = { #丹药-洗髓丹
+	id = YE_LQmundi.2
+	title = YE_LQmundi.2.T
+	desc = YE_LQmundi.2.D
+
+	picture = BAD_WITH_MONARCH_eventPicture
+
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			if = {
+				limit = {
+					has_country_flag = LQdspl_4_c_common_s_4_adm_initialized_flag
+				}
+				clr_country_flag = LQdspl_4_c_common_s_4_adm_initialized_flag
+				
+				set_country_flag = LQdspl_4_c_common_s_4_dip_initialized_flag
+			}
+			else_if = {
+				limit = {
+					has_country_flag = LQdspl_4_c_common_s_4_dip_initialized_flag
+				}
+				clr_country_flag = LQdspl_4_c_common_s_4_dip_initialized_flag
+
+				set_country_flag = LQdspl_4_c_common_s_4_mil_initialized_flag
+			}
+			else = {
+				set_country_flag = LQdspl_4_c_common_s_4_adm_initialized_flag
+			}
+
+			if = {
+				limit = {
+					check_variable = { which = LQdspl_4_exp value = 1000 } # 1000+
+				}
+				random_list = {
+					30 = { set_country_flag = LQdspl_4_c_common_s_4_high_flag }
+					70 = { set_country_flag = LQdspl_4_c_common_s_4_medium_flag }
+				}
+			}
+			else_if = {
+				limit = {
+					check_variable = { which = LQdspl_4_exp value = 700 } # 700-999
+				}
+				random_list = {
+					20 = { set_country_flag = LQdspl_4_c_common_s_4_high_flag }
+					70 = { set_country_flag = LQdspl_4_c_common_s_4_medium_flag }
+					10 = { set_country_flag = LQdspl_4_c_common_s_4_low_flag }
+				}
+			}
+			else_if = {
+				limit = {
+					check_variable = { which = LQdspl_4_exp value = 450 } # 450-699
+				}
+				random_list = {
+					10 = { set_country_flag = LQdspl_4_c_common_s_4_high_flag }
+					70 = { set_country_flag = LQdspl_4_c_common_s_4_medium_flag }
+					20 = { set_country_flag = LQdspl_4_c_common_s_4_low_flag }
+				}
+			}
+			else_if = {
+				limit = {
+					check_variable = { which = LQdspl_4_exp value = 250 } # 250-449
+				}
+				random_list = {
+					#20 = { set_country_flag = LQdspl_4_c_common_s_4_high_flag }
+					70 = { set_country_flag = LQdspl_4_c_common_s_4_medium_flag }
+					30 = { set_country_flag = LQdspl_4_c_common_s_4_low_flag }
+				}
+			}
+			else_if = {
+				limit = {
+					check_variable = { which = LQdspl_4_exp value = 100 } # 100-199
+				}
+				random_list = {
+					#20 = { set_country_flag = LQdspl_4_c_common_s_4_high_flag }
+					60 = { set_country_flag = LQdspl_4_c_common_s_4_medium_flag }
+					40 = { set_country_flag = LQdspl_4_c_common_s_4_low_flag }
+				}
+			}
+			else = { # 0-99
+				random_list = {
+					#20 = { set_country_flag = LQdspl_4_c_common_s_4_high_flag }
+					50 = { set_country_flag = LQdspl_4_c_common_s_4_medium_flag }
+					50 = { set_country_flag = LQdspl_4_c_common_s_4_low_flag }
+				}
+			}
+
+		}
+
+	}
+
+	option = {
+		name = YE_LQmundi.2.a
+		trigger = {
+			has_country_flag = LQdspl_4_c_common_s_4_adm_initialized_flag
+		}
+		hidden_effect = {
+			change_adm = -6
+		}
+		if = {
+			limit = { has_country_flag = LQdspl_4_c_common_s_4_high_flag }
+			random_list = {
+				50 = { change_adm = 6 }
+				50 = { change_adm = 5 }
+			}
+		}
+		else_if = {
+			limit = { has_country_flag = LQdspl_4_c_common_s_4_medium_flag }
+			random_list = {
+				50 = { change_adm = 4 }
+				50 = { change_adm = 3 }
+			}
+		}
+		else_if = {
+			limit = { has_country_flag = LQdspl_4_c_common_s_4_low_flag }
+			random_list = {
+				33 = { change_adm = 2 }
+				33 = { change_adm = 1 }
+				34 = { add_adm_power = 1 }
+			}
+		}
+		country_event = { id = YE_LQmundi.2 days = 3 }
+	}
+	option = {
+		name = YE_LQmundi.2.b
+		trigger = {
+			has_country_flag = LQdspl_4_c_common_s_4_dip_initialized_flag
+		}
+		hidden_effect = {
+			change_dip = -6
+		}
+		if = {
+			limit = { has_country_flag = LQdspl_4_c_common_s_4_high_flag }
+			random_list = {
+				50 = { change_dip = 6 }
+				50 = { change_dip = 5 }
+			}
+		}
+		else_if = {
+			limit = { has_country_flag = LQdspl_4_c_common_s_4_medium_flag }
+			random_list = {
+				50 = { change_dip = 4 }
+				50 = { change_dip = 3 }
+			}
+		}
+		else_if = {
+			limit = { has_country_flag = LQdspl_4_c_common_s_4_low_flag }
+			random_list = {
+				33 = { change_dip = 2 }
+				33 = { change_dip = 1 }
+				34 = { add_dip_power = 1 }
+			}
+		}
+		country_event = { id = YE_LQmundi.2 days = 3 }
+	}
+	option = {
+		name = YE_LQmundi.2.c
+		trigger = {
+			has_country_flag = LQdspl_4_c_common_s_4_mil_initialized_flag
+		}
+		hidden_effect = {
+			change_mil = -6
+		}
+		if = {
+			limit = { has_country_flag = LQdspl_4_c_common_s_4_high_flag }
+			random_list = {
+				50 = { change_mil = 6 }
+				50 = { change_mil = 5 }
+			}
+		}
+		else_if = {
+			limit = { has_country_flag = LQdspl_4_c_common_s_4_medium_flag }
+			random_list = {
+				50 = { change_mil = 4 }
+				50 = { change_mil = 3 }
+			}
+		}
+		else_if = {
+			limit = { has_country_flag = LQdspl_4_c_common_s_4_low_flag }
+			random_list = {
+				33 = { change_mil = 2 }
+				33 = { change_mil = 1 }
+				34 = { add_mil_power = 1 }
+			}
+		}
+		clr_country_flag = LQdspl_4_c_common_s_4_mil_initialized_flag
+	}
+
+	after = {
+		clr_country_flag = LQdspl_4_c_common_s_4_high_flag
+		clr_country_flag = LQdspl_4_c_common_s_4_medium_flag
+		clr_country_flag = LQdspl_4_c_common_s_4_low_flag
+	}
+}
+
+country_event = { #丹药-五石散
+	id = YE_LQmundi.3
+	title = YE_LQmundi.3.T
+	desc = YE_LQmundi.3.D
+
+	picture = BAD_WITH_MONARCH_eventPicture
+
+	is_triggered_only = yes
+	immediate = {
+		hidden_effect = {
+			if = {
+				limit = {
+					has_country_flag = LQdspl_4_c_common_s_5_first_flag
+				}
+				clr_country_flag = LQdspl_4_c_common_s_5_first_flag
+				
+				set_country_flag = LQdspl_4_c_common_s_5_second_flag
+			}
+			else_if = {
+				limit = {
+					has_country_flag = LQdspl_4_c_common_s_5_second_flag
+				}
+				clr_country_flag = LQdspl_4_c_common_s_5_second_flag
+
+				set_country_flag = LQdspl_4_c_common_s_5_third_flag
+			}
+			else = {
+				set_country_flag = LQdspl_4_c_common_s_5_first_flag
+			}
+
+			if = {
+				limit = {
+					check_variable = { which = LQdspl_4_exp value = 1000 } # 1000+
+				}
+				random = { # 49% 三次存活率 
+					chance = 21
+					set_country_flag = LQdspl_4_c_common_s_5_die_flag
+				}
+			}
+			else_if = {
+				limit = {
+					check_variable = { which = LQdspl_4_exp value = 700 } # 700-999
+				}
+				random = { # 55%
+					chance = 18
+					set_country_flag = LQdspl_4_c_common_s_5_die_flag
+				}
+			}
+			else_if = { 
+				limit = {
+					check_variable = { which = LQdspl_4_exp value = 450 } # 450-699
+				}
+				random = { #61%
+					chance = 15
+					set_country_flag = LQdspl_4_c_common_s_5_die_flag
+				}
+			}
+			else_if = {
+				limit = {
+					check_variable = { which = LQdspl_4_exp value = 250 } # 250-449
+				}
+				random = { # 68%
+					chance = 12
+					set_country_flag = LQdspl_4_c_common_s_5_die_flag
+				}
+			}
+			else_if = {
+				limit = {
+					check_variable = { which = LQdspl_4_exp value = 100 } # 100-199
+				}
+				random = { #73%
+					chance = 10
+					set_country_flag = LQdspl_4_c_common_s_5_die_flag
+				}
+			}
+			else = { 
+				random = { # 80% 三次存活率
+					chance = 7
+					set_country_flag = LQdspl_4_c_common_s_5_die_flag
+				}
+			}
+
+		}
+
+
+	}
+
+	option = { # 继续服用-不消耗灵气
+		name = YE_LQmundi.3.a
+		trigger = {
+			NOT = { has_country_flag = LQdspl_4_c_common_s_5_die_flag }
+			NOT = { has_country_flag = LQdspl_4_c_common_s_5_third_flag }
+		}
+		add_years_of_income = -0.10
+		country_event = {
+			id = YE_LQmundi.3
+			days = 3
+		}
+	}
+	option = { # 停止服用
+		name = YE_LQmundi.3.b
+		trigger = {
+			NOT = { has_country_flag = LQdspl_4_c_common_s_5_die_flag }
+		}
+
+		clr_country_flag = LQdspl_4_c_common_s_5_first_flag
+		clr_country_flag = LQdspl_4_c_common_s_5_second_flag
+		clr_country_flag = LQdspl_4_c_common_s_5_third_flag
+	}
+	option = { #暴毙
+		name = YE_LQmundi.3.c
+		trigger = {
+			has_country_flag = LQdspl_4_c_common_s_5_die_flag
+		}
+		clr_country_flag = LQdspl_4_c_common_s_5_die_flag
+		kill_ruler = yes
+		clr_country_flag = LQdspl_4_c_common_s_5_first_flag
+		clr_country_flag = LQdspl_4_c_common_s_5_second_flag
+		clr_country_flag = LQdspl_4_c_common_s_5_third_flag
+
+	}
+}
+
+country_event = { #卜算-家事
+	id = YE_LQmundi.4
+	title = YE_LQmundi.4.T
+	desc = YE_LQmundi.4.D
+
+	picture = BAD_WITH_MONARCH_eventPicture
+
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			random_list = {
+				33 = {
+					set_country_flag = LQdspl_5_c_common_s_1_pos_flag
+				}
+				34 = {
+					set_country_flag = LQdspl_5_c_common_s_1_neu_flag
+				}
+				33 = {
+					set_country_flag = LQdspl_5_c_common_s_1_neg_flag
+				}
+			}			
+		}
+
+	}
+
+	option = {
+		name = YE_LQmundi.4.a
+		ai_chance = {
+			factor = 1
+		}
+		trigger = {
+			has_country_flag = LQdspl_5_c_common_s_1_pos_flag
+		}
+
+		if = {
+			limit = {
+				check_variable = { which = LQdspl_5_exp value = 1000 }
+			}
+			add_ruler_modifier = {
+				name = LQ_d_5_c_common_s_1_pos_6
+				duration = -1
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = { which = LQdspl_5_exp value = 700 }
+			}
+			add_ruler_modifier = {
+				name = LQ_d_5_c_common_s_1_pos_5
+				duration = -1
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = { which = LQdspl_5_exp value = 450 }
+			}
+			add_ruler_modifier = {
+				name = LQ_d_5_c_common_s_1_pos_4
+				duration = -1
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = { which = LQdspl_5_exp value = 250 }
+			}
+			add_ruler_modifier = {
+				name = LQ_d_5_c_common_s_1_pos_3
+				duration = -1
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = { which = LQdspl_5_exp value = 100 }
+			}
+			add_ruler_modifier = {
+				name = LQ_d_5_c_common_s_1_pos_2
+				duration = -1
+			}
+		}
+		else = {
+			add_ruler_modifier = {
+				name = LQ_d_5_c_common_s_1_pos_1
+				duration = -1
+			}
+		}
+
+		clr_country_flag = LQdspl_5_c_common_s_1_pos_flag
+	}
+	option = {
+		name = YE_LQmundi.4.b
+		ai_chance = {
+			factor = 1
+		}
+		trigger = {
+			has_country_flag = LQdspl_5_c_common_s_1_neu_flag
+		}
+		add_prestige = 5
+		clr_country_flag = LQdspl_5_c_common_s_1_neu_flag
+	}
+	option = {
+		name = YE_LQmundi.4.c
+		ai_chance = {
+			factor = 1
+		}
+		trigger = {
+			has_country_flag = LQdspl_5_c_common_s_1_neg_flag
+		}
+
+		add_adm_power = -25
+		add_dip_power = -25
+		add_mil_power = -25
+
+		clr_country_flag = LQdspl_5_c_common_s_1_neg_flag
+	}
+}
+
+country_event = { #卜算-国政
+	id = YE_LQmundi.5
+	title = YE_LQmundi.5.T
+	desc = YE_LQmundi.5.D
+
+	picture = BAD_WITH_MONARCH_eventPicture
+
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			random_list = {
+				33 = {
+					set_country_flag = LQdspl_5_c_common_s_2_pos_flag
+				}
+				34 = {
+					set_country_flag = LQdspl_5_c_common_s_2_neu_flag
+				}
+				33 = {
+					set_country_flag = LQdspl_5_c_common_s_2_neg_flag
+				}
+			}
+		}
+
+	}
+
+	option = {
+		name = YE_LQmundi.5.a
+		ai_chance = {
+			factor = 1
+		}
+		trigger = {
+			has_country_flag = LQdspl_5_c_common_s_2_pos_flag
+		}
+		if = {
+			limit = {
+				check_variable = { which = LQdspl_5_exp value = 1000 }
+			}
+			change_government_reform_progress = 120
+		}
+		else_if = {
+			limit = {
+				check_variable = { which = LQdspl_5_exp value = 700 }
+			}
+			change_government_reform_progress = 90
+		}
+		else_if = {
+			limit = {
+				check_variable = { which = LQdspl_5_exp value = 450 }
+			}
+			change_government_reform_progress = 75
+		}
+		else_if = {
+			limit = {
+				check_variable = { which = LQdspl_5_exp value = 250 }
+			}
+			change_government_reform_progress = 60
+		}
+		else_if = {
+			limit = {
+				check_variable = { which = LQdspl_5_exp value = 100 }
+			}
+			change_government_reform_progress = 40
+		}
+		else = {
+			change_government_reform_progress = 25
+		}
+
+		clr_country_flag = LQdspl_5_c_common_s_2_pos_flag
+	}
+	option = {
+		name = YE_LQmundi.5.b
+		ai_chance = {
+			factor = 1
+		}
+		trigger = {
+			has_country_flag = LQdspl_5_c_common_s_2_neu_flag
+		}
+
+		add_legitimacy = 5
+		clr_country_flag = LQdspl_5_c_common_s_2_neu_flag
+	}
+	option = {
+		name = YE_LQmundi.5.c
+		ai_chance = {
+			factor = 1
+		}
+		trigger = {
+			has_country_flag = LQdspl_5_c_common_s_2_neg_flag
+		}
+
+		change_government_reform_progress = -20
+		clr_country_flag = LQdspl_5_c_common_s_2_neg_flag
+	}
+}
+
+country_event = { #卜算-战争
+	id = YE_LQmundi.6
+	title = YE_LQmundi.6.T
+	desc = YE_LQmundi.6.D
+
+	picture = BAD_WITH_MONARCH_eventPicture
+
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			random_list = {
+				33 = {
+					set_country_flag = LQdspl_5_c_common_s_3_pos_flag
+				}
+				34 = {
+					set_country_flag = LQdspl_5_c_common_s_3_neu_flag
+				}
+				33 = {
+					set_country_flag = LQdspl_5_c_common_s_3_neg_flag
+				}
+			}			
+		}
+
+	}
+
+	option = {
+		name = YE_LQmundi.6.a
+		ai_chance = {
+			factor = 1
+		}
+		trigger = {
+			has_country_flag = LQdspl_5_c_common_s_3_pos_flag
+		}
+		if = {
+			limit = {
+				check_variable = { which = LQdspl_5_exp value = 1000 }
+			}
+			add_country_modifier = {
+				name = LQ_d_5_c_common_s_3_pos_6
+				duration = 3650
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = { which = LQdspl_5_exp value = 700 }
+			}
+			add_country_modifier = {
+				name = LQ_d_5_c_common_s_3_pos_5
+				duration = 3650
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = { which = LQdspl_5_exp value = 450 }
+			}
+			add_country_modifier = {
+				name = LQ_d_5_c_common_s_3_pos_4
+				duration = 3650
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = { which = LQdspl_5_exp value = 250 }
+			}
+			add_country_modifier = {
+				name = LQ_d_5_c_common_s_3_pos_3
+				duration = 3650
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = { which = LQdspl_5_exp value = 100 }
+			}
+			add_country_modifier = {
+				name = LQ_d_5_c_common_s_3_pos_2
+				duration = 3650
+			}
+		}
+		else = {
+			add_country_modifier = {
+				name = LQ_d_5_c_common_s_3_pos_1
+				duration = 3650
+			}
+		}
+		clr_country_flag = LQdspl_5_c_common_s_3_pos_flag
+	}
+	option = {
+		name = YE_LQmundi.6.b
+		ai_chance = {
+			factor = 1
+		}
+		trigger = {
+			has_country_flag = LQdspl_5_c_common_s_3_neu_flag
+		}
+
+		add_army_tradition = 1
+		clr_country_flag = LQdspl_5_c_common_s_3_neu_flag
+	}
+	option = {
+		name = YE_LQmundi.6.c
+		ai_chance = {
+			factor = 1
+		}
+		trigger = {
+			has_country_flag = LQdspl_5_c_common_s_3_neg_flag
+		}
+
+		add_war_exhaustion = 1
+		clr_country_flag = LQdspl_5_c_common_s_3_neg_flag
+	}
+}
+
+country_event = { #卜算-命运
+	id = YE_LQmundi.7
+	title = YE_LQmundi.7.T
+	desc = YE_LQmundi.7.D
+
+	picture = BAD_WITH_MONARCH_eventPicture
+
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			random_list = {
+				33 = {
+					set_country_flag = LQdspl_5_c_common_s_4_pos_flag
+				}
+				34 = {
+					set_country_flag = LQdspl_5_c_common_s_4_neu_flag
+				}
+				33 = {
+					set_country_flag = LQdspl_5_c_common_s_4_neg_flag
+				}
+			}			
+		}
+
+	}
+
+	option = {
+		name = YE_LQmundi.7.a
+		ai_chance = {
+			factor = 1
+		}
+		trigger = {
+			has_country_flag = LQdspl_5_c_common_s_4_pos_flag
+		}
+		if = {
+			limit = {
+				check_variable = { which = LQdspl_5_exp value = 1000 }
+			}
+			add_prestige = 50
+			add_legitimacy = 20
+			add_republican_tradition = 10
+		}
+		else_if = {
+			limit = {
+				check_variable = { which = LQdspl_5_exp value = 700 }
+			}
+			add_prestige = 45
+			add_legitimacy = 16
+			add_republican_tradition = 8
+		}
+		else_if = {
+			limit = {
+				check_variable = { which = LQdspl_5_exp value = 450 }
+			}
+			add_prestige = 40
+			add_legitimacy = 12
+			add_republican_tradition = 6
+		}
+		else_if = {
+			limit = {
+				check_variable = { which = LQdspl_5_exp value = 250 }
+			}
+			add_prestige = 35
+			add_legitimacy = 8
+			add_republican_tradition = 4
+		}
+		else_if = {
+			limit = {
+				check_variable = { which = LQdspl_5_exp value = 100 }
+			}
+			add_prestige = 30
+			add_legitimacy = 4
+			add_republican_tradition = 2
+		}
+		else = {
+			add_prestige = 25
+		}
+		clr_country_flag = LQdspl_5_c_common_s_4_pos_flag
+	}
+	option = {
+		name = YE_LQmundi.7.b
+		ai_chance = {
+			factor = 1
+		}
+		trigger = {
+			has_country_flag = LQdspl_5_c_common_s_4_neu_flag
+		}
+		add_prestige = 5
+		clr_country_flag = LQdspl_5_c_common_s_4_neu_flag
+	}
+	option = {
+		name = YE_LQmundi.7.c
+		ai_chance = {
+			factor = 1
+		}
+		trigger = {
+			has_country_flag = LQdspl_5_c_common_s_4_neg_flag
+		}
+
+		add_prestige = -15
+		clr_country_flag = LQdspl_5_c_common_s_4_neg_flag
+	}
+}
+
+country_event = { #卜算-国运
+	id = YE_LQmundi.8
+	title = YE_LQmundi.8.T
+	desc = YE_LQmundi.8.D
+
+	picture = BAD_WITH_MONARCH_eventPicture
+
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			random_list = {
+				33 = {
+					set_country_flag = LQdspl_5_c_common_s_5_pos_flag
+				}
+				34 = {
+					set_country_flag = LQdspl_5_c_common_s_5_neu_flag
+				}
+				33 = {
+					set_country_flag = LQdspl_5_c_common_s_5_neg_flag
+				}
+			}			
+		}
+
+	}
+
+	option = {
+		name = YE_LQmundi.8.a
+		ai_chance = {
+			factor = 1
+		}
+		trigger = {
+			has_country_flag = LQdspl_5_c_common_s_5_pos_flag
+		}
+		if = {
+			limit = {
+				check_variable = { which = LQdspl_5_exp value = 1000 }
+			}
+			add_country_modifier = {
+				name = LQ_d_5_c_common_s_5_pos_6
+				duration = 3650
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = { which = LQdspl_5_exp value = 700 }
+			}
+			add_country_modifier = {
+				name = LQ_d_5_c_common_s_5_pos_5
+				duration = 3650
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = { which = LQdspl_5_exp value = 450 }
+			}
+			add_country_modifier = {
+				name = LQ_d_5_c_common_s_5_pos_4
+				duration = 3650
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = { which = LQdspl_5_exp value = 250 }
+			}
+			add_country_modifier = {
+				name = LQ_d_5_c_common_s_5_pos_3
+				duration = 3650
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = { which = LQdspl_5_exp value = 100 }
+			}
+			add_country_modifier = {
+				name = LQ_d_5_c_common_s_5_pos_2
+				duration = 3650
+			}
+		}
+		else = {
+			add_country_modifier = {
+				name = LQ_d_5_c_common_s_5_pos_1
+				duration = 3650
+			}
+		}
+		clr_country_flag = LQdspl_5_c_common_s_5_pos_flag
+	}
+	option = {
+		name = YE_LQmundi.8.b
+		ai_chance = {
+			factor = 1
+		}
+		trigger = {
+			has_country_flag = LQdspl_5_c_common_s_5_neu_flag
+		}
+
+		add_prestige = 1
+		clr_country_flag = LQdspl_5_c_common_s_5_neu_flag
+	}
+	option = {
+		name = YE_LQmundi.8.c
+		ai_chance = {
+			factor = 1
+		}
+		trigger = {
+			has_country_flag = LQdspl_5_c_common_s_5_neg_flag
+		}
+
+		add_corruption = 2
+		clr_country_flag = LQdspl_5_c_common_s_5_neg_flag
+	}
+}
+
+country_event = { #符咒-召将合炁符
+	id = YE_LQmundi.9
+	title = YE_LQmundi.9.T
+	desc = YE_LQmundi.9.D
+
+	picture = BAD_WITH_MONARCH_eventPicture
+
+	is_triggered_only = yes
+	immediate = {
+		hidden_effect = {
+			if = {
+				limit = {
+					check_variable = { which = LQdspl_8_exp value = 1000 } # 1000+
+				}
+				set_country_flag = LQdspl_8_c_common_s_4_high_reward_flag
+			}
+			else_if = {
+				limit = {
+					check_variable = { which = LQdspl_8_exp value = 700 } # 700-999
+				}
+				random_list = {
+					70 = { set_country_flag = LQdspl_8_c_common_s_4_high_flag }
+					30 = { set_country_flag = LQdspl_8_c_common_s_4_medium_flag }
+				}
+			}
+			else_if = {
+				limit = {
+					check_variable = { which = LQdspl_8_exp value = 450 } # 450-699
+				}
+				random_list = {
+					50 = { set_country_flag = LQdspl_8_c_common_s_4_high_flag }
+					50 = { set_country_flag = LQdspl_8_c_common_s_4_medium_flag }
+				}
+			}
+			else_if = {
+				limit = {
+					check_variable = { which = LQdspl_8_exp value = 250 } # 250-449
+				}
+				random_list = {
+					35 = { set_country_flag = LQdspl_8_c_common_s_4_high_flag }
+					50 = { set_country_flag = LQdspl_8_c_common_s_4_medium_flag }
+					15 = { set_country_flag = LQdspl_8_c_common_s_4_low_flag }
+				}
+			}
+			else_if = {
+				limit = {
+					check_variable = { which = LQdspl_8_exp value = 100 } # 100-199
+				}
+				random_list = {
+					20 = { set_country_flag = LQdspl_8_c_common_s_4_high_flag }
+					50 = { set_country_flag = LQdspl_8_c_common_s_4_medium_flag }
+					30 = { set_country_flag = LQdspl_8_c_common_s_4_low_flag }
+				}
+			}
+			else = { # 0-99
+				random_list = {
+					50 = { set_country_flag = LQdspl_8_c_common_s_4_medium_flag }
+					50 = { set_country_flag = LQdspl_8_c_common_s_4_low_flag }
+				}
+			}		
+		}
+	}
+
+	option = {
+		name = YE_LQmundi.9.a
+		trigger = {
+			has_country_flag = LQdspl_8_c_common_s_4_high_flag
+		}
+		create_general = {
+			tradition = 100
+			add_fire = 2
+			add_shock = 2
+			add_manuever = 2
+			add_siege = 2
+		}
+	}
+	option = {
+		name = YE_LQmundi.9.b
+		trigger = {
+			has_country_flag = LQdspl_8_c_common_s_4_medium_flag
+		}
+		create_general = {
+			tradition = 75
+			add_fire = 1
+			add_shock = 1
+			add_manuever = 1
+			add_siege = 1
+		}
+	}
+	option = {
+		name = YE_LQmundi.9.c
+		trigger = {
+			has_country_flag = LQdspl_8_c_common_s_4_low_flag
+		}
+		create_general = {
+			tradition = 50
+			add_fire = 1
+			add_shock = 1
+		}
+	}
+
+	after = {
+		clr_country_flag = LQdspl_8_c_common_s_4_high_flag
+		clr_country_flag = LQdspl_8_c_common_s_4_medium_flag
+		clr_country_flag = LQdspl_8_c_common_s_4_low_flag
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

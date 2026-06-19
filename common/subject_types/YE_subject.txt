@@ -201,7 +201,15 @@ YE_autonomous_vassal = { #不能通过外交行动转为原版附庸
 	diplomacy_overlord_sprite = GFX_diplomacy_leadautonomousvassal
 	diplomacy_subject_sprite = GFX_diplomacy_weakautonomousvassal
 
-		# Modifiers:
+	#不主动参战
+	joins_overlords_wars = no
+	can_be_co_belligerented =  no
+	can_be_annexed = no   
+	must_accept_cta_from_overlord =  yes
+	favors_cost_to_join_offensive_wars = 10
+	favors_cost_to_join_defensive_wars = 10
+
+	# Modifiers:
 	overlord_opinion_modifier = is_vassal
 	subject_opinion_modifier = is_vassal
 	

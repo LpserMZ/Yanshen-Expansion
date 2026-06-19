@@ -1,0 +1,14 @@
+owner = Y71
+controller = Y71
+add_core = Y71
+culture = naamjyut
+religion = transmutative_path
+base_tax = 1
+base_production = 1
+base_manpower = 1
+trade_goods = salt
+is_city = yes
+add_permanent_province_modifier = { 
+	name = harpy_minority_coexisting_large
+	duration = -1
+}

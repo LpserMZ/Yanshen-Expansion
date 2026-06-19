@@ -1,0 +1,13 @@
+add_core = Y01
+owner = Y01
+base_tax = 3
+base_manpower = 2
+base_production = 2
+culture = horned_ogre
+trade_goods = grain
+religion = devouring_path
+controller = Y01
+is_city = no
+
+add_province_triggered_modifier = YE_Y01_special_buff
+fort_15th = yes

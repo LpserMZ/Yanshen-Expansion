@@ -1,0 +1,361 @@
+namespace = YE_religion_halessi
+
+country_event = {
+	id = YE_religion_halessi.1
+	title = YE_religion_halessi.1.T
+	desc = YE_religion_halessi.1.D
+	picture = MYSTIC_IN_PRAYER_eventPicture
+
+	is_triggered_only = yes
+	trigger = {
+		religion_group = halessi
+		NOT = { religion = mystic_accord }
+		NOT = { religion = neokttareum }
+	}
+	option = { # ai初始化
+		name = YE_religion_halessi.1.a
+		trigger = {
+			NOT = { is_year = 1445 }
+			ai = yes
+		}
+		ai_chance = {
+			factor = 1
+		}
+
+		if = {
+			limit = {
+				OR = {
+					tag = Y05
+					tag = Y24
+				}
+			}
+			trigger_switch = {
+				on_trigger = tag
+				Y05 = { set_religious_school = { group = halessi school = mushi_school } } #蓝巾会
+				Y24 = { set_religious_school = { group = halessi school = kanli_school } } #罗邑
+			}
+		}
+		else_if = { #侠界
+			limit = {
+				capital_scope = {
+					region = xianjie_region
+				}
+			}
+			if = {
+				limit = {
+					religion = accretive_path
+				}
+				set_religious_school = {
+					group = halessi
+					school = xia_school
+				}
+			}
+			else = {
+				set_religious_school = {
+					group = halessi
+					school = wu_school
+				}
+			}
+		}
+		else_if = { #凡达陇
+			limit = {
+				capital_scope = {
+					superregion = vimdatrong_superregion
+					NOT = { region = xianjie_region } # 兼顾未改地区的版本
+				}
+			}
+			if = {
+				limit = {
+					region = thidinkai_region
+				}
+				set_religious_school = {
+					group = halessi
+					school = wu_school
+				}
+			}
+			else = {
+				set_religious_school = {
+					group = halessi
+					school = qingliu_school
+				}
+			}
+		}
+		else_if = { #武浔
+			limit = {
+				capital_scope = {
+					region = wuxun_region
+				}
+			}
+			if = {
+				limit = {
+					religion = devouring_path
+				}
+				set_religious_school = {
+					group = halessi
+					school = mozhen_school
+				}
+			}
+			else_if = {
+				limit = {
+					religion = transmutative_path
+				}
+				set_religious_school = {
+					group = halessi
+					school = wu_school
+				}
+			}
+			else = {
+				set_religious_school = {
+					group = halessi
+					school = xia_school
+				}
+			}
+		}
+		else_if = { #魔岭
+			limit = {
+				capital_scope = {
+					region = demon_hills_region
+				}
+			}
+			set_religious_school = {
+				group = halessi
+				school = mozhen_school
+			}
+		}
+		else_if = { #烟州
+			limit = {
+				capital_scope = {
+					superregion = yanshen_superregion
+				}
+			}
+			if = {
+				limit = {
+					religion = devouring_path
+				}
+				set_religious_school = {
+					group = halessi
+					school = guifu_school
+				}
+			}
+			else_if = {
+				limit = {
+					capital_scope = {
+						region = zhuyue_region
+					}
+				}
+				set_religious_school = {
+					group = halessi
+					school = qingliu_school
+				}
+			}
+			else = {
+				set_religious_school = {
+					group = halessi
+					school = lingjue_school
+				}
+			}
+
+		}
+	}
+
+	option = {
+		name = YE_religion_halessi.1.b
+		trigger = {
+			OR = {
+				is_year = 1445
+				ai = no
+			}
+		}
+		set_religious_school = {
+			group = halessi
+			school = xia_school
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 20
+				OR = {
+					has_reform = xiaken
+					has_reform = indep_xiaken
+					has_reform = wulin
+				}
+			
+			}
+		}
+	}
+	option = {
+		name = YE_religion_halessi.1.c
+		trigger = {
+			OR = {
+				is_year = 1445
+				ai = no
+			}
+		}
+		set_religious_school = {
+			group = halessi
+			school = wu_school
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 20
+				OR = {
+					has_reform = xiaken
+					has_reform = indep_xiaken
+					has_reform = wulin
+				}
+			}
+		}
+	}
+	option = {
+		name = YE_religion_halessi.1.d
+		trigger = {
+			OR = {
+				is_year = 1445
+				ai = no
+			}
+		}
+		set_religious_school = {
+			group = halessi
+			school = kanli_school
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 20
+				OR = {
+					tag = Y24
+					was_tag = Y24
+				}
+
+			}
+		}
+	}
+	option = {
+		name = YE_religion_halessi.1.e
+		trigger = {
+			OR = {
+				is_year = 1445
+				ai = no
+			}
+			capital_scope = {
+				superregion = yanshen_superregion
+			}
+			NOT = { religion = devouring_path }
+		}
+		set_religious_school = {
+			group = halessi
+			school = lingjue_school
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 20
+				capital_scope = {
+					superregion = yanshen_superregion
+				}
+				has_estate = estate_eunuchs_anb
+			}
+		}
+	}
+	option = {
+		name = YE_religion_halessi.1.f
+		trigger = {
+			OR = {
+				is_year = 1445
+				ai = no
+			}
+		}
+		set_religious_school = {
+			group = halessi
+			school = qingliu_school
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 10
+				OR = {
+					capital_scope = {
+						region = zhuyue_region
+					}
+					primary_culture = naamjyut
+					primary_culture = naamzau
+				}
+			}
+			modifier = {
+				factor = 5
+				capital_scope = {
+					superregion = vimdatrong_superregion
+				}
+			}
+		}
+	}
+	option = {
+		name = YE_religion_halessi.1.g
+		trigger = {
+			OR = {
+				is_year = 1445
+				ai = no
+			}
+		}
+		set_religious_school = {
+			group = halessi
+			school = mushi_school
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 20
+				tag = Y05
+			}
+			modifier = {
+				factor = 5
+				capital_scope = {
+					region = jinxun_region
+				}
+				NOT = { has_estate = estate_eunuchs_anb }
+			}
+		}
+	}
+	option = {
+		name = YE_religion_halessi.1.h
+		trigger = {
+			OR = {
+				is_year = 1445
+				ai = no
+			}
+		}
+		
+		set_religious_school = {
+			group = halessi
+			school = mozhen_school
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 20
+				religion = devouring_path
+			}
+		}
+	}
+	option = {
+		name = YE_religion_halessi.1.i
+		trigger = {
+			OR = {
+				is_year = 1445
+				ai = no
+			}
+		}
+		set_religious_school = {
+			group = halessi
+			school = guifu_school
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 20
+				religion = devouring_path
+			}
+		}
+	}
+}

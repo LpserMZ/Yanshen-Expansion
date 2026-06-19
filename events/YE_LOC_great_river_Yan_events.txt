@@ -1,0 +1,3095 @@
+namespace = YE_GRY # 泱泱大河 great river，Yan
+#烟州的事件
+
+#反边方同盟
+country_event = { #1 边方开局事件
+	id = YE_GRY.1
+	title = YE_GRY.1.T
+	desc = YE_GRY.1.D
+	picture = BAD_WITH_MONARCH_eventPicture
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	trigger = {}
+
+	immediate = {
+		hidden_effect = {
+			every_neighbor_country = {
+				limit = {
+					NOT = { tag = Y23 }
+				}
+				add_aggressive_expansion = {
+					who = Y09
+					value = 15
+					apply_calc = no
+				}
+			}
+		}
+	}
+	option = {
+		name = YE_GRY.1.a
+		ai_chance = { factor = 1 }
+		tooltip = {
+			every_neighbor_country = {
+				add_aggressive_expansion = {
+					who = Y09
+					value = 15
+					apply_calc = no
+				}
+			}
+		}
+	}
+}
+country_event = { #2 朱樾开局事件——组织包围网
+	id = YE_GRY.2
+	title = YE_GRY.2.T
+	desc = YE_GRY.2.D
+	picture = BAD_WITH_MONARCH_eventPicture
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	trigger = {}
+	immediate = {
+		hidden_effect = {
+			add_aggressive_expansion = {
+				who = Y09
+				value = 60
+				apply_calc = no
+			}
+			form_coalition_against = Y09			
+		}
+	}
+	option = { #广发英雄帖
+		name = YE_GRY.2.a
+		ai_chance = { factor = 1 }
+		Y24 = { country_event = { id = YE_GRY.3 days = 14 } }
+		Y04 = { country_event = { id = YE_GRY.3 days = 28 } }
+		Y10 = { country_event = { id = YE_GRY.3 days = 35 } }
+		Y02 = { country_event = { id = YE_GRY.3 days = 42 } }
+		country_event = { id = YE_GRY.4 days = 180 }
+	}
+
+}
+country_event = { #3 罗邑、安江、影镇、禁丘依次触发
+	id = YE_GRY.3
+	title = YE_GRY.3.T
+	desc = YE_GRY.3.D
+	picture = BAD_WITH_MONARCH_eventPicture
+
+	#fire_only_once = yes
+	is_triggered_only = yes
+
+	trigger = {}
+
+	option = {
+		name = YE_GRY.3.a
+		ai_chance = { factor = 10 }
+		if = {
+			limit = { tag = Y24 }
+			set_country_flag = YE_promise_join_aoalition_flag
+			add_aggressive_expansion = {
+				who = Y09
+				value = 40
+				apply_calc = no
+			}
+		}
+		else = {
+			add_aggressive_expansion = {
+				who = Y09
+				value = 55
+				apply_calc = no
+			}
+			form_coalition_against = Y09
+			set_country_flag = YE_promise_join_aoalition_flag
+		}
+	}
+	option = {
+		name = YE_GRY.3.b
+		ai_chance = { 
+			factor = 10 
+			modifier = {
+				factor = 0
+				OR = {
+					tag = Y24
+					tag = Y02
+				}
+			}
+		}
+	}
+
+}
+country_event = { #4 使者返回
+	id = YE_GRY.4
+	title = YE_GRY.4.T
+	desc = YE_GRY.4.D
+	picture = BAD_WITH_MONARCH_eventPicture
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	trigger = {}
+
+	option = {
+		name = YE_GRY.4.a
+		ai_chance = { factor = 1 }
+		country_event = {
+			id = YE_GRY.5
+			days = 60
+		}
+	}
+
+}
+country_event = { #5 开战
+	id = YE_GRY.5
+	title = YE_GRY.5.T
+	desc = YE_GRY.5.D
+	picture = BAD_WITH_MONARCH_eventPicture
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	trigger = {}
+
+	option = {
+		name = YE_GRY.5.a
+		ai_chance = { factor = 1 }
+		if = {
+			limit = {
+				Y24 = { has_country_flag = YE_promise_join_aoalition_flag }
+			}
+			Y21 = { set_country_flag = no_callaction }
+			Y24 = {
+				add_truce_with = Y09
+				declare_war_with_cb = {
+					casus_belli = cb_core
+					who = Y21
+					war_goal_province = 4893
+				}
+			}
+			#clr_country_flag = YE_promise_join_aoalition_flag
+		}
+		Y09 = {
+			set_country_flag = YE_Y09_in_coalition_war_flag
+		}
+
+		every_known_country = {
+			limit = {
+				has_country_flag = YE_promise_join_aoalition_flag
+				#NOT = { tag = Y24 }
+			}
+			form_coalition_against = Y09
+			clr_country_flag = YE_promise_join_aoalition_flag
+		}
+		form_coalition_against = Y09
+		declare_war_with_cb = {
+			casus_belli = cb_super_badboy
+			who = Y09
+		}
+	}
+
+}
+
+#北仑珀周游烟东
+province_event = { #6 罗邑事件——开始游历
+	id = YE_GRY.6
+	title = YE_GRY.6.T
+	desc = YE_GRY.6.D
+	picture = BAD_WITH_MONARCH_eventPicture
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	trigger = {}
+
+	option = {
+		name = YE_GRY.6.a
+		ai_chance = { factor = 1 }
+		hidden_effect = {
+			4896 = { save_global_event_target_as = loc_of_scholar_from_luojiang }
+			event_target:loc_of_scholar_from_luojiang = {
+				province_event = {
+					id = YE_GRY.7
+					days = 30
+				}
+			}			
+		}
+	}
+}
+province_event = { #7 学者到来
+	id = YE_GRY.7
+	title = YE_GRY.7.T
+	desc = YE_GRY.7.D
+	picture = BAD_WITH_MONARCH_eventPicture
+
+	#fire_only_once = yes
+	is_triggered_only = yes
+
+	trigger = {}
+
+	option = {
+		name = YE_GRY.7.a
+		ai_chance = { factor = 1 }
+		add_province_triggered_modifier = YE_scholar_from_luojiang
+
+		if = { #学者的抉择
+			limit = {
+				province_id = 4949
+			}
+			province_event = {
+				id = YE_GRY.9
+				days = 1095
+			}
+		}
+		else = { #下一站
+			province_event = { 
+				id = YE_GRY.8
+				days = 1095
+			}
+		}
+
+	}
+}
+province_event = { #8 学者离开
+	id = YE_GRY.8
+	title = YE_GRY.8.T
+	desc = YE_GRY.8.D
+	picture = BAD_WITH_MONARCH_eventPicture
+
+	#fire_only_once = yes
+	is_triggered_only = yes
+
+	trigger = {}
+
+	option = {
+		name = YE_GRY.8.a
+		ai_chance = { factor = 1 }
+		remove_province_triggered_modifier = YE_scholar_from_luojiang
+
+		trigger_switch = {
+			on_trigger = province_id
+			4896 = { 4859 = { save_global_event_target_as = loc_of_scholar_from_luojiang } }
+			4859 = { 4853 = { save_global_event_target_as = loc_of_scholar_from_luojiang } }
+			4853 = { 4855 = { save_global_event_target_as = loc_of_scholar_from_luojiang } }
+			4855 = { 4861 = { save_global_event_target_as = loc_of_scholar_from_luojiang } }
+			4861 = { 8117 = { save_global_event_target_as = loc_of_scholar_from_luojiang } }
+			8117 = { 4869 = { save_global_event_target_as = loc_of_scholar_from_luojiang } }
+			4869 = { 4907 = { save_global_event_target_as = loc_of_scholar_from_luojiang } }
+			4907 = { 
+				if = {
+					limit = { 
+						Y14 = {
+							total_development = 300
+							NOT = { has_estate = estate_eunuchs_anb }
+							owns = 4979
+						} 
+					}
+					4979 = { save_global_event_target_as = loc_of_scholar_from_luojiang }
+				}
+				else = {
+					4879 = { save_global_event_target_as = loc_of_scholar_from_luojiang }
+				}
+			}
+			4979 = { 4879 = { save_global_event_target_as = loc_of_scholar_from_luojiang } }
+			4879 = { 4949 = { save_global_event_target_as = loc_of_scholar_from_luojiang } }
+		}
+		event_target:loc_of_scholar_from_luojiang = {
+			province_event = {
+				id = YE_GRY.7
+				days = 30
+			}
+		}
+	}
+}
+province_event = { #9 最终抉择
+	id = YE_GRY.9
+	title = YE_GRY.9.T
+	desc = YE_GRY.9.D
+	picture = BAD_WITH_MONARCH_eventPicture
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	trigger = {}
+
+	option = {
+		name = YE_GRY.9.a
+		ai_chance = { factor = 1 }
+		remove_province_triggered_modifier = YE_scholar_from_luojiang
+
+	}
+	after = {
+		province_event = {
+			id = YE_GRY.10
+		}
+	}
+
+}
+province_event = { #10 9号事件的地点判定
+	id = YE_GRY.10
+	title = YE_GRY.10.T
+	desc = YE_GRY.10.D
+	picture = BAD_WITH_MONARCH_eventPicture
+
+	hidden = yes
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	trigger = {}
+
+	option = { #苦海
+		name = YE_GRY.10.a
+		ai_chance = { 
+			factor = 1 
+			modifier = {
+				factor = 3
+				4896 = { has_building = university }
+			}
+			modifier = {
+				factor = 0
+				4896 = { NOT = { has_building = university } }
+			}
+		}
+		4896 = { save_global_event_target_as = loc_of_scholar_from_luojiang }
+	}
+	option = { #烟中
+		name = YE_GRY.10.b
+		ai_chance = { 
+			factor = 1 
+			modifier = {
+				factor = 2
+				4859 = { has_building = university }
+			}
+			modifier = {
+				factor = 0
+				4859 = { NOT = { has_building = university } }
+			}
+		}
+		4859 = { save_global_event_target_as = loc_of_scholar_from_luojiang }
+	}
+	option = { #安江
+		name = YE_GRY.10.c
+		ai_chance = { 
+			factor = 1 
+			modifier = {
+				factor = 2
+				4853 = { has_building = university }
+			}
+			modifier = {
+				factor = 0
+				4853 = { NOT = { has_building = university } }
+			}
+		}
+		4853 = { save_global_event_target_as = loc_of_scholar_from_luojiang }
+	}
+	option = { #间林
+		name = YE_GRY.10.d
+		ai_chance = { 
+			factor = 1 
+			modifier = {
+				factor = 2
+				4855 = { has_building = university }
+			}
+			modifier = {
+				factor = 0
+				4855 = { NOT = { has_building = university } }
+			}
+		}
+		4855 = { save_global_event_target_as = loc_of_scholar_from_luojiang }
+	}
+	option = { #央城
+		name = YE_GRY.10.e
+		ai_chance = { 
+			factor = 1 
+			modifier = {
+				factor = 2
+				4861 = { has_building = university }
+			}
+			modifier = {
+				factor = 0
+				4861 = { NOT = { has_building = university } }
+			}
+		}
+		4861 = { save_global_event_target_as = loc_of_scholar_from_luojiang }
+	}
+	option = { #青同
+		name = YE_GRY.10.f
+		ai_chance = { 
+			factor = 4 
+			modifier = {
+				factor = 1.5
+				8117 = { has_building = university }
+			}
+		}
+		8117 = { save_global_event_target_as = loc_of_scholar_from_luojiang }
+	}
+	option = { #祥女
+		name = YE_GRY.10.g
+		ai_chance = { 
+			factor = 1 
+			modifier = {
+				factor = 3
+				4869 = { has_building = university }
+			}
+			modifier = {
+				factor = 0
+				4869 = { NOT = { has_building = university } }
+			}
+		}
+		4869 = { save_global_event_target_as = loc_of_scholar_from_luojiang }
+	}
+	option = { #北渡港
+		name = YE_GRY.10.h
+		ai_chance = { 
+			factor = 2 
+			modifier = {
+				factor = 3
+				4907 = { has_building = university }
+			}
+		}
+		4907 = { save_global_event_target_as = loc_of_scholar_from_luojiang }
+	}
+	option = { #大矛宫
+		name = YE_GRY.10.i
+		ai_chance = { 
+			factor = 1 
+			modifier = {
+				factor = 3
+				4979 = { has_building = university }
+			}
+			modifier = {
+				factor = 0
+				4979 = { NOT = { has_building = university } }
+			}
+		}
+		4979 = { save_global_event_target_as = loc_of_scholar_from_luojiang }
+	}
+	option = { #飞腾
+		name = YE_GRY.10.j
+		ai_chance = { 
+			factor = 1 
+			modifier = {
+				factor = 3
+				4879 = { has_building = university }
+			}
+			modifier = {
+				factor = 0
+				4879 = { NOT = { has_building = university } }
+			}
+		}
+		4879 = { save_global_event_target_as = loc_of_scholar_from_luojiang }
+	}
+	option = { #罗邑
+		name = YE_GRY.10.k
+		ai_chance = { 
+			factor = 1 
+			modifier = {
+				factor = 4
+				4949 = { has_building = university }
+			}
+			modifier = {
+				factor = 0
+				4949 = { NOT = { has_building = university } }
+			}
+		}
+		4949 = { save_global_event_target_as = loc_of_scholar_from_luojiang }
+	}
+
+	after = {
+		if = {
+			limit = {
+				event_target:loc_of_scholar_from_luojiang = {
+					province_id = 4949
+				}
+			}
+			event_target:loc_of_scholar_from_luojiang = {
+				province_event = {
+					id = YE_GRY.11
+				}
+			}
+		}
+		else = {
+			event_target:loc_of_scholar_from_luojiang = {
+				province_event = {
+					id = YE_GRY.11
+					days = 7
+				}
+			}
+		}
+	}
+}
+province_event = { #11 落户于此
+	id = YE_GRY.11
+	title = YE_GRY.11.T
+	desc = YE_GRY.11.D
+	picture = BAD_WITH_MONARCH_eventPicture
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	major = yes	
+
+	trigger = {}
+
+	option = {
+		name = YE_GRY.11.a
+		ai_chance = { factor = 1 }
+		clear_global_event_target = loc_of_scholar_from_luojiang
+		add_permanent_province_modifier = {
+			name = taixuegong
+			duration = -1
+		}
+		owner = {
+			add_prestige = 50
+			add_adm_power = 100
+			add_dip_power = 100
+			add_mil_power = 100
+		}
+	}
+}
+
+#衍道
+province_event = { #12 衍道形成
+	id = YE_GRY.12
+	title = YE_GRY.12.T
+	desc = YE_GRY.12.D
+	picture = BAD_WITH_MONARCH_eventPicture
+
+	fire_only_once = yes
+	# is_triggered_only = yes
+
+	major = yes	
+
+	is_mtth_scaled_to_size = 1
+	mean_time_to_happen = {
+		months = 60
+	}
+
+	trigger = {
+		is_year = 1495
+		superregion = yanshen_superregion
+		NOT = { has_terrain = cavern }
+
+		OR = {
+			region = zhaoxun_region
+			region = yanxin_region
+			religion = devouring_path
+			has_building = university
+		}
+
+	}
+
+	immediate = {
+		enable_religion = yan_path
+		change_religion = yan_path
+		add_permanent_province_modifier = {
+			name = religious_zeal_at_conv
+			duration = 10950
+		}
+		add_permanent_province_modifier = {
+			name = religious_center
+			duration = -1
+		}
+
+	}
+
+	option = { #顺应时势
+		name = YE_GRY.12.a
+		ai_chance = { factor = 8 }
+		if = {
+			limit = {
+				religion = yan_path
+				is_reformation_center = no
+			}
+			add_reform_center = yan_path
+			add_permanent_province_modifier = {
+				name = religious_zeal_at_conv
+				duration = 10950
+			}
+			add_permanent_province_modifier = {
+				name = religious_center
+				duration = -1
+			}
+		}
+		owner = {
+			change_religion = yan_path
+		}
+	}
+	option = { #离经叛道
+		name = YE_GRY.12.b
+		ai_chance = { factor = 2 }
+		if = {
+			limit = {
+				religion = yan_path
+				is_reformation_center = no
+			}
+			add_reform_center = yan_path
+			add_permanent_province_modifier = {
+				name = religious_zeal_at_conv
+				duration = 10950
+			}
+			add_permanent_province_modifier = {
+				name = religious_center
+				duration = -1
+			}
+		}
+	}
+	
+	
+}
+province_event = { #13 衍道扩散
+	id = YE_GRY.13
+	title = YE_GRY.13.T
+	desc = YE_GRY.13.D
+	picture = BAD_WITH_MONARCH_eventPicture
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	#major = yes	
+	
+
+	trigger = {
+		OR = {
+			current_age = age_of_discovery
+			current_age = age_of_reformation
+		}
+		is_reformation_center = no
+		owner = {
+			any_owned_province = {
+				is_reformation_center = no
+			}
+		}
+	}
+
+	option = {
+		name = YE_GRY.13.a
+		ai_chance = { factor = 1 }
+		
+		change_religion = yan_path
+		add_reform_center = yan_path
+		add_permanent_province_modifier = {
+			name = religious_zeal_at_conv
+			duration = 10950
+		}
+		add_permanent_province_modifier = {
+			name = religious_center
+			duration = -1
+		}
+	}
+}
+country_event = { #14 中心消失
+	id = YE_GRY.14
+	title = YE_GRY.14.T
+	desc = YE_GRY.14.D
+	picture = BAD_WITH_MONARCH_eventPicture
+
+	is_triggered_only = yes
+	
+	trigger = {
+		current_age = age_of_absolutism
+		any_owned_province = {
+			religion = yan_path
+			is_reformation_center = yes
+		}
+	}
+
+	option = {
+		name = YE_GRY.14.a
+		ai_chance = { factor = 1 }
+		every_owned_province = {
+			limit = {
+				religion = yan_path
+				is_reformation_center = yes
+			}
+			remove_reform_center = yan_path
+			remove_province_modifier = religious_center
+		}
+	}
+}
+
+#探访官学
+country_event = { #15 主界面
+	id = YE_GRY.15
+	title = YE_GRY.15.T
+	desc = YE_GRY.15.D
+	picture = BAD_WITH_MONARCH_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+
+	}
+	option = {
+		name = YE_GRY.15.a
+		ai_chance = { factor = 1 }
+		country_event = {
+			id = YE_GRY.16
+		}
+	}
+	option = {
+		name = YE_GRY.15.b
+		ai_chance = { factor = 1 }
+		country_event = {
+			id = YE_GRY.17
+		}
+	}
+	option = {
+		name = YE_GRY.15.c
+		ai_chance = { factor = 1 }
+		country_event = {
+			id = YE_GRY.18
+		}
+	}
+}
+country_event = { #16 行政
+	id = YE_GRY.16
+	title = YE_GRY.16.T
+	desc = YE_GRY.16.D
+	picture = BAD_WITH_MONARCH_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+
+	}
+	option = {
+		name = YE_GRY.16.a
+		ai_chance = { factor = 1 }
+		define_advisor = {
+			type = natural_scientist
+			skill = 1
+			cost_multiplier = 0.25
+			culture = ROOT
+			religion = ROOT
+		}
+	}
+	option = {
+		name = YE_GRY.16.b
+		ai_chance = { factor = 1 }
+		define_advisor = {
+			type = theologian
+			skill = 1
+			cost_multiplier = 0.25
+			culture = ROOT
+			religion = ROOT
+		}
+	}
+	option = {
+		name = YE_GRY.16.c
+		ai_chance = { factor = 1 }
+		define_advisor = {
+			type = inquisitor
+			skill = 1
+			cost_multiplier = 0.25
+			culture = ROOT
+			religion = ROOT
+		}
+	}
+
+}
+country_event = { #17 外交
+	id = YE_GRY.17
+	title = YE_GRY.17.T
+	desc = YE_GRY.17.D
+	picture = BAD_WITH_MONARCH_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+
+	}
+	option = {
+		name = YE_GRY.17.a
+		ai_chance = { factor = 1 }
+		define_advisor = {
+			type = diplomat
+			skill = 1
+			cost_multiplier = 0.25
+			culture = ROOT
+			religion = ROOT
+		}
+	}
+	option = {
+		name = YE_GRY.17.b
+		ai_chance = { factor = 1 }
+		define_advisor = {
+			type = spymaster
+			skill = 1
+			cost_multiplier = 0.25
+			culture = ROOT
+			religion = ROOT
+		}
+	}
+	option = {
+		name = YE_GRY.17.c
+		ai_chance = { factor = 1 }
+		define_advisor = {
+			type = statesman
+			skill = 1
+			cost_multiplier = 0.25
+			culture = ROOT
+			religion = ROOT
+		}
+	}
+
+}
+country_event = { #18 军事
+	id = YE_GRY.18
+	title = YE_GRY.18.T
+	desc = YE_GRY.18.D
+	picture = BAD_WITH_MONARCH_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+
+	}
+	option = {
+		name = YE_GRY.18.a
+		ai_chance = { factor = 1 }
+		define_advisor = {
+			type = commandant
+			skill = 1
+			cost_multiplier = 0.25
+			culture = ROOT
+			religion = ROOT
+		}
+	}
+	option = {
+		name = YE_GRY.18.b
+		ai_chance = { factor = 1 }
+		define_advisor = {
+			type = fortification_expert
+			skill = 1
+			cost_multiplier = 0.25
+			culture = ROOT
+			religion = ROOT
+		}
+	}
+	option = {
+		name = YE_GRY.18.c
+		ai_chance = { factor = 1 }
+		define_advisor = {
+			type = grand_captain
+			skill = 1
+			cost_multiplier = 0.25
+			culture = ROOT
+			religion = ROOT
+		}
+	}
+
+}
+
+#赤鬼特务队 黑夜之怖
+country_event = { #19 目的地
+	id = YE_GRY.19
+	title = YE_GRY.19.T
+	desc = YE_GRY.19.D
+	picture = BAD_WITH_MONARCH_eventPicture
+
+	is_triggered_only = yes
+
+	immediate = {
+		save_global_event_target_as = oni_special_operations_team_home_country
+	}
+
+	option = { #昭浔
+		name = YE_GRY.19.a
+		trigger = {
+			any_province = {
+				region = zhaoxun_region
+				is_city = yes
+				NOT = { country_or_subject_holds = ROOT }
+				NOT = { 
+					owner = {
+						alliance_with = ROOT
+					} 
+				}
+				NOT = { 
+					owner = {
+						PREV = {
+							truce_with = PREV
+						}
+					} 
+				}
+			}
+		}
+		ai_chance = { factor = 4 }
+
+		hidden_effect = {
+			random_province = {
+				limit = {
+					region = zhaoxun_region
+					is_city = yes
+					NOT = { country_or_subject_holds = ROOT }
+					NOT = { 
+						owner = {
+							alliance_with = ROOT
+						} 
+					}
+					NOT = { 
+						owner = {
+							PREV = {
+								truce_with = PREV
+							}
+						} 
+					}
+				}
+				province_event = { id = YE_GRY.20 days = 15 random = 7 }
+			}
+		}
+
+	}
+	option = { #烟心
+		name = YE_GRY.19.b
+		trigger = {
+			any_province = {
+				region = yanxin_region
+				is_city = yes
+				NOT = { country_or_subject_holds = ROOT }
+				NOT = { 
+					owner = {
+						alliance_with = ROOT
+					} 
+				}
+				NOT = { 
+					owner = {
+						PREV = {
+							truce_with = PREV
+						}
+					} 
+				}
+			}
+		}
+		ai_chance = { factor = 1 }
+		hidden_effect = {
+			random_province = {
+				limit = {
+					region = yanxin_region
+					is_city = yes
+					NOT = { country_or_subject_holds = ROOT }
+					NOT = { 
+						owner = {
+							alliance_with = ROOT
+						} 
+					}
+					NOT = { 
+						owner = {
+							PREV = {
+								truce_with = PREV
+							}
+						} 
+					}
+				}
+				province_event = { id = YE_GRY.20 days = 15 random = 7 }
+			}
+		}
+	}
+	option = { #武浔
+		name = YE_GRY.19.c
+		trigger = {
+			any_province = {
+				region = wuxun_region
+				is_city = yes
+				NOT = { country_or_subject_holds = ROOT }
+				NOT = { 
+					owner = {
+						alliance_with = ROOT
+					} 
+				}
+				NOT = { 
+					owner = {
+						PREV = {
+							truce_with = PREV
+						}
+					} 
+				}
+			}
+		}
+		ai_chance = { factor = 3 }
+		hidden_effect = {
+			random_province = {
+				limit = {
+					region = wuxun_region
+					is_city = yes
+					NOT = { country_or_non_sovereign_subject_holds = ROOT }
+					NOT = { 
+						owner = {
+							alliance_with = ROOT
+						} 
+					}
+					NOT = { 
+						owner = {
+							PREV = {
+								truce_with = PREV
+							}
+						} 
+					}
+				}
+				province_event = { id = YE_GRY.20 days = 15 random = 7 }
+			}
+		}
+	}
+	option = { #侠界
+		name = YE_GRY.19.d
+		trigger = {
+			any_province = {
+				region = xianjie_region
+				is_city = yes
+				NOT = { country_or_non_sovereign_subject_holds = ROOT }
+				NOT = { 
+					owner = {
+						alliance_with = ROOT
+					} 
+				}
+				NOT = { 
+					owner = {
+						PREV = {
+							truce_with = PREV
+						}
+					} 
+				}
+			}
+		}
+
+		ai_chance = { factor = 2 }
+		hidden_effect = {
+			random_province = {
+				limit = {
+					region = xianjie_region
+					is_city = yes
+					NOT = { country_or_non_sovereign_subject_holds = ROOT }
+					NOT = { 
+						owner = {
+							alliance_with = ROOT
+						} 
+					}
+					NOT = { 
+						owner = {
+							PREV = {
+								truce_with = PREV
+							}
+						} 
+					}
+				}
+				province_event = { id = YE_GRY.20 days = 15 random = 7 }
+			}
+		}
+	}
+	option = { #监视内部
+		name = YE_GRY.19.e
+		ai_chance = { 
+			factor = 10 
+			modifier = {
+				factor = 0
+				NOT = { corruption = 5 }
+			}
+		}
+		add_corruption = -0.5
+	}
+}
+province_event = { #20 特务队来袭
+	id = YE_GRY.20
+	title = YE_GRY.20.T
+	desc = YE_GRY.20.D
+	picture = BAD_WITH_MONARCH_eventPicture
+	goto = ROOT
+
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			save_global_event_target_as = oni_special_operations_team_target_prov
+		}
+		
+	}
+	option = {
+		name = YE_GRY.20.a
+		ai_chance = { factor = 1 }
+		owner = { 
+			add_opinion = {
+				who = event_target:oni_special_operations_team_home_country
+				modifier = destructive_action_of_oni_special_operations_team
+			}
+			add_treasury = -50 
+			add_manpower = -1
+		}
+		add_devastation = 5
+		random_list = {
+			10 = {
+				add_base_tax = -1
+			}
+			10 = {
+				add_base_production = -1
+			}
+			10 = {
+				add_base_manpower = -1
+			}
+		}	
+	}
+	after = {
+		hidden_effect = {
+			event_target:oni_special_operations_team_home_country = {
+				country_event = { id = YE_GRY.21 days = 30 random = 15 }
+			}
+		}
+	}
+}
+country_event = { #21 特务队复命
+	id = YE_GRY.21
+	title = YE_GRY.21.T
+	desc = YE_GRY.21.D
+	picture = BAD_WITH_MONARCH_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = YE_GRY.21.a
+		goto = oni_special_operations_team_target_prov
+		add_treasury = 50
+		add_prestige = 10
+		event_target:oni_special_operations_team_target_prov = {
+			owner = {
+				add_spy_network_from = {
+					who = ROOT
+					value = 15
+				}
+			}
+		}
+		hidden_effect = {
+			change_variable = {
+				which = oni_special_operations_team_sortie_num
+				value = 1
+			}
+		}
+	}
+	after = {
+		clear_global_event_target = oni_special_operations_team_home_country
+		clear_global_event_target = oni_special_operations_team_target_prov
+	}
+}
+
+#边方风味
+country_event = { #22 边方具装骑兵
+	id = YE_GRY.22
+	title = YE_GRY.22.T
+	desc = YE_GRY.22.D
+	picture = BAD_WITH_MONARCH_eventPicture
+
+	fire_only_once = yes
+
+	mean_time_to_happen = {
+		months = 12
+	}
+
+	trigger = {
+		OR = {
+			tag = Y09
+			was_tag = Y09
+		}
+		mil_tech = 6
+	}
+
+	option = {
+		name = YE_GRY.22.a
+		add_country_modifier = {
+			name = YE_biangfang_cataphract_buff
+			duration = 36500
+		}
+
+	}
+
+
+}
+country_event = { #23 辉帝-龙癸增
+	id = YE_GRY.23
+	title = YE_GRY.23.T
+	desc = YE_GRY.23.D
+	picture = BAD_WITH_MONARCH_eventPicture
+
+	fire_only_once = yes
+
+	mean_time_to_happen = {
+		months = 240
+		modifier = {
+			factor = 0.5
+			has_heir = no
+		}
+	}
+
+	trigger = {
+		OR = {
+			tag = Y09
+			was_tag = Y09
+		}
+		dynasty = "Long"
+		has_regency = no
+		is_year = 1502
+	}
+
+	option = {
+		name = YE_GRY.23.a
+		define_heir = {
+			male = yes
+			dynasty = ROOT
+			culture = ROOT
+			religion = ROOT
+			name = "Guizeng"
+			claim = 100
+			adm = 6
+			dip = 6
+			mil = 6
+		}
+
+	}
+	option = {
+		name = YE_GRY.23.b
+	}
+
+
+}
+
+#侠门大叛乱
+country_event = { #24 零星骚动
+	id = YE_GRY.24
+	title = YE_GRY.24.T
+	desc = YE_GRY.24.D
+	picture = BAD_WITH_MONARCH_eventPicture
+
+	goto = xia_revolt_loc
+
+	mean_time_to_happen = {
+		months = 96
+		modifier= {
+			factor = 0.75
+			num_of_owned_provinces_with = {
+				value = 16
+				has_province_modifier = rightful_xia_territory_occupied
+			}
+		}
+		modifier= {
+			factor = 0.75
+			num_of_owned_provinces_with = {
+				value = 30
+				has_province_modifier = rightful_xia_territory_occupied
+			}
+		}
+	}
+
+	trigger = {
+		NOT = {
+			has_disaster = great_revolt_of_xiajie
+		}
+		any_owned_province = {
+			has_province_modifier = rightful_xia_territory_occupied
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			random_owned_province = {
+				limit = {
+					has_province_modifier = rightful_xia_territory_occupied
+				}
+				save_event_target_as = xia_revolt_loc
+				spawn_rebels = {
+					type = nationalist_rebels
+					size = 10
+					culture = szitu
+					#friend = Y99
+				} 
+			}
+
+		}
+	}
+	option = {
+		name = YE_GRY.24.a
+	}
+}
+
+country_event = { #25 丙午侠乱
+	id = YE_GRY.25
+	title = YE_GRY.25.T
+	desc = YE_GRY.25.D
+	picture = BAD_WITH_MONARCH_eventPicture
+
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			every_province = {
+				limit = {
+					has_province_modifier = rightful_xia_territory_occupied
+				}
+				add_nationalism = 100
+				add_province_modifier = {
+					name = xiajie_directly_administered_territory_I
+					duration = -1
+				}
+
+				spawn_rebels = {
+					type = nationalist_rebels
+					size = 1
+					culture = szitu
+					#friend = Y99
+				} 
+			}
+			set_country_flag = great_revolt_of_xiajie_start_flag
+		}
+	}
+	option = {
+		name = YE_GRY.25.a
+		custom_tooltip = xiajie_reble_is_coming_tooltip
+		add_stability = -1
+		add_legitimacy = -20
+	}
+}
+
+country_event = { #26 斩木为兵 不win
+	id = YE_GRY.26
+	title = YE_GRY.26.T
+	desc = YE_GRY.26.D
+	picture = BAD_WITH_MONARCH_eventPicture
+	goto = xia_revolt_loc
+
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			random_province = {
+				limit = {
+					has_province_modifier = rightful_xia_territory_occupied
+					country_or_subject_holds = ROOT
+				}
+				save_event_target_as = xia_revolt_loc
+				spawn_rebels = {
+					type = nationalist_rebels
+					size = 10
+					culture = szitu
+					#friend = Y99
+				} 
+			}
+		}
+
+	}
+	option = {
+		name = YE_GRY.26.a
+	}
+}
+country_event = { #27 啸聚山林 只在非控制区win
+	id = YE_GRY.27
+	title = YE_GRY.27.T
+	desc = YE_GRY.27.D
+	picture = BAD_WITH_MONARCH_eventPicture
+	goto = xia_revolt_loc
+
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			random_province = {
+				limit = {
+					has_province_modifier = rightful_xia_territory_occupied
+					country_or_subject_holds = ROOT
+				}
+				save_event_target_as = xia_revolt_loc
+				if= {
+					limit = {
+						OR = {
+							has_influencing_fort = yes
+							any_neighbor_province = {
+								owned_by = ROOT
+								has_influencing_fort = yes
+							}
+						}
+					}
+					spawn_rebels = {
+						type = nationalist_rebels
+						size = 15
+						culture = szitu
+						#friend = Y99
+					} 
+				}
+				else = {
+					spawn_rebels = {
+						type = nationalist_rebels
+						size = 15
+						culture = szitu
+						#friend = Y99
+						win = yes
+					} 
+				}
+			}
+		}
+
+	}
+	option = {
+		name = YE_GRY.27.a
+		custom_tooltip = xiake_rebels_win_on_none_fort_influencing_prov_tooltip
+	}
+}
+country_event = { #28 攻城拔寨 只有2级要塞不win
+	id = YE_GRY.28
+	title = YE_GRY.28.T
+	desc = YE_GRY.28.D
+	picture = BAD_WITH_MONARCH_eventPicture
+	goto = xia_revolt_loc
+
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			random_province = {
+				limit = {
+					has_province_modifier = rightful_xia_territory_occupied
+					country_or_subject_holds = ROOT
+				}
+				save_event_target_as = xia_revolt_loc
+
+				if = {
+					limit = {
+						fort_level = 2
+					}
+					spawn_rebels = {
+						type = nationalist_rebels
+						size = 15
+						culture = szitu
+						#friend = Y99
+					} 
+				}
+				else = {
+					spawn_rebels = {
+						type = nationalist_rebels
+						size = 15
+						culture = szitu
+						#friend = Y99
+						win = yes
+					} 
+				}
+				
+			}
+		}
+	}
+	option = {
+		name = YE_GRY.28.a
+		custom_tooltip = xiake_rebels_win_on_level2_fort_prov_tooltip
+	}
+}
+
+country_event = { #29 清武善政
+	id = YE_GRY.29
+	title = YE_GRY.29.T
+	desc = YE_GRY.29.D
+	picture = BAD_WITH_MONARCH_eventPicture
+
+	is_triggered_only = yes
+	trigger = {
+		NOT = { has_country_flag = xia_revolt_qingwu_experimental_policy_flag }
+		has_disaster = great_revolt_of_xiajie
+		culture_group = yan
+		is_subject = no
+	}
+
+	option = {
+		name = YE_GRY.29.a
+		if = {
+			limit = {
+				has_country_flag = qingwu_experimental_policy_mission_reward_flag
+			}
+			custom_tooltip = qingwu_experimental_policy_mission_reward_tooltip
+			add_adm_power = 100
+			change_government_reform_progress = 50
+		}
+		custom_tooltip = remove_wuxun_xiake_directly_tooltip
+		hidden_effect = {
+			wuxun_region = {
+				limit = {
+					has_province_modifier = rightful_xia_territory_occupied
+					owned_by = ROOT
+				}
+				remove_province_modifier = rightful_xia_territory_occupied
+				add_nationalism = -100
+			}
+			zhaoxun_region = {
+				limit = {
+					has_province_modifier = rightful_xia_territory_occupied
+					owned_by = ROOT
+				}
+				remove_province_modifier = rightful_xia_territory_occupied
+				add_nationalism = -100
+			}
+			set_country_flag = allow_xiake_supression_edit_flag
+			clr_country_flag = qingwu_experimental_policy_mission_reward_flag
+			set_country_flag = xia_revolt_qingwu_experimental_policy_flag
+		}
+		
+	}
+}
+country_event = { #30 改土归流
+	id = YE_GRY.30
+	title = YE_GRY.30.T
+	desc = YE_GRY.30.D
+	picture = BAD_WITH_MONARCH_eventPicture
+	goto = promote_unification_in_xiajie_loc
+	
+	is_triggered_only = yes
+	trigger = {
+		any_province = {
+			has_province_modifier = rightful_xia_territory_occupied
+			country_or_subject_holds = ROOT
+		}
+	}
+	immediate = {
+		hidden_effect = {
+			random_province = {
+				limit = {
+					has_province_modifier = rightful_xia_territory_occupied
+					country_or_subject_holds = ROOT
+				}
+				save_event_target_as = promote_unification_in_xiajie_loc
+			}
+		}
+
+	}
+	option = {
+		name = YE_GRY.30.a
+		ai_chance = {
+			factor = 1
+		}
+		add_adm_power = -50
+
+		
+		if = {
+			limit = {
+				adm = 4
+			}
+			custom_tooltip = extra_reward_for_nationalism_as_mornach_adm_more_than_4_tooltip
+			hidden_effect = {
+				event_target:promote_unification_in_xiajie_loc = {
+					area = {
+						add_nationalism = -15
+					}
+				}			
+			}	
+		}
+		else = {
+			custom_tooltip = no_extra_reward_for_nationalism_as_mornach_adm_less_than_4_tooltip
+			hidden_effect = {
+				event_target:promote_unification_in_xiajie_loc = {
+					area = {
+						add_nationalism = -10
+					}
+				}
+			}
+
+		}
+		
+	}
+	option = {
+		name = YE_GRY.30.b
+		ai_chance = {
+			factor = 0
+		}
+		
+	}
+}
+country_event = { #31 迁移人口
+	id = YE_GRY.31
+	title = YE_GRY.31.T
+	desc = YE_GRY.31.D
+	picture = BAD_WITH_MONARCH_eventPicture
+	goto = promote_unification_in_xiajie_loc
+
+	is_triggered_only = yes
+	trigger = {
+		any_province = {
+			has_province_modifier = rightful_xia_territory_occupied
+			country_or_subject_holds = ROOT
+		}
+	}
+	immediate = {
+		hidden_effect = {
+			random_province = {
+				limit = {
+					has_province_modifier = rightful_xia_territory_occupied
+					country_or_subject_holds = ROOT
+				}
+				save_event_target_as = promote_unification_in_xiajie_loc
+			}
+		}
+
+	}
+	option = {
+		name = YE_GRY.31.a
+		ai_chance = {
+			factor = 1
+		}
+		add_dip_power = -50
+
+		if = {
+			limit = {
+				dip = 4
+			}
+			custom_tooltip = extra_reward_for_nationalism_as_mornach_dip_more_than_4_tooltip
+			hidden_effect = {
+				event_target:promote_unification_in_xiajie_loc = {
+					area = {
+						add_nationalism = -15
+					}
+				}
+			}
+
+		}
+		else = {
+			custom_tooltip = no_extra_reward_for_nationalism_as_mornach_dip_less_than_4_tooltip
+			hidden_effect = {
+				event_target:promote_unification_in_xiajie_loc = {
+					area = {
+						add_nationalism = -10
+					}
+				}
+			}
+
+		}
+	}
+	option = {
+		name = YE_GRY.31.b
+		ai_chance = {
+			factor = 0
+		}
+		
+	}
+}
+country_event = { #32 增设关卡
+	id = YE_GRY.32
+	title = YE_GRY.32.T
+	desc = YE_GRY.32.D
+	picture = BAD_WITH_MONARCH_eventPicture
+	goto = promote_unification_in_xiajie_loc
+
+	is_triggered_only = yes
+	trigger = {
+		any_province = {
+			has_province_modifier = rightful_xia_territory_occupied
+			country_or_subject_holds = ROOT
+		}
+	}
+	immediate = {
+		hidden_effect= {
+			random_province = {
+				limit = {
+					has_province_modifier = rightful_xia_territory_occupied
+					country_or_subject_holds = ROOT
+				}
+				save_event_target_as = promote_unification_in_xiajie_loc
+			}
+		}
+
+	}
+	option = {
+		name = YE_GRY.32.a
+		ai_chance = {
+			factor = 1
+		}
+		add_mil_power = -50
+		
+		if = {
+			limit = {
+				mil = 4
+			}
+			custom_tooltip = extra_reward_for_nationalism_as_mornach_mil_more_than_4_tooltip
+			hidden_effect= {
+				event_target:promote_unification_in_xiajie_loc = {
+					area = {
+						add_nationalism = -15
+					}
+				}
+			}
+
+		}
+		else = {
+			custom_tooltip = no_extra_reward_for_nationalism_as_mornach_mil_less_than_4_tooltip
+			hidden_effect = {
+				event_target:promote_unification_in_xiajie_loc = {
+					area = {
+						add_nationalism = -10
+					}
+				}
+			}
+
+		}
+	}
+	option = {
+		name = YE_GRY.32.b
+		ai_chance = {
+			factor = 0
+		}
+		
+	}
+}
+
+country_event = { #33 弃地论
+	id = YE_GRY.33
+	title = YE_GRY.33.T
+	desc = YE_GRY.33.D
+	picture = BAD_WITH_MONARCH_eventPicture
+
+	is_triggered_only = yes
+
+	immediate = {
+	}
+	option = {
+		name = YE_GRY.33.a
+		ai_chance = {
+			factor = 0
+		}
+		add_country_modifier = {
+			name = discard_xiajie_territory
+			duration = 7300
+		}
+		custom_tooltip = discard_and_cede_relevant_prov_to_onexia_tooltip
+		hidden_effect = {
+			every_province = {
+				limit = {
+					has_province_modifier = rightful_xia_territory_occupied
+					country_or_subject_holds = ROOT
+				}
+				owner = {
+					PREV = {
+						remove_core = PREV
+					}
+				}
+				add_core = Y99
+				cede_province = Y99
+			}
+		}
+
+		Y99 = {
+			country_event = {
+				id = YE_GRY.39
+				days = 1
+			}
+		}
+	}
+	option = {
+		name = YE_GRY.33.b
+		ai_chance = {
+			factor = 1
+		}
+		add_adm_power = -15
+	}
+}
+country_event = { #34 羁縻论
+	id = YE_GRY.34
+	title = YE_GRY.34.T
+	desc = YE_GRY.34.D
+	picture = BAD_WITH_MONARCH_eventPicture
+
+	is_triggered_only = yes
+	trigger = {
+		YA1 = { exists = no }
+	}
+
+	option = {
+		name = YE_GRY.34.a
+		ai_chance = {
+			factor = 0
+		}
+		custom_tooltip = release_a_subject_to_govern_xiajie_tooltip
+		hidden_effect = {
+			YA1 = {
+				save_event_target_as = xiajie_subject
+			}
+
+			every_province = {
+				limit = {
+					has_province_modifier = rightful_xia_territory_occupied
+					country_or_subject_holds = ROOT
+				}
+				owner = {
+					PREV = {
+						remove_core = PREV
+					}
+				}
+				add_core = event_target:xiajie_subject
+				cede_province = event_target:xiajie_subject
+			}
+			event_target:xiajie_subject = {
+				change_culture = szitu
+				change_government = theologian
+				add_government_reform = indep_xiaken
+				change_religion = accretive_path
+
+				change_country_color = { country = ROOT }
+			}
+		}
+
+
+		event_target:xiajie_subject = {
+			override_country_name = XIAJIE_XVANWEISI_OVERRIDE
+		}
+		create_subject = {
+			subject = event_target:xiajie_subject
+			subject_type = YE_autonomous_vassal
+		}
+		
+	}
+	option = {
+		name = YE_GRY.34.b
+		ai_chance = { 
+			factor = 1
+		}
+		add_adm_power = -15
+	}
+}
+country_event = { #35 藩国论
+	id = YE_GRY.35
+	title = YE_GRY.35.T
+	desc = YE_GRY.35.D
+	picture = BAD_WITH_MONARCH_eventPicture
+
+	is_triggered_only = yes
+
+	trigger= {
+		YA1 = { exists = no }
+	}
+	option = {
+		name = YE_GRY.35.a
+		ai_chance = {
+			factor = 0
+		}
+		YA1 = {
+			save_event_target_as = xiajie_subject
+		}
+		custom_tooltip = release_a_subject_to_govern_xiajie_tooltip
+
+		hidden_effect = {
+			every_province = {
+				limit = {
+					has_province_modifier = rightful_xia_territory_occupied
+					country_or_subject_holds = ROOT
+				}
+				owner = {
+					PREV = {
+						remove_core = PREV
+					}
+				}
+				add_core = event_target:xiajie_subject
+				cede_province = event_target:xiajie_subject
+			}
+			event_target:xiajie_subject = {
+				change_culture = szitu
+				change_government = theologian
+				add_government_reform = indep_xiaken
+				change_religion = accretive_path
+
+				change_country_color = { country = ROOT }
+			}
+		}
+
+		event_target:xiajie_subject = {
+			override_country_name = XIAJIE_FANWANG_OVERRIDE
+		}
+		create_subject = {
+			subject = event_target:xiajie_subject
+			subject_type = autonomous_vassal
+		}
+		
+	}
+	option = {
+		name = YE_GRY.35.b
+		ai_chance = { 
+			factor = 1
+		}
+		add_adm_power = -15
+	}
+}
+
+country_event = { #36 编户齐民
+	id = YE_GRY.36
+	title = YE_GRY.36.T
+	desc = YE_GRY.36.D
+	picture = BAD_WITH_MONARCH_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = YE_GRY.36.a
+		ai_chance = {
+			factor = 1
+		}
+
+		add_adm_power = -50
+		custom_tooltip = minus_overall_nationalism_base_on_ruler_adm_tooltip
+		custom_tooltip = remove_occupied_xiake_modifier_if_nationalism_less_than_10_tooltip
+		hidden_effect = {
+			if = {
+				limit = {
+					adm = 6
+				}
+				every_province = {
+					limit = {
+						country_or_subject_holds = ROOT
+						has_province_modifier = rightful_xia_territory_occupied
+					}
+					add_nationalism = -6
+				}
+			}
+			else_if = {
+				limit = {
+					adm = 5
+				}
+				every_province = {
+					limit = {
+						country_or_subject_holds = ROOT
+						has_province_modifier = rightful_xia_territory_occupied
+					}
+					add_nationalism = -5
+				}
+			}
+			else_if = {
+				limit = {
+					adm = 4
+				}
+				every_province = {
+					limit = {
+						country_or_subject_holds = ROOT
+						has_province_modifier = rightful_xia_territory_occupied
+					}
+					add_nationalism = -4
+				}
+			}
+			else_if = {
+				limit = {
+					adm = 3
+				}
+				every_province = {
+					limit = {
+						country_or_subject_holds = ROOT
+						has_province_modifier = rightful_xia_territory_occupied
+					}
+					add_nationalism = -3
+				}
+			}
+			every_province = {
+				limit = {
+					country_or_subject_holds = ROOT
+					has_province_modifier = rightful_xia_territory_occupied
+					NOT = { nationalism = 10 }
+				}
+				remove_province_modifier = rightful_xia_territory_occupied
+			}
+		}
+
+	}
+}
+
+country_event = { #37 丙午侠门复叛
+	id = YE_GRY.37
+	title = YE_GRY.37.T
+	desc = YE_GRY.37.D
+	picture = BAD_WITH_MONARCH_eventPicture
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	trigger = {	
+		had_country_flag = {
+			flag = great_revolt_of_xiajie_start_flag
+			days = 18000 #21900
+		}
+	}
+	immediate = {
+		hidden_effect = {
+			every_province = {
+				if = {
+					limit = {
+						country_or_subject_holds = ROOT
+						has_province_modifier = rightful_xia_territory_occupied				
+					}
+					if= {
+						limit = {
+							OR = {
+								has_influencing_fort = yes
+								any_neighbor_province = {
+									owned_by = ROOT
+									has_influencing_fort = yes
+								}
+							}
+						}
+						spawn_rebels = {
+							type = nationalist_rebels
+							size = 5
+							culture = szitu
+							#friend = Y99
+						} 
+					}
+					else = {
+						spawn_rebels = {
+							type = nationalist_rebels
+							size = 5
+							culture = szitu
+							#friend = Y99
+							win = yes
+						} 
+					}	
+				}
+			}
+		}
+
+	}
+	option = {
+		name = YE_GRY.37.a
+		add_stability = -1
+		add_war_exhaustion = 2
+	}
+}
+
+country_event = { #38 侠道难
+	id = YE_GRY.38
+	title = YE_GRY.38.T
+	desc = YE_GRY.38.D
+	picture = BAD_WITH_MONARCH_eventPicture
+
+	is_triggered_only = yes
+
+	immediate = {
+	}
+	option = {
+		name = YE_GRY.38.a
+		add_stability = 1
+		clr_country_flag = great_revolt_of_xiajie_start_flag 
+		clr_country_flag = great_revolt_of_xiajie_policys_event_group_flag
+		
+		if = {
+			limit = {
+				calc_true_if = {
+					amount = 40
+					all_owned_province = {
+						has_province_modifier = xiajie_directly_administered_territory_I
+					}
+				}
+			}
+			custom_tooltip = xiajie_directly_administered_territory_valuate_40_tooltip
+			hidden_effect = {
+				every_owned_province = {
+				limit = {
+					has_province_modifier = xiajie_directly_administered_territory_I
+				}
+				remove_province_modifier = xiajie_directly_administered_territory_I
+				add_permanent_province_modifier = {
+					name = xiajie_directly_administered_territory_IV
+					duration = -1
+				}
+			}
+			}
+			
+		}
+		else_if = {
+			limit = {
+				calc_true_if = {
+					amount = 20
+					all_owned_province = {
+						has_province_modifier = xiajie_directly_administered_territory_I
+					}
+				}
+			}
+			custom_tooltip = xiajie_directly_administered_territory_valuate_20_tooltip
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						has_province_modifier = xiajie_directly_administered_territory_I
+					}
+					remove_province_modifier = xiajie_directly_administered_territory_I
+					add_permanent_province_modifier = {
+						name = xiajie_directly_administered_territory_III
+						duration = -1
+					}
+				}
+			}
+
+		}
+		else = {
+			custom_tooltip = xiajie_directly_administered_territory_valuate_other_tooltip
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						has_province_modifier = xiajie_directly_administered_territory_I
+					}
+					remove_province_modifier = xiajie_directly_administered_territory_I
+					add_permanent_province_modifier = {
+						name = xiajie_directly_administered_territory_II
+						duration = -1
+					}
+				}
+			}
+
+		}
+	}
+}
+
+country_event = { #39 AI 侠门独立宣言
+	id = YE_GRY.39
+	title = YE_GRY.39.T
+	desc = YE_GRY.39.D
+	picture = BAD_WITH_MONARCH_eventPicture
+
+	is_triggered_only = yes
+	major = yes
+	immediate = {
+	}
+	option = {
+		name = YE_GRY.39.a
+		change_culture = szitu
+		change_government = theologian
+		add_government_reform = one_xia
+		change_religion = accretive_path
+
+		restore_country_name = yes
+		restore_country_color = yes
+
+		add_treasury = 1000
+		add_manpower = 100
+
+		add_adm_power = 200
+		add_dip_power = 200
+		add_mil_power = 200
+
+		every_country = {
+			limit = {
+				any_owned_province = {
+					has_province_modifier = rightful_xia_territory_occupied
+				}
+			}
+			country_event = {
+				id = YE_GRY.40
+				days = 1
+			}
+		}
+		every_country = {
+			limit = {
+				has_government_attribute = is_in_xia
+			}
+			country_event = {
+				id = YE_GRY.41
+				days = 1
+			}
+		}
+	}
+}
+country_event = { #40 AI 侠门叛国投敌
+	id = YE_GRY.40
+	title = YE_GRY.40.T
+	desc = YE_GRY.40.D
+	picture = BAD_WITH_MONARCH_eventPicture
+
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			every_owned_province = {
+				if = {
+					limit = {
+						has_country_modifier = rightful_xia_territory_occupied
+					}
+					if = {
+						limit = {
+							ROOT = {
+								has_country_modifier = discard_xiajie_territory
+							}
+						}
+						remove_core = ROOT
+					}
+					add_core = Y99
+					cede_province = Y99
+				}
+			}
+		}
+
+	}
+	option = {
+		name = YE_GRY.40.a
+		ai_chance = { factor = 1 }
+		custom_tooltip = xiake_relevant_prov_betray_and_unite_with_onexia_tooltip
+	}
+}
+country_event = { #41 AI 侠门合一
+	id = YE_GRY.41
+	title = YE_GRY.41.T
+	desc = YE_GRY.41.D
+	picture = BAD_WITH_MONARCH_eventPicture
+
+	is_triggered_only = yes
+
+	immediate = {
+	}
+	option = {
+		name = YE_GRY.41.a
+		ai_chance = { factor = 1 }
+
+		Y99 = {
+			inherit = ROOT
+		}
+	}
+	option = {
+		name = YE_GRY.41.b
+		ai_chance = { factor = 1 }
+		highlight = yes
+		trigger = {
+			ai = no
+		}
+
+		Y99 = {
+			inherit = ROOT
+		}
+		switch_tag = Y99
+	}
+	option = {
+		name = YE_GRY.41.c
+		ai_chance = { factor = 0 }
+	}
+}
+
+# 东洲属国管理
+country_event = { #42 东洲属国管理
+	id = YE_GRY.42
+	title = YE_GRY.42.T
+	desc = YE_GRY.42.D
+	picture = BAD_WITH_MONARCH_eventPicture
+
+	is_triggered_only = yes
+
+	immediate = {
+	}
+	option = { # 关闭
+		name = YE_GRY.42.a
+		ai_chance = { factor = 1 }
+
+	}
+	option = { #侠界
+		name = YE_GRY.42.b
+		ai_chance = { factor = 1 }
+		trigger = {
+			YA1 = {
+				is_subject_of = ROOT
+			}
+		}
+		inherit = YA1
+	}
+	option = { #山南
+		name = YE_GRY.42.c
+		ai_chance = { factor = 1 }
+		trigger = {
+			OR = {
+				has_country_flag = allow_subject_YA2_flag
+				YA2 = { exists = yes }
+			}
+			
+		}
+		if ={
+			limit = {
+				YA2 = {
+					exists = yes
+				}
+			}
+			if = {
+				limit = {
+					YA2 = {
+						is_subject_of = ROOT
+					}
+				}
+				inherit = YA2
+				every_owned_province = {
+					remove_core = YA2
+				}
+			}
+			else = {
+				custom_tooltip = the_specific_country_of_the_region_is_not_your_subject_tooltip
+			}
+			
+		}
+		else = {
+			every_owned_province = {
+				limit = {
+					region = thidinkai_region
+				}
+				remove_core = ROOT
+				add_core = YA2
+				cede_province = YA2
+			}
+			create_subject = {
+				subject = YA2
+				subject_type = crown_colony
+			}
+		}
+	}
+	option = { #流墟
+		name = YE_GRY.42.d
+		ai_chance = { factor = 1 }
+		if ={
+			limit = {
+				YA4 = {
+					exists = yes
+				}
+			}
+			if = {
+				limit = {
+					YA4 = {
+						is_subject_of = ROOT
+					}
+				}
+				inherit = YA4
+				every_owned_province = {
+					remove_core = YA4
+				}
+			}
+			else = {
+				custom_tooltip = the_specific_country_of_the_region_is_not_your_subject_tooltip
+			}
+			
+		}
+		else = {
+			every_owned_province = {
+				limit = {
+					region = shamakhad_region
+				}
+				remove_core = ROOT
+				add_core = YA4
+				cede_province = YA4
+			}
+			create_subject = {
+				subject = YA4
+				subject_type = crown_colony
+			}
+		}		
+	}
+	option = { #沙垣
+		name = YE_GRY.42.e
+		ai_chance = { factor = 1 }
+		if ={
+			limit = {
+				YA5 = {
+					exists = yes
+				}
+			}
+			if = {
+				limit = {
+					YA5 = {
+						is_subject_of = ROOT
+					}
+				}
+				inherit = YA5
+				every_owned_province = {
+					remove_core = YA5
+				}
+			}
+			else = {
+				custom_tooltip = the_specific_country_of_the_region_is_not_your_subject_tooltip
+			}
+			
+		}
+		else = {
+			every_owned_province = {
+				limit = {
+					region = dhujat_region
+				}
+				remove_core = ROOT
+				add_core = YA5
+				cede_province = YA5
+			}
+			create_subject = {
+				subject = YA5
+				subject_type = crown_colony
+			}
+		}			
+	}
+	option = { #沧莲
+		name = YE_GRY.42.f
+		ai_chance = { factor = 1 }
+		if ={
+			limit = {
+				YA6 = {
+					exists = yes
+				}
+			}
+			if = {
+				limit = {
+					YA6 = {
+						is_subject_of = ROOT
+					}
+				}
+				inherit = YA6
+				every_owned_province = {
+					remove_core = YA6
+				}
+			}
+			else = {
+				custom_tooltip = the_specific_country_of_the_region_is_not_your_subject_tooltip
+			}
+			
+		}
+		else = {
+			every_owned_province = {
+				limit = {
+					region = rakhadesh_region
+				}
+				remove_core = ROOT
+				add_core = YA6
+				cede_province = YA6
+			}
+			create_subject = {
+				subject = YA6
+				subject_type = crown_colony
+			}
+		}				
+	}
+	option = { #海清
+		name = YE_GRY.42.g
+		ai_chance = { factor = 1 }
+		if ={
+			limit = {
+				YB2 = {
+					exists = yes
+				}
+			}
+			if = {
+				limit = {
+					YB2 = {
+						is_subject_of = ROOT
+					}
+				}
+				inherit = YB2
+				every_owned_province = {
+					remove_core = YB2
+				}
+			}
+			else = {
+				custom_tooltip = the_specific_country_of_the_region_is_not_your_subject_tooltip
+			}
+			
+		}
+		else = {
+			every_owned_province = {
+				limit = {
+					region = rahen_coast_region
+				}
+				remove_core = ROOT
+				add_core = YB2
+				cede_province = YB2
+			}
+			create_subject = {
+				subject = YB2
+				subject_type = crown_colony
+			}
+		}			
+	}
+	option = { #茫檀
+		name = YE_GRY.42.h
+		ai_chance = { factor = 1 }
+		if ={
+			limit = {
+				YB3 = {
+					exists = yes
+				}
+			}
+			if = {
+				limit = {
+					YB3 = {
+						is_subject_of = ROOT
+					}
+				}
+				inherit = YB3
+				every_owned_province = {
+					remove_core = YB3
+				}
+			}
+			else = {
+				custom_tooltip = the_specific_country_of_the_region_is_not_your_subject_tooltip
+			}
+			
+		}
+		else = {
+			every_owned_province = {
+				limit = {
+					region = bomdan_region
+				}
+				remove_core = ROOT
+				add_core = YB3
+				cede_province = YB3
+			}
+			create_subject = {
+				subject = YB3
+				subject_type = crown_colony
+			}
+		}			
+	}
+	option = { #双河
+		name = YE_GRY.42.i
+		ai_chance = { factor = 1 }
+		if ={
+			limit = {
+				YB4 = {
+					exists = yes
+				}
+			}
+			if = {
+				limit = {
+					YB4 = {
+						is_subject_of = ROOT
+					}
+				}
+				inherit = YB4
+				every_owned_province = {
+					remove_core = YB4
+				}
+			}
+			else = {
+				custom_tooltip = the_specific_country_of_the_region_is_not_your_subject_tooltip
+			}
+			
+		}
+		else = {
+			every_owned_province = {
+				limit = {
+					region = shuanghe_region
+				}
+				remove_core = ROOT
+				add_core = YB4
+				cede_province = YB4
+			}
+			create_subject = {
+				subject = YB4
+				subject_type = crown_colony
+			}
+		}			
+	}
+	option = { #芦番
+		name = YE_GRY.42.j
+		ai_chance = { factor = 1 }
+		if ={
+			limit = {
+				YB5 = {
+					exists = yes
+				}
+			}
+			if = {
+				limit = {
+					YB5 = {
+						is_subject_of = ROOT
+					}
+				}
+				inherit = YB5
+				every_owned_province = {
+					remove_core = YB5
+				}
+			}
+			else = {
+				custom_tooltip = the_specific_country_of_the_region_is_not_your_subject_tooltip
+			}
+			
+		}
+		else = {
+			every_owned_province = {
+				limit = {
+					region = lupulan_rainforest_region
+				}
+				remove_core = ROOT
+				add_core = YB5
+				cede_province = YB5
+			}
+			create_subject = {
+				subject = YB5
+				subject_type = crown_colony
+			}
+		}	
+	}
+	option = { #御瀛
+		name = YE_GRY.42.k
+		ai_chance = { factor = 1 }
+		custom_tooltip = YE_GRY_42_yvying_tooltip
+		if ={
+			limit = {
+				YB7 = {
+					exists = yes
+				}
+			}
+			if = {
+				limit = {
+					YB7 = {
+						is_subject_of = ROOT
+					}
+				}
+				inherit = YB7
+				every_owned_province = {
+					remove_core = YB7
+				}
+			}
+			else = {
+				custom_tooltip = the_specific_country_of_the_region_is_not_your_subject_tooltip
+			}
+			
+		}
+		else = {
+			every_owned_province = {
+				limit = {
+					OR = {
+						region = yanacotlele_region
+						region = anakuele_region
+						region = cotlkae_region
+						region = anakae_region
+					}
+				}
+				remove_core = ROOT
+				add_core = YB7
+				cede_province = YB7
+			}
+			create_subject = {
+				subject = YB7
+				subject_type = crown_colony
+			}
+		}	
+	}
+	option = { #玄州
+		name = YE_GRY.42.l
+		ai_chance = { factor = 1 }
+		trigger = {
+			OR = {
+				has_country_flag = allow_subject_YB9_flag
+				YB9 = {
+					exists = yes
+				}
+			}
+		}
+		if ={
+			limit = {
+				YB9 = {
+					exists = yes
+				}
+			}
+			if = {
+				limit = {
+					YB9 = {
+						is_subject_of = ROOT
+					}
+				}
+				inherit = YB9
+				every_owned_province = {
+					remove_core = YB9
+				}
+			}
+			else = {
+				custom_tooltip = the_specific_country_of_the_region_is_not_your_subject_tooltip
+			}
+			
+		}
+		else = {
+			every_owned_province = {
+				limit = {
+					OR = {
+						region = shuvuushudi_region
+						region = gowon_region
+					}
+
+				}
+				remove_core = ROOT
+				add_core = YB9
+				cede_province = YB9
+			}
+			create_subject = {
+				subject = YB9
+				subject_type = crown_colony
+			}
+		}			
+	}
+
+	after = {
+		clr_country_flag = halessi_subject_management_event_flag
+	}
+}
+
+
+# country_event = { #43
+# 	id = YE_GRY.43
+# 	title = YE_GRY.43.T
+# 	desc = YE_GRY.43.D
+# 	picture = BAD_WITH_MONARCH_eventPicture
+
+# 	is_triggered_only = yes
+
+# 	immediate = {
+# 	}
+# 	option = {
+# 		name = YE_GRY.43.a
+# 	}
+# }
+# country_event = { #44 
+# 	id = YE_GRY.44
+# 	title = YE_GRY.44.T
+# 	desc = YE_GRY.44.D
+# 	picture = BAD_WITH_MONARCH_eventPicture
+
+# 	is_triggered_only = yes
+
+# 	immediate = {
+# 	}
+# 	option = {
+# 		name = YE_GRY.44.a
+# 	}
+# }
+# country_event = { #45 
+# 	id = YE_GRY.45
+# 	title = YE_GRY.45.T
+# 	desc = YE_GRY.45.D
+# 	picture = BAD_WITH_MONARCH_eventPicture
+
+# 	is_triggered_only = yes
+
+# 	immediate = {
+# 	}
+# 	option = {
+# 		name = YE_GRY.45.a
+# 	}
+# }
+# country_event = { #46
+# 	id = YE_GRY.46
+# 	title = YE_GRY.46.T
+# 	desc = YE_GRY.46.D
+# 	picture = BAD_WITH_MONARCH_eventPicture
+
+# 	is_triggered_only = yes
+
+# 	immediate = {
+# 	}
+# 	option = {
+# 		name = YE_GRY.46.a
+# 	}
+# }
+# country_event = { #47 
+# 	id = YE_GRY.47
+# 	title = YE_GRY.47.T
+# 	desc = YE_GRY.47.D
+# 	picture = BAD_WITH_MONARCH_eventPicture
+
+# 	is_triggered_only = yes
+
+# 	immediate = {
+# 	}
+# 	option = {
+# 		name = YE_GRY.47.a
+# 	}
+# }
+# country_event = { #48
+# 	id = YE_GRY.48
+# 	title = YE_GRY.48.T
+# 	desc = YE_GRY.48.D
+# 	picture = BAD_WITH_MONARCH_eventPicture
+
+# 	is_triggered_only = yes
+
+# 	immediate = {
+# 	}
+# 	option = {
+# 		name = YE_GRY.48.a
+# 	}
+# }
+# country_event = { #49
+# 	id = YE_GRY.49
+# 	title = YE_GRY.49.T
+# 	desc = YE_GRY.49.D
+# 	picture = BAD_WITH_MONARCH_eventPicture
+
+# 	is_triggered_only = yes
+
+# 	immediate = {
+# 	}
+# 	option = {
+# 		name = YE_GRY.49.a
+# 	}
+# }
+
+# country_event = { #50 
+# 	id = YE_GRY.50
+# 	title = YE_GRY.50.T
+# 	desc = YE_GRY.50.D
+# 	picture = BAD_WITH_MONARCH_eventPicture
+
+# 	is_triggered_only = yes
+
+# 	immediate = {
+# 	}
+# 	option = {
+# 		name = YE_GRY.50.a
+# 	}
+# }
+# country_event = { #51  
+# 	id = YE_GRY.51
+# 	title = YE_GRY.51.T
+# 	desc = YE_GRY.51.D
+# 	picture = BAD_WITH_MONARCH_eventPicture
+
+# 	is_triggered_only = yes
+
+# 	immediate = {
+# 	}
+# 	option = {
+# 		name = YE_GRY.51.a
+# 	}
+# }
+# country_event = { #52 
+# 	id = YE_GRY.52
+# 	title = YE_GRY.52.T
+# 	desc = YE_GRY.52.D
+# 	picture = BAD_WITH_MONARCH_eventPicture
+
+# 	is_triggered_only = yes
+
+# 	immediate = {
+# 	}
+# 	option = {
+# 		name = YE_GRY.52.a
+# 	}
+# }
+# country_event = { #53
+# 	id = YE_GRY.53
+# 	title = YE_GRY.53.T
+# 	desc = YE_GRY.53.D
+# 	picture = BAD_WITH_MONARCH_eventPicture
+
+# 	is_triggered_only = yes
+
+# 	immediate = {
+# 	}
+# 	option = {
+# 		name = YE_GRY.53.a
+# 	}
+# }
+# country_event = { #54 
+# 	id = YE_GRY.54
+# 	title = YE_GRY.54.T
+# 	desc = YE_GRY.54.D
+# 	picture = BAD_WITH_MONARCH_eventPicture
+
+# 	is_triggered_only = yes
+
+# 	immediate = {
+# 	}
+# 	option = {
+# 		name = YE_GRY.54.a
+# 	}
+# }
+# country_event = { #55 
+# 	id = YE_GRY.55
+# 	title = YE_GRY.55.T
+# 	desc = YE_GRY.55.D
+# 	picture = BAD_WITH_MONARCH_eventPicture
+
+# 	is_triggered_only = yes
+
+# 	immediate = {
+# 	}
+# 	option = {
+# 		name = YE_GRY.55.a
+# 	}
+# }
+# country_event = { #56
+# 	id = YE_GRY.56
+# 	title = YE_GRY.56.T
+# 	desc = YE_GRY.56.D
+# 	picture = BAD_WITH_MONARCH_eventPicture
+
+# 	is_triggered_only = yes
+
+# 	immediate = {
+# 	}
+# 	option = {
+# 		name = YE_GRY.56.a
+# 	}
+# }
+# country_event = { #57 
+# 	id = YE_GRY.57
+# 	title = YE_GRY.57.T
+# 	desc = YE_GRY.57.D
+# 	picture = BAD_WITH_MONARCH_eventPicture
+
+# 	is_triggered_only = yes
+
+# 	immediate = {
+# 	}
+# 	option = {
+# 		name = YE_GRY.57.a
+# 	}
+# }
+# country_event = { #58
+# 	id = YE_GRY.58
+# 	title = YE_GRY.58.T
+# 	desc = YE_GRY.58.D
+# 	picture = BAD_WITH_MONARCH_eventPicture
+
+# 	is_triggered_only = yes
+
+# 	immediate = {
+# 	}
+# 	option = {
+# 		name = YE_GRY.58.a
+# 	}
+# }
+# country_event = { #59
+# 	id = YE_GRY.59
+# 	title = YE_GRY.59.T
+# 	desc = YE_GRY.59.D
+# 	picture = BAD_WITH_MONARCH_eventPicture
+
+# 	is_triggered_only = yes
+
+# 	immediate = {
+# 	}
+# 	option = {
+# 		name = YE_GRY.59.a
+# 	}
+# }
+
+# country_event = { #60 
+# 	id = YE_GRY.60
+# 	title = YE_GRY.60.T
+# 	desc = YE_GRY.60.D
+# 	picture = BAD_WITH_MONARCH_eventPicture
+
+# 	is_triggered_only = yes
+
+# 	immediate = {
+# 	}
+# 	option = {
+# 		name = YE_GRY.60.a
+# 	}
+# }
+# country_event = { #61  
+# 	id = YE_GRY.61
+# 	title = YE_GRY.61.T
+# 	desc = YE_GRY.61.D
+# 	picture = BAD_WITH_MONARCH_eventPicture
+
+# 	is_triggered_only = yes
+
+# 	immediate = {
+# 	}
+# 	option = {
+# 		name = YE_GRY.61.a
+# 	}
+# }
+# country_event = { #62 
+# 	id = YE_GRY.62
+# 	title = YE_GRY.62.T
+# 	desc = YE_GRY.62.D
+# 	picture = BAD_WITH_MONARCH_eventPicture
+
+# 	is_triggered_only = yes
+
+# 	immediate = {
+# 	}
+# 	option = {
+# 		name = YE_GRY.62.a
+# 	}
+# }
+# country_event = { #63
+# 	id = YE_GRY.63
+# 	title = YE_GRY.63.T
+# 	desc = YE_GRY.63.D
+# 	picture = BAD_WITH_MONARCH_eventPicture
+
+# 	is_triggered_only = yes
+
+# 	immediate = {
+# 	}
+# 	option = {
+# 		name = YE_GRY.63.a
+# 	}
+# }
+# country_event = { #64 
+# 	id = YE_GRY.64
+# 	title = YE_GRY.64.T
+# 	desc = YE_GRY.64.D
+# 	picture = BAD_WITH_MONARCH_eventPicture
+
+# 	is_triggered_only = yes
+
+# 	immediate = {
+# 	}
+# 	option = {
+# 		name = YE_GRY.64.a
+# 	}
+# }
+# country_event = { #65 
+# 	id = YE_GRY.65
+# 	title = YE_GRY.65.T
+# 	desc = YE_GRY.65.D
+# 	picture = BAD_WITH_MONARCH_eventPicture
+
+# 	is_triggered_only = yes
+
+# 	immediate = {
+# 	}
+# 	option = {
+# 		name = YE_GRY.65.a
+# 	}
+# }
+# country_event = { #66
+# 	id = YE_GRY.66
+# 	title = YE_GRY.66.T
+# 	desc = YE_GRY.66.D
+# 	picture = BAD_WITH_MONARCH_eventPicture
+
+# 	is_triggered_only = yes
+
+# 	immediate = {
+# 	}
+# 	option = {
+# 		name = YE_GRY.66.a
+# 	}
+# }
+# country_event = { #67 
+# 	id = YE_GRY.67
+# 	title = YE_GRY.67.T
+# 	desc = YE_GRY.67.D
+# 	picture = BAD_WITH_MONARCH_eventPicture
+
+# 	is_triggered_only = yes
+
+# 	immediate = {
+# 	}
+# 	option = {
+# 		name = YE_GRY.67.a
+# 	}
+# }
+# country_event = { #68
+# 	id = YE_GRY.68
+# 	title = YE_GRY.68.T
+# 	desc = YE_GRY.68.D
+# 	picture = BAD_WITH_MONARCH_eventPicture
+
+# 	is_triggered_only = yes
+
+# 	immediate = {
+# 	}
+# 	option = {
+# 		name = YE_GRY.68.a
+# 	}
+# }
+# country_event = { #69
+# 	id = YE_GRY.69
+# 	title = YE_GRY.69.T
+# 	desc = YE_GRY.69.D
+# 	picture = BAD_WITH_MONARCH_eventPicture
+
+# 	is_triggered_only = yes
+
+# 	immediate = {
+# 	}
+# 	option = {
+# 		name = YE_GRY.69.a
+# 	}
+# }
+
+

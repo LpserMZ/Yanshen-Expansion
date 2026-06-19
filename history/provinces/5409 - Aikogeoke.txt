@@ -1,14 +1,13 @@
 culture = horned_ogre
 religion = devouring_path
-
-hre = no
-
 base_tax = 1
 base_production = 1
 base_manpower = 1
-
-trade_goods = unknown
-
+trade_goods = wool
 native_size = 45
 native_ferocity = 9
 native_hostileness = 5
+add_core = Y01
+owner = Y01
+controller = Y01
+is_city = no

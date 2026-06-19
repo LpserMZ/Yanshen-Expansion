@@ -1,7 +1,59 @@
 ﻿l_english:
- gu_path:0 "Ê†S"
- gu_path_religion_desc:0 "Ê†S/fÊ†S"
- jue_path:0 "³QS"
- jue_path_religion_desc:0 "³QS/f³QS"
- huan_path:0 "¯sS"
- huan_path_religion_desc:0 "¯sS/f¯sS"
+ xia_school:0 " Oè•"
+ xia_school_desc:0 ""
+ wu_school:0 "fkè•"
+ wu_school_desc:0 ""
+ kanli_school:0 "NW»y«R"
+ kanli_school_desc:0 ""
+ lingjue_school:0 "up¦sb–"
+ lingjue_school_desc:0 ""
+ qingliu_school:0 "nAm«R"
+ qingliu_school_desc:0 ""
+ mushi_school:0 "(gówO"
+ mushi_school_desc:0 ""
+ mozhen_school:0 "T›5–fR"
+ mozhen_school_desc:0 ""
+ guifu_school:0 "<›&rfR"
+ guifu_school_desc:0 ""
+
+ YE_religion_halessi.1.T:0 "	ébfR>m"
+ YE_religion_halessi.1.D:0 "upl—RYeÄu„vNTfR>mN¾|„v†˜ßWTNøvTÿSV	ébïSåNžXÛøv”^†˜ßW„vÕl/gÏuŒš0"
+ YE_religion_halessi.1.a:0 "AIN(u	y˜¾‹nfR>m"
+ YE_religion_halessi.1.b:0 " Oè•µOÍ‘YŸR"
+ YE_religion_halessi.1.c:0 "fkè•µOÍ‘…QŸR"
+ YE_religion_halessi.1.d:0 "NW»y«R»”x9Noƒ"
+ YE_religion_halessi.1.e:0 "up¦sb–»”xÕlhV"
+ YE_religion_halessi.1.f:0 "nAm«RN¾|jS—r"
+ YE_religion_halessi.1.g:0 "(gówON¾|Î˜4l"
+ YE_religion_halessi.1.h:0 "T›5–fRxvz5–Õl"
+ YE_religion_halessi.1.i:0 "<›&rfRxvz&r’T"
+
+ fervor_wuxue:0 "fkfRÿ…QŸRNYŸR"
+ fervor_wuxue_short:0 "fkfR"
+ fervor_danqi:0 "9NhVÿÕlhVN9Noƒ"
+ fervor_danqi_short:0 "9NhV"
+ fervor_shushu:0 "/gpeÿjS—rNÎ˜4l"
+ fervor_shushu_short:0 "/gpe"
+ fervor_fuzhuan:0 "&rÆrÿ5–ÕlN&r’T"
+ fervor_fuzhuan_short:0 "&rÆr"
+
+ yan_path:0 "MˆS"
+ yan_path_religion_desc:0 "MˆSwnŽNßpÞTlVSÿ‹†6q›bV†N‹kÍV„vêNVÿFOÍN(WåN)nŒT„v¹eV8TÖSNirKNl0"
+
+ yan_path_rebels_demand:0 "O$COUNTRYNAME$9e—R"
+ yan_path_rebels_demand_desc:0 "—RYeÛS›QHN$RELIGION$áOðNwb0ÖNìN‰BlbìNb²‹vQóØšàeN„v0WMOÿbwóSjPbkbìNOÖNìNˆvO„vªR›Rÿ©‹ÖNìN(WŒTs^-NTle0"
+ yan_path_rebels_title:0 "—RYe"
+ yan_path_rebels_name:0 "$RELIGION$Ârípw"
+ yan_path_rebels_desc:0 "—RYeÂrípwŽVŽV(W1uNTáOðN„výV¶Rµc6R„vwýNtQw0ÖNìN‰.OlbÖNìN„v—RYeÿ‰ûQNgNRNáO„vºN0"
+ yan_path_rebels_army:0 "$RELIGION$›Q"
+
+ xia_school_modifier:0 " Oè•fR>m"
+ wu_school_modifier:0 "fkè•fR>m"
+ kanli_school_modifier:0 "NW»yfR>m"
+ lingjue_school_modifier:0 "up¦sfR>m"
+ qingliu_school_modifier:0 "nAmfR>m"
+ mushi_school_modifier:0 "(gówfR>m"
+ mozhen_school_modifier:0 "T›5–fR>m"
+ guifu_school_modifier:0 "<›&rfR>m"
+
+ yan_path_center_of_reformation:0 "9ei—-NÃV"

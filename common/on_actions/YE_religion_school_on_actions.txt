@@ -1,0 +1,42 @@
+on_startup = {
+	if = {
+		limit = {
+			religion_group = halessi
+			NOT = { religion = mystic_accord }
+			NOT = { religion = neokttareum }
+			has_religious_school = no
+		}
+		country_event = { id = YE_religion_halessi.1 }
+	}
+}
+on_religion_change = {
+	YE_clear_religious_scholar_modifiers_effect = yes
+	if = {
+		limit = {
+			religion_group = halessi
+			NOT = { religion = mystic_accord }
+			NOT = { religion = neokttareum }
+		}
+		country_event = { id = YE_religion_halessi.1 }
+	}
+}
+on_country_released = {
+	if = {
+		limit = {
+			religion_group = halessi
+			NOT = { religion = mystic_accord }
+			NOT = { religion = neokttareum }
+		}
+		country_event = { id = YE_religion_halessi.1 }
+	}
+}
+on_new_monarch = {
+	if = {
+		limit = {
+			religion_group = halessi
+			NOT = { religion = mystic_accord }
+			NOT = { religion = neokttareum }
+		}
+		country_event = { id = YE_religion_halessi.1 }
+	}
+}

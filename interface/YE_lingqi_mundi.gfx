@@ -143,14 +143,6 @@ spriteTypes = {
 		texturefile = "gfx/interface/AH_custom_GUI/lingqi_mundi/sorcery_subwindow/sorceryclass_religion/icon_sorceryclass_religion_devouring.dds"
 	}
 	spriteType = {
-		name = "GFX_icon_sorceryclass_religion_gu"
-		texturefile = "gfx/interface/AH_custom_GUI/lingqi_mundi/sorcery_subwindow/sorceryclass_religion/icon_sorceryclass_religion_gu.dds"
-	}
-	spriteType = {
-		name = "GFX_icon_sorceryclass_religion_jue"
-		texturefile = "gfx/interface/AH_custom_GUI/lingqi_mundi/sorcery_subwindow/sorceryclass_religion/icon_sorceryclass_religion_jue.dds"
-	}
-	spriteType = {
 		name = "GFX_icon_sorceryclass_religion_huan"
 		texturefile = "gfx/interface/AH_custom_GUI/lingqi_mundi/sorcery_subwindow/sorceryclass_religion/icon_sorceryclass_religion_huan.dds"
 	}
@@ -163,10 +155,167 @@ spriteTypes = {
 		texturefile = "gfx/interface/AH_custom_GUI/lingqi_mundi/sorcery_subwindow/sorceryclass_secret/icon_sorceryclass_secret.dds"
 	}
 
-	spriteType = {
+	spriteType = { #白板按钮图标
 		name = "GFX_button_LQdspl_x_sorceryclass_y_Sequence_z"
 		texturefile = "gfx/interface/AH_custom_GUI/lingqi_mundi/sorcery_subwindow/button_LQdspl_x_sorceryclass_y_Sequence_z.dds"
 	}
+	spriteType = { 
+		name = "GFX_button_LQdspl_1_sorceryclass_commmon_Sequence_1"
+		texturefile = "gfx/interface/AH_custom_GUI/lingqi_mundi/sorcery_subwindow/sorceryclass_common/dspl1/button_LQdspl_1_sorceryclass_common_Sequence_1.dds"
+	}
+	spriteType = {
+		name = "GFX_button_LQdspl_1_sorceryclass_commmon_Sequence_2"
+		texturefile = "gfx/interface/AH_custom_GUI/lingqi_mundi/sorcery_subwindow/sorceryclass_common/dspl1/button_LQdspl_1_sorceryclass_common_Sequence_2.dds"
+	}
+	spriteType = {
+		name = "GFX_button_LQdspl_1_sorceryclass_commmon_Sequence_3"
+		texturefile = "gfx/interface/AH_custom_GUI/lingqi_mundi/sorcery_subwindow/sorceryclass_common/dspl1/button_LQdspl_1_sorceryclass_common_Sequence_3.dds"
+	}
+	spriteType = {
+		name = "GFX_button_LQdspl_1_sorceryclass_commmon_Sequence_4"
+		texturefile = "gfx/interface/AH_custom_GUI/lingqi_mundi/sorcery_subwindow/sorceryclass_common/dspl1/button_LQdspl_1_sorceryclass_common_Sequence_4.dds"
+	}
+	spriteType = {
+		name = "GFX_button_LQdspl_1_sorceryclass_commmon_Sequence_5"
+		texturefile = "gfx/interface/AH_custom_GUI/lingqi_mundi/sorcery_subwindow/sorceryclass_common/dspl1/button_LQdspl_1_sorceryclass_common_Sequence_5.dds"
+	}
+	spriteType = {
+		name = "GFX_button_LQdspl_2_sorceryclass_commmon_Sequence_1"
+		texturefile = "gfx/interface/AH_custom_GUI/lingqi_mundi/sorcery_subwindow/sorceryclass_common/dspl2/button_LQdspl_2_sorceryclass_common_Sequence_1.dds"
+	}
+	spriteType = {
+		name = "GFX_button_LQdspl_2_sorceryclass_commmon_Sequence_2"
+		texturefile = "gfx/interface/AH_custom_GUI/lingqi_mundi/sorcery_subwindow/sorceryclass_common/dspl2/button_LQdspl_2_sorceryclass_common_Sequence_2.dds"
+	}
+	spriteType = {
+		name = "GFX_button_LQdspl_2_sorceryclass_commmon_Sequence_3"
+		texturefile = "gfx/interface/AH_custom_GUI/lingqi_mundi/sorcery_subwindow/sorceryclass_common/dspl2/button_LQdspl_2_sorceryclass_common_Sequence_3.dds"
+	}
+	spriteType = {
+		name = "GFX_button_LQdspl_2_sorceryclass_commmon_Sequence_4"
+		texturefile = "gfx/interface/AH_custom_GUI/lingqi_mundi/sorcery_subwindow/sorceryclass_common/dspl2/button_LQdspl_2_sorceryclass_common_Sequence_4.dds"
+	}
+	spriteType = {
+		name = "GFX_button_LQdspl_2_sorceryclass_commmon_Sequence_5"
+		texturefile = "gfx/interface/AH_custom_GUI/lingqi_mundi/sorcery_subwindow/sorceryclass_common/dspl2/button_LQdspl_2_sorceryclass_common_Sequence_5.dds"
+	}
+	spriteType = {
+		name = "GFX_button_LQdspl_3_sorceryclass_commmon_Sequence_1"
+		texturefile = "gfx/interface/AH_custom_GUI/lingqi_mundi/sorcery_subwindow/sorceryclass_common/dspl3/button_LQdspl_3_sorceryclass_common_Sequence_1.dds"
+	}
+	spriteType = {
+		name = "GFX_button_LQdspl_3_sorceryclass_commmon_Sequence_2"
+		texturefile = "gfx/interface/AH_custom_GUI/lingqi_mundi/sorcery_subwindow/sorceryclass_common/dspl3/button_LQdspl_3_sorceryclass_common_Sequence_2.dds"
+	}
+	spriteType = {
+		name = "GFX_button_LQdspl_3_sorceryclass_commmon_Sequence_3"
+		texturefile = "gfx/interface/AH_custom_GUI/lingqi_mundi/sorcery_subwindow/sorceryclass_common/dspl3/button_LQdspl_3_sorceryclass_common_Sequence_3.dds"
+	}
+	spriteType = {
+		name = "GFX_button_LQdspl_3_sorceryclass_commmon_Sequence_4"
+		texturefile = "gfx/interface/AH_custom_GUI/lingqi_mundi/sorcery_subwindow/sorceryclass_common/dspl3/button_LQdspl_3_sorceryclass_common_Sequence_4.dds"
+	}
+	spriteType = {
+		name = "GFX_button_LQdspl_3_sorceryclass_commmon_Sequence_5"
+		texturefile = "gfx/interface/AH_custom_GUI/lingqi_mundi/sorcery_subwindow/sorceryclass_common/dspl3/button_LQdspl_3_sorceryclass_common_Sequence_5.dds"
+	}
+	spriteType = {
+		name = "GFX_button_LQdspl_4_sorceryclass_commmon_Sequence_1"
+		texturefile = "gfx/interface/AH_custom_GUI/lingqi_mundi/sorcery_subwindow/sorceryclass_common/dspl4/button_LQdspl_4_sorceryclass_common_Sequence_1.dds"
+	}
+	spriteType = {
+		name = "GFX_button_LQdspl_4_sorceryclass_commmon_Sequence_2"
+		texturefile = "gfx/interface/AH_custom_GUI/lingqi_mundi/sorcery_subwindow/sorceryclass_common/dspl4/button_LQdspl_4_sorceryclass_common_Sequence_2.dds"
+	}
+	spriteType = {
+		name = "GFX_button_LQdspl_4_sorceryclass_commmon_Sequence_3"
+		texturefile = "gfx/interface/AH_custom_GUI/lingqi_mundi/sorcery_subwindow/sorceryclass_common/dspl4/button_LQdspl_4_sorceryclass_common_Sequence_3.dds"
+	}
+	spriteType = {
+		name = "GFX_button_LQdspl_4_sorceryclass_commmon_Sequence_4"
+		texturefile = "gfx/interface/AH_custom_GUI/lingqi_mundi/sorcery_subwindow/sorceryclass_common/dspl4/button_LQdspl_4_sorceryclass_common_Sequence_4.dds"
+	}
+	spriteType = {
+		name = "GFX_button_LQdspl_4_sorceryclass_commmon_Sequence_5"
+		texturefile = "gfx/interface/AH_custom_GUI/lingqi_mundi/sorcery_subwindow/sorceryclass_common/dspl4/button_LQdspl_4_sorceryclass_common_Sequence_5.dds"
+	}
+	spriteType = {
+		name = "GFX_button_LQdspl_5_sorceryclass_commmon_Sequence_1"
+		texturefile = "gfx/interface/AH_custom_GUI/lingqi_mundi/sorcery_subwindow/sorceryclass_common/dspl5/button_LQdspl_5_sorceryclass_common_Sequence_1.dds"
+	}
+	spriteType = {
+		name = "GFX_button_LQdspl_5_sorceryclass_commmon_Sequence_2"
+		texturefile = "gfx/interface/AH_custom_GUI/lingqi_mundi/sorcery_subwindow/sorceryclass_common/dspl5/button_LQdspl_5_sorceryclass_common_Sequence_2.dds"
+	}
+	spriteType = {
+		name = "GFX_button_LQdspl_5_sorceryclass_commmon_Sequence_3"
+		texturefile = "gfx/interface/AH_custom_GUI/lingqi_mundi/sorcery_subwindow/sorceryclass_common/dspl5/button_LQdspl_5_sorceryclass_common_Sequence_3.dds"
+	}
+	spriteType = {
+		name = "GFX_button_LQdspl_5_sorceryclass_commmon_Sequence_4"
+		texturefile = "gfx/interface/AH_custom_GUI/lingqi_mundi/sorcery_subwindow/sorceryclass_common/dspl5/button_LQdspl_5_sorceryclass_common_Sequence_4.dds"
+	}
+	spriteType = {
+		name = "GFX_button_LQdspl_5_sorceryclass_commmon_Sequence_5"
+		texturefile = "gfx/interface/AH_custom_GUI/lingqi_mundi/sorcery_subwindow/sorceryclass_common/dspl5/button_LQdspl_5_sorceryclass_common_Sequence_5.dds"
+	}
+	spriteType = {
+		name = "GFX_button_LQdspl_6_sorceryclass_commmon_Sequence_1"
+		texturefile = "gfx/interface/AH_custom_GUI/lingqi_mundi/sorcery_subwindow/sorceryclass_common/dspl6/button_LQdspl_6_sorceryclass_common_Sequence_1.dds"
+	}
+	spriteType = {
+		name = "GFX_button_LQdspl_6_sorceryclass_commmon_Sequence_2"
+		texturefile = "gfx/interface/AH_custom_GUI/lingqi_mundi/sorcery_subwindow/sorceryclass_common/dspl6/button_LQdspl_6_sorceryclass_common_Sequence_2.dds"
+	}
+	spriteType = {
+		name = "GFX_button_LQdspl_6_sorceryclass_commmon_Sequence_3"
+		texturefile = "gfx/interface/AH_custom_GUI/lingqi_mundi/sorcery_subwindow/sorceryclass_common/dspl6/button_LQdspl_6_sorceryclass_common_Sequence_3.dds"
+	}
+	spriteType = {
+		name = "GFX_button_LQdspl_7_sorceryclass_commmon_Sequence_1"
+		texturefile = "gfx/interface/AH_custom_GUI/lingqi_mundi/sorcery_subwindow/sorceryclass_common/dspl7/button_LQdspl_7_sorceryclass_common_Sequence_1.dds"
+	}
+	spriteType = {
+		name = "GFX_button_LQdspl_7_sorceryclass_commmon_Sequence_2"
+		texturefile = "gfx/interface/AH_custom_GUI/lingqi_mundi/sorcery_subwindow/sorceryclass_common/dspl7/button_LQdspl_7_sorceryclass_common_Sequence_2.dds"
+	}
+	spriteType = {
+		name = "GFX_button_LQdspl_7_sorceryclass_commmon_Sequence_3"
+		texturefile = "gfx/interface/AH_custom_GUI/lingqi_mundi/sorcery_subwindow/sorceryclass_common/dspl7/button_LQdspl_7_sorceryclass_common_Sequence_3.dds"
+	}
+	spriteType = {
+		name = "GFX_button_LQdspl_7_sorceryclass_commmon_Sequence_4"
+		texturefile = "gfx/interface/AH_custom_GUI/lingqi_mundi/sorcery_subwindow/sorceryclass_common/dspl7/button_LQdspl_7_sorceryclass_common_Sequence_4.dds"
+	}
+	spriteType = {
+		name = "GFX_button_LQdspl_7_sorceryclass_commmon_Sequence_5"
+		texturefile = "gfx/interface/AH_custom_GUI/lingqi_mundi/sorcery_subwindow/sorceryclass_common/dspl7/button_LQdspl_7_sorceryclass_common_Sequence_5.dds"
+	}
+	spriteType = {
+		name = "GFX_button_LQdspl_7_sorceryclass_commmon_Sequence_6"
+		texturefile = "gfx/interface/AH_custom_GUI/lingqi_mundi/sorcery_subwindow/sorceryclass_common/dspl7/button_LQdspl_7_sorceryclass_common_Sequence_6.dds"
+	}
+	spriteType = {
+		name = "GFX_button_LQdspl_8_sorceryclass_commmon_Sequence_1"
+		texturefile = "gfx/interface/AH_custom_GUI/lingqi_mundi/sorcery_subwindow/sorceryclass_common/dspl8/button_LQdspl_8_sorceryclass_common_Sequence_1.dds"
+	}
+	spriteType = {
+		name = "GFX_button_LQdspl_8_sorceryclass_commmon_Sequence_2"
+		texturefile = "gfx/interface/AH_custom_GUI/lingqi_mundi/sorcery_subwindow/sorceryclass_common/dspl8/button_LQdspl_8_sorceryclass_common_Sequence_2.dds"
+	}
+	spriteType = {
+		name = "GFX_button_LQdspl_8_sorceryclass_commmon_Sequence_3"
+		texturefile = "gfx/interface/AH_custom_GUI/lingqi_mundi/sorcery_subwindow/sorceryclass_common/dspl8/button_LQdspl_8_sorceryclass_common_Sequence_3.dds"
+	}
+	spriteType = {
+		name = "GFX_button_LQdspl_8_sorceryclass_commmon_Sequence_4"
+		texturefile = "gfx/interface/AH_custom_GUI/lingqi_mundi/sorcery_subwindow/sorceryclass_common/dspl8/button_LQdspl_8_sorceryclass_common_Sequence_4.dds"
+	}
+	spriteType = {
+		name = "GFX_button_LQdspl_8_sorceryclass_commmon_Sequence_5"
+		texturefile = "gfx/interface/AH_custom_GUI/lingqi_mundi/sorcery_subwindow/sorceryclass_common/dspl8/button_LQdspl_8_sorceryclass_common_Sequence_5.dds"
+	}
+
 	# spriteType = {
 	# 	name = ""
 	# 	texturefile = ""

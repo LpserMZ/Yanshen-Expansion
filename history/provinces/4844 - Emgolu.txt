@@ -1,10 +1,11 @@
-owner = Z61
-controller = Z61
+owner = Y02
+controller = Y02
+add_core = Y02
 add_core = Z61
 culture = beikling
 religion = devouring_path
-base_tax = 2
-base_production = 3
+base_tax = 3
+base_production = 4
 base_manpower = 3
 trade_goods = gems
 is_city = yes

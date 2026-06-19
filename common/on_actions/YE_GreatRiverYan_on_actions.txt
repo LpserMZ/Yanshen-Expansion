@@ -1,0 +1,130 @@
+on_startup = {
+	if = { #GRY初始化
+		limit = {
+			NOT = {
+				has_global_flag = YE_GRY_startup_gflag
+			}
+		}
+		Y09 = { country_event = { id = YE_GRY.1 } } #边方
+		Y23 = { country_event = { id = YE_GRY.2 } } #朱樾
+		4949 = { province_event = { id = YE_GRY.6  } }
+
+		Y01 = {
+			set_variable = {
+				which = oni_special_operations_team_sortie_num
+				value = 0
+			}
+		}
+
+		if = {
+			limit = {
+				ai = no
+				has_estate = estate_eunuchs_anb
+				NOT = {
+					has_country_flag = anti_eunuch_country
+				}
+			}
+			set_country_flag = anti_eunuch_country
+		}
+		
+		set_global_flag = YE_GRY_startup_gflag
+	}
+}
+
+on_war_ended = { #ROOT - Winer FROM - Loser
+	if = {
+		limit = { 
+			OR = {
+				ROOT = { has_country_flag = YE_Y09_in_coalition_war_flag }
+				FROM = { has_country_flag = YE_Y09_in_coalition_war_flag }
+			}
+		}
+		if = { #Y09失败
+			limit = {
+				FROM = { 
+					tag = Y09 
+					NOT = { is_in_war = { casus_belli = cb_super_badboy } }
+				}
+			}
+			FROM = {
+				release_all_possible_countries = yes
+				release_all_subjects = yes
+				8043 = {
+					if = {
+						limit = {
+							owned_by = PREV
+						}
+						cede_province = Y02
+					}
+				}
+				every_owned_province = {
+					limit = {
+						is_core = Y23
+					}
+					remove_core = FROM
+					cede_province = Y23
+				}
+				every_known_country = {
+					add_aggressive_expansion = {
+						who = Y09
+						value = -50
+						apply_calc = no
+					}
+				}
+				clr_country_flag = YE_Y09_in_coalition_war_flag
+			}
+			Y21 = {
+				if = {
+					limit = { has_country_flag = no_callaction }
+					clr_country_flag = no_callaction
+				}
+			}
+		}
+		if = { #Y09获胜
+			limit = { 
+				ROOT = { 
+					tag = Y09 
+					NOT = { is_in_war = { casus_belli = cb_super_badboy } }
+				}
+			}
+			ROOT = {
+				every_known_country = {
+					add_aggressive_expansion = {
+						who = Y09
+						value = -25
+						apply_calc = no
+					}
+				}
+				clr_country_flag = YE_Y09_in_coalition_war_flag
+			}
+			Y21 = {
+				if = {
+					limit = { has_country_flag = no_callaction }
+					clr_country_flag = no_callaction
+				}
+			}
+
+		}
+		
+	}
+}
+
+on_new_age = {
+	events = {
+		YE_GRY.14
+	}
+}	
+
+on_province_owner_change = {
+	if = { #侠界总督区tag
+		limit = {
+			is_core = YA1
+			NOT = { owned_by = YA1 }
+		}
+		remove_core = YA1
+	}
+}
+
+
+
+

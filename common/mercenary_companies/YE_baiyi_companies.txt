@@ -10,7 +10,7 @@ merc_elf_legion_early_stage = { #古代精灵军团
 	#no_additional_manpower_from_max_size = yes #超出max_size的兵存到佣兵人力池
 	counts_towards_force_limit = no #不占用陆军上限
 
-	home_province = 8126 #总部所在地
+	home_province = 8005 #总部所在地
 	cost_modifier = 0.10 #价格折扣
 	regiments_per_development = 0.05 #每点发展度对军队规模的影响
 

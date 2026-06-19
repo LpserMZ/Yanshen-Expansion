@@ -85,3 +85,124 @@ secure_wuxun_safety = {
 	global_prosperity_growth = 0.25
 	defensiveness = 0.10
 }
+taixuegong = { #泰学宫
+	institution_growth = 12
+	local_development_cost_modifier = -0.25
+	monthly_splendor = 1
+}
+
+southern_coastal_yanzhou_sailors = {
+	local_sailors = 100
+	local_ship_cost = -0.10
+}
+
+naval_galley_focus = {
+	naval_forcelimit_modifier = 0.10
+	naval_tradition_from_battle = 0.25
+}
+naval_light_ship_focus = {
+	naval_forcelimit_modifier = 0.10
+	naval_tradition_from_trade = 0.50
+}
+
+visit_official_university_cooldown = {}
+
+yan_imperial_garrison_system = {
+	defensiveness = 0.10
+	regiment_recruit_speed = -0.20
+	fort_maintenance_modifier = 0.20
+}
+
+free_snow_leopard_cavalry = {
+	cav_to_inf_ratio = 0.15
+	cavalry_power = 0.10
+}
+
+YE_biangfang_cataphract_buff = {
+	cav_to_inf_ratio = 0.25
+	cavalry_flanking = 0.15
+}
+
+send_oni_special_operations_team_cooldown = {}
+
+rightful_xia_territory_occupied = {
+	local_unrest = 6
+	min_local_autonomy = 40
+	local_monthly_devastation = -0.25
+	local_defensiveness = -0.20
+}
+discard_xiajie_territory = {
+	prestige = -1 
+}
+
+xiajie_directly_administered_territory_I = {
+
+}
+xiajie_directly_administered_territory_II = {
+	local_manpower_modifier = 0.15
+	fort_level = 1
+	local_fort_maintenance_modifier = -0.25
+}
+xiajie_directly_administered_territory_III = {
+	local_manpower_modifier = 0.30
+	fort_level = 1
+	local_fort_maintenance_modifier = -0.50
+}
+xiajie_directly_administered_territory_IV = {
+	local_manpower_modifier = 0.50
+	fort_level = 1
+	local_fort_maintenance_modifier = -0.90
+}
+
+qingwu_central_city = {
+	local_years_of_nationalism = -10
+	culture_conversion_cost = -0.25
+}
+
+deus_wall_stone_inscription = {
+	legitimacy = 0.5
+	culture_conversion_cost = -0.10
+}
+deus_wall_stone_inscription_PLVS_VLTRA = {
+	legitimacy = 1
+	culture_conversion_cost = -0.10
+	global_missionary_strength = 0.01
+}
+explore_caves_in_moling = {
+	may_establish_frontier = yes
+}
+moling_mana_industry_zone = {
+	mages_mana_regen = 1.5
+	mages_mana_capacity = 100
+	trade_goods_size_modifier = 1
+}
+
+moling_spell_academic_center = {
+	mages_loyalty_modifier = 0.10
+	all_power_cost = -0.05
+}
+
+
+xiajie_Z66_bonus = {
+	infantry_power = 0.15
+	fire_damage_received = -0.10
+}
+wuxun_Z66_bonus = {
+	development_cost_modifier = -0.15
+	global_trade_goods_size_modifier = 0.10
+}
+moling_Z66_bonus = {
+	stability_cost_modifier = -0.15
+	tolerance_own = 2
+}
+
+empire_of_haless_Z66 = {
+	reduced_liberty_desire = 25
+	max_absolutism_effect = 0.10
+	max_absolutism = 0.20
+}
+YanShen_industralization = {
+	allowed_num_of_manufactories = 1
+	local_development_cost_modifier = -0.10
+	trade_goods_size_modifier = 0.10
+}

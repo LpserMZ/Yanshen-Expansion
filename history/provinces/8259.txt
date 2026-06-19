@@ -1,0 +1,10 @@
+add_core = Y01
+owner = Y01
+base_tax = 1
+base_manpower = 1
+base_production = 1
+culture = horned_ogre
+trade_goods = grain
+religion = devouring_path
+controller = Y01
+is_city = no

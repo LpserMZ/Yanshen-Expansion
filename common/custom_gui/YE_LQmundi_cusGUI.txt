@@ -4,6 +4,7 @@ custom_button = { #开关
 	name = "button_lingqi_mundi"
 	tooltip = button_lingqi_mundi_tooltip
 	potential = {
+		ai = no
 		religion_group = halessi
 		NOT = { religion = mystic_accord }
 		NOT = { religion = neokttareum }
@@ -144,7 +145,10 @@ custom_button = { #开关
 			name = TextBox_LQpower_current_GetValue
 			potential = { always = yes }
 		}
-		
+		custom_text_box = { #灵气点数 文本
+			name = TextBox_LQpower_monthly_regen_and_gain_modifier_GetValue
+			potential = { always = yes }
+		}
 
 		custom_button = { #学科1
 			name = "button_exp_LQmundi_discipline_1"
@@ -152,11 +156,14 @@ custom_button = { #开关
 			potential = {}
 			trigger = {}
 			effect = {
-				set_country_flag = LQmundi_discipline_sorcery_flag
-				set_variable = {
-					which = LQmundi_discipline_x
-					value = 1
+				hidden_effect = {
+					set_country_flag = LQmundi_discipline_sorcery_flag
+					set_variable = {
+						which = LQmundi_discipline_x
+						value = 1
+					}
 				}
+				
 			}
 			frame = { 
 				number = 13 # 100% 
@@ -505,11 +512,14 @@ custom_button = { #开关
 			potential = {}
 			trigger = {}
 			effect = {
-				set_country_flag = LQmundi_discipline_sorcery_flag
-				set_variable = {
-					which = LQmundi_discipline_x
-					value = 2
+				hidden_effect = {
+					set_country_flag = LQmundi_discipline_sorcery_flag
+					set_variable = {
+						which = LQmundi_discipline_x
+						value = 2
+					}	
 				}
+				
 			}
 			frame = { 
 				number = 13 # 100% 
@@ -858,11 +868,14 @@ custom_button = { #开关
 			potential = {}
 			trigger = {}
 			effect = {
-				set_country_flag = LQmundi_discipline_sorcery_flag
-				set_variable = {
-					which = LQmundi_discipline_x
-					value = 3
+				hidden_effect = {
+					set_country_flag = LQmundi_discipline_sorcery_flag
+					set_variable = {
+						which = LQmundi_discipline_x
+						value = 3
+					}	
 				}
+				
 			}
 			frame = { 
 				number = 13 # 100% 
@@ -1212,11 +1225,14 @@ custom_button = { #开关
 			potential = {}
 			trigger = {}
 			effect = {
-				set_country_flag = LQmundi_discipline_sorcery_flag
-				set_variable = {
-					which = LQmundi_discipline_x
-					value = 4
+				hidden_effect = {
+					set_country_flag = LQmundi_discipline_sorcery_flag
+					set_variable = {
+						which = LQmundi_discipline_x
+						value = 4
+					}	
 				}
+				
 			}
 			frame = { 
 				number = 13 # 100% 
@@ -1565,11 +1581,14 @@ custom_button = { #开关
 			potential = {}
 			trigger = {}
 			effect = {
-				set_country_flag = LQmundi_discipline_sorcery_flag
-				set_variable = {
-					which = LQmundi_discipline_x
-					value = 5
+				hidden_effect = {
+					set_country_flag = LQmundi_discipline_sorcery_flag
+					set_variable = {
+						which = LQmundi_discipline_x
+						value = 5
+					}	
 				}
+				
 			}
 			frame = { 
 				number = 13 # 100% 
@@ -1918,11 +1937,14 @@ custom_button = { #开关
 			potential = {}
 			trigger = {}
 			effect = {
-				set_country_flag = LQmundi_discipline_sorcery_flag
-				set_variable = {
-					which = LQmundi_discipline_x
-					value = 6
+				hidden_effect = {
+					set_country_flag = LQmundi_discipline_sorcery_flag
+					set_variable = {
+						which = LQmundi_discipline_x
+						value = 6
+					}	
 				}
+				
 			}
 			frame = { 
 				number = 13 # 100% 
@@ -2272,11 +2294,14 @@ custom_button = { #开关
 			potential = {}
 			trigger = {}
 			effect = {
-				set_country_flag = LQmundi_discipline_sorcery_flag
-				set_variable = {
-					which = LQmundi_discipline_x
-					value = 7
+				hidden_effect = {
+					set_country_flag = LQmundi_discipline_sorcery_flag
+					set_variable = {
+						which = LQmundi_discipline_x
+						value = 7
+					}	
 				}
+				
 			}
 			frame = { 
 				number = 13 # 100% 
@@ -2626,11 +2651,14 @@ custom_button = { #开关
 			potential = {}
 			trigger = {}
 			effect = {
-				set_country_flag = LQmundi_discipline_sorcery_flag
-				set_variable = {
-					which = LQmundi_discipline_x
-					value = 8
+				hidden_effect = {
+					set_country_flag = LQmundi_discipline_sorcery_flag
+					set_variable = {
+						which = LQmundi_discipline_x
+						value = 8
+					}	
 				}
+				
 			}
 			frame = { 
 				number = 13 # 100% 
@@ -3007,40 +3035,50 @@ custom_button = { #开关
 				potential = { always = yes }
 			}
 
-			custom_button = { # 学科1 常用 1
+			custom_button = { # 学科1 通用 1
 				name = button_LQdspl_1_sorceryclass_common_Sequence_1
 				tooltip = button_LQdspl_1_sorceryclass_common_Sequence_1_tooltip
 				potential = { }
 				trigger = { }
-				effect = { }
+				effect = { 
+					LQ_d_1_c_common_s_1_script_effect = yes
+				}
 			}
-			custom_button = { # 学科1 常用 2
+			custom_button = { # 学科1 通用 2
 				name = button_LQdspl_1_sorceryclass_common_Sequence_2
 				tooltip = button_LQdspl_1_sorceryclass_common_Sequence_2_tooltip
 				potential = { }
 				trigger = { }
-				effect = { }
+				effect = { 
+					LQ_d_1_c_common_s_2_script_effect = yes
+				}
 			}
-			custom_button = { # 学科1 常用 3
+			custom_button = { # 学科1 通用 3
 				name = button_LQdspl_1_sorceryclass_common_Sequence_3
 				tooltip = button_LQdspl_1_sorceryclass_common_Sequence_3_tooltip
 				potential = { }
 				trigger = { }
-				effect = { }
+				effect = { 
+					LQ_d_1_c_common_s_3_script_effect = yes
+				}
 			}
-			custom_button = { # 学科1 常用 4
+			custom_button = { # 学科1 通用 4
 				name = button_LQdspl_1_sorceryclass_common_Sequence_4
 				tooltip = button_LQdspl_1_sorceryclass_common_Sequence_4_tooltip
 				potential = { }
 				trigger = { }
-				effect = { }
+				effect = { 
+					LQ_d_1_c_common_s_4_script_effect = yes
+				}
 			}
-			custom_button = { # 学科1 常用 5
+			custom_button = { # 学科1 通用 5
 				name = button_LQdspl_1_sorceryclass_common_Sequence_5
 				tooltip = button_LQdspl_1_sorceryclass_common_Sequence_5_tooltip
 				potential = { }
 				trigger = { }
-				effect = { }
+				effect = { 
+					LQ_d_1_c_common_s_5_script_effect = yes
+				}
 			}
 
 			custom_window = { # 学科1 信仰法术-侠道
@@ -3061,22 +3099,10 @@ custom_button = { #开关
 					religion = devouring_path
 				}
 			}
-			custom_window = { # 学科1 信仰法术-蛊道
-				name = window_LQdspl_1_sorceryclass_religion_gu
-				potential = {
-					religion = gu_path
-				}
-			}
-			custom_window = { # 学科1 信仰法术-决道
-				name = window_LQdspl_1_sorceryclass_religion_jue
-				potential = {
-					religion = jue_path
-				}
-			}
 			custom_window = { # 学科1 信仰法术-环道
 				name = window_LQdspl_1_sorceryclass_religion_huan
 				potential = {
-					religion = huan_path
+					religion = yan_path
 				}
 			}
 		# 学科2
@@ -3090,42 +3116,53 @@ custom_button = { #开关
 				name = TextBox_LQdspl_2_exp
 				potential = { always = yes }
 			}
-			custom_button = { # 学科1 常用 1
-				name = button_LQdspl_1_sorceryclass_common_Sequence_1
-				tooltip = button_LQdspl_1_sorceryclass_common_Sequence_1_tooltip
+
+			custom_button = { # 学科2 常用 1
+				name = button_LQdspl_2_sorceryclass_common_Sequence_1
+				tooltip = button_LQdspl_2_sorceryclass_common_Sequence_1_tooltip
 				potential = { }
 				trigger = { }
-				effect = { }
+				effect = { 
+					LQ_d_2_c_common_s_1_script_effect = yes
+				}
 			}
-			custom_button = { # 学科1 常用 2
-				name = button_LQdspl_1_sorceryclass_common_Sequence_2
-				tooltip = button_LQdspl_1_sorceryclass_common_Sequence_2_tooltip
+			custom_button = { # 学科2 常用 2
+				name = button_LQdspl_2_sorceryclass_common_Sequence_2
+				tooltip = button_LQdspl_2_sorceryclass_common_Sequence_2_tooltip
 				potential = { }
 				trigger = { }
-				effect = { }
+				effect = { 
+					LQ_d_2_c_common_s_2_script_effect = yes
+				}
 			}
-			custom_button = { # 学科1 常用 3
-				name = button_LQdspl_1_sorceryclass_common_Sequence_3
-				tooltip = button_LQdspl_1_sorceryclass_common_Sequence_3_tooltip
+			custom_button = { # 学科2 常用 3
+				name = button_LQdspl_2_sorceryclass_common_Sequence_3
+				tooltip = button_LQdspl_2_sorceryclass_common_Sequence_3_tooltip
 				potential = { }
 				trigger = { }
-				effect = { }
+				effect = { 
+					LQ_d_2_c_common_s_3_script_effect = yes
+				}
 			}
-			custom_button = { # 学科1 常用 4
-				name = button_LQdspl_1_sorceryclass_common_Sequence_4
-				tooltip = button_LQdspl_1_sorceryclass_common_Sequence_4_tooltip
+			custom_button = { # 学科2 常用 4
+				name = button_LQdspl_2_sorceryclass_common_Sequence_4
+				tooltip = button_LQdspl_2_sorceryclass_common_Sequence_4_tooltip
 				potential = { }
 				trigger = { }
-				effect = { }
+				effect = { 
+					LQ_d_2_c_common_s_4_script_effect = yes
+				}
 			}
-			custom_button = { # 学科1 常用 5
-				name = button_LQdspl_1_sorceryclass_common_Sequence_5
-				tooltip = button_LQdspl_1_sorceryclass_common_Sequence_5_tooltip
+			custom_button = { # 学科2 常用 5
+				name = button_LQdspl_2_sorceryclass_common_Sequence_5
+				tooltip = button_LQdspl_2_sorceryclass_common_Sequence_5_tooltip
 				potential = { }
 				trigger = { }
-				effect = { }
+				effect = { 
+					LQ_d_2_c_common_s_5_script_effect = yes
+				}
 			}
-			
+
 			custom_window = { # 学科2 信仰法术-侠道
 				name = window_LQdspl_2_sorceryclass_religion_accretive
 				potential = {
@@ -3144,22 +3181,10 @@ custom_button = { #开关
 					religion = devouring_path
 				}
 			}
-			custom_window = { # 学科2 信仰法术-蛊道
-				name = window_LQdspl_2_sorceryclass_religion_gu
-				potential = {
-					religion = gu_path
-				}
-			}
-			custom_window = { # 学科2 信仰法术-决道
-				name = window_LQdspl_2_sorceryclass_religion_jue
-				potential = {
-					religion = jue_path
-				}
-			}
 			custom_window = { # 学科2 信仰法术-环道
 				name = window_LQdspl_2_sorceryclass_religion_huan
 				potential = {
-					religion = huan_path
+					religion = yan_path
 				}
 			}
 		# 学科3
@@ -3173,6 +3198,53 @@ custom_button = { #开关
 				name = TextBox_LQdspl_3_exp
 				potential = { always = yes }
 			}
+
+			custom_button = { # 学科3 常用 1
+				name = button_LQdspl_3_sorceryclass_common_Sequence_1
+				tooltip = button_LQdspl_3_sorceryclass_common_Sequence_1_tooltip
+				potential = { }
+				trigger = { }
+				effect = { 
+					LQ_d_3_c_common_s_1_script_effect = yes
+				}
+			}
+			custom_button = { # 学科3 常用 2
+				name = button_LQdspl_3_sorceryclass_common_Sequence_2
+				tooltip = button_LQdspl_3_sorceryclass_common_Sequence_2_tooltip
+				potential = { }
+				trigger = { }
+				effect = { 
+					LQ_d_3_c_common_s_2_script_effect = yes
+				}
+			}
+			custom_button = { # 学科3 常用 3
+				name = button_LQdspl_3_sorceryclass_common_Sequence_3
+				tooltip = button_LQdspl_3_sorceryclass_common_Sequence_3_tooltip
+				potential = { }
+				trigger = { }
+				effect = { 
+					LQ_d_3_c_common_s_3_script_effect = yes
+				}
+			}
+			custom_button = { # 学科3 常用 4
+				name = button_LQdspl_3_sorceryclass_common_Sequence_4
+				tooltip = button_LQdspl_3_sorceryclass_common_Sequence_4_tooltip
+				potential = { }
+				trigger = { }
+				effect = { 
+					LQ_d_3_c_common_s_4_script_effect = yes
+				}
+			}
+			custom_button = { # 学科3 常用 5
+				name = button_LQdspl_3_sorceryclass_common_Sequence_5
+				tooltip = button_LQdspl_3_sorceryclass_common_Sequence_5_tooltip
+				potential = { }
+				trigger = { }
+				effect = { 
+					LQ_d_3_c_common_s_5_script_effect = yes
+				}
+			}
+
 			custom_window = { # 学科3 信仰法术-侠道
 				name = window_LQdspl_3_sorceryclass_religion_accretive
 				potential = {
@@ -3191,22 +3263,10 @@ custom_button = { #开关
 					religion = devouring_path
 				}
 			}
-			custom_window = { # 学科3 信仰法术-蛊道
-				name = window_LQdspl_3_sorceryclass_religion_gu
-				potential = {
-					religion = gu_path
-				}
-			}
-			custom_window = { # 学科3 信仰法术-决道
-				name = window_LQdspl_3_sorceryclass_religion_jue
-				potential = {
-					religion = jue_path
-				}
-			}
 			custom_window = { # 学科3 信仰法术-环道
 				name = window_LQdspl_3_sorceryclass_religion_huan
 				potential = {
-					religion = huan_path
+					religion = yan_path
 				}
 			}
 		# 学科4
@@ -3220,6 +3280,129 @@ custom_button = { #开关
 				name = TextBox_LQdspl_4_exp
 				potential = { always = yes }
 			}
+
+			custom_button = { # 学科4 常用 1
+				name = button_LQdspl_4_sorceryclass_common_Sequence_1
+				tooltip = button_LQdspl_4_sorceryclass_common_Sequence_1_tooltip
+				potential = { }
+				trigger = { }
+				effect = { 
+					LQ_d_4_c_common_s_1_script_effect = yes
+				}
+			}
+			custom_button = { # 学科4 常用 2
+				name = button_LQdspl_4_sorceryclass_common_Sequence_2
+				tooltip = button_LQdspl_4_sorceryclass_common_Sequence_2_tooltip
+				potential = { }
+				trigger = { }
+				effect = { 
+					LQ_d_4_c_common_s_2_script_effect = yes
+				}
+			}
+			custom_button = { # 学科4 常用 3
+				name = button_LQdspl_4_sorceryclass_common_Sequence_3
+				tooltip = button_LQdspl_4_sorceryclass_common_Sequence_3_tooltip
+				potential = { }
+				trigger = { }
+				effect = { 
+					# LQ_d_4_c_common_s_3_script_effect = yes
+					if = {
+						limit = {
+							has_country_modifier = LQ_d_4_c_common_s_3_COOLDOWN
+						}
+						custom_tooltip = LQmundi_wait_for_cooldown_tooltip
+					}
+					else_if = {
+						limit = {
+							NOT = {
+								check_variable = { which = LQpower_current value = 50 }
+							}
+						}
+						custom_tooltip = LQpower_require_50_tooltip
+					}
+					else = {
+						country_event = { id = YE_LQmundi.1 }
+						add_country_modifier = {
+							name = LQ_d_4_c_common_s_3_COOLDOWN
+							duration = 3650
+						}
+						add_years_of_income = -0.2
+						LQmundi_cost_LQpower_script_effect = { value=30 penalty=0 }
+						LQmundi_gain_effect_LQdspl_x_exp_script_effect = { value=1 discipline_sequence=4 }
+					}
+					
+				}
+			}
+			custom_button = { # 学科4 常用 4
+				name = button_LQdspl_4_sorceryclass_common_Sequence_4
+				tooltip = button_LQdspl_4_sorceryclass_common_Sequence_4_tooltip
+				potential = { }
+				trigger = { }
+				effect = { 
+					# LQ_d_4_c_common_s_4_script_effect = yes
+					
+					if = {
+						limit = {
+							has_ruler_modifier = LQ_d_4_c_common_s_4_COOLDOWN
+						}
+						custom_tooltip = LQmundi_wait_for_cooldown_tooltip
+					}
+					else_if = {
+						limit = {
+							NOT = {
+								check_variable = { which = LQpower_current value = 50 }
+							}
+						}
+						custom_tooltip = LQpower_require_50_tooltip
+					}
+					else = {
+						country_event = { id = YE_LQmundi.2 }
+						add_ruler_modifier = {
+							name = LQ_d_4_c_common_s_4_COOLDOWN
+							duration = -1
+						}
+						add_years_of_income = -0.2
+						LQmundi_cost_LQpower_script_effect = { value=30 penalty=0 }
+						LQmundi_gain_effect_LQdspl_x_exp_script_effect = { value=1 discipline_sequence=4 }
+					}					
+				}
+			}
+			custom_button = { # 学科4 常用 5
+				name = button_LQdspl_4_sorceryclass_common_Sequence_5
+				tooltip = button_LQdspl_4_sorceryclass_common_Sequence_5_tooltip
+				potential = { }
+				trigger = { }
+				effect = { 
+					# LQ_d_4_c_common_s_5_script_effect = yes
+					
+					if = {
+						limit = {
+							has_ruler_modifier = LQ_d_4_c_common_s_5_COOLDOWN
+						}
+						custom_tooltip = LQmundi_wait_for_cooldown_tooltip
+					}
+					else_if = {
+						limit = {
+							NOT = {
+								check_variable = { which = LQpower_current value = 50 }
+							}
+						}
+						custom_tooltip = LQpower_require_50_tooltip
+					}
+					else = {
+						
+						add_ruler_modifier = {
+							name = LQ_d_4_c_common_s_5_COOLDOWN
+							duration = 3650
+						}
+						country_event = { id=YE_LQmundi.3 }
+						add_years_of_income = -0.2
+						LQmundi_cost_LQpower_script_effect = { value=20 penalty=0 }
+						LQmundi_gain_effect_LQdspl_x_exp_script_effect = { value=1 discipline_sequence=4 }
+					}
+				}
+			}
+			
 			custom_window = { # 学科4 信仰法术-侠道
 				name = window_LQdspl_4_sorceryclass_religion_accretive
 				potential = {
@@ -3238,22 +3421,10 @@ custom_button = { #开关
 					religion = devouring_path
 				}
 			}
-			custom_window = { # 学科4 信仰法术-蛊道
-				name = window_LQdspl_4_sorceryclass_religion_gu
-				potential = {
-					religion = gu_path
-				}
-			}
-			custom_window = { # 学科4 信仰法术-决道
-				name = window_LQdspl_4_sorceryclass_religion_jue
-				potential = {
-					religion = jue_path
-				}
-			}
 			custom_window = { # 学科4 信仰法术-环道
 				name = window_LQdspl_4_sorceryclass_religion_huan
 				potential = {
-					religion = huan_path
+					religion = yan_path
 				}
 			}
 		# 学科5
@@ -3267,6 +3438,218 @@ custom_button = { #开关
 				name = TextBox_LQdspl_5_exp
 				potential = { always = yes }
 			}
+
+			custom_button = { # 学科5 常用 1
+				name = button_LQdspl_5_sorceryclass_common_Sequence_1
+				tooltip = button_LQdspl_5_sorceryclass_common_Sequence_1_tooltip
+				potential = { }
+				trigger = { }
+				effect = { 
+					# LQ_d_5_c_common_s_1_script_effect = yes
+					
+					if = {
+						limit = {
+							OR = {
+								has_ruler_modifier = LQ_d_5_c_common_s_1_COOLDOWN
+								has_ruler_modifier = LQ_d_5_c_common_s_1_pos_1
+								has_ruler_modifier = LQ_d_5_c_common_s_1_pos_2
+								has_ruler_modifier = LQ_d_5_c_common_s_1_pos_3
+								has_ruler_modifier = LQ_d_5_c_common_s_1_pos_4
+								has_ruler_modifier = LQ_d_5_c_common_s_1_pos_5
+								has_ruler_modifier = LQ_d_5_c_common_s_1_pos_6
+							}
+						}
+						custom_tooltip = LQmundi_wait_for_cooldown_tooltip
+					}
+					else_if = {
+						limit = {
+							NOT = {
+								check_variable = { which = LQpower_current value = 50 }
+							}
+						}
+						custom_tooltip = LQpower_require_50_tooltip
+					}
+					else = {
+						country_event = { id = YE_LQmundi.4 }
+						add_ruler_modifier = { 
+							name = LQ_d_5_c_common_s_1_COOLDOWN 
+							duration = 3650
+						} 
+						add_years_of_income = -0.25
+						LQmundi_cost_LQpower_script_effect = { value=30 penalty=0 }
+						LQmundi_gain_effect_LQdspl_x_exp_script_effect = { value=1 discipline_sequence=5 }
+
+					}					
+				}
+			}
+			custom_button = { # 学科5 常用 2
+				name = button_LQdspl_5_sorceryclass_common_Sequence_2
+				tooltip = button_LQdspl_5_sorceryclass_common_Sequence_2_tooltip
+				potential = { }
+				trigger = { }
+				effect = { 
+					#LQ_d_5_c_common_s_2_script_effect = yes
+					
+					if = {
+						limit = {
+							OR = {
+								has_country_modifier = LQ_d_5_c_common_s_2_COOLDOWN
+							}
+						}
+						custom_tooltip = LQmundi_wait_for_cooldown_tooltip
+					}
+					else_if = {
+						limit = {
+							NOT = {
+								check_variable = { which = LQpower_current value = 50 }
+							}
+						}
+						custom_tooltip = LQpower_require_50_tooltip
+					}
+					else = {
+						country_event = { id = YE_LQmundi.5 }
+						add_country_modifier = { 
+							name = LQ_d_5_c_common_s_2_COOLDOWN 
+							duration = 3650
+						} 
+						add_years_of_income = -0.25
+						LQmundi_cost_LQpower_script_effect = { value=30 penalty=0 }
+						LQmundi_gain_effect_LQdspl_x_exp_script_effect = { value=1 discipline_sequence=5 }
+					}					
+				}
+			}
+			custom_button = { # 学科5 常用 3
+				name = button_LQdspl_5_sorceryclass_common_Sequence_3
+				tooltip = button_LQdspl_5_sorceryclass_common_Sequence_3_tooltip
+				potential = { }
+				trigger = { }
+				effect = { 
+					#LQ_d_5_c_common_s_3_script_effect = yes
+									
+					if = {
+						limit = {
+							OR = {
+								has_country_modifier = LQ_d_5_c_common_s_3_COOLDOWN
+								has_country_modifier = LQ_d_5_c_common_s_3_pos_1
+								has_country_modifier = LQ_d_5_c_common_s_3_pos_2
+								has_country_modifier = LQ_d_5_c_common_s_3_pos_3
+								has_country_modifier = LQ_d_5_c_common_s_3_pos_4
+								has_country_modifier = LQ_d_5_c_common_s_3_pos_5
+								has_country_modifier = LQ_d_5_c_common_s_3_pos_6
+							}
+						}
+						custom_tooltip = LQmundi_wait_for_cooldown_tooltip
+					}
+					else_if = {
+						limit = {
+							NOT = {
+								check_variable = { which = LQpower_current value = 50 }
+							}
+						}
+						custom_tooltip = LQpower_require_50_tooltip
+					}
+					else = {
+						country_event = { id=YE_LQmundi.6 }
+						add_country_modifier = { 
+							name = LQ_d_5_c_common_s_3_COOLDOWN 
+							duration = 3650
+						} 
+						add_years_of_income = -0.25
+						LQmundi_cost_LQpower_script_effect = { value=30 penalty=0 }
+						LQmundi_gain_effect_LQdspl_x_exp_script_effect = { value=1 discipline_sequence=5 }
+
+					}					
+				}
+			}
+			custom_button = { # 学科5 常用 4
+				name = button_LQdspl_5_sorceryclass_common_Sequence_4
+				tooltip = button_LQdspl_5_sorceryclass_common_Sequence_4_tooltip
+				potential = { }
+				trigger = { }
+				effect = { 
+					#LQ_d_5_c_common_s_4_script_effect = yes
+					
+					if = {
+						limit = {
+							OR = {
+								has_country_modifier = LQ_d_5_c_common_s_4_COOLDOWN
+							}
+						}
+						custom_tooltip = LQmundi_wait_for_cooldown_tooltip
+					}
+					else_if = {
+						limit = {
+							NOT = {
+								check_variable = { which = LQpower_current value = 80 }
+							}
+						}
+						custom_tooltip = LQpower_require_80_tooltip
+					}
+					else = {
+						country_event = { id = YE_LQmundi.7 }
+						add_country_modifier = { 
+							name = LQ_d_5_c_common_s_4_COOLDOWN 
+							duration = 3650
+						} 
+						add_years_of_income = -0.30
+						LQmundi_cost_LQpower_script_effect = { value=50 penalty=0 }
+						LQmundi_gain_effect_LQdspl_x_exp_script_effect = { value=1 discipline_sequence=5 }
+					}					
+				}
+			}
+			custom_button = { # 学科5 常用 5
+				name = button_LQdspl_5_sorceryclass_common_Sequence_5
+				tooltip = button_LQdspl_5_sorceryclass_common_Sequence_5_tooltip
+				potential = { }
+				trigger = { }
+				effect = { 
+					#LQ_d_5_c_common_s_5_script_effect = yes
+					
+					if = {
+						limit = {
+							OR = {
+								has_country_modifier = LQ_d_5_c_common_s_5_COOLDOWN
+								has_country_modifier = LQ_d_5_c_common_s_5_pos_1
+								has_country_modifier = LQ_d_5_c_common_s_5_pos_2
+								has_country_modifier = LQ_d_5_c_common_s_5_pos_3
+								has_country_modifier = LQ_d_5_c_common_s_5_pos_4
+								has_country_modifier = LQ_d_5_c_common_s_5_pos_5
+								has_country_modifier = LQ_d_5_c_common_s_5_pos_6
+							}
+						}
+						custom_tooltip = LQmundi_wait_for_cooldown_tooltip
+					}
+					else_if = {
+						limit = {
+							NOT = {
+								check_variable = { which = LQpower_current value = 80 }
+							}
+						}
+						custom_tooltip = LQpower_require_80_tooltip
+					}
+					else = {
+						country_event = { id = YE_LQmundi.8 }
+						add_country_modifier = { 
+							name = LQ_d_5_c_common_s_5_COOLDOWN 
+							duration = 3650
+						} 
+						add_years_of_income = -0.30
+						LQmundi_cost_LQpower_script_effect = { value=50 penalty=0 }
+						LQmundi_gain_effect_LQdspl_x_exp_script_effect = { value=1 discipline_sequence=5 }
+
+					}					
+				}
+			}
+			custom_button = { # 学科5 常用 6
+				name = button_LQdspl_5_sorceryclass_common_Sequence_6
+				tooltip = button_LQdspl_5_sorceryclass_common_Sequence_6_tooltip
+				potential = { }
+				trigger = { }
+				effect = { 
+					LQ_d_5_c_common_s_6_script_effect = yes
+				}
+			}
+
 			custom_window = { # 学科5 信仰法术-侠道
 				name = window_LQdspl_5_sorceryclass_religion_accretive
 				potential = {
@@ -3285,22 +3668,10 @@ custom_button = { #开关
 					religion = devouring_path
 				}
 			}
-			custom_window = { # 学科5 信仰法术-蛊道
-				name = window_LQdspl_5_sorceryclass_religion_gu
-				potential = {
-					religion = gu_path
-				}
-			}
-			custom_window = { # 学科5 信仰法术-决道
-				name = window_LQdspl_5_sorceryclass_religion_jue
-				potential = {
-					religion = jue_path
-				}
-			}
 			custom_window = { # 学科5 信仰法术-环道
 				name = window_LQdspl_5_sorceryclass_religion_huan
 				potential = {
-					religion = huan_path
+					religion = yan_path
 				}
 			}
 		# 学科6
@@ -3314,6 +3685,62 @@ custom_button = { #开关
 				name = TextBox_LQdspl_6_exp
 				potential = { always = yes }
 			}
+
+			custom_button = { # 学科6 常用 1
+				name = button_LQdspl_6_sorceryclass_common_Sequence_1
+				tooltip = button_LQdspl_6_sorceryclass_common_Sequence_1_tooltip
+				potential = { }
+				trigger = { }
+				effect = { 
+					LQ_d_6_c_common_s_1_script_effect = yes
+				}
+			}
+			custom_button = { # 学科6 常用 2
+				name = button_LQdspl_6_sorceryclass_common_Sequence_2
+				tooltip = button_LQdspl_6_sorceryclass_common_Sequence_2_tooltip
+				potential = { }
+				trigger = { }
+				effect = { 
+					LQ_d_6_c_common_s_2_script_effect = yes
+				}
+			}
+			custom_button = { # 学科6 常用 3
+				name = button_LQdspl_6_sorceryclass_common_Sequence_3
+				tooltip = button_LQdspl_6_sorceryclass_common_Sequence_3_tooltip
+				potential = { }
+				trigger = { }
+				effect = { 
+					LQ_d_6_c_common_s_3_script_effect = yes
+				}
+			}
+			custom_button = { # 学科6 常用 4
+				name = button_LQdspl_6_sorceryclass_common_Sequence_4
+				tooltip = button_LQdspl_6_sorceryclass_common_Sequence_4_tooltip
+				potential = { }
+				trigger = { }
+				effect = { 
+					LQ_d_6_c_common_s_4_script_effect = yes
+				}
+			}
+			custom_button = { # 学科6 常用 5
+				name = button_LQdspl_6_sorceryclass_common_Sequence_5
+				tooltip = button_LQdspl_6_sorceryclass_common_Sequence_5_tooltip
+				potential = { }
+				trigger = { }
+				effect = { 
+					LQ_d_6_c_common_s_5_script_effect = yes
+				}
+			}
+			custom_button = { # 学科6 常用 6
+				name = button_LQdspl_6_sorceryclass_common_Sequence_6
+				tooltip = button_LQdspl_6_sorceryclass_common_Sequence_6_tooltip
+				potential = { }
+				trigger = { }
+				effect = { 
+					LQ_d_6_c_common_s_6_script_effect = yes
+				}
+			}
+
 			custom_window = { # 学科6 信仰法术-侠道
 				name = window_LQdspl_6_sorceryclass_religion_accretive
 				potential = {
@@ -3332,22 +3759,10 @@ custom_button = { #开关
 					religion = devouring_path
 				}
 			}
-			custom_window = { # 学科6 信仰法术-蛊道
-				name = window_LQdspl_6_sorceryclass_religion_gu
-				potential = {
-					religion = gu_path
-				}
-			}
-			custom_window = { # 学科6 信仰法术-决道
-				name = window_LQdspl_6_sorceryclass_religion_jue
-				potential = {
-					religion = jue_path
-				}
-			}
 			custom_window = { # 学科6 信仰法术-环道
 				name = window_LQdspl_6_sorceryclass_religion_huan
 				potential = {
-					religion = huan_path
+					religion = yan_path
 				}
 			}
 		# 学科7
@@ -3361,6 +3776,62 @@ custom_button = { #开关
 				name = TextBox_LQdspl_7_exp
 				potential = { always = yes }
 			}
+
+			custom_button = { # 学科7 常用 1
+				name = button_LQdspl_7_sorceryclass_common_Sequence_1
+				tooltip = button_LQdspl_7_sorceryclass_common_Sequence_1_tooltip
+				potential = { }
+				trigger = { }
+				effect = { 
+					LQ_d_7_c_common_s_1_script_effect = yes
+				}
+			}
+			custom_button = { # 学科7 常用 2
+				name = button_LQdspl_7_sorceryclass_common_Sequence_2
+				tooltip = button_LQdspl_7_sorceryclass_common_Sequence_2_tooltip
+				potential = { }
+				trigger = { }
+				effect = { 
+					LQ_d_7_c_common_s_2_script_effect = yes
+				}
+			}
+			custom_button = { # 学科7 常用 3
+				name = button_LQdspl_7_sorceryclass_common_Sequence_3
+				tooltip = button_LQdspl_7_sorceryclass_common_Sequence_3_tooltip
+				potential = { }
+				trigger = { }
+				effect = { 
+					LQ_d_7_c_common_s_3_script_effect = yes
+				}
+			}
+			custom_button = { # 学科7 常用 4
+				name = button_LQdspl_7_sorceryclass_common_Sequence_4
+				tooltip = button_LQdspl_7_sorceryclass_common_Sequence_4_tooltip
+				potential = { }
+				trigger = { }
+				effect = { 
+					LQ_d_7_c_common_s_4_script_effect = yes
+				}
+			}
+			custom_button = { # 学科7 常用 5
+				name = button_LQdspl_7_sorceryclass_common_Sequence_5
+				tooltip = button_LQdspl_7_sorceryclass_common_Sequence_5_tooltip
+				potential = { }
+				trigger = { }
+				effect = { 
+					LQ_d_7_c_common_s_5_script_effect = yes
+				}
+			}
+			custom_button = { # 学科7 常用 6
+				name = button_LQdspl_7_sorceryclass_common_Sequence_6
+				tooltip = button_LQdspl_7_sorceryclass_common_Sequence_6_tooltip
+				potential = { }
+				trigger = { }
+				effect = { 
+					LQ_d_7_c_common_s_6_script_effect = yes
+				}
+			}
+
 			custom_window = { # 学科7 信仰法术-侠道
 				name = window_LQdspl_7_sorceryclass_religion_accretive
 				potential = {
@@ -3379,22 +3850,10 @@ custom_button = { #开关
 					religion = devouring_path
 				}
 			}
-			custom_window = { # 学科7 信仰法术-蛊道
-				name = window_LQdspl_7_sorceryclass_religion_gu
-				potential = {
-					religion = gu_path
-				}
-			}
-			custom_window = { # 学科7 信仰法术-决道
-				name = window_LQdspl_7_sorceryclass_religion_jue
-				potential = {
-					religion = jue_path
-				}
-			}
 			custom_window = { # 学科7 信仰法术-环道
 				name = window_LQdspl_7_sorceryclass_religion_huan
 				potential = {
-					religion = huan_path
+					religion = yan_path
 				}
 			}
 		# 学科8
@@ -3408,6 +3867,80 @@ custom_button = { #开关
 				name = TextBox_LQdspl_8_exp
 				potential = { always = yes }
 			}
+
+			custom_button = { # 学科8 常用 1
+				name = button_LQdspl_8_sorceryclass_common_Sequence_1
+				tooltip = button_LQdspl_8_sorceryclass_common_Sequence_1_tooltip
+				potential = { }
+				trigger = { }
+				effect = { 
+					LQ_d_8_c_common_s_1_script_effect = yes
+				}
+			}
+			custom_button = { # 学科8 常用 2
+				name = button_LQdspl_8_sorceryclass_common_Sequence_2
+				tooltip = button_LQdspl_8_sorceryclass_common_Sequence_2_tooltip
+				potential = { }
+				trigger = { }
+				effect = { 
+					LQ_d_8_c_common_s_2_script_effect = yes
+				}
+			}
+			custom_button = { # 学科8 常用 3
+				name = button_LQdspl_8_sorceryclass_common_Sequence_3
+				tooltip = button_LQdspl_8_sorceryclass_common_Sequence_3_tooltip
+				potential = { }
+				trigger = { }
+				effect = { 
+					LQ_d_8_c_common_s_3_script_effect = yes
+				}
+			}
+			custom_button = { # 学科8 常用 4
+				name = button_LQdspl_8_sorceryclass_common_Sequence_4
+				tooltip = button_LQdspl_8_sorceryclass_common_Sequence_4_tooltip
+				potential = { }
+				trigger = { }
+				effect = { 
+					#LQ_d_8_c_common_s_4_script_effect = yes
+					if = {
+						limit = {
+							OR = {
+								has_country_modifier = LQ_d_8_c_common_s_4_COOLDOWN
+							}
+						}
+						custom_tooltip = LQmundi_wait_for_cooldown_tooltip
+					}
+					else_if = {
+						limit = {
+							NOT = {
+								check_variable = { which = LQpower_current value = 50 }
+							}
+						}
+						custom_tooltip = LQpower_require_50_tooltip
+					}
+					else = {
+						country_event = { id = YE_LQmundi.9 }
+						add_country_modifier = { 
+							name = LQ_d_8_c_common_s_4_COOLDOWN 
+							duration = 3650
+						} 
+						add_years_of_income = -0.20
+						LQmundi_cost_LQpower_script_effect = { value=30 penalty=0 }
+						LQmundi_gain_effect_LQdspl_x_exp_script_effect = { value=1 discipline_sequence=8 }
+					}					
+					
+				}
+			}
+			custom_button = { # 学科8 常用 5
+				name = button_LQdspl_8_sorceryclass_common_Sequence_5
+				tooltip = button_LQdspl_8_sorceryclass_common_Sequence_5_tooltip
+				potential = { }
+				trigger = { }
+				effect = { 
+					LQ_d_8_c_common_s_5_script_effect = yes
+				}
+			}
+
 			custom_window = { # 学科8 信仰法术-侠道
 				name = window_LQdspl_8_sorceryclass_religion_accretive
 				potential = {
@@ -3426,47 +3959,15 @@ custom_button = { #开关
 					religion = devouring_path
 				}
 			}
-			custom_window = { # 学科8 信仰法术-蛊道
-				name = window_LQdspl_8_sorceryclass_religion_gu
-				potential = {
-					religion = gu_path
-				}
-			}
-			custom_window = { # 学科8 信仰法术-决道
-				name = window_LQdspl_8_sorceryclass_religion_jue
-				potential = {
-					religion = jue_path
-				}
-			}
 			custom_window = { # 学科8 信仰法术-环道
 				name = window_LQdspl_8_sorceryclass_religion_huan
 				potential = {
-					religion = huan_path
+					religion = yan_path
 				}
 			}
 
 
 
-
-
-
-
-
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
 		###################################
 
 

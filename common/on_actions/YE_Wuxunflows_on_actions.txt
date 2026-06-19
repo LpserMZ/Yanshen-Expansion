@@ -1,4 +1,4 @@
-#「武浔源流」专用
+# #「武浔源流」专用
 
 on_province_owner_change = {
 	if = { # 解救狼令掳走的奴隶

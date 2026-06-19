@@ -1,0 +1,128 @@
+universary_undefeatable_tyrant_wargod_name = { #宇宙无敌暴龙战神
+	rank = {
+		1 = DUCHY
+		2 = KINGDOM
+		3 = EMPIRE
+	}
+	
+	ruler_male = {
+		1 = UNIVERSALIS_INVICTUS_TYRANNOSAURUS_DEUS_BELLI
+		2 = UNIVERSALIS_INVICTUS_TYRANNOSAURUS_DEUS_BELLI
+		3 = UNIVERSALIS_INVICTUS_TYRANNOSAURUS_DEUS_BELLI
+	}
+	
+	ruler_female = {
+		1 = UNIVERSALIS_INVICTUS_TYRANNOSAURUS_DEUS_BELLI
+		2 = UNIVERSALIS_INVICTUS_TYRANNOSAURUS_DEUS_BELLI
+		3 = UNIVERSALIS_INVICTUS_TYRANNOSAURUS_DEUS_BELLI
+	}
+	
+	consort_male = {
+		1 = PRINCE_CONSORT
+		2 = KING_CONSORT
+		3 = EMPEROR_CONSORT
+	}
+
+	consort_female = {
+		1 = CONSORT
+		2 = QUEEN_CONSORT
+		3 = EMPRESS_CONSORT
+	}
+	
+	heir_male = {
+		1 = DRAGON_LORD
+		2 = DRAGON_PRINCE
+		3 = DRAGON_PRINCE
+	}
+
+	heir_female = {
+		1 = DRAGON_LADY
+		2 = DRAGON_PRINCESS
+		3 = DRAGON_PRINCESS
+	}
+
+	trigger = {
+		adm = 5
+		dip = 5
+		mil = 5
+		OR = {
+			tag = Y09
+			AND = {
+				tag = Z66
+				was_tag = Y09
+			}
+		}
+	}
+}
+xiajie_xvanweisi_name = { #宣慰使
+	rank = {
+		1 = XIAJIE_XVANWEISI
+		2 = XIAJIE_XVANWEISI
+		3 = XIAJIE_XVANWEISI
+	}
+
+	ruler_male = {
+		1 = XIAJIE_XVANWEISHI
+		2 = XIAJIE_XVANWEISHI
+		3 = XIAJIE_XVANWEISHI
+	}
+
+	ruler_female = {
+		1 = XIAJIE_XVANWEISHI
+		2 = XIAJIE_XVANWEISHI
+		3 = XIAJIE_XVANWEISHI
+	}
+	
+	heir_male = {
+		1 = ASCENDANT_MASTER
+		2 = ASCENDANT_MASTER
+		3 = ASCENDANT_MASTER
+	}
+	
+	heir_female = {
+		1 = ASCENDANT_MASTER
+		2 = ASCENDANT_MASTER
+		3 = ASCENDANT_MASTER
+	}
+
+	trigger = {
+		tag = YA1
+		is_subject_of_type = YE_autonomous_vassal
+	}
+}
+xiajie_fanguo_name = { # 藩王
+	rank = {
+		1 = XIAJIE_FANGUO
+		2 = XIAJIE_FANGUO
+		3 = XIAJIE_FANGUO
+	}
+
+	ruler_male = {
+		1 = XIAJIE_FANWANG
+		2 = XIAJIE_FANWANG
+		3 = XIAJIE_FANWANG
+	}
+
+	ruler_female = {
+		1 = XIAJIE_FANWANG
+		2 = XIAJIE_FANWANG
+		3 = XIAJIE_FANWANG
+	}
+	
+	heir_male = {
+		1 = ASCENDANT_MASTER
+		2 = ASCENDANT_MASTER
+		3 = ASCENDANT_MASTER
+	}
+	
+	heir_female = {
+		1 = ASCENDANT_MASTER
+		2 = ASCENDANT_MASTER
+		3 = ASCENDANT_MASTER
+	}
+
+	trigger = {
+		tag = YA1
+		is_subject_of_type = autonomous_vassal
+	}
+}

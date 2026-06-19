@@ -3,15 +3,8 @@ controller = Y09
 add_core = Y09
 culture = jiangszun
 religion = accretive_path
-
-hre = no
-
-base_tax = 2
+base_tax = 3
 base_production = 2
-base_manpower = 2
-
-trade_goods = livestock
-
-capital = ""
-
+base_manpower = 3
+trade_goods = grain
 is_city = yes

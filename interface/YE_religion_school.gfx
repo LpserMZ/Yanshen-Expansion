@@ -1,0 +1,48 @@
+spriteTypes = {
+	spriteType = {
+        name = "GFX_religion_school_xia_school"	
+        texturefile = "gfx//interface//YE_religion_school//1.dds"
+    }
+}
+spriteTypes = {
+	spriteType = {
+        name = "GFX_religion_school_wu_school"	
+        texturefile = "gfx//interface//YE_religion_school//2.dds"
+    }
+}
+spriteTypes = {
+	spriteType = {
+        name = "GFX_religion_school_kanli_school"	
+        texturefile = "gfx//interface//YE_religion_school//3.dds"
+    }
+}
+spriteTypes = {
+	spriteType = {
+        name = "GFX_religion_school_lingjue_school"	
+        texturefile = "gfx//interface//YE_religion_school//4.dds"
+    }
+}
+spriteTypes = {
+	spriteType = {
+        name = "GFX_religion_school_qingliu_school"	
+        texturefile = "gfx//interface//YE_religion_school//5.dds"
+    }
+}
+spriteTypes = {
+	spriteType = {
+        name = "GFX_religion_school_mushi_school"	
+        texturefile = "gfx//interface//YE_religion_school//6.dds"
+    }
+}
+spriteTypes = {
+	spriteType = {
+        name = "GFX_religion_school_mozhen_school"	
+        texturefile = "gfx//interface//YE_religion_school//7.dds"
+    }
+}
+spriteTypes = {
+	spriteType = {
+        name = "GFX_religion_school_guifu_school"	
+        texturefile = "gfx//interface//YE_religion_school//8.dds"
+    }
+}

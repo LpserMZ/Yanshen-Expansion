@@ -1,4 +1,4 @@
-setup_vision = yes
+setup_vision_generic = yes
 
 government = monarchy
 add_government_reform = autocracy_reform
@@ -8,10 +8,10 @@ primary_culture = sun_elf
 add_accepted_culture = yansu
 
 religion = accretive_path
-
+religious_school = xia_school
 technology_group = tech_halessi
 
-capital = 8126
+capital = 8005
 
 1444.11.10 = {
 	override_country_name = YB8_COLONY_NAME

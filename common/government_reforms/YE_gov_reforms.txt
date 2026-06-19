@@ -1,0 +1,80 @@
+yanzhou_strong_realm = {
+	icon = "celestial_empire"
+	allow_normal_conversion = no
+	potential = {
+		OR = {
+			has_reform = yanzhou_strong_realm
+			has_country_flag = allow_yanzhou_strong_realm_flag
+		}
+	}
+	legacy_equivalent = celestial_empire_legacy
+	allow_force_tributary = no
+	nation_designer_cost = 10
+	lock_level_when_selected = yes
+	nation_designer_trigger = { always = no }
+
+	start_territory_to_estates = 0.9
+
+	modifiers = {
+		global_autonomy = -0.05
+		can_claim_states = yes
+		governing_capacity = 100
+	}
+	
+	ai = {
+		factor = 1000 # should always be picked if available
+	}
+
+	custom_attributes = {
+		locked_government_type = yes
+	}
+}
+early_morden_yan_empire_bureacracy = {
+	icon = "celestial_empire"
+	potential = {
+		OR = {
+			has_reform = early_morden_yan_empire_bureacracy
+			has_country_flag = allow_early_morden_yan_empire_bureacracy_flag
+		}
+	}
+
+	nation_designer_cost = 10
+	nation_designer_trigger = { always = no }
+
+	modifiers = {
+		administrative_efficiency = 0.05
+		state_maintenance_modifier = 0.50
+		advisor_cost = -0.25
+	}
+	
+	ai = {
+		factor = 1000 # should always be picked if available
+	}
+
+	custom_attributes = {
+	}
+}
+yan_empire_reformed_tax_code = {
+	icon = "celestial_empire"
+	potential = {
+		OR = {
+			has_reform = yan_empire_reformed_tax_code
+			has_country_flag = allow_yan_empire_reformed_tax_code_flag
+		}
+	}
+
+	nation_designer_cost = 10
+	nation_designer_trigger = { always = no }
+
+	modifiers = {
+		development_cost_modifier = -0.15
+		yearly_corruption = 0.15
+	}
+	
+	ai = {
+		factor = 1000 # should always be picked if available
+	}
+
+	custom_attributes = {
+	}
+}

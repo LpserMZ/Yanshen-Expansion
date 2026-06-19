@@ -1,8 +1,10 @@
-owner = R94
-controller = R94
+add_core = Y17
+owner = Y17
+culture = jiangyang
+religion = accretive_path
+controller = Y17
 is_city = no
-culture = boar_command
-religion = godlost
-trade_goods = iron
-base_manpower = 1
-add_core = R94
+trade_goods = livestock
+base_tax = 2
+base_manpower = 2
+base_production = 3

@@ -41,14 +41,14 @@ country_event = { #2 北方起义胜利事件
 	option = {
 		name = YE_baiyi.2.a
 		ai_chance = { factor = 1 }
-		if = {
-			limit = {
-				NOT = {
-					mission_completed = YE_baiyi_4_1
-				}
-			}
-			complete_mission = YE_baiyi_4_1
-		}
+		# if = {
+		# 	limit = {
+		# 		NOT = {
+		# 			mission_completed = YE_baiyi_4_1
+		# 		}
+		# 	}
+		# 	complete_mission = YE_baiyi_4_1
+		# }
 	}
 
 }
@@ -71,7 +71,7 @@ country_event = { #3 勇冠三军
 			manuever = 2
 			siege = 2
 		}
-		complete_mission = YE_baiyi_4_1
+		#complete_mission = YE_baiyi_4_1
 	}
 
 }

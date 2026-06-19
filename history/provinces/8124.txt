@@ -1,10 +1,10 @@
-owner = R62
-controller = R62
-is_city = no
-culture = yansu
+add_core = Y17
+owner = Y17
+culture = jiangyang
 religion = accretive_path
-trade_goods = glass
+controller = Y17
+is_city = no
+trade_goods = grain
 base_tax = 2
 base_manpower = 2
 base_production = 3
-add_core = R62
