@@ -6,5 +6,5 @@ religion = accretive_path
 base_tax = 4
 base_production = 3
 base_manpower = 1
-trade_goods = grain
+trade_goods = glass
 is_city = yes

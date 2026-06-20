@@ -5,6 +5,7 @@ religion = accretive_path
 controller = Y05
 is_city = no
 trade_goods = silk
+center_of_trade = 1
 base_tax = 4
 base_manpower = 4
 base_production = 4

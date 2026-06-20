@@ -12,3 +12,4 @@ latent_trade_goods = {
 	coal 
 }
 is_city = yes
+center_of_trade = 1
