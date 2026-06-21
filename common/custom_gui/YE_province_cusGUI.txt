@@ -1,0 +1,19 @@
+custom_button = { #填充人口
+	name = "prov_button_SLOT5_migrate_pop"
+	tooltip = prov_button_SLOT5_migrate_pop_tooltip
+	potential = { #与地方组织mushihui的trigger保持一致
+		owner = {
+			has_reform = lanjinhui_military_government
+		}
+	}
+	trigger = { 
+		holy_order = mushihui
+		NOT = { area = liuminxiang_area }
+	}
+	effect = {
+		owner = {
+			add_treasury = 1
+		}
+		
+	}
+}

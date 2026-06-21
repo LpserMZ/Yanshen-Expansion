@@ -1,0 +1,70 @@
+guiTypes = {
+	windowType = { #soilder_fervor
+		name = "YE_lanjinhui_soilder_fervor_gov_mech"
+		size = { x = 280 y = 56 }
+		backGround = ""
+		moveable = 0
+		dontRender = ""
+		horizontalBorder = ""
+		
+		# bar and frame for the power type associated with this interaction (if it's unique to the interaction - if not, these will be hidden)
+		iconType = { 
+			name = "government_power_bar"
+			spriteType = "GFX_soilder_fervor_bar"
+			position = { x = 53 y = 19 }
+		}	
+
+		# Frame
+		iconType = {
+			name = "government_power_bar_frame"
+			spriteType = "GFX_soilder_fervor_frame"
+			position = { x = 0 y = 0 }
+			alwaystransparent = yes
+		}	
+
+		### interaction button
+		guiButtonType = {
+			name = "government_interaction_button"
+			quadTextureSprite = "GFX_soilder_fervor_button"
+			position = { x = 250 y = 13 }
+			buttonFont = "vic_18"
+			Orientation = "UPPER_LEFT"
+			clicksound = back_click
+			text = ""
+		}
+	}
+	windowType = { #rural_xia_power
+		name = "YE_lanjinhui_rural_xia_power_gov_mech"
+		size = { x = 294 y = 72 }
+		backGround = ""
+		moveable = 0
+		dontRender = ""
+		horizontalBorder = ""
+		
+		# bar and frame for the power type associated with this interaction (if it's unique to the interaction - if not, these will be hidden)
+		iconType = { 
+			name = "government_power_bar"
+			spriteType = "GFX_rural_xia_power_bar"
+			position = { x = 80 y = 42 }
+		}	
+
+		# Frame
+		iconType = {
+			name = "government_power_bar_frame"
+			spriteType = "GFX_rural_xia_power_frame"
+			position = { x = 0 y = 0 }
+			alwaystransparent = yes
+		}	
+
+		### interaction button
+		guiButtonType = {
+			name = "government_interaction_button"
+			quadTextureSprite = "GFX_rural_xia_power_button"
+			position = { x = 249 y = 27 }
+			buttonFont = "vic_18"
+			Orientation = "UPPER_LEFT"
+			clicksound = back_click
+			text = ""
+		}
+	}
+}

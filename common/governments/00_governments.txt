@@ -1,4 +1,4 @@
-
+#修改项
 monarchy = {
 	reform_levels = {
 		feudalism_vs_autocracy = { #Tier 1
@@ -1053,6 +1053,8 @@ republic = {
 	reform_levels = {
 		oligarchy_merchant_class_noble_elite = { #Tier 1
 			reforms = {
+				lanjinhui_military_government#修改项
+
 				oligarchy_reform
 				merchants_reform
 				# venice_merchants_reform

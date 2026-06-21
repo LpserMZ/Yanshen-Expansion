@@ -1,0 +1,135 @@
+YE_blue_dream_soilder_fervor = {
+	alert_icon_gfx = GFX_alerticons_government_mechanics
+	alert_icon_index = 7
+
+	powers = {
+		soilder_fervor = {
+			max = 100
+			min = 0
+			reset_on_new_ruler = no
+			base_monthly_growth = 0
+			development_scaled_monthly_growth = 0
+			scaled_modifier = {
+				modifier = {
+					land_morale_constant = 0.50
+					morale_damage_received = -0.20
+					monthly_soilder_fervor = -0.50
+				}
+			}
+			is_good = yes
+		}
+	}
+	
+	interactions = {
+		promote_soilder_fervor = {
+			gui = YE_lanjinhui_soilder_fervor_gov_mech
+			center = no 
+			cost_type = soilder_fervor
+			trigger = {
+				NOT = {
+					has_government_power = {
+						mechanic_type = YE_blue_dream_soilder_fervor
+						power_type = soilder_fervor
+						value = 100
+					}
+				}
+				mil_power = 50
+				if = {
+					limit = { ai = yes }
+					mil_power = 800
+				}
+			}
+			effect = {
+				mil_power_cost = 50
+				add_government_power = {
+					mechanic_type = YE_blue_dream_soilder_fervor
+					power_type = soilder_fervor
+					value = 5
+				}
+			}
+			cooldown_years = 0
+			ai_chance = {
+				factor = 10
+				modifier = {
+					factor = 10
+					NOT = {
+						has_government_power = {
+							mechanic_type = YE_blue_dream_soilder_fervor
+							power_type = soilder_fervor
+							value = 95
+						}
+					}
+					is_at_war = yes
+				}
+			}
+		}
+	}
+}
+YE_blue_dream_rural_xia_power = {
+	alert_icon_gfx = GFX_alerticons_government_mechanics
+	alert_icon_index = 7
+
+	powers = {
+		rural_xia_power = {
+			max = 100
+			min = 0
+			reset_on_new_ruler = no
+			base_monthly_growth = 0.25
+			development_scaled_monthly_growth = 0
+			scaled_modifier = {
+				modifier = {
+					state_governing_cost = -0.20
+					build_cost = -0.10
+					build_time = -0.10
+				}
+			}
+			is_good = yes
+		}
+	}
+	
+	interactions = {
+		promote_rural_xia_power = {
+			gui = YE_lanjinhui_rural_xia_power_gov_mech
+			center = no 
+			cost_type = rural_xia_power
+			trigger = {
+				NOT = {
+					has_government_power = {
+						mechanic_type = YE_blue_dream_rural_xia_power
+						power_type = rural_xia_power
+						value = 100
+					}
+				}
+				years_of_income = 0.05
+				adm_power = 50
+				if = {
+					limit = { ai = yes }
+					adm_power = 800
+				}
+			}
+			effect = {
+				adm_power_cost = 50
+				add_government_power = {
+					mechanic_type = YE_blue_dream_rural_xia_power
+					power_type = rural_xia_power
+					value = 5
+				}
+			}
+			cooldown_years = 0
+			ai_chance = {
+				factor = 10
+				modifier = {
+					factor = 10
+					NOT = {
+						has_government_power = {
+							mechanic_type = YE_blue_dream_rural_xia_power
+							power_type = rural_xia_power
+							value = 95
+						}
+					}
+					is_at_war = no
+				}
+			}
+		}
+	}
+}

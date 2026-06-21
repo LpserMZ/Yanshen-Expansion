@@ -8,7 +8,6 @@ spriteTypes = {
 		texturefile = "gfx/interface/AH_custom_GUI/lingqi_mundi/background_lingqi_mundi.dds"
 	}
 
-	
 	spriteType = {
 		name = "GFX_icon_progressbar_LQpower"
 		texturefile = "gfx/interface/AH_custom_GUI/lingqi_mundi/icon_progressbar_LQpower.dds"
@@ -42,7 +41,6 @@ spriteTypes = {
 		noOfFrames = 6
 	}
 
-	
 	spriteType = {
 		name = "GFX_icon_name_LQmundi_discipline_1"
 		texturefile = "gfx/interface/AH_custom_GUI/lingqi_mundi/button_LQmundi_discipline_x/icon_name_LQmundi_discipline_1.dds"
@@ -75,9 +73,6 @@ spriteTypes = {
 		name = "GFX_icon_name_LQmundi_discipline_8"
 		texturefile = "gfx/interface/AH_custom_GUI/lingqi_mundi/button_LQmundi_discipline_x/icon_name_LQmundi_discipline_8.dds"
 	}
-
-
-
 
 
 	spriteType = {

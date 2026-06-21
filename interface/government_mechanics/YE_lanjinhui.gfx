@@ -1,0 +1,48 @@
+spriteTypes = {
+	#soilder_fervor
+	progressbartype = { #bar-full and void
+		name = "GFX_soilder_fervor_bar"
+		color = { 1.0 0.0 0.0 }
+		colortwo = { 1.0 1.0 1.0 }
+		textureFile1 = "gfx/interface/government_mechanics/YE_blue_dream/soilder_fervor_bar_full.dds"
+		textureFile2 = "gfx/interface/government_mechanics/YE_blue_dream/soilder_fervor_bar_void.dds"
+		size = { x = 193 y = 18 }
+		effectFile = "gfx/FX/progress.lua"
+	}
+	spriteType = { #frame
+		name = "GFX_soilder_fervor_frame"
+		texturefile = "gfx/interface/government_mechanics/YE_blue_dream/soilder_fervor_frame.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+	spriteType = { #button
+		name = "GFX_soilder_fervor_button"
+		texturefile = "gfx/interface/government_mechanics/YE_blue_dream/soilder_fervor_button.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+
+	#rural_xia_power
+	progressbartype = { #bar-full and void
+		name = "GFX_rural_xia_power_bar"
+		color = { 1.0 0.0 0.0 }
+		colortwo = { 1.0 1.0 1.0 }
+		textureFile1 = "gfx/interface/government_mechanics/YE_blue_dream/rural_xia_power_bar_full.dds"
+		textureFile2 = "gfx/interface/government_mechanics/YE_blue_dream/rural_xia_power_bar_void.dds"
+		size = { x = 160 y = 15 }
+		effectFile = "gfx/FX/progress.lua"
+	}
+	spriteType = { #frame
+		name = "GFX_rural_xia_power_frame"
+		texturefile = "gfx/interface/government_mechanics/YE_blue_dream/rural_xia_power_frame.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+	spriteType = { #button
+		name = "GFX_rural_xia_power_button"
+		texturefile = "gfx/interface/government_mechanics/YE_blue_dream/rural_xia_power_button.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+
+}	

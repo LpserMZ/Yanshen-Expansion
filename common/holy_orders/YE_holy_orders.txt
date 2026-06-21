@@ -1,0 +1,29 @@
+mushihui = { #木石会
+	icon = GFX_holy_order_mushihui
+	trigger = { #省份独特按钮prov_button_SLOT5_migrate_pop的potential必须与此保持一致
+		has_reform = lanjinhui_military_government
+	}
+	color = { 228 201 17 }
+	cost = 50
+	cost_type = adm_power
+	per_province_effect = {
+		add_base_tax = 1 
+	}
+	per_province_abandon_effect = {
+		add_base_tax = -1 
+	}
+	modifier = {
+		local_development_cost_modifier = -0.15
+		local_tax_modifier = 0.10
+	}
+	ai_priority = {
+		factor = 2
+		modifier = {
+			factor = 1.25
+			owner = { adm = 6 } 
+		}
+	}
+	localization = holy_order
+}
+
+

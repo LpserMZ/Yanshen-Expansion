@@ -1,0 +1,6 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_prov_button_migrate_pop"
+		texturefile = "gfx//interface//AH_custom_GUI//province_UI//migrate_pop.dds"
+	}
+}	

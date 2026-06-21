@@ -78,3 +78,41 @@ yan_empire_reformed_tax_code = {
 	custom_attributes = {
 	}
 }
+
+lanjinhui_military_government = {
+	icon = "lanjinhui_military_government"
+	allow_normal_conversion = no
+	lock_level_when_selected = yes
+	potential = {
+		tag = Y05
+		OR = {
+			has_reform = lanjinhui_military_government
+			have_had_reform = lanjinhui_military_government
+		}
+	}
+	valid_for_nation_designer = yes
+	nation_designer_cost = 20
+	legacy_equivalent = peasants_republic_legacy
+	modifiers = {
+		production_efficiency = 0.1
+		land_morale = 0.10
+		discipline = -0.05
+		manpower_recovery_speed = 0.15
+		province_warscore_cost = -0.10
+		max_absolutism = -10
+	}
+	effect = {}
+	government_abilities = {
+		YE_blue_dream_soilder_fervor
+		YE_blue_dream_rural_xia_power
+	}
+	custom_attributes = {
+		enables_plutocratic_idea_group = yes
+		enables_aristocratic_idea_group = no
+		has_parliament = yes
+		is_peasants_republic = yes
+		election_on_death = yes
+		
+	}
+	has_term_election = no
+}

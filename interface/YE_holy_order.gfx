@@ -1,0 +1,8 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_holy_order_mushihui"
+		texturefile = "gfx/interface/holy_orders/mushihui.dds"
+		noOfFrames = 4
+	}
+}
+
