@@ -848,6 +848,8 @@ YE_bianfang_5 = {
 				}
 				Y21 = { is_subject_of = ROOT }
 			}
+			is_at_war = no
+			owns = 4892
 		} 
 
 		effect = {  

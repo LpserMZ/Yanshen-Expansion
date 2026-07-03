@@ -3814,12 +3814,39 @@ guiTypes = {
 		###############################
 		########### 天地灵气 ###########
 			# 写在底部的窗口浮在上层
+			# guiButtonType = { #开关
+			# 	name = "button_lingqi_mundi"
+			# 	position = { x = 312 y = 268 } #{ x = 161 y = 242 } 
+			# 	quadTextureSprite ="GFX_button_lingqi_mundi"
+			# 	scripted = yes
+			# }
+
 			guiButtonType = { #开关
-				name = "button_lingqi_mundi"
-				position = { x = 161 y = 242 }
+				name = "button_lingqi_mundi_accretive"
+				position = { x = 314 y = 277 }
 				quadTextureSprite ="GFX_button_lingqi_mundi"
 				scripted = yes
 			}
+			guiButtonType = { #开关
+				name = "button_lingqi_mundi_transmutative"
+				position = { x = 248 y = 282 }
+				quadTextureSprite ="GFX_button_lingqi_mundi"
+				scripted = yes
+			}
+			guiButtonType = { #开关
+				name = "button_lingqi_mundi_devouring"
+				position = { x = 248 y = 282 }
+				quadTextureSprite ="GFX_button_lingqi_mundi"
+				scripted = yes
+			}
+			guiButtonType = { #开关
+				name = "button_lingqi_mundi_yan"
+				position = { x = 233 y = 238 }
+				quadTextureSprite ="GFX_button_lingqi_mundi"
+				scripted = yes
+			}
+
+
 			windowType = { #天地灵气窗口
 				name = "window_lingqi_mundi"
 				backGround="background_lingqi_mundi"

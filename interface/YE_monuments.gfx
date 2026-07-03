@@ -453,18 +453,106 @@ spriteTypes = {
 spriteTypes = {
 	spriteType = {
         name = "GFX_great_project_suihuigong"	
-        texturefile = "gfx//interface//great_projects//great_project_palace_of_divine_call.dds"
+        texturefile = "gfx//interface//great_projects//suhuigong.dds"
+    }
+	spriteType = {
+        name = "GFX_great_project_zhaoming_imperial_palace"	
+        texturefile = "gfx//interface//great_projects//zhaoming_imperial_palace.dds"
+    }
+	spriteType = {
+        name = "GFX_great_project_feiteng_harbor"	
+        texturefile = "gfx//interface//great_projects//feiteng_harbor.dds"
+    }
+	spriteType = {
+        name = "GFX_great_project_boling_mont"	
+        texturefile = "gfx//interface//great_projects//boling_mont.dds"
+    }
+	spriteType = {
+        name = "GFX_great_project_huangsheng_mont"	
+        texturefile = "gfx//interface//great_projects//huangsheng_mont.dds"
+    }
+	spriteType = {
+        name = "GFX_great_project_hu_ai_mont"	
+        texturefile = "gfx//interface//great_projects//hu_ai_mont.dds"
+    }
+	spriteType = {
+        name = "GFX_great_project_fox_fluff_wholesale_center"	
+        texturefile = "gfx//interface//great_projects//fox_fluff_wholesale_center.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_luzhang_tower"	
+        texturefile = "gfx//interface//great_projects//luzhang_tower.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_kanli_college"	
+        texturefile = "gfx//interface//great_projects//kanli_college.dds"
+    }
+
+    # spriteType = {
+    #     name = "GFX_great_project_"	
+    #     texturefile = "gfx//interface//great_projects//.dds"
+    # }
+
+    # spriteType = {
+    #     name = "GFX_great_project_"	
+    #     texturefile = "gfx//interface//great_projects//.dds"
+    # }
+
+    # spriteType = {
+    #     name = "GFX_great_project_"	
+    #     texturefile = "gfx//interface//great_projects//.dds"
+    # }
+}
+
+spriteTypes = { #fromBFE
+
+    spriteType = {
+        name = "GFX_great_project_BFE_Szinyugang" 
+        texturefile = "gfx//interface//great_projects//great_project_grand_canal.dds"
+    }
+
+    spriteType = {
+        name = "GFX_great_project_BFE_Zhaoming" 
+        texturefile = "gfx//interface//great_projects//great_project_forbidden_city.dds"
+    }
+
+    spriteType = {
+        name = "GFX_great_project_BFE_mage_school" 
+        texturefile = "gfx//interface//great_projects//great_project_erdene_zuu.dds"
+    }
+
+    spriteType = {
+        name = "GFX_great_project_BFE_artificer_school" 
+        texturefile = "gfx//interface//great_projects//great_project_jokhang_temple.dds"
+    }
+
+    spriteType = {
+        name = "GFX_great_project_BFE_Tianlou" 
+        texturefile = "gfx//interface//great_projects//great_project_the_grand_palace.dds"
+    }
+
+    spriteType = {
+        name = "GFX_great_project_BFE_Greatwall_1" 
+        texturefile = "gfx//interface//great_projects//great_project_the_great_wall_of_china.dds"
+    }
+
+    spriteType = {
+        name = "GFX_great_project_BFE_Greatwall_2" 
+        texturefile = "gfx//interface//great_projects//great_project_the_great_wall_of_china.dds"
+    }
+
+    spriteType = {
+        name = "GFX_great_project_BFE_Linyuan" 
+        texturefile = "gfx//interface//great_projects//great_project_Kyoto.dds"
+    }
+
+    spriteType = {
+        name = "GFX_great_project_BFE_Jiangdu" 
+        texturefile = "gfx//interface//great_projects//great_project_sankin_kotai_palaces.dds"
+    }
+
+    spriteType = {
+        name = "GFX_great_project_BFE_Hubao" 
+        texturefile = "gfx//interface//great_projects//great_project_himeji_castle.dds"
     }
 }
-# spriteTypes = {
-# 	spriteType = {
-#         name = "GFX_great_project_prov_infrastructure"	
-#         texturefile = "gfx//interface//great_projects//great_project_infrastructure.dds"
-#     }
-# }
-# spriteTypes = {
-# 	spriteType = {
-#         name = "GFX_great_project_prov_infrastructure"	
-#         texturefile = "gfx//interface//great_projects//great_project_infrastructure.dds"
-#     }
-# }

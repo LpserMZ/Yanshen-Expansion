@@ -28,3 +28,8 @@ save_global_event_target_as = feiten_or_was_feiten_target
 	}
 	add_ruler_personality = entrepreneur_personality
 }
+
+add_country_modifier = {
+	name = Y20_feiten_exploration
+	duration = -1
+}

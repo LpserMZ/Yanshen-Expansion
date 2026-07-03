@@ -373,14 +373,27 @@ YE_jinjian_rpblc_5 = {
 			
 		} 
 		provinces_to_highlight = {
+			owned_by = Y85
 		} 
 
 		trigger = {
-
+			Y85 = {
+				has_opinion = {
+					who = ROOT
+					value = 200
+				}
+				trust = { who = ROOT value = 70 }
+			}
 		} 
 
 		effect = {
-
+			zx4_area = {
+				type = all
+				add_permanent_claim = Y85
+			}
+			generic_increase_of_racial_tolerance_effect = { race = kobold small = yes }
+			add_dip_power = 50
+			custom_tooltip = YE_jinjian_rpblc_5_1_tooltip
 		} 
 	}
 	YE_jinjian_rpblc_5_2 = {
@@ -390,14 +403,70 @@ YE_jinjian_rpblc_5 = {
 			
 		} 
 		provinces_to_highlight = {
+			owned_by = Y26
 		} 
 
 		trigger = {
-
+			OR = {
+				AND = {
+					Y26 = {
+						has_opinion = {
+							who = ROOT
+							value = 150
+						}
+					}
+					alliance_with = Y26	
+				}
+				has_spy_network_in = {
+					who = Y26
+					value = 45
+				}
+				Y26 = {
+					exists = no
+				}
+			}
 		} 
 
 		effect = {
-
+			if = {
+				limit = {
+					Y26 = {
+						has_opinion = {
+							who = ROOT
+							value = 150
+						}
+					}
+					alliance_with = Y26	
+				}
+				set_country_flag = huxian_senator_in_lanjinhui
+				custom_tooltip = YE_jinjian_rpblc_5_2_peace_tooltip
+			}
+			else_if = {
+				limit = {
+					has_spy_network_in = {
+						who = Y26
+						value = 45
+					}
+				}
+				custom_tooltip = YE_jinjian_rpblc_5_2_spy_tooltip
+				add_country_modifier = {
+					name = distinction_between_huxian_and_human
+					duration = -1
+				}
+				mulim_area = {
+					type = all
+					add_permanent_claim = ROOT 
+				}
+				Y26 = {
+					add_opinion = {
+						who = ROOT
+						modifier = scornfully_insulted
+					}
+				}
+			}
+			else = {
+				custom_tooltip = YE_jinjian_rpblc_5_2_preview_tooltip
+			}
 		} 
 	}
 	YE_jinjian_rpblc_5_3 = {

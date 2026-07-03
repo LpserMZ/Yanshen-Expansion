@@ -261,6 +261,15 @@ YE_baiyi_3 = {
 		effect = { 
 			add_prestige = 15
 			add_war_exhaustion = -2
+			if = {
+				limit = {
+					ai = yes
+				}
+				add_country_modifier = {
+					name = YB8_ai_strengthen
+					duration = -1
+				}
+			}
 		}
 	}
 

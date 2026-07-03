@@ -35,5 +35,10 @@ historical_friend = Y85 #Balrijin
 		siege = 5
 		trait = frontline_holder_personality
 	}
-}
 
+	
+}
+1444.11.1 = {
+	set_country_flag = issue_restrict_nobles_0_flag
+	set_country_flag = development_qingtong_city_0_flag
+}

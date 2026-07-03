@@ -374,3 +374,7 @@ indian_pacific_sea_superregion = {
 north_pacific_sea_superregion = {
 	
 }
+
+xianzhong_superregion = {
+	xianzhong_region
+}

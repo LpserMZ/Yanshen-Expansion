@@ -100,4 +100,29 @@ country_event = { #清武战略
 		}
 	}
 }
+country_event = { #模板事件（请修改标题）
+	id = YE_bianfang.4
+	title = YE_bianfang.4.T
+	desc = YE_bianfang.4.D
+	picture = GREAT_SPIRIT_YANHE_eventPicture
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	trigger = {
+	}
+
+	option = {
+		name = YE_bianfang.4.a
+		ai_chance = { factor = 1 }
+		# 在此添加效果
+	}
+	option = {
+		name = YE_bianfang.4.b
+		ai_chance = { factor = 1 }
+		# 在此添加效果
+		add_stability = -1
+		
+	}
+}
 			

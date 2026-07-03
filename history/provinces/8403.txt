@@ -1,0 +1,10 @@
+add_core = YC1
+owner = YC1
+base_tax = 1
+base_manpower = 1
+base_production = 1
+culture = xianzhong_yan
+trade_goods = damestear
+religion = accretive_path
+controller = YC1
+is_city = no

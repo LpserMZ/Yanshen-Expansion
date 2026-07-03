@@ -206,3 +206,42 @@ YanShen_industralization = {
 	local_development_cost_modifier = -0.10
 	trade_goods_size_modifier = 0.10
 }
+
+chengyang_college_1 = { #乘羊书院-青同-1 
+	local_development_cost = -0.25
+	picture = "chengyang_college"
+}
+chengyang_college_2 = { #乘羊书院-青同-2 
+	local_development_cost = -0.50
+	local_defensiveness = 0.05
+	picture = "chengyang_college"
+}
+chengyang_college_3 = { #乘羊书院-青同-3 
+	local_development_cost = -0.75
+	local_defensiveness = 0.10
+	picture = "chengyang_college"
+}
+chengyang_college_4 = { #乘羊书院-青同-4 
+	local_development_cost = -1
+	local_defensiveness = 0.15
+	picture = "chengyang_college"
+}
+
+rutual_xia_engineering_team = { #乡侠工程队
+	local_development_cost = -0.15
+	local_build_time = -0.10
+	local_build_cost = -0.10
+	picture = "rutual_xia_engineering_team"
+}
+
+additional_investment_in_dev_territory = {
+	local_development_cost_modifier = -0.10
+	local_tax_modifier = -0.50
+}
+
+huxian_senator_in_lanjinhui = {
+	parliament_backing_chance = 0.05
+}
+distinction_between_huxian_and_human = {
+	monthly_soilder_fervor = 0.25
+}

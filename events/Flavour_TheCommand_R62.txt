@@ -7599,12 +7599,26 @@ country_event = { #Sir Revolt End - Command Victory 命令战胜
 						region = wuxun_region
 					}
 					truce_with = ROOT
+					NOT = { tag = Y89 } # 不是远西
 				} 
 				every_owned_province = {
 					add_core = ROOT
 					cede_province = ROOT
 				}
 				
+			}
+
+			YB8 = { #修bug
+				every_owned_province = {
+					add_core = ROOT
+					cede_province = ROOT
+				}
+			}
+			YB1 = { #修bug
+				every_owned_province = {
+					add_core = ROOT
+					cede_province = ROOT
+				}
 			}
 			##################################
 		}

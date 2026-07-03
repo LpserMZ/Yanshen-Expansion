@@ -84,7 +84,11 @@ lanjinhui_military_government = {
 	allow_normal_conversion = no
 	lock_level_when_selected = yes
 	potential = {
-		tag = Y05
+		OR = {
+			tag = Y05
+			was_tag = Y05
+		}
+		
 		OR = {
 			has_reform = lanjinhui_military_government
 			have_had_reform = lanjinhui_military_government

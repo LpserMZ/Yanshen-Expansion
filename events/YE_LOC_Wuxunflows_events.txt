@@ -354,6 +354,19 @@ country_event = { # 9 受命北伐-白翼
 				}
 			}
 		}
+		if = {
+			limit = {
+				ai = yes
+			}
+			create_unit_forcelimit_percentage = {
+				type = infantry
+				force_limit_percentage = 0.5
+			}
+			create_unit_forcelimit_percentage = {
+				type = cavalry
+				force_limit_percentage = 0.25
+			}
+		}
 		
 		set_country_flag = YB8_obey_order_flag
 		R80 = {

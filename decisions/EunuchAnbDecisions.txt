@@ -19,7 +19,7 @@ country_decisions ={
 			remove_government_reform = overclan_voltoj_dynasties_mandate
 			remove_government_reform = tsukqiao_throne_of_lies_reform
 			remove_government_reform = tsukqiao_the_humble_domain_reform
-			remove_government_reform = 
+			
 			######
 			add_ruler_modifier = { 
 				name = eunuchs_purged
@@ -53,6 +53,7 @@ country_decisions ={
 						size = 2
 					}
 				}
+				
 			}
 			else = {
 				random_owned_province = {

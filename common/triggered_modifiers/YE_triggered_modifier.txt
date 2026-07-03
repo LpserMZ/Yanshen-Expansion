@@ -54,6 +54,7 @@ yanzhou_forbid_alliance_minor = {
 		}
 	}
 	diplomatic_upkeep = -3
+	ae_impact = -0.40
 	ai_weight = {
 		factor = 1000
 	}
@@ -101,6 +102,8 @@ yanzhou_forbid_alliance_medium = {
 		}
 	}
 	diplomatic_upkeep = -2
+	ae_impact = -0.25
+	province_warscore_cost = -0.10
 	ai_weight = {
 		factor = 1000
 	}
@@ -145,6 +148,8 @@ yanzhou_forbid_alliance_major = {
 		}
 	}
 	diplomatic_upkeep = -1
+	ae_impact = -0.10
+	province_warscore_cost = -0.25
 	ai_weight = {
 		factor = 1000
 	}

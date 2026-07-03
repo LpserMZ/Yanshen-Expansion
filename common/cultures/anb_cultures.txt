@@ -6283,6 +6283,9 @@ yan = {
 	}
 	yvying = { #御瀛
 
+	} 
+	xianzhong_yan = { #祆终烟
+
 	}
 
 	guyan = {

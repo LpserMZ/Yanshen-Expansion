@@ -1,13 +1,11 @@
 # 天地灵气
 
 custom_button = { #开关
-	name = "button_lingqi_mundi"
+	name = "button_lingqi_mundi_accretive"
 	tooltip = button_lingqi_mundi_tooltip
 	potential = {
 		ai = no
-		religion_group = halessi
-		NOT = { religion = mystic_accord }
-		NOT = { religion = neokttareum }
+		religion = accretive_path
 	}
 	trigger = { 
 		has_country_flag = LQmundi_initialized_flag
@@ -24,7 +22,72 @@ custom_button = { #开关
 		}
 	}
 }
-
+custom_button = { #开关
+	name = "button_lingqi_mundi_transmutative"
+	tooltip = button_lingqi_mundi_tooltip
+	potential = {
+		ai = no
+		religion = transmutative_path
+	}
+	trigger = { 
+		has_country_flag = LQmundi_initialized_flag
+	}
+	effect = {
+		if = { #关闭
+			limit = {
+				has_country_flag = lingqi_mundi_flag
+			}
+			clr_country_flag = lingqi_mundi_flag
+		}
+		else = { #开启
+			set_country_flag = lingqi_mundi_flag
+		}
+	}
+}
+custom_button = { #开关
+	name = "button_lingqi_mundi_devouring"
+	tooltip = button_lingqi_mundi_tooltip
+	potential = {
+		ai = no
+		religion = devouring_path
+	}
+	trigger = { 
+		has_country_flag = LQmundi_initialized_flag
+	}
+	effect = {
+		if = { #关闭
+			limit = {
+				has_country_flag = lingqi_mundi_flag
+			}
+			clr_country_flag = lingqi_mundi_flag
+		}
+		else = { #开启
+			set_country_flag = lingqi_mundi_flag
+		}
+	}
+}
+custom_button = { #开关
+	name = "button_lingqi_mundi_yan"
+	tooltip = button_lingqi_mundi_tooltip
+	potential = {
+		ai = no
+		religion = yan_path
+	}
+	trigger = { 
+		has_country_flag = LQmundi_initialized_flag
+	}
+	effect = {
+		if = { #关闭
+			limit = {
+				has_country_flag = lingqi_mundi_flag
+			}
+			clr_country_flag = lingqi_mundi_flag
+		}
+		else = { #开启
+			set_country_flag = lingqi_mundi_flag
+		}
+	}
+}
 
 ##学科总览窗口
 	custom_window = { #学科总览窗口

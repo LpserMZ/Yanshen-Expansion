@@ -3492,3 +3492,25 @@ south_atlantic_region = {
 
 	}
 }
+
+xianzhong_region = {
+	areas = {
+		xz1_area
+		xz2_area
+		xz3_area
+		xz4_area
+		xz5_area
+		xz6_area
+		xz7_area
+		xz8_area
+		xz9_area
+		xz10_area
+		xz11_area
+		xz12_area
+		xz13_area
+		xz14_area
+		xz15_area
+		xz16_area
+		xz17_area
+	}
+}

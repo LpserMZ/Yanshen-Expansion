@@ -1,4 +1,4 @@
-custom_button = { #填充人口
+custom_button = { #开发领土
 	name = "prov_button_SLOT5_migrate_pop"
 	tooltip = prov_button_SLOT5_migrate_pop_tooltip
 	potential = { #与地方组织mushihui的trigger保持一致
@@ -8,12 +8,149 @@ custom_button = { #填充人口
 	}
 	trigger = { 
 		holy_order = mushihui
-		NOT = { area = liuminxiang_area }
+		owner = {
+			owns = 8117
+		}
+		if = {
+			limit = {
+				NOT = {
+					owner = {
+						has_government_power = {
+							mechanic_type = YE_blue_dream_rural_xia_power
+							power_type = rural_xia_power
+							value = 10
+						}
+					}
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = rural_xia_power_unfilled_tooltip
+				always = no
+			}
+		}
+		if = {
+			limit = {
+				8117 = {
+					OR = {
+						NOT = { base_tax = 8 }
+						NOT = { base_production = 8 }
+						NOT = { base_manpower = 8 }
+					}
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = source_prov_dev_unfilled_tooltip
+				always = no
+			}
+		}
+
+		if = {
+			limit = {
+				owner = {
+					NOT = { has_country_flag = allow_prov_button_SLOT5_migrate_pop_1_flag }
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = prov_button_SLOT5_migrate_pop_1_unfilled_tooltip
+				always = no
+			}
+		}
+		else_if = { #小于18
+			limit = {
+				NOT = {
+					development = 18
+				}
+			}
+			hidden_trigger = {
+				always = yes
+			}
+		}
+		else = { #大于18
+			#直属州中的任意省份可以
+			if = {
+				limit = {
+					owner = {
+						NOT = { has_country_flag = allow_prov_button_SLOT5_migrate_pop_2_flag }
+					}
+				}
+				custom_trigger_tooltip = {
+					tooltip = prov_button_SLOT5_migrate_pop_2_unfilled_tooltip
+					always = no
+				}
+			}
+			else_if = {
+				limit = {
+					any_province_in_state = {
+						development = 18
+						NOT = { has_province_modifier = rutual_xia_engineering_team }
+						# 8117 = { development = THIS }
+					}
+				}
+				hidden_trigger = {
+					always = yes
+				}
+			}
+			else = {
+				custom_trigger_tooltip = {
+					tooltip = state_condition_unfilled_tooltip
+					always = no
+				}
+			}
+			 
+		}
 	}
 	effect = {
-		owner = {
-			add_treasury = 1
+		if = { #小于18
+			limit = {
+				NOT = {
+					development = 18
+				}
+			}
+			custom_tooltip = migrate_pop_effect_18_minus_tooltip
+			8117 = {
+				add_base_tax = -1
+				add_base_production = -1
+				add_base_manpower = -1
+			}
+			add_base_tax = 1
+			add_base_production = 1
+			add_base_manpower = 1
+		}
+		else = { #达到18
+			custom_tooltip = migrate_pop_effect_18_plus_tooltip
+			area = {
+				limit = {
+					development = 18
+					NOT = { has_province_modifier = rutual_xia_engineering_team }
+					# 8117 = { development = THIS }
+				}
+				add_province_modifier = {
+					name = rutual_xia_engineering_team
+					duration = 1825
+				}
+			}
 		}
 		
+		if = {
+			limit = {
+				has_province_modifier = additional_investment_in_dev_territory
+			}
+			owner = {
+				add_government_power = {
+					mechanic_type = YE_blue_dream_rural_xia_power
+					power_type = rural_xia_power
+					value = -5
+				}
+			}			
+		}
+		else = {
+			owner = {
+				add_government_power = {
+					mechanic_type = YE_blue_dream_rural_xia_power
+					power_type = rural_xia_power
+					value = -10
+				}
+			}
+		}
 	}
 }
