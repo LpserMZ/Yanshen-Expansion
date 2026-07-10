@@ -104,6 +104,8 @@ lanjinhui_military_government = {
 		manpower_recovery_speed = 0.15
 		province_warscore_cost = -0.10
 		max_absolutism = -10
+		parliament_effect_duration = -6
+		parliament_backing_chance = 0.25
 	}
 	effect = {}
 	government_abilities = {

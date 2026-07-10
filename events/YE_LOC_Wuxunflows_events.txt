@@ -366,6 +366,17 @@ country_event = { # 9 受命北伐-白翼
 				type = cavalry
 				force_limit_percentage = 0.25
 			}
+
+			R94 = {
+				every_owned_province = {
+					add_permanent_claim = ROOT
+				}
+			}
+			R96 = {
+				every_owned_province = {
+					add_permanent_claim = ROOT
+				}
+			}
 		}
 		
 		set_country_flag = YB8_obey_order_flag

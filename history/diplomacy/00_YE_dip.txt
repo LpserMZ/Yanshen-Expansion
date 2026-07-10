@@ -1,0 +1,15 @@
+dependency = {	#金户向鬼居朝贡
+	subject_type = tributary_state_anb	
+	first = Y01
+	second = V21
+	start_date = 1444.1.1
+	end_date = 1644.4.22
+}
+
+dependency = { #搬山向江流寺
+	subject_type = "daimyo_xiaken_vassal"
+	first = Y28
+	second = YC2
+	start_date = 1444.11.11
+	end_date = 1573.7.1
+}

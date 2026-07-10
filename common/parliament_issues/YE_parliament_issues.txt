@@ -77,9 +77,12 @@ LJH_issue_enforce_noble_abolishment = { #ctgry 4
 	}
 	effect = {
 		custom_tooltip = issue_enforce_noble_abolishment_tooltip
-		every_owned_province = {
-			add_nationalism = -5
+		hidden_effect = {
+			every_owned_province = {
+				add_nationalism = -5
+			}
 		}
+		
 	}
 	modifier = {
 		stability_cost_modifier = 0.10
@@ -491,18 +494,33 @@ LJH_issue_union_of_beidugang = { #ctgry 2
 	category = 2
 
 	allow = {
-		always = no #triggered only
+		had_country_flag = {
+			flag = commonwealth_of_lanjin_and_beidugang_flag
+			days = 5475
+		}
+		any_subject_country = {
+			has_country_flag = member_of_commonwealth_of_lanjin_and_beidugang_flag
+		}
 	}
 	effect = {
-		inherit = Y15
+		every_subject_country = {
+			limit = {
+				has_country_flag = member_of_commonwealth_of_lanjin_and_beidugang_flag
+			}
+			PREV = {
+				inherit = PREV
+			}
+		}
+		add_dip_power = -100
+		clr_country_flag = commonwealth_of_lanjin_and_beidugang_flag
 	}
 	modifier = {
 		ae_impact = 0.10
 	}
 	chance = {
-		factor = 1
+		factor = 1000
 	}
 	ai_will_do = {
-		factor = 1
+		factor = 1000
 	}
 }

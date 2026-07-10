@@ -1,7 +1,7 @@
 #Country Name: Please see filename.
 
 graphical_culture = elvengfx
-color = { 81 162 201 }
+color = { 19 96 135 }#MAP     #{ 81 162 201 }#FLAG
 historical_idea_groups = {
 	aristocracy_ideas	
 	economic_ideas

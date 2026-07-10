@@ -126,6 +126,75 @@ on_province_owner_change = {
 	}
 }
 
+on_new_monarch = {
+	if = {
+		limit = {
+			tag = Y05
+			has_country_flag = dengqinwen_supporters_in_lanjinhui_flag
+			Y15 = {
+				has_country_flag = dengqinwen_rule_beidugang_flag
+			}
+		}
 
+		if = {
+			limit = {
+				Y15 = { ai = no }
+				Y05 = { ai = yes }
+			}
+			Y15 = {
+				country_event = {
+					id = YE_GRY.53
+					days = 3
+				}
+			}
+		}
+		else = {
+			country_event = {
+				id = YE_GRY.53
+				days = 3
+			}		
+		}
+		
+	}
 
+}
 
+# province
+# root = location, from = winning country
+on_siege_lost_province =  {
+	if = {
+		limit = {
+			is_capital_of = Y17
+			owner = {
+				is_in_war = {
+					attackers = FROM
+					casus_belli = cb_imperial
+				}
+			}
+		}
+
+		if = {
+			limit = {
+				owner = {
+					is_in_war = {
+						attacker_leader = Y15
+						casus_belli = cb_imperial
+					}
+				}
+			}
+			Y15 = { country_event = { id = YE_GRY.52 } }
+		}
+		else_if = {
+			limit = {
+				owner = {
+					is_in_war = {
+						attacker_leader = Y05
+						casus_belli = cb_imperial
+					}
+				}
+			}
+			Y05 = { country_event = { id = YE_GRY.52 } }
+		}
+
+	}
+}

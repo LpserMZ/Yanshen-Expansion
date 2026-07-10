@@ -2022,7 +2022,8 @@ wuxun_region = {
 		wx2_area
 		wx3_area
 		wx4_area
-		
+		wx5_area
+
 		khadisrapur_area
 		nakara_area
 		munlanan_area
@@ -3493,6 +3494,15 @@ south_atlantic_region = {
 	}
 }
 
+pugao_region ={
+	areas = {
+		pg1_area
+		pg2_area
+		pg3_area
+		pg4_area
+	}
+}
+
 xianzhong_region = {
 	areas = {
 		xz1_area
@@ -3512,5 +3522,7 @@ xianzhong_region = {
 		xz15_area
 		xz16_area
 		xz17_area
+
+		ye_test_area
 	}
 }

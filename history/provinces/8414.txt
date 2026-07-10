@@ -1,0 +1,21 @@
+owner = R83
+controller = R83
+add_core = R83
+culture = semifire_harpy
+religion = the_hunt
+
+hre = no
+
+base_tax = 1
+base_production = 1
+base_manpower = 1
+
+trade_goods = copper
+
+capital = ""
+
+is_city = yes
+add_permanent_province_modifier = {
+	name = dwarven_minority_coexisting_large
+	duration = -1
+}

@@ -1,0 +1,10 @@
+add_core = R11
+owner = R11
+culture = khedarid
+religion = high_philosophy
+controller = R11
+is_city = no
+trade_goods = wool
+base_tax = 2
+base_manpower = 2
+base_production = 1

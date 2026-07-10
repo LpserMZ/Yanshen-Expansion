@@ -1,0 +1,12 @@
+owner = Y63
+controller = Y63
+add_core = Y63
+culture = nephrite_dwarf
+religion = dwarven_pantheon
+hre = no
+base_tax = 1
+base_production = 1
+base_manpower = 1
+trade_goods = fungi
+is_city = yes
+

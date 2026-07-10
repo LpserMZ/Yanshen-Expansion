@@ -2710,386 +2710,590 @@ country_event = { #42 东洲属国管理
 	}
 }
 
+# 蓝巾与北渡
+country_event = { #43 来自天楼的敌意
+	id = YE_GRY.43
+	title = YE_GRY.43.T
+	desc = YE_GRY.43.D
+	picture = BAD_WITH_MONARCH_eventPicture
 
-# country_event = { #43
-# 	id = YE_GRY.43
-# 	title = YE_GRY.43.T
-# 	desc = YE_GRY.43.D
-# 	picture = BAD_WITH_MONARCH_eventPicture
+	fire_only_once = yes
+	trigger = {
+		tag = Y05
+		owns = 4868
+	}
+	immediate = {
+		hidden_effect = {
+			country_event = {
+				id = YE_GRY.44
+				days = 180
+				random = 365
+			}
+		}
+	}
+	option = {
+		name = YE_GRY.43.a
+		ai_chance = { factor = 1 }
+		add_historical_rival = Y19
+		Y19 = { add_historical_rival = ROOT }
+	}
+}
 
-# 	is_triggered_only = yes
+country_event = { #44 异域奇珍
+	id = YE_GRY.44
+	title = YE_GRY.44.T
+	desc = YE_GRY.44.D
+	picture = BAD_WITH_MONARCH_eventPicture
 
-# 	immediate = {
-# 	}
-# 	option = {
-# 		name = YE_GRY.43.a
-# 	}
-# }
-# country_event = { #44 
-# 	id = YE_GRY.44
-# 	title = YE_GRY.44.T
-# 	desc = YE_GRY.44.D
-# 	picture = BAD_WITH_MONARCH_eventPicture
+	fire_only_once = yes
+	is_triggered_only = yes
 
-# 	is_triggered_only = yes
+	trigger = {
+		Y15 = {
+			exists = yes
+			NOT = { war_with = ROOT }
+		}
+	}
+	immediate = {
+	}
+	option = { #回礼
+		name = YE_GRY.44.a
+		ai_chance = { factor = 1 }
+		add_treasury = -50
+		add_opinion = {
+			who = Y15
+			modifier = YE_COMMON_relation_improved
+		}
+		Y15 = {
+			country_event = { id = YE_GRY.45 }
+		}
+		if = {
+			limit = {
+				is_rival = Y15
+			}
+			remove_rival = Y15
+		}
+	}
+	option = { #表彰
+		name = YE_GRY.44.b
+		ai_chance = { factor = 0 }
+		add_treasury = 50
+	}
 
-# 	immediate = {
-# 	}
-# 	option = {
-# 		name = YE_GRY.44.a
-# 	}
-# }
-# country_event = { #45 
-# 	id = YE_GRY.45
-# 	title = YE_GRY.45.T
-# 	desc = YE_GRY.45.D
-# 	picture = BAD_WITH_MONARCH_eventPicture
+}
 
-# 	is_triggered_only = yes
+country_event = { #45 收到礼物
+	id = YE_GRY.45
+	title = YE_GRY.45.T
+	desc = YE_GRY.45.D
+	picture = BAD_WITH_MONARCH_eventPicture
 
-# 	immediate = {
-# 	}
-# 	option = {
-# 		name = YE_GRY.45.a
-# 	}
-# }
-# country_event = { #46
-# 	id = YE_GRY.46
-# 	title = YE_GRY.46.T
-# 	desc = YE_GRY.46.D
-# 	picture = BAD_WITH_MONARCH_eventPicture
+	fire_only_once = yes
+	is_triggered_only = yes
 
-# 	is_triggered_only = yes
+	trigger = {
+	}
+	immediate = {
+	}
+	option = {
+		name = YE_GRY.45.a
+		ai_chance = { factor = 1 }
+		add_treasury = 50
+		if = {
+			limit = {
+				is_rival = Y05
+			}
+			remove_rival = Y05
+		}
+	}
+	option = {
+		name = YE_GRY.45.b
+		ai_chance = { factor = 0 }
 
-# 	immediate = {
-# 	}
-# 	option = {
-# 		name = YE_GRY.46.a
-# 	}
-# }
-# country_event = { #47 
-# 	id = YE_GRY.47
-# 	title = YE_GRY.47.T
-# 	desc = YE_GRY.47.D
-# 	picture = BAD_WITH_MONARCH_eventPicture
+	}
+}
 
-# 	is_triggered_only = yes
+country_event = { #46 飞越天楼
+	id = YE_GRY.46
+	title = YE_GRY.46.T
+	desc = YE_GRY.46.D
+	picture = BAD_WITH_MONARCH_eventPicture
 
-# 	immediate = {
-# 	}
-# 	option = {
-# 		name = YE_GRY.47.a
-# 	}
-# }
-# country_event = { #48
-# 	id = YE_GRY.48
-# 	title = YE_GRY.48.T
-# 	desc = YE_GRY.48.D
-# 	picture = BAD_WITH_MONARCH_eventPicture
+	fire_only_once = yes
+	is_triggered_only = yes
+	important = yes
+	trigger = {
+	}
+	immediate = {
+	}
+	option = {
+		name = YE_GRY.46.a
+		ai_chance = { factor = 1 }
+		trigger = {
+			tag = Y05
+		}
+	}
+	option = {
+		name = YE_GRY.46.b
+		ai_chance = { factor = 1 }
+		trigger = {
+			tag = Y15
+		}
+	}
+	option = {
+		name = YE_GRY.46.c
+		ai_chance = { factor = 1 }
+		trigger = {
+			NOT = { tag = Y05 }
+			NOT = { tag = Y15 }
+		}
+	}
+	after = {
+		if = {
+			limit = {
+				Y15 = {
+					exists = yes
+				}
+			}
+			Y15 = {
+				country_event = {
+					id = YE_GRY.47
+				}
+			}
+		}
+	}
+}
 
-# 	is_triggered_only = yes
+country_event = { #47 邓钦文飞抵北渡港
+	id = YE_GRY.47
+	title = YE_GRY.47.T
+	desc = YE_GRY.47.D
+	picture = BAD_WITH_MONARCH_eventPicture
 
-# 	immediate = {
-# 	}
-# 	option = {
-# 		name = YE_GRY.48.a
-# 	}
-# }
-# country_event = { #49
-# 	id = YE_GRY.49
-# 	title = YE_GRY.49.T
-# 	desc = YE_GRY.49.D
-# 	picture = BAD_WITH_MONARCH_eventPicture
+	fire_only_once = yes
+	is_triggered_only = yes
 
-# 	is_triggered_only = yes
+	trigger = {
+		NOT = {
+			war_with = Y05
+		}
+	}
+	immediate = {
+	}
+	option = {
+		name = YE_GRY.47.a
+		ai_chance = { factor = 1 }
+		add_dip_power = 25
+		add_opinion = {
+			who = Y05
+			modifier = YE_COMMON_relation_improved
+		}
+		hidden_effect = {
+			country_event = {
+				id = YE_GRY.48
+			}
+		}
+		Y05 = {
+			country_event = {
+				id = YE_GRY.49
+			}
+		}
+	}
+	option = {
+		name = YE_GRY.47.b
+		ai_chance = { factor = 0 }
 
-# 	immediate = {
-# 	}
-# 	option = {
-# 		name = YE_GRY.49.a
-# 	}
-# }
+	}
+}
 
-# country_event = { #50 
-# 	id = YE_GRY.50
-# 	title = YE_GRY.50.T
-# 	desc = YE_GRY.50.D
-# 	picture = BAD_WITH_MONARCH_eventPicture
+country_event = { #48 邓的演讲
+	id = YE_GRY.48
+	title = YE_GRY.48.T
+	desc = YE_GRY.48.D
+	picture = BAD_WITH_MONARCH_eventPicture
 
-# 	is_triggered_only = yes
+	fire_only_once = yes
+	is_triggered_only = yes
 
-# 	immediate = {
-# 	}
-# 	option = {
-# 		name = YE_GRY.50.a
-# 	}
-# }
-# country_event = { #51  
-# 	id = YE_GRY.51
-# 	title = YE_GRY.51.T
-# 	desc = YE_GRY.51.D
-# 	picture = BAD_WITH_MONARCH_eventPicture
+	trigger = {
+	}
+	immediate = {
+	}
+	option = {
+		name = YE_GRY.48.a
+		ai_chance = { factor = 1 }
+		define_ruler = {
+			name = "Qinwen"
+			dynasty = "Deng"
+			adm = 5
+			dip = 6
+			mil = 2
+		}
+		set_country_flag = dengqinwen_rule_beidugang_flag
+	}
+	option = {
+		name = YE_GRY.48.b
+		ai_chance = { factor = 0 }
+	}
+}
 
-# 	is_triggered_only = yes
+country_event = { #49 邓留在北渡港
+	id = YE_GRY.49
+	title = YE_GRY.49.T
+	desc = YE_GRY.49.D
+	picture = BAD_WITH_MONARCH_eventPicture
 
-# 	immediate = {
-# 	}
-# 	option = {
-# 		name = YE_GRY.51.a
-# 	}
-# }
-# country_event = { #52 
-# 	id = YE_GRY.52
-# 	title = YE_GRY.52.T
-# 	desc = YE_GRY.52.D
-# 	picture = BAD_WITH_MONARCH_eventPicture
+	fire_only_once = yes
+	is_triggered_only = yes
 
-# 	is_triggered_only = yes
+	trigger = {
+	}
+	immediate = {
+	}
+	option = {
+		name = YE_GRY.49.a
+		ai_chance = { factor = 1 }
+		if = {
+			limit = {
+				alliance_with = Y15
+			}
+			custom_tooltip = YE_GRY_49_keep_alliance_tooltip
+		}
+		else = {
+			custom_tooltip = YE_GRY_49_create_alliance_tooltip
+			if = {
+				limit = {
+					ai = yes
+				}
+				create_alliance = Y15
+			}
+		}
+		set_country_flag = dengqinwen_supporters_in_lanjinhui_flag
+		
+	}
 
-# 	immediate = {
-# 	}
-# 	option = {
-# 		name = YE_GRY.52.a
-# 	}
-# }
-# country_event = { #53
-# 	id = YE_GRY.53
-# 	title = YE_GRY.53.T
-# 	desc = YE_GRY.53.D
-# 	picture = BAD_WITH_MONARCH_eventPicture
+	after = {
+		
+		hidden_effect = {
+			if = {
+				limit = {
+					OR = {
+						Y15 = { ai = no }
 
-# 	is_triggered_only = yes
+						AND = {
+							Y15 = { ai = no }
+							Y05 = { ai = no }
+						}
+					}
+					
+				}
+				Y15 = {
+					country_event = {
+						id = YE_GRY.50
+						days = 180
+						random = 180
+					}
+				}
+			}
+			else = {
+				country_event = {
+					id = YE_GRY.50
+					days = 180
+					random = 180
+				}
+			}
 
-# 	immediate = {
-# 	}
-# 	option = {
-# 		name = YE_GRY.53.a
-# 	}
-# }
-# country_event = { #54 
+		}
+	}
+}
+country_event = { #50 共谋古朔关
+	id = YE_GRY.50
+	title = YE_GRY.50.T
+	desc = YE_GRY.50.D
+	picture = BAD_WITH_MONARCH_eventPicture
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	trigger = {
+		Y05 = { alliance_with = Y15 }
+	}
+	immediate = {
+	}
+	option = {
+		name = YE_GRY.50.a
+		ai_chance = { factor = 1 }
+		trigger = {
+			truce_with = Y17
+		}
+		add_casus_belli = {
+			target = Y17
+			type = cb_imperial
+			months = 120
+		}
+	}
+	option = {
+		name = YE_GRY.50.b
+		ai_chance = { factor = 1 }
+		trigger = {
+			NOT = { truce_with = Y17 }
+		}
+		add_casus_belli = {
+			target = Y17
+			type = cb_imperial
+			months = 240
+		}
+		declare_war_with_cb = {
+  			who = Y17
+			casus_belli = cb_imperial
+		}
+	}
+	after = {
+		if = {
+			limit = {
+				tag = Y15
+			}
+			Y05 = {
+				country_event = { id = YE_GRY.51 }
+			}
+		}
+		if = {
+			limit = {
+				tag = Y05
+			}
+			Y15 = {
+				country_event = { id = YE_GRY.51 }
+			}
+		}
+	}
+}
+country_event = { #51 共约参战
+	id = YE_GRY.51
+	title = YE_GRY.51.T
+	desc = YE_GRY.51.D
+	picture = BAD_WITH_MONARCH_eventPicture
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	trigger = {
+		Y05 = { alliance_with = Y15 }
+	}
+	immediate = {
+	}
+	option = {
+		name = YE_GRY.51.a
+		ai_chance = { factor = 1 }
+		if = {
+			limit = {
+				tag = Y15
+			}
+			join_all_offensive_wars_of = Y05
+		}
+		if = {
+			limit = {
+				tag = Y05
+			}
+			join_all_offensive_wars_of = Y15
+		}
+		set_global_flag = divide_gushuoguan_flag
+	}
+	option = {
+		name = YE_GRY.51.b
+		ai_chance = { factor = 0 }
+		add_prestige = -1
+	}
+}
+
+country_event = { #52 瓜分古朔关-攻克古朔关首都后触发-仅盟主触发
+	id = YE_GRY.52
+	title = YE_GRY.52.T
+	desc = YE_GRY.52.D
+	picture = BAD_WITH_MONARCH_eventPicture
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	importance = yes
+
+	trigger = {
+		Y05 = { alliance_with = Y15 }
+	}
+	immediate = {
+		
+	}
+	option = {
+		name = YE_GRY.52.a
+		ai_chance = { factor = 1 }
+		if = {
+			limit = {
+				has_global_flag = divide_gushuoguan_flag
+			}
+			Y17 = {
+				every_owned_province = {
+					if = {
+						limit = {
+							area = jx4_area
+						}
+						cede_province = Y05
+					}
+					else_if = {
+						limit = {
+							area = jx5_area
+						}
+						cede_province = Y15
+					}
+					else_if = {
+						limit = {
+							area = beikyuan_area
+							PREV = {
+								is_in_war = {
+									attacker_leader = Y05
+									casus_belli = cb_imperial
+								}
+							}
+						}
+						cede_province = Y05
+					}
+					else_if = {
+						limit = {
+							area = beikyuan_area
+							PREV = {
+								is_in_war = {
+									attacker_leader = Y15
+									casus_belli = cb_imperial
+								}
+							}
+						}
+						cede_province = Y15
+					}
+				}
+
+			}
+			clr_global_flag = divide_gushuoguan_flag
+		}
+		else = {
+			Y17 = {
+				every_owned_province = {
+					if = {
+						limit = {
+							area = jx4_area
+						}
+						cede_province = ROOT
+					}
+					else_if = {
+						limit = {
+							area = jx5_area
+						}
+						cede_province = ROOT
+					}
+					else_if = {
+						limit = {
+							area = beikyuan_area
+						}
+						cede_province = ROOT
+					}
+				}
+			}
+		}
+	}
+}
+
+country_event = { #53 大总统-新任统治者出现时触发
+	id = YE_GRY.53
+	title = YE_GRY.53.T
+	desc = YE_GRY.53.D
+	picture = BAD_WITH_MONARCH_eventPicture
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	importance = yes
+
+	trigger = {
+		Y05 = { alliance_with = Y15 }
+	}
+	immediate = {
+		Y05 = {
+			clr_country_flag = dengqinwen_supporters_in_lanjinhui_flag
+		}
+		Y15 = {
+			clr_country_flag = dengqinwen_rule_beidugang_flag
+		}
+	}
+	option = {
+		name = YE_GRY.53.a
+		ai_chance = { factor = 1 }
+		if = {
+			limit = {
+				tag = Y05
+			}
+			create_subject = {
+				subject_type = vassal
+				subject = Y15
+			}
+			set_country_flag = commonwealth_of_lanjin_and_beidugang_flag
+			Y15 = {
+				set_country_flag = member_of_commonwealth_of_lanjin_and_beidugang_flag
+			}
+		}
+		else_if = {
+			limit = {
+				tag = Y15
+			}
+			create_subject = {
+				subject_type = vassal
+				subject = Y05
+			}
+			set_country_flag = commonwealth_of_lanjin_and_beidugang_flag
+			Y05 = {
+				set_country_flag = member_of_commonwealth_of_lanjin_and_beidugang_flag
+			}
+		}
+
+	}
+}
+
+
+# country_event = { #54
 # 	id = YE_GRY.54
 # 	title = YE_GRY.54.T
 # 	desc = YE_GRY.54.D
 # 	picture = BAD_WITH_MONARCH_eventPicture
 
-# 	is_triggered_only = yes
+# 	fire_only_once = yes
+# 	is_triggered_only = no
 
+# 	trigger = {
+# 	}
 # 	immediate = {
 # 	}
 # 	option = {
 # 		name = YE_GRY.54.a
+# 		ai_chance = { factor = 1 }
 # 	}
 # }
-# country_event = { #55 
+#  YE_GRY.54.T:0 ""
+#  YE_GRY.54.D:0 ""
+#  YE_GRY.54.a:0 ""
+
+# country_event = { #55
 # 	id = YE_GRY.55
 # 	title = YE_GRY.55.T
 # 	desc = YE_GRY.55.D
 # 	picture = BAD_WITH_MONARCH_eventPicture
 
+# 	fire_only_once = yes
 # 	is_triggered_only = yes
 
+# 	trigger = {
+# 	}
 # 	immediate = {
 # 	}
 # 	option = {
 # 		name = YE_GRY.55.a
+# 		ai_chance = { factor = 1 }
 # 	}
 # }
-# country_event = { #56
-# 	id = YE_GRY.56
-# 	title = YE_GRY.56.T
-# 	desc = YE_GRY.56.D
-# 	picture = BAD_WITH_MONARCH_eventPicture
-
-# 	is_triggered_only = yes
-
-# 	immediate = {
-# 	}
-# 	option = {
-# 		name = YE_GRY.56.a
-# 	}
-# }
-# country_event = { #57 
-# 	id = YE_GRY.57
-# 	title = YE_GRY.57.T
-# 	desc = YE_GRY.57.D
-# 	picture = BAD_WITH_MONARCH_eventPicture
-
-# 	is_triggered_only = yes
-
-# 	immediate = {
-# 	}
-# 	option = {
-# 		name = YE_GRY.57.a
-# 	}
-# }
-# country_event = { #58
-# 	id = YE_GRY.58
-# 	title = YE_GRY.58.T
-# 	desc = YE_GRY.58.D
-# 	picture = BAD_WITH_MONARCH_eventPicture
-
-# 	is_triggered_only = yes
-
-# 	immediate = {
-# 	}
-# 	option = {
-# 		name = YE_GRY.58.a
-# 	}
-# }
-# country_event = { #59
-# 	id = YE_GRY.59
-# 	title = YE_GRY.59.T
-# 	desc = YE_GRY.59.D
-# 	picture = BAD_WITH_MONARCH_eventPicture
-
-# 	is_triggered_only = yes
-
-# 	immediate = {
-# 	}
-# 	option = {
-# 		name = YE_GRY.59.a
-# 	}
-# }
-
-# country_event = { #60 
-# 	id = YE_GRY.60
-# 	title = YE_GRY.60.T
-# 	desc = YE_GRY.60.D
-# 	picture = BAD_WITH_MONARCH_eventPicture
-
-# 	is_triggered_only = yes
-
-# 	immediate = {
-# 	}
-# 	option = {
-# 		name = YE_GRY.60.a
-# 	}
-# }
-# country_event = { #61  
-# 	id = YE_GRY.61
-# 	title = YE_GRY.61.T
-# 	desc = YE_GRY.61.D
-# 	picture = BAD_WITH_MONARCH_eventPicture
-
-# 	is_triggered_only = yes
-
-# 	immediate = {
-# 	}
-# 	option = {
-# 		name = YE_GRY.61.a
-# 	}
-# }
-# country_event = { #62 
-# 	id = YE_GRY.62
-# 	title = YE_GRY.62.T
-# 	desc = YE_GRY.62.D
-# 	picture = BAD_WITH_MONARCH_eventPicture
-
-# 	is_triggered_only = yes
-
-# 	immediate = {
-# 	}
-# 	option = {
-# 		name = YE_GRY.62.a
-# 	}
-# }
-# country_event = { #63
-# 	id = YE_GRY.63
-# 	title = YE_GRY.63.T
-# 	desc = YE_GRY.63.D
-# 	picture = BAD_WITH_MONARCH_eventPicture
-
-# 	is_triggered_only = yes
-
-# 	immediate = {
-# 	}
-# 	option = {
-# 		name = YE_GRY.63.a
-# 	}
-# }
-# country_event = { #64 
-# 	id = YE_GRY.64
-# 	title = YE_GRY.64.T
-# 	desc = YE_GRY.64.D
-# 	picture = BAD_WITH_MONARCH_eventPicture
-
-# 	is_triggered_only = yes
-
-# 	immediate = {
-# 	}
-# 	option = {
-# 		name = YE_GRY.64.a
-# 	}
-# }
-# country_event = { #65 
-# 	id = YE_GRY.65
-# 	title = YE_GRY.65.T
-# 	desc = YE_GRY.65.D
-# 	picture = BAD_WITH_MONARCH_eventPicture
-
-# 	is_triggered_only = yes
-
-# 	immediate = {
-# 	}
-# 	option = {
-# 		name = YE_GRY.65.a
-# 	}
-# }
-# country_event = { #66
-# 	id = YE_GRY.66
-# 	title = YE_GRY.66.T
-# 	desc = YE_GRY.66.D
-# 	picture = BAD_WITH_MONARCH_eventPicture
-
-# 	is_triggered_only = yes
-
-# 	immediate = {
-# 	}
-# 	option = {
-# 		name = YE_GRY.66.a
-# 	}
-# }
-# country_event = { #67 
-# 	id = YE_GRY.67
-# 	title = YE_GRY.67.T
-# 	desc = YE_GRY.67.D
-# 	picture = BAD_WITH_MONARCH_eventPicture
-
-# 	is_triggered_only = yes
-
-# 	immediate = {
-# 	}
-# 	option = {
-# 		name = YE_GRY.67.a
-# 	}
-# }
-# country_event = { #68
-# 	id = YE_GRY.68
-# 	title = YE_GRY.68.T
-# 	desc = YE_GRY.68.D
-# 	picture = BAD_WITH_MONARCH_eventPicture
-
-# 	is_triggered_only = yes
-
-# 	immediate = {
-# 	}
-# 	option = {
-# 		name = YE_GRY.68.a
-# 	}
-# }
-# country_event = { #69
-# 	id = YE_GRY.69
-# 	title = YE_GRY.69.T
-# 	desc = YE_GRY.69.D
-# 	picture = BAD_WITH_MONARCH_eventPicture
-
-# 	is_triggered_only = yes
-
-# 	immediate = {
-# 	}
-# 	option = {
-# 		name = YE_GRY.69.a
-# 	}
-# }
-
-
+#  YE_GRY.55.T:0 ""
+#  YE_GRY.55.D:0 ""
+#  YE_GRY.55.a:0 ""

@@ -181,6 +181,7 @@ YE_baiyi_2 = {
 				area = munlanan_area
 				area = nakara_area
 				area = khadisrapur_area
+				area = wx5_area
 			}
 			NOT = {
 				owned_by = ROOT
@@ -205,6 +206,10 @@ YE_baiyi_2 = {
 				owned_by = ROOT
 			}
 			khadisrapur_area = {
+				type = all
+				owned_by = ROOT
+			}
+			wx5_area = {
 				type = all
 				owned_by = ROOT
 			}
@@ -310,6 +315,10 @@ YE_baiyi_3 = {
 				add_permanent_claim = ROOT
 			}
 			kradhungur_area = {
+				add_permanent_claim = ROOT
+			}
+
+			wx5_area = {
 				add_permanent_claim = ROOT
 			}
 

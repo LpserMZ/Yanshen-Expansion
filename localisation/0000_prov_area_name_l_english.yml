@@ -292,7 +292,12 @@
  PROV8291:0 "œƒŸS"
  PROV8292:0 "•µx"
  PROV8293:0 "–tQ"
-
+ PROV8294:0 "‰ssNm"
+ PROV8295:0 "ÀQ²m¿z"
+ PROV8296:0 "‰s‰lŸl"
+ PROV8297:0 "g™Ÿ7b"
+ PROV8298:0 ")YKN•NK„"
+ PROV8299:0 "àhkžâT"
  PROV8300:0 "?–ÒRfW^·V"
  PROV8301:0 "mR9hVyS"
  PROV8302:0 "Zi&O^šNS"
@@ -401,6 +406,13 @@
  PROV8405:0 "ÒRXX"
  PROV8406:0 "S²R"
  PROV8407:0 "¡r2–"
+ PROV8408:0 "S4l"
+ PROV8409:0 "|Qßv"
+ PROV8410:0 "œƒúR"
+ PROV8411:0 "TXów"
+ PROV8412:0 "û•±W"
+ PROV8413:0 ",dqS†˜"
+ PROV8414:0 "LˆØš­S"
 
  PROV_ADJ8001:0 "äQh"
  PROV_ADJ8002:0 "‡N"
@@ -695,7 +707,12 @@
  PROV_ADJ8291:0 "œƒŸS"
  PROV_ADJ8292:0 "•µx"
  PROV_ADJ8293:0 "–tQ"
-
+ PROV_ADJ8294:0 "‰ssNm"
+ PROV_ADJ8295:0 "ÀQ²m¿z"
+ PROV_ADJ8296:0 "‰s‰lŸl"
+ PROV_ADJ8297:0 "g™Ÿ7b"
+ PROV_ADJ8298:0 ")YKN•NK„"
+ PROV_ADJ8299:0 "àhkžâT"
  PROV_ADJ8300:0 "?–ÒRfW^·V"
  PROV_ADJ8301:0 "mR9hVyS"
  PROV_ADJ8302:0 "Zi&O^šNS"
@@ -804,7 +821,13 @@
  PROV_ADJ8405:0 "ÒRXX"
  PROV_ADJ8406:0 "S²R"
  PROV_ADJ8407:0 "¡r2–"
-
+ PROV_ADJ8408:0 "S4l"
+ PROV_ADJ8409:0 "|Qßv"
+ PROV_ADJ8410:0 "œƒúR"
+ PROV_ADJ8411:0 "TXów"
+ PROV_ADJ8412:0 "û•±W"
+ PROV_ADJ8413:0 ",dqS†˜"
+ PROV_ADJ8414:0 "LˆØš­S"
 
 
  suolungacha_area:0 "0t&OVåg"
@@ -886,6 +909,9 @@
  wx4_area:0 ")YŸS"
  wx4_area_name:0 ")YŸS"
  wx4_area_adj:0 ")YŸS"
+ wx5_area:0 "‰S"
+ wx5_area_name:0 "‰S"
+ wx5_area_adj:0 "‰S"
 
  zx1_area:0 "™ŸJl"
  zx1_area_name:0 "™ŸJl"
@@ -1079,6 +1105,19 @@
  xz17_area_name:0 "îrÃV"
  xz17_area_adj:0 "îrÃV"
 
+ pg1_area:0 ")YKN¾"
+ pg1_area_name:0 ")YKN¾"
+ pg1_area_adj:0 ")YKN¾"
+ pg2_area:0 "ofðN0W"
+ pg2_area_name:0 "ofðN0W"
+ pg2_area_adj:0 "ofðN0W"
+ pg3_area:0 "n™KN0k"
+ pg3_area_name:0 "n™KN0k"
+ pg3_area_adj:0 "n™KN0k"
+ pg4_area:0 "NaN"
+ pg4_area_name:0 "NaN"
+ pg4_area_adj:0 "NaN"
+
  ##################################################################
  wuxun_region:0 "fkTm"
  wuxun_region_name:0 "fkTm"
@@ -1115,6 +1154,10 @@
  xianzhong_region_name:0 "FyÈu"
  xianzhong_region_adj:0 "FyÈu"
 
+ pugao_region:0 ")Y­S²„Ái"
+ pugao_region_name:0 ")Y­S²„Ái"
+ pugao_region_adj:0 ")Y­S²„Ái"
+
  ##################################################################
  shenzhou_superregion:0 "‡ÞT"
  shenzhou_superregion_name:0 "‡ÞT"
@@ -1127,6 +1170,7 @@
  xianzhong_superregion:0 "FyÈu"
  xianzhong_superregion_name:0 "FyÈu"
  xianzhong_superregion_adj:0 "FyÈu"
+
 
 
 

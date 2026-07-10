@@ -25,3 +25,4 @@ YB7 = "countries/Colony_Yvying.txt"
 YB9 = "countries/Duhu_Xvanzhou.txt"
 
 YC1 = "countries/Xianzhong.txt"
+YC2 = "countries/Banshan.txt"

@@ -1,6 +1,28 @@
 namespace = YE_ljh
 
-country_event = { #模板
+# country_event = { #模板
+# 	id = YE_ljh.1
+# 	title = YE_ljh.1.T
+# 	desc = YE_ljh.1.D
+# 	picture = GREAT_SPIRIT_YANHE_eventPicture
+
+# 	fire_only_once = yes
+# 	is_triggered_only = yes
+
+# 	trigger = {
+# 	}
+
+# 	option = {
+# 		name = YE_ljh.1.a
+# 		ai_chance = { factor = 1 }
+# 	}
+# #本地化，必须空一个格开头	
+#  YE_ljh.1.T:0 ""
+#  YE_ljh.1.D:0 ""
+#  YE_ljh.1.a:0 ""
+# }
+
+country_event = { #定都
 	id = YE_ljh.1
 	title = YE_ljh.1.T
 	desc = YE_ljh.1.D
@@ -14,9 +36,24 @@ country_event = { #模板
 
 	option = {
 		name = YE_ljh.1.a
-		ai_chance = { factor = 1 }
+		ai_chance = { factor = 0 }
+		set_capital = 4930
+		add_mil_power = 75
+	}
+	option = {
+		name = YE_ljh.1.b
+		ai_chance = { factor = 3 }
+		set_capital = 8117
+		add_stability = 1
+	}
+	option = {
+		name = YE_ljh.1.c
+		ai_chance = { factor = 7 }
+		set_capital = 4868
+		add_core = 4868
 	}
 }
+
 country_event = { #空事件2
 	id = YE_ljh.2
 	title = YE_ljh.2.T
@@ -37,6 +74,11 @@ country_event = { #空事件2
 		name = YE_ljh.2.b
 		ai_chance = { factor = 1 }
 	}
+#本地化，必须空一个格开头	
+ YE_ljh.2.T:0 ""
+ YE_ljh.2.D:0 ""
+ YE_ljh.2.a:0 ""
+ YE_ljh.2.b:0 ""
 }
 country_event = { #空事件3
 	id = YE_ljh.3
@@ -58,6 +100,11 @@ country_event = { #空事件3
 		name = YE_ljh.3.b
 		ai_chance = { factor = 1 }
 	}
+#本地化，必须空一个格开头	
+ YE_ljh.3.T:0 ""
+ YE_ljh.3.D:0 ""
+ YE_ljh.3.a:0 ""
+ YE_ljh.3.b:0 ""
 }
 country_event = { #空事件4
 	id = YE_ljh.4
@@ -79,6 +126,11 @@ country_event = { #空事件4
 		name = YE_ljh.4.b
 		ai_chance = { factor = 1 }
 	}
+#本地化，必须空一个格开头	
+ YE_ljh.4.T:0 ""
+ YE_ljh.4.D:0 ""
+ YE_ljh.4.a:0 ""
+ YE_ljh.4.b:0 ""
 }
 country_event = { #空事件5
 	id = YE_ljh.5
@@ -100,4 +152,9 @@ country_event = { #空事件5
 		name = YE_ljh.5.b
 		ai_chance = { factor = 1 }
 	}
+#本地化，必须空一个格开头	
+ YE_ljh.5.T:0 ""
+ YE_ljh.5.D:0 ""
+ YE_ljh.5.a:0 ""
+ YE_ljh.5.b:0 ""
 }

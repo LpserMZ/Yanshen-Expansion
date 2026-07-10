@@ -1,14 +1,14 @@
 
-YB8 = { set_country_flag = allow_monument_suhuigong_flag }
-
-4884 = { set_province_flag = BFE_Szinyugang_flag }
-8038 = { set_province_flag = BFE_Zhaoming_flag }
-4981 = { clr_province_flag = BFE_mage_school_flag }
-4931 = { set_province_flag = BFE_mage_school_flag }
-4893 = { set_province_flag = BFE_artificer_school_flag }
-
-4921 = { set_province_flag = BFE_Greatwall_1_flag }
-4923 = { set_province_flag = BFE_Greatwall_2_flag }
-4951 = { set_province_flag = BFE_Linyuan_flag }
-
-4901 = { set_province_flag = BFE_Hubao_flag }
+# every_country = {
+# 	disband_all_units = yes
+# 	remove_country = THIS
+# }
+# destroy_great_project = {
+#     #type = tianling_tunnel
+# 	type = pugao_tunnel
+# }
+Y85 = {
+	change_country_color = {
+		country = ROOT
+	}
+}

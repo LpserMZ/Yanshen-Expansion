@@ -222,6 +222,7 @@ far_east_superregion = {
 
 vimdatrong_superregion = {
 	shuanghe_region
+	pugao_region
 	
 	thidinkai_region
 	bomdan_region

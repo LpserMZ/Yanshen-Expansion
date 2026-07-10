@@ -427,4 +427,5 @@ From;To;Type;Through;start_x;start_y;stop_x;stop_y;Comment
 8384;8376;land;1786;-1;-1;-1;-1;land
 8371;8370;land;1786;-1;-1;-1;-1;land
 8073;4837;sea;1370;-1;-1;-1;-1;sea
+5424;8411;canal;5424;-1;-1;-1;-1;canal
 -1;-1;;-1;-1;-1;-1;-1;-1;

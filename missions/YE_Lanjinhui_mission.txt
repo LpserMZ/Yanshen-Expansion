@@ -164,18 +164,19 @@ YE_jinjian_rpblc_3 = {
 	YE_jinjian_rpblc_3_1 = {
 		icon = mission_asian_city
 		position = 1
-		required_missions = { 
-			
-		} 
+		required_missions = {} 
 		provinces_to_highlight = {
+			province_id = 4868
 		} 
 
 		trigger = {
-
+			owns = 4868
 		} 
 
 		effect = {
-
+			country_event = {
+				id = YE_ljh.1
+			}
 		} 
 	}
 	YE_jinjian_rpblc_3_2 = {
@@ -185,14 +186,50 @@ YE_jinjian_rpblc_3 = {
 			YE_jinjian_rpblc_3_1
 		} 
 		provinces_to_highlight = {
+			owned_by = ROOT
+			has_seat_in_parliament = yes
 		} 
 
 		trigger = {
-
+			is_at_war = no
+			if = {
+				limit = {
+					ai = yes
+				}
+				num_of_owned_provinces_with = {
+					value = 4
+					has_seat_in_parliament = yes
+					num_of_times_improved = 1
+				}
+			}
+			else = {
+				num_of_owned_provinces_with = {
+					value = 7
+					has_seat_in_parliament = yes
+					num_of_times_improved = 1
+				}
+			}
+				
 		} 
 
 		effect = {
-
+			custom_tooltip = YE_jinjian_rpblc_3_2_tooltip
+			jw1_area = {
+				add_permanent_claim = ROOT
+			}
+			jianzhong_area = {
+				add_permanent_claim = ROOT
+			}
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						has_seat_in_parliament = yes
+					}
+					add_base_tax = 1
+					add_base_production = 1
+					add_base_manpower = 1
+				}
+			}
 		} 
 	}
 	YE_jinjian_rpblc_3_3 = {
@@ -202,12 +239,21 @@ YE_jinjian_rpblc_3 = {
 			YE_jinjian_rpblc_3_2
 		} 
 		provinces_to_highlight = {
+			region = jianwu_region
+			NOT = { owned_by = ROOT }
 		} 
 
 		trigger = {
+			num_of_owned_provinces_with = {
+				value = 8
+				region = jianwu_region
+			}
 		} 
 
 		effect = {
+			jianwu_region = {
+				add_permanent_claim = ROOT
+			}
 		} 
 	}
 	YE_jinjian_rpblc_3_4 = {
@@ -217,13 +263,21 @@ YE_jinjian_rpblc_3 = {
 			YE_jinjian_rpblc_3_3
 		} 
 		provinces_to_highlight = {
+			region = jianwu_region
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 		} 
 
 		trigger = {
-
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 20
+				region = jianwu_region
+			}
 		} 
 
 		effect = {
+			add_treasury = 1
 		} 
 	}
 	YE_jinjian_rpblc_3_5 = {
@@ -233,13 +287,21 @@ YE_jinjian_rpblc_3 = {
 			YE_jinjian_rpblc_3_4
 		} 
 		provinces_to_highlight = {
+			region = jianwu_region
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 		} 
 
 		trigger = {
-
+			jianwu_region = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 		} 
 
 		effect = {
+			add_treasury = 1
 		} 
 	}
 	YE_jinjian_rpblc_3_6 = {
@@ -282,11 +344,14 @@ YE_jinjian_rpblc_4 = {
 		} 
 
 		trigger = {
-
+			custom_trigger_tooltip = {
+				tooltip = YE_jinjian_rpblc_4_1_trigger_tooltip
+				has_country_flag = issue_restrict_nobles_3_flag
+			}
 		} 
 
 		effect = {
-
+			start_debate = LJH_issue_enforce_noble_abolishment
 		} 
 	}
 	YE_jinjian_rpblc_4_2 = {
@@ -296,14 +361,59 @@ YE_jinjian_rpblc_4 = {
 			YE_jinjian_rpblc_3_1
 		} 
 		provinces_to_highlight = {
+			OR = {
+				area = liuminxiang_area
+				area = jx1_area
+				area = jx2_area
+			}
 		} 
 
 		trigger = {
-
+			is_institution_enabled = renaissance
+			stability = 2
+			liuminxiang_area = {
+				type = all
+				num_of_times_improved = 1
+			}
+			jx1_area = {
+				type = all
+				num_of_times_improved = 1
+			}
+			jx2_area = {
+				type = all
+				num_of_times_improved = 1
+			}	
 		} 
 
 		effect = {
-
+			if = {
+				limit = {
+					has_institution = renaissance
+				}
+				8117 = {
+					add_institution_embracement = {
+						which = renaissance
+						value = 100
+					}
+				}
+				4860 = {
+					add_institution_embracement = {
+						which = renaissance
+						value = 75
+					}
+				}
+				4862 = {
+					add_institution_embracement = {
+						which = renaissance
+						value = 75
+					}
+				}
+			}
+			else = {
+				add_adm_power = 75
+				add_dip_power = 75
+				add_mil_power = 75
+			}
 		} 
 	}
 	YE_jinjian_rpblc_4_3 = {
@@ -314,10 +424,71 @@ YE_jinjian_rpblc_4 = {
 		provinces_to_highlight = {
 		} 
 
-		trigger = {
+		trigger = { # 飞越天楼
+			OR = {
+				owns = 4871 #直接拥有
+
+				4871 = {
+					owned_by = Y15
+				}
+
+				4871 = {
+					owner = {
+						NOT = { tag = Y15 }
+						has_spy_network_from = {
+							who = ROOT
+							value = 25
+						}
+					}
+				}				
+			}	
 		} 
 
 		effect = {
+
+			if = {
+				limit = {
+					owns = 4871
+				}
+				add_stability = 1
+				4871 = {
+					owner = {
+						country_event = { id = YE_GRY.46 }
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					4871 = {
+						owned_by = Y15
+					}
+				}
+				add_prestige = 10
+				Y15 = {
+					country_event = { id = YE_GRY.46 }
+				}
+			}
+			else_if = {		
+				limit = {
+					4871 = {
+						owner = {
+							has_spy_network_from = {
+								who = ROOT
+								value = 25
+							}
+						}
+					}
+				}	
+				4871 = {
+					area = {
+						add_permanent_claim = ROOT
+					}
+					owner = {
+						add_stability = -1
+						country_event = { id = YE_GRY.46 }
+					}
+				}
+			}
 		} 
 	}
 	YE_jinjian_rpblc_4_4 = {
@@ -457,6 +628,10 @@ YE_jinjian_rpblc_5 = {
 					type = all
 					add_permanent_claim = ROOT 
 				}
+				lj6_area = {
+					type = all
+					add_permanent_claim = ROOT 
+				}
 				Y26 = {
 					add_opinion = {
 						who = ROOT
@@ -466,6 +641,20 @@ YE_jinjian_rpblc_5 = {
 			}
 			else = {
 				custom_tooltip = YE_jinjian_rpblc_5_2_preview_tooltip
+				mulim_area = {
+					type = all
+					add_permanent_claim = ROOT 
+				}
+				lj6_area = {
+					type = all
+					add_permanent_claim = ROOT 
+				}
+			}
+			8129 = {
+				add_permanent_claim = ROOT
+			}
+			4872 = {
+				add_permanent_claim = ROOT
 			}
 		} 
 	}
@@ -476,12 +665,72 @@ YE_jinjian_rpblc_5 = {
 			YE_jinjian_rpblc_5_2
 		} 
 		provinces_to_highlight = {
+			OR = {
+				area = mulim_area
+				area = jx6_area
+				province_id = 8129
+			}
 		} 
 
 		trigger = {
+			OR =  {
+				AND = {
+					mulim_area = {
+						type = all
+						owned_by = Y26
+					}
+					jx6_area = {
+						type = all
+						owned_by = Y26
+					}
+					Y26 = {
+						OR = {
+							alliance_with = ROOT
+							is_subject_of = ROOT
+						}
+					}
+				}
+				AND = {
+					mulim_area = {
+						type = all
+						owned_by = ROOT
+					}
+					jx6_area = {
+						type = all
+						owned_by = ROOT
+					}
+					owns = 8129
+				}
+			}
 		} 
 
 		effect = {
+			custom_tooltip = YE_jinjian_rpblc_5_3_tooltip
+			if = {
+				limit = {
+					mulim_area = {
+						type = all
+						owned_by = Y26
+					}
+					jx6_area = {
+						type = all
+						owned_by = Y26
+					}
+					Y26 = {
+						OR = {
+							alliance_with = ROOT
+							is_subject_of = ROOT
+						}
+					}
+				}
+				add_treasury = 1
+				add_historical_friend = Y26
+				Y26 = { add_historical_friend = ROOT }
+
+			}
+			else ={
+				add_treasury = 1
+			}
 		} 
 	}
 }
