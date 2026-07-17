@@ -9,3 +9,31 @@ employed_advisors_of_level = {
 		}
 	}
 }
+
+is_yan_rank_II_tag = { # 仅湮州二级tag
+	custom_trigger_tooltip = {
+		tooltip = is_yan_rank_II_tag_tooltip
+		OR = {
+			tag = Z66 # 大辉
+			tag = V23 # 路终
+			tag = Y98 # 大徐
+			tag = Z65 # 烟州
+			tag = YZ1 # 曦
+			tag = YZ2 # 罗
+			tag = YZ3 # 昭
+			tag = YZ4 # 金坚
+			tag = YZ5 # 海阴
+			# tag = XXX # 紫州
+		}
+	}	
+}
+
+is_yan_rank_III_tag = { # 湮州三级tag
+	custom_trigger_tooltip = {
+		tooltip = is_yan_rank_III_tag_tooltip
+		OR = {
+			tag = YZ7
+			tag = YZ8
+		}	
+	}
+}

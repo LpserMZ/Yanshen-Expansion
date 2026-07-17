@@ -186,7 +186,8 @@ LJH_issue_establish_engineering_department = { #ctgry 3
 #开发领土
 LJH_issue_development_qingtong_city = { #ctgry 5
 	category = 5
-
+	debate_duration = 1
+	backing_percentage = 0.25
 	allow = {
 		OR = {
 			has_country_flag = development_qingtong_city_0_flag
@@ -289,7 +290,8 @@ LJH_issue_development_qingtong_city = { #ctgry 5
 }
 LJH_issue_mirate_pop_1 = { #ctgry 5
 	category = 5
-
+	debate_duration = 1
+	backing_percentage = 0.25
 	allow = {
 		has_country_flag = development_qingtong_city_2_flag
 		NOT = { has_country_flag = allow_prov_button_SLOT5_migrate_pop_1_flag }
@@ -311,7 +313,8 @@ LJH_issue_mirate_pop_1 = { #ctgry 5
 }
 LJH_issue_mirate_pop_2 = { #ctgry 5
 	category = 5
-
+	debate_duration = 1
+	backing_percentage = 0.25
 	allow = {
 		has_country_flag = development_qingtong_city_4_flag
 		has_country_flag = allow_prov_button_SLOT5_migrate_pop_1_flag
@@ -334,7 +337,8 @@ LJH_issue_mirate_pop_2 = { #ctgry 5
 }
 LJH_issue_additional_investment_in_dev_territory = { #ctgry 1
 	category = 1
-
+	debate_duration = 1
+	backing_percentage = 0.25
 	allow = {
 		has_country_flag = allow_prov_button_SLOT5_migrate_pop_2_flag
 		is_state_core = 8117
@@ -380,7 +384,7 @@ LJH_issue_kobold_citizen_right = { #ctgry 2
 	category = 2
 
 	allow = {
-		mission_completed = YE_jinjian_rpblc_5_1
+		mission_completed = YE_lanjin_1_1
 		alliance_with = Y85
 	}
 	effect = {
@@ -407,7 +411,7 @@ LJH_issue_peace_integrate_golden_scale = { #ctgry 4
 	category = 4
 
 	allow = {
-		mission_completed = YE_jinjian_rpblc_5_1
+		mission_completed = YE_lanjin_1_1
 		alliance_with = Y85
 		Y85 = {
 			trust = { who = ROOT value = 100 }

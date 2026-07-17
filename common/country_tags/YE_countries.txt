@@ -7,9 +7,9 @@ YB6 = "countries/Sajiatuoye.txt"
 YB8 = "countries/Baiyi.txt"
 
 
-YA7 = "countries/Chili.txt"
-YA8 = "countries/Hehuan.txt"
-YA9 = "countries/Lingfang.txt"
+YA7 = "countries/Chili.txt" #未使用
+YA8 = "countries/Hehuan.txt" #未使用
+YA9 = "countries/Lingfang.txt" #暂未实装
 
 
 YA4 = "countries/Colony_Liuxv.txt"
@@ -26,3 +26,13 @@ YB9 = "countries/Duhu_Xvanzhou.txt"
 
 YC1 = "countries/Xianzhong.txt"
 YC2 = "countries/Banshan.txt"
+
+YZ1 = "countries/Xi.txt" 
+YZ2 = "countries/Luo.txt"
+YZ3 = "countries/Zhao.txt"
+YZ4 = "countries/Jinjian.txt" 
+YZ5 = "countries/Haiyin.txt"
+YZ6 = "countries/YanShen_republic.txt"
+YZ7 = "countries/Yan_imperial.txt"
+YZ8 = "countries/Yan_republic.txt"
+#YZ9 = "countries/.txt"

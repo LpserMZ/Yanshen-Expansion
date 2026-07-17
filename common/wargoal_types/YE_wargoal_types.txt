@@ -1,0 +1,49 @@
+superiority_yanzhou_unification = {
+	type = superiority
+	
+	attacker = {
+		badboy_factor = 0.25
+		prestige_factor = 1.5
+		peace_cost_factor = 0.5
+		
+		allowed_provinces = {
+			OR = {
+				superregion = yanshen_superregion
+				province_id = 8411
+				province_id = 8412
+			}
+			NOT = { area = ml_cave5_area }
+		}
+		
+		peace_options = {
+			po_demand_provinces
+		}
+		
+		country_desc = ALL_COUNTRIES_OCCUPY_YANZHOU
+		prov_desc = ALL_PROVS_YANZHOU
+	}
+	
+	defender = {
+		badboy_factor = 0.25
+		prestige_factor = 1.5
+		peace_cost_factor = 0.5
+		
+		allowed_provinces = {
+			OR = {
+				superregion = yanshen_superregion
+				province_id = 8411
+				province_id = 8412
+			}
+			NOT = { area = ml_cave5_area }
+		}
+		
+		peace_options = {
+			po_demand_provinces
+		}
+		
+		country_desc = ALL_COUNTRIES_OCCUPY_YANZHOU # ALL_CGROUP_COUNTRIES:0 "All Countries with Provinces of our Culture Group"
+		prov_desc = ALL_PROVS_YANZHOU # ALL_CHINESE_PROVS:0 "All Provinces in the Chinese Subcontinent"
+	}
+	
+	war_name = YANZHOU_UNIFICATION_WAR_NAME	# CHINESE_UNIFICATION_WAR_NAME:0 "$ORDER$$FIRST$-$SECOND$ war over Chinese Hegemony"
+}

@@ -536,7 +536,7 @@ province_event = { #11 落户于此
 	option = {
 		name = YE_GRY.11.a
 		ai_chance = { factor = 1 }
-		clear_global_event_target = loc_of_scholar_from_luojiang
+		#clear_global_event_target = loc_of_scholar_from_luojiang
 		add_permanent_province_modifier = {
 			name = taixuegong
 			duration = -1
@@ -2738,7 +2738,6 @@ country_event = { #43 来自天楼的敌意
 		Y19 = { add_historical_rival = ROOT }
 	}
 }
-
 country_event = { #44 异域奇珍
 	id = YE_GRY.44
 	title = YE_GRY.44.T
@@ -2781,7 +2780,6 @@ country_event = { #44 异域奇珍
 	}
 
 }
-
 country_event = { #45 收到礼物
 	id = YE_GRY.45
 	title = YE_GRY.45.T
@@ -2821,7 +2819,7 @@ country_event = { #46 飞越天楼
 
 	fire_only_once = yes
 	is_triggered_only = yes
-	important = yes
+	major = yes
 	trigger = {
 	}
 	immediate = {
@@ -2863,7 +2861,6 @@ country_event = { #46 飞越天楼
 		}
 	}
 }
-
 country_event = { #47 邓钦文飞抵北渡港
 	id = YE_GRY.47
 	title = YE_GRY.47.T
@@ -2905,7 +2902,6 @@ country_event = { #47 邓钦文飞抵北渡港
 
 	}
 }
-
 country_event = { #48 邓的演讲
 	id = YE_GRY.48
 	title = YE_GRY.48.T
@@ -2936,7 +2932,6 @@ country_event = { #48 邓的演讲
 		ai_chance = { factor = 0 }
 	}
 }
-
 country_event = { #49 邓留在北渡港
 	id = YE_GRY.49
 	title = YE_GRY.49.T
@@ -3017,6 +3012,7 @@ country_event = { #50 共谋古朔关
 
 	trigger = {
 		Y05 = { alliance_with = Y15 }
+		exists = Y17
 	}
 	immediate = {
 	}
@@ -3104,7 +3100,6 @@ country_event = { #51 共约参战
 		add_prestige = -1
 	}
 }
-
 country_event = { #52 瓜分古朔关-攻克古朔关首都后触发-仅盟主触发
 	id = YE_GRY.52
 	title = YE_GRY.52.T
@@ -3197,8 +3192,14 @@ country_event = { #52 瓜分古朔关-攻克古朔关首都后触发-仅盟主�
 			}
 		}
 	}
+	after = {
+		hidden_effect = {
+			Y18 = {
+				country_event = { id = YE_GRY.58 }
+			}
+		}
+	}
 }
-
 country_event = { #53 大总统-新任统治者出现时触发
 	id = YE_GRY.53
 	title = YE_GRY.53.T
@@ -3253,11 +3254,302 @@ country_event = { #53 大总统-新任统治者出现时触发
 	}
 }
 
+#统一战争
+country_event = { #54 案牍劳形
+	id = YE_GRY.54 
+	title = YE_GRY.54.T
+	desc = YE_GRY.54.D
+	picture = BAD_WITH_MONARCH_eventPicture
 
-# country_event = { #54
-# 	id = YE_GRY.54
-# 	title = YE_GRY.54.T
-# 	desc = YE_GRY.54.D
+	is_triggered_only = yes
+
+	trigger = {
+		overextension_percentage = 1.4
+		is_in_war = {
+			attacker_leader = THIS
+			casus_belli = cb_yanzhou_unification
+		}
+		NOT = {
+			has_country_modifier = gov_effeciency_decline
+		}
+		NOT = {
+			has_country_flag = YE_GRY_54_flag
+		}
+	}
+	immediate = {
+		set_country_flag = YE_GRY_54_flag
+	}
+	option = {
+		name = YE_GRY.54.a
+		ai_chance = { 
+			factor = 1 
+			modifier = {
+				factor = 2
+				overextension_percentage = 1.8
+			}
+			modifier = {
+				factor = 4
+				overextension_percentage = 2.4
+			}
+		}
+		random_war_enemy_country = {
+			limit = {
+				is_in_war = {
+					attacker_leader = ROOT
+					defender_leader = THIS
+					casus_belli = cb_yanzhou_unification
+				}
+			}
+			white_peace = ROOT
+			save_event_target_as = defender_country
+		}
+		event_target:defender_country = {
+			country_event = {
+				id = YE_GRY.55
+			}
+		}
+	}
+	option = {
+		name = YE_GRY.54.b
+		ai_chance = { factor = 1 }
+		if = {
+			limit = {
+				overextension_percentage = 1
+			}
+			add_country_modifier = {
+				name = gov_effeciency_decline
+				duration = 365
+			}
+		}
+		
+	}
+	after = {
+		clr_country_flag = YE_GRY_54_flag
+	}
+}
+country_event = { #55 #停战通知
+	id = YE_GRY.55
+	title = YE_GRY.55.T
+	desc = YE_GRY.55.D
+	picture = BAD_WITH_MONARCH_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+	}
+	immediate = {
+	}
+	option = {
+		name = YE_GRY.55.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+#烟中帛幡毁坏
+province_event = { #56 烟中帛幡毁坏
+	id = YE_GRY.56
+	title = YE_GRY.56.T
+	desc = YE_GRY.56.D
+	picture = BAD_WITH_MONARCH_eventPicture
+
+	major = yes
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	trigger = {
+		has_province_modifier = yanzhong_bofan_in_yanzhong #烟中
+		# OR = {
+		# 	has_province_modifier = yanzhong_bofan_in_yanzhong
+		# 	has_province_modifier = yanzhong_bofan_in_bolu
+		# }
+
+		NOT = { event_target:yanzhong_bofan_owner = { owns = 8289 } } #帛垆
+
+	}
+	immediate = {
+		hidden_effect = {
+			4859 = {
+				remove_province_modifier = yanzhong_bofan_in_yanzhong
+			}
+			8289 = {
+				remove_province_modifier = yanzhong_bofan_in_bolu
+			}
+		}
+	}
+	option = {
+		name = YE_GRY.56.a
+		ai_chance = { factor = 1 }
+		custom_tooltip = YE_GRY_56_tooltip
+	}
+}
+
+
+#祥女、天楼的毁灭
+country_event = { #57 祥女的传统？
+	id = YE_GRY.57
+	title = YE_GRY.57.T
+	desc = YE_GRY.57.D
+	picture = BAD_WITH_MONARCH_eventPicture
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	trigger = {
+		tag = Y18
+	}
+	immediate = {
+	}
+	option = {
+		name = YE_GRY.57.a
+		ai_chance = { factor = 1 }
+		add_stability = 1
+		capital_scope = {
+			add_devastation = 10
+			add_base_tax = -1
+			add_base_production = -1
+			add_base_manpower = -1
+		}
+	}
+}
+country_event = { #58 石军老兵
+	id = YE_GRY.58
+	title = YE_GRY.58.T
+	desc = YE_GRY.58.D
+	picture = BAD_WITH_MONARCH_eventPicture
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	trigger = {
+		tag = Y18
+		owns = 4869
+	}
+	immediate = {
+	}
+	option = {
+		name = YE_GRY.58.a
+		ai_chance = { factor = 1 }
+		4869 = {
+			add_permanent_province_modifier = {
+				name = stone_army_in_xiangnv
+				duration = -1
+			}
+		}
+	}
+	option = {
+		name = YE_GRY.58.b
+		ai_chance = { factor = 0 }
+	}
+	after = {
+		country_event = { id = YE_GRY.59 days = 730 random = 730 }
+	}
+}
+country_event = { #59 祥女的毁灭
+	id = YE_GRY.59
+	title = YE_GRY.59.T
+	desc = YE_GRY.59.D
+	picture = BAD_WITH_MONARCH_eventPicture
+
+	major = yes
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	trigger = {
+		tag = Y18
+		owns = 4869
+		4869 = {
+			has_province_modifier = stone_army_in_xiangnv
+		}
+	}
+	immediate = {
+	}
+	option = { 
+		name = YE_GRY.59.a
+		ai_chance = { factor = 1 }
+		4869 = {
+			add_base_tax = -10
+			add_base_production = -10
+			add_base_manpower = -5
+			add_devastation = 100
+		}
+		add_army_tradition = 20
+	}
+	option = {
+		name = YE_GRY.59.b
+		ai_chance = { factor = 1 }
+		4869 = {
+			set_base_tax = -5
+			set_base_production = -5
+			set_base_manpower = -10
+			add_devastation = 100
+			add_permanent_province_modifier = {
+				name = sorcerers_in_xiangnv
+				duration = -1
+			}
+		}
+	}
+	
+}
+
+province_event = { #60 天楼之灾
+	id = YE_GRY.60
+	title = YE_GRY.60.T
+	desc = YE_GRY.60.D
+	picture = BAD_WITH_MONARCH_eventPicture
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	trigger = {
+	}
+	immediate = {
+	}
+	option = {
+		name = YE_GRY.60.a
+		ai_chance = { factor = 1 }
+		add_base_tax = -15
+		add_base_production = -15
+		add_base_manpower = -15
+		add_devastation = 100
+	}
+}
+
+#扫灭群小
+country_event = { #61 存亡之急
+	id = YE_GRY.61
+	title = YE_GRY.61.T
+	desc = YE_GRY.61.D
+	picture = BAD_WITH_MONARCH_eventPicture
+
+	major = yes
+	#fire_only_once = yes
+	is_triggered_only = yes
+
+	trigger = {
+	}
+	immediate = {
+	}
+	option = {
+		name = YE_GRY.61.a
+		ai_chance = { factor = 1 }
+		add_treasury = 5000
+		add_manpower = 200
+		add_country_modifier = {
+			name = struggle_for_a_chance_to_live
+			duration = 10950
+		}
+		every_neighbor_province = {
+			add_permanent_claim = ROOT
+		}
+	}
+}
+
+#瓜分烟心
+# country_event = { #62
+# 	id = YE_GRY.62
+# 	title = YE_GRY.62.T
+# 	desc = YE_GRY.62.D
 # 	picture = BAD_WITH_MONARCH_eventPicture
 
 # 	fire_only_once = yes
@@ -3268,32 +3560,79 @@ country_event = { #53 大总统-新任统治者出现时触发
 # 	immediate = {
 # 	}
 # 	option = {
-# 		name = YE_GRY.54.a
+# 		name = YE_GRY.62.a
 # 		ai_chance = { factor = 1 }
 # 	}
 # }
-#  YE_GRY.54.T:0 ""
-#  YE_GRY.54.D:0 ""
-#  YE_GRY.54.a:0 ""
+#  YE_GRY.62.T:0 ""
+#  YE_GRY.62.D:0 ""
+#  YE_GRY.62.a:0 ""
 
-# country_event = { #55
-# 	id = YE_GRY.55
-# 	title = YE_GRY.55.T
-# 	desc = YE_GRY.55.D
+# country_event = { #63
+# 	id = YE_GRY.63
+# 	title = YE_GRY.63.T
+# 	desc = YE_GRY.63.D
 # 	picture = BAD_WITH_MONARCH_eventPicture
 
 # 	fire_only_once = yes
-# 	is_triggered_only = yes
+# 	is_triggered_only = no
 
 # 	trigger = {
 # 	}
 # 	immediate = {
 # 	}
 # 	option = {
-# 		name = YE_GRY.55.a
+# 		name = YE_GRY.63.a
 # 		ai_chance = { factor = 1 }
 # 	}
 # }
-#  YE_GRY.55.T:0 ""
-#  YE_GRY.55.D:0 ""
-#  YE_GRY.55.a:0 ""
+#  YE_GRY.63.T:0 ""
+#  YE_GRY.63.D:0 ""
+#  YE_GRY.63.a:0 ""
+
+# country_event = { #64
+# 	id = YE_GRY.64
+# 	title = YE_GRY.64.T
+# 	desc = YE_GRY.64.D
+# 	picture = BAD_WITH_MONARCH_eventPicture
+
+# 	fire_only_once = yes
+# 	is_triggered_only = no
+
+# 	trigger = {
+# 	}
+# 	immediate = {
+# 	}
+# 	option = {
+# 		name = YE_GRY.64.a
+# 		ai_chance = { factor = 1 }
+# 	}
+# }
+#  YE_GRY.64.T:0 ""
+#  YE_GRY.64.D:0 ""
+#  YE_GRY.64.a:0 ""
+
+# country_event = { #65
+# 	id = YE_GRY.65
+# 	title = YE_GRY.65.T
+# 	desc = YE_GRY.65.D
+# 	picture = BAD_WITH_MONARCH_eventPicture
+
+# 	fire_only_once = yes
+# 	is_triggered_only = no
+
+# 	trigger = {
+# 	}
+# 	immediate = {
+# 	}
+# 	option = {
+# 		name = YE_GRY.65.a
+# 		ai_chance = { factor = 1 }
+# 	}
+# }
+#  YE_GRY.65.T:0 ""
+#  YE_GRY.65.D:0 ""
+#  YE_GRY.65.a:0 ""
+
+
+# 蛰龙戟-大矛机关枪

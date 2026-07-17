@@ -895,19 +895,27 @@ YE_bianfang_5 = {
 					owned_by = Y21
 				}
 			}
-			Y21 = {
-				NOT = { num_of_cities = 26 } #小于26
-			}
-			4893 = {
-				num_of_units_in_province = {
-					who = ROOT
-					amount = 10
+			if = {
+				limit = {
+					ai = yes
 				}
+				is_year = 1480
 			}
-			Y21 = {
-				has_spy_network_from = {
-					who = ROOT
-					value = 60
+			else = {
+				Y21 = {
+					NOT = { num_of_cities = 26 } #小于26
+				}
+				4893 = {
+					num_of_units_in_province = {
+						who = ROOT
+						amount = 10
+					}
+				}
+				Y21 = {
+					has_spy_network_from = {
+						who = ROOT
+						value = 60
+					}
 				}
 			}
 		} 

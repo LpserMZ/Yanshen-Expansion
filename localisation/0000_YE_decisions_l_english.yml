@@ -1,4 +1,6 @@
 ﻿l_english:
+ YE_invest_academic_center_0_title:0 "only a test"
+ YE_invest_academic_center_0_desc:0 "nothing"
  YE_invest_academic_center_title:0 "•bDfR/g-NÃV"
  YE_invest_academic_center_desc:0 "[loc_of_scholar_from_luojiang.GetName]ZwÆ–†N'YybfRwÿÙ/fN*Nú^¾‹fR/g-NÃV„v)YPo‚:g0"
  
@@ -20,4 +22,33 @@
  switch_mission_branch_wuxun_Z66_tooltip:0 "Rbc0RfkTmR/eûN¡R"
  switch_mission_branch_moling_Z66_tooltip:0 "Rbc0RT›­SR/eûN¡R"
 
+ from_hui_rank_II_title:0 "'Y‰‹sg"
+ from_hui_rank_II_desc:0 ""
 
+ form_Xi_rank_II_title:0 "'Yæf‹sg"
+ form_Xi_rank_II_desc:0 ""
+
+ form_Luo_rank_II_title:0 "'YW‹sg"
+ form_Luo_rank_II_desc:0 ""
+
+ form_Zhao_rank_II_title:0 "'Y-f‹sg"
+ form_Zhao_rank_II_desc:0 ""
+
+ form_Jinjian_rank_II_title:0 "Ñ‘ZWqQŒT"
+ form_Jinjian_rank_II_desc:0 ""
+
+ form_Haiyin_rank_II_title:0 "wm4–Tw¦"
+ form_Haiyin_rank_II_desc:0 ""
+
+ form_Yan_imperial_rank_III_title:0 "ßp‡qQŒT"
+ form_Yan_imperial_rank_III_desc:0 ""
+
+ form_Yan_republic_rank_III_title:0 "'YnnqQŒT"
+ form_Yan_republic_rank_III_desc:0 ""
+
+ form_YanShen_republic_rank_IV_title:0 "'Ynn^ýV"
+ form_YanShen_republic_rank_IV_desc:0 ""
+
+ get_core_in_yanzhou_title:0 "kbmp²S"
+ get_core_in_yanzhou_desc:0 "ßuNb‰N„vgTNbÿˆmmpNb	grRnc¿R›Rÿ"
+ get_core_in_yanzhou_tooltip:0 "·ƒ—VhQßp„v§V8hÃV§!0"

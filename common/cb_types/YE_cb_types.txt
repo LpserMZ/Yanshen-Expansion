@@ -1,0 +1,35 @@
+cb_yanzhou_unification = {
+	valid_for_subject = no
+
+	prerequisites_self = { #限定tag
+		#is_free_or_tributary_trigger = yes
+		#has_government_attribute = has_unify_latin_cb
+		OR = { #与on_action条件一致-----on_siege_won_province
+			is_yan_rank_II_tag = yes
+			has_country_modifier = awareness_of_yan_nation 
+		}
+		
+	}
+
+	prerequisites = {
+		FROM = { #Applies against other powers in China unless they have the Mandate of Heaven
+			NOT = { is_subject_of = ROOT }
+			any_owned_province = {
+				OR = {
+					superregion = yanshen_superregion
+					province_id = 8411
+					province_id = 8412
+				}
+				NOT = { area = ml_cave5_area }
+			}
+		}
+	}
+
+	war_goal = superiority_yanzhou_unification
+}
+
+
+
+#  ALL_CGROUP_COUNTRIES:0 "所有拥有和我们同一文化组省份的国家"
+#  ALL_LATIN_PROVS:0 "所有位于法兰西地区、伊比利亚地区、意大利地区、不列颠地区的省份"
+#  LATIN_UNIFICATION_WAR_NAME:0 "$ORDER$$FIRST$-$SECOND$争夺拉丁霸权之战"

@@ -1,3 +1,4 @@
+
 on_startup = {
 	if = { #GRY初始化
 		limit = {
@@ -27,6 +28,8 @@ on_startup = {
 			set_country_flag = anti_eunuch_country
 		}
 		YC1 = { remove_country = yes }
+
+		Y18 = { country_event = { id = YE_GRY.57 days = 10 } }
 		
 		set_global_flag = YE_GRY_startup_gflag
 	}
@@ -124,6 +127,29 @@ on_province_owner_change = {
 		}
 		remove_core = YA1
 	}
+	if = {
+		limit = {
+			OR = {
+				province_id = 4859
+				province_id = 8289
+			}
+		}
+		4859 = {
+			owner = { save_global_event_target_as = yanzhong_bofan_owner }
+			province_event = {
+				id = YE_GRY.56
+				days = 1
+			}
+		}
+	}
+	if = {
+		limit = {
+			province_id = 4871
+		}
+		province_event = {
+			id = YE_GRY.60
+		}
+	}
 }
 
 on_new_monarch = {
@@ -159,10 +185,23 @@ on_new_monarch = {
 
 }
 
+on_battle_won_country = {
+	if = { # 士兵热情-战斗
+		limit = {
+			has_government_mechanic = YE_blue_dream_soilder_fervor
+		}
+		add_government_power = {
+			mechanic_type = YE_blue_dream_soilder_fervor
+			power_type = soilder_fervor
+			value = 0.50
+		}
+	}
+}
+
 # province
 # root = location, from = winning country
 on_siege_lost_province =  {
-	if = {
+	if = { # 瓜分古朔关
 		limit = {
 			is_capital_of = Y17
 			owner = {
@@ -196,5 +235,63 @@ on_siege_lost_province =  {
 			Y05 = { country_event = { id = YE_GRY.52 } }
 		}
 
+	}
+	if = { # 统一湮州
+		limit = {
+			OR = {
+				superregion = yanshen_superregion
+				province_id = 8411
+				province_id = 8412
+			}
+			NOT = { area = ml_cave5_area }
+		}
+
+		if = {
+			limit = {
+				controller = {
+					OR = { #与cb_yanzhou_unification条件一致
+						is_yan_rank_II_tag = yes
+						has_country_modifier = awareness_of_yan_nation 
+					}
+
+					OR = {
+						is_in_war = {
+							attacker_leader = this
+							casus_belli = cb_yanzhou_unification
+						}
+						AND = {
+							is_in_war = {
+								defender_leader = this
+								casus_belli = cb_yanzhou_unification
+							}
+							is_core = ROOT
+						}
+					}
+					NOT = { owns = ROOT } #NOT = { is_core = ROOT }	
+				}
+			}
+
+			cede_province = FROM
+			controller = {
+				country_event = {
+					id = YE_GRY.54 
+				}
+			}
+		}
+
+	}
+	if = { # 士兵热情-围城
+		limit = {
+			FROM = { has_government_mechanic = YE_blue_dream_soilder_fervor }
+			fort_level = 1
+		}
+		if = { limit = { fort_level = 8 } FROM = { add_government_power = { mechanic_type = YE_blue_dream_soilder_fervor power_type = soilder_fervor value = 4.00 } } }
+		else_if = { limit = { fort_level = 7 } FROM = { add_government_power = { mechanic_type = YE_blue_dream_soilder_fervor power_type = soilder_fervor value = 3.50 } } }
+		else_if = { limit = { fort_level = 6 } FROM = { add_government_power = { mechanic_type = YE_blue_dream_soilder_fervor power_type = soilder_fervor value = 3.00 } } }
+		else_if = { limit = { fort_level = 5 } FROM = { add_government_power = { mechanic_type = YE_blue_dream_soilder_fervor power_type = soilder_fervor value = 2.50 } } }
+		else_if = { limit = { fort_level = 4 } FROM = { add_government_power = { mechanic_type = YE_blue_dream_soilder_fervor power_type = soilder_fervor value = 2.00 } } }
+		else_if = { limit = { fort_level = 3 } FROM = { add_government_power = { mechanic_type = YE_blue_dream_soilder_fervor power_type = soilder_fervor value = 1.50 } } }
+		else_if = { limit = { fort_level = 2 } FROM = { add_government_power = { mechanic_type = YE_blue_dream_soilder_fervor power_type = soilder_fervor value = 1.00 } } }
+		else_if = { limit = { fort_level = 1 } FROM = { add_government_power = { mechanic_type = YE_blue_dream_soilder_fervor power_type = soilder_fervor value = 0.50 } } }		
 	}
 }

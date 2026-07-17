@@ -245,3 +245,87 @@ huxian_senator_in_lanjinhui = {
 distinction_between_huxian_and_human = {
 	monthly_soilder_fervor = 0.25
 }
+
+yanzhong_bofan_in_yanzhong = {
+	prestige = 0.10
+}
+yanzhong_bofan_in_bolu = {
+	local_unrest = -1
+}
+
+lanjinhui_fund_to_loc_industry = {
+	local_development_cost = -0.20
+	trade_goods_size_modifier = 0.10
+}
+lanjinhui_fund_buff_copper = {
+	global_regiment_cost = -0.10
+}
+lanjinhui_fund_buff_grain = {
+	manpower_recovery_speed = 0.10
+}
+lanjinhui_fund_buff_texile = {
+	global_prosperity_growth = 0.25
+}
+lanjinhui_fund_buff_commerce = {
+	advisor_cost = -0.10
+}
+lanjinhui_fund_buff_hard_liquor = {
+	recover_army_morale_speed = 0.05
+}
+
+establish_professional_army_for_lanjinhui = {
+	discipline = 0.05
+	yearly_army_professionalism = 0.01
+}
+lanjinhui_fortess_north_mount = {
+	local_defensiveness = 0.10
+	local_monthly_devastation = -0.25
+}
+
+lanjinhui_suppress_cavalry_with_infantry = {
+	shock_damage_received = -0.10
+	is_qizilbash_modifier = yes
+}
+lanjinhui_full_armoured_army = {
+	has_qizilbash = yes
+	allowed_qizilbash_fraction = 0.20
+	amount_of_qizilbash = 6
+}
+lanjinhui_free_jianwu = {
+	cavalry_cost = -0.10
+	manpower_in_accepted_culture_provinces = 0.05
+}	
+
+stone_army_in_xiangnv = {
+	local_manpower_modifier = 0.10
+}
+sorcerers_in_xiangnv = {
+	mages_mana_regen = 0.50
+}	
+
+lanjinhui_liberate_tianlou = {
+	monthly_splendor = 1
+	core_creation = -0.05
+}
+
+struggle_for_a_chance_to_live = {
+	land_maintenance_modifier = -0.90
+	manpower_recovery_speed = 2
+	regiment_recruit_speed = -0.90
+	infantry_cost = -0.90
+	cavalry_cost = -0.90
+	artillery_cost = -0.90
+	land_forcelimit = 100
+}
+
+
+
+
+
+
+
+
+
+
+
+

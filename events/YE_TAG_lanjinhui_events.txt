@@ -22,7 +22,7 @@ namespace = YE_ljh
 #  YE_ljh.1.a:0 ""
 # }
 
-country_event = { #定都
+country_event = { #1 定都
 	id = YE_ljh.1
 	title = YE_ljh.1.T
 	desc = YE_ljh.1.D
@@ -54,7 +54,7 @@ country_event = { #定都
 	}
 }
 
-country_event = { #空事件2
+country_event = { #2 经济恢复
 	id = YE_ljh.2
 	title = YE_ljh.2.T
 	desc = YE_ljh.2.D
@@ -69,18 +69,81 @@ country_event = { #空事件2
 	option = {
 		name = YE_ljh.2.a
 		ai_chance = { factor = 1 }
+		4862 = {
+			add_base_tax = 1
+			add_base_production = 1
+			add_base_manpower = 1
+			add_province_modifier = {
+				name = lanjinhui_fund_to_loc_industry
+				duration = 7300
+			}
+		}
+		add_country_modifier = {
+			name = lanjinhui_fund_buff_copper
+			duration = 7300
+		}
 	}
 	option = {
 		name = YE_ljh.2.b
 		ai_chance = { factor = 1 }
+		4930 = {
+			add_base_tax = 1
+			add_base_production = 1
+			add_base_manpower = 1
+			add_province_modifier = {
+				name = lanjinhui_fund_to_loc_industry
+				duration = 7300
+			}
+		}
+		add_country_modifier = {
+			name = lanjinhui_fund_buff_grain
+			duration = 7300
+		}
 	}
-#本地化，必须空一个格开头	
- YE_ljh.2.T:0 ""
- YE_ljh.2.D:0 ""
- YE_ljh.2.a:0 ""
- YE_ljh.2.b:0 ""
+	option = {
+		name = YE_ljh.2.c
+		ai_chance = { factor = 1 }
+		8117 = {
+			add_base_tax = 1
+			add_base_production = 1
+			add_base_manpower = 1
+			add_province_modifier = {
+				name = lanjinhui_fund_to_loc_industry
+				duration = 7300
+			}
+		}
+		add_country_modifier = {
+			name = lanjinhui_fund_buff_texile
+			duration = 7300
+		}
+	}
+	option = {
+		name = YE_ljh.2.d
+		ai_chance = { factor = 1 }
+		4868 = {
+			add_base_tax = 1
+			add_base_production = 1
+			add_base_manpower = 1
+			add_province_modifier = {
+				name = lanjinhui_fund_to_loc_industry
+				duration = 7300
+			}
+		}
+		add_country_modifier = {
+			name = lanjinhui_fund_buff_commerce
+			duration = 7300
+		}
+	}
+	after = {
+		hidden_effect = {
+			country_event = {
+				id = YE_ljh.3
+				days = 7
+			}
+		}
+	}
 }
-country_event = { #空事件3
+country_event = { #3 酒豪的经济理论
 	id = YE_ljh.3
 	title = YE_ljh.3.T
 	desc = YE_ljh.3.D
@@ -94,19 +157,27 @@ country_event = { #空事件3
 
 	option = {
 		name = YE_ljh.3.a
-		ai_chance = { factor = 1 }
+		ai_chance = { 
+			factor = 1 
+			modifier = {
+				factor = 5
+				has_country_modifier = lanjinhui_fund_buff_grain
+			}
+		}
+		add_treasury = -100
+		add_country_modifier = {
+			name = lanjinhui_fund_buff_hard_liquor
+			duration = -1
+		}
 	}
 	option = {
 		name = YE_ljh.3.b
 		ai_chance = { factor = 1 }
 	}
-#本地化，必须空一个格开头	
- YE_ljh.3.T:0 ""
- YE_ljh.3.D:0 ""
- YE_ljh.3.a:0 ""
- YE_ljh.3.b:0 ""
+
 }
-country_event = { #空事件4
+
+country_event = { #4 战争或和平
 	id = YE_ljh.4
 	title = YE_ljh.4.T
 	desc = YE_ljh.4.D
@@ -121,21 +192,287 @@ country_event = { #空事件4
 	option = {
 		name = YE_ljh.4.a
 		ai_chance = { factor = 1 }
+		set_country_flag = YE_lanjinhui_branch_I_flag
+		custom_tooltip = YE_ljh_4_branch_I_tooltip
+		swap_non_generic_missions = yes
+		jianwu_region = {
+			add_permanent_claim = ROOT
+		}
 	}
-	option = {
-		name = YE_ljh.4.b
-		ai_chance = { factor = 1 }
-	}
-#本地化，必须空一个格开头	
- YE_ljh.4.T:0 ""
- YE_ljh.4.D:0 ""
- YE_ljh.4.a:0 ""
- YE_ljh.4.b:0 ""
+	# option = { #未实装
+	# 	name = YE_ljh.4.b
+	# 	ai_chance = { factor = 1 }
+	# 	set_country_flag = YE_lanjinhui_branch_II_flag
+	# 	custom_tooltip = YE_ljh_4_branch_II_tooltip
+	# 	swap_non_generic_missions = yes
+	# }	
+
 }
-country_event = { #空事件5
-	id = YE_ljh.5
-	title = YE_ljh.5.T
-	desc = YE_ljh.5.D
+
+# country_event = { #5 
+# 	id = YE_ljh.5
+# 	title = YE_ljh.5.T
+# 	desc = YE_ljh.5.D
+# 	picture = GREAT_SPIRIT_YANHE_eventPicture
+
+# 	fire_only_once = yes
+# 	is_triggered_only = yes
+
+# 	trigger = {
+		
+# 	}
+
+# 	option = {
+# 		name = YE_ljh.5.a
+# 		ai_chance = { factor = 1 }
+		
+# 	}
+# #本地化，必须空一个格开头	
+#  YE_ljh.5.T:0 ""
+#  YE_ljh.5.D:0 ""
+#  YE_ljh.5.a:0 ""
+# }
+
+# country_event = { #6 
+# 	id = YE_ljh.6
+# 	title = YE_ljh.6.T
+# 	desc = YE_ljh.6.D
+# 	picture = GREAT_SPIRIT_YANHE_eventPicture
+
+# 	fire_only_once = yes
+# 	is_triggered_only = yes
+
+# 	trigger = {
+# 	}
+
+# 	option = {
+# 		name = YE_ljh.6.a
+# 		ai_chance = { factor = 1 }
+		
+# 	}
+# 	option = {
+# 		name = YE_ljh.6.b
+# 		ai_chance = { factor = 1 }
+# 	}
+# #本地化，必须空一个格开头	
+#  YE_ljh.6.T:0 ""
+#  YE_ljh.6.D:0 ""
+#  YE_ljh.6.a:0 ""
+#  YE_ljh.6.b:0 ""
+# }
+
+# country_event = { #空事件7
+# 	id = YE_ljh.7
+# 	title = YE_ljh.7.T
+# 	desc = YE_ljh.7.D
+# 	picture = GREAT_SPIRIT_YANHE_eventPicture
+
+# 	fire_only_once = yes
+# 	is_triggered_only = yes
+
+# 	trigger = {
+# 	}
+
+# 	option = {
+# 		name = YE_ljh.7.a
+# 		ai_chance = { factor = 1 }
+# 	}
+# 	option = {
+# 		name = YE_ljh.7.b
+# 		ai_chance = { factor = 1 }
+# 	}
+# #本地化，必须空一个格开头	
+#  YE_ljh.7.T:0 ""
+#  YE_ljh.7.D:0 ""
+#  YE_ljh.7.a:0 ""
+#  YE_ljh.7.b:0 ""
+# }
+# country_event = { #空事件8
+# 	id = YE_ljh.8
+# 	title = YE_ljh.8.T
+# 	desc = YE_ljh.8.D
+# 	picture = GREAT_SPIRIT_YANHE_eventPicture
+
+# 	fire_only_once = yes
+# 	is_triggered_only = yes
+
+# 	trigger = {
+# 	}
+
+# 	option = {
+# 		name = YE_ljh.8.a
+# 		ai_chance = { factor = 1 }
+# 	}
+# 	option = {
+# 		name = YE_ljh.8.b
+# 		ai_chance = { factor = 1 }
+# 	}
+# #本地化，必须空一个格开头	
+#  YE_ljh.8.T:0 ""
+#  YE_ljh.8.D:0 ""
+#  YE_ljh.8.a:0 ""
+#  YE_ljh.8.b:0 ""
+# }
+# country_event = { #空事件9
+# 	id = YE_ljh.9
+# 	title = YE_ljh.9.T
+# 	desc = YE_ljh.9.D
+# 	picture = GREAT_SPIRIT_YANHE_eventPicture
+
+# 	fire_only_once = yes
+# 	is_triggered_only = yes
+
+# 	trigger = {
+# 	}
+
+# 	option = {
+# 		name = YE_ljh.9.a
+# 		ai_chance = { factor = 1 }
+# 	}
+# 	option = {
+# 		name = YE_ljh.9.b
+# 		ai_chance = { factor = 1 }
+# 	}
+# #本地化，必须空一个格开头	
+#  YE_ljh.9.T:0 ""
+#  YE_ljh.9.D:0 ""
+#  YE_ljh.9.a:0 ""
+#  YE_ljh.9.b:0 ""
+# }
+# country_event = { #空事件10
+# 	id = YE_ljh.10
+# 	title = YE_ljh.10.T
+# 	desc = YE_ljh.10.D
+# 	picture = GREAT_SPIRIT_YANHE_eventPicture
+
+# 	fire_only_once = yes
+# 	is_triggered_only = yes
+
+# 	trigger = {
+# 	}
+
+# 	option = {
+# 		name = YE_ljh.10.a
+# 		ai_chance = { factor = 1 }
+# 	}
+# 	option = {
+# 		name = YE_ljh.10.b
+# 		ai_chance = { factor = 1 }
+# 	}
+# #本地化，必须空一个格开头	
+#  YE_ljh.10.T:0 ""
+#  YE_ljh.10.D:0 ""
+#  YE_ljh.10.a:0 ""
+#  YE_ljh.10.b:0 ""
+# }
+# country_event = { #空事件11
+# 	id = YE_ljh.11
+# 	title = YE_ljh.11.T
+# 	desc = YE_ljh.11.D
+# 	picture = GREAT_SPIRIT_YANHE_eventPicture
+
+# 	fire_only_once = yes
+# 	is_triggered_only = yes
+
+# 	trigger = {
+# 	}
+
+# 	option = {
+# 		name = YE_ljh.11.a
+# 		ai_chance = { factor = 1 }
+# 	}
+# 	option = {
+# 		name = YE_ljh.11.b
+# 		ai_chance = { factor = 1 }
+# 	}
+# #本地化，必须空一个格开头	
+#  YE_ljh.11.T:0 ""
+#  YE_ljh.11.D:0 ""
+#  YE_ljh.11.a:0 ""
+#  YE_ljh.11.b:0 ""
+# }
+# country_event = { #空事件12
+# 	id = YE_ljh.12
+# 	title = YE_ljh.12.T
+# 	desc = YE_ljh.12.D
+# 	picture = GREAT_SPIRIT_YANHE_eventPicture
+
+# 	fire_only_once = yes
+# 	is_triggered_only = yes
+
+# 	trigger = {
+# 	}
+
+# 	option = {
+# 		name = YE_ljh.12.a
+# 		ai_chance = { factor = 1 }
+# 	}
+# 	option = {
+# 		name = YE_ljh.12.b
+# 		ai_chance = { factor = 1 }
+# 	}
+# #本地化，必须空一个格开头	
+#  YE_ljh.12.T:0 ""
+#  YE_ljh.12.D:0 ""
+#  YE_ljh.12.a:0 ""
+#  YE_ljh.12.b:0 ""
+# }
+# country_event = { #空事件13
+# 	id = YE_ljh.13
+# 	title = YE_ljh.13.T
+# 	desc = YE_ljh.13.D
+# 	picture = GREAT_SPIRIT_YANHE_eventPicture
+
+# 	fire_only_once = yes
+# 	is_triggered_only = yes
+
+# 	trigger = {
+# 	}
+
+# 	option = {
+# 		name = YE_ljh.13.a
+# 		ai_chance = { factor = 1 }
+# 	}
+# 	option = {
+# 		name = YE_ljh.13.b
+# 		ai_chance = { factor = 1 }
+# 	}
+# #本地化，必须空一个格开头	
+#  YE_ljh.13.T:0 ""
+#  YE_ljh.13.D:0 ""
+#  YE_ljh.13.a:0 ""
+#  YE_ljh.13.b:0 ""
+# }
+# country_event = { #空事件14
+# 	id = YE_ljh.14
+# 	title = YE_ljh.14.T
+# 	desc = YE_ljh.14.D
+# 	picture = GREAT_SPIRIT_YANHE_eventPicture
+
+# 	fire_only_once = yes
+# 	is_triggered_only = yes
+
+# 	trigger = {
+# 	}
+
+# 	option = {
+# 		name = YE_ljh.14.a
+# 		ai_chance = { factor = 1 }
+# 	}
+# 	option = {
+# 		name = YE_ljh.14.b
+# 		ai_chance = { factor = 1 }
+# 	}
+# #本地化，必须空一个格开头	
+#  YE_ljh.14.T:0 ""
+#  YE_ljh.14.D:0 ""
+#  YE_ljh.14.a:0 ""
+#  YE_ljh.14.b:0 ""
+# }
+# country_event = { #空事件15
+	id = YE_ljh.15
+	title = YE_ljh.15.T
+	desc = YE_ljh.15.D
 	picture = GREAT_SPIRIT_YANHE_eventPicture
 
 	fire_only_once = yes
@@ -145,16 +482,16 @@ country_event = { #空事件5
 	}
 
 	option = {
-		name = YE_ljh.5.a
+		name = YE_ljh.15.a
 		ai_chance = { factor = 1 }
 	}
 	option = {
-		name = YE_ljh.5.b
+		name = YE_ljh.15.b
 		ai_chance = { factor = 1 }
 	}
 #本地化，必须空一个格开头	
- YE_ljh.5.T:0 ""
- YE_ljh.5.D:0 ""
- YE_ljh.5.a:0 ""
- YE_ljh.5.b:0 ""
+ YE_ljh.15.T:0 ""
+ YE_ljh.15.D:0 ""
+ YE_ljh.15.a:0 ""
+ YE_ljh.15.b:0 ""
 }

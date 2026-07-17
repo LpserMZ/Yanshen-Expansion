@@ -1,547 +1,756 @@
-YE_jinjian_rpblc_1 = {
+# YE_jinjian_rpblc_1 = {
+# 	slot = 1
+# 	generic = no
+# 	ai = yes
+# 	has_country_shield = yes
+# 	potential = { 
+# 		tag = Y05
+# 		NOT = {
+# 			has_country_flag = YE_lanjinuhi_mission_stage__completed_flag
+# 		}
+# 	} 
+# 	YE_jinjian_rpblc_1_2 = {
+# 		icon = mission_asian_city
+# 		position = 2
+# 		required_missions = { 
+# 			YE_jinjian_rpblc_3_1
+# 		} 
+# 		provinces_to_highlight = {
+# 		} 
+
+# 		trigger = {
+
+# 		} 
+
+# 		effect = {
+
+# 		} 
+# 	}
+# 	YE_jinjian_rpblc_1_3 = {
+# 		icon = mission_asian_city
+# 		position = 3
+# 		required_missions = { 
+# 			YE_jinjian_rpblc_1_2
+# 		} 
+# 		provinces_to_highlight = {
+# 		} 
+
+# 		trigger = {
+# 		} 
+
+# 		effect = {
+# 		} 
+# 	}
+# 	YE_jinjian_rpblc_1_4 = {
+# 		icon = mission_asian_city
+# 		position = 4
+# 		required_missions = { 
+# 			YE_jinjian_rpblc_1_3
+# 		} 
+# 		provinces_to_highlight = {
+# 		} 
+
+# 		trigger = {
+
+# 		} 
+
+# 		effect = {
+# 		} 
+# 	}
+# 	YE_jinjian_rpblc_1_5 = {
+# 		icon = mission_asian_city
+# 		position = 5
+# 		required_missions = { 
+# 			YE_jinjian_rpblc_1_4
+# 		} 
+# 		provinces_to_highlight = {
+# 		} 
+
+# 		trigger = {
+
+# 		} 
+
+# 		effect = {
+# 		} 
+# 	}
+# }
+# YE_jinjian_rpblc_2 = {
+# 	slot = 2
+# 	generic = no
+# 	ai = yes
+# 	has_country_shield = yes
+# 	potential = { 
+# 		tag = Y05
+# 		NOT = {
+# 			has_country_flag = YE_lanjinuhi_mission_stage__completed_flag
+# 		}
+# 	} 
+# 	YE_jinjian_rpblc_2_2 = {
+# 		icon = mission_asian_city
+# 		position = 2
+# 		required_missions = { 
+# 			YE_jinjian_rpblc_3_1
+# 		} 
+# 		provinces_to_highlight = {
+# 		} 
+
+# 		trigger = {
+
+# 		} 
+
+# 		effect = {
+
+# 		} 
+# 	}
+# 	YE_jinjian_rpblc_2_3 = {
+# 		icon = mission_asian_city
+# 		position = 3
+# 		required_missions = { 
+# 			YE_jinjian_rpblc_2_2
+# 		} 
+# 		provinces_to_highlight = {
+# 		} 
+
+# 		trigger = {
+# 		} 
+
+# 		effect = {
+# 		} 
+# 	}
+# 	YE_jinjian_rpblc_2_4 = {
+# 		icon = mission_asian_city
+# 		position = 4
+# 		required_missions = { 
+# 		} 
+# 		provinces_to_highlight = {
+# 		} 
+
+# 		trigger = {
+
+# 		} 
+
+# 		effect = {
+# 		} 
+# 	}
+# 	YE_jinjian_rpblc_2_5 = {
+# 		icon = mission_asian_city
+# 		position = 5
+# 		required_missions = { 
+# 			YE_jinjian_rpblc_2_4
+# 		} 
+# 		provinces_to_highlight = {
+			
+# 		} 
+
+# 		trigger = {
+
+# 		} 
+
+# 		effect = {
+# 		} 
+# 	}
+# }
+# YE_jinjian_rpblc_3 = {
+# 	slot = 3
+# 	generic = no
+# 	ai = yes
+# 	has_country_shield = yes
+# 	potential = { 
+# 		tag = Y05
+# 		NOT = {
+# 			has_country_flag = YE_lanjinuhi_mission_stage__completed_flag
+# 		}
+# 	} 
+# 	YE_jinjian_rpblc_3_1 = {
+# 		icon = mission_asian_city
+# 		position = 1
+# 		required_missions = {} 
+# 		provinces_to_highlight = {
+# 			province_id = 4868
+# 		} 
+
+# 		trigger = {
+# 			owns = 4868
+# 		} 
+
+# 		effect = {
+# 			country_event = {
+# 				id = YE_ljh.1
+# 			}
+# 		} 
+# 	}
+# 	YE_jinjian_rpblc_3_2 = {
+# 		icon = mission_asian_city
+# 		position = 2
+# 		required_missions = { 
+# 			YE_jinjian_rpblc_3_1
+# 		} 
+# 		provinces_to_highlight = {
+# 			owned_by = ROOT
+# 			has_seat_in_parliament = yes
+# 		} 
+
+# 		trigger = {
+# 			is_at_war = no
+# 			if = {
+# 				limit = {
+# 					ai = yes
+# 				}
+# 				num_of_owned_provinces_with = {
+# 					value = 4
+# 					has_seat_in_parliament = yes
+# 					num_of_times_improved = 1
+# 				}
+# 			}
+# 			else = {
+# 				num_of_owned_provinces_with = {
+# 					value = 7
+# 					has_seat_in_parliament = yes
+# 					num_of_times_improved = 1
+# 				}
+# 			}
+				
+# 		} 
+
+# 		effect = {
+# 			custom_tooltip = YE_jinjian_rpblc_3_2_tooltip
+# 			jw1_area = {
+# 				add_permanent_claim = ROOT
+# 			}
+# 			jianzhong_area = {
+# 				add_permanent_claim = ROOT
+# 			}
+# 			hidden_effect = {
+# 				every_owned_province = {
+# 					limit = {
+# 						has_seat_in_parliament = yes
+# 					}
+# 					add_base_tax = 1
+# 					add_base_production = 1
+# 					add_base_manpower = 1
+# 				}
+# 			}
+# 		} 
+# 	}
+# 	YE_jinjian_rpblc_3_3 = {
+# 		icon = mission_asian_city
+# 		position = 3
+# 		required_missions = { 
+# 			YE_jinjian_rpblc_3_2
+# 		} 
+# 		provinces_to_highlight = {
+# 			region = jianwu_region
+# 			NOT = { owned_by = ROOT }
+# 		} 
+
+# 		trigger = {
+# 			num_of_owned_provinces_with = {
+# 				value = 8
+# 				region = jianwu_region
+# 			}
+# 		} 
+
+# 		effect = {
+# 			jianwu_region = {
+# 				add_permanent_claim = ROOT
+# 			}
+# 		} 
+# 	}
+# 	YE_jinjian_rpblc_3_4 = {
+# 		icon = mission_asian_city
+# 		position = 4
+# 		required_missions = { 
+# 			YE_jinjian_rpblc_3_3
+# 		} 
+# 		provinces_to_highlight = {
+# 			region = jianwu_region
+# 			NOT = {
+# 				country_or_non_sovereign_subject_holds = ROOT
+# 			}
+# 		} 
+
+# 		trigger = {
+# 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+# 				value = 20
+# 				region = jianwu_region
+# 			}
+# 		} 
+
+# 		effect = {
+# 			add_treasury = 1
+# 		} 
+# 	}
+# 	YE_jinjian_rpblc_3_5 = {
+# 		icon = mission_asian_city
+# 		position = 5
+# 		required_missions = { 
+# 			YE_jinjian_rpblc_3_4
+# 		} 
+# 		provinces_to_highlight = {
+# 			region = jianwu_region
+# 			NOT = {
+# 				country_or_non_sovereign_subject_holds = ROOT
+# 			}
+# 		} 
+
+# 		trigger = {
+# 			jianwu_region = {
+# 				type = all
+# 				country_or_non_sovereign_subject_holds = ROOT
+# 			}
+# 		} 
+
+# 		effect = {
+# 			add_treasury = 1
+# 		} 
+# 	}
+# 	YE_jinjian_rpblc_3_6 = {
+# 		icon = mission_asian_city
+# 		position = 6
+# 		required_missions = { 
+# 			YE_jinjian_rpblc_2_5
+# 			YE_jinjian_rpblc_3_5
+# 			YE_jinjian_rpblc_4_5
+# 		} 
+# 		provinces_to_highlight = {
+# 		} 
+
+# 		trigger = {
+
+# 		} 
+
+# 		effect = {
+# 		} 
+# 	}
+# }
+# YE_jinjian_rpblc_4 = {
+# 	slot = 4
+# 	generic = no
+# 	ai = yes
+# 	has_country_shield = yes
+# 	potential = { 
+# 		tag = Y05
+# 		NOT = {
+# 			has_country_flag = YE_lanjinuhi_mission_stage__completed_flag
+# 		}
+# 	} 
+# 	YE_jinjian_rpblc_4_1 = {
+# 		icon = mission_asian_city
+# 		position = 1
+# 		required_missions = { 
+			
+# 		} 
+# 		provinces_to_highlight = {
+# 		} 
+
+# 		trigger = {
+# 			custom_trigger_tooltip = {
+# 				tooltip = YE_jinjian_rpblc_4_1_trigger_tooltip
+# 				has_country_flag = issue_restrict_nobles_3_flag
+# 			}
+# 		} 
+
+# 		effect = {
+# 			start_debate = LJH_issue_enforce_noble_abolishment
+# 		} 
+# 	}
+# 	YE_jinjian_rpblc_4_2 = {
+# 		icon = mission_asian_city
+# 		position = 2
+# 		required_missions = { 
+# 			YE_jinjian_rpblc_3_1
+# 		} 
+# 		provinces_to_highlight = {
+# 			OR = {
+# 				area = liuminxiang_area
+# 				area = jx1_area
+# 				area = jx2_area
+# 			}
+# 		} 
+
+# 		trigger = {
+# 			is_institution_enabled = renaissance
+# 			stability = 2
+# 			liuminxiang_area = {
+# 				type = all
+# 				num_of_times_improved = 1
+# 			}
+# 			jx1_area = {
+# 				type = all
+# 				num_of_times_improved = 1
+# 			}
+# 			jx2_area = {
+# 				type = all
+# 				num_of_times_improved = 1
+# 			}	
+# 		} 
+
+# 		effect = {
+# 			if = {
+# 				limit = {
+# 					has_institution = renaissance
+# 				}
+# 				8117 = {
+# 					add_institution_embracement = {
+# 						which = renaissance
+# 						value = 100
+# 					}
+# 				}
+# 				4860 = {
+# 					add_institution_embracement = {
+# 						which = renaissance
+# 						value = 75
+# 					}
+# 				}
+# 				4862 = {
+# 					add_institution_embracement = {
+# 						which = renaissance
+# 						value = 75
+# 					}
+# 				}
+# 			}
+# 			else = {
+# 				add_adm_power = 75
+# 				add_dip_power = 75
+# 				add_mil_power = 75
+# 			}
+# 		} 
+# 	}
+# 	YE_jinjian_rpblc_4_3 = {
+# 		icon = mission_asian_city
+# 		position = 3
+# 		required_missions = { 
+# 		} 
+# 		provinces_to_highlight = {
+# 		} 
+
+# 		trigger = { # 飞越天楼
+# 			OR = {
+# 				owns = 4871 #直接拥有
+
+# 				4871 = {
+# 					owned_by = Y15
+# 				}
+
+# 				4871 = {
+# 					owner = {
+# 						NOT = { tag = Y15 }
+# 						has_spy_network_from = {
+# 							who = ROOT
+# 							value = 25
+# 						}
+# 					}
+# 				}				
+# 			}	
+# 		} 
+
+# 		effect = {
+
+# 			if = {
+# 				limit = {
+# 					owns = 4871
+# 				}
+# 				add_stability = 1
+# 				4871 = {
+# 					owner = {
+# 						country_event = { id = YE_GRY.46 }
+# 					}
+# 				}
+# 			}
+# 			else_if = {
+# 				limit = {
+# 					4871 = {
+# 						owned_by = Y15
+# 					}
+# 				}
+# 				add_prestige = 10
+# 				Y15 = {
+# 					country_event = { id = YE_GRY.46 }
+# 				}
+# 			}
+# 			else_if = {		
+# 				limit = {
+# 					4871 = {
+# 						owner = {
+# 							has_spy_network_from = {
+# 								who = ROOT
+# 								value = 25
+# 							}
+# 						}
+# 					}
+# 				}	
+# 				4871 = {
+# 					area = {
+# 						add_permanent_claim = ROOT
+# 					}
+# 					owner = {
+# 						add_stability = -1
+# 						country_event = { id = YE_GRY.46 }
+# 					}
+# 				}
+# 			}
+# 		} 
+# 	}
+# 	YE_jinjian_rpblc_4_4 = {
+# 		icon = mission_asian_city
+# 		position = 4
+# 		required_missions = { 
+# 			YE_jinjian_rpblc_3_3
+# 			YE_jinjian_rpblc_4_3
+# 			YE_jinjian_rpblc_5_3
+# 		} 
+# 		provinces_to_highlight = {
+# 		} 
+
+# 		trigger = {
+
+# 		} 
+
+# 		effect = {
+# 		} 
+# 	}
+# 	YE_jinjian_rpblc_4_5 = {
+# 		icon = mission_asian_city
+# 		position = 5
+# 		required_missions = { 
+# 			YE_jinjian_rpblc_4_4
+# 		} 
+# 		provinces_to_highlight = {
+# 		} 
+
+# 		trigger = {
+
+# 		} 
+
+# 		effect = {
+# 		} 
+# 	}
+# }
+# YE_jinjian_rpblc_5 = {
+# 	slot = 5
+# 	generic = no
+# 	ai = yes
+# 	has_country_shield = yes
+# 	potential = { 
+# 		tag = Y05
+# 		NOT = {
+# 			has_country_flag = YE_lanjinuhi_mission_stage__completed_flag
+# 		}
+# 	} 
+# 	YE_jinjian_rpblc_5_1 = {
+# 		icon = mission_asian_city
+# 		position = 1
+# 		required_missions = { 
+			
+# 		} 
+# 		provinces_to_highlight = {
+# 			owned_by = Y85
+# 		} 
+
+# 		trigger = {
+# 			Y85 = {
+# 				has_opinion = {
+# 					who = ROOT
+# 					value = 200
+# 				}
+# 				trust = { who = ROOT value = 70 }
+# 			}
+# 		} 
+
+# 		effect = {
+# 			zx4_area = {
+# 				type = all
+# 				add_permanent_claim = Y85
+# 			}
+# 			generic_increase_of_racial_tolerance_effect = { race = kobold small = yes }
+# 			add_dip_power = 50
+# 			custom_tooltip = YE_jinjian_rpblc_5_1_tooltip
+# 		} 
+# 	}
+# 	YE_jinjian_rpblc_5_2 = {
+# 		icon = mission_asian_city
+# 		position = 2
+# 		required_missions = { 
+			
+# 		} 
+# 		provinces_to_highlight = {
+# 			owned_by = Y26
+# 		} 
+
+# 		trigger = {
+# 			OR = {
+# 				AND = {
+# 					Y26 = {
+# 						has_opinion = {
+# 							who = ROOT
+# 							value = 150
+# 						}
+# 					}
+# 					alliance_with = Y26	
+# 				}
+# 				has_spy_network_in = {
+# 					who = Y26
+# 					value = 45
+# 				}
+# 				Y26 = {
+# 					exists = no
+# 				}
+# 			}
+# 		} 
+
+# 		effect = {
+# 			if = {
+# 				limit = {
+# 					Y26 = {
+# 						has_opinion = {
+# 							who = ROOT
+# 							value = 150
+# 						}
+# 					}
+# 					alliance_with = Y26	
+# 				}
+# 				set_country_flag = huxian_senator_in_lanjinhui
+# 				custom_tooltip = YE_jinjian_rpblc_5_2_peace_tooltip
+# 			}
+# 			else_if = {
+# 				limit = {
+# 					has_spy_network_in = {
+# 						who = Y26
+# 						value = 45
+# 					}
+# 				}
+# 				custom_tooltip = YE_jinjian_rpblc_5_2_spy_tooltip
+# 				add_country_modifier = {
+# 					name = distinction_between_huxian_and_human
+# 					duration = -1
+# 				}
+# 				mulim_area = {
+# 					type = all
+# 					add_permanent_claim = ROOT 
+# 				}
+# 				lj6_area = {
+# 					type = all
+# 					add_permanent_claim = ROOT 
+# 				}
+# 				Y26 = {
+# 					add_opinion = {
+# 						who = ROOT
+# 						modifier = scornfully_insulted
+# 					}
+# 				}
+# 			}
+# 			else = {
+# 				custom_tooltip = YE_jinjian_rpblc_5_2_preview_tooltip
+# 				mulim_area = {
+# 					type = all
+# 					add_permanent_claim = ROOT 
+# 				}
+# 				lj6_area = {
+# 					type = all
+# 					add_permanent_claim = ROOT 
+# 				}
+# 			}
+# 			8129 = {
+# 				add_permanent_claim = ROOT
+# 			}
+# 			4872 = {
+# 				add_permanent_claim = ROOT
+# 			}
+# 		} 
+# 	}
+# 	YE_jinjian_rpblc_5_3 = {
+# 		icon = mission_asian_city
+# 		position = 3
+# 		required_missions = { 
+# 			YE_jinjian_rpblc_5_2
+# 		} 
+# 		provinces_to_highlight = {
+# 			OR = {
+# 				area = mulim_area
+# 				area = jx6_area
+# 				province_id = 8129
+# 			}
+# 		} 
+
+# 		trigger = {
+# 			OR =  {
+# 				AND = {
+# 					mulim_area = {
+# 						type = all
+# 						owned_by = Y26
+# 					}
+# 					jx6_area = {
+# 						type = all
+# 						owned_by = Y26
+# 					}
+# 					Y26 = {
+# 						OR = {
+# 							alliance_with = ROOT
+# 							is_subject_of = ROOT
+# 						}
+# 					}
+# 				}
+# 				AND = {
+# 					mulim_area = {
+# 						type = all
+# 						owned_by = ROOT
+# 					}
+# 					jx6_area = {
+# 						type = all
+# 						owned_by = ROOT
+# 					}
+# 					owns = 8129
+# 				}
+# 			}
+# 		} 
+
+# 		effect = {
+# 			custom_tooltip = YE_jinjian_rpblc_5_3_tooltip
+# 			if = {
+# 				limit = {
+# 					mulim_area = {
+# 						type = all
+# 						owned_by = Y26
+# 					}
+# 					jx6_area = {
+# 						type = all
+# 						owned_by = Y26
+# 					}
+# 					Y26 = {
+# 						OR = {
+# 							alliance_with = ROOT
+# 							is_subject_of = ROOT
+# 						}
+# 					}
+# 				}
+# 				add_treasury = 1
+# 				add_historical_friend = Y26
+# 				Y26 = { add_historical_friend = ROOT }
+
+# 			}
+# 			else ={
+# 				add_treasury = 1
+# 			}
+# 		} 
+# 	}
+# }
+
+
+YE_lanjin_1 = {
 	slot = 1
 	generic = no
 	ai = yes
 	has_country_shield = yes
 	potential = { 
-		tag = Y05
-		NOT = {
-			has_country_flag = YE_lanjinuhi_mission_stage__completed_flag
+		OR = {
+			tag = Y05
+			was_tag = Y05
 		}
 	} 
-	YE_jinjian_rpblc_1_2 = {
-		icon = mission_asian_city
-		position = 2
-		required_missions = { 
-			YE_jinjian_rpblc_3_1
-		} 
-		provinces_to_highlight = {
-		} 
-
-		trigger = {
-
-		} 
-
-		effect = {
-
-		} 
-	}
-	YE_jinjian_rpblc_1_3 = {
-		icon = mission_asian_city
-		position = 3
-		required_missions = { 
-			YE_jinjian_rpblc_1_2
-		} 
-		provinces_to_highlight = {
-		} 
-
-		trigger = {
-		} 
-
-		effect = {
-		} 
-	}
-	YE_jinjian_rpblc_1_4 = {
-		icon = mission_asian_city
-		position = 4
-		required_missions = { 
-			YE_jinjian_rpblc_1_3
-		} 
-		provinces_to_highlight = {
-		} 
-
-		trigger = {
-
-		} 
-
-		effect = {
-		} 
-	}
-	YE_jinjian_rpblc_1_5 = {
-		icon = mission_asian_city
-		position = 5
-		required_missions = { 
-			YE_jinjian_rpblc_1_4
-		} 
-		provinces_to_highlight = {
-		} 
-
-		trigger = {
-
-		} 
-
-		effect = {
-		} 
-	}
-}
-YE_jinjian_rpblc_2 = {
-	slot = 2
-	generic = no
-	ai = yes
-	has_country_shield = yes
-	potential = { 
-		tag = Y05
-		NOT = {
-			has_country_flag = YE_lanjinuhi_mission_stage__completed_flag
-		}
-	} 
-	YE_jinjian_rpblc_2_2 = {
-		icon = mission_asian_city
-		position = 2
-		required_missions = { 
-			YE_jinjian_rpblc_3_1
-		} 
-		provinces_to_highlight = {
-		} 
-
-		trigger = {
-
-		} 
-
-		effect = {
-
-		} 
-	}
-	YE_jinjian_rpblc_2_3 = {
-		icon = mission_asian_city
-		position = 3
-		required_missions = { 
-			YE_jinjian_rpblc_2_2
-		} 
-		provinces_to_highlight = {
-		} 
-
-		trigger = {
-		} 
-
-		effect = {
-		} 
-	}
-	YE_jinjian_rpblc_2_4 = {
-		icon = mission_asian_city
-		position = 4
-		required_missions = { 
-		} 
-		provinces_to_highlight = {
-		} 
-
-		trigger = {
-
-		} 
-
-		effect = {
-		} 
-	}
-	YE_jinjian_rpblc_2_5 = {
-		icon = mission_asian_city
-		position = 5
-		required_missions = { 
-			YE_jinjian_rpblc_2_4
-		} 
-		provinces_to_highlight = {
-			
-		} 
-
-		trigger = {
-
-		} 
-
-		effect = {
-		} 
-	}
-}
-YE_jinjian_rpblc_3 = {
-	slot = 3
-	generic = no
-	ai = yes
-	has_country_shield = yes
-	potential = { 
-		tag = Y05
-		NOT = {
-			has_country_flag = YE_lanjinuhi_mission_stage__completed_flag
-		}
-	} 
-	YE_jinjian_rpblc_3_1 = {
-		icon = mission_asian_city
-		position = 1
-		required_missions = {} 
-		provinces_to_highlight = {
-			province_id = 4868
-		} 
-
-		trigger = {
-			owns = 4868
-		} 
-
-		effect = {
-			country_event = {
-				id = YE_ljh.1
-			}
-		} 
-	}
-	YE_jinjian_rpblc_3_2 = {
-		icon = mission_asian_city
-		position = 2
-		required_missions = { 
-			YE_jinjian_rpblc_3_1
-		} 
-		provinces_to_highlight = {
-			owned_by = ROOT
-			has_seat_in_parliament = yes
-		} 
-
-		trigger = {
-			is_at_war = no
-			if = {
-				limit = {
-					ai = yes
-				}
-				num_of_owned_provinces_with = {
-					value = 4
-					has_seat_in_parliament = yes
-					num_of_times_improved = 1
-				}
-			}
-			else = {
-				num_of_owned_provinces_with = {
-					value = 7
-					has_seat_in_parliament = yes
-					num_of_times_improved = 1
-				}
-			}
-				
-		} 
-
-		effect = {
-			custom_tooltip = YE_jinjian_rpblc_3_2_tooltip
-			jw1_area = {
-				add_permanent_claim = ROOT
-			}
-			jianzhong_area = {
-				add_permanent_claim = ROOT
-			}
-			hidden_effect = {
-				every_owned_province = {
-					limit = {
-						has_seat_in_parliament = yes
-					}
-					add_base_tax = 1
-					add_base_production = 1
-					add_base_manpower = 1
-				}
-			}
-		} 
-	}
-	YE_jinjian_rpblc_3_3 = {
-		icon = mission_asian_city
-		position = 3
-		required_missions = { 
-			YE_jinjian_rpblc_3_2
-		} 
-		provinces_to_highlight = {
-			region = jianwu_region
-			NOT = { owned_by = ROOT }
-		} 
-
-		trigger = {
-			num_of_owned_provinces_with = {
-				value = 8
-				region = jianwu_region
-			}
-		} 
-
-		effect = {
-			jianwu_region = {
-				add_permanent_claim = ROOT
-			}
-		} 
-	}
-	YE_jinjian_rpblc_3_4 = {
-		icon = mission_asian_city
-		position = 4
-		required_missions = { 
-			YE_jinjian_rpblc_3_3
-		} 
-		provinces_to_highlight = {
-			region = jianwu_region
-			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-		} 
-
-		trigger = {
-			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-				value = 20
-				region = jianwu_region
-			}
-		} 
-
-		effect = {
-			add_treasury = 1
-		} 
-	}
-	YE_jinjian_rpblc_3_5 = {
-		icon = mission_asian_city
-		position = 5
-		required_missions = { 
-			YE_jinjian_rpblc_3_4
-		} 
-		provinces_to_highlight = {
-			region = jianwu_region
-			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-		} 
-
-		trigger = {
-			jianwu_region = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-		} 
-
-		effect = {
-			add_treasury = 1
-		} 
-	}
-	YE_jinjian_rpblc_3_6 = {
-		icon = mission_asian_city
-		position = 6
-		required_missions = { 
-			YE_jinjian_rpblc_2_5
-			YE_jinjian_rpblc_3_5
-			YE_jinjian_rpblc_4_5
-		} 
-		provinces_to_highlight = {
-		} 
-
-		trigger = {
-
-		} 
-
-		effect = {
-		} 
-	}
-}
-YE_jinjian_rpblc_4 = {
-	slot = 4
-	generic = no
-	ai = yes
-	has_country_shield = yes
-	potential = { 
-		tag = Y05
-		NOT = {
-			has_country_flag = YE_lanjinuhi_mission_stage__completed_flag
-		}
-	} 
-	YE_jinjian_rpblc_4_1 = {
+	YE_lanjin_1_1 = {
 		icon = mission_asian_city
 		position = 1
 		required_missions = { 
-			
-		} 
-		provinces_to_highlight = {
-		} 
-
-		trigger = {
-			custom_trigger_tooltip = {
-				tooltip = YE_jinjian_rpblc_4_1_trigger_tooltip
-				has_country_flag = issue_restrict_nobles_3_flag
-			}
-		} 
-
-		effect = {
-			start_debate = LJH_issue_enforce_noble_abolishment
-		} 
-	}
-	YE_jinjian_rpblc_4_2 = {
-		icon = mission_asian_city
-		position = 2
-		required_missions = { 
-			YE_jinjian_rpblc_3_1
-		} 
-		provinces_to_highlight = {
-			OR = {
-				area = liuminxiang_area
-				area = jx1_area
-				area = jx2_area
-			}
-		} 
-
-		trigger = {
-			is_institution_enabled = renaissance
-			stability = 2
-			liuminxiang_area = {
-				type = all
-				num_of_times_improved = 1
-			}
-			jx1_area = {
-				type = all
-				num_of_times_improved = 1
-			}
-			jx2_area = {
-				type = all
-				num_of_times_improved = 1
-			}	
-		} 
-
-		effect = {
-			if = {
-				limit = {
-					has_institution = renaissance
-				}
-				8117 = {
-					add_institution_embracement = {
-						which = renaissance
-						value = 100
-					}
-				}
-				4860 = {
-					add_institution_embracement = {
-						which = renaissance
-						value = 75
-					}
-				}
-				4862 = {
-					add_institution_embracement = {
-						which = renaissance
-						value = 75
-					}
-				}
-			}
-			else = {
-				add_adm_power = 75
-				add_dip_power = 75
-				add_mil_power = 75
-			}
-		} 
-	}
-	YE_jinjian_rpblc_4_3 = {
-		icon = mission_asian_city
-		position = 3
-		required_missions = { 
-		} 
-		provinces_to_highlight = {
-		} 
-
-		trigger = { # 飞越天楼
-			OR = {
-				owns = 4871 #直接拥有
-
-				4871 = {
-					owned_by = Y15
-				}
-
-				4871 = {
-					owner = {
-						NOT = { tag = Y15 }
-						has_spy_network_from = {
-							who = ROOT
-							value = 25
-						}
-					}
-				}				
-			}	
-		} 
-
-		effect = {
-
-			if = {
-				limit = {
-					owns = 4871
-				}
-				add_stability = 1
-				4871 = {
-					owner = {
-						country_event = { id = YE_GRY.46 }
-					}
-				}
-			}
-			else_if = {
-				limit = {
-					4871 = {
-						owned_by = Y15
-					}
-				}
-				add_prestige = 10
-				Y15 = {
-					country_event = { id = YE_GRY.46 }
-				}
-			}
-			else_if = {		
-				limit = {
-					4871 = {
-						owner = {
-							has_spy_network_from = {
-								who = ROOT
-								value = 25
-							}
-						}
-					}
-				}	
-				4871 = {
-					area = {
-						add_permanent_claim = ROOT
-					}
-					owner = {
-						add_stability = -1
-						country_event = { id = YE_GRY.46 }
-					}
-				}
-			}
-		} 
-	}
-	YE_jinjian_rpblc_4_4 = {
-		icon = mission_asian_city
-		position = 4
-		required_missions = { 
-			YE_jinjian_rpblc_3_3
-			YE_jinjian_rpblc_4_3
-			YE_jinjian_rpblc_5_3
-		} 
-		provinces_to_highlight = {
-		} 
-
-		trigger = {
-
-		} 
-
-		effect = {
-		} 
-	}
-	YE_jinjian_rpblc_4_5 = {
-		icon = mission_asian_city
-		position = 5
-		required_missions = { 
-			YE_jinjian_rpblc_4_4
-		} 
-		provinces_to_highlight = {
-		} 
-
-		trigger = {
-
-		} 
-
-		effect = {
-		} 
-	}
-}
-YE_jinjian_rpblc_5 = {
-	slot = 5
-	generic = no
-	ai = yes
-	has_country_shield = yes
-	potential = { 
-		tag = Y05
-		NOT = {
-			has_country_flag = YE_lanjinuhi_mission_stage__completed_flag
-		}
-	} 
-	YE_jinjian_rpblc_5_1 = {
-		icon = mission_asian_city
-		position = 1
-		required_missions = { 
-			
 		} 
 		provinces_to_highlight = {
 			owned_by = Y85
@@ -567,11 +776,259 @@ YE_jinjian_rpblc_5 = {
 			custom_tooltip = YE_jinjian_rpblc_5_1_tooltip
 		} 
 	}
-	YE_jinjian_rpblc_5_2 = {
+	YE_lanjin_1_3 = { 
+		icon = mission_asian_city
+		position = 3
+		required_missions = { 
+			YE_lanjin_2_2
+		} 
+		provinces_to_highlight = {
+		} 
+
+		trigger = {
+			OR = {
+				army_tradition = 40
+				has_government_power = {
+					mechanic_type = YE_blue_dream_soilder_fervor
+					power_type = soilder_fervor
+					value = 30
+				}
+			}
+			
+		} 
+
+		effect = {
+			custom_tooltip = YE_lanjin_1_3_tooltip
+			if = {
+				limit = {
+					army_tradition = 40
+					has_government_power = {
+						mechanic_type = YE_blue_dream_soilder_fervor
+						power_type = soilder_fervor
+						value = 30
+					}
+				}
+				add_country_modifier = {
+					name = establish_professional_army_for_lanjinhui
+					duration = 5475
+				}
+			}
+			else = {
+				add_country_modifier = {
+					name = establish_professional_army_for_lanjinhui
+					duration = 3650
+				}
+			}
+		} 
+	}
+	
+}
+YE_lanjin_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { 
+		OR = {
+			tag = Y05
+			was_tag = Y05
+		}
+	} 
+	YE_lanjin_2_2 = { 
 		icon = mission_asian_city
 		position = 2
 		required_missions = { 
-			
+		} 
+		provinces_to_highlight = {
+		} 
+
+		trigger = {
+			army_size_percentage = 0.90
+		} 
+
+		effect = {
+			capital_scope = {
+				qizilbash_infantry = ROOT
+			}
+			add_country_modifier = {
+				name = "thriving_arms_industry"
+				duration = 9125 #25 years
+			}
+		} 
+	}
+
+}
+YE_lanjin_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { 
+		OR = {
+			tag = Y05
+			was_tag = Y05
+		}
+	} 
+	YE_lanjin_3_1 = { 
+		icon = mission_asian_city
+		position = 1
+		required_missions = { 
+		} 
+		provinces_to_highlight = {
+			province_id = 4868
+		} 
+
+		trigger = {
+			owns = 4868
+		} 
+
+		effect = {
+			country_event = {
+				id = YE_ljh.1
+			}
+		} 
+	}
+	YE_lanjin_3_2 = { 
+		icon = mission_asian_city
+		position = 2
+		required_missions = { 
+			YE_lanjin_3_1
+		} 
+		provinces_to_highlight = {
+			owned_by = ROOT
+			has_seat_in_parliament = yes
+		} 
+
+		trigger = {
+			is_at_war = no
+			if = {
+				limit = {
+					ai = yes
+				}
+				num_of_owned_provinces_with = {
+					value = 3
+					has_seat_in_parliament = yes
+					num_of_times_improved = 1
+				}
+			}
+			else = {
+				num_of_owned_provinces_with = {
+					value = 7
+					has_seat_in_parliament = yes
+					num_of_times_improved = 1
+				}
+			}
+		} 
+
+		effect = {
+			custom_tooltip = YE_lanjin_3_2_tooltip
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						has_seat_in_parliament = yes
+					}
+					add_base_tax = 1
+					add_base_production = 1
+					add_base_manpower = 1
+				}
+			}
+			country_event = {
+				id = YE_ljh.4
+			}
+		} 
+	}
+
+}
+YE_lanjin_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { 
+		OR = {
+			tag = Y05
+			was_tag = Y05
+		}
+	} 
+	YE_lanjin_4_2 = { 
+		icon = mission_asian_city
+		position = 2
+		required_missions = { 
+		} 
+		provinces_to_highlight = {
+			OR = {
+				province_id = 4862
+				province_id = 4930
+				province_id = 8117
+				province_id = 4868
+			}
+		} 
+
+		trigger = {
+			if = {
+				limit = {
+					ai = yes
+				}
+				4862 = {
+					owned_by = ROOT
+					num_of_times_improved = 1
+				}
+				4930 = {
+					owned_by = ROOT
+					num_of_times_improved = 1
+				}
+				8117 = {
+					owned_by = ROOT
+					num_of_times_improved = 1
+				}
+				4868 = {
+					owned_by = ROOT
+					num_of_times_improved = 1
+				}				
+			}
+			else = {
+				4862 = {
+					owned_by = ROOT
+					num_of_times_improved = 4
+				}
+				4930 = {
+					owned_by = ROOT
+					num_of_times_improved = 4
+				}
+				8117 = {
+					owned_by = ROOT
+					num_of_times_improved = 4
+				}
+				4868 = {
+					owned_by = ROOT
+					num_of_times_improved = 4
+				}
+			}	
+		} 
+
+		effect = {
+			add_treasury = 100
+			country_event = {
+				id = YE_ljh.2
+			}
+		} 
+	}
+}
+YE_lanjin_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { 
+		OR = {
+			tag = Y05
+			was_tag = Y05
+		}
+	} 
+	YE_lanjin_5_1 = {
+		icon = mission_asian_city
+		position = 1
+		required_missions = { 
 		} 
 		provinces_to_highlight = {
 			owned_by = Y26
@@ -658,93 +1115,672 @@ YE_jinjian_rpblc_5 = {
 			}
 		} 
 	}
-	YE_jinjian_rpblc_5_3 = {
+	YE_lanjin_5_3 = { 
 		icon = mission_asian_city
 		position = 3
 		required_missions = { 
-			YE_jinjian_rpblc_5_2
+			YE_lanjin_4_2
 		} 
 		provinces_to_highlight = {
-			OR = {
-				area = mulim_area
-				area = jx6_area
-				province_id = 8129
-			}
+			province_id = 8117
 		} 
 
 		trigger = {
-			OR =  {
-				AND = {
-					mulim_area = {
-						type = all
-						owned_by = Y26
-					}
-					jx6_area = {
-						type = all
-						owned_by = Y26
-					}
-					Y26 = {
-						OR = {
-							alliance_with = ROOT
-							is_subject_of = ROOT
-						}
-					}
-				}
-				AND = {
-					mulim_area = {
-						type = all
-						owned_by = ROOT
-					}
-					jx6_area = {
-						type = all
-						owned_by = ROOT
-					}
-					owns = 8129
-				}
+			8117 = {
+				owned_by = ROOT
+				development = 24
+			}
+			custom_trigger_tooltip = {
+				tooltip = YE_lanjin_5_3_trigger_tooltip
+				has_country_flag = allow_prov_button_SLOT5_migrate_pop_2_flag
+			}
+			has_government_power = {
+				mechanic_type = YE_blue_dream_rural_xia_power
+				power_type = rural_xia_power
+				value = 50
 			}
 		} 
 
 		effect = {
-			custom_tooltip = YE_jinjian_rpblc_5_3_tooltip
-			if = {
-				limit = {
-					mulim_area = {
-						type = all
-						owned_by = Y26
-					}
-					jx6_area = {
-						type = all
-						owned_by = Y26
-					}
-					Y26 = {
-						OR = {
-							alliance_with = ROOT
-							is_subject_of = ROOT
-						}
-					}
-				}
-				add_treasury = 1
-				add_historical_friend = Y26
-				Y26 = { add_historical_friend = ROOT }
-
-			}
-			else ={
-				add_treasury = 1
+			add_splendor = 50
+			add_government_power = {
+				mechanic_type = YE_blue_dream_rural_xia_power
+				power_type = rural_xia_power
+				value = 25
 			}
 		} 
 	}
+	
 }
 
 
+YE_lanjin_branch_I_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { 
+		has_country_flag = YE_lanjinhui_branch_I_flag
+		OR = {
+			tag = Y05
+			was_tag = Y05
+		}
+	} 
+
+	YE_lanjin_branch_I_1_5 = { 
+		icon = mission_asian_city
+		position = 5
+		required_missions = { 
+			YE_lanjin_branch_I_2_4
+		} 
+		provinces_to_highlight = {
+		} 
+
+		trigger = {
+			has_government_power = {
+				mechanic_type = YE_blue_dream_soilder_fervor
+				power_type = soilder_fervor
+				value = 75
+			}
+			army_professionalism = 0.20
+		} 
+
+		effect = {
+			add_mil_power = 150
+			add_country_modifier = {
+				name = lanjinhui_full_armoured_army
+				duration = -1
+			}
+		} 
+	}
+	
+}
+YE_lanjin_branch_I_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { 
+		has_country_flag = YE_lanjinhui_branch_I_flag
+		OR = {
+			tag = Y05
+			was_tag = Y05
+		}
+	} 
+	YE_lanjin_branch_I_2_3 = {
+		icon = mission_asian_city
+		position = 3
+		required_missions = { 
+			YE_lanjin_3_2
+		} 
+		provinces_to_highlight = {
+			OR = {
+				province_id = 4919
+				area = jw1_area
+			}
+			NOT = { owned_by = ROOT }
+		} 
+
+		trigger = {
+			4919 = {
+				owned_by = ROOT
+			}
+			jw1_area = {
+				type = all
+				owned_by = ROOT
+			}
+		} 
+
+		effect = {
+			add_army_tradition_or_mil_power = { amount = 10 }
+			jw1_area = {
+				add_province_modifier = {
+					name = lanjinhui_fortess_north_mount
+					duration = 18250
+				}
+			}
+		} 
+	}
+	
+	YE_lanjin_branch_I_2_4 = { 
+		icon = mission_asian_city
+		position = 4
+		required_missions = { 
+			YE_lanjin_branch_I_2_3
+			YE_lanjin_1_3
+		} 
+		provinces_to_highlight = {
+		} 
+
+		trigger = {
+			has_global_modifier_value = {
+				which = discipline
+				value = 0.05
+			}
+			army_professionalism = 0.10
+			mil_power = 100
+		} 
+
+		effect = {
+			add_mil_power = -100
+			capital_scope = {
+				qizilbash_infantry = ROOT
+				qizilbash_infantry = ROOT
+				qizilbash_infantry = ROOT
+			}
+			add_country_modifier = {
+				name = lanjinhui_suppress_cavalry_with_infantry
+				duration = -1
+			}
+		} 
+	}
+	
+}	
+YE_lanjin_branch_I_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { 
+		has_country_flag = YE_lanjinhui_branch_I_flag
+		OR = {
+			tag = Y05
+			was_tag = Y05
+		}
+	} 
+
+	YE_lanjin_branch_I_3_3 = { 
+		icon = mission_asian_city
+		position = 3
+		required_missions = { 
+			YE_lanjin_3_2
+		} 
+		provinces_to_highlight = {
+			region = jianwu_region 
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		} 
+
+		trigger = {
+			4979 = { country_or_non_sovereign_subject_holds = ROOT }
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 16
+				region = jianwu_region
+			}
+		} 
+
+		effect = {
+			add_prestige = 15
+			4979 = {
+				add_nationalism = -5
+			}
+		} 
+	}
+	YE_lanjin_branch_I_3_4 = { 
+		icon = mission_asian_city
+		position = 4
+		required_missions = { 
+			YE_lanjin_branch_I_2_3
+			YE_lanjin_branch_I_3_3
+		} 
+		provinces_to_highlight = {
+			region = jianwu_region
+			NOT = {  
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		} 
+
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 35
+				region = jianwu_region
+			}
+		} 
+
+		effect = {
+			add_country_modifier = {
+				name = lanjinhui_free_jianwu
+				duration = -1
+			}
+		} 
+	}
+	
+	YE_lanjin_branch_I_3_5 = { 
+		icon = mission_asian_city
+		position = 5
+		required_missions = { 
+			YE_lanjin_branch_I_3_4
+			YE_lanjin_branch_I_4_4
+		} 
+		provinces_to_highlight = {
+			province_id = 4871
+		} 
+
+		trigger = {
+			owns = 4871
+		} 
+
+		effect = {
+			add_adm_power = 100
+			add_dip_power = 100
+			add_mil_power = 100
+			add_country_modifier = {
+				name = lanjinhui_liberate_tianlou
+				duration = 36500
+			}
+			custom_tooltip = YE_lanjin_branch_I_3_5_tooltip
+		} 
+	}
+	
+}
+YE_lanjin_branch_I_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { 
+		has_country_flag = YE_lanjinhui_branch_I_flag
+		OR = {
+			tag = Y05
+			was_tag = Y05
+		}
+	} 
+	YE_lanjin_branch_I_4_3 = {
+		icon = mission_asian_city
+		position = 3
+		required_missions = { 
+			YE_lanjin_3_2
+		} 
+		provinces_to_highlight = {
+		} 
+
+		trigger = { # 飞越天楼
+			OR = {
+				owns = 4871 #直接拥有
+
+				4871 = {
+					owned_by = Y15
+				}
+
+				4871 = {
+					owner = {
+						NOT = { tag = Y15 }
+						has_spy_network_from = {
+							who = ROOT
+							value = 25
+						}
+					}
+				}				
+			}	
+		} 
+
+		effect = {
+
+			if = {
+				limit = {
+					owns = 4871
+				}
+				add_stability = 1
+				4871 = {
+					owner = {
+						country_event = { id = YE_GRY.46 }
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					4871 = {
+						owned_by = Y15
+					}
+				}
+				add_prestige = 10
+				Y15 = {
+					country_event = { id = YE_GRY.46 }
+				}
+			}
+			else_if = {		
+				limit = {
+					4871 = {
+						owner = {
+							has_spy_network_from = {
+								who = ROOT
+								value = 25
+							}
+						}
+					}
+				}	
+				4871 = {
+					area = {
+						add_permanent_claim = ROOT
+					}
+					owner = {
+						add_stability = -1
+						country_event = { id = YE_GRY.46 }
+					}
+				}
+			}
+			jinxun_region = {
+				add_permanent_claim = ROOT
+			}
+		} 
+		
+	}
+	YE_lanjin_branch_I_4_4 = { 
+		icon = mission_asian_city
+		position = 4
+		required_missions = { 
+			YE_lanjin_branch_I_4_3
+		} 
+		provinces_to_highlight = {
+			province_id = 4869
+		} 
+
+		trigger = {
+			owns = 4869
+		} 
+
+		effect = {
+			custom_tooltip = YE_lanjin_branch_I_4_4_tooltip
+			if = {
+				limit = {
+					4869 = {
+						has_province_modifier = stone_army_in_xiangnv
+					}
+				}
+				add_army_tradition = 15
+			}
+			else_if = {
+				limit = {
+					4869 = {
+						has_province_modifier = sorcerers_in_xiangnv
+					}
+				}
+				add_prestige = 10
+				define_advisor = {
+					type = court_mage
+					discount = yes
+					skill = 2
+				}
+			}
+			else = {
+				change_mana = { amount = 25 }
+			}
+		} 
+	}
+	
+}	
+YE_lanjin_branch_I_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { 
+		has_country_flag = YE_lanjinhui_branch_I_flag
+		OR = {
+			tag = Y05
+			was_tag = Y05
+		}
+	} 
+
+	YE_lanjin_branch_I_5_5 = { 
+		icon = mission_asian_city
+		position = 5
+		required_missions = { 
+			YE_lanjin_branch_I_4_4
+		} 
+		provinces_to_highlight = {
+			province_id = 4869
+		} 
+
+		trigger = {
+			4869 = { 
+				owned_by = ROOT 
+				has_building = mage_tower
+				development = 20
+			}
+			estate_loyalty = {
+				estate = estate_mages
+				loyalty = 50
+			}
+			treasury = 500
+		} 
+
+		effect = {
+			custom_tooltip = YE_lanjin_branch_I_5_5_tooltip
+			add_treasury = -500
+			define_war_wizard = { level = 2 }
+			if = {
+				limit = {
+					NOT = {
+						has_estate_privilege = estate_mages_battlemage_academies
+					}
+				}
+				set_country_flag = may_grant_battlemage_academies
+				set_estate_privilege = estate_mages_battlemage_academies
+			}
+			else = {
+				add_adm_power = 50
+			}
+			
+		} 
+	}
+	
+}
+# YE_lanjin_branch_II_1 = {
+# 	slot = 1
+# 	generic = no
+# 	ai = yes
+# 	has_country_shield = yes
+# 	potential = { 
+# 		has_country_flag = YE_lanjinhui_branch_II_flag
+# 		OR = {
+# 			tag = Y05
+# 			was_tag = Y05
+# 		}
+# 	} 
+
+# 	YE_lanjin_branch_II_1_5 = { 
+# 		icon = mission_asian_city
+# 		position = 1
+# 		required_missions = { 
+# 		} 
+# 		provinces_to_highlight = {
+# 		} 
+
+# 		trigger = {
+
+# 		} 
+
+# 		effect = {
+
+# 		} 
+# 	}
+# }
+# YE_lanjin_branch_II_2 = {
+# 	slot = 2
+# 	generic = no
+# 	ai = yes
+# 	has_country_shield = yes
+# 	potential = { 
+# 		has_country_flag = YE_lanjinhui_branch_II_flag
+# 		OR = {
+# 			tag = Y05
+# 			was_tag = Y05
+# 		}
+# 	} 
+# 	YE_lanjin_branch_II_2_3 = {
+# 		icon = mission_asian_city
+# 		position = 3
+# 		required_missions = { 
+# 		} 
+# 		provinces_to_highlight = {
+# 		} 
+
+# 		trigger = {
+
+# 		} 
+
+# 		effect = {
+
+# 		} 
+# 	}
+# 	YE_lanjin_branch_II_2_4 = { 
+# 		icon = mission_asian_city
+# 		position = 4
+# 		required_missions = { 
+# 		} 
+# 		provinces_to_highlight = {
+# 		} 
+
+# 		trigger = {
+
+# 		} 
+
+# 		effect = {
+
+# 		} 
+# 	}
+# }	
+# YE_lanjin_branch_II_3 = {
+# 	slot = 3
+# 	generic = no
+# 	ai = yes
+# 	has_country_shield = yes
+# 	potential = { 
+# 		has_country_flag = YE_lanjinhui_branch_II_flag
+# 		OR = {
+# 			tag = Y05
+# 			was_tag = Y05
+# 		}
+# 	} 
+
+# 	YE_lanjin_branch_II_3_3 = { 
+# 		icon = mission_asian_city
+# 		position = 3
+# 		required_missions = { 
+# 		} 
+# 		provinces_to_highlight = {
+
+# 		} 
+
+# 		trigger = {
+
+# 		} 
+
+# 		effect = {
+
+# 		} 
+# 	}
+# 	YE_lanjin_branch_II_3_4 = { 
+# 		icon = mission_asian_city
+# 		position = 4
+# 		required_missions = { 
+# 		} 
+# 		provinces_to_highlight = {
+# 		} 
+
+# 		trigger = {
+
+# 		} 
+
+# 		effect = {
+
+# 		} 
+# 	}
+# 	YE_lanjin_branch_II_3_5 = { 
+# 		icon = mission_asian_city
+# 		position = 5
+# 		required_missions = { 
+# 		} 
+# 		provinces_to_highlight = {
+# 		} 
+
+# 		trigger = {
+
+# 		} 
+
+# 		effect = {
+
+# 		} 
+# 	}
 
 
+# }
+# YE_lanjin_branch_II_4 = {
+# 	slot = 4
+# 	generic = no
+# 	ai = yes
+# 	has_country_shield = yes
+# 	potential = { 
+# 		has_country_flag = YE_lanjinhui_branch_II_flag
+# 		OR = {
+# 			tag = Y05
+# 			was_tag = Y05
+# 		}
+# 	} 
+# 	YE_lanjin_branch_II_4_3 = {
+# 		icon = mission_asian_city
+# 		position = 3
+# 		required_missions = { 
+# 		} 
+# 		provinces_to_highlight = {
+# 		} 
 
+# 		trigger = {
 
+# 		} 
 
+# 		effect = {
 
+# 		} 
+# 	}
+# 	YE_lanjin_branch_II_4_4 = { 
+# 		icon = mission_asian_city
+# 		position = 4
+# 		required_missions = { 
+# 		} 
+# 		provinces_to_highlight = {
+# 		} 
 
+# 		trigger = {
 
+# 		} 
 
+# 		effect = {
 
+# 		} 
+# 	}
+# }	
+# YE_lanjin_branch_II_5 = {
+# 	slot = 5
+# 	generic = no
+# 	ai = yes
+# 	has_country_shield = yes
+# 	potential = { 
+# 		has_country_flag = YE_lanjinhui_branch_II_flag
+# 		OR = {
+# 			tag = Y05
+# 			was_tag = Y05
+# 		}
+# 	} 
+
+# 	YE_lanjin_branch_II_5_5 = { 
+# 		icon = mission_asian_city
+# 		position = 5
+# 		required_missions = { 
+# 		} 
+# 		provinces_to_highlight = {
+# 		} 
+
+# 		trigger = {
+
+# 		} 
+
+# 		effect = {
+
+# 		} 
+# 	}
+# }
 
 

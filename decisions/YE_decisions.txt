@@ -1,0 +1,1033 @@
+country_decisions = {
+	YE_invest_academic_center_0 = { # only test
+		major = yes
+		potential = {
+			always = no
+		}
+		provinces_to_highlight = {
+		}
+		allow = {
+			always = no
+		}
+		effect = {
+			set_country_flag = YE_allow_dev_bonus_flag
+		}
+		ai_importance = 1
+		ai_will_do = {
+			factor = 0
+		}	
+	}
+	YE_invest_academic_center = { #学者任务
+		major = yes
+		potential = {
+			event_target:loc_of_scholar_from_luojiang = {
+				owned_by = ROOT
+				NOT = { has_building = university }
+			}
+		}
+		provinces_to_highlight = {
+			province_id = event_target:loc_of_scholar_from_luojiang
+		}
+		allow = {
+			event_target:loc_of_scholar_from_luojiang = {
+				num_of_times_improved_by_owner = 4
+				if = {
+					limit = {
+						adm_tech = 4
+					}
+					has_building = temple
+				}
+			}
+			treasury = 200
+		}
+		effect = {
+			add_treasury = -200
+			event_target:loc_of_scholar_from_luojiang = {
+				add_building = university
+			}
+		}
+		ai_importance = 300
+		ai_will_do = {
+			factor = 300
+		}
+	}
+	visit_official_university = { #探访官学
+		potential = {
+			has_country_flag = allow_visit_official_university_flag
+		}
+		provinces_to_highlight = {
+			is_capital_of = ROOT
+		}
+		allow = {
+			NOT = {
+				has_country_modifier = visit_official_university_cooldown
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = visit_official_university_cooldown
+				duration = 1825
+			}
+			country_event = {
+				id = YE_GRY.15
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						check_variable = { which = visit_official_university_counter value = 1 }
+					}
+					change_variable = { which = visit_official_university_counter value = 1 }
+				}
+				else = {
+					set_variable = { which = visit_official_university_counter value = 1 }
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 400
+		}
+	}
+	
+	send_oni_special_operations_team = { #赤鬼特务队
+		potential = {
+			tag = Y01
+			#NOT = { has_country_flag = YE_allow_Y01_special_buff_flag }
+		}
+		provinces_to_highlight = {
+
+		}
+		allow = {
+			NOT = {
+				has_country_modifier = send_oni_special_operations_team_cooldown
+			}
+		}
+		effect = {
+			country_event = { id = YE_GRY.19 }
+			add_country_modifier = {
+				name = send_oni_special_operations_team_cooldown
+				duration = 730 
+			}
+		}
+		ai_will_do = {
+			factor = 400
+		}
+	}
+	
+	AI_YA1_form_onexia = { #[AI]成立一侠
+		potential = {
+			tag = YA1
+		}
+		provinces_to_highlight = {
+
+		}
+		allow = {
+			is_subject = no
+		}
+		effect = {
+			if = {
+				limit = {
+					Y99 = {
+						exists = yes
+					}
+				}
+				Y99 = {
+					inherit = ROOT
+				}
+			}
+			else = {
+				change_tag = Y99
+				country_event = { id = YE_GRY.39 days = 1 }
+			}
+			restore_country_name = yes
+			restore_country_color = yes
+		}
+		ai_will_do = {
+			factor = 400
+		}
+	}
+	
+	halessi_subject_management_event = { #东洲属国管理
+		major = yes
+		potential = {
+			tag = Z66
+			ai = no
+			NOT = {
+				has_country_flag = halessi_subject_management_event_flag
+			}
+		}
+		provinces_to_highlight = {
+
+		}
+		allow = {
+			always = yes
+		}
+		
+		effect = {
+			country_event = { id = YE_GRY.42 }
+			hidden_effect = {
+				set_country_flag = halessi_subject_management_event_flag
+			}
+		}
+		ai_will_do = {
+			factor = 400
+		}
+	}
+	
+	switch_mission_branch_Z66 = { #切换任务分支 大辉
+		major = yes
+		potential = { tag= Z66 }
+		allow = { always = yes }
+		effect = {
+			if = {
+				limit = {
+					has_country_flag = YE_dahui_branch_moling_flag
+				}
+				custom_tooltip = switch_mission_branch_xianjie_Z66_tooltip
+				clr_country_flag = YE_dahui_branch_moling_flag
+				set_country_flag = YE_dahui_branch_xiajie_flag
+			}
+			else_if = {
+				limit = {
+					has_country_flag = YE_dahui_branch_wuxun_flag
+				}
+				custom_tooltip = switch_mission_branch_moling_Z66_tooltip
+				clr_country_flag = YE_dahui_branch_wuxun_flag
+				set_country_flag = YE_dahui_branch_moling_flag
+			}
+			else_if = {
+				limit = {
+					has_country_flag = YE_dahui_branch_xiajie_flag
+				}
+				custom_tooltip = switch_mission_branch_wuxun_Z66_tooltip
+				clr_country_flag = YE_dahui_branch_xiajie_flag
+				set_country_flag = YE_dahui_branch_wuxun_flag
+			}
+			else = {
+				custom_tooltip = switch_mission_branch_xianjie_Z66_tooltip
+				set_country_flag = YE_dahui_branch_xiajie_flag
+			}
+			swap_non_generic_missions = yes
+
+		}
+		ai_will_do = { factor = 1 }
+	}
+
+	form_yanszin = { #烟心
+		major = yes
+		potential = {
+			capital_scope = {
+				region = yanxin_region
+			}
+			OR = {
+				tag = Y10
+				tag = Y04
+				tag = Y08
+				tag = Y07
+				tag = Y06
+				tag = Z59
+				tag = V22
+			}
+		}
+		provinces_to_highlight = {
+			province_group = original_yanszin
+			NOT = { owned_by = ROOT }
+		}
+		allow = {
+			if = {
+				limit = {
+					has_estate = estate_eunuchs_anb
+				}
+				NOT = { has_estate = estate_eunuchs_anb }
+			}
+			NOT = { exists = V19 }
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			original_yanszin = {
+				type = all
+				owned_by = ROOT
+			}
+		}
+		effect = {
+			change_tag = V19
+			swap_non_generic_missions = yes
+			country_event = { id = ideagroups.1 }
+		}
+		ai_will_do = {
+			factor = 400
+		}
+	}
+	form_yanshen = { #烟州
+		major = yes
+		potential = {
+			government = republic
+			tag = V19
+		}
+		provinces_to_highlight = {
+			superregion = yanshen_superregion
+			NOT = { owned_by = ROOT }
+		}
+		allow = {
+			if = {
+				limit = {
+					has_estate = estate_eunuchs_anb
+				}
+				NOT = { has_estate = estate_eunuchs_anb }
+			}
+			hidden_trigger = {
+				culture_group = yan
+			}
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			adm_tech = 7
+			capital_scope = {
+				development = 40
+				region = yanxin_region
+			}
+			num_of_owned_provinces_with = {
+				value = 100
+				superregion = yanshen_superregion
+			}
+		}
+		effect = {
+			change_tag = Z65
+			hidden_effect = { restore_country_name = yes }
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						is_part_of_hre = yes
+					}
+					set_in_empire = no
+				}
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			set_government_rank_scripted_effect = { rank = 3 }
+			add_prestige = 35
+			set_country_flag = formed_yanshen_flag
+
+			if = {
+				limit = { has_custom_ideas = no }
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			yanshen_superregion = {
+				add_permanent_claim = ROOT
+			}
+		}
+		ai_will_do = {
+			factor = 400
+		}
+	}
+	
+	# dahui_nation = { #成立大辉
+	# 	major = yes
+	# 	potential = {
+	# 		government = monarchy
+	# 		culture_group = yan
+	# 		NOT = {
+	# 			AND = {
+	# 				primary_culture = beikling
+	# 				religion = devouring_path
+	# 			}
+	# 		}
+	# 		NOT = { exists = Z66 }
+	# 		NOT = { 
+	# 			OR = {
+	# 				has_country_flag = formed_yanshen_flag
+	# 				has_country_flag = formed_liang_flag
+	# 				has_country_flag = formed_di_yichan_flag
+	# 				primary_culture = szitu
+	# 				primary_culture = pinghoi
+	# 				primary_culture = haiwai
+	# 			}
+	# 		}
+	# 		normal_or_historical_nations = yes
+	# 		was_never_end_game_tag_trigger = yes
+	# 	}
+	# 	provinces_to_highlight = {
+	# 		superregion = yanshen_superregion
+	# 		NOT = { owned_by = ROOT }
+	# 	}
+	# 	allow = {
+	# 		hidden_trigger = {
+	# 			culture_group = yan
+	# 		}
+	# 		is_at_war = no
+	# 		is_free_or_tributary_trigger = yes
+	# 		adm_tech = 7
+	# 		num_of_owned_provinces_with = {
+	# 			value = 100
+	# 			superregion = yanshen_superregion
+	# 		}
+	# 	}
+	# 	effect = {
+	# 		change_tag = Z66
+	# 		hidden_effect = { restore_country_name = yes }
+	# 		hidden_effect = {
+	# 			every_owned_province = {
+	# 				limit = {
+	# 					is_part_of_hre = yes
+	# 				}
+	# 				set_in_empire = no
+	# 			}
+	# 		}
+	# 		add_country_modifier = {
+	# 			name = "centralization_modifier"
+	# 			duration = 7300
+	# 			}
+	# 		set_government_rank_scripted_effect = { rank = 3 }
+	# 		add_prestige = 35
+	# 		set_country_flag = formed_liang_flag
+	# 		set_capital = 8038
+
+	# 		if = {
+	# 			limit = { has_custom_ideas = no }
+	# 			country_event = { id = ideagroups.1 } #Swap Ideas
+	# 		}
+	# 		if = {
+	# 			limit = { NOT = { has_reform = eunuch_dynasty_reform } }
+	# 			add_government_reform = yan_empire_reform
+	# 		}
+	# 		yanshen_superregion = {
+	# 			add_permanent_claim = ROOT
+	# 		}
+	# 		if = { limit = { was_tag = Y09 } swap_non_generic_missions = yes }
+	# 	}
+	# 	ai_will_do = {
+	# 		factor = 400
+	# 	}
+	# }
+
+
+	from_hui_rank_II = { #辉
+		major = yes
+		potential = {
+			government = monarchy
+			OR = {
+				primary_culture = jiangszun
+				primary_culture = naamjyut
+			}
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+
+			NOT = { exists = Z66 }
+			NOT = { has_global_flag = from_hui_rank_II_gflag }
+		}
+		provinces_to_highlight = {
+			superregion = yanshen_superregion
+			NOT = { owned_by = ROOT }
+		}
+		allow = {
+			if = {
+				limit = {
+					has_estate = estate_eunuchs_anb
+				}
+				NOT = { has_estate = estate_eunuchs_anb }
+			}
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			capital_scope = {
+				OR = {
+					region = zhaoxun_region
+					region = yanxin_region
+				}
+			}
+			num_of_owned_provinces_with = {
+				value = 100
+				superregion = yanshen_superregion
+			}
+		}
+		effect = {
+			###
+			change_tag = Z66
+			country_event = { id = ideagroups.1 }
+			swap_non_generic_missions = yes
+			###
+			set_capital = 8038
+			add_government_reform = yan_empire_reform
+			add_country_modifier = { name = "centralization_modifier" duration = 7300 }
+			set_global_flag = from_hui_rank_II_gflag
+			###
+			yanshen_superregion = {
+				add_permanent_claim = ROOT
+			}
+			###
+			hidden_effect = {
+				restore_country_name = yes
+				every_owned_province = {
+					limit = {
+						is_part_of_hre = yes
+					}
+					set_in_empire = no
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 400
+		}
+	}
+	form_Xi_rank_II = { #曦
+		major = yes
+		potential = {
+			government = monarchy
+			OR = {
+				primary_culture = gangim
+				primary_culture = naamjyut
+			}
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+
+			NOT = { exists = YZ1 }
+			NOT = { has_global_flag = form_Xi_rank_II_gflag }
+		}
+		provinces_to_highlight = {
+			superregion = yanshen_superregion
+			NOT = { owned_by = ROOT }
+		}
+		allow = {
+			if = {
+				limit = {
+					has_estate = estate_eunuchs_anb
+				}
+				NOT = { has_estate = estate_eunuchs_anb }
+			}
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			capital_scope = {
+				OR = {
+					region = nanyue_region
+					area = xiyun_area
+				}
+			}
+			num_of_owned_provinces_with = {
+				value = 100
+				superregion = yanshen_superregion
+			}
+		}
+		effect = {
+			###
+			change_tag = YZ1
+			country_event = { id = ideagroups.1 }
+			swap_non_generic_missions = yes
+			###
+			set_capital = 4893
+			add_government_reform = yan_empire_reform
+			add_country_modifier = { name = "centralization_modifier" duration = 7300 }
+			set_global_flag = form_Xi_rank_II_gflag
+			###
+			yanshen_superregion = {
+				add_permanent_claim = ROOT
+			}
+			###
+			hidden_effect = {
+				restore_country_name = yes
+				every_owned_province = {
+					limit = {
+						is_part_of_hre = yes
+					}
+					set_in_empire = no
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 400
+		}
+	}
+	form_Luo_rank_II = { #罗
+		major = yes
+		potential = {
+			government = monarchy
+			OR = {
+				primary_culture = gangim
+			}
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+
+			NOT = { exists = YZ2 }
+			NOT = { has_global_flag = form_Luo_rank_II_gflag }
+		}
+		provinces_to_highlight = {
+			superregion = yanshen_superregion
+			NOT = { owned_by = ROOT }
+		}
+		allow = {
+			if = {
+				limit = {
+					has_estate = estate_eunuchs_anb
+				}
+				NOT = { has_estate = estate_eunuchs_anb }
+			}
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			capital_scope = {
+				OR = {
+					region = luojiang_region
+				}
+			}
+			num_of_owned_provinces_with = {
+				value = 100
+				superregion = yanshen_superregion
+			}
+		}
+		effect = {
+			###
+			change_tag = YZ2
+			country_event = { id = ideagroups.1 }
+			swap_non_generic_missions = yes
+			###
+			set_capital = 4949
+			add_government_reform = yan_empire_reform
+			add_country_modifier = { name = "centralization_modifier" duration = 7300 }
+			set_global_flag = form_Luo_rank_II_gflag
+			###
+			yanshen_superregion = {
+				add_permanent_claim = ROOT
+			}
+			###
+			hidden_effect = {
+				restore_country_name = yes
+				every_owned_province = {
+					limit = {
+						is_part_of_hre = yes
+					}
+					set_in_empire = no
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 400
+		}
+	}
+	form_Zhao_rank_II = { #昭
+		major = yes
+		potential = {
+			government = monarchy
+			OR = {
+				primary_culture = jiangszun
+				primary_culture = jiangyang
+			}
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+
+			NOT = { exists = YZ3 }
+			NOT = { has_global_flag = form_Zhao_rank_II_gflag }
+		}
+		provinces_to_highlight = {
+			superregion = yanshen_superregion
+			NOT = { owned_by = ROOT }
+		}
+		allow = {
+			if = {
+				limit = {
+					has_estate = estate_eunuchs_anb
+				}
+				NOT = { has_estate = estate_eunuchs_anb }
+			}
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			capital_scope = {
+				OR = {
+					region = jianwu_region
+					region = jinxun_region
+				}
+			}
+			num_of_owned_provinces_with = {
+				value = 100
+				superregion = yanshen_superregion
+			}
+		}
+		effect = {
+			###
+			change_tag = YZ3
+			country_event = { id = ideagroups.1 }
+			swap_non_generic_missions = yes
+			###
+			set_capital = 4871
+			add_government_reform = yan_empire_reform
+			add_country_modifier = { name = "centralization_modifier" duration = 7300 }
+			set_global_flag = form_Zhao_rank_II_gflag
+			###
+			yanshen_superregion = {
+				add_permanent_claim = ROOT
+			}
+			###
+			hidden_effect = {
+				restore_country_name = yes
+				every_owned_province = {
+					limit = {
+						is_part_of_hre = yes
+					}
+					set_in_empire = no
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 400
+		}
+	}
+
+	form_Jinjian_rank_II = { #金坚
+		major = yes
+		potential = {
+			government = republic
+			OR = {
+				primary_culture = jiangszun
+				primary_culture = jiangyang
+			}
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+
+			NOT = { exists = YZ4 }
+			NOT = { has_global_flag = form_Jinjian_rank_II_gflag }
+		}
+		provinces_to_highlight = {
+			superregion = yanshen_superregion
+			NOT = { owned_by = ROOT }
+		}
+		allow = {
+			if = {
+				limit = {
+					has_estate = estate_eunuchs_anb
+				}
+				NOT = { has_estate = estate_eunuchs_anb }
+			}
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			capital_scope = {
+				OR = {
+					region = jianwu_region
+					region = jinxun_region
+				}
+			}
+			num_of_owned_provinces_with = {
+				value = 100
+				superregion = yanshen_superregion
+			}
+		}
+		effect = {
+			###
+			change_tag = YZ4
+			country_event = { id = ideagroups.1 }
+			swap_non_generic_missions = yes
+			###
+			set_capital = 4868 #江都
+			#add_government_reform = yan_empire_reform
+			add_country_modifier = { name = "centralization_modifier" duration = 7300 }
+			set_global_flag = form_Jinjian_rank_II_gflag
+			###
+			yanshen_superregion = {
+				add_permanent_claim = ROOT
+			}
+			###
+			hidden_effect = {
+				restore_country_name = yes
+				every_owned_province = {
+					limit = {
+						is_part_of_hre = yes
+					}
+					set_in_empire = no
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 400
+		}
+	}
+	form_Haiyin_rank_II = { #海阴
+		major = yes
+		potential = {
+			government = republic
+			OR = {
+				primary_culture = gangim
+				primary_culture = naamjyut
+			}
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+
+			NOT = { exists = YZ5 }
+			NOT = { has_global_flag = form_Haiyin_rank_II_gflag }
+		}
+		provinces_to_highlight = {
+			superregion = yanshen_superregion
+			NOT = { owned_by = ROOT }
+		}
+		allow = {
+			if = {
+				limit = {
+					has_estate = estate_eunuchs_anb
+				}
+				NOT = { has_estate = estate_eunuchs_anb }
+			}
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			capital_scope = {
+				OR = {
+					region = luojiang_region
+					region = nanyue_region
+				}
+			}
+			num_of_owned_provinces_with = {
+				value = 100
+				superregion = yanshen_superregion
+			}
+		}
+		effect = {
+			###
+			change_tag = YZ5
+			country_event = { id = ideagroups.1 }
+			swap_non_generic_missions = yes
+			###
+			set_capital = 4949
+			#add_government_reform = yan_empire_reform
+			add_country_modifier = { name = "centralization_modifier" duration = 7300 }
+			set_global_flag = form_Haiyin_rank_II_gflag
+			###
+			yanshen_superregion = {
+				add_permanent_claim = ROOT
+			}
+			###
+			hidden_effect = {
+				restore_country_name = yes
+				every_owned_province = {
+					limit = {
+						is_part_of_hre = yes
+					}
+					set_in_empire = no
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 400
+		}
+	}
+
+	# form_Yan_imperial_rank_III = { #帝湮
+	# 	major = yes
+	# 	potential = {
+	# 		government = monarchy
+	# 		is_yan_rank_II_tag = yes
+	# 		NOT = { exists = YZ7 }
+	# 		NOT = { has_global_flag = form_Yan_imperial_rank_III_gflag }
+	# 	}
+	# 	provinces_to_highlight = {
+	# 		superregion = yanshen_superregion
+	# 		NOT = { owned_by = ROOT }
+	# 	}
+	# 	allow = {
+	# 		if = {
+	# 			limit = {
+	# 				has_estate = estate_eunuchs_anb
+	# 			}
+	# 			NOT = { has_estate = estate_eunuchs_anb }
+	# 		}
+	# 		is_at_war = no
+	# 		is_free_or_tributary_trigger = yes
+	# 		num_of_owned_provinces_with = {
+	# 			value = 350
+	# 			OR = {
+	# 				superregion = yanshen_superregion
+	# 				superregion = shenzhou_superregion
+	# 			}
+	# 		}
+	# 	}
+	# 	effect = {
+	# 		###
+	# 		change_tag = YZ7
+	# 		country_event = { id = ideagroups.1 }
+	# 		swap_non_generic_missions = yes
+	# 		###
+	# 		#set_capital = 8038
+	# 		#add_government_reform = yan_empire_reform
+	# 		add_country_modifier = { name = "centralization_modifier" duration = 7300 }
+	# 		set_global_flag = form_Yan_imperial_rank_III_gflag
+	# 		###
+	# 		# yanshen_superregion = {
+	# 		# 	add_permanent_claim = ROOT
+	# 		# }
+	# 		###
+	# 		hidden_effect = {
+	# 			restore_country_name = yes
+	# 			every_owned_province = {
+	# 				limit = {
+	# 					is_part_of_hre = yes
+	# 				}
+	# 				set_in_empire = no
+	# 			}
+	# 		}
+	# 	}
+	# 	ai_will_do = {
+	# 		factor = 400
+	# 	}
+	# }
+	# form_Yan_republic_rank_III = { #民湮
+	# 	major = yes
+	# 	potential = {
+	# 		government = republic
+	# 		is_yan_rank_II_tag = yes
+	# 		NOT = { exists = YZ8 }
+	# 		NOT = { has_global_flag = form_Yan_republic_rank_III_gflag }
+	# 	}
+	# 	provinces_to_highlight = {
+	# 		superregion = yanshen_superregion
+	# 		NOT = { owned_by = ROOT }
+	# 	}
+	# 	allow = {
+	# 		if = {
+	# 			limit = {
+	# 				has_estate = estate_eunuchs_anb
+	# 			}
+	# 			NOT = { has_estate = estate_eunuchs_anb }
+	# 		}
+	# 		is_at_war = no
+	# 		is_free_or_tributary_trigger = yes
+	# 		num_of_owned_provinces_with = {
+	# 			value = 350
+	# 			OR = {
+	# 				superregion = yanshen_superregion
+	# 				superregion = shenzhou_superregion
+	# 			}				
+	# 		}
+	# 	}
+	# 	effect = {
+	# 		###
+	# 		change_tag = YZ8
+	# 		country_event = { id = ideagroups.1 }
+	# 		swap_non_generic_missions = yes
+	# 		###
+	# 		#set_capital = 8038
+	# 		#add_government_reform = yan_empire_reform
+	# 		add_country_modifier = { name = "centralization_modifier" duration = 7300 }
+	# 		set_global_flag = form_Yan_republic_rank_III_gflag
+	# 		###
+	# 		# yanshen_superregion = {
+	# 		# 	add_permanent_claim = ROOT
+	# 		# }
+	# 		###
+	# 		hidden_effect = {
+	# 			restore_country_name = yes
+	# 			every_owned_province = {
+	# 				limit = {
+	# 					is_part_of_hre = yes
+	# 				}
+	# 				set_in_empire = no
+	# 			}
+	# 		}
+	# 	}
+	# 	ai_will_do = {
+	# 		factor = 400
+	# 	}
+	# }
+
+	# form_YanShen_republic_rank_IV = { #烟蜃共和
+	# 	major = yes
+	# 	potential = {
+	# 		#government = republic
+	# 		is_yan_rank_III_tag = yes
+	# 		NOT = { exists = YZ6 }
+	# 		NOT = { has_global_flag = form_YanShen_republic_rank_IV_gflag }
+	# 	}
+	# 	provinces_to_highlight = {
+	# 		superregion = yanshen_superregion
+	# 		NOT = { owned_by = ROOT }
+	# 	}
+	# 	allow = {
+	# 		if = {
+	# 			limit = {
+	# 				has_estate = estate_eunuchs_anb
+	# 			}
+	# 			NOT = { has_estate = estate_eunuchs_anb }
+	# 		}
+	# 		is_at_war = no
+	# 		is_free_or_tributary_trigger = yes
+	# 		num_of_owned_provinces_with = {
+	# 			value = 350
+	# 			OR = {
+	# 				superregion = yanshen_superregion
+	# 				superregion = shenzhou_superregion
+	# 			}
+	# 		}
+	# 	}
+	# 	effect = {
+	# 		###
+	# 		change_tag = YZ6
+	# 		country_event = { id = ideagroups.1 }
+	# 		swap_non_generic_missions = yes
+	# 		###
+	# 		#set_capital = 8038
+	# 		#add_government_reform = yan_empire_reform
+	# 		add_country_modifier = { name = "centralization_modifier" duration = 7300 }
+	# 		set_global_flag = form_YanShen_republic_rank_IV_gflag
+	# 		###
+	# 		# yanshen_superregion = {
+	# 		# 	add_permanent_claim = ROOT
+	# 		# }
+	# 		###
+	# 		hidden_effect = {
+	# 			restore_country_name = yes
+	# 			every_owned_province = {
+	# 				limit = {
+	# 					is_part_of_hre = yes
+	# 				}
+	# 				set_in_empire = no
+	# 			}
+	# 		}
+	# 	}
+	# 	ai_will_do = {
+	# 		factor = 400
+	# 	}
+	# }
+
+	get_core_in_yanzhou = {
+		major = yes
+		potential = {
+			is_yan_rank_II_tag = yes
+			NOT = { tag = Y98 }
+			NOT = { has_country_flag = already_get_core_in_yanzhou_flag }
+		}
+		allow = {
+			num_of_owned_provinces_with = {
+				value = 160
+				superregion = yanshen_superregion
+			}
+		}
+		effect = {
+			custom_tooltip = get_core_in_yanzhou_tooltip
+			hidden_effect = {
+				every_province = {
+					limit = {
+						OR = {
+							superregion = yanshen_superregion
+							province_id = 8411
+							province_id = 8412
+						}
+						NOT = { area = ml_cave5_area }
+						NOT = { owned_by = ROOT }
+					}
+					add_territorial_core = ROOT
+				}
+			}
+			every_country = {
+				limit = {
+					capital_scope = { superregion = yanshen_superregion }
+					NOT = {
+						is_subject_of = ROOT
+					}
+					NOT = {
+						tag = ROOT
+					}
+				}
+				country_event = {
+					id = YE_GRY.61
+				}
+			}
+			every_subject_country = {
+				add_liberty_desire = -100
+			}
+			set_country_flag = already_get_core_in_yanzhou_flag
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}	
