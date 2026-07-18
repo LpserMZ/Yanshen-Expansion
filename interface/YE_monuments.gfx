@@ -493,10 +493,10 @@ spriteTypes = {
 		texturefile = "gfx//interface//great_projects//great_project_suez_canal.dds"
 	}
 
-    # spriteType = {
-    #     name = "GFX_great_project_"	
-    #     texturefile = "gfx//interface//great_projects//.dds"
-    # }
+    spriteType = {
+        name = "GFX_great_project_lanobuk_gov_house"	
+        texturefile = "gfx//interface//great_projects//lanobuk_gov_house.dds"
+    }
 
     # spriteType = {
     #     name = "GFX_great_project_"	
@@ -509,55 +509,3 @@ spriteTypes = {
     # }
 }
 
-spriteTypes = { #fromBFE
-
-    spriteType = {
-        name = "GFX_great_project_BFE_Szinyugang" 
-        texturefile = "gfx//interface//great_projects//great_project_grand_canal.dds"
-    }
-
-    spriteType = {
-        name = "GFX_great_project_BFE_Zhaoming" 
-        texturefile = "gfx//interface//great_projects//great_project_forbidden_city.dds"
-    }
-
-    spriteType = {
-        name = "GFX_great_project_BFE_mage_school" 
-        texturefile = "gfx//interface//great_projects//great_project_erdene_zuu.dds"
-    }
-
-    spriteType = {
-        name = "GFX_great_project_BFE_artificer_school" 
-        texturefile = "gfx//interface//great_projects//great_project_jokhang_temple.dds"
-    }
-
-    spriteType = {
-        name = "GFX_great_project_BFE_Tianlou" 
-        texturefile = "gfx//interface//great_projects//great_project_the_grand_palace.dds"
-    }
-
-    spriteType = {
-        name = "GFX_great_project_BFE_Greatwall_1" 
-        texturefile = "gfx//interface//great_projects//great_project_the_great_wall_of_china.dds"
-    }
-
-    spriteType = {
-        name = "GFX_great_project_BFE_Greatwall_2" 
-        texturefile = "gfx//interface//great_projects//great_project_the_great_wall_of_china.dds"
-    }
-
-    spriteType = {
-        name = "GFX_great_project_BFE_Linyuan" 
-        texturefile = "gfx//interface//great_projects//great_project_Kyoto.dds"
-    }
-
-    spriteType = {
-        name = "GFX_great_project_BFE_Jiangdu" 
-        texturefile = "gfx//interface//great_projects//great_project_sankin_kotai_palaces.dds"
-    }
-
-    spriteType = {
-        name = "GFX_great_project_BFE_Hubao" 
-        texturefile = "gfx//interface//great_projects//great_project_himeji_castle.dds"
-    }
-}

@@ -705,6 +705,10 @@ luzhang_tower = { start = 4849 #庐章塔
 	can_be_moved = no
 	starting_tier = 1
 	type = monument
+	build_trigger = {} #从tier-1到tier0
+	on_built = {}
+	on_destroyed = {}
+
 	can_use_modifiers_trigger = {
 		culture_group = yan
 		owner = { culture_group = yan }
@@ -1173,4 +1177,116 @@ pugao_tunnel = { start = 5424 #蒲槁隧道
 		on_upgraded = {
 		}
 	}
+}
+
+lanobuk_gov_house = { start = 6138 #兰诺埠
+	date = 1444.1.1
+	time = { months = 1 }
+	build_cost = 5000
+	can_be_moved = no
+	move_days_per_unit_distance = 10
+	starting_tier = 0
+
+	type = monument
+	build_trigger = {} #从tier-1到tier0
+	on_built = {}
+	on_destroyed = {}
+	can_use_modifiers_trigger = {
+		OR = {
+			owner = { culture_group = yan }
+			is_capital = yes
+		}
+	}
+	can_upgrade_trigger = {
+		OR = {
+			owner = { culture_group = yan }
+			is_capital = yes
+		}
+	}
+	keep_trigger = {}
+	tier_0 = { #所有奇观的0级都相同，所以cv即可
+		upgrade_time = { months = 0 } #填0
+		cost_to_upgrade = { factor = 0 } #填0
+		province_modifiers = {}
+		area_modifier = {}
+		country_modifiers = {}
+		on_upgraded = {}
+	}
+	tier_1 = {
+		cost_to_upgrade = { factor = 1000 } #0级——>1级 升级的费用，factor单位是杜卡特
+		upgrade_time = { months = 120 } #0级——>1级 升级的时长
+		province_modifiers = {}
+		area_modifier = {}
+		country_modifiers = {
+			range = 0.10
+		}
+		on_upgraded = {}	
+		conditional_modifier = { # 至少同时存在一条同级的country_modifiers
+			tooltip_potential = { always = yes }
+			trigger = { 
+				owner = {
+					OR = {
+						primary_culture = naamjyut
+						primary_culture = gangim
+					}			
+				}
+			}
+			modifier = {
+				global_colonial_growth = 25
+			}
+		}
+	
+	}
+	tier_2 = {
+		cost_to_upgrade = { factor = 2500 } #0级——>1级 升级的费用，factor单位是杜卡特
+		upgrade_time = { months = 240 } #0级——>1级 升级的时长
+		province_modifiers = {}
+		area_modifier = {}
+		country_modifiers = {
+			range = 0.20
+			merchants = 1
+		}
+		on_upgraded = {}
+		conditional_modifier = { # 至少同时存在一条同级的country_modifiers
+			tooltip_potential = { always = yes }
+			trigger = { 
+				owner = {
+					OR = {
+						primary_culture = naamjyut
+						primary_culture = gangim
+					}			
+				}
+			}
+			modifier = {
+				global_colonial_growth = 30
+			}
+		}
+	}
+	tier_3 = {
+		cost_to_upgrade = { factor = 5000 } #1级——>2级 升级的费用，factor单位是杜卡特
+		upgrade_time = { months = 480 } #1级——>2级 升级的时长
+		province_modifiers = {}
+		area_modifier = {}
+		region_modifier = {}
+		country_modifiers = {
+			range = 0.30
+			merchants = 1
+			min_autonomy_in_territories = -0.05
+		}
+		on_upgraded = {}
+		conditional_modifier = { # 至少同时存在一条同级的country_modifiers
+			tooltip_potential = { always = yes }
+			trigger = { 
+				owner = {
+					OR = {
+						primary_culture = naamjyut
+						primary_culture = gangim
+					}			
+				}
+			}
+			modifier = {
+				global_colonial_growth = 30
+			}
+		}	
+	}	
 }

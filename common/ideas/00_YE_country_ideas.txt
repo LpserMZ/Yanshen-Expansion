@@ -257,10 +257,10 @@ YE_YZ5_ideas = { # 海阴
 		development_cost_modifier = -0.10
 	}
 	YE_YZ5_ideas_3 = {
-		global_missionary_strength = 0.02
+		defensiveness = 0.20
 	}
 	YE_YZ5_ideas_4 = {
-		defensiveness = 0.20
+		global_missionary_strength = 0.02
 	}
 	YE_YZ5_ideas_5 = {
 		technology_cost = -0.10

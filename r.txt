@@ -14,29 +14,4 @@
 # 		country = ROOT
 # 	}
 # }
-Y09 = { country_event = { id = YE_GRY.1 } } #边方
-Y23 = { country_event = { id = YE_GRY.2 } } #朱樾
-4949 = { province_event = { id = YE_GRY.6  } }
-
-Y01 = {
-	set_variable = {
-		which = oni_special_operations_team_sortie_num
-		value = 0
-	}
-}
-
-if = {
-	limit = {
-		ai = no
-		has_estate = estate_eunuchs_anb
-		NOT = {
-			has_country_flag = anti_eunuch_country
-		}
-	}
-	set_country_flag = anti_eunuch_country
-}
-YC1 = { remove_country = yes }
-
-Y17 = { country_event = { id = YE_GRY.57 days = 10 } }
-
-set_global_flag = YE_GRY_startup_gflag
+country_event = { id = ideagroups.1 }
