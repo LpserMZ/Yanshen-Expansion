@@ -22,3 +22,17 @@
  not_ctrl_whole_area_5_key:0 "§Rå‹ôv^SÞT	g[Root.Num_unowned_5.GetValue]*NwýN*g1u`Oôv¥cµc6Rÿ§!"
  do_ctrl_whole_area_5_key:0 "åb	gwýN([Root.Num_5.GetValue]/[Root.Num_5.GetValue]),I`ÑSUS¦^= [Root.dev_5.GetValue](£adm£[Root.dev_tax_5.GetValue]£dip£[Root.dev_production_5.GetValue]£mil£[Root.dev_manpower_5.GetValue]),s^GW= [Root.mean_dev_5.GetValue](£adm£[Root.mean_dev_tax_5.GetValue]£dip£[Root.mean_dev_production_5.GetValue]£mil£[Root.mean_dev_manpower_5.GetValue])"
 
+ TyrantModifierRankCurrent_benevolent_I:0 "§TÁN?eîOckIrµuÿ1§!"
+ TyrantModifierRankCurrent_benevolent_II:0 "§TÁN?eîOckIrµuÿ2§!"
+ TyrantModifierRankCurrent_benevolent_III:0 "§TÁN?eîOckIrµuÿ3§!"
+ TyrantModifierRankCurrent_benevolent_IV:0 "§TÁN?eîOckIrµuÿ4§!"
+ TyrantModifierRankCurrent_benevolent_V:0 "§TÁN?eîOckIrµuÿ5§!"
+ TyrantModifierRankCurrent_ruthless_I:0 "§T´f?eîOckIrµuÿ1§!"
+ TyrantModifierRankCurrent_ruthless_II:0 "§T´f?eîOckIrµuÿ2§!"
+ TyrantModifierRankCurrent_ruthless_III:0 "§T´f?eîOckIrµuÿ3§!"
+ TyrantModifierRankCurrent_ruthless_IV:0 "§T´f?eîOckIrµuÿ4§!"
+ TyrantModifierRankCurrent_ruthless_V:0 "§T´f?eîOckIrµuÿ5§!"
+
+ TyrantModifierRankLimit_V:0 "§TNP–ÿ5§!"
+ TyrantModifierRankLimit_IV:0 "§TNP–ÿ4§!"
+ TyrantModifierRankLimit_III:0 "§TNP–ÿ3§!"

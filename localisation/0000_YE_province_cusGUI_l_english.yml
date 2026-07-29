@@ -8,3 +8,24 @@
  state_condition_unfilled_tooltip:0 "ôv^SÞT…Q„vûNawýNÑSUS¦^¾0R§Y18§!NàewýNîOck§Y0aN OåTz–0§!0"
  migrate_pop_effect_18_minus_tooltip:0 "§TSVMR[Root.GetName]„vÑSUS¦^SŽN18ÿ[8117.GetName]STdkwýNlûyÑSUS¦^§!"
  migrate_pop_effect_18_plus_tooltip:0 "§TSVMR[Root.GetName]„vÑSUS¦^¾0R18ÿôv^SÞT…QNb	gÑSUS¦^¾0R18„vwýNS·ƒ—VwýNîOck0aN OåTz–00§!"
+
+ prov_button_SLOT5_tyrant_and_yannification_tooltip:0 "SbV´fT:g6RNßpS:g6R—zãS"
+ aPUI_tyrant_and_yannification_exempt_tax_tooltip:0 "§YMQd–zK§!"
+ aPUI_tyrant_and_yannification_grant_jade_seal_privilege_tooltip:0 "§YˆcˆN‰sàzyrCg§!"
+ aPUI_tyrant_and_yannification_conscript_people_tooltip:0 "§Y:VVîXN§!"
+ aPUI_tyrant_and_yannification_corvee_labour_tooltip:0 "§YVÑS­VyV§!"
+
+ aPUI_tyrant_and_yannification_promote_intermarriage_tooltip:0 "§YÃOÛZZ§!"
+ aPUI_tyrant_and_yannification_attract_settlers_tooltip:0 "§Y8TVûyl§!"
+ aPUI_tyrant_and_yannification_station_troops_tooltip:0 "§Y‰Rn‰š›Q§!"
+ aPUI_tyrant_and_yannification_start_yannification_tooltip:0 "§Y/T¨RßpS§!"
+
+ prov_yannification_flag:0 "òTV/TßpS"
+ prov_yannification:0 "ßpSÛUS"
+
+
+ aPUI_tyrant_and_yannification_promote_intermarriage_effect_tooltip:0 "§Y[Root.GetAreaName]§!:SßW·ƒ—V0§YÃOÛZZ§!0ÿ:Ng5t^ÿÙuˆN‚YNHeœgÿ\nwýNÏkt^ßpSÛUS:§G+3§!"
+
+ start_yannification_in_area_script_effect_tooltip:0 ":SßW…QNb	g&rTNðagöN„vwýNÿ\n   S §YßpSÛUS§! „v<P¾‹n:N0\n   ¾‹nwýNhÆ‹ÿ'§YòTV/TßpS§!' \n\n§Y[Root.GetAreaName]§!:SßW·ƒ—V0§YßpSÛLˆ-N§!0cíu0R8nbÓumgÿÙuˆN‚YNHeœgÿ\n,g0WÑSUSb,gÿ§G-10.0%§!\nwýNÏkt^ßpSÛUSÿ§G+1.5§!"
+
+ aPUI_tyrant_and_yannification_yannification_progress:0 "[Root.prov_yannification.GetValue]/100"

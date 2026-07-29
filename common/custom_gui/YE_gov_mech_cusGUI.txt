@@ -1,0 +1,287 @@
+custom_window = { #
+	name = YE_tyrant_system_buttons_window
+	potential = { 
+		has_government_mechanic = YE_tyrant_system
+	}
+}
+custom_button = { #1
+	name = "YE_tyrant_system_reward_veterans"
+	tooltip = button_YE_tyrant_system_reward_veterans_tooltip
+	potential = {
+	}
+	trigger = { 
+		monthly_adm = 10
+		if = {
+			limit = {
+				has_country_flag = YE_tyrant_system_reward_veterans_flag
+			}
+			had_country_flag = {
+				flag = YE_tyrant_system_reward_veterans_flag
+				days = 3650
+			}
+		}
+	}
+	effect = {
+		add_country_modifier = {
+			name = YE_tyrant_system_reward_veterans_modifier
+			duration = 1825
+		}
+		add_government_power = {
+			mechanic_type = YE_tyrant_system
+			power_type = benelolent_ruthless_power
+			value = -20
+		}
+		if = {
+			limit = {
+				has_country_flag = YE_tyrant_system_reward_veterans_flag
+			}
+			clr_country_flag = YE_tyrant_system_reward_veterans_flag
+		}
+		set_country_flag = YE_tyrant_system_reward_veterans_flag
+	}
+}
+custom_button = { #2
+	name = "YE_tyrant_system_sponsor_harvest_festivals"
+	tooltip = button_YE_tyrant_system_sponsor_harvest_festivals_tooltip
+	potential = {
+	}
+	trigger = { 
+		monthly_adm = 12
+		years_of_income = 1.5
+		if = {
+			limit = {
+				has_country_flag = YE_tyrant_system_sponsor_harvest_festivals_flag
+			}
+			had_country_flag = {
+				flag = YE_tyrant_system_sponsor_harvest_festivals_flag
+				days = 5475
+			}
+		}
+	}
+	effect = {
+		add_country_modifier = {
+			name = YE_tyrant_system_sponsor_harvest_festivals_modifier
+			duration = 3650
+		}
+		add_stability = 1
+		add_years_of_income = -1.5
+		add_government_power = {
+			mechanic_type = YE_tyrant_system
+			power_type = benelolent_ruthless_power
+			value = -30
+		}
+		if = {
+			limit = {
+				has_country_flag = YE_tyrant_system_sponsor_harvest_festivals_flag
+			}
+			clr_country_flag = YE_tyrant_system_sponsor_harvest_festivals_flag
+		}
+		set_country_flag = YE_tyrant_system_sponsor_harvest_festivals_flag
+	}
+}
+custom_button = { #3
+	name = "YE_tyrant_system_return_to_pragmatism"
+	tooltip = button_YE_tyrant_system_return_to_pragmatism_tooltip
+	potential = {
+	}
+	trigger = { 
+		monthly_dip = 10
+		if = {
+			limit = {
+				has_country_flag = YE_tyrant_system_return_to_pragmatism_flag
+			}
+			had_country_flag = {
+				flag = YE_tyrant_system_return_to_pragmatism_flag
+				days = 7300
+			}
+		}
+	}
+	effect = {
+		custom_tooltip = button_YE_tyrant_system_return_to_pragmatism_effect_tooltip
+		hidden_effect = {
+			define_random_adm_advisor_effect = { skill = 1 cost_multiplier = 0.5 culture = ROOT religion = ROOT } 
+			define_random_dip_advisor_effect = { skill = 1 cost_multiplier = 0.5 culture = ROOT religion = ROOT } 
+			define_random_mil_advisor_effect = { skill = 1 cost_multiplier = 0.5 culture = ROOT religion = ROOT } 
+		}
+		
+		set_government_power = {
+			mechanic_type = YE_tyrant_system
+			power_type = benelolent_ruthless_power
+			value = 0
+		}
+		if = {
+			limit = {
+				has_country_flag = YE_tyrant_system_return_to_pragmatism_flag
+			}
+			clr_country_flag = YE_tyrant_system_return_to_pragmatism_flag
+		}
+		set_country_flag = YE_tyrant_system_return_to_pragmatism_flag
+	}
+}
+custom_button = { #4
+	name = "YE_tyrant_system_deploy_the_jadeite_crossguards"
+	tooltip = button_YE_tyrant_system_deploy_the_jadeite_crossguards_tooltip
+	potential = {
+	}
+	trigger = { 
+		monthly_mil = 10
+		num_of_generals = 1
+		army_tradition = 5
+
+		if = {
+			limit = {
+				has_country_flag = YE_tyrant_system_deploy_the_jadeite_crossguards_flag
+			}
+			had_country_flag = {
+				flag = YE_tyrant_system_deploy_the_jadeite_crossguards_flag
+				days = 3650
+			}
+		}
+	}
+	effect = {
+		add_country_modifier = {
+			name = YE_tyrant_system_deploy_the_jadeite_crossguards_modifier
+			duration = 3650
+		}
+		add_army_tradition=-5
+		kill_leader = { type = general}
+		add_government_power = {
+			mechanic_type = YE_tyrant_system
+			power_type = benelolent_ruthless_power
+			value = 20
+		}
+		if = {
+			limit = {
+				has_country_flag = YE_tyrant_system_deploy_the_jadeite_crossguards_flag
+			}
+			clr_country_flag = YE_tyrant_system_deploy_the_jadeite_crossguards_flag
+		}
+		set_country_flag = YE_tyrant_system_deploy_the_jadeite_crossguards_flag
+	}
+}
+custom_button = { #5
+	name = "YE_tyrant_system_purge_officers"
+	tooltip = button_YE_tyrant_system_purge_officers_tooltip
+	potential = {
+	}
+	trigger = { 
+		monthly_mil = 12
+		if = {
+			limit = {
+				has_country_flag = YE_tyrant_system_purge_officers_flag
+			}
+			had_country_flag = {
+				flag = YE_tyrant_system_purge_officers_flag
+				days = 5475
+			}
+		}
+	}
+	effect = {
+		add_country_modifier = {
+			name = YE_tyrant_system_purge_officers_modifier
+			duration = 3650
+		}
+		add_government_power = {
+			mechanic_type = YE_tyrant_system
+			power_type = benelolent_ruthless_power
+			value = 30
+		}
+		if = {
+			limit = {
+				has_country_flag = YE_tyrant_system_purge_officers_flag
+			}
+			clr_country_flag = YE_tyrant_system_purge_officers_flag
+		}
+		set_country_flag = YE_tyrant_system_purge_officers_flag
+	}
+}
+
+custom_icon = { # icon benvolent rank
+	name = "benelolent_ruthless_power_benevolent_rank"
+	tooltip = benelolent_ruthless_power_benevolent_rank
+	potential = {
+		OR = {
+			has_country_modifier = benevolent_rank_V
+			has_country_modifier = benevolent_rank_IV
+			has_country_modifier = benevolent_rank_III
+			has_country_modifier = benevolent_rank_II
+			has_country_modifier = benevolent_rank_I
+		}
+
+	}
+	frame = {
+		number = 5
+		trigger = {
+			has_country_modifier = benevolent_rank_V
+		}
+	}
+	frame = {
+		number = 4
+		trigger = {
+			has_country_modifier = benevolent_rank_IV
+		}
+	}
+	frame = {
+		number = 3
+		trigger = {
+			has_country_modifier = benevolent_rank_III
+		}
+	}
+	frame = {
+		number = 2
+		trigger = {
+			has_country_modifier = benevolent_rank_II
+		}
+	}
+	frame = {
+		number = 1
+		trigger = {
+			has_country_modifier = benevolent_rank_I
+		}
+	}
+}
+custom_icon = { # icon ruthless rank
+	name = "benelolent_ruthless_power_ruthless_rank"
+	tooltip = benelolent_ruthless_power_ruthless_rank
+	potential = {
+		OR = {
+			has_country_modifier = ruthless_rank_V
+			has_country_modifier = ruthless_rank_IV
+			has_country_modifier = ruthless_rank_III
+			has_country_modifier = ruthless_rank_II
+			has_country_modifier = ruthless_rank_I
+		}
+	}
+	frame = {
+		number = 5
+		trigger = {
+			has_country_modifier = ruthless_rank_V
+		}
+	}
+	frame = {
+		number = 4
+		trigger = {
+			has_country_modifier = ruthless_rank_IV
+		}
+	}
+	frame = {
+		number = 3
+		trigger = {
+			has_country_modifier = ruthless_rank_III
+		}
+	}
+	frame = {
+		number = 2
+		trigger = {
+			has_country_modifier = ruthless_rank_II
+		}
+	}
+	frame = {
+		number = 1
+		trigger = {
+			has_country_modifier = ruthless_rank_I
+		}
+	}
+}
+
+

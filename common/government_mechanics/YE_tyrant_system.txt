@@ -1,0 +1,201 @@
+YE_tyrant_system = {
+	alert_icon_gfx = GFX_alerticons_government_mechanics
+	alert_icon_index = 7
+
+	powers = {
+		benelolent_ruthless_power = {
+			show_before_interactions = yes
+			gui = YE_tyrant_system_gov_mech
+			max = 100
+			min = -100
+			reset_on_new_ruler = no
+			base_monthly_growth = 0
+			development_scaled_monthly_growth = 0
+			# scaled_modifier = {
+			# 	modifier = {
+					
+			# 	}
+			# }
+			scaled_modifier = {
+				start_value = 0 # sets the start value for the scaling [optional, min is default]
+				end_value = 100 # sets the end value for the scaling [optional, max is default]
+				#extend_beyond_value = no # defines whether the scaled modifier also applies outside of the range (but then with its max/min value for the range defined) [optional, yes is default]
+				trigger = {
+					always = yes
+				}
+				modifier = {
+					discipline = 0.05
+					province_warscore_cost = -0.10
+					global_unrest = 2
+				}
+            }
+			reverse_scaled_modifier = {
+				start_value = -100 # sets the start value for the scaling [optional, min is default]
+				end_value = 0 # sets the end value for the scaling [optional, max is default]
+				extend_beyond_value = no # defines whether the scaled modifier also applies outside of the range (but then with its max/min value for the range defined) [optional, yes is default]
+				trigger = {
+					always = yes
+				}
+				modifier = {
+					core_creation = -0.10
+					years_of_nationalism = -5
+					min_autonomy = 5
+				}
+            }
+			is_good = no
+		}
+	}
+	
+	# interactions = {
+	# 	# reward_veterans = {
+	# 	# 	icon = GFX_YE_tyrant_system_reward_veterans
+	# 	# 	center = no 
+	# 	# 	cost_type = benelolent_ruthless_power
+	# 	# 	trigger = {
+	# 	# 		NOT = {
+	# 	# 			has_government_power = {
+	# 	# 				mechanic_type = YE_tyrant_system
+	# 	# 				power_type = benelolent_ruthless_power
+	# 	# 				value = 100
+	# 	# 			}
+	# 	# 		}
+	# 	# 	}
+	# 	# 	effect = {
+	# 	# 		mil_power_cost = 50
+	# 	# 		add_government_power = {
+	# 	# 			mechanic_type = YE_tyrant_system
+	# 	# 			power_type = benelolent_ruthless_power
+	# 	# 			value = 5
+	# 	# 		}
+	# 	# 	}
+	# 	# 	cooldown_years = 0
+	# 	# 	ai_chance = {
+	# 	# 		factor = 10
+	# 	# 		modifier = {
+	# 	# 			factor = 10
+	# 	# 			always = no
+	# 	# 		}
+	# 	# 	}
+	# 	# }
+	# 	# sponsor_harvest_festivals = {
+	# 	# 	icon = GFX_YE_tyrant_system_sponsor_harvest_festivals
+	# 	# 	center = no 
+	# 	# 	cost_type = benelolent_ruthless_power
+	# 	# 	trigger = {
+	# 	# 		NOT = {
+	# 	# 			has_government_power = {
+	# 	# 				mechanic_type = YE_tyrant_system
+	# 	# 				power_type = benelolent_ruthless_power
+	# 	# 				value = 100
+	# 	# 			}
+	# 	# 		}
+	# 	# 	}
+	# 	# 	effect = {
+	# 	# 		mil_power_cost = 50
+	# 	# 		add_government_power = {
+	# 	# 			mechanic_type = YE_tyrant_system
+	# 	# 			power_type = benelolent_ruthless_power
+	# 	# 			value = 5
+	# 	# 		}
+	# 	# 	}
+	# 	# 	cooldown_years = 0
+	# 	# 	ai_chance = {
+	# 	# 		factor = 10
+	# 	# 		modifier = {
+	# 	# 			factor = 10
+	# 	# 			always = no
+	# 	# 		}
+	# 	# 	}
+	# 	# }
+	# 	# return_to_pragmatism = {
+	# 	# 	icon = GFX_YE_tyrant_system_return_to_pragmatism
+	# 	# 	center = no 
+	# 	# 	cost_type = benelolent_ruthless_power
+	# 	# 	trigger = {
+	# 	# 		NOT = {
+	# 	# 			has_government_power = {
+	# 	# 				mechanic_type = YE_tyrant_system
+	# 	# 				power_type = benelolent_ruthless_power
+	# 	# 				value = 100
+	# 	# 			}
+	# 	# 		}
+	# 	# 	}
+	# 	# 	effect = {
+	# 	# 		mil_power_cost = 50
+	# 	# 		add_government_power = {
+	# 	# 			mechanic_type = YE_tyrant_system
+	# 	# 			power_type = benelolent_ruthless_power
+	# 	# 			value = 5
+	# 	# 		}
+	# 	# 	}
+	# 	# 	cooldown_years = 0
+	# 	# 	ai_chance = {
+	# 	# 		factor = 10
+	# 	# 		modifier = {
+	# 	# 			factor = 10
+	# 	# 			always = no
+	# 	# 		}
+	# 	# 	}
+	# 	# }	
+	# 	# deploy_the_jadeite_crossguards = {
+	# 	# 	icon = GFX_YE_tyrant_system_deploy_the_jadeite_crossguards
+	# 	# 	center = no 
+	# 	# 	cost_type = benelolent_ruthless_power
+	# 	# 	trigger = {
+	# 	# 		NOT = {
+	# 	# 			has_government_power = {
+	# 	# 				mechanic_type = YE_tyrant_system
+	# 	# 				power_type = benelolent_ruthless_power
+	# 	# 				value = 100
+	# 	# 			}
+	# 	# 		}
+	# 	# 	}
+	# 	# 	effect = {
+	# 	# 		mil_power_cost = 50
+	# 	# 		add_government_power = {
+	# 	# 			mechanic_type = YE_tyrant_system
+	# 	# 			power_type = benelolent_ruthless_power
+	# 	# 			value = 5
+	# 	# 		}
+	# 	# 	}
+	# 	# 	cooldown_years = 0
+	# 	# 	ai_chance = {
+	# 	# 		factor = 10
+	# 	# 		modifier = {
+	# 	# 			factor = 10
+	# 	# 			always = no
+	# 	# 		}
+	# 	# 	}
+	# 	# }
+	# 	# purge_officers = {
+	# 	# 	icon = GFX_YE_tyrant_system_purge_officers
+	# 	# 	center = no 
+	# 	# 	cost_type = benelolent_ruthless_power
+	# 	# 	trigger = {
+	# 	# 		NOT = {
+	# 	# 			has_government_power = {
+	# 	# 				mechanic_type = YE_tyrant_system
+	# 	# 				power_type = benelolent_ruthless_power
+	# 	# 				value = 100
+	# 	# 			}
+	# 	# 		}
+	# 	# 	}
+	# 	# 	effect = {
+	# 	# 		mil_power_cost = 50
+	# 	# 		add_government_power = {
+	# 	# 			mechanic_type = YE_tyrant_system
+	# 	# 			power_type = benelolent_ruthless_power
+	# 	# 			value = 5
+	# 	# 		}
+	# 	# 	}
+	# 	# 	cooldown_years = 0
+	# 	# 	ai_chance = {
+	# 	# 		factor = 10
+	# 	# 		modifier = {
+	# 	# 			factor = 10
+	# 	# 			always = no
+	# 	# 		}
+	# 	# 	}
+	# 	# }
+	# }
+}

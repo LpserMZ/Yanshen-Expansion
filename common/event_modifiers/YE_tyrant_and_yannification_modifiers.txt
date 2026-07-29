@@ -1,0 +1,100 @@
+YE_tyrant_system_reward_veterans_modifier = {
+	army_tradition = 1
+	global_tax_modifier=0.10
+}
+YE_tyrant_system_sponsor_harvest_festivals_modifier = {
+	global_unrest = -2
+	global_prosperity_growth = 0.25
+}
+# YE_tyrant_system_return_to_pragmatism_modifier = {
+
+# }
+YE_tyrant_system_deploy_the_jadeite_crossguards_modifier = {
+	yearly_army_professionalism = 0.005
+	general_cost = -0.20
+}
+YE_tyrant_system_purge_officers_modifier = {
+	overextension_impact_modifier=-0.25
+	yearly_corruption=1
+	land_maintenance_modifier=0.10
+}
+
+
+aPUI_tyrant_and_yannification_exempt_tax_modifier = {
+	local_tax_modifier = -0.50
+	local_unrest = -5
+	local_monthly_devastation = -0.20
+}
+aPUI_tyrant_and_yannification_grant_jade_seal_privilege_modifier = {
+	min_local_autonomy = 0.10
+	center_of_trade_upgrade_cost = -0.33
+}
+aPUI_tyrant_and_yannification_conscript_people_modifier = {
+	local_manpower_modifier = -0.5
+	local_development_cost = 0.20
+}
+aPUI_tyrant_and_yannification_corvee_labour_modifier = {
+	local_build_cost = -0.40
+	local_build_time = -0.25
+	local_great_project_upgrade_cost = -0.25
+	local_great_project_upgrade_time = -0.10
+	local_unrest = 5
+}
+
+
+benevolent_rank_I = { #5 year
+	monthly_benelolent_ruthless_power = -0.02
+	picture = "tyrant_system_benevolent"
+}
+benevolent_rank_II = { #6 years
+	monthly_benelolent_ruthless_power = -0.04
+	picture = "tyrant_system_benevolent"
+}
+benevolent_rank_III = { #7 years
+	monthly_benelolent_ruthless_power = -0.06
+	picture = "tyrant_system_benevolent"
+}
+benevolent_rank_IV = { #8 years
+	monthly_benelolent_ruthless_power = -0.08
+	picture = "tyrant_system_benevolent"
+}
+benevolent_rank_V = { #9 years
+	monthly_benelolent_ruthless_power = -0.10
+	picture = "tyrant_system_benevolent"
+}
+
+ruthless_rank_I = { #5 years
+	monthly_benelolent_ruthless_power = 0.02
+	picture = "tyrant_system_ruthless"
+}
+ruthless_rank_II = { #6 years
+	monthly_benelolent_ruthless_power = 0.04
+	picture = "tyrant_system_ruthless"
+}
+ruthless_rank_III = { #7 years
+	monthly_benelolent_ruthless_power = 0.06
+	picture = "tyrant_system_ruthless"
+}
+ruthless_rank_IV = { #8 years
+	monthly_benelolent_ruthless_power = 0.08
+	picture = "tyrant_system_ruthless"
+}
+ruthless_rank_V = { #9 years
+	monthly_benelolent_ruthless_power = 0.10
+	picture = "tyrant_system_ruthless"
+}
+
+
+
+yannification_unrest_modifier = {
+    local_unrest = 3
+}
+yannification_development_modifier = {
+    local_development_cost = -0.10
+}
+yannification_action_cooldown = {
+	picture = "yannification_action_cooldown"
+}
+yannification_intermarriage_modifier = {
+	picture = "yannification_intermarriage_modifier"
+}

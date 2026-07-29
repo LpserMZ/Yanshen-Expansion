@@ -100,13 +100,13 @@ country_event = { #清武战略
 		}
 	}
 }
-country_event = { #模板事件（请修改标题）
+province_event = { #4 测试-烟化
 	id = YE_bianfang.4
 	title = YE_bianfang.4.T
 	desc = YE_bianfang.4.D
 	picture = GREAT_SPIRIT_YANHE_eventPicture
 
-	fire_only_once = yes
+	#fire_only_once = yes
 	is_triggered_only = yes
 
 	trigger = {
@@ -124,5 +124,309 @@ country_event = { #模板事件（请修改标题）
 		add_stability = -1
 		
 	}
-}
-			
+}	
+#  YE_bianfang.4.T:0 "test yannification"
+#  YE_bianfang.4.D:0 "test"
+#  YE_bianfang.4.a:0 "a"
+#  YE_bianfang.4.b:0 "b"
+
+country_event = { #5 
+	id = YE_bianfang.5
+	title = YE_bianfang.5.T
+	desc = YE_bianfang.5.D
+	picture = GREAT_SPIRIT_YANHE_eventPicture
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	trigger = {
+	}
+
+	option = {
+		name = YE_bianfang.5.a
+		ai_chance = { factor = 1 }
+		# 在此添加效果
+	}
+	option = {
+		name = YE_bianfang.5.b
+		ai_chance = { factor = 1 }
+		# 在此添加效果
+		add_stability = -1
+		
+	}
+}	
+ YE_bianfang.5.T:0 ""
+ YE_bianfang.5.D:0 ""
+ YE_bianfang.5.a:0 ""
+ YE_bianfang.5.b:0 ""
+
+country_event = { #6 
+	id = YE_bianfang.6
+	title = YE_bianfang.6.T
+	desc = YE_bianfang.6.D
+	picture = GREAT_SPIRIT_YANHE_eventPicture
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	trigger = {
+	}
+
+	option = {
+		name = YE_bianfang.6.a
+		ai_chance = { factor = 1 }
+		# 在此添加效果
+	}
+	option = {
+		name = YE_bianfang.6.b
+		ai_chance = { factor = 1 }
+		# 在此添加效果
+		add_stability = -1
+		
+	}
+}	
+ YE_bianfang.6.T:0 ""
+ YE_bianfang.6.D:0 ""
+ YE_bianfang.6.a:0 ""
+ YE_bianfang.6.b:0 ""
+
+country_event = { #7 
+	id = YE_bianfang.7
+	title = YE_bianfang.7.T
+	desc = YE_bianfang.7.D
+	picture = GREAT_SPIRIT_YANHE_eventPicture
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	trigger = {
+	}
+
+	option = {
+		name = YE_bianfang.7.a
+		ai_chance = { factor = 1 }
+		# 在此添加效果
+	}
+	option = {
+		name = YE_bianfang.7.b
+		ai_chance = { factor = 1 }
+		# 在此添加效果
+		add_stability = -1
+		
+	}
+}	
+ YE_bianfang.7.T:0 ""
+ YE_bianfang.7.D:0 ""
+ YE_bianfang.7.a:0 ""
+ YE_bianfang.7.b:0 ""
+
+country_event = { #8 
+	id = YE_bianfang.8
+	title = YE_bianfang.8.T
+	desc = YE_bianfang.8.D
+	picture = GREAT_SPIRIT_YANHE_eventPicture
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	trigger = {
+	}
+
+	option = {
+		name = YE_bianfang.8.a
+		ai_chance = { factor = 1 }
+		# 在此添加效果
+	}
+	option = {
+		name = YE_bianfang.8.b
+		ai_chance = { factor = 1 }
+		# 在此添加效果
+		add_stability = -1
+		
+	}
+}	
+ YE_bianfang.8.T:0 ""
+ YE_bianfang.8.D:0 ""
+ YE_bianfang.8.a:0 ""
+ YE_bianfang.8.b:0 ""
+
+country_event = { #9 
+	id = YE_bianfang.9
+	title = YE_bianfang.9.T
+	desc = YE_bianfang.9.D
+	picture = GREAT_SPIRIT_YANHE_eventPicture
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	trigger = {
+	}
+
+	option = {
+		name = YE_bianfang.9.a
+		ai_chance = { factor = 1 }
+		# 在此添加效果
+	}
+	option = {
+		name = YE_bianfang.9.b
+		ai_chance = { factor = 1 }
+		# 在此添加效果
+		add_stability = -1
+		
+	}
+}	
+ YE_bianfang.9.T:0 ""
+ YE_bianfang.9.D:0 ""
+ YE_bianfang.9.a:0 ""
+ YE_bianfang.9.b:0 ""
+
+country_event = { #10 
+	id = YE_bianfang.10
+	title = YE_bianfang.10.T
+	desc = YE_bianfang.10.D
+	picture = GREAT_SPIRIT_YANHE_eventPicture
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	trigger = {
+	}
+
+	option = {
+		name = YE_bianfang.10.a
+		ai_chance = { factor = 1 }
+		# 在此添加效果
+	}
+	option = {
+		name = YE_bianfang.10.b
+		ai_chance = { factor = 1 }
+		# 在此添加效果
+		add_stability = -1
+		
+	}
+}	
+ YE_bianfang.10.T:0 ""
+ YE_bianfang.10.D:0 ""
+ YE_bianfang.10.a:0 ""
+ YE_bianfang.10.b:0 ""
+
+country_event = { #11 
+	id = YE_bianfang.11
+	title = YE_bianfang.11.T
+	desc = YE_bianfang.11.D
+	picture = GREAT_SPIRIT_YANHE_eventPicture
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	trigger = {
+	}
+
+	option = {
+		name = YE_bianfang.11.a
+		ai_chance = { factor = 1 }
+		# 在此添加效果
+	}
+	option = {
+		name = YE_bianfang.11.b
+		ai_chance = { factor = 1 }
+		# 在此添加效果
+		add_stability = -1
+		
+	}
+}	
+ YE_bianfang.11.T:0 ""
+ YE_bianfang.11.D:0 ""
+ YE_bianfang.11.a:0 ""
+ YE_bianfang.11.b:0 ""
+
+country_event = { #12 
+	id = YE_bianfang.12
+	title = YE_bianfang.12.T
+	desc = YE_bianfang.12.D
+	picture = GREAT_SPIRIT_YANHE_eventPicture
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	trigger = {
+	}
+
+	option = {
+		name = YE_bianfang.12.a
+		ai_chance = { factor = 1 }
+		# 在此添加效果
+	}
+	option = {
+		name = YE_bianfang.12.b
+		ai_chance = { factor = 1 }
+		# 在此添加效果
+		add_stability = -1
+		
+	}
+}	
+ YE_bianfang.12.T:0 ""
+ YE_bianfang.12.D:0 ""
+ YE_bianfang.12.a:0 ""
+ YE_bianfang.12.b:0 ""
+
+country_event = { #13 
+	id = YE_bianfang.13
+	title = YE_bianfang.13.T
+	desc = YE_bianfang.13.D
+	picture = GREAT_SPIRIT_YANHE_eventPicture
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	trigger = {
+	}
+
+	option = {
+		name = YE_bianfang.13.a
+		ai_chance = { factor = 1 }
+		# 在此添加效果
+	}
+	option = {
+		name = YE_bianfang.13.b
+		ai_chance = { factor = 1 }
+		# 在此添加效果
+		add_stability = -1
+		
+	}
+}	
+ YE_bianfang.13.T:0 ""
+ YE_bianfang.13.D:0 ""
+ YE_bianfang.13.a:0 ""
+ YE_bianfang.13.b:0 ""
+
+country_event = { #14 
+	id = YE_bianfang.14
+	title = YE_bianfang.14.T
+	desc = YE_bianfang.14.D
+	picture = GREAT_SPIRIT_YANHE_eventPicture
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	trigger = {
+	}
+
+	option = {
+		name = YE_bianfang.14.a
+		ai_chance = { factor = 1 }
+		# 在此添加效果
+	}
+	option = {
+		name = YE_bianfang.14.b
+		ai_chance = { factor = 1 }
+		# 在此添加效果
+		add_stability = -1
+		
+	}
+}	
+ YE_bianfang.14.T:0 ""
+ YE_bianfang.14.D:0 ""
+ YE_bianfang.14.a:0 ""
+ YE_bianfang.14.b:0 ""
+

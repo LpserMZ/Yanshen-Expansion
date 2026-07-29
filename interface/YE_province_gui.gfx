@@ -3,4 +3,67 @@ spriteTypes = {
 		name = "GFX_prov_button_migrate_pop"
 		texturefile = "gfx//interface//AH_custom_GUI//province_UI//migrate_pop.dds"
 	}
+	spriteType = {
+		name = "GFX_prov_button_tyrant_and_yannification"
+		texturefile = "gfx//interface//AH_custom_GUI//province_UI//tyrant_and_yannification.dds"
+	}
+
+	spriteType = {
+		name = "GFX_aPUI_tyrant_and_yannification_tyrant_title"
+		texturefile = "gfx//interface//AH_custom_GUI//province_UI//aPUI_tyrant_and_yannification_tyrant_title.dds"
+	}
+	spriteType = {
+		name = "GFX_aPUI_tyrant_and_yannification_tyrant_border"
+		texturefile = "gfx//interface//AH_custom_GUI//province_UI//aPUI_tyrant_and_yannification_tyrant_border.dds"
+	}
+	spriteType = {
+		name = "GFX_aPUI_tyrant_and_yannification_exempt_tax"
+		texturefile = "gfx//interface//AH_custom_GUI//province_UI//aPUI_tyrant_and_yannification_exempt_tax.dds"
+	}
+	spriteType = {
+		name = "GFX_aPUI_tyrant_and_yannification_grant_jade_seal_privilege"
+		texturefile = "gfx//interface//AH_custom_GUI//province_UI//aPUI_tyrant_and_yannification_grant_jade_seal_privilege.dds"
+	}
+	spriteType = {
+		name = "GFX_aPUI_tyrant_and_yannification_conscript_people"
+		texturefile = "gfx//interface//AH_custom_GUI//province_UI//aPUI_tyrant_and_yannification_conscript_people.dds"
+	}
+	spriteType = {
+		name = "GFX_aPUI_tyrant_and_yannification_corvee_labour"
+		texturefile = "gfx//interface//AH_custom_GUI//province_UI//aPUI_tyrant_and_yannification_corvee_labour.dds"
+	}
+
+	spriteType = {
+		name = "GFX_aPUI_tyrant_and_yannification_yannification_title"
+		texturefile = "gfx//interface//AH_custom_GUI//province_UI//aPUI_tyrant_and_yannification_yannification_title.dds"
+	}
+	spriteType = {
+		name = "GFX_aPUI_tyrant_and_yannification_yannification_border"
+		texturefile = "gfx//interface//AH_custom_GUI//province_UI//aPUI_tyrant_and_yannification_yannification_border.dds"
+	}
+	spriteType = {
+		name = "GFX_aPUI_tyrant_and_yannification_promote_intermarriage"
+		texturefile = "gfx//interface//AH_custom_GUI//province_UI//aPUI_tyrant_and_yannification_promote_intermarriage.dds"
+	}
+	spriteType = {
+		name = "GFX_aPUI_tyrant_and_yannification_attract_settlers"
+		texturefile = "gfx//interface//AH_custom_GUI//province_UI//aPUI_tyrant_and_yannification_attract_settlers.dds"
+	}
+	spriteType = {
+		name = "GFX_aPUI_tyrant_and_yannification_station_troops"
+		texturefile = "gfx//interface//AH_custom_GUI//province_UI//aPUI_tyrant_and_yannification_station_troops.dds"
+	}
+	spriteType = {
+		name = "GFX_aPUI_tyrant_and_yannification_start_yannification"
+		texturefile = "gfx//interface//AH_custom_GUI//province_UI//aPUI_tyrant_and_yannification_start_yannification.dds"
+		noOfFrames = 22
+	}
+	spriteType = {
+		name = "GFX_aPUI_tyrant_and_yannification_start_yannification_text_icon"
+		texturefile = "gfx//interface//AH_custom_GUI//province_UI//aPUI_tyrant_and_yannification_start_yannification_text_icon.dds"
+	}
+	spriteType = {
+		name = "GFX_aPUI_tyrant_and_yannification_civilization_and_prosperity_text_icon"
+		texturefile = "gfx//interface//AH_custom_GUI//province_UI//aPUI_tyrant_and_yannification_civilization_and_prosperity_text_icon.dds"
+	}
 }	

@@ -1,17 +1,29 @@
+every_country = {
+	disband_all_units = yes
+	remove_country = THIS
+}
 
-# every_country = {
-# 	disband_all_units = yes
-# 	#remove_country = THIS
+
+# set_variable = { which = prov_yannification value = 10 }
+# change_variable = { which = prov_yannification value = 10 }
+# check_variable = { which = prov_yannification value = 0.1 }
+
+# set_country_flag = allow_yannification_flag
+# yanshen_superregion = { add_core = ROOT cede_province = ROOT }
+# rahen_superregion = { add_core = ROOT cede_province = ROOT }
+# every_province = {
+# 	YE_yanification_change_culture=yes
 # }
-# destroy_great_project = {
-#     #type = tianling_tunnel
-# 	type = pugao_tunnel
-# }
-
-
-# Y85 = {
-# 	change_country_color = {
-# 		country = ROOT
+# decolonize = 8054
+# 8054 = {
+# 	save_global_event_target_as = holohana_target_maliu_fanua
+# 	holohana_spawn_effect = { holohana = maliu_fanua}
+# 	holohana_rebel_spawn_effect = { 
+# 		holohana = maliu_fanua
+# 		maliu_fanua_leader = yes
 # 	}
 # }
-country_event = { id = ideagroups.1 }
+every_province = {
+	YE_yanification_change_culture = yes
+}
+#YE_add_MP_modifier_script_effect = yes

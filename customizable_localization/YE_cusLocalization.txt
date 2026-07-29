@@ -338,3 +338,93 @@ defined_text = {
 		}
 	}
 }
+
+
+defined_text = {
+	name = GetTyrantModifierRankCurrent
+	random = no
+	text = {
+		localisation_key = TyrantModifierRankCurrent_benevolent_I
+		trigger = {
+			has_country_modifier = benevolent_rank_I
+		}
+	}
+	text = {
+		localisation_key = TyrantModifierRankCurrent_benevolent_II
+		trigger = {
+			has_country_modifier = benevolent_rank_II
+		}
+	}
+	text = {
+		localisation_key = TyrantModifierRankCurrent_benevolent_III
+		trigger = {
+			has_country_modifier = benevolent_rank_III
+		}
+	}
+	text = {
+		localisation_key = TyrantModifierRankCurrent_benevolent_IV
+		trigger = {
+			has_country_modifier = benevolent_rank_IV
+		}
+	}
+	text = {
+		localisation_key = TyrantModifierRankCurrent_benevolent_V
+		trigger = {
+			has_country_modifier = benevolent_rank_V
+		}
+	}
+	text = {
+		localisation_key = TyrantModifierRankCurrent_ruthless_I
+		trigger = {
+			has_country_modifier = ruthless_rank_I
+		}
+	}
+	text = {
+		localisation_key = TyrantModifierRankCurrent_ruthless_II
+		trigger = {
+			has_country_modifier = ruthless_rank_II
+		}
+	}
+	text = {
+		localisation_key = TyrantModifierRankCurrent_ruthless_III
+		trigger = {
+			has_country_modifier = ruthless_rank_III
+		}
+	}
+	text = {
+		localisation_key = TyrantModifierRankCurrent_ruthless_IV
+		trigger = {
+			has_country_modifier = ruthless_rank_IV
+		}
+	}
+	text = {
+		localisation_key = TyrantModifierRankCurrent_ruthless_V
+		trigger = {
+			has_country_modifier = ruthless_rank_V
+		}
+	}
+}
+
+defined_text = {
+	name = GetTyrantModifierRankLimit
+	random = no
+	text = {
+		localisation_key = TyrantModifierRankLimit_V
+		trigger = {
+			has_country_flag = tyrant_modifier_rank_limit_V_flag
+		}
+	}
+	text = {
+		localisation_key = TyrantModifierRankLimit_IV
+		trigger = {
+			has_country_flag = tyrant_modifier_rank_limit_IV_flag
+		}
+	}
+	text = {
+		localisation_key = TyrantModifierRankLimit_III
+		trigger = {
+			always = yes
+		}
+	}
+
+}

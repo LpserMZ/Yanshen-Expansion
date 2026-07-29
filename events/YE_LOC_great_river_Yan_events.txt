@@ -3508,9 +3508,9 @@ province_event = { #60 天楼之灾
 	option = {
 		name = YE_GRY.60.a
 		ai_chance = { factor = 1 }
-		add_base_tax = -15
-		add_base_production = -15
-		add_base_manpower = -15
+		add_base_tax = -4
+		add_base_production = -4
+		add_base_manpower = -4
 		add_devastation = 100
 	}
 }
@@ -3545,7 +3545,7 @@ country_event = { #61 存亡之急
 	}
 }
 
-#瓜分烟心
+
 # country_event = { #62
 # 	id = YE_GRY.62
 # 	title = YE_GRY.62.T
@@ -3634,5 +3634,5 @@ country_event = { #61 存亡之急
 #  YE_GRY.65.D:0 ""
 #  YE_GRY.65.a:0 ""
 
-
+# 瓜分烟心
 # 蛰龙戟-大矛机关枪

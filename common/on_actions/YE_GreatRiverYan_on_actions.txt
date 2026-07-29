@@ -119,38 +119,7 @@ on_new_age = {
 	}
 }	
 
-on_province_owner_change = {
-	if = { #侠界总督区tag
-		limit = {
-			is_core = YA1
-			NOT = { owned_by = YA1 }
-		}
-		remove_core = YA1
-	}
-	if = {
-		limit = {
-			OR = {
-				province_id = 4859
-				province_id = 8289
-			}
-		}
-		4859 = {
-			owner = { save_global_event_target_as = yanzhong_bofan_owner }
-			province_event = {
-				id = YE_GRY.56
-				days = 1
-			}
-		}
-	}
-	if = {
-		limit = {
-			province_id = 4871
-		}
-		province_event = {
-			id = YE_GRY.60
-		}
-	}
-}
+
 
 on_new_monarch = {
 	if = {
@@ -295,3 +264,111 @@ on_siege_lost_province =  {
 		else_if = { limit = { fort_level = 1 } FROM = { add_government_power = { mechanic_type = YE_blue_dream_soilder_fervor power_type = soilder_fervor value = 0.50 } } }		
 	}
 }
+
+on_yearly_pulse = {
+	if = { #yannification
+		limit = {
+			has_country_flag = allow_yannification_flag
+		}
+		every_owned_province = { 
+			limit = {
+				has_province_flag = prov_yannification_flag # 无法检测has_province_modifier = yannification_modifier 
+				NOT = { culture_group = yan }
+			}
+			change_variable = { which = prov_yannification value = 1.5 }
+			if = {
+				limit = {
+					check_variable = { which = prov_yannification_intermarriage_years value = 0.1 }
+				}
+				change_variable = { which = prov_yannification value = 3 }
+				change_variable = { which = prov_yannification_intermarriage_years value = -1 }
+			}
+			if = {
+				limit = {
+					check_variable = { which = prov_yannification value = 100 }
+				}
+				clear_yannification_progress = yes
+
+				yanification_change_culture = yes
+			}
+		}
+	}
+}
+
+on_province_culture_changed = {
+    if = {
+        limit = {
+            culture_group = yan
+
+            OR = {
+                has_province_flag = prov_yannification_flag
+
+                has_province_modifier = yannification_unrest_modifier
+                has_province_modifier = yannification_development_modifier
+                has_province_modifier = yannification_intermarriage_modifier
+
+                check_variable = {
+                    which = prov_yannification
+                    value = 0.1
+                }
+				check_variable = {
+                    which = prov_yannification_intermarriage_years
+                    value = 0.1
+                }
+            }
+        }
+
+        clear_yannification_progress = yes
+    }
+}
+
+on_province_owner_change = {
+	if = { #侠界总督区tag
+		limit = {
+			is_core = YA1
+			NOT = { owned_by = YA1 }
+		}
+		remove_core = YA1
+	}
+	if = {
+		limit = {
+			OR = {
+				province_id = 4859
+				province_id = 8289
+			}
+		}
+		4859 = {
+			owner = { save_global_event_target_as = yanzhong_bofan_owner }
+			province_event = {
+				id = YE_GRY.56
+				days = 1
+			}
+		}
+	}
+	if = {
+		limit = {
+			province_id = 4871
+		}
+		province_event = {
+			id = YE_GRY.60
+		}
+	}
+	if = {
+        limit = {
+            has_province_flag = prov_yannification_flag
+			owner = {
+				NOT = {
+					has_country_flag = allow_yannification_flag
+				}
+			}
+        }
+
+        clear_yannification_progress = yes
+    }
+}
+
+
+
+
+
+

@@ -498,6 +498,31 @@ spriteTypes = {
         texturefile = "gfx//interface//great_projects//lanobuk_gov_house.dds"
     }
 
+    spriteType = {
+        name = "GFX_great_project_jianxusi"	
+        texturefile = "gfx//interface//great_projects//jianxusi.dds"
+    }
+
+    # spriteType = {
+    #     name = "GFX_great_project_"	
+    #     texturefile = "gfx//interface//great_projects//.dds"
+    # }
+
+    # spriteType = {
+    #     name = "GFX_great_project_"	
+    #     texturefile = "gfx//interface//great_projects//.dds"
+    # }
+
+    # spriteType = {
+    #     name = "GFX_great_project_"	
+    #     texturefile = "gfx//interface//great_projects//.dds"
+    # }
+
+    # spriteType = {
+    #     name = "GFX_great_project_"	
+    #     texturefile = "gfx//interface//great_projects//.dds"
+    # }
+
     # spriteType = {
     #     name = "GFX_great_project_"	
     #     texturefile = "gfx//interface//great_projects//.dds"

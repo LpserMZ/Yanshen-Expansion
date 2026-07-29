@@ -2882,6 +2882,12 @@ guiTypes = {
 						position = { x = 22 y = 221 }
 						scripted = yes
 					}
+					guiButtonType = {
+						name = "prov_button_SLOT5_tyrant_and_yannification"
+						quadTextureSprite = "GFX_prov_button_tyrant_and_yannification"
+						position = { x = 22 y = 221 }
+						scripted = yes
+					}
 
 				##########################
 				guiButtonType = { #Khatalashya
@@ -3480,6 +3486,12 @@ guiTypes = {
 						position = { x = 214 y = 26 }
 						scripted = yes
 					}
+					guiButtonType = {
+						name = "prov_button_SLOT5_tyrant_and_yannification"
+						quadTextureSprite = "GFX_prov_button_tyrant_and_yannification"
+						position = { x = 214 y = 26 }
+						scripted = yes
+					}
 
 				##########################
 				guiButtonType = { #Khatalashya
@@ -3769,6 +3781,12 @@ guiTypes = {
 						guiButtonType = {
 							name = "prov_button_SLOT5_migrate_pop"
 							quadTextureSprite = "GFX_prov_button_migrate_pop"
+							position = { x = 214 y = 26 }
+							scripted = yes
+						}
+						guiButtonType = {
+							name = "prov_button_SLOT5_tyrant_and_yannification"
+							quadTextureSprite = "GFX_prov_button_tyrant_and_yannification"
 							position = { x = 214 y = 26 }
 							scripted = yes
 						}
@@ -6881,6 +6899,140 @@ guiTypes = {
 						}
 					}
 				}
+			
+				windowType = {
+					name = aPUI_tyrant_and_yannification_window
+					scripted = yes
+
+					iconType = { #Background
+						name = aPUI_tyrant_and_yannification_bg
+						position = { x = 0 y = 0 }
+						spriteType = GFX_aPUI_bg
+					}
+					guiButtonType = { #Close button
+						name = aPUI_close_button
+						position = { x = 289 y = -14 }
+						quadTextureSprite ="GFX_closebutton2"
+						shortcut = "ESCAPE"
+						scripted = yes
+					}
+
+					windowType = { #tyrant_subwindow
+						name = aPUI_tyrant_and_yannification_window_tyrant_subwindow
+						scripted = yes
+
+						iconType = { #title
+							name = aPUI_tyrant_and_yannification_tyrant_title
+							position = { x = 104 y = 35 }
+							spriteType = GFX_aPUI_tyrant_and_yannification_tyrant_title
+						}
+						iconType = { #border
+							name = aPUI_tyrant_and_yannification_tyrant_border
+							position = { x = 9 y = 24 }
+							spriteType = GFX_aPUI_tyrant_and_yannification_tyrant_border
+						}
+
+						guiButtonType = { #
+							name = aPUI_tyrant_and_yannification_exempt_tax
+							position = { x = 20 y = 68 }
+							quadTextureSprite ="GFX_aPUI_tyrant_and_yannification_exempt_tax"
+							scripted = yes
+						}
+						guiButtonType = { #
+							name = aPUI_tyrant_and_yannification_grant_jade_seal_privilege
+							position = { x = 92 y = 68 }
+							quadTextureSprite ="GFX_aPUI_tyrant_and_yannification_grant_jade_seal_privilege"
+							scripted = yes
+						}
+						guiButtonType = { #
+							name = aPUI_tyrant_and_yannification_conscript_people
+							position = { x = 164 y = 68 }
+							quadTextureSprite ="GFX_aPUI_tyrant_and_yannification_conscript_people"
+							scripted = yes
+						}
+						guiButtonType = { #
+							name = aPUI_tyrant_and_yannification_corvee_labour
+							position = { x = 236 y = 68 }
+							quadTextureSprite ="GFX_aPUI_tyrant_and_yannification_corvee_labour"
+							scripted = yes
+						}
+					}
+					
+					windowType = { #yannification_subwindow
+						name = aPUI_tyrant_and_yannification_window_yannification_subwindow
+						scripted = yes
+
+						iconType = { #title
+							name = aPUI_tyrant_and_yannification_yannification_title
+							position = { x = 134 y = 156 }
+							spriteType = GFX_aPUI_tyrant_and_yannification_yannification_title
+						}
+						iconType = { #border
+							name = aPUI_tyrant_and_yannification_yannification_border
+							position = { x = 45 y = 149 }
+							spriteType = GFX_aPUI_tyrant_and_yannification_yannification_border
+						}
+
+						guiButtonType = { #
+							name = aPUI_tyrant_and_yannification_promote_intermarriage
+							position = { x = 62 y = 177 }
+							quadTextureSprite ="GFX_aPUI_tyrant_and_yannification_promote_intermarriage"
+							scripted = yes
+						}
+						guiButtonType = { #
+							name = aPUI_tyrant_and_yannification_attract_settlers
+							position = { x = 128 y = 177 }
+							quadTextureSprite ="GFX_aPUI_tyrant_and_yannification_attract_settlers"
+							scripted = yes
+						}
+						guiButtonType = { #
+							name = aPUI_tyrant_and_yannification_station_troops
+							position = { x = 194 y = 177 }
+							quadTextureSprite ="GFX_aPUI_tyrant_and_yannification_station_troops"
+							scripted = yes
+						}
+						guiButtonType = { #
+							name = aPUI_tyrant_and_yannification_start_yannification
+							position = { x = 56 y = 240 }
+							quadTextureSprite ="GFX_aPUI_tyrant_and_yannification_start_yannification"
+							scripted = yes
+						}
+
+						iconType = { #
+							name = aPUI_tyrant_and_yannification_start_yannification_icon
+							position = { x = 56 y = 240 }
+							quadTextureSprite ="GFX_aPUI_tyrant_and_yannification_start_yannification"
+							scripted = yes
+							alwaystransparent = yes
+						}
+						iconType = { #
+							name = aPUI_tyrant_and_yannification_start_yannification_text_icon
+							position = { x = 136 y = 247 }
+							spriteType = GFX_aPUI_tyrant_and_yannification_start_yannification_text_icon
+							scripted = yes
+							alwaystransparent = yes
+						}
+						instantTextBoxType = { #
+							name = aPUI_tyrant_and_yannification_yannification_progress
+							position = { x = 138  y = 244 }
+							textureFile = ""
+							text = ""
+							font = ""
+							maxWidth = 100
+							maxHeight = 18
+							format = left
+							alwaystransparent = yes
+							scripted = yes
+						}
+						iconType = { #
+							name = aPUI_tyrant_and_yannification_civilization_and_prosperity_text_icon
+							position = { x = 136 y = 247 }
+							spriteType = GFX_aPUI_tyrant_and_yannification_civilization_and_prosperity_text_icon
+							scripted = yes
+							alwaystransparent = yes
+						}
+					}
+				}				
 			}
 		}
 

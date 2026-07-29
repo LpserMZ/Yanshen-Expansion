@@ -20,6 +20,9 @@ yanzhou_strong_realm = {
 		can_claim_states = yes
 		governing_capacity = 100
 	}
+	government_abilities = {
+		YE_tyrant_system
+	}
 	
 	ai = {
 		factor = 1000 # should always be picked if available

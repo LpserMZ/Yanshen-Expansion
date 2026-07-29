@@ -1,0 +1,110 @@
+spriteTypes = {
+	#soilder_fervor
+	progressbartype = { #bar-full and void
+		name = "GFX_soilder_fervor_bar"
+		color = { 1.0 0.0 0.0 }
+		colortwo = { 1.0 1.0 1.0 }
+		textureFile1 = "gfx/interface/government_mechanics/YE_blue_dream/soilder_fervor_bar_full.dds"
+		textureFile2 = "gfx/interface/government_mechanics/YE_blue_dream/soilder_fervor_bar_void.dds"
+		size = { x = 193 y = 18 }
+		effectFile = "gfx/FX/progress.lua"
+	}
+	spriteType = { #frame
+		name = "GFX_soilder_fervor_frame"
+		texturefile = "gfx/interface/government_mechanics/YE_blue_dream/soilder_fervor_frame.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+	spriteType = { #button
+		name = "GFX_soilder_fervor_button"
+		texturefile = "gfx/interface/government_mechanics/YE_blue_dream/soilder_fervor_button.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+
+	#rural_xia_power
+	progressbartype = { #bar-full and void
+		name = "GFX_rural_xia_power_bar"
+		color = { 1.0 0.0 0.0 }
+		colortwo = { 1.0 1.0 1.0 }
+		textureFile1 = "gfx/interface/government_mechanics/YE_blue_dream/rural_xia_power_bar_full.dds"
+		textureFile2 = "gfx/interface/government_mechanics/YE_blue_dream/rural_xia_power_bar_void.dds"
+		size = { x = 160 y = 15 }
+		effectFile = "gfx/FX/progress.lua"
+	}
+	spriteType = { #frame
+		name = "GFX_rural_xia_power_frame"
+		texturefile = "gfx/interface/government_mechanics/YE_blue_dream/rural_xia_power_frame.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+	spriteType = { #button
+		name = "GFX_rural_xia_power_button"
+		texturefile = "gfx/interface/government_mechanics/YE_blue_dream/rural_xia_power_button.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+
+	#benelolent_ruthless_power
+	progressbartype = { #bar-full and void
+		name = "GFX_benelolent_ruthless_power_bar"
+		color = { 1.0 0.0 0.0 }
+		colortwo = { 1.0 1.0 1.0 }
+		textureFile1 = "gfx/interface/government_mechanics/YE_tyrant_system/benelolent_ruthless_power_bar_full.dds"
+		textureFile2 = "gfx/interface/government_mechanics/YE_tyrant_system/benelolent_ruthless_power_void.dds"
+		size = { x = 232 y = 20 }
+		effectFile = "gfx/FX/progress.lua"
+	}
+	spriteType = { #frame
+		name = "GFX_benelolent_ruthless_power_frame"
+		texturefile = "gfx/interface/government_mechanics/YE_tyrant_system/benelolent_ruthless_power_frame.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+	spriteType = { #background
+		name = "GFX_YE_tyrant_system_background"
+		texturefile = "gfx/interface/government_mechanics/YE_tyrant_system/YE_tyrant_system_background.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+	spriteType = { #button1
+		name = "GFX_YE_tyrant_system_reward_veterans"
+		texturefile = "gfx/interface/government_mechanics/YE_tyrant_system/YE_tyrant_system_reward_veterans.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+	spriteType = { #button2
+		name = "GFX_YE_tyrant_system_sponsor_harvest_festivals"
+		texturefile = "gfx/interface/government_mechanics/YE_tyrant_system/YE_tyrant_system_sponsor_harvest_festivals.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+	spriteType = { #button3
+		name = "GFX_YE_tyrant_system_return_to_pragmatism"
+		texturefile = "gfx/interface/government_mechanics/YE_tyrant_system/YE_tyrant_system_return_to_pragmatism.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+	spriteType = { #button4
+		name = "GFX_YE_tyrant_system_deploy_the_jadeite_crossguards"
+		texturefile = "gfx/interface/government_mechanics/YE_tyrant_system/YE_tyrant_system_deploy_the_jadeite_crossguards.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+	spriteType = { #button5
+		name = "GFX_YE_tyrant_system_purge_officers"
+		texturefile = "gfx/interface/government_mechanics/YE_tyrant_system/YE_tyrant_system_purge_officers.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_benelolent_ruthless_power_benevolent_rank"
+		texturefile = "gfx//interface//government_mechanics//YE_tyrant_system//benelolent_ruthless_power_benevolent_rank.dds"
+		noOfFrames = 5
+	}
+	spriteType = {
+		name = "GFX_benelolent_ruthless_power_ruthless_rank"
+		texturefile = "gfx//interface//government_mechanics//YE_tyrant_system//benelolent_ruthless_power_ruthless_rank.dds"
+		noOfFrames = 5
+	}
+}	

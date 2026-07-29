@@ -1,0 +1,15 @@
+bookmark = {
+	name = "YE_YANSHEN_NAME"
+	desc = "YE_YANSHEN_DESC"
+	date = 1444.11.11
+	
+	center = 4842
+	default = yes
+	
+	country = Y09	
+	country = YB8	
+	country = Y05	
+	country = Y20	
+
+	easy_country = Y09	
+}

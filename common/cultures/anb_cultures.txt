@@ -6287,11 +6287,20 @@ yan = {
 	xianzhong_yan = { #祆终烟
 
 	}
-
+	xianyue = { #仙越
+	}
 	guyan = {
 		primary = P67 # liufang
 	}
-		
+	kuoliu = {}
+	mangzhou = {}
+	shuanghe_yan = {}
+	yvzhou = {}	
+	sule = {}
+	shahe = {}
+	yangzhou = {}
+	xiangyang = {}
+	haijin = {}
 	dynasty_names = {
 		Zhu Wu Geng Shang Zheng Zhao Li Shi Liu Guo Yang Wang Qian Ma Meng Gao 
 		Chen Sun Sima Cao Xiao Qi Zu Zhou Huang Bai Qiu Tang Lu	Xu Chang 

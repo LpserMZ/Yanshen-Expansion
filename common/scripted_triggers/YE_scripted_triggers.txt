@@ -37,3 +37,37 @@ is_yan_rank_III_tag = { # 湮州三级tag
 		}	
 	}
 }
+
+
+has_yannification_started_in_area_script_trigger = {
+    area_for_scope_province = {
+        #type = any
+        has_province_flag = prov_yannification_flag
+    }
+}
+owns_entire_yannification_area_script_trigger = {
+    area_for_scope_province = {
+        type = all
+        owned_by = FROM
+    }
+}
+has_yannification_settler_source = {
+    owner = {
+        any_owned_province = {
+            culture_group = yan
+			superregion = yanshen_superregion
+            base_tax = 2
+			base_production = 2
+			base_manpower = 2
+        }
+    }
+}
+has_unstarted_yannification_province_in_area_script_trigger = {
+    area_for_scope_province = {
+		NOT = { culture_group = yan }
+		culture_is_human = yes
+		NOT = {
+			has_province_flag = prov_yannification_flag
+		}
+    }
+}

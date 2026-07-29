@@ -15,3 +15,19 @@
  promote_rural_xia_power:0 "ib'YaN OCg¿R"
  promote_rural_xia_power_desc:0 "O(uLˆ?e›RÏ‘žX RaN O(W?e»l-N„vÝ‹í‹Cg"
 
+ ability_YE_tyrant_system:0 "´fT:g6R"
+ benelolent_ruthless_power:0 "´fT>PT"
+ benelolent_ruthless_power_desc:0 "´fT>PT>PTÍS.fßu»lÆ–âV„vgb?eÎ˜<h0\n(W-100öeÿ·ƒ—V‚YNqVÍTÿ\n   8hÃVS±‚9ÿ§G-2.0%§!\n   gNOê»l¦^ÿ§R+5.00§!\n   R»yININt^peÿ§G-5%§!\nå‹Heœg–´fT>PT„vžX Rw¿u'`ÏQ1Vÿôv0R´fT>PT:N00\n\n(W100öeÿ·ƒ—V‚YNqVÍTÿ\n   hQýVÛSqN¦^ÿ§R+2.00%§!\n   ­‹Ãu¦^ÿ§G+5.0%§!\n   wýNb‰NRpe±‚9ÿ§G-10.0%§!\nå‹Heœg––´fT>PT„vÏQSw¿u'`ÏQ1Vÿôv0R´fT>PT:N00"
+ monthly_benelolent_ruthless_power:0 "Ïkg´fT>PT9eØS"
+ benelolent_ruthless_power_gain_modifier:0 "´fT>PT·ƒÖSîOck"
+
+ button_YE_tyrant_system_reward_veterans_tooltip:0 "ú^Ëz›QºNOÑ‘6R¦^"
+ button_YE_tyrant_system_sponsor_harvest_festivals_tooltip:0 "^©R0N6e‚‚"
+ button_YE_tyrant_system_return_to_pragmatism_tooltip:0 "ÞVRVžR(uININ"
+ button_YE_tyrant_system_return_to_pragmatism_effect_tooltip:0 "–:gubLˆ?eŒ˜î•0Y²NŒ˜î•0›Q‹NŒ˜î•TN*NÿGW:NJS÷N"
+ button_YE_tyrant_system_deploy_the_jadeite_crossguards_tooltip:0 "/T(u‰sËR"
+ button_YE_tyrant_system_purge_officers_tooltip:0 "nm›Q˜RâV"
+
+ benelolent_ruthless_power_benevolent_rank:0 "[From.GetTyrantModifierRankCurrent]\n[From.GetTyrantModifierRankLimit]	\n(W´fT:g6R„vwýN	c®”-NÿO(u§YÁN?e‰|	c®”§!ÿïS¨c¨R§Y:g6RÛ¦^ag§!T§YÁN?e¹eT§!ÑSUSÿO(u§Y´f?e‰|	c®”§!ÿïS¨c¨R:g6RÛ¦^agT§Y´f?e¹eT§!ÑSUS0\n§YîOckIrµuNP–§!³QšR†NÞíuO(uÁN?e‰|b´f?e‰|	c®”„v§Y/kpe§!ÿÏk/kO(u	c®”ÿýO§YÐcØšNµu§!ÁN?eîOck„vIrµub´f?eîOck„vIrµu0SVMRc	gîOck„v§YIrµuŠØš§!ÿ:g6RÛ¦^agØSS„v¦^§YŠëV§!0\nc	g§YÁN?e>PT§!„vîOcköeÿ§YàeÕlO(u§!´f?e‰|	c®”ÿc	g§Y´f?e>PT§!„vîOcköeÿ§YàeÕlO(u§!ÁN?e>PT„v	c®”0"
+ benelolent_ruthless_power_ruthless_rank:0 "[From.GetTyrantModifierRankCurrent]\n[From.GetTyrantModifierRankLimit]	\n(W´fT:g6R„vwýN	c®”-NÿO(u§YÁN?e‰|	c®”§!ÿïS¨c¨R§Y:g6RÛ¦^ag§!T§YÁN?e¹eT§!ÑSUSÿO(u§Y´f?e‰|	c®”§!ÿïS¨c¨R:g6RÛ¦^agT§Y´f?e¹eT§!ÑSUS0\n§YîOckIrµuNP–§!³QšR†NÞíuO(uÁN?e‰|b´f?e‰|	c®”„v§Y/kpe§!ÿÏk/kO(u	c®”ÿýO§YÐcØšNµu§!ÁN?eîOck„vIrµub´f?eîOck„vIrµu0SVMRc	gîOck„v§YIrµuŠØš§!ÿ:g6RÛ¦^agØSS„v¦^§YŠëV§!0\nc	g§YÁN?e>PT§!„vîOcköeÿ§YàeÕlO(u§!´f?e‰|	c®”ÿc	g§Y´f?e>PT§!„vîOcköeÿ§YàeÕlO(u§!ÁN?e>PT„v	c®”0"
+

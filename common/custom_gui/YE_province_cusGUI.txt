@@ -154,3 +154,632 @@ custom_button = { #开发领土
 		}
 	}
 }
+
+
+
+#tyrant_and_yannification
+custom_button = {
+	name = "prov_button_SLOT5_tyrant_and_yannification"
+	tooltip = prov_button_SLOT5_tyrant_and_yannification_tooltip
+	potential = {
+		owner = {
+			tag = FROM
+			OR = {
+				has_government_mechanic = YE_tyrant_system
+				has_country_flag = allow_yannification_flag
+			}
+		}
+	}
+	trigger = {
+  		area_for_scope_province = {
+			type = all
+			owned_by = FROM
+		}
+	}
+	effect = {
+		open_aPUI_in_province = { name = tyrant_and_yannification }
+	}
+}
+custom_window = {
+	name = aPUI_tyrant_and_yannification_window
+	potential = {
+		has_open_aPUI_in_province = { name = tyrant_and_yannification }
+	}
+}
+
+custom_window = {
+	name = aPUI_tyrant_and_yannification_window_tyrant_subwindow
+	potential = {
+		owner = {
+			has_government_mechanic = YE_tyrant_system
+		}
+	}
+}
+custom_button = {
+	name = "aPUI_tyrant_and_yannification_exempt_tax"
+	tooltip = aPUI_tyrant_and_yannification_exempt_tax_tooltip
+	potential = {
+		always = yes
+	}
+	trigger = {
+		area_for_scope_province = {
+			OR = {
+				devastation = 5
+				unrest = 1
+			}
+		}
+		area_for_scope_province = {
+			type = all
+			NOT = { has_province_modifier = aPUI_tyrant_and_yannification_exempt_tax_modifier }
+			NOT = { has_province_modifier = aPUI_tyrant_and_yannification_conscript_people_modifier }
+			NOT = { has_province_modifier = aPUI_tyrant_and_yannification_corvee_labour_modifier }
+		}
+		FROM = {
+			adm_power = 50
+			if = {
+				limit = {
+					OR = {
+						has_country_modifier = benevolent_rank_V
+						AND = {
+							NOT = { has_country_flag = tyrant_modifier_rank_limit_V_flag }
+							has_country_modifier = benevolent_rank_IV
+						}
+						AND = {
+							NOT = { has_country_flag = tyrant_modifier_rank_limit_IV_flag }
+							has_country_modifier = benevolent_rank_III
+						}
+					}
+				}
+				always = no
+			}
+		}
+
+	}
+	effect = {
+		area = {
+			add_permanent_province_modifier = {
+				name = aPUI_tyrant_and_yannification_exempt_tax_modifier
+				duration = 1825
+			}
+		}
+		FROM = {
+			add_adm_power = -50
+			
+			add_government_power = {
+				mechanic_type = YE_tyrant_system
+				power_type = benelolent_ruthless_power
+				value = -2
+			}
+			aPUI_tyrant_benevolent_rank_upgrade = yes
+		}
+	}
+}
+custom_button = {
+	name = "aPUI_tyrant_and_yannification_grant_jade_seal_privilege"
+	tooltip = aPUI_tyrant_and_yannification_grant_jade_seal_privilege_tooltip
+	potential = {
+		always = yes
+	}
+	trigger = {
+		province_has_center_of_trade_of_level = 1
+		NOT = { superregion = yanshen_superregion }
+		area_for_scope_province = {
+			type = all
+			NOT = { has_province_modifier = aPUI_tyrant_and_yannification_grant_jade_seal_privilege_modifier }
+			NOT = { has_province_modifier = aPUI_tyrant_and_yannification_conscript_people_modifier }
+			NOT = { has_province_modifier = aPUI_tyrant_and_yannification_corvee_labour_modifier }
+		}
+		FROM = {
+			dip_power = 50
+			if = {
+				limit = {
+					OR = {
+						has_country_modifier = benevolent_rank_V
+						AND = {
+							NOT = { has_country_flag = tyrant_modifier_rank_limit_V_flag }
+							has_country_modifier = benevolent_rank_IV
+						}
+						AND = {
+							NOT = { has_country_flag = tyrant_modifier_rank_limit_IV_flag }
+							has_country_modifier = benevolent_rank_III
+						}
+					}
+				}
+				always = no
+			}
+		}
+	}
+	effect = {
+		area = {
+			add_permanent_province_modifier = {
+				name = aPUI_tyrant_and_yannification_grant_jade_seal_privilege_modifier
+				duration = -1
+			}
+		}
+		FROM = {
+			add_dip_power = -50
+
+			add_government_power = {
+				mechanic_type = YE_tyrant_system
+				power_type = benelolent_ruthless_power
+				value = -2
+			}
+			aPUI_tyrant_benevolent_rank_upgrade = yes
+		}
+	}
+}
+custom_button = {
+	name = "aPUI_tyrant_and_yannification_conscript_people"
+	tooltip = aPUI_tyrant_and_yannification_conscript_people_tooltip
+	potential = {
+		always = yes
+	}
+	trigger = {
+		area_for_scope_province = {
+			type = all
+			culture_group = yan
+			NOT = { has_province_modifier = aPUI_tyrant_and_yannification_conscript_people_modifier }
+			NOT = { has_province_modifier = aPUI_tyrant_and_yannification_exempt_tax_modifier }
+			NOT = { has_province_modifier = aPUI_tyrant_and_yannification_grant_jade_seal_privilege_modifier }
+		}
+		FROM = {
+			mil_power = 50
+			if = {
+				limit = {
+					OR = {
+						has_country_modifier = ruthless_rank_V
+						AND = {
+							NOT = { has_country_flag = tyrant_modifier_rank_limit_V_flag }
+							has_country_modifier = ruthless_rank_IV
+						}
+						AND = {
+							NOT = { has_country_flag = tyrant_modifier_rank_limit_IV_flag }
+							has_country_modifier = ruthless_rank_III
+						}
+					}
+				}
+				always = no
+			}
+		}
+	}
+	effect = {
+		area = {
+			add_permanent_province_modifier = {
+				name = aPUI_tyrant_and_yannification_conscript_people_modifier
+				duration = 3650
+			}
+			owner = {
+				add_manpower = 1
+			}
+		}
+		FROM = {
+			add_mil_power = -50
+
+			add_government_power = {
+				mechanic_type = YE_tyrant_system
+				power_type = benelolent_ruthless_power
+				value = 2
+			}
+			aPUI_tyrant_ruthless_rank_upgrade = yes
+		}
+	}
+}
+custom_button = {
+	name = "aPUI_tyrant_and_yannification_corvee_labour"
+	tooltip = aPUI_tyrant_and_yannification_corvee_labour_tooltip
+	potential = {
+		always = yes
+	}
+	trigger = {
+		area_for_scope_province = {
+			type = all
+			NOT = { has_province_modifier = aPUI_tyrant_and_yannification_corvee_labour_modifier }
+			NOT = { has_province_modifier = aPUI_tyrant_and_yannification_exempt_tax_modifier }
+			NOT = { has_province_modifier = aPUI_tyrant_and_yannification_grant_jade_seal_privilege_modifier }
+		}
+		FROM = {
+			mil_power = 50
+			if = {
+				limit = {
+					OR = {
+						has_country_modifier = ruthless_rank_V
+						AND = {
+							NOT = { has_country_flag = tyrant_modifier_rank_limit_V_flag }
+							has_country_modifier = ruthless_rank_IV
+						}
+						AND = {
+							NOT = { has_country_flag = tyrant_modifier_rank_limit_IV_flag }
+							has_country_modifier = ruthless_rank_III
+						}
+					}
+				}
+				always = no
+			}
+		}
+	}
+	effect = {
+		area = {
+			add_permanent_province_modifier = {
+				name = aPUI_tyrant_and_yannification_corvee_labour_modifier
+				duration = 1825
+			}
+		}
+		FROM = {
+			add_mil_power = -50
+
+			add_government_power = {
+				mechanic_type = YE_tyrant_system
+				power_type = benelolent_ruthless_power
+				value = 2
+			}
+			aPUI_tyrant_ruthless_rank_upgrade = yes
+		}
+	}
+}
+
+custom_window = {
+	name = aPUI_tyrant_and_yannification_window_yannification_subwindow
+	potential = {
+		owner = {
+			has_country_flag = allow_yannification_flag
+		}
+	}
+}
+custom_button = {
+    name = "aPUI_tyrant_and_yannification_promote_intermarriage"
+    tooltip = aPUI_tyrant_and_yannification_promote_intermarriage_tooltip
+
+    potential = {
+        always = yes
+    }
+
+    trigger = {
+        has_yannification_started_in_area_script_trigger = yes
+
+		area_for_scope_province = {
+			check_variable = { which = prov_yannification value = 25 }
+		}
+        owner = {
+            treasury = 200
+            NOT = { has_country_modifier = yannification_action_cooldown }
+        }
+    }
+
+    effect = {
+        owner = {
+            add_treasury = -200
+
+            add_country_modifier = {
+				name = yannification_action_cooldown
+				duration = 1825
+			}
+        }
+
+        # 立即为该 Area 内所有进行中的省份增加 5 进度。
+        add_yannification_progress_in_area_script_effect = {
+            value = 5
+        }
+
+        # 在之后五年中，年度脉冲会额外增加 3 进度。
+ 
+		area = {
+			limit = {
+				has_province_flag = prov_yannification_flag
+
+				NOT = { culture_group = yan }
+			}
+			hidden_effect ={
+				set_variable = {
+					which = prov_yannification_intermarriage_years
+					value = 5
+				}
+			}
+			
+			custom_tooltip = aPUI_tyrant_and_yannification_promote_intermarriage_effect_tooltip
+			hidden_effect = {
+				add_province_modifier = {
+					name = yannification_intermarriage_modifier
+					duration = 1825
+				}
+			}
+		}
+    }
+}
+custom_button = {
+    name = "aPUI_tyrant_and_yannification_attract_settlers"
+    tooltip = aPUI_tyrant_and_yannification_attract_settlers_tooltip
+
+    potential = {
+        always = yes
+    }
+
+    trigger = {
+        has_yannification_started_in_area_script_trigger = yes
+        has_yannification_settler_source = yes
+
+        owner = {
+            treasury = 200
+            NOT = { has_country_modifier = yannification_action_cooldown }
+        }
+    }
+
+    effect = {
+        owner = {
+            add_treasury = -200
+
+            add_country_modifier = {
+				name = yannification_action_cooldown
+				duration = 1825
+			}
+
+            random_owned_province = {
+                limit = {
+                    culture_group = yan
+					superregion = yanshen_superregion
+					base_tax = 2
+					base_production = 2
+					base_manpower = 2
+                }
+				add_base_tax = -1
+				add_base_production = -1
+				add_base_manpower = -1
+            }
+        }
+
+        add_base_tax = 1
+		add_base_production = 1
+		add_base_manpower = 1
+
+        add_yannification_progress_in_area_script_effect = {
+            value = 20
+        }
+    }
+}
+custom_button = {
+    name = "aPUI_tyrant_and_yannification_station_troops"
+    tooltip = aPUI_tyrant_and_yannification_station_troops_tooltip
+
+    potential = {
+        always = yes
+    }
+
+    trigger = {
+        has_yannification_started_in_area_script_trigger = yes
+		area_for_scope_province = { # area内任意省份存在一个要塞
+			has_influencing_fort = yes
+		}
+        owner = {
+            manpower = 20
+            NOT = { has_country_modifier = yannification_action_cooldown }
+        }
+    }
+
+    effect = {
+        owner = {
+            add_manpower = -20
+
+            add_country_modifier = {
+				name = yannification_action_cooldown
+				duration = 1825
+			}
+        }
+
+        remove_yannification_unrest_in_area_script_effect = yes
+
+        add_yannification_progress_in_area_script_effect = {
+            value = 20
+        }
+    }
+}
+custom_button = {
+    name = "aPUI_tyrant_and_yannification_start_yannification"
+    tooltip = aPUI_tyrant_and_yannification_start_yannification_tooltip
+
+    potential = {
+        always = yes
+    }
+
+    trigger = {
+        owns_entire_yannification_area_script_trigger = yes
+
+        # NOT = {
+        #     culture_group = yan
+        # }
+
+        # Area 中至少有一个非 Yan 且尚未开始烟化的省。
+        # 首次启动时成立；部分割让后收复省份时也成立。
+        has_unstarted_yannification_province_in_area_script_trigger = yes
+
+        owner = {
+            treasury = 500
+
+            NOT = {
+                has_country_modifier = yannification_action_cooldown
+            }
+        }
+    }
+
+    effect = {
+        owner = {
+            add_treasury = -500
+
+            add_country_modifier = {
+                name = yannification_action_cooldown
+                duration = 1825
+            }
+        }
+
+        # 此 effect 只能初始化没有烟化 flag 的省，
+        # 不得重置 Area 内原本正在烟化的省份。
+        start_yannification_in_area_script_effect = yes
+    }
+	frame = {
+		number = 1
+		trigger = { 
+			always = yes
+		}
+	}
+}
+
+
+custom_icon = { # icon of button # not turn grey when false trigger 
+	name = "aPUI_tyrant_and_yannification_start_yannification_icon"
+	potential = {
+		always = yes
+	}
+	frame = {
+		number = 22
+		trigger = { 
+			OR = {
+				culture_group = yan
+				check_variable = { which = prov_yannification value = 100 } 
+			}
+		}
+	}
+	frame = {
+		number = 21
+		trigger = { 
+			check_variable = { which = prov_yannification value = 95 } 
+		}
+	}
+	frame = {
+		number = 20
+		trigger = { 
+			check_variable = { which = prov_yannification value = 90 } 
+		}
+	}
+	frame = {
+		number = 19
+		trigger = { 
+			check_variable = { which = prov_yannification value = 85 } 
+		}
+	}
+	frame = {
+		number = 18
+		trigger = { 
+			check_variable = { which = prov_yannification value = 80 } 
+		}
+	}
+	frame = {
+		number = 17
+		trigger = { 
+			check_variable = { which = prov_yannification value = 75 } 
+		}
+	}
+	frame = {
+		number = 16
+		trigger = { 
+			check_variable = { which = prov_yannification value = 70 } 
+		}
+	}
+	frame = {
+		number = 15
+		trigger = { 
+			check_variable = { which = prov_yannification value = 65 } 
+		}
+	}
+	frame = {
+		number = 14
+		trigger = { 
+			check_variable = { which = prov_yannification value = 60 } 
+		}
+	}
+	frame = {
+		number = 13
+		trigger = { 
+			check_variable = { which = prov_yannification value = 55 } 
+		}
+	}
+	frame = {
+		number = 12
+		trigger = { 
+			check_variable = { which = prov_yannification value = 50 } 
+		}
+	}
+	frame = {
+		number = 11
+		trigger = { 
+			check_variable = { which = prov_yannification value = 45 } 
+		}
+	}
+	frame = {
+		number = 10
+		trigger = { 
+			check_variable = { which = prov_yannification value = 40 } 
+		}
+	}
+	frame = {
+		number = 9
+		trigger = { 
+			check_variable = { which = prov_yannification value = 35 } 
+		}
+	}
+	frame = {
+		number = 8
+		trigger = { 
+			check_variable = { which = prov_yannification value = 30 } 
+		}
+	}
+	frame = {
+		number = 7
+		trigger = { 
+			check_variable = { which = prov_yannification value = 25 } 
+		}
+	}
+	frame = {
+		number = 6
+		trigger = { 
+			check_variable = { which = prov_yannification value = 20 } 
+		}
+	}
+	frame = {
+		number = 5
+		trigger = { 
+			check_variable = { which = prov_yannification value = 15 } 
+		}
+	}
+	frame = {
+		number = 4
+		trigger = { 
+			check_variable = { which = prov_yannification value = 10 } 
+		}
+	}
+	frame = {
+		number = 3
+		trigger = { 
+			check_variable = { which = prov_yannification value = 5 } 
+		}
+	}
+	frame = {
+		number = 2
+		trigger = { 
+			check_variable = { which = prov_yannification value = 0.1 } # always>=1.5
+		}
+	}
+	frame = {
+		number = 1
+		trigger = { 
+			NOT = { check_variable = { which = prov_yannification value = 0.1 } }
+		}
+	}
+}
+custom_icon = { # icon "START YANNIFICATION"
+	name = "aPUI_tyrant_and_yannification_start_yannification_text_icon"
+	potential = {
+		NOT = { has_province_flag = prov_yannification_flag }
+		NOT = { culture_group = yan }
+	}
+}
+custom_text_box = { # progress
+	name = aPUI_tyrant_and_yannification_yannification_progress
+	potential = { 
+		has_province_flag = prov_yannification_flag
+		NOT = { culture_group = yan }
+	}
+}
+custom_icon = { # icon "Civilization and Prosperity"
+	name = "aPUI_tyrant_and_yannification_civilization_and_prosperity_text_icon"
+	potential = {
+		culture_group = yan
+	}
+}
