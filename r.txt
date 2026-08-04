@@ -9,7 +9,7 @@ every_country = {
 # check_variable = { which = prov_yannification value = 0.1 }
 
 # set_country_flag = allow_yannification_flag
-# yanshen_superregion = { add_core = ROOT cede_province = ROOT }
+# yanshen_superregion = { add_core = YZ5 cede_province = YZ5  }
 # rahen_superregion = { add_core = ROOT cede_province = ROOT }
 # every_province = {
 # 	YE_yanification_change_culture=yes
@@ -23,7 +23,7 @@ every_country = {
 # 		maliu_fanua_leader = yes
 # 	}
 # }
-every_province = {
-	YE_yanification_change_culture = yes
-}
-#YE_add_MP_modifier_script_effect = yes
+# every_province = {
+# 	YE_yanification_change_culture = yes
+# }
+# YE_add_MP_modifier_script_effect = yes
