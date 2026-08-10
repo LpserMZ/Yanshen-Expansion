@@ -217,9 +217,9 @@ YE_yanification_change_culture = {
 		}
 		change_culture = xianzhong_yan
 	}
-	else_if = { #xvanzhou
+	else_if = { # gozengun
 		limit = {
-			superregion = xvanzhou_superregion
+			superregion = gozengun_superregion
 		}
 		if = {
 			limit = {
@@ -354,9 +354,9 @@ YE_yanification_change_culture = {
 		change_culture = haijin
 	}
 	
-	else_if = { # gozengun
+	else_if = { # xvanzhou
 		limit = {
-			superregion = gozengun_superregion
+			superregion = jvzhiguo_superregion
 		}
 		change_culture = shuokyuan
 	}
@@ -517,4 +517,48 @@ bianfang_missions_update_modifier_inexorability_effect = {
 		}
 	}
 }
+
+
+
+YE_digong_initialize = {
+	set_variable = { which = digong_loc_x value = 0 }
+	set_variable = { which = digong_loc_y value = 0 }
+	set_country_flag = YE_allow_digong_flag
+}
+YE_digong_on_change_loc = {
+	# trigger event
+}
+
+YE_digong_rightward = {
+	change_variable = { which = digong_loc_x value = 1 }
+	YE_digong_on_change_loc = yes
+}
+YE_digong_leftward = {
+	change_variable = { which = digong_loc_x value = -1 }
+	YE_digong_on_change_loc = yes
+}
+YE_digong_upward = {
+	change_variable = { which = digong_loc_y value = -1 }
+	YE_digong_on_change_loc = yes
+}
+YE_digong_downward = {
+	change_variable = { which = digong_loc_y value = 1 }
+	YE_digong_on_change_loc = yes
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

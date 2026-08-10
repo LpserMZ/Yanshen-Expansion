@@ -2896,7 +2896,7 @@ province_event = { #Yanification of province
 				limit = {
 					OR = {
 						superregion = gozengun_superregion
-						superregion = xvanzhou_superregion
+						superregion = jvzhiguo_superregion
 					}
 					
 				}
@@ -3122,7 +3122,7 @@ country_event = {
 			}
 			change_culture = shuokyuan
 		}
-		xvanzhou_superregion = {
+		jvzhiguo_superregion = {
 			limit = {
 				culture_group = yan
 				NOT = { culture = yan_half_orc }

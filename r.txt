@@ -1,7 +1,7 @@
-every_country = {
-	disband_all_units = yes
-	remove_country = THIS
-}
+# every_country = {
+# 	disband_all_units = yes
+# 	remove_country = THIS
+# }
 
 
 # set_variable = { which = prov_yannification value = 10 }
@@ -27,3 +27,7 @@ every_country = {
 # 	YE_yanification_change_culture = yes
 # }
 # YE_add_MP_modifier_script_effect = yes
+
+set_variable = { which = digong_loc_x value = 0 }
+set_variable = { which = digong_loc_y value = 2 }
+set_country_flag = YE_allow_digong_flag

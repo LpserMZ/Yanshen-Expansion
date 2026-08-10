@@ -192,13 +192,13 @@ rahen_superregion = {
 	shamakhad_region
 }
 
-gozengun_superregion = {
+jvzhiguo_superregion = {
 	khaashalg_region
 	moduk_region
 	nomsyulhan_region
 }
 
-xvanzhou_superregion = {
+gozengun_superregion = {
 	shuvuushudi_region
 	nudanhan_region
 	gowon_region

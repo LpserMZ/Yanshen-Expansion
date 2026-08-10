@@ -38,7 +38,6 @@ is_yan_rank_III_tag = { # 湮州三级tag
 	}
 }
 
-
 has_yannification_started_in_area_script_trigger = {
     area_for_scope_province = {
         #type = any
@@ -71,3 +70,216 @@ has_unstarted_yannification_province_in_area_script_trigger = {
 		}
     }
 }
+
+# map_1
+    # 01110000
+    # 01010000
+    # 11111111
+    # 00010100
+    # 00011100
+YE_digong_can_rightward_map_1 = {
+	OR = {
+        AND = {
+            is_variable_equal = { which = digong_loc_x value = 1 }
+            is_variable_equal = { which = digong_loc_y value = 0 }
+        }
+        AND = {
+            is_variable_equal = { which = digong_loc_x value = 2 }
+            is_variable_equal = { which = digong_loc_y value = 0 }
+        }
+        AND = {
+            is_variable_equal = { which = digong_loc_x value = 0 }
+            is_variable_equal = { which = digong_loc_y value = 2 }
+        }
+        AND = {
+            is_variable_equal = { which = digong_loc_x value = 1 }
+            is_variable_equal = { which = digong_loc_y value = 2 }
+        }
+        AND = {
+            is_variable_equal = { which = digong_loc_x value = 2 }
+            is_variable_equal = { which = digong_loc_y value = 2 }
+        }
+        AND = {
+            is_variable_equal = { which = digong_loc_x value = 3 }
+            is_variable_equal = { which = digong_loc_y value = 2 }
+        }
+        AND = {
+            is_variable_equal = { which = digong_loc_x value = 4 }
+            is_variable_equal = { which = digong_loc_y value = 2 }
+        }
+        AND = {
+            is_variable_equal = { which = digong_loc_x value = 5 }
+            is_variable_equal = { which = digong_loc_y value = 2 }
+        }
+        AND = {
+            is_variable_equal = { which = digong_loc_x value = 6 }
+            is_variable_equal = { which = digong_loc_y value = 2 }
+        }
+        AND = {
+            is_variable_equal = { which = digong_loc_x value = 3 }
+            is_variable_equal = { which = digong_loc_y value = 4 }
+        }
+        AND = {
+            is_variable_equal = { which = digong_loc_x value = 4 }
+            is_variable_equal = { which = digong_loc_y value = 4 }
+        }
+    }
+}
+YE_digong_can_leftward_map_1 = {
+	OR = {
+        AND = {
+            is_variable_equal = { which = digong_loc_x value = 2 }
+            is_variable_equal = { which = digong_loc_y value = 0 }
+        }
+        AND = {
+            is_variable_equal = { which = digong_loc_x value = 3 }
+            is_variable_equal = { which = digong_loc_y value = 0 }
+        }
+        AND = {
+            is_variable_equal = { which = digong_loc_x value = 1 }
+            is_variable_equal = { which = digong_loc_y value = 2 }
+        }
+        AND = {
+            is_variable_equal = { which = digong_loc_x value = 2 }
+            is_variable_equal = { which = digong_loc_y value = 2 }
+        }
+        AND = {
+            is_variable_equal = { which = digong_loc_x value = 3 }
+            is_variable_equal = { which = digong_loc_y value = 2 }
+        }
+        AND = {
+            is_variable_equal = { which = digong_loc_x value = 4 }
+            is_variable_equal = { which = digong_loc_y value = 2 }
+        }
+        AND = {
+            is_variable_equal = { which = digong_loc_x value = 5 }
+            is_variable_equal = { which = digong_loc_y value = 2 }
+        }
+        AND = {
+            is_variable_equal = { which = digong_loc_x value = 6 }
+            is_variable_equal = { which = digong_loc_y value = 2 }
+        }
+        AND = {
+            is_variable_equal = { which = digong_loc_x value = 7 }
+            is_variable_equal = { which = digong_loc_y value = 2 }
+        }
+        AND = {
+            is_variable_equal = { which = digong_loc_x value = 4 }
+            is_variable_equal = { which = digong_loc_y value = 4 }
+        }
+        AND = {
+            is_variable_equal = { which = digong_loc_x value = 5 }
+            is_variable_equal = { which = digong_loc_y value = 4 }
+        }
+    }
+}
+YE_digong_can_upward_map_1 = {
+	OR = {
+        AND = {
+            is_variable_equal = { which = digong_loc_x value = 1 }
+            is_variable_equal = { which = digong_loc_y value = 1 }
+        }
+        AND = {
+            is_variable_equal = { which = digong_loc_x value = 3 }
+            is_variable_equal = { which = digong_loc_y value = 1 }
+        }
+        AND = {
+            is_variable_equal = { which = digong_loc_x value = 1 }
+            is_variable_equal = { which = digong_loc_y value = 2 }
+        }
+        AND = {
+            is_variable_equal = { which = digong_loc_x value = 3 }
+            is_variable_equal = { which = digong_loc_y value = 2 }
+        }
+        AND = {
+            is_variable_equal = { which = digong_loc_x value = 3 }
+            is_variable_equal = { which = digong_loc_y value = 3 }
+        }
+        AND = {
+            is_variable_equal = { which = digong_loc_x value = 5 }
+            is_variable_equal = { which = digong_loc_y value = 3 }
+        }
+        AND = {
+            is_variable_equal = { which = digong_loc_x value = 3 }
+            is_variable_equal = { which = digong_loc_y value = 4 }
+        }
+        AND = {
+            is_variable_equal = { which = digong_loc_x value = 5 }
+            is_variable_equal = { which = digong_loc_y value = 4 }
+        }
+    }
+}
+YE_digong_can_downward_map_1 = {
+	OR = {
+        AND = {
+            is_variable_equal = { which = digong_loc_x value = 1 }
+            is_variable_equal = { which = digong_loc_y value = 0 }
+        }
+        AND = {
+            is_variable_equal = { which = digong_loc_x value = 3 }
+            is_variable_equal = { which = digong_loc_y value = 0 }
+        }
+        AND = {
+            is_variable_equal = { which = digong_loc_x value = 1 }
+            is_variable_equal = { which = digong_loc_y value = 1 }
+        }
+        AND = {
+            is_variable_equal = { which = digong_loc_x value = 3 }
+            is_variable_equal = { which = digong_loc_y value = 1 }
+        }
+        AND = {
+            is_variable_equal = { which = digong_loc_x value = 3 }
+            is_variable_equal = { which = digong_loc_y value = 2 }
+        }
+        AND = {
+            is_variable_equal = { which = digong_loc_x value = 5 }
+            is_variable_equal = { which = digong_loc_y value = 2 }
+        }
+        AND = {
+            is_variable_equal = { which = digong_loc_x value = 3 }
+            is_variable_equal = { which = digong_loc_y value = 3 }
+        }
+        AND = {
+            is_variable_equal = { which = digong_loc_x value = 5 }
+            is_variable_equal = { which = digong_loc_y value = 3 }
+        }
+    }
+}
+
+YE_digong_can_rightward = {
+	YE_digong_can_rightward_map_1 = yes
+}
+YE_digong_can_leftward = {
+	YE_digong_can_leftward_map_1 = yes
+}
+YE_digong_can_upward = {
+	YE_digong_can_upward_map_1 = yes
+}
+YE_digong_can_downward = {
+	YE_digong_can_downward_map_1 = yes
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

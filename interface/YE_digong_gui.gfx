@@ -1,0 +1,25 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_button_digong"
+		texturefile = "gfx/interface/AH_custom_GUI/digong/button_digong.dds"
+	}
+	spriteType = {
+		name = "GFX_background_digong"
+		texturefile = "gfx/interface/AH_custom_GUI/digong/background_digong.dds"
+	}
+	spriteType = {
+		name = "GFX_digong_ESCAPE"
+		texturefile = "gfx/interface/AH_custom_GUI/digong/standard_button_71.dds"
+	}
+
+	spriteType = {
+		name = "GFX_button_digong_room"
+		texturefile = "gfx/interface/AH_custom_GUI/digong/room.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_button_digong_arrowward"
+		texturefile = "gfx/interface/AH_custom_GUI/digong/arrowward.dds"
+		noOfFrames = 4
+	}
+}
