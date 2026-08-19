@@ -370,12 +370,10 @@
  PROV8369:0 "TÙN"
  PROV8370:0 "îrŸ"
  PROV8371:0 "Q.oþ”"
- PROV8372:0 "gm†˜"
- PROV8373:0 "Æ‰QèT"
- PROV8374:0 "‹w‚‚wmŸl"
- PROV8375:0 "ÆuTRèT"
- PROV8376:0 "Âˆ¯‚"
- PROV8377:0 "wmO†˜"
+ PROV8372:0 "¯nÞVVn"
+ PROV8373:0 "¯gýl"
+
+
  PROV8378:0 "r‚ßi"
  PROV8379:0 "upS"
  PROV8380:0 "LR™l"
@@ -785,12 +783,9 @@
  PROV_ADJ8369:0 "TÙN"
  PROV_ADJ8370:0 "îrŸ"
  PROV_ADJ8371:0 "Q.oþ”"
- PROV_ADJ8372:0 "gm†˜"
- PROV_ADJ8373:0 "Æ‰QèT"
- PROV_ADJ8374:0 "‹w‚‚wmŸl"
- PROV_ADJ8375:0 "ÆuTRèT"
- PROV_ADJ8376:0 "Âˆ¯‚"
- PROV_ADJ8377:0 "wmO†˜"
+ PROV_ADJ8372:0 "¯nÞVVn"
+ PROV_ADJ8373:0 "¯gýl"
+
  PROV_ADJ8378:0 "r‚ßi"
  PROV_ADJ8379:0 "upS"
  PROV_ADJ8380:0 "LR™l"
@@ -897,9 +892,9 @@
  wuhuliegesele_area_name:0 "LN|TR<hr‚ÒR"
  wuhuliegesele_area_adj:0 "LN|TR<hr‚ÒR"
 
- wx1_area:0 "äQâT"
- wx1_area_name:0 "äQâT"
- wx1_area_adj:0 "äQâT"
+ wx1_area:0 "äQÝT"
+ wx1_area_name:0 "äQÝT"
+ wx1_area_adj:0 "äQÝT"
  wx2_area:0 "aŒ/n"
  wx2_area_name:0 "aŒ/n"
  wx2_area_adj:0 "aŒ/n"
@@ -1040,9 +1035,9 @@
  ml_cave1_area:0 "K…ÙN­^"
  ml_cave1_area_name:0 "K…ÙN­^"
  ml_cave1_area_adj:0 "K…ÙN­^"
- ml_cave2_area:0 "upJW"
- ml_cave2_area_name:0 "upJW"
- ml_cave2_area_adj:0 "upJW"
+ ml_cave2_area:0 "upÙN­^"
+ ml_cave2_area_name:0 "upÙN­^"
+ ml_cave2_area_adj:0 "upÙN­^"
  ml_cave3_area:0 "ÆRÜ„V"
  ml_cave3_area_name:0 "ÆRÜ„V"
  ml_cave3_area_adj:0 "ÆRÜ„V"
@@ -1077,12 +1072,7 @@
  xz8_area:0 "ÙN—g"
  xz8_area_name:0 "ÙN—g"
  xz8_area_adj:0 "ÙN—g"
- xz9_area:0 "gm†˜"
- xz9_area_name:0 "gm†˜"
- xz9_area_adj:0 "gm†˜"
- xz10_area:0 "wmO†˜"
- xz10_area_name:0 "wmO†˜"
- xz10_area_adj:0 "wmO†˜"
+
  xz11_area:0 "r‚ßi"
  xz11_area_name:0 "r‚ßi"
  xz11_area_adj:0 "r‚ßi"

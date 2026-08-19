@@ -38,6 +38,7 @@ YE_scholar_from_luojiang = {
 			}
 		}
 	}
-	local_development_cost = -0.10
 	institution_growth = 12
+	local_development_cost = -0.10
+	trade_goods_size = 0.02
 }

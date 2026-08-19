@@ -81,10 +81,23 @@
  rakhadesh_region:0 "–FZZ±"
  rakhadesh_region_name:0 "–FZZ±"
  rakhadesh_region_adj:0 "–FZZ±"
-#  :0 ""
-#  _name:0 ""
-#  _adj:0 ""
 
+ PROV1899:0 "'„œ‚"
+ PROV_ADJ1899:0 "'„œ‚"
+
+ jyutsai_area:0 "ŽjŸS"
+ jyutsai_area_name:0 "ŽjŸS"
+ jyutsai_area_adj:0 "ŽjŸS"
+
+ PROV4650:0 "ØyzzqS"
+ PROV_ADJ4650:0 "ØyzzqS"
+ PROV4651:0 "upÙN­^"
+ PROV_ADJ4651:0 "upÙN­^"
+ PROV4652:0 "K…ÙN­^"
+ PROV_ADJ4652:0 "K…ÙN­^"
+ 
+ PROV4900:0 "ŽjŸS"
+ PROV_ADJ4900:0 "ŽjŸS"
 #  :0 ""
 #  _name:0 ""
 #  _adj:0 ""

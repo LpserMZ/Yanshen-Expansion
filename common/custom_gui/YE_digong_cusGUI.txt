@@ -485,7 +485,9 @@ custom_button = {
 		potential = {
 			YE_digong_can_rightward = yes
 		}
-		trigger = {}
+		trigger = {
+			YE_digong_can_rightward_to_enemy = yes
+		}
 		effect = {
 			YE_digong_rightward = yes
 		}
@@ -500,7 +502,9 @@ custom_button = {
 		potential = {
 			YE_digong_can_leftward = yes
 		}
-		trigger = {}
+		trigger = {
+			YE_digong_can_leftward_to_enemy = yes
+		}
 		effect = {
 			YE_digong_leftward = yes
 		}
@@ -515,7 +519,9 @@ custom_button = {
 		potential = {
 			YE_digong_can_upward = yes
 		}
-		trigger = {}
+		trigger = {
+			YE_digong_can_upward_to_enemy = yes
+		}
 		effect = {
 			YE_digong_upward = yes
 		}
@@ -530,7 +536,9 @@ custom_button = {
 		potential = {
 			YE_digong_can_downward = yes
 		}
-		trigger = {}
+		trigger = {
+			YE_digong_can_downward_to_enemy = yes
+		}
 		effect = {
 			YE_digong_downward = yes
 		}

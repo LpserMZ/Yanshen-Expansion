@@ -3545,28 +3545,38 @@ country_event = { #61 存亡之急
 	}
 }
 
+# 香檀珠转移
+province_event = { #62 香檀珠
+	id = YE_GRY.62
+	title = YE_GRY.62.T
+	desc = YE_GRY.62.D
+	picture = BAD_WITH_MONARCH_eventPicture
 
-# country_event = { #62
-# 	id = YE_GRY.62
-# 	title = YE_GRY.62.T
-# 	desc = YE_GRY.62.D
-# 	picture = BAD_WITH_MONARCH_eventPicture
+	#fire_only_once = yes
+	is_triggered_only = yes
 
-# 	fire_only_once = yes
-# 	is_triggered_only = no
-
-# 	trigger = {
-# 	}
-# 	immediate = {
-# 	}
-# 	option = {
-# 		name = YE_GRY.62.a
-# 		ai_chance = { factor = 1 }
-# 	}
-# }
-#  YE_GRY.62.T:0 ""
-#  YE_GRY.62.D:0 ""
-#  YE_GRY.62.a:0 ""
+	trigger = {
+		NOT = {
+			has_global_flag = ban_YE_GRY_62_gflag
+		}
+	}
+	immediate = {
+		set_global_flag = ban_YE_GRY_62_gflag
+	}
+	option = {
+		name = YE_GRY.62.a
+		ai_chance = { factor = 1 }
+		remove_province_modifier = xiangtan_pearl
+		owner = {
+			capital_scope = {
+				add_permanent_province_modifier = { name = xiangtan_pearl duration = -1 }
+			}
+		}
+	}
+	after = {
+		clr_global_flag = ban_YE_GRY_62_gflag
+	}
+}
 
 # country_event = { #63
 # 	id = YE_GRY.63

@@ -85,11 +85,6 @@ secure_wuxun_safety = {
 	global_prosperity_growth = 0.25
 	defensiveness = 0.10
 }
-taixuegong = { #泰学宫
-	institution_growth = 12
-	local_development_cost_modifier = -0.25
-	monthly_splendor = 1
-}
 
 southern_coastal_yanzhou_sailors = {
 	local_sailors = 100
@@ -244,13 +239,6 @@ huxian_senator_in_lanjinhui = {
 }
 distinction_between_huxian_and_human = {
 	monthly_soilder_fervor = 0.25
-}
-
-yanzhong_bofan_in_yanzhong = {
-	prestige = 0.10
-}
-yanzhong_bofan_in_bolu = {
-	local_unrest = -1
 }
 
 lanjinhui_fund_to_loc_industry = {

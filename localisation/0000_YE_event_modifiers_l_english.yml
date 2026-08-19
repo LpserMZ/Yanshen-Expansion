@@ -24,9 +24,6 @@
  secure_wuxun_safety:0 "fkTm‰RR"
 
  YE_Y01_special_buff:0 "T›­Sá‹Øy"
- YE_scholar_from_luojiang:0 "WmlTëXSÑNÀs²‹fR0W"
- YE_scholar_from_luojiang_desc:0 "SÑNleg0Ræf‘NýVTšRESW‘ÿÏeºNv^NïygÂS?eÿlwNÃVxvz9Noƒÿ(WßpÞT¼p9N¶R„v#W0WNW»yŒNLˆ«R-N‡˜wQZg0æf‘N	–¦R…Qbgô•ÿNW»yŒNLˆ«R«ˆ	–¦RÑvÆ‰ÿSÑNlmNwSeQ·u‰N0SÑNÀs/fÏe-NR—t^MbÊOÿNbk¾|¼p9N/gÿuó(W&rÆrfRNmN‡˜	gb1Sÿg¦^ŒSv`	–¦Rÿ:NhˆfNNKNTjO„v`¦^ÿ³QšR»yVW‘ÿ‘N8nÛV¹e0"
- taixuegong:0 "ðlfR«R"
 
  yanzhou_forbid_alliance_minor:0 "ßpÞTY²NNS¿Rÿ1VS	ÿ"
  desc_yanzhou_forbid_alliance_minor:0 ""
@@ -107,9 +104,6 @@
  awareness_of_yan_nation:0 "ßpºNlÏeaÆ‹"
  gov_effeciency_decline:0 "HhMr³RbV"
 
- yanzhong_bofan_in_yanzhong:0 "ßp-N^a^ÿÎWNKNupB›"
- yanzhong_bofan_in_bolu:0 "ßp-N^a^ÿÎW‰KN¾|^y"
-
  lanjinhui_fund_to_loc_industry:0 "ÏuNmb`Y•bD"
  lanjinhui_fund_buff_copper:0 "Ü”Á”ÿwÏ…"
  lanjinhui_fund_buff_grain:0 "®|ß˜uµN"
@@ -167,4 +161,3 @@
  yannification_action_cooldown:0 "ßpSLˆ¨R·QtS-N"
  yannification_intermarriage_modifier:0 "ÃOÛZZ"
  yannification_intermarriage_modifier_desc:0 "wýNÏkt^ßpSÛUS:§G+3§!\nSVMRwýNßpSÛUS:[Root.prov_yannification.GetValue]/100"
-

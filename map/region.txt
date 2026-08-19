@@ -3513,8 +3513,7 @@ xianzhong_region = {
 		xz6_area
 		xz7_area
 		xz8_area
-		xz9_area
-		xz10_area
+		
 		xz11_area
 		xz12_area
 		xz13_area

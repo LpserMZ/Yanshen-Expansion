@@ -8,8 +8,3 @@ base_production = 7
 base_manpower = 6
 trade_goods = silk
 is_city = yes
-
-add_permanent_province_modifier = { 
-	name = yanzhong_bofan_in_bolu
-	duration = -1
-}

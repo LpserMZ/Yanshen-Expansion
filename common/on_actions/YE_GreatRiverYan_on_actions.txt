@@ -30,6 +30,8 @@ on_startup = {
 		YC1 = { remove_country = yes }
 
 		Y18 = { country_event = { id = YE_GRY.57 days = 10 } }
+
+		YE_add_special_prov_modifier = yes
 		
 		set_global_flag = YE_GRY_startup_gflag
 	}
@@ -330,7 +332,8 @@ on_province_owner_change = {
 		}
 		remove_core = YA1
 	}
-	if = {
+	
+	if = { # 烟中帛幡
 		limit = {
 			OR = {
 				province_id = 4859
@@ -345,7 +348,16 @@ on_province_owner_change = {
 			}
 		}
 	}
-	if = {
+	if = { # 香檀珠转移
+		limit = {
+			has_province_modifier = xiangtan_pearl
+		}
+		province_event = {
+			id = YE_GRY.62
+		}
+	}
+
+	if = { # 天楼之灾
 		limit = {
 			province_id = 4871
 		}
@@ -353,7 +365,8 @@ on_province_owner_change = {
 			id = YE_GRY.60
 		}
 	}
-	if = {
+	
+	if = { # 烟化失地清空进展
         limit = {
             has_province_flag = prov_yannification_flag
 			owner = {
@@ -365,6 +378,7 @@ on_province_owner_change = {
 
         clear_yannification_progress = yes
     }
+	
 }
 
 
