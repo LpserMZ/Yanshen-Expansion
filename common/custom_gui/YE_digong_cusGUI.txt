@@ -1,552 +1,552 @@
-custom_button = {
-	name = "button_digong"
-	tooltip = button_digong_tooltip
-	potential = {
-		has_country_flag = YE_allow_digong_flag
-	}
-	trigger = { 
-		hidden_trigger = {
-			has_country_flag = YE_allow_digong_flag
-		}
-	}
-	effect = {
-		if = { #关闭
-			limit = {
-				has_country_flag = digong_flag
-			}
-			clr_country_flag = digong_flag
-		}
-		else = { #开启
-			set_country_flag = digong_flag
-		}
-		hidden_effect = {
-			YE_digong_initialize = yes #初始化
-		}
-	}
-}
-custom_window = {
-	name = "window_digong"
-	potential = {
-		has_country_flag = digong_flag
-	}
-}
-custom_button = {
-	name = "digong_ESCAPE"
-	tooltip = ""
-	potential = {
-	}
-	trigger = { 
-		hidden_trigger = {
-			always = yes
-		}
-	}
-	effect = {
-		clr_country_flag = digong_flag
-	}
-}
-# 地图1 房间
-	custom_button = {
-		name = "button_map_1_room_1_0"
-		tooltip = ""
-		potential = {}
-		trigger = {
-			hidden_trigger = {
-				always = yes
-			}
-		}
-		effect = {}
-		frame = {
-			number = 2
-			trigger = {
-				is_variable_equal = { which = digong_loc_x value = 1 }
-				is_variable_equal = { which = digong_loc_y value = 0 }
-			}
-		}
-		frame = {
-			number = 1
-			trigger = {
-				always = yes
-			}
-		}
-	}
-	custom_button = {
-		name = "button_map_1_room_2_0"
-		tooltip = ""
-		potential = {}
-		trigger = {
-			hidden_trigger = {
-				always = yes
-			}
-		}
-		effect = {}
-		frame = {
-			number = 2
-			trigger = {
-				is_variable_equal = { which = digong_loc_x value = 2 }
-				is_variable_equal = { which = digong_loc_y value = 0 }
-			}
-		}
-		frame = {
-			number = 1
-			trigger = {
-				always = yes
-			}
-		}
-	}
-	custom_button = {
-		name = "button_map_1_room_3_0"
-		tooltip = ""
-		potential = {}
-		trigger = {
-			hidden_trigger = {
-				always = yes
-			}
-		}
-		effect = {}
-		frame = {
-			number = 2
-			trigger = {
-				is_variable_equal = { which = digong_loc_x value = 3 }
-				is_variable_equal = { which = digong_loc_y value = 0 }
-			}
-		}
-		frame = {
-			number = 1
-			trigger = {
-				always = yes
-			}
-		}
-	}
-	custom_button = {
-		name = "button_map_1_room_1_1"
-		tooltip = ""
-		potential = {}
-		trigger = {
-			hidden_trigger = {
-				always = yes
-			}
-		}
-		effect = {}
-		frame = {
-			number = 2
-			trigger = {
-				is_variable_equal = { which = digong_loc_x value = 1 }
-				is_variable_equal = { which = digong_loc_y value = 1 }
-			}
-		}
-		frame = {
-			number = 1
-			trigger = {
-				always = yes
-			}
-		}
-	}
-	custom_button = {
-		name = "button_map_1_room_3_1"
-		tooltip = ""
-		potential = {}
-		trigger = {
-			hidden_trigger = {
-				always = yes
-			}
-		}
-		effect = {}
-		frame = {
-			number = 2
-			trigger = {
-				is_variable_equal = { which = digong_loc_x value = 3 }
-				is_variable_equal = { which = digong_loc_y value = 1 }
-			}
-		}
-		frame = {
-			number = 1
-			trigger = {
-				always = yes
-			}
-		}
-	}
-	custom_button = {
-		name = "button_map_1_room_0_2"
-		tooltip = ""
-		potential = {}
-		trigger = {
-			hidden_trigger = {
-				always = yes
-			}
-		}
-		effect = {}
-		frame = {
-			number = 2
-			trigger = {
-				is_variable_equal = { which = digong_loc_x value = 0 }
-				is_variable_equal = { which = digong_loc_y value = 2 }
-			}
-		}
-		frame = {
-			number = 1
-			trigger = {
-				always = yes
-			}
-		}
-	}
-	custom_button = {
-		name = "button_map_1_room_1_2"
-		tooltip = ""
-		potential = {}
-		trigger = {
-			hidden_trigger = {
-				always = yes
-			}
-		}
-		effect = {}
-		frame = {
-			number = 2
-			trigger = {
-				is_variable_equal = { which = digong_loc_x value = 1 }
-				is_variable_equal = { which = digong_loc_y value = 2 }
-			}
-		}
-		frame = {
-			number = 1
-			trigger = {
-				always = yes
-			}
-		}
-	}
-	custom_button = {
-		name = "button_map_1_room_2_2"
-		tooltip = ""
-		potential = {}
-		trigger = {
-			hidden_trigger = {
-				always = yes
-			}
-		}
-		effect = {}
-		frame = {
-			number = 2
-			trigger = {
-				is_variable_equal = { which = digong_loc_x value = 2 }
-				is_variable_equal = { which = digong_loc_y value = 2 }
-			}
-		}
-		frame = {
-			number = 1
-			trigger = {
-				always = yes
-			}
-		}
-	}
-	custom_button = {
-		name = "button_map_1_room_3_2"
-		tooltip = ""
-		potential = {}
-		trigger = {
-			hidden_trigger = {
-				always = yes
-			}
-		}
-		effect = {}
-		frame = {
-			number = 2
-			trigger = {
-				is_variable_equal = { which = digong_loc_x value = 3 }
-				is_variable_equal = { which = digong_loc_y value = 2 }
-			}
-		}
-		frame = {
-			number = 1
-			trigger = {
-				always = yes
-			}
-		}
-	}
-	custom_button = {
-		name = "button_map_1_room_4_2"
-		tooltip = ""
-		potential = {}
-		trigger = {
-			hidden_trigger = {
-				always = yes
-			}
-		}
-		effect = {}
-		frame = {
-			number = 2
-			trigger = {
-				is_variable_equal = { which = digong_loc_x value = 4 }
-				is_variable_equal = { which = digong_loc_y value = 2 }
-			}
-		}
-		frame = {
-			number = 1
-			trigger = {
-				always = yes
-			}
-		}
-	}
-	custom_button = {
-		name = "button_map_1_room_5_2"
-		tooltip = ""
-		potential = {}
-		trigger = {
-			hidden_trigger = {
-				always = yes
-			}
-		}
-		effect = {}
-		frame = {
-			number = 2
-			trigger = {
-				is_variable_equal = { which = digong_loc_x value = 5 }
-				is_variable_equal = { which = digong_loc_y value = 2 }
-			}
-		}
-		frame = {
-			number = 1
-			trigger = {
-				always = yes
-			}
-		}
-	}
-	custom_button = {
-		name = "button_map_1_room_6_2"
-		tooltip = ""
-		potential = {}
-		trigger = {
-			hidden_trigger = {
-				always = yes
-			}
-		}
-		effect = {}
-		frame = {
-			number = 2
-			trigger = {
-				is_variable_equal = { which = digong_loc_x value = 6 }
-				is_variable_equal = { which = digong_loc_y value = 2 }
-			}
-		}
-		frame = {
-			number = 1
-			trigger = {
-				always = yes
-			}
-		}
-	}
-	custom_button = {
-		name = "button_map_1_room_7_2"
-		tooltip = ""
-		potential = {}
-		trigger = {
-			hidden_trigger = {
-				always = yes
-			}
-		}
-		effect = {}
-		frame = {
-			number = 2
-			trigger = {
-				is_variable_equal = { which = digong_loc_x value = 7 }
-				is_variable_equal = { which = digong_loc_y value = 2 }
-			}
-		}
-		frame = {
-			number = 1
-			trigger = {
-				always = yes
-			}
-		}
-	}
-	custom_button = {
-		name = "button_map_1_room_3_3"
-		tooltip = ""
-		potential = {}
-		trigger = {
-			hidden_trigger = {
-				always = yes
-			}
-		}
-		effect = {}
-		frame = {
-			number = 2
-			trigger = {
-				is_variable_equal = { which = digong_loc_x value = 3 }
-				is_variable_equal = { which = digong_loc_y value = 3 }
-			}
-		}
-		frame = {
-			number = 1
-			trigger = {
-				always = yes
-			}
-		}
-	}
-	custom_button = {
-		name = "button_map_1_room_5_3"
-		tooltip = ""
-		potential = {}
-		trigger = {
-			hidden_trigger = {
-				always = yes
-			}
-		}
-		effect = {}
-		frame = {
-			number = 2
-			trigger = {
-				is_variable_equal = { which = digong_loc_x value = 5 }
-				is_variable_equal = { which = digong_loc_y value = 3 }
-			}
-		}
-		frame = {
-			number = 1
-			trigger = {
-				always = yes
-			}
-		}
-	}
-	custom_button = {
-		name = "button_map_1_room_3_4"
-		tooltip = ""
-		potential = {}
-		trigger = {
-			hidden_trigger = {
-				always = yes
-			}
-		}
-		effect = {}
-		frame = {
-			number = 2
-			trigger = {
-				is_variable_equal = { which = digong_loc_x value = 3 }
-				is_variable_equal = { which = digong_loc_y value = 4 }
-			}
-		}
-		frame = {
-			number = 1
-			trigger = {
-				always = yes
-			}
-		}
-	}
-	custom_button = {
-		name = "button_map_1_room_4_4"
-		tooltip = ""
-		potential = {}
-		trigger = {
-			hidden_trigger = {
-				always = yes
-			}
-		}
-		effect = {}
-		frame = {
-			number = 2
-			trigger = {
-				is_variable_equal = { which = digong_loc_x value = 4 }
-				is_variable_equal = { which = digong_loc_y value = 4 }
-			}
-		}
-		frame = {
-			number = 1
-			trigger = {
-				always = yes
-			}
-		}
-	}
-	custom_button = {
-		name = "button_map_1_room_5_4"
-		tooltip = ""
-		potential = {}
-		trigger = {
-			hidden_trigger = {
-				always = yes
-			}
-		}
-		effect = {}
-		frame = {
-			number = 2
-			trigger = {
-				is_variable_equal = { which = digong_loc_x value = 5 }
-				is_variable_equal = { which = digong_loc_y value = 4 }
-			}
-		}
-		frame = {
-			number = 1
-			trigger = {
-				always = yes
-			}
-		}
-	}
+# custom_button = {
+# 	name = "button_digong"
+# 	tooltip = button_digong_tooltip
+# 	potential = {
+# 		has_country_flag = YE_allow_digong_flag
+# 	}
+# 	trigger = { 
+# 		hidden_trigger = {
+# 			has_country_flag = YE_allow_digong_flag
+# 		}
+# 	}
+# 	effect = {
+# 		if = { #关闭
+# 			limit = {
+# 				has_country_flag = digong_flag
+# 			}
+# 			clr_country_flag = digong_flag
+# 		}
+# 		else = { #开启
+# 			set_country_flag = digong_flag
+# 		}
+# 		hidden_effect = {
+# 			YE_digong_initialize = yes #初始化
+# 		}
+# 	}
+# }
+# custom_window = {
+# 	name = "window_digong"
+# 	potential = {
+# 		has_country_flag = digong_flag
+# 	}
+# }
+# custom_button = {
+# 	name = "digong_ESCAPE"
+# 	tooltip = ""
+# 	potential = {
+# 	}
+# 	trigger = { 
+# 		hidden_trigger = {
+# 			always = yes
+# 		}
+# 	}
+# 	effect = {
+# 		clr_country_flag = digong_flag
+# 	}
+# }
+# # 地图1 房间
+# 	custom_button = {
+# 		name = "button_map_1_room_1_0"
+# 		tooltip = ""
+# 		potential = {}
+# 		trigger = {
+# 			hidden_trigger = {
+# 				always = yes
+# 			}
+# 		}
+# 		effect = {}
+# 		frame = {
+# 			number = 2
+# 			trigger = {
+# 				is_variable_equal = { which = digong_loc_x value = 1 }
+# 				is_variable_equal = { which = digong_loc_y value = 0 }
+# 			}
+# 		}
+# 		frame = {
+# 			number = 1
+# 			trigger = {
+# 				always = yes
+# 			}
+# 		}
+# 	}
+# 	custom_button = {
+# 		name = "button_map_1_room_2_0"
+# 		tooltip = ""
+# 		potential = {}
+# 		trigger = {
+# 			hidden_trigger = {
+# 				always = yes
+# 			}
+# 		}
+# 		effect = {}
+# 		frame = {
+# 			number = 2
+# 			trigger = {
+# 				is_variable_equal = { which = digong_loc_x value = 2 }
+# 				is_variable_equal = { which = digong_loc_y value = 0 }
+# 			}
+# 		}
+# 		frame = {
+# 			number = 1
+# 			trigger = {
+# 				always = yes
+# 			}
+# 		}
+# 	}
+# 	custom_button = {
+# 		name = "button_map_1_room_3_0"
+# 		tooltip = ""
+# 		potential = {}
+# 		trigger = {
+# 			hidden_trigger = {
+# 				always = yes
+# 			}
+# 		}
+# 		effect = {}
+# 		frame = {
+# 			number = 2
+# 			trigger = {
+# 				is_variable_equal = { which = digong_loc_x value = 3 }
+# 				is_variable_equal = { which = digong_loc_y value = 0 }
+# 			}
+# 		}
+# 		frame = {
+# 			number = 1
+# 			trigger = {
+# 				always = yes
+# 			}
+# 		}
+# 	}
+# 	custom_button = {
+# 		name = "button_map_1_room_1_1"
+# 		tooltip = ""
+# 		potential = {}
+# 		trigger = {
+# 			hidden_trigger = {
+# 				always = yes
+# 			}
+# 		}
+# 		effect = {}
+# 		frame = {
+# 			number = 2
+# 			trigger = {
+# 				is_variable_equal = { which = digong_loc_x value = 1 }
+# 				is_variable_equal = { which = digong_loc_y value = 1 }
+# 			}
+# 		}
+# 		frame = {
+# 			number = 1
+# 			trigger = {
+# 				always = yes
+# 			}
+# 		}
+# 	}
+# 	custom_button = {
+# 		name = "button_map_1_room_3_1"
+# 		tooltip = ""
+# 		potential = {}
+# 		trigger = {
+# 			hidden_trigger = {
+# 				always = yes
+# 			}
+# 		}
+# 		effect = {}
+# 		frame = {
+# 			number = 2
+# 			trigger = {
+# 				is_variable_equal = { which = digong_loc_x value = 3 }
+# 				is_variable_equal = { which = digong_loc_y value = 1 }
+# 			}
+# 		}
+# 		frame = {
+# 			number = 1
+# 			trigger = {
+# 				always = yes
+# 			}
+# 		}
+# 	}
+# 	custom_button = {
+# 		name = "button_map_1_room_0_2"
+# 		tooltip = ""
+# 		potential = {}
+# 		trigger = {
+# 			hidden_trigger = {
+# 				always = yes
+# 			}
+# 		}
+# 		effect = {}
+# 		frame = {
+# 			number = 2
+# 			trigger = {
+# 				is_variable_equal = { which = digong_loc_x value = 0 }
+# 				is_variable_equal = { which = digong_loc_y value = 2 }
+# 			}
+# 		}
+# 		frame = {
+# 			number = 1
+# 			trigger = {
+# 				always = yes
+# 			}
+# 		}
+# 	}
+# 	custom_button = {
+# 		name = "button_map_1_room_1_2"
+# 		tooltip = ""
+# 		potential = {}
+# 		trigger = {
+# 			hidden_trigger = {
+# 				always = yes
+# 			}
+# 		}
+# 		effect = {}
+# 		frame = {
+# 			number = 2
+# 			trigger = {
+# 				is_variable_equal = { which = digong_loc_x value = 1 }
+# 				is_variable_equal = { which = digong_loc_y value = 2 }
+# 			}
+# 		}
+# 		frame = {
+# 			number = 1
+# 			trigger = {
+# 				always = yes
+# 			}
+# 		}
+# 	}
+# 	custom_button = {
+# 		name = "button_map_1_room_2_2"
+# 		tooltip = ""
+# 		potential = {}
+# 		trigger = {
+# 			hidden_trigger = {
+# 				always = yes
+# 			}
+# 		}
+# 		effect = {}
+# 		frame = {
+# 			number = 2
+# 			trigger = {
+# 				is_variable_equal = { which = digong_loc_x value = 2 }
+# 				is_variable_equal = { which = digong_loc_y value = 2 }
+# 			}
+# 		}
+# 		frame = {
+# 			number = 1
+# 			trigger = {
+# 				always = yes
+# 			}
+# 		}
+# 	}
+# 	custom_button = {
+# 		name = "button_map_1_room_3_2"
+# 		tooltip = ""
+# 		potential = {}
+# 		trigger = {
+# 			hidden_trigger = {
+# 				always = yes
+# 			}
+# 		}
+# 		effect = {}
+# 		frame = {
+# 			number = 2
+# 			trigger = {
+# 				is_variable_equal = { which = digong_loc_x value = 3 }
+# 				is_variable_equal = { which = digong_loc_y value = 2 }
+# 			}
+# 		}
+# 		frame = {
+# 			number = 1
+# 			trigger = {
+# 				always = yes
+# 			}
+# 		}
+# 	}
+# 	custom_button = {
+# 		name = "button_map_1_room_4_2"
+# 		tooltip = ""
+# 		potential = {}
+# 		trigger = {
+# 			hidden_trigger = {
+# 				always = yes
+# 			}
+# 		}
+# 		effect = {}
+# 		frame = {
+# 			number = 2
+# 			trigger = {
+# 				is_variable_equal = { which = digong_loc_x value = 4 }
+# 				is_variable_equal = { which = digong_loc_y value = 2 }
+# 			}
+# 		}
+# 		frame = {
+# 			number = 1
+# 			trigger = {
+# 				always = yes
+# 			}
+# 		}
+# 	}
+# 	custom_button = {
+# 		name = "button_map_1_room_5_2"
+# 		tooltip = ""
+# 		potential = {}
+# 		trigger = {
+# 			hidden_trigger = {
+# 				always = yes
+# 			}
+# 		}
+# 		effect = {}
+# 		frame = {
+# 			number = 2
+# 			trigger = {
+# 				is_variable_equal = { which = digong_loc_x value = 5 }
+# 				is_variable_equal = { which = digong_loc_y value = 2 }
+# 			}
+# 		}
+# 		frame = {
+# 			number = 1
+# 			trigger = {
+# 				always = yes
+# 			}
+# 		}
+# 	}
+# 	custom_button = {
+# 		name = "button_map_1_room_6_2"
+# 		tooltip = ""
+# 		potential = {}
+# 		trigger = {
+# 			hidden_trigger = {
+# 				always = yes
+# 			}
+# 		}
+# 		effect = {}
+# 		frame = {
+# 			number = 2
+# 			trigger = {
+# 				is_variable_equal = { which = digong_loc_x value = 6 }
+# 				is_variable_equal = { which = digong_loc_y value = 2 }
+# 			}
+# 		}
+# 		frame = {
+# 			number = 1
+# 			trigger = {
+# 				always = yes
+# 			}
+# 		}
+# 	}
+# 	custom_button = {
+# 		name = "button_map_1_room_7_2"
+# 		tooltip = ""
+# 		potential = {}
+# 		trigger = {
+# 			hidden_trigger = {
+# 				always = yes
+# 			}
+# 		}
+# 		effect = {}
+# 		frame = {
+# 			number = 2
+# 			trigger = {
+# 				is_variable_equal = { which = digong_loc_x value = 7 }
+# 				is_variable_equal = { which = digong_loc_y value = 2 }
+# 			}
+# 		}
+# 		frame = {
+# 			number = 1
+# 			trigger = {
+# 				always = yes
+# 			}
+# 		}
+# 	}
+# 	custom_button = {
+# 		name = "button_map_1_room_3_3"
+# 		tooltip = ""
+# 		potential = {}
+# 		trigger = {
+# 			hidden_trigger = {
+# 				always = yes
+# 			}
+# 		}
+# 		effect = {}
+# 		frame = {
+# 			number = 2
+# 			trigger = {
+# 				is_variable_equal = { which = digong_loc_x value = 3 }
+# 				is_variable_equal = { which = digong_loc_y value = 3 }
+# 			}
+# 		}
+# 		frame = {
+# 			number = 1
+# 			trigger = {
+# 				always = yes
+# 			}
+# 		}
+# 	}
+# 	custom_button = {
+# 		name = "button_map_1_room_5_3"
+# 		tooltip = ""
+# 		potential = {}
+# 		trigger = {
+# 			hidden_trigger = {
+# 				always = yes
+# 			}
+# 		}
+# 		effect = {}
+# 		frame = {
+# 			number = 2
+# 			trigger = {
+# 				is_variable_equal = { which = digong_loc_x value = 5 }
+# 				is_variable_equal = { which = digong_loc_y value = 3 }
+# 			}
+# 		}
+# 		frame = {
+# 			number = 1
+# 			trigger = {
+# 				always = yes
+# 			}
+# 		}
+# 	}
+# 	custom_button = {
+# 		name = "button_map_1_room_3_4"
+# 		tooltip = ""
+# 		potential = {}
+# 		trigger = {
+# 			hidden_trigger = {
+# 				always = yes
+# 			}
+# 		}
+# 		effect = {}
+# 		frame = {
+# 			number = 2
+# 			trigger = {
+# 				is_variable_equal = { which = digong_loc_x value = 3 }
+# 				is_variable_equal = { which = digong_loc_y value = 4 }
+# 			}
+# 		}
+# 		frame = {
+# 			number = 1
+# 			trigger = {
+# 				always = yes
+# 			}
+# 		}
+# 	}
+# 	custom_button = {
+# 		name = "button_map_1_room_4_4"
+# 		tooltip = ""
+# 		potential = {}
+# 		trigger = {
+# 			hidden_trigger = {
+# 				always = yes
+# 			}
+# 		}
+# 		effect = {}
+# 		frame = {
+# 			number = 2
+# 			trigger = {
+# 				is_variable_equal = { which = digong_loc_x value = 4 }
+# 				is_variable_equal = { which = digong_loc_y value = 4 }
+# 			}
+# 		}
+# 		frame = {
+# 			number = 1
+# 			trigger = {
+# 				always = yes
+# 			}
+# 		}
+# 	}
+# 	custom_button = {
+# 		name = "button_map_1_room_5_4"
+# 		tooltip = ""
+# 		potential = {}
+# 		trigger = {
+# 			hidden_trigger = {
+# 				always = yes
+# 			}
+# 		}
+# 		effect = {}
+# 		frame = {
+# 			number = 2
+# 			trigger = {
+# 				is_variable_equal = { which = digong_loc_x value = 5 }
+# 				is_variable_equal = { which = digong_loc_y value = 4 }
+# 			}
+# 		}
+# 		frame = {
+# 			number = 1
+# 			trigger = {
+# 				always = yes
+# 			}
+# 		}
+# 	}
 
-# 方向键
-	custom_button = {
-		name = "button_digong_rightward"
-		tooltip = ""
-		potential = {
-			YE_digong_can_rightward = yes
-		}
-		trigger = {
-			YE_digong_can_rightward_to_enemy = yes
-		}
-		effect = {
-			YE_digong_rightward = yes
-		}
-		frame = {
-			number = 1
-			trigger = { always = yes }
-		}
-	}
-	custom_button = {
-		name = "button_digong_leftward"
-		tooltip = ""
-		potential = {
-			YE_digong_can_leftward = yes
-		}
-		trigger = {
-			YE_digong_can_leftward_to_enemy = yes
-		}
-		effect = {
-			YE_digong_leftward = yes
-		}
-		frame = {
-			number = 2
-			trigger = { always = yes }
-		}
-	}
-	custom_button = {
-		name = "button_digong_upward"
-		tooltip = ""
-		potential = {
-			YE_digong_can_upward = yes
-		}
-		trigger = {
-			YE_digong_can_upward_to_enemy = yes
-		}
-		effect = {
-			YE_digong_upward = yes
-		}
-		frame = {
-			number = 3
-			trigger = { always = yes }
-		}
-	}
-	custom_button = {
-		name = "button_digong_downward"
-		tooltip = ""
-		potential = {
-			YE_digong_can_downward = yes
-		}
-		trigger = {
-			YE_digong_can_downward_to_enemy = yes
-		}
-		effect = {
-			YE_digong_downward = yes
-		}
-		frame = {
-			number = 4
-			trigger = { always = yes }
-		}
-	}
+# # 方向键
+# 	custom_button = {
+# 		name = "button_digong_rightward"
+# 		tooltip = ""
+# 		potential = {
+# 			YE_digong_can_rightward = yes
+# 		}
+# 		trigger = {
+# 			YE_digong_can_rightward_to_enemy = yes
+# 		}
+# 		effect = {
+# 			YE_digong_rightward = yes
+# 		}
+# 		frame = {
+# 			number = 1
+# 			trigger = { always = yes }
+# 		}
+# 	}
+# 	custom_button = {
+# 		name = "button_digong_leftward"
+# 		tooltip = ""
+# 		potential = {
+# 			YE_digong_can_leftward = yes
+# 		}
+# 		trigger = {
+# 			YE_digong_can_leftward_to_enemy = yes
+# 		}
+# 		effect = {
+# 			YE_digong_leftward = yes
+# 		}
+# 		frame = {
+# 			number = 2
+# 			trigger = { always = yes }
+# 		}
+# 	}
+# 	custom_button = {
+# 		name = "button_digong_upward"
+# 		tooltip = ""
+# 		potential = {
+# 			YE_digong_can_upward = yes
+# 		}
+# 		trigger = {
+# 			YE_digong_can_upward_to_enemy = yes
+# 		}
+# 		effect = {
+# 			YE_digong_upward = yes
+# 		}
+# 		frame = {
+# 			number = 3
+# 			trigger = { always = yes }
+# 		}
+# 	}
+# 	custom_button = {
+# 		name = "button_digong_downward"
+# 		tooltip = ""
+# 		potential = {
+# 			YE_digong_can_downward = yes
+# 		}
+# 		trigger = {
+# 			YE_digong_can_downward_to_enemy = yes
+# 		}
+# 		effect = {
+# 			YE_digong_downward = yes
+# 		}
+# 		frame = {
+# 			number = 4
+# 			trigger = { always = yes }
+# 		}
+# 	}
 
 
 

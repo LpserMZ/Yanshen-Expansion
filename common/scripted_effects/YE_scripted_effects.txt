@@ -530,63 +530,63 @@ YE_add_special_prov_modifier = {
 
 
 # 地宫
-YE_digong_initialize = {
-	#当前坐标
-	set_variable = { which = digong_loc_x value = 0 }
-	set_variable = { which = digong_loc_y value = 0 }
-	set_variable = { which = digong_loc_z value = 0 }
+# YE_digong_initialize = {
+# 	#当前坐标
+# 	set_variable = { which = digong_loc_x value = 0 }
+# 	set_variable = { which = digong_loc_y value = 0 }
+# 	set_variable = { which = digong_loc_z value = 0 }
 
-	#角色状态
-	set_variable = { which = digong_player_HP value = 0 }
-	set_variable = { which = digong_player_ATK value = 0 }
-	set_variable = { which = digong_player_DEF value = 0 }
-	set_variable = { which = digong_player_EXP value = 0 }
-	set_variable = { which = digong_player_G value = 0 }
-	set_variable = { which = digong_player_LVL value = 0 }
+# 	#角色状态
+# 	set_variable = { which = digong_player_HP value = 0 }
+# 	set_variable = { which = digong_player_ATK value = 0 }
+# 	set_variable = { which = digong_player_DEF value = 0 }
+# 	set_variable = { which = digong_player_EXP value = 0 }
+# 	set_variable = { which = digong_player_G value = 0 }
+# 	set_variable = { which = digong_player_LVL value = 0 }
 
-	#战时敌人状态
-	set_variable = { which = digong_enemy_HP value = 0 }
-	set_variable = { which = digong_enemy_ATK value = 0 }
-	set_variable = { which = digong_enemy_DEF value = 0 }
+# 	#战时敌人状态
+# 	set_variable = { which = digong_enemy_HP value = 0 }
+# 	set_variable = { which = digong_enemy_ATK value = 0 }
+# 	set_variable = { which = digong_enemy_DEF value = 0 }
 
-	#战力预处理
-	#set_variable = { which = digong_player_can_win_enemy value = 0 }
-	set_variable = { which = digong_can_defeat_enemy_skelon value = 0 }
-	set_variable = { which = digong_can_defeat_enemy_zombie value = 0 }
+# 	#战力预处理
+# 	#set_variable = { which = digong_player_can_win_enemy value = 0 }
+# 	set_variable = { which = digong_can_defeat_enemy_skelon value = 0 }
+# 	set_variable = { which = digong_can_defeat_enemy_zombie value = 0 }
 
-	#敌人编号
-	set_variable = { which = digong_enemy_xyz030201 value = 1 }
+# 	#敌人编号
+# 	set_variable = { which = digong_enemy_xyz030201 value = 1 }
 
-	set_country_flag = YE_allow_digong_flag
-}
-YE_digong_on_change_loc = {
-	# trigger event
-}
+# 	set_country_flag = YE_allow_digong_flag
+# }
+# YE_digong_on_change_loc = {
+# 	# trigger event
+# }
 
-YE_digong_rightward = {
-	change_variable = { which = digong_loc_x value = 1 }
-	YE_digong_on_change_loc = yes
-}
-YE_digong_leftward = {
-	change_variable = { which = digong_loc_x value = -1 }
-	YE_digong_on_change_loc = yes
-}
-YE_digong_upward = {
-	change_variable = { which = digong_loc_y value = -1 }
-	YE_digong_on_change_loc = yes
-}
-YE_digong_downward = {
-	change_variable = { which = digong_loc_y value = 1 }
-	YE_digong_on_change_loc = yes
-}
-YE_digong_upstairward = {
-	change_variable = { which = digong_loc_z value = 1 }
-	YE_digong_on_change_loc = yes
-}
-YE_digong_downstairward = {
-	change_variable = { which = digong_loc_z value = -1 }
-	YE_digong_on_change_loc = yes
-}
+# YE_digong_rightward = {
+# 	change_variable = { which = digong_loc_x value = 1 }
+# 	YE_digong_on_change_loc = yes
+# }
+# YE_digong_leftward = {
+# 	change_variable = { which = digong_loc_x value = -1 }
+# 	YE_digong_on_change_loc = yes
+# }
+# YE_digong_upward = {
+# 	change_variable = { which = digong_loc_y value = -1 }
+# 	YE_digong_on_change_loc = yes
+# }
+# YE_digong_downward = {
+# 	change_variable = { which = digong_loc_y value = 1 }
+# 	YE_digong_on_change_loc = yes
+# }
+# YE_digong_upstairward = {
+# 	change_variable = { which = digong_loc_z value = 1 }
+# 	YE_digong_on_change_loc = yes
+# }
+# YE_digong_downstairward = {
+# 	change_variable = { which = digong_loc_z value = -1 }
+# 	YE_digong_on_change_loc = yes
+# }
 
 
 

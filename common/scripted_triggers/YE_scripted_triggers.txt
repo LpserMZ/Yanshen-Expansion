@@ -73,193 +73,193 @@ has_unstarted_yannification_province_in_area_script_trigger = {
 
 # 地宫
 
-YE_digong_can_defeat_enemy = {
-    is_variable_equal = { which = digong_can_defeat_enemy_$type$ value = 1 }
-}
+# YE_digong_can_defeat_enemy = {
+#     is_variable_equal = { which = digong_can_defeat_enemy_$type$ value = 1 }
+# }
 
 
-# map_1
-    # 01110000
-    # 01010000
-    # 11111111
-    # 00010100
-    # 00011100
+# # map_1
+#     # 01110000
+#     # 01010000
+#     # 11111111
+#     # 00010100
+#     # 00011100
 
-YE_digong_check_current_loc = {
-    ### $x$ x坐标，从0开始，原点在左上角
-    ### $y$ y坐标，从0开始，原点在左上角
-    ### YE_digong_check_current_loc = { x=3 y=2 }
-    AND = {
-        is_variable_equal = { which = digong_loc_x value = $x$ }
-        is_variable_equal = { which = digong_loc_y value = $y$ }
-    }
-}      
+# YE_digong_check_current_loc = {
+#     ### $x$ x坐标，从0开始，原点在左上角
+#     ### $y$ y坐标，从0开始，原点在左上角
+#     ### YE_digong_check_current_loc = { x=3 y=2 }
+#     AND = {
+#         is_variable_equal = { which = digong_loc_x value = $x$ }
+#         is_variable_equal = { which = digong_loc_y value = $y$ }
+#     }
+# }      
 
-YE_digong_can_rightward_z_1 = {
-    if = {
-        limit = {
-            is_variable_equal = { which = digong_loc_z value = 1 }
-        }
-        OR = {
-            YE_digong_check_current_loc = { x=1 y=0 }
-            YE_digong_check_current_loc = { x=2 y=0 }
-            YE_digong_check_current_loc = { x=0 y=2 }
-            YE_digong_check_current_loc = { x=1 y=2 }
-            YE_digong_check_current_loc = { x=2 y=2 }
-            YE_digong_check_current_loc = { x=3 y=2 }
-            YE_digong_check_current_loc = { x=4 y=2 }
-            YE_digong_check_current_loc = { x=5 y=2 }
-            YE_digong_check_current_loc = { x=6 y=2 }
-            YE_digong_check_current_loc = { x=3 y=4 }
-            YE_digong_check_current_loc = { x=4 y=4 }
-        }
-    }
-}
-YE_digong_can_leftward_z_1 = {
-    if = {
-        limit = {
-            is_variable_equal = { which = digong_loc_z value = 1 }
-        }
-        OR = {
-            YE_digong_check_current_loc = { x=2 y=0 }
-            YE_digong_check_current_loc = { x=3 y=0 }
-            YE_digong_check_current_loc = { x=1 y=2 }
-            YE_digong_check_current_loc = { x=2 y=2 }
-            YE_digong_check_current_loc = { x=3 y=2 }
-            YE_digong_check_current_loc = { x=4 y=2 }
-            YE_digong_check_current_loc = { x=5 y=2 }
-            YE_digong_check_current_loc = { x=6 y=2 }
-            YE_digong_check_current_loc = { x=7 y=2 }
-            YE_digong_check_current_loc = { x=4 y=4 }
-            YE_digong_check_current_loc = { x=5 y=4 }
-        }
-    }    
-}
-YE_digong_can_upward_z_1 = {
-    if = {
-        limit = {
-            is_variable_equal = { which = digong_loc_z value = 1 }
-        }
-        OR = {
-            YE_digong_check_current_loc = { x=1 y=1 }
-            YE_digong_check_current_loc = { x=3 y=1 }
-            YE_digong_check_current_loc = { x=1 y=2 }
-            YE_digong_check_current_loc = { x=3 y=2 }
-            YE_digong_check_current_loc = { x=3 y=3 }
-            YE_digong_check_current_loc = { x=5 y=3 }
-            YE_digong_check_current_loc = { x=3 y=4 }
-            YE_digong_check_current_loc = { x=5 y=4 }
-        }
-    }
-}
-YE_digong_can_downward_z_1 = {
-    if = {
-        limit = {
-            is_variable_equal = { which = digong_loc_z value = 1 }
-        }
-        OR = {
-            YE_digong_check_current_loc = { x=1 y=0 }
-            YE_digong_check_current_loc = { x=3 y=0 }
-            YE_digong_check_current_loc = { x=1 y=1 }
-            YE_digong_check_current_loc = { x=3 y=1 }
-            YE_digong_check_current_loc = { x=3 y=2 }
-            YE_digong_check_current_loc = { x=5 y=2 }
-            YE_digong_check_current_loc = { x=3 y=3 }
-            YE_digong_check_current_loc = { x=5 y=3 }
-        }
-    }
-}
+# YE_digong_can_rightward_z_1 = {
+#     if = {
+#         limit = {
+#             is_variable_equal = { which = digong_loc_z value = 1 }
+#         }
+#         OR = {
+#             YE_digong_check_current_loc = { x=1 y=0 }
+#             YE_digong_check_current_loc = { x=2 y=0 }
+#             YE_digong_check_current_loc = { x=0 y=2 }
+#             YE_digong_check_current_loc = { x=1 y=2 }
+#             YE_digong_check_current_loc = { x=2 y=2 }
+#             YE_digong_check_current_loc = { x=3 y=2 }
+#             YE_digong_check_current_loc = { x=4 y=2 }
+#             YE_digong_check_current_loc = { x=5 y=2 }
+#             YE_digong_check_current_loc = { x=6 y=2 }
+#             YE_digong_check_current_loc = { x=3 y=4 }
+#             YE_digong_check_current_loc = { x=4 y=4 }
+#         }
+#     }
+# }
+# YE_digong_can_leftward_z_1 = {
+#     if = {
+#         limit = {
+#             is_variable_equal = { which = digong_loc_z value = 1 }
+#         }
+#         OR = {
+#             YE_digong_check_current_loc = { x=2 y=0 }
+#             YE_digong_check_current_loc = { x=3 y=0 }
+#             YE_digong_check_current_loc = { x=1 y=2 }
+#             YE_digong_check_current_loc = { x=2 y=2 }
+#             YE_digong_check_current_loc = { x=3 y=2 }
+#             YE_digong_check_current_loc = { x=4 y=2 }
+#             YE_digong_check_current_loc = { x=5 y=2 }
+#             YE_digong_check_current_loc = { x=6 y=2 }
+#             YE_digong_check_current_loc = { x=7 y=2 }
+#             YE_digong_check_current_loc = { x=4 y=4 }
+#             YE_digong_check_current_loc = { x=5 y=4 }
+#         }
+#     }    
+# }
+# YE_digong_can_upward_z_1 = {
+#     if = {
+#         limit = {
+#             is_variable_equal = { which = digong_loc_z value = 1 }
+#         }
+#         OR = {
+#             YE_digong_check_current_loc = { x=1 y=1 }
+#             YE_digong_check_current_loc = { x=3 y=1 }
+#             YE_digong_check_current_loc = { x=1 y=2 }
+#             YE_digong_check_current_loc = { x=3 y=2 }
+#             YE_digong_check_current_loc = { x=3 y=3 }
+#             YE_digong_check_current_loc = { x=5 y=3 }
+#             YE_digong_check_current_loc = { x=3 y=4 }
+#             YE_digong_check_current_loc = { x=5 y=4 }
+#         }
+#     }
+# }
+# YE_digong_can_downward_z_1 = {
+#     if = {
+#         limit = {
+#             is_variable_equal = { which = digong_loc_z value = 1 }
+#         }
+#         OR = {
+#             YE_digong_check_current_loc = { x=1 y=0 }
+#             YE_digong_check_current_loc = { x=3 y=0 }
+#             YE_digong_check_current_loc = { x=1 y=1 }
+#             YE_digong_check_current_loc = { x=3 y=1 }
+#             YE_digong_check_current_loc = { x=3 y=2 }
+#             YE_digong_check_current_loc = { x=5 y=2 }
+#             YE_digong_check_current_loc = { x=3 y=3 }
+#             YE_digong_check_current_loc = { x=5 y=3 }
+#         }
+#     }
+# }
 
-YE_digong_can_rightward_z_2 = {
+# YE_digong_can_rightward_z_2 = {
 
-}
+# }
 
-YE_digong_can_rightward = {
-	YE_digong_can_rightward_z_1 = yes
-    YE_digong_can_rightward_z_2 = yes
-}
-YE_digong_can_leftward = {
-	YE_digong_can_leftward_z_1 = yes
-}
-YE_digong_can_upward = {
-	YE_digong_can_upward_z_1 = yes
-}
-YE_digong_can_downward = {
-	YE_digong_can_downward_z_1 = yes
-}
-
-
+# YE_digong_can_rightward = {
+# 	YE_digong_can_rightward_z_1 = yes
+#     YE_digong_can_rightward_z_2 = yes
+# }
+# YE_digong_can_leftward = {
+# 	YE_digong_can_leftward_z_1 = yes
+# }
+# YE_digong_can_upward = {
+# 	YE_digong_can_upward_z_1 = yes
+# }
+# YE_digong_can_downward = {
+# 	YE_digong_can_downward_z_1 = yes
+# }
 
 
-#(3,2)怪物点
 
 
-YE_digong_can_rightward_to_enemy = {
-    if = {
-        limit = {
-            is_variable_equal = { which = digong_loc_z value = 1 }
-        }
-        if = {
-            limit = {
-                YE_digong_check_current_loc = { x=2 y=2 }
-            }
-            OR = {
-                is_variable_equal = { which = digong_enemy_xyz030201 value = 0 }
-                YE_digong_can_defeat_enemy = { type = skelon }
-            }
-        }
-    }
-}
-YE_digong_can_leftward_to_enemy = {
-    if = {
-        limit = {
-            is_variable_equal = { which = digong_loc_z value = 1 } 
-        }
-        if = {
-            limit = {
-                YE_digong_check_current_loc = { x=4 y=2 }
-            }
-            OR = {
-                is_variable_equal = { which = digong_enemy_xyz030201 value = 0 }
-                YE_digong_can_defeat_enemy = { type = skelon }
-            }
-        }
-    }    
+# #(3,2)怪物点
+
+
+# YE_digong_can_rightward_to_enemy = {
+#     if = {
+#         limit = {
+#             is_variable_equal = { which = digong_loc_z value = 1 }
+#         }
+#         if = {
+#             limit = {
+#                 YE_digong_check_current_loc = { x=2 y=2 }
+#             }
+#             OR = {
+#                 is_variable_equal = { which = digong_enemy_xyz030201 value = 0 }
+#                 YE_digong_can_defeat_enemy = { type = skelon }
+#             }
+#         }
+#     }
+# }
+# YE_digong_can_leftward_to_enemy = {
+#     if = {
+#         limit = {
+#             is_variable_equal = { which = digong_loc_z value = 1 } 
+#         }
+#         if = {
+#             limit = {
+#                 YE_digong_check_current_loc = { x=4 y=2 }
+#             }
+#             OR = {
+#                 is_variable_equal = { which = digong_enemy_xyz030201 value = 0 }
+#                 YE_digong_can_defeat_enemy = { type = skelon }
+#             }
+#         }
+#     }    
     
-}
-YE_digong_can_upward_to_enemy = {
-    if = {
-        limit = {
-            is_variable_equal = { which = digong_loc_z value = 1 }  
-        }
-        if = {
-            limit = {
-                YE_digong_check_current_loc = { x=3 y=3 }
-            }
-            OR = {
-                is_variable_equal = { which = digong_enemy_xyz030201 value = 0 }
-                YE_digong_can_defeat_enemy = { type = skelon }
-            }
-        }
-    } 
+# }
+# YE_digong_can_upward_to_enemy = {
+#     if = {
+#         limit = {
+#             is_variable_equal = { which = digong_loc_z value = 1 }  
+#         }
+#         if = {
+#             limit = {
+#                 YE_digong_check_current_loc = { x=3 y=3 }
+#             }
+#             OR = {
+#                 is_variable_equal = { which = digong_enemy_xyz030201 value = 0 }
+#                 YE_digong_can_defeat_enemy = { type = skelon }
+#             }
+#         }
+#     } 
     
-}
-YE_digong_can_downward_to_enemy = {
-    if = {
-        limit = {
-            is_variable_equal = { which = digong_loc_z value = 1 } 
-        }
-        if = {
-            limit = {
-                YE_digong_check_current_loc = { x=3 y=1 }
-            }
-            OR = {
-                is_variable_equal = { which = digong_enemy_xyz030201 value = 0 }
-                YE_digong_can_defeat_enemy = { type = skelon }
-            }
-        }
-    }
-}
+# }
+# YE_digong_can_downward_to_enemy = {
+#     if = {
+#         limit = {
+#             is_variable_equal = { which = digong_loc_z value = 1 } 
+#         }
+#         if = {
+#             limit = {
+#                 YE_digong_check_current_loc = { x=3 y=1 }
+#             }
+#             OR = {
+#                 is_variable_equal = { which = digong_enemy_xyz030201 value = 0 }
+#                 YE_digong_can_defeat_enemy = { type = skelon }
+#             }
+#         }
+#     }
+# }
 
 
 

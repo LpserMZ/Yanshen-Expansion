@@ -1,21 +1,21 @@
 every_country = {
-	# limit= {
+	limit= {
 
-	# 	capital_scope = {
-	# 		# continent = europe
-	# 		# continent = africa
-	# 		# continent = asia
-	# 		OR = {
+		capital_scope = {
+			# continent = europe
+			# continent = africa
+			continent = asia
+			# OR = {
 				
-	# 			continent = africa
-	# 			continent = north_america
-	# 			continent = south_america
-	# 		}
-	# 		NOT = { superregion = bulwar_superregion }
-	# 		NOT = { superregion = north_salahad_superregion }
+			# 	continent = africa
+			# 	continent = north_america
+			# 	continent = south_america
+			# }
+			NOT = { superregion = bulwar_superregion }
+			NOT = { superregion = north_salahad_superregion }
 			
-	# 	}
-	# }
+		}
+	}
 	disband_all_units = yes
 	remove_country = THIS
 }
