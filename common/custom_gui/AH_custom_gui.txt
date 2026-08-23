@@ -77,10 +77,10 @@ custom_text_box = {
 			}
 			effect = {
 				hidden_effect = {
-					check_area_dev = { fuya = bianfang_area squence = 1 }
-					check_area_dev = { fuya = bianyuan_area squence = 2 }
-					check_area_dev = { fuya = tunayuan_area squence = 3 }
-					check_area_dev = { fuya = tietyuan_area squence = 4 }
+					# check_area_dev = { fuya = bianfang_area squence = 1 }
+					# check_area_dev = { fuya = bianyuan_area squence = 2 }
+					# check_area_dev = { fuya = tunayuan_area squence = 3 }
+					# check_area_dev = { fuya = tietyuan_area squence = 4 }
 					set_variable = { which = dev_bonus_chapter value = 9 }
 					set_variable = { which = dev_bonus_page value = 1 }
 				}
@@ -124,10 +124,10 @@ custom_text_box = {
 			}
 			effect = {
 				hidden_effect = {
-					check_area_dev = { fuya = jiangszun_area squence = 1 }
-					check_area_dev = { fuya = lamzung_area squence = 2 }
-					check_area_dev = { fuya = jyutsai_area squence = 3 }
-					check_area_dev = { fuya = tianszi_area squence = 4 }
+					# check_area_dev = { fuya = jiangszun_area squence = 1 }
+					# check_area_dev = { fuya = lamzung_area squence = 2 }
+					# check_area_dev = { fuya = jyutsai_area squence = 3 }
+					# check_area_dev = { fuya = tianszi_area squence = 4 }
 					set_variable = { which = dev_bonus_chapter value = 10 }
 					set_variable = { which = dev_bonus_page value = 1 }
 				}
@@ -170,11 +170,11 @@ custom_text_box = {
 			}
 			effect = {
 				hidden_effect = {
-					check_area_dev = { fuya = jinqiu_area squence = 1 }
-					check_area_dev = { fuya = balrijin_area squence = 2 }
-					check_area_dev = { fuya = jingai_area squence = 3 }
-					check_area_dev = { fuya = tiaochi_area squence = 4 }
-					check_area_dev = { fuya = hubao_area squence = 5 }
+					# check_area_dev = { fuya = jinqiu_area squence = 1 }
+					# check_area_dev = { fuya = balrijin_area squence = 2 }
+					# check_area_dev = { fuya = jingai_area squence = 3 }
+					# check_area_dev = { fuya = tiaochi_area squence = 4 }
+					# check_area_dev = { fuya = hubao_area squence = 5 }
 					set_variable = { which = dev_bonus_chapter value = 11 }
 					set_variable = { which = dev_bonus_page value = 1 }
 				}
@@ -217,11 +217,11 @@ custom_text_box = {
 			}
 			effect = {
 				hidden_effect = {
-					check_area_dev = { fuya = anjiang_area squence = 1 }
-					check_area_dev = { fuya = yanzhong_area squence = 2 }
-					check_area_dev = { fuya = linyuan_area squence = 3 }
-					check_area_dev = { fuya = yingzhen_area squence = 4 }
-					check_area_dev = { fuya = yangcheng_area squence = 5 }
+					# check_area_dev = { fuya = anjiang_area squence = 1 }
+					# check_area_dev = { fuya = yanzhong_area squence = 2 }
+					# check_area_dev = { fuya = linyuan_area squence = 3 }
+					# check_area_dev = { fuya = yingzhen_area squence = 4 }
+					# check_area_dev = { fuya = yangcheng_area squence = 5 }
 					set_variable = { which = dev_bonus_chapter value = 12 }
 					set_variable = { which = dev_bonus_page value = 1 }
 				}
@@ -264,11 +264,11 @@ custom_text_box = {
 			}
 			effect = {
 				hidden_effect = {
-					check_area_dev = { fuya = shian_area squence = 1 }
-					check_area_dev = { fuya = yueying_area squence = 2 }
-					check_area_dev = { fuya = xiaowu_area squence = 3 }
-					check_area_dev = { fuya = hungngon_area squence = 4 }
-					check_area_dev = { fuya = wanglam_area squence = 5 }
+					# check_area_dev = { fuya = shian_area squence = 1 }
+					# check_area_dev = { fuya = yueying_area squence = 2 }
+					# check_area_dev = { fuya = xiaowu_area squence = 3 }
+					# check_area_dev = { fuya = hungngon_area squence = 4 }
+					# check_area_dev = { fuya = wanglam_area squence = 5 }
 					set_variable = { which = dev_bonus_chapter value = 13 }
 					set_variable = { which = dev_bonus_page value = 1 }
 				}
@@ -311,12 +311,12 @@ custom_text_box = {
 			}
 			effect = {
 				hidden_effect = {
-					check_area_dev = { fuya = xiyun_area squence = 1 }
-					check_area_dev = { fuya = rixi_area squence = 2 }
-					check_area_dev = { fuya = wangyueting_area squence = 3 }
-					check_area_dev = { fuya = luoyip_area squence = 4 }
-					check_area_dev = { fuya = iongsim_area squence = 5 }
-					check_area_dev = { fuya = gungi_area squence = 6 }
+					# check_area_dev = { fuya = xiyun_area squence = 1 }
+					# check_area_dev = { fuya = rixi_area squence = 2 }
+					# check_area_dev = { fuya = wangyueting_area squence = 3 }
+					# check_area_dev = { fuya = luoyip_area squence = 4 }
+					# check_area_dev = { fuya = iongsim_area squence = 5 }
+					# check_area_dev = { fuya = gungi_area squence = 6 }
 					set_variable = { which = dev_bonus_chapter value = 14 }
 					set_variable = { which = dev_bonus_page value = 1 }
 				}
@@ -359,11 +359,11 @@ custom_text_box = {
 			}
 			effect = {
 				hidden_effect = {
-					check_area_dev = { fuya = linxiandu_area squence = 1 }
-					check_area_dev = { fuya = guzhan_area squence = 2 }
-					check_area_dev = { fuya = zonglin_area squence = 3 }
-					check_area_dev = { fuya = mulim_area squence = 4 }
-					check_area_dev = { fuya = hongnguan_area squence = 5 }
+					# check_area_dev = { fuya = linxiandu_area squence = 1 }
+					# check_area_dev = { fuya = guzhan_area squence = 2 }
+					# check_area_dev = { fuya = zonglin_area squence = 3 }
+					# check_area_dev = { fuya = mulim_area squence = 4 }
+					# check_area_dev = { fuya = hongnguan_area squence = 5 }
 					set_variable = { which = dev_bonus_chapter value = 15 }
 					set_variable = { which = dev_bonus_page value = 1 }
 				}
@@ -406,12 +406,12 @@ custom_text_box = {
 			}
 			effect = {
 				hidden_effect = {
-					check_area_dev = { fuya = tiansai_area squence = 1 }
-					check_area_dev = { fuya = tonglei_area squence = 2 }
-					check_area_dev = { fuya = liuminxiang_area squence = 3 }
-					check_area_dev = { fuya = erluxi_area squence = 4 }
-					check_area_dev = { fuya = jinjiang_area squence = 5 }
-					check_area_dev = { fuya = beikyuan_area squence = 6 }
+					# check_area_dev = { fuya = tiansai_area squence = 1 }
+					# check_area_dev = { fuya = tonglei_area squence = 2 }
+					# check_area_dev = { fuya = liuminxiang_area squence = 3 }
+					# check_area_dev = { fuya = erluxi_area squence = 4 }
+					# check_area_dev = { fuya = jinjiang_area squence = 5 }
+					# check_area_dev = { fuya = beikyuan_area squence = 6 }
 					set_variable = { which = dev_bonus_chapter value = 16 }
 					set_variable = { which = dev_bonus_page value = 1 }
 				}
@@ -454,12 +454,12 @@ custom_text_box = {
 			}
 			effect = {
 				hidden_effect = {
-					check_area_dev = { fuya = fangzhucheng_area squence = 1 }
-					check_area_dev = { fuya = tianlou_area squence = 2 }
-					check_area_dev = { fuya = tianguan_area squence = 3 }
-					check_area_dev = { fuya = xintian_area squence = 4 }
-					check_area_dev = { fuya = linghui_area squence = 5 }
-					check_area_dev = { fuya = beidugang_area squence = 6 }
+					# check_area_dev = { fuya = fangzhucheng_area squence = 1 }
+					# check_area_dev = { fuya = tianlou_area squence = 2 }
+					# check_area_dev = { fuya = tianguan_area squence = 3 }
+					# check_area_dev = { fuya = xintian_area squence = 4 }
+					# check_area_dev = { fuya = linghui_area squence = 5 }
+					# check_area_dev = { fuya = beidugang_area squence = 6 }
 					set_variable = { which = dev_bonus_chapter value = 17 }
 					set_variable = { which = dev_bonus_page value = 1 }
 				}
@@ -502,10 +502,10 @@ custom_text_box = {
 			}
 			effect = {
 				hidden_effect = {
-					check_area_dev = { fuya = zhubi_area squence = 1 }
-					check_area_dev = { fuya = xvanbi_area squence = 2 }
-					check_area_dev = { fuya = jianzhong_area squence = 3 }
-					check_area_dev = { fuya = xuanbing_area squence = 4 }
+					# check_area_dev = { fuya = zhubi_area squence = 1 }
+					# check_area_dev = { fuya = xvanbi_area squence = 2 }
+					# check_area_dev = { fuya = jianzhong_area squence = 3 }
+					# check_area_dev = { fuya = xuanbing_area squence = 4 }
 					set_variable = { which = dev_bonus_chapter value = 18 }
 					set_variable = { which = dev_bonus_page value = 1 }
 				}
@@ -548,10 +548,10 @@ custom_text_box = {
 			}
 			effect = {
 				hidden_effect = {
-					check_area_dev = { fuya = hanwuguan_area squence = 1 }
-					check_area_dev = { fuya = lishu_area squence = 2 }
-					check_area_dev = { fuya = yiguan_area squence = 3 }
-					check_area_dev = { fuya = jiantsiang_area squence = 4 }
+					# check_area_dev = { fuya = hanwuguan_area squence = 1 }
+					# check_area_dev = { fuya = lishu_area squence = 2 }
+					# check_area_dev = { fuya = yiguan_area squence = 3 }
+					# check_area_dev = { fuya = jiantsiang_area squence = 4 }
 					set_variable = { which = dev_bonus_chapter value = 19 }
 					set_variable = { which = dev_bonus_page value = 1 }
 				}
@@ -594,11 +594,11 @@ custom_text_box = {
 			}
 			effect = {
 				hidden_effect = {
-					check_area_dev = { fuya = yambioka_area squence = 1 }
-					check_area_dev = { fuya = sugroltona_area squence = 2 }
-					check_area_dev = { fuya = unbeksu_area squence = 3 }
-					check_area_dev = { fuya = mogutian_area squence = 4 }
-					check_area_dev = { fuya = moryokang_area squence = 5 }
+					# check_area_dev = { fuya = yambioka_area squence = 1 }
+					# check_area_dev = { fuya = sugroltona_area squence = 2 }
+					# check_area_dev = { fuya = unbeksu_area squence = 3 }
+					# check_area_dev = { fuya = mogutian_area squence = 4 }
+					# check_area_dev = { fuya = moryokang_area squence = 5 }
 					set_variable = { which = dev_bonus_chapter value = 20 }
 					set_variable = { which = dev_bonus_page value = 1 }
 				}
@@ -708,10 +708,10 @@ custom_text_box = {
 			trigger = { hidden_trigger = { always = yes	} }
 			effect = { 
 				hidden_effect = {
-					check_area_dev = { fuya = bianfang_area squence = 1 }
-					check_area_dev = { fuya = bianyuan_area squence = 2 }
-					check_area_dev = { fuya = tunayuan_area squence = 3 }
-					check_area_dev = { fuya = tietyuan_area squence = 4 }
+					# check_area_dev = { fuya = bianfang_area squence = 1 }
+					# check_area_dev = { fuya = bianyuan_area squence = 2 }
+					# check_area_dev = { fuya = tunayuan_area squence = 3 }
+					# check_area_dev = { fuya = tietyuan_area squence = 4 }
 					set_variable = { which = dev_bonus_page value = 1 }
 				} 
 			}
@@ -956,10 +956,10 @@ custom_text_box = {
 			trigger = { hidden_trigger = { always = yes	} }
 			effect = { 
 				hidden_effect = {
-					check_area_dev = { fuya = jiangszun_area squence = 1 }
-					check_area_dev = { fuya = lamzung_area squence = 2 }
-					check_area_dev = { fuya = jyutsai_area squence = 3 }
-					check_area_dev = { fuya = tianszi_area squence = 4 }
+					# check_area_dev = { fuya = jiangszun_area squence = 1 }
+					# check_area_dev = { fuya = lamzung_area squence = 2 }
+					# check_area_dev = { fuya = jyutsai_area squence = 3 }
+					# check_area_dev = { fuya = tianszi_area squence = 4 }
 					set_variable = { which = dev_bonus_page value = 1 }
 				} 
 			}
@@ -1203,11 +1203,11 @@ custom_text_box = {
 			trigger = { hidden_trigger = { always = yes	} }
 			effect = { 
 				hidden_effect = {
-					check_area_dev = { fuya = jinqiu_area squence = 1 }
-					check_area_dev = { fuya = balrijin_area squence = 2 }
-					check_area_dev = { fuya = jingai_area squence = 3 }
-					check_area_dev = { fuya = tiaochi_area squence = 4 }
-					check_area_dev = { fuya = hubao_area squence = 5 }
+					# check_area_dev = { fuya = jinqiu_area squence = 1 }
+					# check_area_dev = { fuya = balrijin_area squence = 2 }
+					# check_area_dev = { fuya = jingai_area squence = 3 }
+					# check_area_dev = { fuya = tiaochi_area squence = 4 }
+					# check_area_dev = { fuya = hubao_area squence = 5 }
 					set_variable = { which = dev_bonus_page value = 1 }
 				} 
 			}
@@ -1500,11 +1500,11 @@ custom_text_box = {
 			trigger = { hidden_trigger = { always = yes	} }
 			effect = { 
 				hidden_effect = {
-					check_area_dev = { fuya = anjiang_area squence = 1 }
-					check_area_dev = { fuya = yanzhong_area squence = 2 }
-					check_area_dev = { fuya = linyuan_area squence = 3 }
-					check_area_dev = { fuya = yingzhen_area squence = 4 }
-					check_area_dev = { fuya = yangcheng_area squence = 5 }
+					# check_area_dev = { fuya = anjiang_area squence = 1 }
+					# check_area_dev = { fuya = yanzhong_area squence = 2 }
+					# check_area_dev = { fuya = linyuan_area squence = 3 }
+					# check_area_dev = { fuya = yingzhen_area squence = 4 }
+					# check_area_dev = { fuya = yangcheng_area squence = 5 }
 					set_variable = { which = dev_bonus_page value = 1 }
 				} 
 			}
@@ -1797,11 +1797,11 @@ custom_text_box = {
 			trigger = { hidden_trigger = { always = yes	} }
 			effect = { 
 				hidden_effect = {
-					check_area_dev = { fuya = shian_area squence = 1 }
-					check_area_dev = { fuya = yueying_area squence = 2 }
-					check_area_dev = { fuya = xiaowu_area squence = 3 }
-					check_area_dev = { fuya = hungngon_area squence = 4 }
-					check_area_dev = { fuya = wanglam_area squence = 5 }
+					# check_area_dev = { fuya = shian_area squence = 1 }
+					# check_area_dev = { fuya = yueying_area squence = 2 }
+					# check_area_dev = { fuya = xiaowu_area squence = 3 }
+					# check_area_dev = { fuya = hungngon_area squence = 4 }
+					# check_area_dev = { fuya = wanglam_area squence = 5 }
 					set_variable = { which = dev_bonus_page value = 1 }
 				} 
 			}
@@ -2094,12 +2094,12 @@ custom_text_box = {
 			trigger = { hidden_trigger = { always = yes	} }
 			effect = { 
 				hidden_effect = {
-					check_area_dev = { fuya = xiyun_area squence = 1 }
-					check_area_dev = { fuya = rixi_area squence = 2 }
-					check_area_dev = { fuya = wangyueting_area squence = 3 }
-					check_area_dev = { fuya = luoyip_area squence = 4 }
-					check_area_dev = { fuya = iongsim_area squence = 5 }
-					check_area_dev = { fuya = gungi_area squence = 6 }
+					# check_area_dev = { fuya = xiyun_area squence = 1 }
+					# check_area_dev = { fuya = rixi_area squence = 2 }
+					# check_area_dev = { fuya = wangyueting_area squence = 3 }
+					# check_area_dev = { fuya = luoyip_area squence = 4 }
+					# check_area_dev = { fuya = iongsim_area squence = 5 }
+					# check_area_dev = { fuya = gungi_area squence = 6 }
 					set_variable = { which = dev_bonus_page value = 1 }
 				} 
 			}
@@ -2441,11 +2441,11 @@ custom_text_box = {
 			trigger = { hidden_trigger = { always = yes	} }
 			effect = { 
 				hidden_effect = {
-					check_area_dev = { fuya = linxiandu_area squence = 1 }
-					check_area_dev = { fuya = guzhan_area squence = 2 }
-					check_area_dev = { fuya = zonglin_area squence = 3 }
-					check_area_dev = { fuya = mulim_area squence = 4 }
-					check_area_dev = { fuya = hongnguan_area squence = 5 }
+					# check_area_dev = { fuya = linxiandu_area squence = 1 }
+					# check_area_dev = { fuya = guzhan_area squence = 2 }
+					# check_area_dev = { fuya = zonglin_area squence = 3 }
+					# check_area_dev = { fuya = mulim_area squence = 4 }
+					# check_area_dev = { fuya = hongnguan_area squence = 5 }
 					set_variable = { which = dev_bonus_page value = 1 }
 				} 
 			}
@@ -2738,12 +2738,12 @@ custom_text_box = {
 			trigger = { hidden_trigger = { always = yes	} }
 			effect = { 
 				hidden_effect = {
-					check_area_dev = { fuya = tiansai_area squence = 1 }
-					check_area_dev = { fuya = tonglei_area squence = 2 }
-					check_area_dev = { fuya = liuminxiang_area squence = 3 }
-					check_area_dev = { fuya = erluxi_area squence = 4 }
-					check_area_dev = { fuya = jinjiang_area squence = 5 }
-					check_area_dev = { fuya = beikyuan_area squence = 6 }
+					# check_area_dev = { fuya = tiansai_area squence = 1 }
+					# check_area_dev = { fuya = tonglei_area squence = 2 }
+					# check_area_dev = { fuya = liuminxiang_area squence = 3 }
+					# check_area_dev = { fuya = erluxi_area squence = 4 }
+					# check_area_dev = { fuya = jinjiang_area squence = 5 }
+					# check_area_dev = { fuya = beikyuan_area squence = 6 }
 					set_variable = { which = dev_bonus_page value = 1 }
 				} 
 			}
@@ -3085,12 +3085,12 @@ custom_text_box = {
 			trigger = { hidden_trigger = { always = yes	} }
 			effect = { 
 				hidden_effect = {
-					check_area_dev = { fuya = fangzhucheng_area squence = 1 }
-					check_area_dev = { fuya = tianlou_area squence = 2 }
-					check_area_dev = { fuya = tianguan_area squence = 3 }
-					check_area_dev = { fuya = xintian_area squence = 4 }
-					check_area_dev = { fuya = linghui_area squence = 5 }
-					check_area_dev = { fuya = beidugang_area squence = 6 }
+					# check_area_dev = { fuya = fangzhucheng_area squence = 1 }
+					# check_area_dev = { fuya = tianlou_area squence = 2 }
+					# check_area_dev = { fuya = tianguan_area squence = 3 }
+					# check_area_dev = { fuya = xintian_area squence = 4 }
+					# check_area_dev = { fuya = linghui_area squence = 5 }
+					# check_area_dev = { fuya = beidugang_area squence = 6 }
 					set_variable = { which = dev_bonus_page value = 1 }
 				} 
 			}
@@ -3432,10 +3432,10 @@ custom_text_box = {
 			trigger = { hidden_trigger = { always = yes	} }
 			effect = { 
 				hidden_effect = {
-					check_area_dev = { fuya = zhubi_area squence = 1 }
-					check_area_dev = { fuya = xvanbi_area squence = 2 }
-					check_area_dev = { fuya = jianzhong_area squence = 3 }
-					check_area_dev = { fuya = xuanbing_area squence = 4 }
+					# check_area_dev = { fuya = zhubi_area squence = 1 }
+					# check_area_dev = { fuya = xvanbi_area squence = 2 }
+					# check_area_dev = { fuya = jianzhong_area squence = 3 }
+					# check_area_dev = { fuya = xuanbing_area squence = 4 }
 					set_variable = { which = dev_bonus_page value = 1 }
 				} 
 			}
@@ -3679,10 +3679,10 @@ custom_text_box = {
 			trigger = { hidden_trigger = { always = yes	} }
 			effect = { 
 				hidden_effect = {
-					check_area_dev = { fuya = hanwuguan_area squence = 1 }
-					check_area_dev = { fuya = lishu_area squence = 2 }
-					check_area_dev = { fuya = yiguan_area squence = 3 }
-					check_area_dev = { fuya = jiantsiang_area squence = 4 }
+					# check_area_dev = { fuya = hanwuguan_area squence = 1 }
+					# check_area_dev = { fuya = lishu_area squence = 2 }
+					# check_area_dev = { fuya = yiguan_area squence = 3 }
+					# check_area_dev = { fuya = jiantsiang_area squence = 4 }
 					set_variable = { which = dev_bonus_page value = 1 }
 				} 
 			}
@@ -3926,11 +3926,11 @@ custom_text_box = {
 			trigger = { hidden_trigger = { always = yes	} }
 			effect = { 
 				hidden_effect = {
-					check_area_dev = { fuya = yambioka_area squence = 1 }
-					check_area_dev = { fuya = sugroltona_area squence = 2 }
-					check_area_dev = { fuya = unbeksu_area squence = 3 }
-					check_area_dev = { fuya = mogutian_area squence = 4 }
-					check_area_dev = { fuya = moryokang_area squence = 5 }
+					# check_area_dev = { fuya = yambioka_area squence = 1 }
+					# check_area_dev = { fuya = sugroltona_area squence = 2 }
+					# check_area_dev = { fuya = unbeksu_area squence = 3 }
+					# check_area_dev = { fuya = mogutian_area squence = 4 }
+					# check_area_dev = { fuya = moryokang_area squence = 5 }
 					set_variable = { which = dev_bonus_page value = 1 }
 				} 
 			}

@@ -5244,7 +5244,7 @@ prov4611_infrastructure = { start = 4611
 # 		}
 # 	}
 # }
-# prov_infrastructure = { start = 
+# prov_infrastructure = { start = xxxx
 	
 # 	date = 1820.10.10
 # 	time = { months = 1 }

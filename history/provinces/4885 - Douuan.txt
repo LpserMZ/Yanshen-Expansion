@@ -1,0 +1,14 @@
+owner = Y20
+controller = Y20
+add_core = Y20
+add_core = Y21
+culture = naamjyut
+religion = accretive_path
+base_tax = 3
+base_production = 2
+base_manpower = 2
+trade_goods = fish
+is_city = yes
+add_nationalism = 10# Doesn't work
+set_local_autonomy = 50
+add_unrest = 5.17

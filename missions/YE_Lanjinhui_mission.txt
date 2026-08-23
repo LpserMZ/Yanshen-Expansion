@@ -347,7 +347,7 @@ YE_lanjin_5 = {
 					type = all
 					add_permanent_claim = ROOT 
 				}
-				lj6_area = {
+				jx9_area = {
 					type = all
 					add_permanent_claim = ROOT 
 				}
@@ -364,7 +364,7 @@ YE_lanjin_5 = {
 					type = all
 					add_permanent_claim = ROOT 
 				}
-				lj6_area = {
+				jx9_area = {
 					type = all
 					add_permanent_claim = ROOT 
 				}

@@ -1,7 +1,7 @@
 owner = Y25
 controller = Y25
 add_core = Y25
-culture = gangim
+culture = jinxun_culture
 religion = high_philosophy
 base_tax = 4
 base_production = 3

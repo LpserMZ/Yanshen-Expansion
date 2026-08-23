@@ -138,18 +138,6 @@ estate_adventurers = {
 
 	
 	# Custom Names
-	custom_name = { # 游侠儿
-		desc = estate_youxiaer
-		trigger = {
-			culture_group = yan
-		}
-	}
-	custom_desc = { # 游侠儿
-		desc = estate_youxiaer_desc
-		trigger = {
-			culture_group = yan
-		}
-	}
 
 	custom_name = {
 		desc = estate_relic_hunters
@@ -333,6 +321,19 @@ estate_adventurers = {
 				tag = J97
 				tag = J98
 			}
+		}
+	}
+
+	custom_name = { # 游侠儿 # 烟
+		desc = estate_youxiaer
+		trigger = {
+			culture_group = yan
+		}
+	}
+	custom_desc = { # 游侠儿 # 烟
+		desc = estate_youxiaer_desc
+		trigger = {
+			culture_group = yan
 		}
 	}
 

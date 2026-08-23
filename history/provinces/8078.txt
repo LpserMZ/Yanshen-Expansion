@@ -1,6 +1,6 @@
 add_core = Y21
 owner = Y21
-culture = gangim
+culture = naamjyut
 religion = accretive_path
 controller = Y21
 is_city = no

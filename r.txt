@@ -1,127 +1,144 @@
 every_country = {
+	# limit= {
+
+	# 	capital_scope = {
+	# 		# continent = europe
+	# 		# continent = africa
+	# 		# continent = asia
+	# 		OR = {
+				
+	# 			continent = africa
+	# 			continent = north_america
+	# 			continent = south_america
+	# 		}
+	# 		NOT = { superregion = bulwar_superregion }
+	# 		NOT = { superregion = north_salahad_superregion }
+			
+	# 	}
+	# }
 	disband_all_units = yes
 	remove_country = THIS
 }
-if = {
-	limit = {
-		always = no
-	}
-	marutha_spirit_area = {
-		add_core = A01
-		cede_province = A01
-	}
-	dhenbasana_spirit_area = {
-		add_core = A02
-		cede_province = A02
-	}
+# if = {
+# 	limit = {
+# 		always = no
+# 	}
+# 	marutha_spirit_area = {
+# 		add_core = A01
+# 		cede_province = A01
+# 	}
+# 	dhenbasana_spirit_area = {
+# 		add_core = A02
+# 		cede_province = A02
+# 	}
 
-	kharunyana_spirit_area = {
-		add_core = A03
-		cede_province = A03
-	}
+# 	kharunyana_spirit_area = {
+# 		add_core = A03
+# 		cede_province = A03
+# 	}
 
-	hengdu_bowu_spirit_area = {
-		add_core = A04
-		cede_province = A04
-	}
+# 	hengdu_bowu_spirit_area = {
+# 		add_core = A04
+# 		cede_province = A04
+# 	}
 
-	telebei_spirit_area = {
-		add_core = A05
-		cede_province = A05
-	}
+# 	telebei_spirit_area = {
+# 		add_core = A05
+# 		cede_province = A05
+# 	}
 
-	hukai_spirit_area = {
-		add_core = A06
-		cede_province = A06
-	}
+# 	hukai_spirit_area = {
+# 		add_core = A06
+# 		cede_province = A06
+# 	}
 
-	hukai_telebei_spirit_area = {
-		add_core = A07
-		cede_province = A07
-	}
+# 	hukai_telebei_spirit_area = {
+# 		add_core = A07
+# 		cede_province = A07
+# 	}
 
-	phokhao_spirit_area = {
-		add_core = A08
-		cede_province = A08
-	}
+# 	phokhao_spirit_area = {
+# 		add_core = A08
+# 		cede_province = A08
+# 	}
 
-	gehet_ketine_spirit_area = {
-		add_core = A09
-		cede_province = A09
-	}
+# 	gehet_ketine_spirit_area = {
+# 		add_core = A09
+# 		cede_province = A09
+# 	}
 
-	lupulan_spirit_area = {
-		add_core = A10
-		cede_province = A10
-	}
+# 	lupulan_spirit_area = {
+# 		add_core = A10
+# 		cede_province = A10
+# 	}
 
-	cinulau_spirit_area = {
-		add_core = A11
-		cede_province = A11
-	}
+# 	cinulau_spirit_area = {
+# 		add_core = A11
+# 		cede_province = A11
+# 	}
 
-	yanhe_spirit_area = {
-		add_core = A12
-		cede_province = A12
-	}
+# 	yanhe_spirit_area = {
+# 		add_core = A12
+# 		cede_province = A12
+# 	}
 
-	hokuma_spirit_area = {
-		add_core = A13
-		cede_province = A13
-	}
+# 	hokuma_spirit_area = {
+# 		add_core = A13
+# 		cede_province = A13
+# 	}
 
-	huszien_spirit_area = {
-		add_core = A14
-		cede_province = A14
-	}	
-}
+# 	huszien_spirit_area = {
+# 		add_core = A14
+# 		cede_province = A14
+# 	}	
+# }
 
-if = {
-	limit = {
-		always = no
-	}
-	dhurasidheni_temple_area = { cede_province = B01 }
-	babhagama_temple_area = { cede_province = B02 }
-	sharaja_temple_area = { cede_province = B03 }
-	sighajisbid_temple_area = { cede_province = B04 }
-	dhenijansar_temple_area = { cede_province = B05 }
-	mindanan_temple_area = { cede_province = B06 }
-	sardika_temple_area = { cede_province = B07 }
-	ghundagar_temple_area = { cede_province = B08 }
-	sramaya_temple_area = { cede_province = B09 }
-	maharaaja_temple_area = { cede_province = B10 }
-	sarnavan_temple_area = { cede_province = B11 }
-	tughayasa_temple_area = { cede_province = B12 }
-	sarilavhan_temple_area = { cede_province = B13 }
-	khadisrapur_temple_area = { cede_province = B14 }
-	ghatasak_temple_area = { cede_province = B15 }
-	sir_temple_area = { cede_province = B16 }
-	prukakhin_temple_area = { cede_province = B17 }
-	khabtei_temple_area = { cede_province = B18 }
-	mahoang_temple_area = { cede_province = B19 }
-	lapnam_temple_area = { cede_province = B20 }
-	khirnadhiman_temple_area = { cede_province = B21 }
-	jiangshengdian_temple_area = { cede_province = B22 }
-	samabok_temple_area = { cede_province = B23 }
-	zyuhung_temple_area = { cede_province = B24 }
-	luoyi_temple_area = { cede_province = B25 }
-	yanchung_temple_area = { cede_province = B26 }
-	lanjincun_temple_area = { cede_province = B27 }
-	tianlou_temple_area = { cede_province = B28 }
-	damaogong_temple_area = { cede_province = B29 }
-	jondang_temple_area = { cede_province = B30 }
-	keoaden_temple_area = { cede_province = B31 }
-	brenulan_temple_area = { cede_province = B32 }
-	phangban_temple_area = { cede_province = B33 }
-	shanyutian_temple_area = { cede_province = B34 }
-}
-if = {
-	limit = {
-		always = no
-	}
-	beikling_homeland_provinces = { cede_province = C01 }
-	wall_of_yanshen = { cede_province = C02 }
-}
+# if = {
+# 	limit = {
+# 		always = no
+# 	}
+# 	dhurasidheni_temple_area = { cede_province = B01 }
+# 	babhagama_temple_area = { cede_province = B02 }
+# 	sharaja_temple_area = { cede_province = B03 }
+# 	sighajisbid_temple_area = { cede_province = B04 }
+# 	dhenijansar_temple_area = { cede_province = B05 }
+# 	mindanan_temple_area = { cede_province = B06 }
+# 	sardika_temple_area = { cede_province = B07 }
+# 	ghundagar_temple_area = { cede_province = B08 }
+# 	sramaya_temple_area = { cede_province = B09 }
+# 	maharaaja_temple_area = { cede_province = B10 }
+# 	sarnavan_temple_area = { cede_province = B11 }
+# 	tughayasa_temple_area = { cede_province = B12 }
+# 	sarilavhan_temple_area = { cede_province = B13 }
+# 	khadisrapur_temple_area = { cede_province = B14 }
+# 	ghatasak_temple_area = { cede_province = B15 }
+# 	sir_temple_area = { cede_province = B16 }
+# 	prukakhin_temple_area = { cede_province = B17 }
+# 	khabtei_temple_area = { cede_province = B18 }
+# 	mahoang_temple_area = { cede_province = B19 }
+# 	lapnam_temple_area = { cede_province = B20 }
+# 	khirnadhiman_temple_area = { cede_province = B21 }
+# 	jiangshengdian_temple_area = { cede_province = B22 }
+# 	samabok_temple_area = { cede_province = B23 }
+# 	zyuhung_temple_area = { cede_province = B24 }
+# 	luoyi_temple_area = { cede_province = B25 }
+# 	yanchung_temple_area = { cede_province = B26 }
+# 	lanjincun_temple_area = { cede_province = B27 }
+# 	tianlou_temple_area = { cede_province = B28 }
+# 	damaogong_temple_area = { cede_province = B29 }
+# 	jondang_temple_area = { cede_province = B30 }
+# 	keoaden_temple_area = { cede_province = B31 }
+# 	brenulan_temple_area = { cede_province = B32 }
+# 	phangban_temple_area = { cede_province = B33 }
+# 	shanyutian_temple_area = { cede_province = B34 }
+# }
+# if = {
+# 	limit = {
+# 		always = no
+# 	}
+# 	beikling_homeland_provinces = { cede_province = C01 }
+# 	wall_of_yanshen = { cede_province = C02 }
+# }
 
 # set_variable = { which = prov_yannification value = 10 }
 # change_variable = { which = prov_yannification value = 10 }

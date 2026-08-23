@@ -1,7 +1,7 @@
 owner = Y21
 controller = Y21
 add_core = Y21
-culture = gangim
+culture = naamjyut
 religion = accretive_path
 base_tax = 2
 base_production = 3

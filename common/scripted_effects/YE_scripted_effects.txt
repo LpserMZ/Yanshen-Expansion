@@ -519,15 +519,17 @@ bianfang_missions_update_modifier_inexorability_effect = {
 }
 
 YE_add_special_prov_modifier = {
-	4859 =  { add_permanent_province_modifier = { name = yanzhong_bofan_in_yanzhong duration = -1 } }
-	8289 =  { add_permanent_province_modifier = { name = yanzhong_bofan_in_bolu duration = -1 } }
-	8088 =  { add_permanent_province_modifier = { name = xvanzhu duration = -1 } }
-	8090 =  { add_permanent_province_modifier = { name = lingshi_in_yanluo duration = -1 } }
-	4949 =  { add_permanent_province_modifier = { name = driving_loong_and_commanding_feng duration = -1 } }
-	4893 =  { add_permanent_province_modifier = { name = xiangtan_pearl duration = -1 } }
-	8033 =  { add_permanent_province_modifier = { name = white_lord_altar duration = -1 } }
+	# 4859 =  { add_permanent_province_modifier = { name = yanzhong_bofan_in_yanzhong duration = -1 } }
+	# 8289 =  { add_permanent_province_modifier = { name = yanzhong_bofan_in_bolu duration = -1 } }
+	# 8088 =  { add_permanent_province_modifier = { name = xvanzhu duration = -1 } }
+	# 8090 =  { add_permanent_province_modifier = { name = lingshi_in_yanluo duration = -1 } }
+	# 4949 =  { add_permanent_province_modifier = { name = driving_loong_and_commanding_feng duration = -1 } }
+	# 4893 =  { add_permanent_province_modifier = { name = xiangtan_pearl duration = -1 } }
+	# 8033 =  { add_permanent_province_modifier = { name = white_lord_altar duration = -1 } }
 }
 
+
+# 地宫
 YE_digong_initialize = {
 	#当前坐标
 	set_variable = { which = digong_loc_x value = 0 }

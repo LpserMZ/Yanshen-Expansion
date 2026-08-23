@@ -3,6 +3,7 @@
  jianwu:0 "ZWfk"
  jvanfa_isles:0 "wSÑS²›S"
  xianzhong_node:0 "FyÈu"
+ moling_node:0 "T›­S"
 
  trade_company_qingjiang:0 "nmlyr¸‹8f:S"
  TRADE_COMPANY_QINGJIANG_Root_GetName:0 "[Root.GetAdjective]nmllQøS"
@@ -19,3 +20,7 @@
  trade_company_xianzhong_node:0 "FyÈuyr¸‹8f:S"
  TRADE_COMPANY_XIANZHONG_NODE_Root_GetName:0 "[Root.GetAdjective]FyÈulQøS"
  TRADE_COMPANY_XIANZHONG_NODE_Xianzhong_Node_Trade_Company:0 "FyÈu8flQøS"
+
+ trade_company_moling_node:0 "T›­Syr¸‹8f:S"
+ TRADE_COMPANY_MOLING_NODE_Root_GetName:0 "[Root.GetAdjective]T›­SlQøS"
+ TRADE_COMPANY_MOLING_NODE_Moling_Node_Trade_Company:0 "T›­S8flQøS"

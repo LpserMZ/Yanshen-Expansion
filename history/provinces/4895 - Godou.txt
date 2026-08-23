@@ -1,7 +1,7 @@
 owner = Y27
 controller = Y27
 add_core = Y27
-culture = gangim
+culture = jinxun_culture
 religion = accretive_path
 base_tax = 2
 base_production = 3

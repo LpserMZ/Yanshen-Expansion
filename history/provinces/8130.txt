@@ -1,9 +1,9 @@
 add_core = Y19
 owner = Y19
-culture = jiangszun
+culture = jinxun_culture
 religion = accretive_path
 controller = Y19
-is_city = no
+is_city = yes
 trade_goods = grain
 base_tax = 2
 base_manpower = 2

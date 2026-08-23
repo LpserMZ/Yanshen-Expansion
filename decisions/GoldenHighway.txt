@@ -690,7 +690,7 @@ country_decisions = {
 					superregion = shenzhou_superregion
 				}
 			}
-			has_country_flag = azkare_shamakhad_highway_flag
+			# has_country_flag = azkare_shamakhad_highway_flag
 			NOT = { has_global_flag = golden_highway_shamakhad_started }
 			golden_highway_shamakhad = {
 				country_or_non_sovereign_subject_holds = ROOT

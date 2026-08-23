@@ -7,9 +7,10 @@ primary_culture = gangim
 religion = accretive_path
 religious_school = lingjue_school
 technology_group = tech_halessi
-
 capital = 4893
 historical_rival = Y24 #Luoyi
+
+add_accepted_culture = naamjyut
 set_estate_privilege = estate_church_guaranteed_autonomy
 
 1000.1.1 = { set_estate_privilege = estate_mages_organization_state }

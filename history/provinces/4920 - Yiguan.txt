@@ -1,0 +1,14 @@
+owner = Y16
+controller = Y16
+add_core = Y16
+culture = jianwu_culture
+religion = high_philosophy
+base_tax = 3
+base_production = 5
+base_manpower = 4
+trade_goods = grain
+is_city = yes
+add_permanent_province_modifier = { 
+	name = harimari_minority_integrated_large
+	duration = -1
+}

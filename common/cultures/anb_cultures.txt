@@ -6301,6 +6301,12 @@ yan = {
 	yangzhou = {}
 	xiangyang = {}
 	haijin = {}
+
+	yinqvan_culture = {}
+	jianwu_culture = {}
+	jinxun_culture = {}
+	tianlou_culture = {}
+	
 	dynasty_names = {
 		Zhu Wu Geng Shang Zheng Zhao Li Shi Liu Guo Yang Wang Qian Ma Meng Gao 
 		Chen Sun Sima Cao Xiao Qi Zu Zhou Huang Bai Qiu Tang Lu	Xu Chang 

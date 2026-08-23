@@ -1,7 +1,7 @@
 owner = Y25
 controller = Y25
 add_core = Y25
-culture = gangim
+culture = yinqvan_culture
 religion = accretive_path
 base_tax = 3
 base_production = 3

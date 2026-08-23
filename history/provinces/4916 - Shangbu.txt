@@ -1,7 +1,7 @@
 owner = Y14
 controller = Y14
 add_core = Y14
-culture = jiangyang
+culture = jianwu_culture
 religion = accretive_path
 base_tax = 4
 base_production = 4

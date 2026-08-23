@@ -293,6 +293,7 @@ YE_bianfang_2 = {
 			balrijin_area = {
 				add_permanent_claim = ROOT
 			}
+			country_event = { id = bianfang.15 }
 			bianfang_missions_update_modifier_inexorability_effect = yes
 			custom_tooltip = YE_bianfang_escalate_buff_inexorability_tooltip
 		} 
@@ -731,7 +732,7 @@ YE_bianfang_5 = {
 				xiyun_area = { add_permanent_claim = ROOT }
 				luoyip_area = { add_permanent_claim = ROOT }
 				lj1_area = { add_permanent_claim = ROOT }
-				lj2_area = { add_permanent_claim = ROOT }
+				zy7_area = { add_permanent_claim = ROOT }
 				lj3_area = { add_permanent_claim = ROOT }
 				lj4_area = { add_permanent_claim = ROOT }
 			}
@@ -1325,7 +1326,7 @@ YE_dahui_4 = {
 					remove_province_triggered_modifier = YE_Y01_special_buff
 				}
 			}
-
+			country_event = { id = bianfang.200 }
 			custom_tooltip = YE_dahui_4_7_tooltip
 		} 
 	}

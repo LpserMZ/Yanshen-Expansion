@@ -1,6 +1,6 @@
 add_core = Y03
 owner = Y03
-culture = serene_harimari
+culture = beikling
 religion = high_philosophy
 controller = Y03
 is_city = no

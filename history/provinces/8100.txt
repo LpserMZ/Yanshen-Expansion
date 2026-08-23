@@ -1,6 +1,6 @@
 add_core = Y10
 owner = Y10
-culture = jiangszun
+culture = beikling
 religion = devouring_path
 controller = Y10
 is_city = no

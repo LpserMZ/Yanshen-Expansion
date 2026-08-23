@@ -8,6 +8,7 @@ religion = accretive_path
 religious_school = lingjue_school
 technology_group = tech_halessi
 capital = 4914
+add_accepted_culture = jianwu_culture
 
 1000.1.1 = { set_estate_privilege = estate_mages_organization_state }
 

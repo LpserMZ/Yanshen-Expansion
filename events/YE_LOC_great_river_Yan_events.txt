@@ -910,9 +910,7 @@ country_event = { #19 目的地
 				}
 				NOT = { 
 					owner = {
-						PREV = {
-							truce_with = PREV
-						}
+						truce_with = ROOT
 					} 
 				}
 			}
@@ -932,9 +930,7 @@ country_event = { #19 目的地
 					}
 					NOT = { 
 						owner = {
-							PREV = {
-								truce_with = PREV
-							}
+							truce_with = ROOT
 						} 
 					}
 				}
@@ -957,9 +953,7 @@ country_event = { #19 目的地
 				}
 				NOT = { 
 					owner = {
-						PREV = {
-							truce_with = PREV
-						}
+						truce_with = ROOT
 					} 
 				}
 			}
@@ -978,9 +972,7 @@ country_event = { #19 目的地
 					}
 					NOT = { 
 						owner = {
-							PREV = {
-								truce_with = PREV
-							}
+							truce_with = ROOT
 						} 
 					}
 				}
@@ -1002,9 +994,7 @@ country_event = { #19 目的地
 				}
 				NOT = { 
 					owner = {
-						PREV = {
-							truce_with = PREV
-						}
+						truce_with = ROOT
 					} 
 				}
 			}
@@ -1023,9 +1013,7 @@ country_event = { #19 目的地
 					}
 					NOT = { 
 						owner = {
-							PREV = {
-								truce_with = PREV
-							}
+							truce_with = ROOT
 						} 
 					}
 				}
@@ -1047,9 +1035,7 @@ country_event = { #19 目的地
 				}
 				NOT = { 
 					owner = {
-						PREV = {
-							truce_with = PREV
-						}
+						truce_with = ROOT
 					} 
 				}
 			}
@@ -1069,9 +1055,7 @@ country_event = { #19 目的地
 					}
 					NOT = { 
 						owner = {
-							PREV = {
-								truce_with = PREV
-							}
+							truce_with = ROOT
 						} 
 					}
 				}
