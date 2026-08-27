@@ -14,6 +14,7 @@
  aPUI_tyrant_and_yannification_grant_jade_seal_privilege_tooltip:0 "§YˆcˆN‰sàzyrCg§!"
  aPUI_tyrant_and_yannification_conscript_people_tooltip:0 "§Y:VVîXN§!"
  aPUI_tyrant_and_yannification_corvee_labour_tooltip:0 "§YVÑS­VyV§!"
+ aPUI_tyrant_and_yannification_conscript_people_get_manpower_tooltip:0 "ÎN§TSVMR:SßW§!·ƒ—V§T4000§!TYuQXTÿæSY:SßW…Q§TÏk*NwýN§!ýOÐc›O§T1000§!TYuQXT."
 
  aPUI_tyrant_and_yannification_promote_intermarriage_tooltip:0 "§YÃOÛZZ§!"
  aPUI_tyrant_and_yannification_attract_settlers_tooltip:0 "§Y8TVûyl§!"
@@ -29,3 +30,12 @@
  start_yannification_in_area_script_effect_tooltip:0 ":SßW…QNb	g&rTNðagöN„vwýNÿ\n   S §YßpSÛUS§! „v<P¾‹n:N0\n   ¾‹nwýNhÆ‹ÿ'§YòTV/TßpS§!' \n\n§Y[Root.GetAreaName]§!:SßW·ƒ—V0§YßpSÛLˆ-N§!0cíu0R8nbÓumgÿÙuˆN‚YNHeœgÿ\n,g0WÑSUSb,gÿ§G-10.0%§!\nwýNÏkt^ßpSÛUSÿ§G+1.5§!"
 
  aPUI_tyrant_and_yannification_yannification_progress:0 "[Root.prov_yannification.GetValue]/100"
+ 
+ yannification_action_cooldown_year_upgrade_to_2_tooltip:0 "ßpSLˆ¨R§T·QtSöeô•§!S)íw0R§T2t^§!0"
+ yannification_action_cooldown_year_upgrade_to_3_tooltip:0 "ßpSLˆ¨R§T·QtSöeô•§!S)íw0R§T3t^§!0"
+ yannification_action_cooldown_year_upgrade_to_4_tooltip:0 "ßpSLˆ¨R§T·QtSöeô•§!S)íw0R§T4t^§!0"
+
+ yannification_yearly_progress_flag_upgrade_to_5_tooltip:0 "wýNîOck0§TßpSÛLˆ-N§!0Ðc›O„vwýN§TÏkt^ßpSÛUS§!žX R0R§T3.0§!"
+ yannification_yearly_progress_flag_upgrade_to_4_tooltip:0 "wýNîOck0§TßpSÛLˆ-N§!0Ðc›O„vwýN§TÏkt^ßpSÛUS§!žX R0R§T2.5§!"
+ yannification_yearly_progress_flag_upgrade_to_3_tooltip:0 "wýNîOck0§TßpSÛLˆ-N§!0Ðc›O„vwýN§TÏkt^ßpSÛUS§!žX R0R§T2.0§!"
+ yannification_yearly_progress_flag_upgrade_to_2_tooltip:0 "wýNîOck0§TßpSÛLˆ-N§!0Ðc›O„vwýN§TÏkt^ßpSÛUS§!žX R0R§T1.75§!"

@@ -1,4 +1,14 @@
 ﻿l_english:
+ YE_jinjian_rpblc_5_1_tooltip:0 "§TØš¦^’NáO§!/f:VSTwßv„vÅV‰agöN,Q RKN§TpeASt^§!„vßv¦u.Oßu§Tb§!upImØšHe„v§TY²N§!Kbµk,®‹OÅV6q/ecôfÛNek„vßv¦u0"
+ YE_jinjian_rpblc_5_2_peace_tooltip:0 "§TÇ²N‹Y–ÉlŒRbûN¡RÿHeœg‚YNÿ§!\nã‰•°e®‹Hh0Ý„þTO„vÐrÙN®‹XT00\n§TØš¦^’NáO§!/f:VSTwßv„vÅV‰agöN,Q RKN§TpeASt^§!„vßv¦u.Oßu§Tb§!upImØšHe„v§TY²N§!Kbµk,®‹OÅV6q/ecôfÛNek„vßv¦u0"
+ YE_jinjian_rpblc_5_2_spy_tooltip:0 "§TÇÐc2––ÉlŒRbûN¡RÿHeœg‚YNÿ§!\n"
+ YE_jinjian_rpblc_5_2_preview_tooltip:0 "§Tå‚Ç²N‹Y–ÉlŒRbûN¡RÿRïS·ƒ—VÐrÙN(W…Q?e0Y²NN„v/ecÿuó	g^gú^Ëzôf'tÆR„vsQû|0\nå‚ÇÐc2––ÉlŒRbûN¡RÿRïS·ƒ—Vb‰NPãSv^—V0R0ëXuQípÅ`0„v8lENžX•îOck0§!"
+
+ YE_jinjian_rpblc_4_1_trigger_tooltip:0 "(W®‹OÇ3/k®‹Hh0JR1Vçe5Ïe0"
+ YE_jinjian_rpblc_3_2_tooltip:0 "Nb	gåb	g®‹O-^MO„vwýNýS·ƒ—V1¹púWNxz6e01¹púWNxuµN01¹púWNxºN›R"
+ YE_jinjian_rpblc_5_3_tooltip:0 "this is tooltip"
+
+
  YE_lanjin_3_2_tooltip:0 "Nb	gåb	g®‹O-^MO„vwýNýS·ƒ—V1¹púWNxz6e01¹púWNxuµN01¹púWNxºN›R"
  YE_lanjin_1_3_tooltip:0 "‚YœgF–›Q.OßuŒT›Q–ípÅ`Töeán³agöNÿR0Äuú^LwN›Q–0„v	gHeöeô•Sö^•0R15t^ÿ&TR	gHeöeô•:N10t^0"
  YE_lanjin_5_3_trigger_tooltip:0 "(W®‹OÇ†N0Äuú^åTzèÕlHh0"

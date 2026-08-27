@@ -282,7 +282,43 @@ on_yearly_pulse = {
 				has_province_flag = prov_yannification_flag # 无法检测has_province_modifier = yannification_modifier 
 				NOT = { culture_group = yan }
 			}
-			change_variable = { which = prov_yannification value = 1.5 }
+
+			if = {
+				limit = {
+					owner = {
+						has_country_flag = yearly_yannification_progress_rank_5_flag
+					}
+				}
+				change_variable = { which = prov_yannification value = 3.0 }
+			}
+			else_if = {
+				limit = {
+					owner = {
+						has_country_flag = yearly_yannification_progress_rank_4_flag
+					}
+				}
+				change_variable = { which = prov_yannification value = 2.5 }
+			}
+			else_if = {
+				limit = {
+					owner = {
+						has_country_flag = yearly_yannification_progress_rank_3_flag
+					}
+				}
+				change_variable = { which = prov_yannification value = 2.0 }
+			}
+			else_if = {
+				limit = {
+					owner = {
+						has_country_flag = yearly_yannification_progress_rank_2_flag
+					}
+				}
+				change_variable = { which = prov_yannification value = 1.75 }
+			}
+			else = {
+				change_variable = { which = prov_yannification value = 1.5 }
+			}
+			
 			if = {
 				limit = {
 					check_variable = { which = prov_yannification_intermarriage_years value = 0.1 }

@@ -380,6 +380,95 @@ YE_yanification_change_culture = {
 		change_culture = guyan
 	}
 }
+yannification_cooldown_flag_upgrade_effect = {
+	if = {
+		limit = {
+			has_country_flag = yannification_action_cooldown_year_3_flag
+		}
+		custom_tooltip = yannification_action_cooldown_year_upgrade_to_2_tooltip
+		clr_country_flag = yannification_action_cooldown_year_3_flag
+		set_country_flag = yannification_action_cooldown_year_2_flag
+	}
+	else_if = {
+		limit = {
+			has_country_flag = yannification_action_cooldown_year_4_flag
+		}
+		custom_tooltip = yannification_action_cooldown_year_upgrade_to_3_tooltip
+		clr_country_flag = yannification_action_cooldown_year_4_flag
+		set_country_flag = yannification_action_cooldown_year_3_flag
+	}
+	else = {
+		custom_tooltip = yannification_action_cooldown_year_upgrade_to_4_tooltip
+		set_country_flag = yannification_action_cooldown_year_4_flag
+	}
+}
+yannification_yearly_progress_flag_upgrade_effect = {
+	if = {
+		limit = {
+			has_country_flag = yearly_yannification_progress_rank_4_flag
+		}
+		custom_tooltip = yannification_yearly_progress_flag_upgrade_to_5_tooltip
+		clr_country_flag = yearly_yannification_progress_rank_4_flag
+		set_country_flag = yearly_yannification_progress_rank_5_flag
+	}
+	else_if = {
+		limit = {
+			has_country_flag = yearly_yannification_progress_rank_3_flag
+		}
+		custom_tooltip = yannification_yearly_progress_flag_upgrade_to_4_tooltip
+		clr_country_flag = yearly_yannification_progress_rank_3_flag
+		set_country_flag = yearly_yannification_progress_rank_4_flag
+	}
+	else_if = {
+		limit = {
+			has_country_flag = yearly_yannification_progress_rank_2_flag
+		}
+		custom_tooltip = yannification_yearly_progress_flag_upgrade_to_3_tooltip
+		clr_country_flag = yearly_yannification_progress_rank_2_flag
+		set_country_flag = yearly_yannification_progress_rank_3_flag
+	}
+	else = {
+		custom_tooltip = yannification_yearly_progress_flag_upgrade_to_2_tooltip
+		set_country_flag = yearly_yannification_progress_rank_2_flag
+	}
+}
+
+add_yannification_cooldown_effect = {
+	if = {
+		limit = {
+			has_country_flag = yannification_action_cooldown_year_2_flag
+		}
+		add_country_modifier = {
+			name = yannification_action_cooldown
+			duration = 730
+		}
+	}
+	else_if = {
+		limit = {
+			has_country_flag = yannification_action_cooldown_year_3_flag
+		}
+		add_country_modifier = {
+			name = yannification_action_cooldown
+			duration = 1095
+		}
+	}
+	else_if = {
+		limit = {
+			has_country_flag = yannification_action_cooldown_year_4_flag
+		}
+		add_country_modifier = {
+			name = yannification_action_cooldown
+			duration = 1460
+		}
+	}
+	else = {
+		add_country_modifier = {
+			name = yannification_action_cooldown
+			duration = 1825
+		}
+	}
+}
+
 add_yannification_progress_in_area_script_effect = {
     area = {
         #type = all

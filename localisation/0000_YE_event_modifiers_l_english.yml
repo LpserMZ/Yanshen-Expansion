@@ -157,7 +157,7 @@
 
  yannification_unrest_modifier:0 "µb—bßpS"
  yannification_development_modifier:0 "ßpSÛLˆ-N"
- yannification_development_modifier_desc:0 "wýNÏkt^ßpSÛUS:§G+1.5§!\nSVMRwýNßpSÛUS:[Root.prov_yannification.GetValue]/100"
+ yannification_development_modifier_desc:0 "wýNÏkt^ßpSÛUS:[Root.Owner.GetYearlyYannificationOfBaseBuff]\nSVMRwýNßpSÛUS:[Root.prov_yannification.GetValue]/100"
  yannification_action_cooldown:0 "ßpSLˆ¨R·QtS-N"
  yannification_intermarriage_modifier:0 "ÃOÛZZ"
  yannification_intermarriage_modifier_desc:0 "wýNÏkt^ßpSÛUS:§G+3§!\nSVMRwýNßpSÛUS:[Root.prov_yannification.GetValue]/100"

@@ -230,7 +230,7 @@ country_event = { #xiyun asked to become autonomous vassal
 
 #TYRANT SYSTEM SETUP 7-10
 
-country_event = {
+country_event = { # 99 - debug
 	id = bianfang.99 #DEBUG
 	title = bianfang.99.t
 	desc = bianfang.99.d
@@ -249,7 +249,7 @@ country_event = {
 	}
 }
 
-country_event = {
+country_event = { # 7 introduction
 	id = bianfang.7 #startup
 	title = bianfang.7.t
 	desc = bianfang.7.d
@@ -260,17 +260,11 @@ country_event = {
 	
 	option = {
 		name = bianfang.7.a
-		#hidden_effect = { initialize_tyrant_system = yes }
-		#hidden_effect = { set_country_flag = tyrant_system_initialized }
-		#add_country_modifier = {
-		#	name = bianfang_tyrant_modifier_pragmatic
-		#	duration = -1
-		#}
 		custom_tooltip = bianfang_introduction_tt
 	}
 }
 
-country_event = {
+country_event = { # 8 - ruthless triggered on reached_max
 	id = bianfang.8 #update modifier to ruthless
 	title = bianfang.8.t
 	desc = bianfang.8.d
@@ -280,16 +274,13 @@ country_event = {
 	
 	option = {
 		name = bianfang.8.a
-		remove_country_modifier = bianfang_tyrant_modifier_pragmatic
-		remove_country_modifier = bianfang_tyrant_modifier_benevolent
-		add_country_modifier = {
-			name = bianfang_tyrant_modifier_ruthless
-			duration = -1
-		}
+		add_manpower = 8
+		add_yearly_manpower = 2
+		add_war_exhaustion = 2
 	}
 }
 
-country_event = {
+country_event = { # 9 - pragmatic triggered by update_tyrant_modifier
 	id = bianfang.9 #update modifier to pragmatic
 	title = bianfang.9.t
 	desc = bianfang.9.d
@@ -299,16 +290,13 @@ country_event = {
 	
 	option = {
 		name = bianfang.9.a
-		remove_country_modifier = bianfang_tyrant_modifier_benevolent
-		remove_country_modifier = bianfang_tyrant_modifier_ruthless
-		add_country_modifier = {
-			name = bianfang_tyrant_modifier_pragmatic
-			duration = -1
-		}
+		add_adm_power = 25
+		add_dip_power = 25
+		add_mil_power = 25
 	}
 }
 
-country_event = {
+country_event = { # 10 - benevolent triggered by update_tyrant_modifier
 	id = bianfang.10 #update modifier to benevolent
 	title = bianfang.10.t
 	desc = bianfang.10.d
@@ -318,11 +306,8 @@ country_event = {
 	
 	option = {
 		name = bianfang.10.a
-		remove_country_modifier = bianfang_tyrant_modifier_pragmatic
-		remove_country_modifier = bianfang_tyrant_modifier_ruthless
-		add_country_modifier = {
-			name = bianfang_tyrant_modifier_benevolent
-			duration = -1
+		every_owned_province = {
+			add_nationalism = -5
 		}
 	}
 }
@@ -2572,63 +2557,126 @@ country_event = {
 	title = bianfang.1000.t
 	desc = {
         trigger = {
-            has_country_modifier = bianfang_tyrant_modifier_benevolent
+			NOT = {
+				has_government_power = {
+					mechanic_type = YE_tyrant_system
+					power_type = benelolent_ruthless_power
+					value = -33
+				}
+			}
             bianfang_ruler_benevolent_personality = yes
         }
 	    desc = "bianfang.1000.da" #benevolent ruler, benevolent legacy
     }
 	desc = {
         trigger = {
-                has_country_modifier = bianfang_tyrant_modifier_pragmatic
-                bianfang_ruler_benevolent_personality = yes
-            }
+			has_government_power = {
+				mechanic_type = YE_tyrant_system
+				power_type = benelolent_ruthless_power
+				value = -33
+			}
+			NOT = {
+				has_government_power = {
+					mechanic_type = YE_tyrant_system
+					power_type = benelolent_ruthless_power
+					value = 33
+				}
+			}
+			bianfang_ruler_benevolent_personality = yes
+		}
     	desc = "bianfang.1000.db" #benevolet ruler, pragmatic legacy
     } 
     desc = {
         trigger = {
-            has_country_modifier = bianfang_tyrant_modifier_ruthless
+            has_government_power = {
+				mechanic_type = YE_tyrant_system
+				power_type = benelolent_ruthless_power
+				value = 33
+			}
             bianfang_ruler_benevolent_personality = yes
         }
         desc = "bianfang.1000.dc" #benevolent ruler, ruthless legacy
     }
     desc = {
         trigger = {
-            has_country_modifier = bianfang_tyrant_modifier_benevolent
+            NOT = {
+				has_government_power = {
+					mechanic_type = YE_tyrant_system
+					power_type = benelolent_ruthless_power
+					value = -33
+				}
+			}
             bianfang_ruler_pragmatic_personality = yes
         }
         desc = "bianfang.1000.dd" #pragmatic ruler, benevolent legacy
     }
     desc = {
         trigger = {
-            has_country_modifier = bianfang_tyrant_modifier_pragmatic
+            has_government_power = {
+				mechanic_type = YE_tyrant_system
+				power_type = benelolent_ruthless_power
+				value = -33
+			}
+			NOT = {
+				has_government_power = {
+					mechanic_type = YE_tyrant_system
+					power_type = benelolent_ruthless_power
+					value = 33
+				}
+			}
             bianfang_ruler_pragmatic_personality = yes
         }
         desc = "bianfang.1000.de" #pragmatic ruler, pragmatic legacy
     } 
     desc = {
         trigger = {
-            has_country_modifier = bianfang_tyrant_modifier_ruthless
+            has_government_power = {
+				mechanic_type = YE_tyrant_system
+				power_type = benelolent_ruthless_power
+				value = 33
+			}
             bianfang_ruler_pragmatic_personality = yes
         }
         desc = "bianfang.1000.df" #pragmatic ruler, ruthless legacy
     }
     desc = {
         trigger = {
-            has_country_modifier = bianfang_tyrant_modifier_benevolent
+            NOT = {
+				has_government_power = {
+					mechanic_type = YE_tyrant_system
+					power_type = benelolent_ruthless_power
+					value = -33
+				}
+			}
             bianfang_ruler_ruthless_personality = yes
         }
         desc = "bianfang.1000.dg" #ruthless ruler, benevolent legacy
     }
     desc = {
         trigger = {
-            has_country_modifier = bianfang_tyrant_modifier_pragmatic
+            has_government_power = {
+				mechanic_type = YE_tyrant_system
+				power_type = benelolent_ruthless_power
+				value = -33
+			}
+			NOT = {
+				has_government_power = {
+					mechanic_type = YE_tyrant_system
+					power_type = benelolent_ruthless_power
+					value = 33
+				}
+			}
             bianfang_ruler_ruthless_personality = yes
         }
         desc = "bianfang.1000.dh" #ruthless ruler, pragmatic legacy
     } 
     desc = {
         trigger = {
-            has_country_modifier = bianfang_tyrant_modifier_ruthless
+            has_government_power = {
+				mechanic_type = YE_tyrant_system
+				power_type = benelolent_ruthless_power
+				value = 33
+			}
             bianfang_ruler_ruthless_personality = yes
         }
         desc = "bianfang.1000.di" #ruthless ruler, ruthless legacy
@@ -2692,7 +2740,13 @@ country_event = {
 	option = {
 	    name = bianfang.1000.a #benevolent ruler, benevolent legacy
         trigger = {
-            has_country_modifier = bianfang_tyrant_modifier_benevolent
+            NOT = {
+				has_government_power = {
+					mechanic_type = YE_tyrant_system
+					power_type = benelolent_ruthless_power
+					value = -33
+				}
+			}
             bianfang_ruler_benevolent_personality = yes
         }
 		increase_tyrant_benevolent_1 = yes
@@ -2700,15 +2754,30 @@ country_event = {
 	option = {
 	    name = bianfang.1000.b #benevolet ruler, pragmatic legacy
         trigger = {
-                has_country_modifier = bianfang_tyrant_modifier_pragmatic
-                bianfang_ruler_benevolent_personality = yes
+            has_government_power = {
+				mechanic_type = YE_tyrant_system
+				power_type = benelolent_ruthless_power
+				value = -33
+			}
+			NOT = {
+				has_government_power = {
+					mechanic_type = YE_tyrant_system
+					power_type = benelolent_ruthless_power
+					value = 33
+				}
+			}
+            bianfang_ruler_benevolent_personality = yes
             }
 		increase_tyrant_benevolent_2 = yes
     } 
     option = {
         name = bianfang.1000.c #benevolent ruler, ruthless legacy
         trigger = {
-            has_country_modifier = bianfang_tyrant_modifier_ruthless
+            has_government_power = {
+				mechanic_type = YE_tyrant_system
+				power_type = benelolent_ruthless_power
+				value = 33
+			}
             bianfang_ruler_benevolent_personality = yes
         }
 		increase_tyrant_benevolent_3 = yes
@@ -2716,7 +2785,13 @@ country_event = {
     option = {
         name = bianfang.1000.d #pragmatic ruler, benevolent legacy
         trigger = {
-            has_country_modifier = bianfang_tyrant_modifier_benevolent
+            NOT = {
+				has_government_power = {
+					mechanic_type = YE_tyrant_system
+					power_type = benelolent_ruthless_power
+					value = -33
+				}
+			}
             bianfang_ruler_pragmatic_personality = yes
         }
         increase_tyrant_ruthless_1 = yes
@@ -2724,14 +2799,29 @@ country_event = {
     option = {
         name = bianfang.1000.e #pragmatic ruler, pragmatic legacy
         trigger = {
-            has_country_modifier = bianfang_tyrant_modifier_pragmatic
+            has_government_power = {
+				mechanic_type = YE_tyrant_system
+				power_type = benelolent_ruthless_power
+				value = -33
+			}
+			NOT = {
+				has_government_power = {
+					mechanic_type = YE_tyrant_system
+					power_type = benelolent_ruthless_power
+					value = 33
+				}
+			}
             bianfang_ruler_pragmatic_personality = yes
         }
     } 
     option = {
         name = bianfang.1000.f #pragmatic ruler, ruthless legacy
         trigger = {
-            has_country_modifier = bianfang_tyrant_modifier_ruthless
+            has_government_power = {
+				mechanic_type = YE_tyrant_system
+				power_type = benelolent_ruthless_power
+				value = 33
+			}
             bianfang_ruler_pragmatic_personality = yes
         }
 		increase_tyrant_benevolent_1 = yes
@@ -2739,7 +2829,13 @@ country_event = {
     option = {
         name = bianfang.1000.g #ruthless ruler, benevolent legacy
         trigger = {
-            has_country_modifier = bianfang_tyrant_modifier_benevolent
+            NOT = {
+				has_government_power = {
+					mechanic_type = YE_tyrant_system
+					power_type = benelolent_ruthless_power
+					value = -33
+				}
+			}
             bianfang_ruler_ruthless_personality = yes
         }
         increase_tyrant_ruthless_3 = yes
@@ -2747,7 +2843,18 @@ country_event = {
     option = {
         name = bianfang.1000.h #ruthless ruler, pragmatic legacy
         trigger = {
-            has_country_modifier = bianfang_tyrant_modifier_pragmatic
+            has_government_power = {
+				mechanic_type = YE_tyrant_system
+				power_type = benelolent_ruthless_power
+				value = -33
+			}
+			NOT = {
+				has_government_power = {
+					mechanic_type = YE_tyrant_system
+					power_type = benelolent_ruthless_power
+					value = 33
+				}
+			}
             bianfang_ruler_ruthless_personality = yes
         }
         increase_tyrant_ruthless_2 = yes
@@ -2755,7 +2862,11 @@ country_event = {
     option = {
         name = bianfang.1000.i #ruthless ruler, ruthless legacy
         trigger = {
-            has_country_modifier = bianfang_tyrant_modifier_ruthless
+            has_government_power = {
+				mechanic_type = YE_tyrant_system
+				power_type = benelolent_ruthless_power
+				value = 33
+			}
             bianfang_ruler_ruthless_personality = yes
         }
         increase_tyrant_ruthless_1 = yes
@@ -2771,9 +2882,7 @@ country_event = {
 					bianfang_ruler_benevolent_personality = yes
 				}
 				NOT = {
-					has_country_modifier = bianfang_tyrant_modifier_ruthless
-					has_country_modifier = bianfang_tyrant_modifier_pragmatic
-					has_country_modifier = bianfang_tyrant_modifier_benevolent
+					has_government_mechanic = YE_tyrant_system
 				}
 			}
         }

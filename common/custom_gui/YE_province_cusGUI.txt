@@ -348,13 +348,20 @@ custom_button = {
 				name = aPUI_tyrant_and_yannification_conscript_people_modifier
 				duration = 3650
 			}
-			owner = {
-				add_manpower = 1
+		}
+		hidden_effect = {
+			area = {
+				owner = {
+					add_manpower = 1
+				}
+			}
+			FROM = {
+				add_manpower = 4
 			}
 		}
 		FROM = {
+			custom_tooltip = aPUI_tyrant_and_yannification_conscript_people_get_manpower_tooltip
 			add_mil_power = -50
-
 			add_government_power = {
 				mechanic_type = YE_tyrant_system
 				power_type = benelolent_ruthless_power
@@ -449,10 +456,7 @@ custom_button = {
         owner = {
             add_treasury = -200
 
-            add_country_modifier = {
-				name = yannification_action_cooldown
-				duration = 1825
-			}
+			add_yannification_cooldown_effect = yes
         }
 
         # 立即为该 Area 内所有进行中的省份增加 5 进度。
@@ -507,10 +511,7 @@ custom_button = {
         owner = {
             add_treasury = -200
 
-            add_country_modifier = {
-				name = yannification_action_cooldown
-				duration = 1825
-			}
+            add_yannification_cooldown_effect = yes
 
             random_owned_province = {
                 limit = {
@@ -558,10 +559,7 @@ custom_button = {
         owner = {
             add_manpower = -20
 
-            add_country_modifier = {
-				name = yannification_action_cooldown
-				duration = 1825
-			}
+            add_yannification_cooldown_effect = yes
         }
 
         remove_yannification_unrest_in_area_script_effect = yes
@@ -603,10 +601,7 @@ custom_button = {
         owner = {
             add_treasury = -500
 
-            add_country_modifier = {
-                name = yannification_action_cooldown
-                duration = 1825
-            }
+            add_yannification_cooldown_effect = yes
         }
 
         # 此 effect 只能初始化没有烟化 flag 的省，

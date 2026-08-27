@@ -428,3 +428,38 @@ defined_text = {
 	}
 
 }
+
+defined_text = {
+	name = GetYearlyYannificationOfBaseBuff
+	random = no
+	text = {
+		localisation_key = YearlyYannificationOfBaseBuff_5
+		trigger = {
+			has_country_flag = yearly_yannification_progress_rank_5_flag
+		}
+	} 
+	text = {
+		localisation_key = YearlyYannificationOfBaseBuff_4
+		trigger = {
+			has_country_flag = yearly_yannification_progress_rank_4_flag
+		}
+	} 
+	text = {
+		localisation_key = YearlyYannificationOfBaseBuff_3
+		trigger = {
+			has_country_flag = yearly_yannification_progress_rank_3_flag
+		}
+	} 
+	text = {
+		localisation_key = YearlyYannificationOfBaseBuff_2
+		trigger = {
+			has_country_flag = yearly_yannification_progress_rank_2_flag
+		}
+	} 
+	text = {
+		localisation_key = YearlyYannificationOfBaseBuff_1
+		trigger = {
+			always = yes
+		}
+	} 
+}

@@ -1225,9 +1225,8 @@ YE_dahui_3 = {
 				add_permanent_claim = ROOT
 			}
 
-			custom_tooltip = bianfang_activate_yanification_tt #原版
-			set_country_flag = yanification_activated
-			set_country_flag = yanification_upgrade_0
+			custom_tooltip = allow_yannification_by_form_rank_II_tag_tooltip
+			set_country_flag = allow_yannification_flag
 			add_country_modifier = {
 				name = bianfang_yanification_campaigns
 				duration = -1
@@ -1510,11 +1509,7 @@ YE_dahui_branch_moling_2 = {
 				name = explore_caves_in_moling
 				duration = -1
 			}
-			custom_tooltip = YE_upgrade_yanification_edict_tooltip
-			upgrade_yanification_effect = yes		
-
-			custom_tooltip = YE_upgrade_yanification_modifier_tooltip
-			upgrade_yanification_modifier_effect = yes
+			yannification_cooldown_flag_upgrade_effect = yes
 		}
 	}
 }
@@ -1712,11 +1707,7 @@ YE_dahui_branch_xiajie_2 = {
 				}
 				add_base_production = 1
 			}
-			custom_tooltip = YE_upgrade_yanification_edict_tooltip
-			upgrade_yanification_effect = yes
-
-			custom_tooltip = YE_upgrade_yanification_modifier_tooltip
-			upgrade_yanification_modifier_effect = yes
+			yannification_cooldown_flag_upgrade_effect = yes
 		}
 	}
 }
@@ -1762,8 +1753,7 @@ YE_dahui_branch_xiajie_3 = {
 				add_nationalism = -10
 			}
 
-			custom_tooltip = YE_upgrade_yanification_modifier_tooltip
-			upgrade_yanification_modifier_effect = yes
+			yannification_yearly_progress_flag_upgrade_effect = yes
 		}
 	}
 	YE_dahui_branch_xiajie_3_9 = {
@@ -1836,8 +1826,7 @@ YE_dahui_branch_xiajie_4 = {
 				add_nationalism = -10
 			}
 
-			custom_tooltip = YE_upgrade_yanification_modifier_tooltip
-			upgrade_yanification_modifier_effect = yes
+			yannification_yearly_progress_flag_upgrade_effect = yes
 		}
 	}
 }
@@ -1896,11 +1885,7 @@ YE_dahui_branch_wuxun_2 = {
 				}
 				add_base_production = 1
 			}
-			custom_tooltip = YE_upgrade_yanification_edict_tooltip
-			upgrade_yanification_effect = yes
-
-			custom_tooltip = YE_upgrade_yanification_modifier_tooltip
-			upgrade_yanification_modifier_effect = yes
+			yannification_cooldown_flag_upgrade_effect = yes
 		}
 	}
 }
@@ -1946,8 +1931,7 @@ YE_dahui_branch_wuxun_3 = {
 				add_base_manpower = 1
 			}
 
-			custom_tooltip = YE_upgrade_yanification_modifier_tooltip
-			upgrade_yanification_modifier_effect = yes
+			yannification_yearly_progress_flag_upgrade_effect = yes
 		}
 	}
 	YE_dahui_branch_wuxun_3_9 = {
@@ -2017,8 +2001,7 @@ YE_dahui_branch_wuxun_4 = {
 					duration = -1
 				}
 			}
-			custom_tooltip = YE_upgrade_yanification_modifier_tooltip
-			upgrade_yanification_modifier_effect = yes
+			yannification_yearly_progress_flag_upgrade_effect = yes
 		}	
 	}
 }

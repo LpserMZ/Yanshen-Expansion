@@ -455,9 +455,6 @@ country_decisions = {
 				add_permanent_claim = ROOT
 			}
 			###
-			custom_tooltip = allow_yannification_by_form_rank_II_tag_tooltip
-			set_country_flag = allow_yannification_flag
-			###
 			hidden_effect = {
 				restore_country_name = yes
 				every_owned_province = {

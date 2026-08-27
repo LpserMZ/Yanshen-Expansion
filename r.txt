@@ -19,7 +19,6 @@ every_country = {
 	disband_all_units = yes
 	#remove_country = THIS
 }
-
 # if = {
 # 	limit = {
 # 		always = no
@@ -147,7 +146,7 @@ every_country = {
 
 # set_country_flag = allow_yannification_flag
 yanshen_superregion = { add_core = ROOT cede_province = ROOT  }
-# shenzhou_superregion = { add_core = ROOT cede_province = ROOT  }
+shenzhou_superregion = { add_core = ROOT cede_province = ROOT  }
 # rahen_superregion = { add_core = ROOT cede_province = ROOT }
 # every_province = {
 # 	YE_yanification_change_category = $category$ culture=yes
@@ -168,3 +167,4 @@ yanshen_superregion = { add_core = ROOT cede_province = ROOT  }
 # set_variable = { which = digong_loc_x value = 0 }
 # set_variable = { which = digong_loc_y value = 2 }
 # set_country_flag = YE_allow_digong_flag
+
