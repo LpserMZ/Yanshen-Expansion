@@ -13,8 +13,8 @@ historical_friend = Y26 #Yinquan
 
 1444.1.1 = {
 	monarch = {
-		name = "Ding"
-		dynasty = "Gao"
+		name = "šR"
+		dynasty = "¿Øš"
 		birth_date = 1420.5.12
 		adm = 2
 		dip = 3

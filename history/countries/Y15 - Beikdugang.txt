@@ -15,8 +15,8 @@ historical_rival = Y19 # Tianlou
 
 1444.3.10 = {
 	monarch = {
-		name = "Wangji"
-		dynasty = "Qilin"
+		name = "NNm"
+		dynasty = "¿=T4N"
 		adm = 5
 		dip = 3
 		mil = 3

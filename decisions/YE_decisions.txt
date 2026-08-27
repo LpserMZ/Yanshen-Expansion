@@ -615,8 +615,10 @@ country_decisions = {
 		potential = {
 			government = monarchy
 			OR = {
-				primary_culture = jiangszun
+				primary_culture = jinxun_culture
 				primary_culture = jiangyang
+				primary_culture = tianlou_culture
+				primary_culture = yinqvan_culture
 			}
 			normal_or_historical_nations = yes
 			was_never_end_game_tag_trigger = yes
@@ -686,8 +688,10 @@ country_decisions = {
 		potential = {
 			government = republic
 			OR = {
-				primary_culture = jiangszun
+				primary_culture = jinxun_culture
 				primary_culture = jiangyang
+				primary_culture = tianlou_culture
+				primary_culture = yinqvan_culture
 			}
 			normal_or_historical_nations = yes
 			was_never_end_game_tag_trigger = yes
@@ -1044,4 +1048,46 @@ country_decisions = {
 			factor = 1
 		}
 	}
-}	
+
+	change_name_of_Y01 = {
+		major = yes
+		potential = {
+			ai = no
+			Y01 = { exists = yes }
+			knows_country = Y01
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			Y01 = {
+				if = {
+					limit = {
+						NOT = {
+							has_country_flag = Y01_azjakuma_name_flag
+						}
+					}
+					override_country_name = Y01_AZJAKUMA_NAME
+					set_country_flag = Y01_azjakuma_name_flag
+				}	
+				else = {
+					restore_country_name = yes
+					clr_country_flag = Y01_azjakuma_name_flag
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+
+
+
+
+
+
+
+
+
+}

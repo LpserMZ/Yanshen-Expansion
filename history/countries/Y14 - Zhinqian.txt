@@ -12,8 +12,8 @@ capital = 4979
 
 1444.1.1 = {
 	monarch = {
-		name = "Kai"
-		dynasty = "Pan"
+		name = "z`"
+		dynasty = "¿Xo"
 		birth_date = 1398.5.12
 		adm = 3
 		dip = 2

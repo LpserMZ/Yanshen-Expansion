@@ -14,8 +14,8 @@ capital = 4852
 
 1425.2.18 = {
 	monarch = {
-		name = "Youji I"
-		dynasty = "Xion"
+		name = "QOçu"
+		dynasty = "¿Ä–"
 		birth_date = 1411.7.5
 		adm = 2
 		dip = 2
@@ -26,8 +26,8 @@ capital = 4852
 
 	queen = {
 		country_of_origin = Z60 #Tsukqiao
-		name = "Fuyuan"
-		dynasty = "Jiao"
+		name = "y›Z"
+		dynasty = "¿&q"
 		birth_date = 1409.3.15
 		death_date = 1454.2.30
 		female = yes

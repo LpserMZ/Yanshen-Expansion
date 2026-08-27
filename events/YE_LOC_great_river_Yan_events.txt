@@ -3238,7 +3238,7 @@ country_event = { #53 大总统-新任统治者出现时触发
 	}
 }
 
-#统一战争
+#统一战争-54-55-63
 country_event = { #54 案牍劳形
 	id = YE_GRY.54 
 	title = YE_GRY.54.T
@@ -3328,6 +3328,7 @@ country_event = { #55 #停战通知
 		ai_chance = { factor = 1 }
 	}
 }
+
 
 #烟中帛幡毁坏
 province_event = { #56 烟中帛幡毁坏
@@ -3568,8 +3569,8 @@ province_event = { #62 香檀珠
 # 	desc = YE_GRY.63.D
 # 	picture = BAD_WITH_MONARCH_eventPicture
 
-# 	fire_only_once = yes
-# 	is_triggered_only = no
+# 	fire_only_once = no
+# 	is_triggered_only = yes
 
 # 	trigger = {
 # 	}

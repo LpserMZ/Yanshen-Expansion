@@ -16,8 +16,8 @@ historical_rival = Y99 #One Xia
 
 1420.1.1 = {
 	monarch = {
-		name = "Zhishi"
-		dynasty = "of the Zhuying Court"
+		name = "åwöe"
+		dynasty = "¿ø‹ñ‚«R" 
 		birth_date = 1209.5.12
 		adm = 6
 		dip = 2

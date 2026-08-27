@@ -2094,7 +2094,6 @@ luojiang_region = {
 		lj3_area
 		lj4_area
 		lj5_area
-		jx9_area
 		lj7_area
 		lj8_area
 		hongnguan_area
@@ -2132,6 +2131,7 @@ jinxun_region = {
 		jx6_area
 		jx7_area
 		jx8_area
+		jx9_area
 		erluxi_area
 		liuminxiang_area
 		balrijin_area
@@ -3525,5 +3525,23 @@ xianzhong_region = {
 		xz17_area
 
 		ye_test_area
+	}
+}
+
+river_yanhe_sea_region = {
+	areas = {
+		river_yanhe_sea_area
+	}
+}
+
+river_luoxian_sea_region = {
+	areas = {
+		river_qvhe_sea_area
+		river_tianhe_sea_area
+	}
+}
+river_mengi_sea_region = {
+	areas = {
+		river_mengi_sea_area
 	}
 }

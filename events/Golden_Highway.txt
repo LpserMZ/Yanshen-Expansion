@@ -31,20 +31,31 @@ province_event = { #Complete a highway
 						province_id = 487
 
 						###
+						#zhaoxun
 						province_id = 4826
-						province_id = 8044
-						province_id = 4873
-						province_id = 8119
+						province_id = 4853
+						#jinxun
 						province_id = 8120
-						province_id = 4531
-						province_id = 8004
-						province_id = 4530
-						province_id = 4632
-						province_id = 8026
-						province_id = 4813
-						province_id = 4816
-						province_id = 8028
+						province_id = 4867
 
+						province_id = 4868
+						province_id = 8432
+
+						province_id = 8374
+						province_id = 8375
+						province_id = 4870
+						province_id = 8292
+
+						#wuxun
+						province_id = 4531
+
+						province_id = 4530
+
+						province_id = 4526
+						province_id = 4525
+
+						province_id = 4631
+						province_id = 4632
 						###
 					}
 				}
@@ -61,21 +72,28 @@ province_event = { #Complete a highway
 					487 = { 486 = { save_event_target_as = golden_highway_next_province } }
 
 					###
-					4826 ={ 8038 = { save_event_target_as = golden_highway_next_province } }
-					8044 ={ 4845 = { save_event_target_as = golden_highway_next_province } }
+					#zhaoxun
+					4826 = { 8038 = { save_event_target_as = golden_highway_next_province } }
+					4853 = { 4854 = { save_event_target_as = golden_highway_next_province } }
 
-					4873 = { 8119 = { save_event_target_as = golden_highway_next_province } }
-					8119 = { 8120 = { save_event_target_as = golden_highway_next_province } }
-					8120 = { 8121 = { save_event_target_as = golden_highway_next_province } }
+					#jinxun
+					8120 = { 4867 = { save_event_target_as = golden_highway_next_province } }
+					4867 = { 4932 = { save_event_target_as = golden_highway_next_province } }
+					4868 = { 8432 = { save_event_target_as = golden_highway_next_province } }
+					8432 = { 4869 = { save_event_target_as = golden_highway_next_province } }
+					8374 = { 8375 = { save_event_target_as = golden_highway_next_province } }
+					8375 = { 4870 = { save_event_target_as = golden_highway_next_province } }
+					4870 = { 8292 = { save_event_target_as = golden_highway_next_province } }
+					8292 = { 4871 = { save_event_target_as = golden_highway_next_province } }
 					
+					#wuxun
 					4531 = { 8004 = { save_event_target_as = golden_highway_next_province } }
-					8004 = { 8005 = { save_event_target_as = golden_highway_next_province } }			
 					4530 = { 4630 = { save_event_target_as = golden_highway_next_province } }
+					4526 = { 4525 = { save_event_target_as = golden_highway_next_province } }
+					4525 = { 8014 = { save_event_target_as = golden_highway_next_province } }
+					4631 = { 4632 = { save_event_target_as = golden_highway_next_province } }
 					4632 = { 4633 = { save_event_target_as = golden_highway_next_province } }
-					8026 = { 4813 = { save_event_target_as = golden_highway_next_province } }
-					4813 = { 4816 = { save_event_target_as = golden_highway_next_province } }
-					4816 = { 8028 = { save_event_target_as = golden_highway_next_province } }
-					8028 = { 4814 = { save_event_target_as = golden_highway_next_province } }
+
 					###
 				}
 			}

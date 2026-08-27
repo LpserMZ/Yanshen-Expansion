@@ -15,8 +15,8 @@ historical_friend = Y01 # Azjakuma
 
 1440.7.23 = {
 	monarch = {
-		name = "Zhong"
-		dynasty = "Lao"
+		name = "ÚN"
+		dynasty = "ø≥R"
 		birth_date = 1411.8.8
 		adm = 3
 		dip = 0

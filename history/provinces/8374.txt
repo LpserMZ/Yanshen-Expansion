@@ -1,10 +1,10 @@
-add_core = Y18
-owner = Y18
+add_core = Y19
+owner = Y19
 base_tax = 2
 base_manpower = 4
 base_production = 3
 culture = jinxun_culture
 trade_goods = grain
 religion = accretive_path
-controller = Y18
+controller = Y19
 is_city = no

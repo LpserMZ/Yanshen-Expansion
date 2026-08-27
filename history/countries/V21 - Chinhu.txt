@@ -11,6 +11,14 @@ capital = 4828
 1000.1.1 = { set_estate_privilege = estate_mages_organization_state }
 
 1444.11.10 = { #Devouring Path setup
+	monarch = {
+		name = "mg"
+		dynasty = "¿Fƒ" 
+		birth_date = 1382.1.1
+		adm = 2
+		dip = 3
+		mil = 2
+	}
 	add_church_power = 200
 	set_country_flag = was_devouring_path
 	set_country_flag = gunpowder_meditation_unlocked

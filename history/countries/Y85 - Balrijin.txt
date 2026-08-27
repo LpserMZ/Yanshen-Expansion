@@ -16,8 +16,8 @@ historical_friend = V22
 
 1397.6.11 = {
 	monarch = {
-		name = "Fax Akar"
-		dynasty = "of The Kindled Scale"
+		name = "ÕlKQ¯e?–aSS"
+		dynasty = "¿ÃqÞœ"
 		birth_date = 1390.1.1
 		adm = 2
 		dip = 3

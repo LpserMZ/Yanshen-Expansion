@@ -14,8 +14,8 @@ add_accepted_culture = jianwu_culture
 
 1440.7.23 = {
 	monarch = {
-		name = "Yijun"
-		dynasty = "Wei"
+		name = "üGW"
+		dynasty = "¿kS"
 		birth_date = 1409.8.8
 		adm = 4
 		dip = 2

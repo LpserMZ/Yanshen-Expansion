@@ -18,8 +18,8 @@ set_estate_privilege = estate_church_guaranteed_autonomy
 
 1444.1.1 = {
 	monarch = {
-		name = "Ciyu"
-		dynasty = "Su"
+		name = "PË"
+		dynasty = "¿Ï‚"
 		birth_date = 1410.5.12
 		adm = 3
 		dip = 5

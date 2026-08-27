@@ -16,248 +16,457 @@ historical_idea_groups = {
 }
 
 historical_units = {
-	raheni_1_dhujati_riders
-	raheni_1_raheni_footsoldier
-	raheni_5_nadimraj_infantry
-	raheni_6_nadimraj_cavalry
-	raheni_9_reformed_nadimraj_infantry
-	raheni_10_stampede_cavalry
-	raheni_12_khedarid_infantry
-	raheni_14_ghavaanaj_elephant_lords
-	raheni_19_ghankedhen_musketeers
-	raheni_18_reformed_ghavaanaj_elephant_lords
-	raheni_23_nadimraj_musketeers
-	raheni_23_raheni_dragoons
-	raheni_26_raheni_rifle
-	raheni_28_elephant_cannons
-	raheni_30_nadimraj_rifles
+	halessi_1_yanshen_levies
+	halessi_5_yan_conscripts
+	halessi_9_standing_arquebus
+	halessi_12_lanjinhui_cross_formation
+	halessi_15_tianlou_free_shooters
+	halessi_19_yanshen_smokers
+	halessi_26_powder_troopers
+	halessi_30_yanshen_square
 }
-monarch_names = {
+monarch_names = { # YE_YAN_NAME 0825 - mark to filter name
+	"Í‘Û #0" = 10
+	"Í‘cƒ #0" = 10
+	"Í‘IQ #0" = 10
+	"fVì— #0" = 10
+	"fV… #0" = 10
+	"fVÄ– #0" = 10
+	"fVf #0" = 10
+	"IQÈp #0" = 10
+	"IQÜ #0" = 10
+	"IQ­^ #0" = 10
+	"ÎNËR #0" = 10
+	"ÎNÛ #0" = 10
+	"ÎN #0" = 10
+	"ÎNr #0" = 10
+	"ö^Zy #0" = 10
+	"ö^†^ #0" = 10
+	"ö^ıl #0" = 10
+	"çuËR #0" = 10
+	"çuN #0" = 10
+	"çutQ #0" = 10
+	"XR¡R #0" = 10
+	"XRãU #0" = 10
+	"XRíO #0" = 10
+	"XRZ #0" = 10
+	"XRle #0" = 10
+	"bãU #0" = 10
+	"bs #0" = 10
+	"b-f #0" = 10
+	"bN #0" = 10
+	"VIN #0" = 10
+	"V·k #0" = 10
+	"V·V #0" = 10
+	"V‰R #0" = 10
+	"TíO #0" = 10
+	"TN #0" = 10
+	"TËR #0" = 10
+	"TN† #0" = 10
+	"ˆR‰R #0" = 10
+	"ˆR„s #0" = 10
+	"ˆRšR #0" = 10
+	"ƒtQ #0" = 10
+	"ƒf #0" = 10
+	"ƒf #0" = 10
+	"åwVr #0" = 10
+	"åwÜ #0" = 10
+	"åwm` #0" = 10
+	"åwkR #0" = 10
+	"åw‚‚ #0" = 10
+	"` #0" = 10
+	"`šR #0" = 10
+	"`‰R #0" = 10
+	"Y·^ #0" = 10
+	"YIQ #0" = 10
+	"YÈp #0" = 10
+	"m0N #0" = 10
+	"mğQ #0" = 10
+	"mS #0" = 10
+	"·VZ #0" = 10
+	"·V·k #0" = 10
+	"·VpV #0" = 10
+	"‡e-f #0" = 10
+	"‡eÜ #0" = 10
+	"‡emf #0" = 10
+	"CQ<y #0" = 10
+	"CQIQ #0" = 10
+	"CQŸt #0" = 10
+	"ofIQ #0" = 10
+	"of2 #0" = 10
+	"off #0" = 10
+	"ofSh #0" = 10
+	"LˆÜw #0" = 10
+	"LˆÜ #0" = 10
+	"LˆpV #0" = 10
+	"KQÇR #0" = 10
+	"KQÄ– #0" = 10
+	"KQàV #0" = 10
+	"ÕNÛ #0" = 10
+	"ÕNñ‚ #0" = 10
+	"ÕN¾ #0" = 10
+	"`Ëa #0" = 10
+	"`m` #0" = 10
+	"`kR #0" = 10
+	"`‰R #0" = 10
+	"öeÛv #0" = 10
+	"öeVr #0" = 10
+	"öecƒ #0" = 10
+	"tQƒ #0" = 10
+	"tQN #0" = 10
+	"tQVy #0" = 10
+	"UaîO #0" = 10
+	"Ua&Œ #0" = 10
+	"UakR #0" = 10
+	"o‚PO #0" = 10
+	"o‚… #0" = 10
+	"o‚ÁN #0" = 10
+	"o‚òT #0" = 10
+	"^S #0" = 10
+	"^Ä– #0" = 10
+	"^Ú‹ #0" = 10
+	"^äS #0" = 10
+	"^„s #0" = 10
+	"‡ele #0" = 10
+	"‡e&Œ #0" = 10
+	"‡eÜw #0" = 10
+	"‡en #0" = 10
+	"‡e¡R #0" = 10
+	"—Rçu #0" = 10
+	"—R·V #0" = 10
+	"—RÁN #0" = 10
+	"—RÍu #0" = 10
+	"—RÅ– #0" = 10
+	"=On #0" = 10
+	"=Oœt #0" = 10
+	"=O¹o #0" = 10
+	"=OŸ #0" = 10
+	"=O¥P #0" = 10
+	"òN8 #0" = 10
+	"òNt #0" = 10
+	"òN˜ #0" = 10
+	"òNŞœ #0" = 10
+	"òN¢˜ #0" = 10
+	"ÔS„s #0" = 10
+	"ÔSés #0" = 10
+	"ÔSf #0" = 10
+	"ÔSË #0" = 10
+	"ÔSg #0" = 10
+	"cƒŸ” #0" = 10
+	"cƒey #0" = 10
+	"cƒÓk #0" = 10
+	"cƒkƒ #0" = 10
+	"'Y	g #0" = 10
+	"'Y‰R #0" = 10
+	"'Y(u #0" = 10
+	"N… #0" = 10
+	"ÌR… #0" = 10
+	"É^… #0" = 10
+	"Á‰Nm #0" = 10
+	"Á‰rl #0" = 10
+	"Á‰›l #0" = 10
+	"Á‰ıl #0" = 10
+	"Á‰m #0" = 10
+	"ÁNn #0" = 10
+	"ÁN^ #0" = 10
+	"ÁNRV #0" = 10
+	"ÁNà` #0" = 10
+	"öe8l #0" = 10
+	"öeLˆ #0" = 10
+	"öe2 #0" = 10
+	"öe†– #0" = 10
+	"öe #0" = 10
+	"<V±R #0" = 10
+	"Ëaéu #0" = 10
+	"^ÁN #0" = 10
+	"^„s #0" = 10
+	"^Vr #0" = 10
+	"^÷e #0" = 10
+	"^ŒT #0" = 10
+	"(u÷^ #0" = 10
+	"(uN #0" = 10
+	"(uıV #0" = 10
+	"(uZ† #0" = 10
+	"÷^i` #0" = 10
+	"÷^^t #0" = 10
+	"÷^PO #0" = 10
+	"÷^‰R #0" = 10
+	"le‰ #0" = 10
+	"le-f #0" = 10
+	"ßzfk #0" = 10
+	"le&Œ #0" = 10
+	"leôv #0" = 10
+	"˜t #0" = 10
+	"ês #0" = 10
+	"‹t #0" = 10
+	"jt #0" = 10
+	"Œt #0" = 10
+	"²Q #0" = 10
+	"in #0" = 10
+	"Lp #0" = 10
+	"5m #0" = 10
+	"n #0" = 10
+	"ûe #0" = 10
+	"¾ #0" = 10
+	"ÁN #0" = 10
+	"R #0" = 10
+	"n #0" = 10	
+	"^ #0" = 10
+	"?e #0" = 10
+	" #0" = 10
+	"V— #0" = 10
+	"»l #0" = 10
+	"²u #0" = 10
+	"m` #0" = 10
+	"©‹ #0" = 10
+	"ZW #0" = 10
+	"1 #0" = 10
+	"ú^ #0" = 10
+	"NY #0" = 10
+	"®N #0" = 10
+	")n #0" = 10
+	"„s #0" = 10
+	"ßu #0" = 10
+	"Au #0" = 10
+	"‰V #0" = 10
+	"Ày #0" = 10
+	"ËN #0" = 10
+	"‘N #0" = 10
+	"Ïg #0" = 10
+	"ãh #0" = 10
+	"Œg #0" = 10
+	"Bh #0" = 10
+	"É” #0" = 10
+	"4• #0" = 10
+	"è” #0" = 10
+	"í” #0" = 10
+	"î” #0" = 10
+	",b #0" = 10
+	"b #0" = 10
+	"æ #0" = 10
+	"© #0" = 10
+	"ôv #0" = 10
+	"­R #0" = 10
+	"ë— #0" = 10
+	"ËV #0" = 10
+	".t #0" = 10
+	" #0" = 10
+	"ˆš #0" = 10
+	"Tf #0" = 10
+	"úW #0" = 10
+	"Õˆ #0" = 10
+	"Às #0" = 10
+	"Nt^ #0" = 10
+	"•u #0" = 10
+	")YGS #0" = 10
+	"ö^t^ #0" = 10
+	"d8n #0" = 10
+	"›|g #0" = 10
+	"ìX…p #0" = 10
+	"xvX #0" = 10
+	"2uµ” #0" = 10
+	")Y #0" = 10
+	"³p·^ #0" = 10
+	"³pZW #0" = 10
+	"µ”ğl #0" = 10
+	"µ”¬N #0" = 10
+	"µ”s^ #0" = 10
+	"y^ #0" = 10
+	"NÙN #0" = 10
+	"NHQ #0" = 10
+	"¦”‡e #0" = 10
+	"TZ #0" = 10
+	"fÏ‘ #0" = 10
 
-	"Laxanyar #0" = 100
-	"Gopalar #0" = 10
-	"Dhubuvar #0" = 10	
-	"Akshyar #0" = 10	
-	"Kumbhakar #0" = 10	
-
-	"Acay #0" = 10
-	"Adaharaghir #0" = 10
-	"Ahat #0" = 10
-	"Ajnor #0" = 10
-	"Akshyar #0" = 10
-	"Alambushar #0" = 10
-	"Amanapurna #0" = 10
-	"Anevyenghur #0" = 10
-	"Arimar #0" = 10
-	"Atikayar #0" = 10
-	"Ayusar #0" = 10
-	"Bagherad #0" = 10
-	"Balabhatar #0" = 10
-	"Baka #0" = 10
-	"Brajar #0" = 10
-	"Birnayar #0" = 10
-	"Bruhit #0" = 10
-	"Bruvay #0" = 10
-	"Chandrasen #0" = 10
-	"Dhasvas #0" = 10
-	"Dhubuvar #0" = 10
-	"Duratyur #0" = 10
-	"Ganyakanar #0" = 10
-	"Ghatotkacha #0" = 10
-	"Ghirakur #0" = 10
-	"Goshar #0" = 10
-	"Gopalar #0" = 10
-	"Haran #0" = 10
-	"Harimar #0" = 10
-	"Hastar #0" = 10
-	"Hidimbar #0" = 10
-	"Hemantsen #0" = 10
-	"Hemantsenar #0" = 10
-	"Indar #0" = 10
-	"Indrapalar #0" = 10
-	"Indranayar #0" = 10
-	"Jadur #0" = 10
-	"Jatasur #0" = 10
-	"Jayapalar #0" = 10
-	"Jyotirishwar #0" = 10
-	"Kabandhar #0" = 10
-	"Khara #0" = 10
-	"Kirmar #0" = 10
-	"Kirtir #0" = 10
-	"Kobidran #0" = 10
-	"Kujar #0" = 10
-	"Kumbhakar #0" = 10
-	"Laxanyar #0" = 10
-	"Mahindranar #0" = 10
-	"Mahipalar #0" = 10
-	"Manava #0" = 10
-	"Marichar #0" = 10
-	"Maurayadwhaj #0" = 10
-	"Mavas #0" = 10
-	"Muburmo #0" = 10
-	"Naramar #0" = 10
-	"Narayar #0" = 10
-	"Natahas #0" = 10
-	"Prahastar #0" = 10
-	"Prannath #0" = 10
-	"Prattad #0" = 10
-	"Prattan #0" = 10
-	"Raghudevar #0" = 10
-	"Rama #0" = 10
-	"Ramnath #0" = 10
-	"Ramapalar #0" = 10
-	"Rarpun #0" = 10
-	"Ravanar #0" = 10
-	"Ruchahar #0" = 10
-	"Ruman #0" = 10
-	"Salar #0" = 10
-	"Sandranayar #0" = 10
-	"Sahtiyar #0" = 10
-	"Shivar #0" = 10
-	"Shurapalar #0" = 10
-	"Shurpanakar #0" = 10
-	"Subahan #0" = 10
-	"Tarakar #0" = 10
-	"Ujadar #0" = 10
-	"Vallasenar #0" = 10
-	"Vaka #0" = 10
-	"Vamayur #0" = 10
-	"Vapyatar #0" = 10
-	"Vasudev #0" = 10
-	"Vasudevar #0" = 10
-	"Vasumtir #0" = 10
-	"Vibhar #0" = 10
-	"Vinas #0" = 10
-	"Vijaysen #0" = 10
-	"Vijaysenar #0" = 10
-	"Vijayswanath #0" = 10
-	"Virajdendar #0" = 10
-	"Virajdendarnarayan #0" = 10
-	"Vujur #0" = 10
-	"Yittarma #0" = 10
-	"Zalikar #0" = 10
-	
-	
-	"Aji #0" = -1
-	"Amra #0" = -1
-	"Anarme #0" = -1
-	"Andira #0" = -1	
-	"Anedhira #0" = -1
-	"Anipari #0" = -1
-	"Avha #0" = -1
-	"Aysha #0" = -1
-	"Baki #0" = -1
-	"Busara #0" = -1
-	"Dhelipavi #0" = -1
-	"Dhismara #0" = -1
-	"Dittatsi #0" = -1
-	"Durya #0" = -1
-	"Emiridvu #0" = -1
-	"Etronda #0" = -1
-	"Evhami #0" = -1
-	"Ganjara #0" = -1	
-	"Ganjina #0" = -1	
-	"Goshar #0" = -1	
-	"Idvo #0" = -1
-	"Idira #0" = -1
-	"Ijatinga #0" = -1
-	"Itra #0" = -1
-	"Jaina #0" = -1
-	"Jatasuri #0" = -1
-	"Karki #0" = -1
-	"Katra #0" = -1
-	"Khidvayo #0" = -1
-	"Kirmari #0" = -1
-	"Miyana #0" = -1
-	"Norka #0" = -1
-	"Nusha #0" = -1
-	"Objara #0" = -1
-	"Phara #0" = -1
-	"Prati #0" = -1
-	"Pumri #0" = -1
-	"Puryishira #0" = -1
-	"Rivaci #0" = -1
-	"Ramina #0" = -1
-	"Ranjana #0" = -1
-	"Rungi #0" = -1
-	"Shipra #0" = -1
-	"Shenra #0" = -1
-	"Shurmir #0" = -1
-	"Shurmir #0" = -1
-	"Shurpanaka #0" = -1
-	"Tataka #0" = -1
-	"Tira #0" = -1
-	"Vadra #0" = -1
-	"Vakirana #0" = -1
-	"Vanongi #0" = -1
-	"Yabhavara #0" = -1
-	"Yihitti #0" = -1
-	"Zalika #0" = -1
-	
+	"Ày‘N #0" = -10
+	"‰sn #0" = -10
+	".t4t #0" = -10
+	"à`³‚ #0" = -10
+	"ËyNS #0" = -10
+	"Ëy‰s #0" = -10
+	"gNS #0" = -10
+	"‘Nn #0" = -10
+	"Y—wƒ #0" = -10
+	"Y—g #0" = -10
+	"Y—¹R #0" = -10
+	"Y—R #0" = -10
+	"‰R!` #0" = -10
+	"‰R¦` #0" = -10
+	"‰RŒT #0" = -10
+	"‘NqV #0" = -10
+	"‘Nóˆ #0" = -10
+	"gqV #0" = -10
+	"gR #0" = -10
+	"ê–tf #0" = -10
+	"ê–¹R #0" = -10
+	"SfÎ˜ #0" = -10
+	"Sfg #0" = -10
+	"Zftf #0" = -10
+	"Rê– #0" = -10
+	"nó— #0" = -10
+	"n2— #0" = -10
+	".tÃV #0" = -10
+	"IZêN #0" = -10
+	"Ôg	V #0" = -10
+	"4ZY— #0" = -10
+	"Å–R #0" = -10
+	"ÃV!` #0" = -10
+	"wƒ2— #0" = -10
+	"vtó— #0" = -10
+	"<tõ— #0" = -10
+	"·‚Ôg #0" = -10
+	"å‚pQ #0" = -10
+	"+T— #0" = -10
+	"İQê– #0" = -10
+	"O‘N #0" = -10
+	"‚Yg #0" = -10
+	"¦hwƒ #0" = -10
+	"®fê– #0" = -10
+	"g2— #0" = -10
+	"Sfwƒ #0" = -10
+	"%f™q #0" = -10
+	"Ëy„o #0" = -10
+	"wƒñ‚ #0" = -10
+	")Yga #0" = -10
+	"‰sñ‚ #0" = -10
+	"yCQ #0" = -10
+	"œÍs #0" = -10
+	"^tcƒ #0" = -10
+	"Sf›Z #0" = -10
+	"SfìY #0" = -10
+	"ŒTY— #0" = -10
+	"ŒT	V #0" = -10
+	"f1„ #0" = -10
+	"°eƒ #0" = -10
+	"<O„ #0" = -10
+	"›Rñƒ #0" = -10
+	"¦NY… #0" = -10
+	"ŒT‡… #0" = -10
+	"‰R‚ #0" = -10
+	"RÊƒ #0" = -10
+	"Y—Bh #0" = -10
+	"¦`Ch #0" = -10
+	"ÔgOg #0" = -10
+	"IZ1j #0" = -10
+	"4ZJ… #0" = -10
+	"Å–Œ… #0" = -10
+	"êNöS #0" = -10
+	"-f— #0" = -10
+	"qVï– #0" = -10
+	"óˆ— #0" = -10
+	"—šS #0" = -10
+	"tf«g #0" = -10
+	"‘N?Q #0" = -10
+	"r?Q #0" = -10
+	"‰s?Q #0" = -10
+	"—?Q #0" = -10
+	"æf?Q #0" = -10
+	"-f #0" = -10
+	"IZ #0" = -10
+	"4Z #0" = -10
+	"¦` #0" = -10
+	"Ôg #0" = -10
+	"êN #0" = -10
+	"óˆ #0" = -10
+	"tf #0" = -10
+	"vt #0" = -10
+	"‡t #0" = -10
+	"Âs #0" = -10
+	"ús #0" = -10	
 }
 
 leader_names = {
-	#Country Specific
-	
-	#Province Neighbours
-	
-	#Country Neighbours
-	
-	#Geographic Neighbours
-	"of Rahen" "of the Raghamidesh" "of the Pasindesh" "of the Ghankedhen" "of the Rabhidarubsad" "of the Dhukharuved" "of the Sarniryabsad" "of the Harimraj"
-	
-	#Noble Families
-	"of the White Stripe" "of the Azure Hide" "of the Pouncing Tower" "of the Grand Paw" "of the Silver Lash" "of the Enlightened Star" "of the Forked Waters" "of the Golden Paw" "of the Savage Jolt"
-	"of the Lotus Claw" "of the Bloody Claw" "of the Scarred Hide" "of the Crouching Shadow" "of the Ruby Garden" "of the Thousand Strikes" "of the Flower Oath" "of the White Paw"
-	"of the Shining Tooth" "of the Feigning Claw" "of the Vengeful Gaze" "of the Diligent Coil" "of the Imperious Stripe" "of the Noble Stripes" "of the Whispering Fist" "of the Piercing Eye" "of the Heavenly Lotus"  
-	"of the Endless Moon" "of the Desert Thunder" "of the Boundless Spirit" "of the Falling Claw" 
-	
-	#Titles
-	"'the Tall'" "'the Younger'" "'the Clever'" "'the Vigilant'" "'the Stern'" "'the Mighty'" "'the Kind'" "'the Able'" "'the Good'" "'the Fat'" "'the Slaver'" "'the Magnanimous'" "'the Magnificent'" "'the White'"
+	# A
+	"¿‰R"
+	# B 
+	"¿ôT" "¿œ" "¿S" "¿ís" "¿¹" "¿‹v" "¿Õk" "¿ek"
+	# C
+	"¿!…" "¿Ha" "¿T" "¿ùf" "¿‘S" "¿N"
+	# CH
+	"¿åg" "¿ôg" "¿f" "¿N" "¿×" "¿Af" "¿H–" "¿z" "¿8^" 
+	# D
+	"¿4b" "¿ãN" "¿¦z" "¿“" "¿Är" "¿ß" "¿xQ" 
+	"¿N" "¿jg" "¿µk" "¿c„" 
+	# F
+	"¿Õl" "¿9" "¿ƒ" "¿¹e" "¿?b" "¿0N" "¿¯Q" "¿äQ" "¿&r" "¿…P"  
+	"¿j" 
+	# G 
+	"¿i„" "¿Öv" "¿Øš" "¿?w" "¿«R" "¿šŸ" "¿éT" "¿í" "¿¡r" 
+	"¿äS" "¿7Œ" "¿œ" "¿Œ˜" "¿u"
+	# H
+	"¿ŒT" "¿UO" "¿:" "¿wm" "¿Ñ" "¿İ" "¿¯O" "¿é—" "¿*m" "¿áw" 
+	"¿›e" "¿NS" "¿±‚" "¿Ä" "¿Sh"
+	# J
+	"¿	T" "¿!" "¿ìY" "¿cR" "¿>" "¿&q" "¿r" "¿Ñ‘" "¿Kf" "¿s—" 
+	"¿ml" "¿ÜY" "¿‹„" "¿Ò‰" "¿Åƒ" "¿ªu" 
+	# K
+	"¿ïg" "¿ÇR" "¿·^" "¿TR" "¿¯„" "¿u„" "¿!S"
+	# L
+	"¿V" "¿÷–" "¿Z" "¿İ„" "¿pQ" "¿·Q" "¿G–" "¿™Ÿ" "¿†S" "¿Ng" 
+	"¿Ö^" "¿óg" "¿R" "¿Ş" "¿—g" "¿:…" "¿ÉQ" "¿h" "¿ÌQ" "¿F–" 
+	"¿ï" "¿bS" "¿œ" "¿W" "¿†š" "¿>h" "¿T" "¿Î" 
+	# M
+	"¿lš" "¿»" "¿¨X" "¿«ƒ" "¿…h" "¿Ûk" "¿mr" "¿án" "¿mR" "¿™„" 
+	"¿s|" "¿%V" "¿×‚" "¿Fz" "¿l" "¿(g"
+	# N
+	"¿Bw" "¿ir" "¿®”" "¿t^" "¿R" "¿*P"
+	# P
+	"¿ôˆ" "¿Xo" "¿^" "¿®v" "¿4g" "¿s^" "¿mV" 
+	# Q
+	"¿PŸ" "¿Ay" "¿TN" "¿Øˆ" "¿±" "¿±”" "¿æy" "¿òf" "¿HS" "¿¿w" 
+	"¿Cg"
+	# R
+	"¿v™" "¿ûN" "¿cƒ" "¿.–"
+	# S
+	"¿‹R" "¿Ï‚" "¿Ÿ|" "¿0t" "¿YR" 
+	# SH
+	"¿™l" "¿ów" "¿òS" "¿µ" "¿US" "¿3u" "¿ˆl" "¿FU" "¿S" "¿‚" 
+	"¿^" "¿Ëe" 
+	# T
+	"¿v–" "¿-Œ" "¿U" "¿dl" "¿åz" "¿0u" "¿‚m" "¿Õn" "¿j" 
+	# W
+	"¿fk" "¿4T" "¿O" "¿ëT" "¿¬" "¿N" "¿‡e" "¿)n" "¿‹s" "¿jl" 
+	"¿Á" "¿O›" "¿kS" "¿æ—" 
+	# X
+	"¿Y" "¿'„" "¿›" "¿T" "¿y˜" "¿Šq" "¿V" "¿¸‹" 
+	"¿›…" "¿Nƒ" "¿0Œ" 
+	# Y
+	"¿öS" "¿ÚY" "¿8n" "¿Õq" "¿%N" "¿œ˜" "¿–" "¿ë•" "¿9S" "¿·k"
+	"¿hg" "¿N" "¿ˆ" "¿CQ" "¿YO" "¿f" "¿³S" "¿2S" "¿‘N" 
+	# Z
+	"¿°R" "¿¹" "¿ç" "¿şf" "¿Vy" "¿æT" 
+	# ZH
+	"¿u" "¿hT" "¿yŠ" "¿US" "¿u" "¿.V" "¿àz" "¿Ÿ”" "¿1g" "¿ky" 
+	"¿ùz" "¿„^" "¿Ñ" 
 
-	#Harimari Titles
-	"'the Scarred'" "'the Sleeping Tiger'" "'the Roaring Tiger'" "'the Wise Tiger'" "'the Scholar'" "'the Thinker'" "'Goldclaw'" "'Highpaw'" "'Blackpaw'" "'Bloodpaw'" "'Wise-eye'"
-	"'Amberfist'" "'the Lazy'" "'the Smoker'" "'Bloodfang'" "'One-eye'" "'Half-paw'" "'the High One'" "'the Philosopher'" "'White Stripe'" "'Red Stripe'" "'Manslayer'" "'the Flayer'"
-	
-	#Harimari Surnames
-	"of the Broken Hide" "of the Rising Shadow" "of the Woodland Eyes" "of the Mountain Claw" "of the Spinning Wrath" "of the Crouching Fang" "of the Savage Jolt" "of the Devouring Maw"
-	"of the Grand Paw" "of the Bloody Paw" "of the True Claw" "of the Sapphire Eye" "of the Amber Eye" "of the Flowing Strike" "of the Diligent Coil" "of the Raging Claw" "of the Righteous Fury"
-	"of the Vengeful Gaze" "of the Grinning Fang" "of the Bloodied Kick" "of the Raging Wind" "of the Endless Moon" "of the Cruel Lash" "of the Wild Fang" "of the Ember Fang" "of the Dreaming Blossom"
-	"of the Night Fury" "of the Whispering Fist" "of the Calming Chain" "of the Vile Typhoon" "of the Azure Spirit" "of the Boundless Spirit" "of the Feral Strike" "of the Hungering Fang"
-	"of the Shining Fang" "of the Black Hide" "of the Endless Stripe" "of the Shadow Stripe" "of the Rapid Claw" "of the Crouching Thunder" "of the Hidden Fang" "of the Iron Fang"
-	"of the Lotus Claw" "of the Jade Claw" "of the Crouching Shadow" "of the Whipe Stripe"
+	"¿br" # brWRˆ
+	"¿Ğr" # ĞrÙN¶RÆN
+	"¿‰ÑN" "¿SÑN" # —glø‹PR
 }
 
 ship_names = {
-	#Generic South Raheni
-	Adamant Advantage Adventure Advice Answer Ardent Armada Arrogant Assistance Association Assurance Atlas Audacious 
-	Bear "Black Galley" "Black Pinnace" "Black Blood" Captain Centurion Coronation Courage Crocodile Crown
-	Daisy Defence Defiance Devastation Diamond Director Dolphin Dragon Drake Dreadnaught Duke Duchess Eagle Excellent Exchange Expedition Experiment
-	Falcon Fame Favourite Fellowship Fleetwood Flight Flirt Formidable Forrester Fortitude Fortune Gillyflower Globe "Golden Horse" "Golden Lion" "Golden Phoenix" Goliath Goodgrace Governor
-	"Grand Mistress" "Great Bark" "Great Charity" "Great Galley" "Great Gift"  "Great Pinnace" "Great Zebra" "Green Dragon" Greyhound Griffin Guide "Half Moon" Hare Harpy Hawke Hazardous Heart
-	Hero Hope "Hope Bark" "Hopeful Adventure" Humble Hunter Illustrious Impregnable Increase Indefatigable Inflexible Intrepid Invincible "Less Bark" "Less Pinnace" "Less Zebra"
-	Lively Lizard Lion Magnanime Magnificent Majestic Makeshift Medusa Minotaur Moderate Monarch Moon Moor "New Bark" Ocean 
-	Pansy Panther Parrot Porcupine Powerful
-	Redoubtable Reformation Regent Renown Repulse Research Reserve Resistance Resolution Restoration Revenge 
-	Salamander Sandwich Sapphire Satisfaction Seahorse Search Sheerness Speaker Speedwell Sphinx Splendid Sprite Stag Standard Stately Success Sunlight Sunbeam Superb Swan Sweepstake Swift Swiftsure
-	Terrible Terror Thunderer Tiger Tremendous Trident Trinity Triumph Trusty
-	Unicorn Union Unity Valiant Vanguard Venerable Vestal Veteran Victor Vindictive Virtue Violet
-	Warrior Warspite Zealous
-	
-	Elephant
-
-	Survey Surveillance Cow Ox Bird Hawk Sovereign Emperor
-
-	Cleric Rogue Fighter Ranger Sorcerer Wizard Warlock Monk Druid
-	Strength Dexterity Constitution Intelligence Wisdom Charisma
-}
-
-
+	"Sg" ")Y¢g" "ÛV…" "şRH–" ")Yñg"
+	"ñgòS" ")Yªg" "„sb" "*YS" "S—e"
+	"	NğS" ")Y:g" "‡ef" "N?eS›Q" ")Y>y"
+	"ËR" "SK„^è•" "‰s¬N" "*mów" "R—™Ÿ"
+	"‹vN†" "1gÀ–" "„sfk" "-ffk" "8l‰R"
+	"WS‰R" "™Ÿwm" "y‰R" "yŸ" "Ñ‘f"
+	"nÜ" "‰R" "tQIN" "fk‰R" "¸TR"
+	"^tf" "tQS" "ÛbÜ" "tQs^" "8lNm"
+	"kRIN" "8l·^" "ÁN·V" "‰RšR" "ö^s^"
+	"šRÜ" "G•Ü" "V—Ü" "mn" "ôÜ"
+	"Nmn" "s^ŸS" "gÇR" "lbZ" "^	V"
+	"^IN" "^³p" "G•N" "G•WS" "G•‰"
+	"G•S" "G•-N" "G•¹" "ZÜ" "·^Nm"
+	"Oepg" "G•wm" "ğl‰R" "ùfml" "…h‘N"
+	"O™Ÿ" "wcz˜" "wfk" "Ñ‘ğS" "O"
+	"^ÿR" "ŒvŠ" "	NqS" "·VÜw"
+}	
 
 army_names = {
-	"Army of $PROVINCE$"
+	"$PROVINCE$›Q"
 }
 
 fleet_names = {
-	"Tiger Fleet" "Elephant Fleet"
+	"$PROVINCE$4l^"
 }

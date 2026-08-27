@@ -24,8 +24,8 @@ add_country_modifier = {
 
 1438.1.1 = {
 	monarch = {
-		name = "Juen Tai"
-		dynasty = "Jyuk"
+		name = "µ”ðl"
+		dynasty = "¿ky"
 		culture = naamjyut
 		birth_date = 1424.5.12
 		adm = 2

@@ -413,6 +413,24 @@
  PROV8412:0 "û•±W"
  PROV8413:0 ",dqS†˜"
  PROV8414:0 "LˆØš­S"
+ PROV8415:0 "Ñ‘Tm"
+ PROV8416:0 "Ñ‘Tm"
+ PROV8417:0 "-fTm"
+ PROV8418:0 "-fTm"
+ PROV8419:0 "-fTm"
+ PROV8420:0 "nfk"
+ PROV8421:0 "nfk"
+ PROV8422:0 "™lAm"
+ PROV8423:0 "™lAm"
+ PROV8424:0 "IO|iå‚±"
+ PROV8425:0 "–FZZ±"
+ PROV8426:0 "–FZZ±"
+ PROV8427:0 "–FZZ±"
+ PROV8428:0 "–FZZ±"
+ PROV8429:0 "è•	T³l"
+ PROV8430:0 "è•	T³l"
+ PROV8431:0 "è•	T³l"
+ PROV8432:0 "‰f"
 
  PROV_ADJ8001:0 "äQh"
  PROV_ADJ8002:0 "‡N"
@@ -828,7 +846,24 @@
  PROV_ADJ8412:0 "û•±W"
  PROV_ADJ8413:0 ",dqS†˜"
  PROV_ADJ8414:0 "LˆØš­S"
-
+ PROV_ADJ8415:0 "Ñ‘Tm"
+ PROV_ADJ8416:0 "Ñ‘Tm"
+ PROV_ADJ8417:0 "-fTm"
+ PROV_ADJ8418:0 "-fTm"
+ PROV_ADJ8419:0 "-fTm"
+ PROV_ADJ8420:0 "nfk"
+ PROV_ADJ8421:0 "nfk"
+ PROV_ADJ8422:0 "™lAm"
+ PROV_ADJ8423:0 "™lAm"
+ PROV_ADJ8424:0 "IO|iå‚±"
+ PROV_ADJ8425:0 "–FZZ±"
+ PROV_ADJ8426:0 "–FZZ±"
+ PROV_ADJ8427:0 "–FZZ±"
+ PROV_ADJ8428:0 "–FZZ±"
+ PROV_ADJ8429:0 "è•	T³l"
+ PROV_ADJ8430:0 "è•	T³l"
+ PROV_ADJ8431:0 "è•	T³l"
+ PROV_ADJ8432:0 "‰f"
 
  suolungacha_area:0 "0t&OVåg"
  suolungacha_area_name:0 "0t&OVåg"
@@ -1120,6 +1155,21 @@
  pg4_area_name:0 "NaN"
  pg4_area_adj:0 "NaN"
 
+ river_yanhe_sea_area:0 "ßp³l"
+ river_yanhe_sea_area_name:0 "ßp³l"
+ river_yanhe_sea_area_adj:0 "ßp³l"
+
+ river_qvhe_sea_area:0 "IO³l"
+ river_qvhe_sea_area_name:0 "IO³l"
+ river_qvhe_sea_area_adj:0 "IO³l"
+
+ river_tianhe_sea_area:0 "–³l"
+ river_tianhe_sea_area_name:0 "–³l"
+ river_tianhe_sea_area_adj:0 "–³l"
+
+ river_mengi_sea_area:0 "è•	T³l"
+ river_mengi_sea_area_name:0 "è•	T³l"
+ river_mengi_sea_area_adj:0 "è•	T³l"
  ##################################################################
  wuxun_region:0 "fkTm"
  wuxun_region_name:0 "fkTm"
@@ -1132,7 +1182,7 @@
  nudanhan_region:0 "ªR9NWl"
  nudanhan_region_name:0 "ªR9NWl"
  nudanhan_region_adj:0 "ªR9NWl"
- #烟河诸省
+
  zhaoxun_region:0 "-fTm"
  zhaoxun_region_name:0 "-fTm"
  zhaoxun_region_adj:0 "-fTm"
@@ -1160,6 +1210,17 @@
  pugao_region_name:0 ")Y­S²„Ái"
  pugao_region_adj:0 ")Y­S²„Ái"
 
+ river_yanhe_sea_region:0 "ßp³lAmßW"
+ river_yanhe_sea_region:0 "ßp³lAmßW"
+ river_yanhe_sea_region:0 "ßp³lAmßW"
+
+ river_luoxian_sea_region:0 "WFy…Q³lAmßW"
+ river_luoxian_sea_region:0 "WFy…Q³lAmßW"
+ river_luoxian_sea_region:0 "WFy…Q³lAmßW"
+
+ river_mengi_sea_region:0 "è•	T³l"
+ river_mengi_sea_region_name:0 "è•	T³l"
+ river_mengi_sea_region_adj:0 "è•	T³l"
  ##################################################################
  shenzhou_superregion:0 "‡ÞT"
  shenzhou_superregion_name:0 "‡ÞT"

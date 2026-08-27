@@ -1,0 +1,72 @@
+
+setup_vision_haless = yes
+government = theocracy
+add_government_reform = xiaken
+government_rank = 1
+primary_culture = nephrite_dwarf
+religion = accretive_path
+technology_group = tech_east_dwarven
+
+capital = 8413
+fixed_capital = 8413
+
+1000.1.1 = { 
+	set_estate_privilege = estate_mages_organization_state
+	set_country_flag = dwarven_pantheon_rediscovery_completed
+	set_country_flag = dwarven_pantheon_rediscovery_disaster_done
+	set_country_flag = dwarven_pantheon_knows_dagrin
+	set_country_flag = dwarven_pantheon_knows_anvelind
+	set_country_flag = dwarven_pantheon_knows_margurz
+	set_country_flag = dwarven_pantheon_knows_urisazirn
+
+	set_country_flag = dwarven_pantheon_knows_dolurazan
+	set_country_flag = dwarven_pantheon_knows_karazlov
+	set_country_flag = dwarven_pantheon_knows_thyrfen
+	set_country_flag = dwarven_pantheon_knows_lorgrim
+}
+
+add_country_modifier = { name = xia_path_true_aim_mod_0 duration = -1 }
+#set_country_flag = xia_path_true_aim
+set_variable = { num_xia_origins_owned = 0 }
+
+# 1391.7.23 = {
+# 	monarch = {
+# 		name = "Kalgir"
+# 		dynasty = "Krakovar"
+# 		birth_date = 1301.8.8
+# 		adm = 5
+# 		dip = 4
+# 		mil = 4
+# 	}
+	
+# 	add_ruler_personality = benevolent_personality
+# 	add_ruler_personality = lawgiver_personality
+# 	set_ruler_flag = long_lived_ruler
+		
+# 	queen = {
+# 		name = "Otha"
+# 		dynasty = "Surehammer"
+# 		birth_date = 1320.5.20
+# 		death_date = 1475.4.10
+# 		female = yes
+# 		adm = 2
+# 		dip = 5
+# 		mil = 4
+# 	}
+# 	set_consort_flag = long_lived_ruler
+# }
+# 1400.2.11 = {
+# 	heir = {
+# 		name = "Kozen"
+# 		monarch_name = "Kozen X"
+# 		dynasty = "Krakovar"
+# 		birth_date = 1400.2.11
+# 		death_date = 1481.3.2
+# 		claim = 95
+# 		adm = 5
+# 		dip = 6
+# 		mil = 4
+# 	}
+# 	set_heir_flag = long_lived_ruler
+# }
+

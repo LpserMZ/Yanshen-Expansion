@@ -16,8 +16,8 @@ historical_friend = Y27 #Kohai
 
 1444.7.23 = {
 	monarch = {
-		name = "Holi"
-		dynasty = "Leng"
+		name = "¾yÎž"
+		dynasty = "¿·Q"
 		birth_date = 1421.8.8
 		female = yes
 		adm = 3

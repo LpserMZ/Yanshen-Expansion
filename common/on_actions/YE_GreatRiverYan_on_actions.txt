@@ -241,14 +241,19 @@ on_siege_lost_province =  {
 					NOT = { owns = ROOT } #NOT = { is_core = ROOT }	
 				}
 			}
-
-			cede_province = FROM
-			controller = {
-				country_event = {
-					id = YE_GRY.54 
+			if = {
+				limit = {
+					is_capital = no
+				}
+				cede_province = FROM
+				controller = {
+					country_event = {
+						id = YE_GRY.54 
+					}
 				}
 			}
 		}
+		
 
 	}
 	if = { # 士兵热情-围城

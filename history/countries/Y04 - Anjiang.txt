@@ -21,8 +21,8 @@ historical_friend = V22
 
 1442.1.2 = {
 	monarch = {
-		name = "Zhang"
-		dynasty = "Zudao"
+		name = "VySê"
+		dynasty = "ø.V" 
 		birth_date = 1421.5.24
 		culture = jiangszun
 		adm = 3

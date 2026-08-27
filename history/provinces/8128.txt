@@ -1,8 +1,8 @@
-add_core = Y18
-owner = Y18
+add_core = Y19
+owner = Y19
 culture = jinxun_culture
 religion = accretive_path
-controller = Y18
+controller = Y19
 is_city = no
 trade_goods = cloth
 base_tax = 4

@@ -593,7 +593,7 @@ YE_bianfang_4 = {
 
 		trigger = {
 			num_of_owned_provinces_with = {
-				value = 36
+				value = 32
 				region = luojiang_region
 			}  
 			iongsim_area = { #1个即可
@@ -602,9 +602,16 @@ YE_bianfang_4 = {
 		} 
 
 		effect = {  
-			jx3_area = {
+			mulim_area = {
 				add_permanent_claim = ROOT
 			}
+			jx9_area = {
+				add_permanent_claim = ROOT
+			}
+			jx8_area = {
+				add_permanent_claim = ROOT
+			}
+
 			tianlou_area = {
 				add_permanent_claim = ROOT
 			}

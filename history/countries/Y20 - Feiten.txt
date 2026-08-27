@@ -19,8 +19,8 @@ save_global_event_target_as = feiten_or_was_feiten_target
 
 1440.7.23 = {
 	monarch = {
-		name = "Zongmin"
-		dynasty = "Kai"
+		name = "—Rõ•"
+		dynasty = "¿¯„"
 		birth_date = 1402.8.8
 		adm = 3
 		dip = 4

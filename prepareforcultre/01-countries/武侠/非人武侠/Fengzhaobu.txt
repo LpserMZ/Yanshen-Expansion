@@ -1,0 +1,166 @@
+  
+
+#Country Name: Please see filename.
+
+graphical_culture = asiangfx
+
+color = { 220  18  245 }
+
+
+historical_idea_groups = {
+	economic_ideas
+	offensive_ideas
+	influence_ideas
+	defensive_ideas	
+	administrative_ideas	
+	trade_ideas
+	quality_ideas
+	innovativeness_ideas
+}
+
+historical_units = {
+	east_harimari_1_crouching_tiger
+	east_harimari_1_harimari_stalkers
+	east_harimari_9_harimari_crossbows
+	east_harimari_10_hupeng_cavalry
+	east_harimari_12_thousand_splinter_defense
+	east_harimari_15_jiantsiang_sharpshooters
+	east_harimari_15_roaring_tiger_monks
+	east_harimari_19_shattering_roar
+	east_harimari_19_pangolin_hinge_formations
+	east_harimari_18_mounted_stalkers
+	east_harimari_23_streaming_volley_infantry
+	east_harimari_23_four_winds_cavalry
+	east_harimari_26_prowling_rifles
+	east_harimari_28_harimari_dragoons
+	east_harimari_30_golden_stripe_infantry
+}
+
+monarch_names = {
+
+	#Yanshen Harimari names
+	"阿特赛 #0" = 10
+	"阿汉 #0" = 10
+	"阿杰努奥 #0" = 10
+	"阿古希耶 #0" = 10
+	"阿兰布沙 #0" = 10
+	"阿内扬格 #0" = 10
+	"阿利摩 #0" = 10
+	"阿提迦耶 #0" = 10
+	"婆迦 #0" = 10
+	"补罗迦 #0" = 10
+	"补卢诃 #0" = 10
+	"补卢伐 #0" = 10
+	"达西伐 #0" = 10
+	"杜补伐 #0" = 10
+	"杜拉图耶 #0" = 10
+	"迦兜迦 #0" = 10
+	"诃兰 #0" = 10
+	"诃利秣 #0" = 10
+	"诃悉多 #0" = 10
+	"悉顶婆 #0" = 10
+	"因提 #0" = 10
+	"迦般陀 #0" = 10
+	"诃罗 #0" = 10
+	"俱阇迦 #0" = 10
+	"俱婆迦 #0" = 10
+	"摩利佉 #0" = 10
+	"摩武西 #0" = 10
+	"母补尔 #0" = 10
+	"那多诃西 #0" = 10
+	"补罗西多 #0" = 10
+	"补罗多提 #0" = 10
+	"补罗多 #0" = 10
+	"罗摩 #0" = 10
+	"罗朋 #0" = 10
+	"罗婆那 #0" = 10
+	"卢沙诃 #0" = 10
+	"卢曼 #0" = 10
+	"娑罗 #0" = 10
+	"苏波那阇 #0" = 10
+	"苏汉 #0" = 10
+	"多罗伽 #0" = 10
+	"武阇陀 #0" = 10
+	"婆迦 #0" = 10
+	"婆摩尤尔 #0" = 10
+	"韦婆尔 #0" = 10
+	"补卢尔 #0" = 10
+	"伊多摩 #0" = 10
+	"阇利迦 #0" = 10
+	
+	"阿耆 #0" = -10
+	"阿母罗 #0" = -10
+	"阿那母 #0" = -10
+	"阿悉罗 #0" = -10
+	"阿尼婆利 #0" = -10
+	"阿富诃 #0" = -10
+	"婆耆 #0" = -10
+	"补娑罗 #0" = -10
+	"提利波尾 #0" = -10
+	"底娑摩罗 #0" = -10
+	"底多西 #0" = -10
+	"杜利耶 #0" = -10
+	"阿伊迷提武 #0" = -10
+	"尔提安达 #0" = -10
+	"阿伊诃弥 #0" = -10
+	"伊多 #0" = -10
+	"伊迦提 #0" = -10
+	"伊佉 #0" = -10
+	"耶多苏利 #0" = -10
+	"迦卢基 #0" = -10
+	"迦佉 #0" = -10
+	"耆提约 #0" = -10
+	"耆摩利 #0" = -10
+	"努迦 #0" = -10
+	"努沙 #0" = -10
+	"阿毗罗 #0" = -10
+	"伐罗 #0" = -10
+	"补罗提 #0" = -10
+	"补母利 #0" = -10
+	"补伊娑罗 #0" = -10
+	"伦耆 #0" = -10
+	"奢罗 #0" = -10
+	"输弥尔 #0" = -10
+	"西婆那阇 #0" = -10
+	"多多迦 #0" = -10
+	"提罗 #0" = -10
+	"婆提罗 #0" = -10
+	"婆耆罗那 #0" = -10
+	"婆农耆 #0" = -10
+	"耶婆罗 #0" = -10
+	"伊悉底 #0" = -10
+	"阇利迦 #0" = -10	
+}
+
+leader_names = {
+	#The list needs at least six names to work properly, and 10 to not complain in the error log
+	"¿「卧虎道」" "¿「卧虎道」" "¿「卧虎道」" "¿「卧虎道」" "¿「卧虎道」"
+	"¿「卧虎道」" "¿「卧虎道」" "¿「卧虎道」" "¿「卧虎道」" "¿「卧虎道」"
+}
+
+ship_names = {
+	"北极" "天枢" "四辅" "勾陈" "天柱"
+	"柱史" "天枪" "玄戈" "太尊" "北斗"
+	"三台" "天机" "文昌" "七政将军" "天社"
+	"辽宁" "北落师门" "玉京" "洪石" "青龙"
+	"白虎" "朱雀" "玄武" "昭武" "永安"
+	"南安" "龙海" "福安" "福鼎" "金昌"
+	"清远" "西宁" "兴义" "武安" "咸宁"
+	"瑞昌" "兴化" "招远" "兴平" "永济"
+	"孝义" "永康" "仁德" "安定" "延平"
+	"定远" "镇远" "靖远" "涞源" "致远"
+	"济源" "平原" "朝勇" "扬威" "广嘉"
+	"广义" "广炳" "镇东" "镇南" "镇西"
+	"镇北" "镇中" "镇边" "威远" "康济"
+	"敏杰" "镇海" "泰安" "曹江" "梅云"
+	"伏龙" "捷顺" "真武" "金台" "伊通"
+	"广寿" "百越" "三危" "德胜"
+}	
+
+army_names = {
+	"锋爪侠兵" "$PROVINCE$兵士"
+}
+
+fleet_names = {
+	"$PROVINCE$水师"
+}

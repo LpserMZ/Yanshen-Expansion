@@ -13,8 +13,8 @@ fixed_capital = 4869
 
 1430.7.23 = {
 	monarch = {
-		name = "Liang"
-		dynasty = "Xianhe"
+		name = "ªR¥u"
+		dynasty = "¿h"
 		birth_date = 1378.8.8
 		adm = 4
 		dip = 4

@@ -16,8 +16,8 @@ set_estate_privilege = estate_church_guaranteed_autonomy
 
 1440.7.23 = {
 	monarch = {
-		name = "Sheng"
-		dynasty = "Ren"
+		name = "f"
+		dynasty = "¿ûN"
 		birth_date = 1382.8.8
 		adm = 6
 		dip = 3

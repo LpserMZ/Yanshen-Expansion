@@ -1,0 +1,66 @@
+country_decisions = {
+	test_01 = {
+		major = yes
+		potential = {
+			ai = no
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			change_government = monarchy
+			define_ruler = {
+				dynasty = "¿安"
+			}
+			change_government = republic
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	test_02 = {
+		major = yes
+		potential = {
+			ai = no
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			change_government = monarchy
+			define_ruler = {
+				dynasty = "¿班"
+				adm = 1
+				dip = 4
+				mil = 1
+			}
+			change_government = republic
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	test_03 = {
+		major = yes
+		potential = {
+			ai = no
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			change_government = monarchy
+			define_ruler = {
+				name = "测试"
+				dynasty = "¿蔡"
+				adm = 1
+				dip = 4
+				mil = 1
+			}
+			change_government = republic
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}	
