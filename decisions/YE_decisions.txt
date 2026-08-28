@@ -1077,7 +1077,59 @@ country_decisions = {
 			factor = 0
 		}
 	}
-
+	# test_name_1 = {
+	# 	major = yes
+	# 	potential = {
+	# 		ai = no
+	# 	}
+	# 	allow = {
+	# 		always = yes
+	# 	}
+	# 	effect = {
+	# 		define_heir = {
+	# 			name = TESTNAME_1
+	# 			dynasty = ROOT
+	# 		}
+	# 	}
+	# 	ai_will_do = {
+	# 		factor = 0
+	# 	}
+	# }
+	# test_name_2 = {
+	# 	major = yes
+	# 	potential = {
+	# 		ai = no
+	# 	}
+	# 	allow = {
+	# 		always = yes
+	# 	}
+	# 	effect = {
+	# 		define_heir = {
+	# 			name = TESTNAME_2
+	# 			dynasty = TESTDYN_2
+	# 		}
+	# 	}
+	# 	ai_will_do = {
+	# 		factor = 0
+	# 	}
+	# }
+	# test_name_3 = {
+	# 	major = yes
+	# 	potential = {
+	# 		ai = no
+	# 	}
+	# 	allow = {
+	# 		always = yes
+	# 	}
+	# 	effect = {
+	# 		define_heir = {
+	# 			dynasty = TESTDYN_3
+	# 		}
+	# 	}
+	# 	ai_will_do = {
+	# 		factor = 0
+	# 	}
+	# }
 
 
 

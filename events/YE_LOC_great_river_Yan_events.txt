@@ -1209,25 +1209,14 @@ country_event = { #23 辉帝-龙癸增
 			tag = Y09
 			was_tag = Y09
 		}
-		dynasty = "Long"
+		YE_Dynasty_long_trigger = yes
 		has_regency = no
 		is_year = 1502
 	}
 
 	option = {
 		name = YE_GRY.23.a
-		define_heir = {
-			male = yes
-			dynasty = ROOT
-			culture = ROOT
-			religion = ROOT
-			name = "Guizeng"
-			claim = 100
-			adm = 6
-			dip = 6
-			mil = 6
-		}
-
+		define_heir_long_guizeng = yes
 	}
 	option = {
 		name = YE_GRY.23.b
@@ -2902,13 +2891,7 @@ country_event = { #48 邓的演讲
 	option = {
 		name = YE_GRY.48.a
 		ai_chance = { factor = 1 }
-		define_ruler = {
-			name = "Qinwen"
-			dynasty = "Deng"
-			adm = 5
-			dip = 6
-			mil = 2
-		}
+		define_ruler_deng_qinwen = yes
 		set_country_flag = dengqinwen_rule_beidugang_flag
 	}
 	option = {

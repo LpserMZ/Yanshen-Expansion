@@ -1,0 +1,3 @@
+YE_Dynasty_long_trigger = {
+	dynasty = "¿™Ÿ"
+}

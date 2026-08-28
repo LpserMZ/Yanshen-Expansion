@@ -1,0 +1,183 @@
+spriteTypes = {
+	spriteType = {
+        name = "MISSION_YE_jinqiu_in_flame"	
+        texturefile = "gfx//interface//missions//MISSION_YE_jinqiu_in_flame.dds"
+    }
+	spriteType = {
+        name = "MISSION_YE_press_tiger"	
+        texturefile = "gfx//interface//missions//MISSION_YE_press_tiger.dds"
+    }
+	spriteType = {
+        name = "MISSION_YE_cut_horns"	
+        texturefile = "gfx//interface//missions//MISSION_YE_cut_horns.dds"
+    }
+	spriteType = {
+        name = "MISSION_YE_accerative"	
+        texturefile = "gfx//interface//missions//MISSION_YE_accerative.dds"
+    }
+	spriteType = {
+        name = "MISSION_YE_fenghuang"	
+        texturefile = "gfx//interface//missions//MISSION_YE_fenghuang.dds"
+    }
+	spriteType = {
+        name = "MISSION_YE_general_ruler"	
+        texturefile = "gfx//interface//missions//MISSION_YE_general_ruler.dds"
+    }
+	spriteType = {
+        name = "MISSION_YE_temple_in_cliff"	
+        texturefile = "gfx//interface//missions//MISSION_YE_temple_in_cliff.dds"
+    }
+	spriteType = {
+        name = "MISSION_YE_skull_valley_black"	
+        texturefile = "gfx//interface//missions//MISSION_YE_skull_valley_black.dds"
+    }
+	spriteType = {
+        name = "MISSION_YE_river_port"	
+        texturefile = "gfx//interface//missions//MISSION_YE_river_port.dds"
+    }
+	spriteType = {
+        name = "MISSION_YE_peacock_feather_golden"	
+        texturefile = "gfx//interface//missions//MISSION_YE_peacock_feather_golden.dds"
+    }
+	spriteType = {
+        name = "MISSION_YE_burning_tropics"	
+        texturefile = "gfx//interface//missions//MISSION_YE_burning_tropics.dds"
+    }
+	spriteType = {
+        name = "MISSION_YE_administrative_district"	
+        texturefile = "gfx//interface//missions//MISSION_YE_administrative_district.dds"
+    }
+	spriteType = {
+        name = "MISSION_YE_green_river"	
+        texturefile = "gfx//interface//missions//MISSION_YE_green_river.dds"
+    }
+	spriteType = {
+        name = "MISSION_YE_watch_sea_hills"	
+        texturefile = "gfx//interface//missions//MISSION_YE_watch_sea_hills.dds"
+    }
+	spriteType = {
+        name = "MISSION_YE_red_sails"	
+        texturefile = "gfx//interface//missions//MISSION_YE_red_sails.dds"
+    }
+	spriteType = {
+        name = "MISSION_YE_unite_blueprint"	
+        texturefile = "gfx//interface//missions//MISSION_YE_unite_blueprint.dds"
+    }
+	spriteType = {
+        name = "MISSION_YE_white_dragon_empire"	
+        texturefile = "gfx//interface//missions//MISSION_YE_white_dragon_empire.dds"
+    }
+	spriteType = {
+        name = "MISSION_YE_safety_sea"	
+        texturefile = "gfx//interface//missions//MISSION_YE_safety_sea.dds"
+    }
+	spriteType = {
+        name = "MISSION_YE_never_regret_even_death"	
+        texturefile = "gfx//interface//missions//MISSION_YE_never_regret_even_death.dds"
+    }
+	spriteType = {
+        name = "MISSION_YE_rider"	
+        texturefile = "gfx//interface//missions//MISSION_YE_rider.dds"
+    }
+	spriteType = {
+        name = "MISSION_YE_wuxia"	
+        texturefile = "gfx//interface//missions//MISSION_YE_wuxia.dds"
+    }
+	spriteType = {
+        name = "MISSION_YE_write_zouzhe"	
+        texturefile = "gfx//interface//missions//MISSION_YE_write_zouzhe.dds"
+    }
+	spriteType = {
+        name = "MISSION_YE_classroom"	
+        texturefile = "gfx//interface//missions//MISSION_YE_classroom.dds"
+    }
+	spriteType = {
+        name = "MISSION_YE_qingwu"	
+        texturefile = "gfx//interface//missions//MISSION_YE_qingwu.dds"
+    }
+	spriteType = {
+        name = "MISSION_YE_schoolgate"	
+        texturefile = "gfx//interface//missions//MISSION_YE_schoolgate.dds"
+    }
+	spriteType = {
+        name = "MISSION_YE_soilder_on_wall"	
+        texturefile = "gfx//interface//missions//MISSION_YE_soilder_on_wall.dds"
+    }
+	spriteType = {
+        name = "MISSION_YE_officials_discussing"	
+        texturefile = "gfx//interface//missions//MISSION_YE_officials_discussing.dds"
+    }
+	spriteType = {
+        name = "MISSION_YE_moling"	
+        texturefile = "gfx//interface//missions//MISSION_YE_moling.dds"
+    }
+	spriteType = {
+        name = "MISSION_YE_snowleopard"	
+        texturefile = "gfx//interface//missions//MISSION_YE_snowleopard.dds"
+    }
+	spriteType = {
+        name = "MISSION_YE_ancient_huge_bird"	
+        texturefile = "gfx//interface//missions//MISSION_YE_ancient_huge_bird.dds"
+    }
+	spriteType = {
+        name = "MISSION_YE_indochina_inland_villiage"	
+        texturefile = "gfx//interface//missions//MISSION_YE_indochina_inland_villiage.dds"
+    }
+	spriteType = {
+        name = "MISSION_YE_farmland_and_cattles"	
+        texturefile = "gfx//interface//missions//MISSION_YE_farmland_and_cattles.dds"
+    }
+	spriteType = {
+        name = "MISSION_YE_white_dragon_red_pearl"	
+        texturefile = "gfx//interface//missions//MISSION_YE_white_dragon_red_pearl.dds"
+    }
+	spriteType = {
+        name = "MISSION_YE_coal_ball"	
+        texturefile = "gfx//interface//missions//MISSION_YE_coal_ball.dds"
+    }
+	spriteType = {
+        name = "MISSION_YE_dark_clouds_cotton"	
+        texturefile = "gfx//interface//missions//MISSION_YE_dark_clouds_cotton.dds"
+    }
+    spriteType = {
+        name = "MISSION_YE_log"	
+        texturefile = "gfx//interface//missions//MISSION_YE_log.dds"
+    }
+	spriteType = {
+        name = "MISSION_YE_whale_hunting"	
+        texturefile = "gfx//interface//missions//MISSION_YE_whale_hunting.dds"
+    }
+	spriteType = {
+        name = "MISSION_YE_iron_factory"	
+        texturefile = "gfx//interface//missions//MISSION_YE_iron_factory.dds"
+    }
+	spriteType = {
+        name = "MISSION_YE_early_modern_city"	
+        texturefile = "gfx//interface//missions//MISSION_YE_early_modern_city.dds"
+    }
+	# spriteType = {
+    #     name = ""	
+    #     texturefile = "gfx//interface//missions//.dds"
+    # }
+    # spriteType = {
+    #     name = ""	
+    #     texturefile = "gfx//interface//missions//.dds"
+    # }
+	# spriteType = {
+    #     name = ""	
+    #     texturefile = "gfx//interface//missions//.dds"
+    # }
+	# spriteType = {
+    #     name = ""	
+    #     texturefile = "gfx//interface//missions//.dds"
+    # }
+	# spriteType = {
+    #     name = ""	
+    #     texturefile = "gfx//interface//missions//.dds"
+    # }
+	# spriteType = {
+    #     name = ""	
+    #     texturefile = "gfx//interface//missions//.dds"
+    # }
+	
+}

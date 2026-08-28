@@ -1,0 +1,22 @@
+define_heir_long_guizeng = {
+	define_heir = {
+		male = yes
+		dynasty = ROOT
+		culture = ROOT
+		religion = ROOT
+		name = "xvûX"
+		claim = 100
+		adm = 6
+		dip = 6
+		mil = 6
+	}
+}
+define_ruler_deng_qinwen = {
+	define_ruler = {
+		name = "¶îáe"
+		dynasty = "øìê"
+		adm = 5
+		dip = 6
+		mil = 2
+	}
+}
