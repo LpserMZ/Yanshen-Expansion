@@ -1,0 +1,7 @@
+objectTypes = {
+	pdxmesh = {
+		name = "dice_mesh"
+		file = "gfx/models/YE_models/test/dice.mesh"
+		scale = 1.0
+	}
+}

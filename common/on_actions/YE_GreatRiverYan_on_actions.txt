@@ -28,6 +28,27 @@ on_startup = {
 			set_country_flag = anti_eunuch_country
 		}
 		YC1 = { remove_country = yes }
+		every_country = {
+			limit= {
+
+				capital_scope = {
+					# continent = europe
+					# continent = africa
+					# continent = asia
+					OR = {
+						# continent = asia
+						# continent = africa
+						region = nomsyulhan_region
+						#superregion = jvzhiguo_superregion
+					}
+					# NOT = { superregion = bulwar_superregion }
+					# NOT = { superregion = north_salahad_superregion }
+						
+				}
+			}
+			disband_all_units = yes
+			remove_country = THIS
+		}
 
 		Y18 = { country_event = { id = YE_GRY.57 days = 10 } }
 

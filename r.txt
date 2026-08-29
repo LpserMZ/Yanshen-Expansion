@@ -1,24 +1,28 @@
-# every_country = {
-# 	# limit= {
+every_country = {
+	limit= {
 
-# 	# 	capital_scope = {
-# 	# 		# continent = europe
-# 	# 		# continent = africa
-# 	# 		continent = asia
-# 	# 		# OR = {
-				
-# 	# 		# 	continent = africa
-# 	# 		# 	continent = north_america
-# 	# 		# 	continent = south_america
-# 	# 		# }
-# 	# 		NOT = { superregion = bulwar_superregion }
-# 	# 		NOT = { superregion = north_salahad_superregion }
+		capital_scope = {
+			# continent = europe
+			# continent = africa
+			# continent = asia
+			OR = {
+				# continent = asia
+				# continent = africa
+				region = nomsyulhan_region
+				#superregion = jvzhiguo_superregion
+			}
+			# NOT = { superregion = bulwar_superregion }
+			# NOT = { superregion = north_salahad_superregion }
 			
-# 	# 	}
-# 	# }
-# 	disband_all_units = yes
-# 	#remove_country = THIS
+		}
+	}
+	disband_all_units = yes
+	remove_country = THIS
+}
+# Y91 = {
+# 	remove_country = THIS
 # }
+
 # if = {
 # 	limit = {
 # 		always = no
@@ -170,5 +174,4 @@
 
 
 
-
-
+# asssaassssssssssssss15700101

@@ -3221,7 +3221,7 @@ country_event = { #53 大总统-新任统治者出现时触发
 	}
 }
 
-#统一战争-54-55-63
+#统一战争
 country_event = { #54 案牍劳形
 	id = YE_GRY.54 
 	title = YE_GRY.54.T

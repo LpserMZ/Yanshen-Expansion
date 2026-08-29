@@ -11,5 +11,5 @@ dependencies={
 replace_path="gfx/loadingscreens"
 picture="thumbnail.png"
 supported_version="v1.37.5.0"
-path="mod/YanShen Expansion"
+path="D:/Documents/Paradox Interactive/Europa Universalis IV/mod/YanShen Expansion"
 remote_file_id="3679358570"
