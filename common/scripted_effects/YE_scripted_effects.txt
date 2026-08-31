@@ -562,9 +562,8 @@ check_yannification_completion_script_effect = {
             }
         }
 
-        clear_yannification_progress = yes
-
-        YE_yanification_change_culture = yes
+		YE_yanification_change_culture = yes
+        clear_yannification_progress = yes 
     }
 }
 

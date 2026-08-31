@@ -1017,7 +1017,7 @@ country_decisions = {
 							province_id = 8412
 						}
 						NOT = { area = ml_cave5_area }
-						NOT = { owned_by = ROOT }
+						NOT = { is_core = ROOT }
 					}
 					add_territorial_core = ROOT
 				}

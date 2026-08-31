@@ -347,14 +347,8 @@ on_yearly_pulse = {
 				change_variable = { which = prov_yannification value = 3 }
 				change_variable = { which = prov_yannification_intermarriage_years value = -1 }
 			}
-			if = {
-				limit = {
-					check_variable = { which = prov_yannification value = 100 }
-				}
-				clear_yannification_progress = yes
-
-				yanification_change_culture = yes
-			}
+			
+			check_yannification_completion_script_effect = yes
 		}
 	}
 }

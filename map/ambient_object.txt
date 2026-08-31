@@ -5596,20 +5596,20 @@ type={
 		}
 	}
 }
-type={
-	type="dice_entity"
-	use_animation=no
-	scale=1.500000
-	time_duration=300.000000
-	object={
-		name="yanshen_dice"
-		hidden_on_start=no
-		position={
-			4669.000 10 1297.000
-		}
-		rotation={
-			0.000 0.000 0.000 
-		}
-	}
+# type={
+# 	type="dice_entity"
+# 	use_animation=no
+# 	scale=1.500000
+# 	time_duration=300.000000
+# 	object={
+# 		name="yanshen_dice"
+# 		hidden_on_start=no
+# 		position={
+# 			4669.000 10 1297.000
+# 		}
+# 		rotation={
+# 			0.000 0.000 0.000 
+# 		}
+# 	}
 
-}
+# }

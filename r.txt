@@ -1,24 +1,24 @@
-every_country = {
-	limit= {
+# every_country = {
+# 	limit= {
 
-		capital_scope = {
-			# continent = europe
-			# continent = africa
-			# continent = asia
-			OR = {
-				# continent = asia
-				# continent = africa
-				region = nomsyulhan_region
-				#superregion = jvzhiguo_superregion
-			}
-			# NOT = { superregion = bulwar_superregion }
-			# NOT = { superregion = north_salahad_superregion }
+# 		capital_scope = {
+# 			continent = europe
+# 			# continent = africa
+# 			# continent = asia
+# 			# OR = {
+# 				# continent = asia
+# 				# continent = africa
+# 				# region = nomsyulhan_region
+# 				#superregion = jvzhiguo_superregion
+# 			# }
+# 			# NOT = { superregion = bulwar_superregion }
+# 			# NOT = { superregion = north_salahad_superregion }
 			
-		}
-	}
-	disband_all_units = yes
-	remove_country = THIS
-}
+# 		}
+# 	}
+# 	disband_all_units = yes
+# 	remove_country = THIS
+# }
 # Y91 = {
 # 	remove_country = THIS
 # }
@@ -143,8 +143,11 @@ every_country = {
 # 	beikling_homeland_provinces = { cede_province = C01 }
 # 	wall_of_yanshen = { cede_province = C02 }
 # }
-
-# set_variable = { which = prov_yannification value = 10 }
+remove_country_modifier = yannification_action_cooldown
+4755 = {
+	set_variable = { which = prov_yannification value = 94 }
+	#YE_yanification_change_culture = yes
+}
 # change_variable = { which = prov_yannification value = 10 }
 # check_variable = { which = prov_yannification value = 0.1 }
 
@@ -173,5 +176,287 @@ every_country = {
 # set_country_flag = YE_allow_digong_flag
 
 
+# asssaassssssssssssss15480707
+# every_owned_province = {
+# 	if = { # yanzhou
+# 		limit = {
+# 			superregion = yanshen_superregion
+# 		}
+# 		if = {
+# 			limit = {
+# 				region = zhuyue_region
+# 			}
+# 			set_variable = { which = prov_yannification value = 99 } #naamjyut
+# 		}
+# 		else_if = {
+# 			limit = {
+# 				OR = {
+# 					region = zhaoxun_region
+# 					region = yanxin_region 
+# 				}
+# 				NOT = { area = moryokang_area }
+# 				NOT = { area = ml_cave5_area }
+# 				NOT = { area = zx3_area }
+# 				NOT = { area = jinqiu_area }
+# 				NOT = { area = zx4_area }
+# 			}
+# 			set_variable = { which = prov_yannification value = 99 } #jiangszun
+# 		}
+# 		else_if = {
+# 			limit = {
+# 				OR = {
+# 					area = moryokang_area
+# 					area = ml_cave5_area
+# 					area = zx3_area
+# 					area = jinqiu_area
+# 					area = zx4_area
+# 				}
+# 			}
+# 			set_variable = { which = prov_yannification value = 99 } #beikling
+# 		}
+# 		else_if = {
+# 			limit = {
+# 				OR = {
+# 					region = jianwu_region
+# 					region = jinxun_region
+# 				}
+# 			}
+# 			set_variable = { which = prov_yannification value = 99 } #jiangyang
+# 		}
+# 		else_if = {
+# 			limit = {
+# 				region = luojiang_region 
+# 			}
+# 			set_variable = { which = prov_yannification value = 99 } #gangim
+# 		}
+# 	}
+# 	else_if = { #shenzhou
+# 		limit = {
+# 			superregion = shenzhou_superregion
+# 		}
+# 		if = {
+# 			limit = {
+# 				region = xianjie_region
+# 			}
+# 			set_variable = { which = prov_yannification value = 99 } #szitu
+# 		}
+# 		else_if = {
+# 			limit = {
+# 				region = demon_hills_region
+# 			}
+# 			set_variable = { which = prov_yannification value = 99 } #beikling
+# 		}
+# 		else_if = { # wuxun part1
+# 			limit = {
+# 				OR = {
+# 					area = wx4_area
+# 					area = pharata_area
+# 					area = yodhilakra_area
+# 					area = sir_area
+# 					area = tietyuan_area
+# 					area = mogutian_area
 
-# asssaassssssssssssss15700101
+# 					area = nadida_area
+# 				}
+# 			}
+# 			set_variable = { which = prov_yannification value = 99 } #jichuan
+# 		}
+# 		else_if = { # wuxun part2
+# 			limit = {
+# 				region = wuxun_region 
+# 			}
+# 			set_variable = { which = prov_yannification value = 99 } #yansu
+# 		}
+# 	}
+# 	else_if = { #rahen
+# 		limit = {
+# 			superregion = rahen_superregion
+# 		}
+# 		if = {
+# 			limit = {
+# 				OR = {
+# 					region = shamakhad_region
+# 					region = dhujat_region
+# 				}
+# 			}
+# 			set_variable = { which = prov_yannification value = 99 } #luoxian
+# 		}
+# 		else_if = {
+# 			limit = {
+# 				OR = {
+# 					region = rakhadesh_region
+# 					region = rahen_coast_region
+# 				}
+# 			}
+# 			set_variable = { which = prov_yannification value = 99 } #kuoliu
+# 		}
+# 	}
+# 	else_if = { #xianzhong
+# 		limit = {
+# 			superregion = xianzhong_superregion
+# 		}
+# 		set_variable = { which = prov_yannification value = 99 } #xianzhong_yan
+# 	}
+# 	else_if = { # gozengun
+# 		limit = {
+# 			superregion = gozengun_superregion
+# 		}
+# 		if = {
+# 			limit = {
+# 				region = shuvuushudi_region
+# 			}
+# 			set_variable = { which = prov_yannification value = 99 } #shuokyuan
+# 		}
+# 		else_if = {
+# 			limit = {
+# 				region = nudanhan_region
+# 			}
+# 			set_variable = { which = prov_yannification value = 99 } #beikling
+# 		}
+# 		else_if = {
+# 			limit = {
+# 				region = gowon_region
+# 			}
+# 			set_variable = { which = prov_yannification value = 99 } #jiangyang
+# 		}
+# 	}
+# 	else_if = { #vimdatrong
+# 		limit = {
+# 			superregion = vimdatrong_superregion
+# 		}
+# 		if = {
+# 			limit = {
+# 				OR = {
+# 					region = pugao_region
+# 					region = thidinkai_region
+# 				}
+				
+# 			}
+# 			set_variable = { which = prov_yannification value = 99 } #naamzau
+# 		}
+# 		else_if = {
+# 			limit = {
+# 				region = bomdan_region
+# 			}
+# 			set_variable = { which = prov_yannification value = 99 } #mangzhou
+# 		}
+# 		else_if = {
+# 			limit = {
+# 				region = lupulan_rainforest_region
+# 			}
+# 			set_variable = { which = prov_yannification value = 99 } #yvzhou
+# 		}
+# 		else_if = {
+# 			limit = {
+# 				region = shuanghe_region
+# 			}
+# 			set_variable = { which = prov_yannification value = 99 } #shuanghe_yan
+# 		}
+# 		else_if = {
+# 			limit = {
+# 				owner = { culture = naamjyut }
+# 				region = ringlet_isles_region
+# 			}
+# 			set_variable = { which = prov_yannification value = 99 } #pinghoi
+# 		}
+# 		else_if = {
+# 			limit = {
+# 				NOT = { owner = { culture = naamjyut } }
+# 				region = ringlet_isles_region
+# 			}
+# 			set_variable = { which = prov_yannification value = 99 } #xianyue
+# 		}
+# 		else = {
+# 			set_variable = { which = prov_yannification value = 99 } #naamzau
+# 		}
+# 	}
+	
+# 	else_if = { # bulwar
+# 		limit = {
+# 			superregion = bulwar_superregion
+# 		}
+# 		if = {
+# 			limit = {
+# 				OR = {
+# 					region = bahar_region
+# 					region = bulwar_proper_region
+# 					region = harpy_hills_region
+# 				}
+# 			}
+# 			set_variable = { which = prov_yannification value = 99 } #sule
+# 		}
+# 		else_if = {
+# 			limit = {
+# 				OR  = {
+# 					region = far_bulwar_region
+# 					region = far_salahad_region
+# 				}
+# 			}
+# 			set_variable = { which = prov_yannification value = 99 } #shahe
+# 		}
+# 	}
+# 	else_if = { # sarhal
+# 		limit = {
+# 			OR = {
+# 				region = gazraak_region
+# 				superregion = east_sarhal_superregion
+# 			}
+# 		}
+# 		if = {
+# 			limit = {
+# 				OR = {
+# 					region = gazraak_region
+
+
+# 					region = yetefesefi_region
+# 					region = denibari_region
+# 					region = telekenid_region
+# 					region = dreksaret_region
+# 				}
+# 			}
+# 			set_variable = { which = prov_yannification value = 99 } #yangzhou
+# 		}
+# 		else_if = {
+# 			limit = {
+# 				OR = {
+# 					region = ishyamtumu_region
+# 					region = bamaliwuni_region
+# 				}
+# 			}
+# 			set_variable = { which = prov_yannification value = 99 } #xiangyang
+# 		}
+		
+# 	}
+# 	else_if = { # ardimia
+# 		limit = {
+# 			superregion = djinnakah_superregion
+# 		}
+# 		set_variable = { which = prov_yannification value = 99 } #haijin
+# 	}
+	
+# 	else_if = { # xvanzhou
+# 		limit = {
+# 			superregion = jvzhiguo_superregion
+# 		}
+# 		set_variable = { which = prov_yannification value = 99 } #shuokyuan
+# 	}
+# 	else_if = { # forbidden_lands
+# 		limit = {
+# 			superregion = forbidden_lands_superregion
+# 		}
+# 		set_variable = { which = prov_yannification value = 99 } #kuldaakin
+# 	}
+
+# 	else_if = { #因斯亚西北
+# 		limit = {
+# 			superregion = kanolowele_superregion
+# 		}
+# 		set_variable = { which = prov_yannification value = 99 } #yvying
+# 	}
+# 	else_if = { #因斯亚西南
+# 		limit = {
+# 			superregion = insyaan_lowlands_superregion
+# 		}
+# 		set_variable = { which = prov_yannification value = 99 } #guyan
+# 	}
+# }
