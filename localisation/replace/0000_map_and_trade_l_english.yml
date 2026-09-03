@@ -102,6 +102,11 @@
  PROV4840:0 "fk‘N"
  PROV_ADJ4840:0 "fk‘N"
 
+ shamakhad:0 "fkTm"
+ trade_company_shamakhad:0 "fkTmyr¸‹8f:S"
+ TRADE_COMPANY_SHAMAKHAD_Root_GetName:0 "[Root.GetAdjective]fkTmlQøS"
+ TRADE_COMPANY_SHAMAKHAD_Shamakhad_Trade_Company:0 "fkTm8flQøS"
+
 #  :0 ""
 #  _name:0 ""
 #  _adj:0 ""

@@ -553,7 +553,7 @@ country_decisions = {
 		potential = {
 			if = {
 				limit = { ai = yes }
-				owns = 4873
+				owns = 8119
 			}
 			else = {
 				golden_highway_yanshen_coast = {
@@ -572,7 +572,7 @@ country_decisions = {
 		allow = {
 			if = {
 				limit = { ai = yes }
-				owns = 4873
+				owns = 8119
 			}
 			golden_highway_yanshen_coast = {
 				type = all
