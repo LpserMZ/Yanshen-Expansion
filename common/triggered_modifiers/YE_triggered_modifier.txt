@@ -204,6 +204,15 @@ Yanzhou_court_deliberation = {
 }
 
 
+Yanzhou_administritive_system = {
+	potential = {
+		is_yan_rank_II_tag = yes
+	}
+	trigger = {
+		is_yan_rank_II_tag = yes
+	}
+	governing_capacity = 1500
+}
 
 
 
