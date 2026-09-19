@@ -3263,7 +3263,10 @@ bulwari = {
 
 		on_convert = {
 			change_religion = bulwari_sun_cult
-			if = { limit = { NOT = { has_country_flag = updating_isolationism_window } }
+			if = { 
+				limit = { 
+					NOT = { has_country_flag = updating_isolationism_window } 
+				}
 				add_prestige = -100
 
 				add_country_modifier = {
@@ -7886,6 +7889,25 @@ halessi = {
 		}
 	}
 
+	guosi_faith = {
+		color = { 247 252 56 }
+		icon = 152
+		country = {
+			idea_cost = -0.10
+			country_admin_power = 1
+			yearly_harmony = 0.25
+			LQpower_capacity = 200
+			monthly_LQpower_regen = 1.5
+		}
+		country_as_secondary = {
+			adm_tech_cost_modifier = -0.10
+			advisor_cost = -0.05
+		}
+
+		uses_harmony = yes
+		heretic = {
+		}
+	}
 
 
 	mystic_accord = {

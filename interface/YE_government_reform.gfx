@@ -4,4 +4,64 @@ spriteTypes = {
 		texturefile = "gfx/interface/government_reform_icons/lanjinhui_military_government.dds"
 	}
 
+	spriteType = {
+		name = "GFX_faction_bg_tongleipai_I"
+		texturefile = "gfx//interface//faction_blue_frame.tga"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_faction_tongleipai_I"
+		texturefile = "gfx//interface//YE_factions//tongleipai.dds"
+	}
+
+	spriteType = {
+		name = "GFX_faction_bg_tongleipai_II"
+		texturefile = "gfx//interface//faction_blue_frame.tga"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_faction_tongleipai_II"
+		texturefile = "gfx//interface//YE_factions//tongleipai.dds"
+	}
+
+	spriteType = {
+		name = "GFX_faction_bg_nongshanpai"
+		texturefile = "gfx//interface//faction_blue_frame.tga"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_faction_nongshanpai"
+		texturefile = "gfx//interface//YE_factions//nongshanpai.dds"
+	}
+
+	spriteType = {
+		name = "GFX_faction_bg_waqiaopai"
+		texturefile = "gfx//interface//faction_purple_frame.tga"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_faction_waqiaopai"
+		texturefile = "gfx//interface//YE_factions//waqiaopai.dds"
+	}
+
+	spriteType = {
+		name = "GFX_faction_bg_renxiapai"
+		texturefile = "gfx//interface//faction_red_frame.tga"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_faction_renxiapai"
+		texturefile = "gfx//interface//YE_factions//renxiapai.dds"
+	}
+
+	spriteType = {
+		name = "GFX_faction_bg_yanzhoupai"
+		texturefile = "gfx//interface//faction_blue_frame.tga"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_faction_yanzhoupai"
+		texturefile = "gfx//interface//YE_factions//yanzhoupai.dds"
+	}
+
 }

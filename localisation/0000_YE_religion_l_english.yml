@@ -57,3 +57,13 @@
  guifu_school_modifier:0 "<›&rfR>m"
 
  yan_path_center_of_reformation:0 "9ei—-NÃV"
+
+ guosi_faith:0 "ýVNy"
+ guosi_faith_religion_desc:0 "ýVNyÿmy™Ÿ^åNNˆß˜ÿ‡sNlwmšø‹Tm0"
+
+ guosi_faith_rebels_demand:0 "O$COUNTRYNAME$9e—R"
+ guosi_faith_rebels_demand_desc:0 "—RYeÛS›Q:N$RELIGION$áOðNwb0ÖNìN‰BlbìNb²‹vQóØšàeN„v0WMOÿbwóSjPbkbìNOÖNìNˆvO„vªR›Rÿ©‹ÖNìN(WŒTs^-NTle0"
+ guosi_faith_rebels_title:0 "—RYe"
+ guosi_faith_rebels_name:0 "$RELIGION$Ârípw"
+ guosi_faith_rebels_desc:0 "—RYeÂrípwŽVŽV(W1uNTáOðN„výV¶Rµc6R„vwýNtQw0ÖNìN‰.OlbÖNìN„v—RYeÿ‰ûQNgNRNáO„vºN0"
+ guosi_faith_rebels_army:0 "$RELIGION$›Q"
