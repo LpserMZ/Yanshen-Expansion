@@ -1,0 +1,463 @@
+YE_Z66_ideas = { # 大辉-新 
+	start = {
+		core_creation = -0.15 
+		governing_capacity = 1000
+	}
+	bonus = {
+		global_autonomy = -0.10
+	}
+	trigger = {
+		tag = Z66
+	}
+	free = yes
+
+	YE_Z66_ideas_1 = {
+		legitimacy = 1
+	}
+	YE_Z66_ideas_2 = {
+		advisor_cost = -0.15
+		yearly_corruption =-0.05
+	}
+	YE_Z66_ideas_3 = {
+		discipline = 0.05
+		drill_gain_modifier = 0.50
+	}
+	YE_Z66_ideas_4 = {
+		max_general_fire = 1
+	}
+	YE_Z66_ideas_5 = {
+		global_prov_trade_power_modifier = 0.15
+	}
+	YE_Z66_ideas_6 = {
+		infantry_power = 0.10
+		cavalry_power = 0.15
+	}
+	YE_Z66_ideas_7 = {
+		administrative_efficiency = 0.05
+	}
+}
+
+YE_Y05_ideas = { # 蓝巾会-新 
+	start = {
+		stability_cost_modifier = -0.10
+	}
+	bonus = {
+		core_creation = -0.10
+	}
+	trigger = {
+		tag = Y05
+	}
+	free = yes
+
+	YE_Y05_ideas_1 = {
+		land_morale = 0.15
+	}
+	YE_Y05_ideas_2 = {
+		prestige = 1
+		diplomatic_reputation = 1
+	}
+	YE_Y05_ideas_3 = {
+		global_monthly_devastation = -0.50 
+	}
+	YE_Y05_ideas_4 = {
+		army_tradition_decay = -0.01
+	}
+	YE_Y05_ideas_5 = {
+		manpower_recovery_speed = 0.10
+	}
+	YE_Y05_ideas_6 = {
+		development_cost_modifier = -0.15
+	}
+	YE_Y05_ideas_7 = {
+		republican_tradition = 1
+		monthly_splendor = 1
+	}
+}
+
+YE_YZ1_ideas = { # 曦 
+	start = {
+		core_creation = -0.10 
+		governing_capacity = 1000
+	}
+	bonus = {
+		naval_morale = 0.10
+	}
+	trigger = {
+		tag = YZ1
+	}
+	free = yes
+
+	YE_YZ1_ideas_1 = {
+		discipline = 0.05
+		morale_damage = 0.10
+	}
+	YE_YZ1_ideas_2 = {
+		artillery_fire = 1
+	}
+	YE_YZ1_ideas_3 = {
+		diplomatic_reputation = 2
+	}
+	YE_YZ1_ideas_4 = {
+		production_efficiency = 0.10
+		monarch_lifespan = 0.20
+	}
+	YE_YZ1_ideas_5 = {
+		global_sailors_modifier = 0.15
+	}
+	YE_YZ1_ideas_6 = {
+		global_spy_defence = 0.20
+	}
+	YE_YZ1_ideas_7 = {
+		max_absolutism = 10
+		max_absolutism_effect = 0.10
+	}
+}
+
+YE_YZ2_ideas = { # 罗 
+	start = {
+		core_creation = -0.10 
+		governing_capacity = 1000
+	}
+	bonus = {		
+		caravan_power = 0.2
+	}
+	trigger = {
+		tag = YZ2
+	}
+	free = yes
+
+	YE_YZ2_ideas_1 = {
+		diplomatic_reputation = 1
+		diplomatic_annexation_cost = -0.15
+	}
+	YE_YZ2_ideas_2 = {
+		all_power_cost = -0.05
+	}
+	YE_YZ2_ideas_3 = {
+		merchants = 1
+	}
+	YE_YZ2_ideas_4 = {
+		siege_ability = 0.15
+		fire_damage = 0.15
+	}
+	YE_YZ2_ideas_5 = {
+		spy_offence = 0.20
+	}
+	YE_YZ2_ideas_6 = {
+		global_trade_goods_size_modifier = 0.10		
+	}
+	YE_YZ2_ideas_7 = {
+		stability_cost_modifier = -0.15
+		global_unrest = -1
+	}
+}
+
+YE_YZ3_ideas = { # 昭 
+	start = {
+		core_creation = -0.15
+		governing_capacity = 1000
+	}
+	bonus = {
+		drill_gain_modifier = 0.50
+	}
+	trigger = {
+		tag = YZ3
+	}
+	free = yes
+
+	YE_YZ3_ideas_1 = {
+		movement_speed = 0.10
+		global_supply_limit_modifier = 0.20
+	}
+	YE_YZ3_ideas_2 = {
+		merchants = 1
+		caravan_power = 0.10
+	}
+	YE_YZ3_ideas_3 = {
+		naval_morale = 0.10
+	}
+	YE_YZ3_ideas_4 = {
+		advisor_cost = -0.10
+		advisor_pool = 2
+	}
+	YE_YZ3_ideas_5 = {
+		infantry_power = 0.15
+		fire_damage_received = -0.15
+	}
+	YE_YZ3_ideas_6 = {
+		global_unrest = -1
+		prestige = 0.50
+	}
+	YE_YZ3_ideas_7 = {
+		province_warscore_cost = -0.10
+	}
+}
+
+YE_YZ4_ideas = { # 金坚 
+	start = {
+		core_creation = -0.15
+		governing_capacity = 1000
+	}
+	bonus = {		
+		development_cost_modifier = -0.15
+	}
+	trigger = {
+		tag = YZ4
+	}
+	free = yes
+
+	YE_YZ4_ideas_1 = {
+		land_morale = 0.15
+	}
+	YE_YZ4_ideas_2 = {
+		build_cost = -0.10
+		build_time = -0.10
+	}
+	YE_YZ4_ideas_3 = {
+		technology_cost = -0.10
+		yearly_innovativeness = 0.25
+	}
+	YE_YZ4_ideas_4 = {
+		defensiveness = 0.15
+	}
+	YE_YZ4_ideas_5 = {
+		diplomatic_reputation = 1
+		prestige = 1
+	}
+	YE_YZ4_ideas_6 = {
+		global_unrest = -1
+		manpower_recovery_speed = 0.10
+	}
+	YE_YZ4_ideas_7 = {
+		parliament_backing_chance = 0.10
+		republican_tradition = 0.25
+	}
+}
+
+YE_YZ5_ideas = { # 海阴 
+	start = {
+		global_prov_trade_power_modifier = 0.10
+		#mercantilism_cost = -0.25
+		governing_capacity = 1000
+	}
+	bonus = {
+		tolerance_own = 2 
+	}
+	trigger = {
+		tag = YZ5
+	}
+	free = yes
+
+	YE_YZ5_ideas_1 = {
+		colonists = 1
+		global_colonial_growth = 50
+	}
+	YE_YZ5_ideas_2 = {
+		global_trade_goods_size_modifier = 0.10
+		development_cost_modifier = -0.10
+	}
+	YE_YZ5_ideas_3 = {
+		defensiveness = 0.20
+	}
+	YE_YZ5_ideas_4 = {
+		global_missionary_strength = 0.02
+	}
+	YE_YZ5_ideas_5 = {
+		technology_cost = -0.10
+		sea_repair = yes
+	}
+	YE_YZ5_ideas_6 = {
+		naval_morale = 0.10
+		heavy_ship_power = 0.15
+	}
+	YE_YZ5_ideas_7 = {
+		diplomatic_annexation_cost = -0.20
+	}
+}
+
+# YE_YZ6_ideas = { # 烟蜃共和国
+# 	start = {
+
+# 	}
+# 	bonus = {
+
+# 	}
+# 	trigger = {
+# 		tag = YZ6
+# 	}
+# 	free = yes
+
+# 	YE_YZ6_ideas_1 = {
+
+# 	}
+# 	YE_YZ6_ideas_2 = {
+
+# 	}
+# 	YE_YZ6_ideas_3 = {
+
+# 	}
+# 	YE_YZ6_ideas_4 = {
+
+# 	}
+# 	YE_YZ6_ideas_5 = {
+
+# 	}
+# 	YE_YZ6_ideas_6 = {
+
+# 	}
+# 	YE_YZ6_ideas_7 = {
+		
+# 	}
+# }
+
+# YE_YZ7_ideas = { # 大湮帝国
+# 	start = {
+
+# 	}
+# 	bonus = {
+
+# 	}
+# 	trigger = {
+# 		tag = YZ7
+# 	}
+# 	free = yes
+
+# 	YE_YZ7_ideas_1 = {
+
+# 	}
+# 	YE_YZ7_ideas_2 = {
+
+# 	}
+# 	YE_YZ7_ideas_3 = {
+
+# 	}
+# 	YE_YZ7_ideas_4 = {
+
+# 	}
+# 	YE_YZ7_ideas_5 = {
+
+# 	}
+# 	YE_YZ7_ideas_6 = {
+
+# 	}
+# 	YE_YZ7_ideas_7 = {
+		
+# 	}
+# }
+
+# YE_YZ8_ideas = { # 大湮共和国
+# 	start = {
+
+# 	}
+# 	bonus = {
+
+# 	}
+# 	trigger = {
+# 		tag = YZ8
+# 	}
+# 	free = yes
+
+# 	YE_YZ8_ideas_1 = {
+
+# 	}
+# 	YE_YZ8_ideas_2 = {
+
+# 	}
+# 	YE_YZ8_ideas_3 = {
+
+# 	}
+# 	YE_YZ8_ideas_4 = {
+
+# 	}
+# 	YE_YZ8_ideas_5 = {
+
+# 	}
+# 	YE_YZ8_ideas_6 = {
+
+# 	}
+# 	YE_YZ8_ideas_7 = {
+		
+# 	}
+# } 
+Y25_new_ideas = {    #宗畿-新
+	start = {
+		legitimacy = 1
+		diplomats = 1
+	}
+	bonus = {
+		governing_capacity = 20
+	}
+
+	trigger = {
+		tag = Y25
+	}
+	free = yes
+
+	Y25_ideas_1 = {
+		prestige = 1
+		devotion = 1
+		republican_tradition = 0.3
+		horde_unity = 1
+		diplomatic_reputation = 1
+	}
+	Y25_ideas_2 = { 
+		global_autonomy = -0.05
+	}
+	Y25_ideas_3 = { 
+		num_accepted_cultures = 2
+	}
+	Y25_ideas_4 = { 
+		fire_damage = 0.1
+	}
+	Y25_ideas_5 = { 
+		tolerance_own = 2
+		tolerance_heathen = 2
+	}
+	Y25_ideas_6 = { 
+		administrative_efficiency = 0.05
+	}
+	Y25_ideas_7 = { 
+		build_cost = -0.2
+	}
+}
+
+Z67_new_ideas = { #莲州—新
+	start = {
+		tolerance_heathen = 2
+		core_creation = -0.15
+	}
+	bonus = {
+		governing_capacity_modifier = 0.2
+	}
+	trigger = {
+		tag = Z67
+	}
+	free = yes
+
+	Z67_ideas_1 = { 
+		legitimacy = 2
+		diplomatic_reputation = 2
+	}
+	Z67_ideas_2 = { 
+		global_autonomy = -0.05
+		min_autonomy_in_territories = -0.1
+	}
+	Z67_ideas_3 = { 
+		num_accepted_cultures = 2
+	}
+	Z67_ideas_4 = { 
+		fire_damage = 0.2
+		max_general_fire = 1
+	}
+	Z67_ideas_5 = { 
+		advisor_pool = 2
+		advisor_cost = -0.2
+	}
+	Z67_ideas_6 = { 
+		administrative_efficiency = 0.05
+	}
+	Z67_ideas_7 = { 
+		build_cost = -0.2
+		build_time = -0.2
+	}
+}
