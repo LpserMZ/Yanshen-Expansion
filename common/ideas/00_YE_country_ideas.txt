@@ -379,3 +379,85 @@ YE_YZ5_ideas = { # 海阴
 		
 # 	}
 # } 
+Y25_new_ideas = {    #宗畿-新
+	start = {
+		legitimacy = 1
+		diplomats = 1
+	}
+	bonus = {
+		governing_capacity = 20
+	}
+
+	trigger = {
+		tag = Y25
+	}
+	free = yes
+
+	Y25_ideas_1 = {
+		prestige = 1
+		devotion = 1
+		republican_tradition = 0.3
+		horde_unity = 1
+		diplomatic_reputation = 1
+	}
+	Y25_ideas_2 = { 
+		global_autonomy = -0.05
+	}
+	Y25_ideas_3 = { 
+		num_accepted_cultures = 2
+	}
+	Y25_ideas_4 = { 
+		fire_damage = 0.1
+	}
+	Y25_ideas_5 = { 
+		tolerance_own = 2
+		tolerance_heathen = 2
+	}
+	Y25_ideas_6 = { 
+		administrative_efficiency = 0.05
+	}
+	Y25_ideas_7 = { 
+		build_cost = -0.2
+	}
+}
+
+Z67_new_ideas = { #莲州—新
+	start = {
+		tolerance_heathen = 2
+		core_creation = -0.15
+	}
+	bonus = {
+		governing_capacity_modifier = 0.2
+	}
+	trigger = {
+		tag = Z67
+	}
+	free = yes
+
+	Z67_ideas_1 = { 
+		legitimacy = 2
+		diplomatic_reputation = 2
+	}
+	Z67_ideas_2 = { 
+		global_autonomy = -0.05
+		min_autonomy_in_territories = -0.1
+	}
+	Z67_ideas_3 = { 
+		num_accepted_cultures = 2
+	}
+	Z67_ideas_4 = { 
+		fire_damage = 0.2
+		max_general_fire = 1
+	}
+	Z67_ideas_5 = { 
+		advisor_pool = 2
+		advisor_cost = -0.2
+	}
+	Z67_ideas_6 = { 
+		administrative_efficiency = 0.05
+	}
+	Z67_ideas_7 = { 
+		build_cost = -0.2
+		build_time = -0.2
+	}
+}
