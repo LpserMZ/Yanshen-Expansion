@@ -286,3 +286,36 @@ YE_autonomous_vassal = { #不能通过外交行动转为原版附庸
 		other_overlord = all
 	}
 }
+YE_lianzhou_huanguan = {
+    copy_from = autonomous_vassal
+    sprite = GFX_diplomacy_leadsenapti
+	takes_diplo_slot = no
+	can_declare_war = no
+	liberty_desire_development_ratio = 0
+	relative_power_class = 7
+	modifier_overlord = {
+		modifier = YE_lianzhou_subject_overlord_modifier
+	}
+}
+YE_lianzhou_lianxiang = {
+    copy_from = autonomous_vassal
+    sprite = GFX_diplomacy_amprabhi
+	takes_diplo_slot = no
+	can_declare_war = no
+	liberty_desire_development_ratio = 0
+	relative_power_class = 8
+	modifier_subject = {
+		modifier = YE_lianzhou_lianxiang_subject_modifier
+	}
+}
+YE_lianzhou_junzhengjian = {
+    copy_from = march
+    sprite = GFX_diplomacy_leadsenapti
+	takes_diplo_slot = no
+	can_declare_war = no
+	relative_power_class = 9
+	liberty_desire_development_ratio = 0
+	modifier_overlord = {
+		modifier = YE_lianzhou_subject_jianqiang_modifier
+	}
+}

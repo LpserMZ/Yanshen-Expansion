@@ -260,6 +260,7 @@ monarchy = {
 				iochand_gnomish_monarchy
 				iochand_hezoggdoum
 				yenbenmirra_federation
+				YE_lianxiang#莲相政府等级声明
 			}
 		}
 		hereditary_vs_nobility = { #Tier 2

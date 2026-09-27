@@ -615,6 +615,94 @@ YE_add_special_prov_modifier = {
 	4893 =  { add_permanent_province_modifier = { name = xiangtan_pearl duration = -1 } }
 	8033 =  { add_permanent_province_modifier = { name = white_lord_altar duration = -1 } }
 }
+YE_lianxiang_check_human_culture = {#莲相检测人类文化
+    if = {
+        limit = {
+            accepted_culture = $culture$
+
+            NOT = {
+                has_country_flag = YE_lianxiang_accepted_$culture$
+            }
+        }
+
+        add_government_power = {
+            mechanic_type = YE_lianxiang_power
+            power_type = lianxiang_power
+            value = 15
+        }
+
+        set_country_flag = YE_lianxiang_accepted_$culture$
+    }
+}
+YE_lianxiang_check_promoted_human_culture = {
+
+    # 烟州
+    YE_lianxiang_check_human_culture = { culture = jiangszun }
+    YE_lianxiang_check_human_culture = { culture = beikling }
+    YE_lianxiang_check_human_culture = { culture = gangim }
+    YE_lianxiang_check_human_culture = { culture = naamjyut }
+    YE_lianxiang_check_human_culture = { culture = szitu }
+    YE_lianxiang_check_human_culture = { culture = jiangyang }
+    YE_lianxiang_check_human_culture = { culture = pinghoi }
+    YE_lianxiang_check_human_culture = { culture = haiwai }
+    YE_lianxiang_check_human_culture = { culture = daxug }
+    YE_lianxiang_check_human_culture = { culture = kuldaakin }
+    YE_lianxiang_check_human_culture = { culture = shuokyuan }
+    YE_lianxiang_check_human_culture = { culture = luoxian }
+    YE_lianxiang_check_human_culture = { culture = naamzau }
+    YE_lianxiang_check_human_culture = { culture = guyan }
+
+    # yan_half_orc 不写
+	YE_lianxiang_check_human_culture = { culture = shuvuush }
+    YE_lianxiang_check_human_culture = { culture = runsukhi }
+    YE_lianxiang_check_human_culture = { culture = plateau_runsukhi }
+    YE_lianxiang_check_human_culture = { culture = kuuldaar }
+	YE_lianxiang_check_human_culture = { culture = giteuni }
+    YE_lianxiang_check_human_culture = { culture = wonju }
+    YE_lianxiang_check_human_culture = { culture = dudimkkun }
+    YE_lianxiang_check_human_culture = { culture = guwaadun }
+	YE_lianxiang_check_human_culture = { culture = hujan }
+    YE_lianxiang_check_human_culture = { culture = banyak }
+    YE_lianxiang_check_human_culture = { culture = paru }
+    YE_lianxiang_check_human_culture = { culture = sirtana }
+    YE_lianxiang_check_human_culture = { culture = layang }
+    YE_lianxiang_check_human_culture = { culture = ranilau }
+    YE_lianxiang_check_human_culture = { culture = biengdi }
+    YE_lianxiang_check_human_culture = { culture = gon }
+    YE_lianxiang_check_human_culture = { culture = risbeko }
+    YE_lianxiang_check_human_culture = { culture = teplin }
+    YE_lianxiang_check_human_culture = { culture = toelnran }
+    YE_lianxiang_check_human_culture = { culture = khethakran }
+	YE_lianxiang_check_human_culture = { culture = phonan }
+    YE_lianxiang_check_human_culture = { culture = hinphat }
+    YE_lianxiang_check_human_culture = { culture = bokai }
+    YE_lianxiang_check_human_culture = { culture = binhrung }
+    YE_lianxiang_check_human_culture = { culture = sikai }
+    YE_lianxiang_check_human_culture = { culture = tamran }
+	YE_lianxiang_check_human_culture = { culture = tuugalak }
+    YE_lianxiang_check_human_culture = { culture = ulukungu }
+    YE_lianxiang_check_human_culture = { culture = mogirga }
+	YE_lianxiang_check_human_culture = { culture = kamtarhid }
+    YE_lianxiang_check_human_culture = { culture = khedarid }
+    YE_lianxiang_check_human_culture = { culture = shamadhan }
+    YE_lianxiang_check_human_culture = { culture = shandibad }
+    YE_lianxiang_check_human_culture = { culture = rajnadhid }
+    YE_lianxiang_check_human_culture = { culture = sobhagand }
+    YE_lianxiang_check_human_culture = { culture = ghavaanaj }
+    YE_lianxiang_check_human_culture = { culture = shamakhadi }
+	YE_lianxiang_check_human_culture = { culture = muthadhaya }
+    YE_lianxiang_check_human_culture = { culture = rasarhid }
+    YE_lianxiang_check_human_culture = { culture = sarisungi }
+    YE_lianxiang_check_human_culture = { culture = chengrong }
+	YE_lianxiang_check_human_culture = { culture = sarniryabsad }
+    YE_lianxiang_check_human_culture = { culture = dhukharuved }
+    YE_lianxiang_check_human_culture = { culture = rabhidarubsad }
+    YE_lianxiang_check_human_culture = { culture = ghankedhen }
+    YE_lianxiang_check_human_culture = { culture = pasindesh }
+    YE_lianxiang_check_human_culture = { culture = raghamidesh }
+}
+
+
 
 
 # 地宫

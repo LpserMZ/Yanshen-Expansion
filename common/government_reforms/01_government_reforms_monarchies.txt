@@ -161,6 +161,37 @@ plutocratic_reform = {
 		factor = 0.75 #generic
 	}
 }
+YE_lianxiang = {
+	icon = "tagharoghi"
+	allow_normal_conversion = yes
+	lock_level_when_selected = yes
+	legacy_equivalent = feudal_monarchy
+	potential = {
+		OR = {
+			tag = Y25
+			was_tag = Y25
+        }
+	}
+	trigger = {
+		OR = {
+			tag = Y25
+			was_tag = Y25
+        }
+		OR = {
+			has_reform = YE_lianxiang
+			have_had_reform =  YE_lianxiang
+		}
+	}
+	government_abilities = {
+		YE_lianxiang_power
+	}	
+    modifiers = {
+		estate_eunuchs_anb_influence_modifier = 0.10
+        global_missionary_strength = -0.02
+        core_creation = -0.10
+	}
+
+}
 
 # austrian_archduchy_reform = {
 # 	icon = "austrian_archduchy_reform"

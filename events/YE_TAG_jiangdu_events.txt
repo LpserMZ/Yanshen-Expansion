@@ -1,0 +1,36 @@
+namespace = YE_jiangdu
+country_event = {
+    id = YE_jiangdu.1
+    title = YE_jiangdu.1.t
+    desc = YE_jiangdu.1.d
+    picture = ARTWORK_eventPicture
+
+    trigger = {
+        tag = Y13
+        check_variable = {
+            which = jiangdu_wins_lanjinhui
+            value = 3
+        }
+    }
+
+    option = {
+    name = YE_jiangdu.1.a
+    inherit = Y05
+    every_owned_province = {
+        limit = {
+            is_core = Y05
+        }
+        set_local_autonomy = 50
+        add_province_modifier = {
+            name = YE_Jiangdu_lanjincandang
+            duration = 3650
+        }
+    }
+    hidden_effect = {
+        set_variable = {
+            which = jiangdu_wins_lanjinhui
+            value = 0
+        }
+    }
+    }
+}

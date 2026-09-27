@@ -1,0 +1,1039 @@
+lianzhou_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+		OR = {
+		    tag = Y25
+		    was_tag = Y25
+		}
+	}
+	has_country_shield = yes
+	Lianzhou_1_1 = {
+		icon = mission_harimar
+		required_missions = {  }
+		position = 1
+		trigger = {
+			    army_size_percentage = 1
+			    has_mil_advisor = yes
+		}
+		effect = {
+			convert_ruler_to_general = 70
+			add_country_modifier = {
+                name = YE_Lianzhou_jiabing
+                duration = 3650
+            }
+		}
+	}
+
+	Lianzhou_1_3 = {
+		icon = mission_wine_monopolies
+		required_missions = { Lianzhou_3_2 }
+		position = 3
+		provinces_to_highlight = {
+			OR = {   
+			    AND = {
+					province_id = 5420
+					NOT = { base_production = 6 }
+				}
+				AND = {
+                    province_id = 4931
+					NOT = { base_production = 6 }
+				}
+			}
+		}
+		trigger = {
+            5420 = {
+                base_production = 6
+            }
+            4931 = {
+                base_production = 6
+            }
+        }
+		effect = {
+            5420 = {
+                add_permanent_province_modifier = {
+                    name = YE_Lianzhou_chaxiangjiuse
+                }
+            }
+
+            4931 = {
+                add_permanent_province_modifier = {
+                    name = YE_Lianzhou_chaxiangjiuse
+                }
+            }
+        }
+	}
+
+	Lianzhou_1_4 = {
+		icon = mission_hills_of_gondwana
+		required_missions = { Lianzhou_1_3 }
+		position = 4
+		provinces_to_highlight = {
+            OR = {
+                AND = {
+                    province_id = 4903
+                    NOT = { base_manpower = 6 }
+                }
+                AND = {
+                    province_id = 4875
+                    NOT = { base_manpower = 6 }
+                }
+            }
+        }
+		trigger = {
+            4903 = {
+                base_manpower = 6
+            }
+            4875 = {
+                base_manpower = 6
+            }
+        }
+		effect = {
+			5420 = {
+				change_trade_goods = livestock
+				add_permanent_province_modifier = {
+					name = YE_Lianzhou_shenzhaozhuangyuan
+				}
+			}
+			4931 = {
+				change_trade_goods = livestock
+				add_permanent_province_modifier = {
+					name = YE_Lianzhou_shenzhaozhuangyuan
+				}
+			}
+		}
+	}
+
+	Lianzhou_1_5 = {
+		icon = mission_haless_map
+		required_missions = { Lianzhou_1_4 }
+		position = 5
+		provinces_to_highlight = {
+            province_group = golden_highway_yanshen_coast
+        }
+		trigger = {
+			golden_highway_yanshen_coast = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+				has_province_modifier = golden_highway
+				}
+			}
+		effect = {
+			custom_tooltip = Lianzhou_1_5_effect_tt
+			hidden_effect = {
+			    every_province ={
+				    limit = {
+					    province_group = golden_highway_yanshen_coast
+				    }
+				    add_base_tax = 1
+				    add_base_production = 1
+				    add_base_manpower = 1
+				    add_or_upgrade_trade_building = yes
+			    }
+		    }
+		}
+	}
+
+	Lianzhou_1_6 = {
+		icon = mission_armor_choice
+		required_missions = { Lianzhou_1_5 }
+		position = 6
+		provinces_to_highlight = {
+			owned_by = ROOT
+			OR = {
+                trade_goods = silk
+				trade_goods = cloth
+			}
+		}
+		trigger = {
+			trade_goods_produced_amount = {
+				trade_goods = silk
+				amount = 2.5
+			}
+			trade_goods_produced_amount = {
+				trade_goods = cloth
+				amount = 5
+			}
+		}
+		effect = {
+			8131 = {
+				change_trade_goods = silk
+			    add_permanent_province_modifier = {
+					name = YE_Lianzhou_sichoujisandi
+				}
+				add_or_upgrade_trade_building = yes
+			}
+		}
+	}
+
+}
+lianzhou_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	potential = {
+		OR = {
+		    tag = Y25
+		    was_tag = Y25
+		}
+	}
+	has_country_shield = yes
+    Lianzhou_2_3 = {
+		icon = mission_rebirth_of_our_saviour
+		required_missions = { Lianzhou_3_2 }
+		position = 3
+		provinces_to_highlight = {
+			province_id = 4931
+		}
+		trigger = {
+			4931 = {
+				has_ruler_leader_from = ROOT
+			}
+		}
+		effect = {
+			country_event = {
+				id = YE_Lianzhou.1
+			}
+		}
+	}
+
+	Lianzhou_2_4 = {
+		icon = mission_magy
+		required_missions = { Lianzhou_2_3 }
+		position = 4
+		trigger = {
+			has_spy_network_in = {
+				who = Y18
+				value = 50
+			}
+			Y18 = {
+				has_opinion_modifier = {
+					who = ROOT
+					modifier = sent_gift
+				}
+			}
+		}
+		effect = {
+			Y18 = {
+				every_owned_province = {
+					add_permanent_claim = ROOT
+				}
+			    declare_war_with_cb = {
+				    who = ROOT
+				    casus_belli = cb_crusade
+			    }
+			}
+		}
+	}
+
+	Lianzhou_2_5 = {
+		icon = mission_crystal_focus
+		required_missions = { Lianzhou_2_4 }
+		position = 5
+		trigger = {
+			owns = 4871
+			4871 = {
+				has_province_modifier = temple_complex
+			}
+		}
+		effect = {
+			country_event = {
+				id = YE_Lianzhou.2
+			}
+		}
+	}
+
+	Lianzhou_2_6 = {
+		icon = mission_temple_patronage
+		required_missions = { Lianzhou_3_5 }
+		position = 6
+		trigger = {
+			OR = {
+			    Y14 = {
+				    has_opinion = {
+					    who = ROOT
+					    value = 100
+				    }
+			    }
+				alliance_with = Y14
+			}
+			Y91 = {
+				OR = {
+					has_opinion_modifier = {
+						who = ROOT
+						modifier = scornfully_insulted
+					}
+				    has_opinion_modifier = {
+					    who = ROOT
+					    modifier = insulted
+				    }
+				}
+			}
+		}
+		effect = {
+            create_subject = {
+				subject_type = YE_lianzhou_huanguan
+				subject = Y14
+			}
+			Y91 = {
+				declare_war_with_cb = {
+					who = ROOT
+                    casus_belli = cb_crusade_mission
+				}
+			}
+			add_casus_belli = {
+				target = Y16
+				type = cb_vassalize_mission
+                months = 240
+			}
+			4979 = {
+				change_religion = high_philosophy
+			}
+		}
+	}
+
+	Lianzhou_2_7 = {
+		icon = mission_farm
+		required_missions = { Lianzhou_1_6 Lianzhou_2_6 }
+		position = 7
+		provinces_to_highlight = {
+			owned_by = ROOT
+			has_terrain = farmlands
+			trade_goods = grain
+			NOT = {
+				has_building = farm_estate
+			}
+			NOT = {
+				base_production = 6
+			}
+		}
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 5
+				base_production = 6
+				trade_goods = grain
+				has_terrain = farmlands
+				has_building = farm_estate
+			}
+		}
+		effect = {
+			custom_tooltip = Lianzhou_2_7_effect_tt
+			hidden_effect = {
+			    every_owned_province = {
+				    limit = {
+					    base_production = 6
+					    trade_goods = grain
+					    has_terrain = farmlands
+					    has_building = farm_estate
+				    }
+				    add_permanent_province_modifier = {
+					    name = YE_Lianzhou_liangshichandi
+                    }
+			    }
+			}
+		}
+	}
+
+}
+lianzhou_3 = {
+	slot = 3
+	generic = no
+	ai = no
+	potential = {
+		OR = {
+		    tag = Y25
+		    was_tag = Y25
+		}
+	}
+	has_country_shield = yes
+
+	Lianzhou_3_1 = {
+		icon = mission_mesoamerican_tributes
+		required_missions = {  }
+		position = 1
+		trigger = {
+			Y13 = {
+			    has_opinion_modifier = {
+			        who = ROOT
+			        modifier = sent_gift
+		        }
+		    }
+		}
+		effect = {
+			country_event = {
+				id = YE_Lianzhou.3
+			}
+		}
+	}
+
+	Lianzhou_3_2 = {
+		icon = mission_the_dame_tears
+		required_missions = { Lianzhou_1_1 Lianzhou_3_1 Lianzhou_5_1 }
+		position = 2
+		trigger = {
+			NOT = {
+				exists = Y05
+			}
+		}
+		effect = {
+			inherit = Y26
+			add_country_modifier = {
+				name = YE_Lianzhou_shenzhaozailin
+				duration = 10950
+			}
+			Y13 = {
+				add_historical_friend = ROOT
+				add_trust = {
+					who = ROOT
+					value = 20
+				}
+			}
+			custom_tooltip = Lianzhou_3_2_effect_tt
+			hidden_effect = {
+			    every_province = {
+				    limit = {
+				    	region = jinxun_region
+				    }
+				    add_permanent_claim = ROOT
+			    }
+			}
+		}
+	}
+
+	Lianzhou_3_3 = {
+		icon = mission_whisper
+		required_missions = { Lianzhou_3_2 }
+		position = 3
+		trigger = {
+			has_spy_network_in = {
+				who = Y19
+				value = 50
+			}
+		}
+		effect = {
+			custom_tooltip = Lianzhou_3_3_effect_tt
+			hidden_effect = {
+			    Y19 = {
+				    every_owned_province = {
+					    add_permanent_claim = ROOT
+				    }
+			    }
+			}
+			Y19 = {
+				every_ally = {
+					break_alliance = Y19
+				}
+			    add_country_modifier = {
+					name = YE_Lianzhou_tianlou_weakened
+                    duration = 3650
+				}
+			}
+			add_casus_belli = {
+                target = Y19
+				type = YE_Lianzhou_tianlou_conquest
+				months = 120
+			}
+		}
+	}
+
+	Lianzhou_3_4 = {
+		icon = mission_develop_nevas_port
+		required_missions = { Lianzhou_2_3 Lianzhou_3_3 }
+		position = 4
+		trigger = {
+			tianlou_area = {
+				type = all
+				owned_by = ROOT
+				is_state = yes
+			}
+			NOT = {
+				exists = Y19
+			}
+		}
+		effect = {
+			4871 = {
+			    set_capital = yes
+				add_province_modifier = {
+					name = YE_Lianzhou_chongjiantianlou
+					duration = 3650
+				}
+			}
+			4903 = {
+				add_permanent_province_modifier = {
+					name = YE_Lianzhou_wulin_ligong
+				}
+			}
+		}
+	}
+
+	Lianzhou_3_5 = {
+		icon = mission_tianlou
+		required_missions = { Lianzhou_3_4 Lianzhou_2_4 }
+		position = 5
+		provinces_to_highlight = {
+			province_id = 4871
+		}
+		trigger = {
+			4871 = {
+				development = 50
+			    OR = {
+                    has_building = temple
+                    has_building = cathedral
+                }
+                OR = {
+                   has_building = workshop
+                    has_building = counting_house
+                }
+                OR = {
+                    has_building = marketplace
+                    has_building = trade_depot
+                    has_building = stock_exchange
+                }
+				has_manufactory_trigger = yes
+				has_great_project = {
+					type = palace_of_divine_call
+					tier = 1
+				}
+				
+			}
+		}
+        effect = {
+			4871 = {
+				add_or_upgrade_tax_building = yes
+				add_or_upgrade_production_building = yes
+				add_or_upgrade_trade_building = yes
+				add_great_project_tier = {
+					type = palace_of_divine_call
+					tier = 1
+				}
+				change_religion = high_philosophy
+			}
+			custom_tooltip = Lianzhou_3_5_effect_tt
+			hidden_effect = {
+				4871 = {
+					if = {
+						limit = {
+							has_province_modifier = YE_Lianzhou_chongjiantianlou
+						}
+						remove_province_modifier = YE_Lianzhou_chongjiantianlou
+						add_permanent_province_modifier = {
+							name = YE_Lianzhou_chongjiantianlou
+						}
+					}
+				}
+			}
+		}
+	}
+
+	Lianzhou_3_6 = {
+		icon = mission_develop_nevas_port
+		required_missions = { Lianzhou_3_5 }
+		position = 6
+		provinces_to_highlight = {
+			owned_by = Y15
+		}
+		trigger = {
+			Y15 = {
+				OR = {
+					has_opinion_modifier = {
+						who = ROOT
+						modifier = scornfully_insulted
+					}
+				    has_opinion_modifier = {
+					    who = ROOT
+					    modifier = insulted
+				    }
+				}
+			}
+		}
+		effect = {
+			add_casus_belli = {
+				target = Y15
+				type = YE_Lianzhou_beidugang_conquest
+				months = 120
+			}
+		}
+	}
+
+	Lianzhou_3_7 = {
+		icon = mission_harimar
+		required_missions = { Lianzhou_3_6 Lianzhou_2_6 }
+		position = 7
+		provinces_to_highlight = {
+			region = jianwu_region
+		}
+		trigger = {
+			jianwu_region = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			Y16 = {
+				is_subject_of = ROOT
+				is_tributary = no
+			}
+		}
+		effect = {
+			country_event = {
+				id = YE_Lianzhou.5
+			}
+		}
+	}
+
+	Lianzhou_3_8 = {
+		icon = mission_lotus_flower
+		required_missions = { Lianzhou_2_7 Lianzhou_3_7 Lianzhou_4_7 }
+		position = 8
+		trigger = {
+			tag = Z67
+			jinxun_region = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			custom_tooltip = Lianzhou_3_8effect_tt
+			inherit = Y13
+		}
+	}
+
+}
+lianzhou_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential = {
+		OR = {
+		    tag = Y25
+		    was_tag = Y25
+		}
+	}
+	has_country_shield = yes
+
+	Lianzhou_4_3 = {
+		icon = mission_assassination
+		required_missions = { Lianzhou_3_2 }
+		position = 3
+		provinces_to_highlight = {
+			OR = {
+			    owned_by = Y10
+			    owned_by = Y04
+			    owned_by = V22
+			    owned_by = Y07
+			    owned_by = Y06
+				owned_by = Y08
+			}
+		}
+		owner = {
+			NOT = {
+				has_opinion = {
+					who = ROOT
+					value = 150
+				}
+			}
+		}
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = YE_Lianzhou_4_3_tt
+			    hidden_trigger = {
+			        OR = {
+						Y08 = {
+                            has_opinion = {
+                                who = ROOT
+                                value = 150
+                            }
+                        }
+                        Y10 = {
+                            has_opinion = {
+                                who = ROOT
+                                value = 150
+                            }
+                        }
+                        Y04 = {
+                            has_opinion = {
+                                who = ROOT
+                                value = 150
+                            }
+                        }
+                        V22 = {
+                            has_opinion = {
+                                who = ROOT
+                                value = 150
+                            }
+                        }
+                        Y07 = {
+                            has_opinion = {
+                                who = ROOT
+                                value = 150
+                            }
+                        }
+                        Y06 = {
+                            has_opinion = {
+                                who = ROOT
+                                value = 150
+                            }
+                        }
+                    }
+				}
+		    }
+		}
+		effect = {
+			custom_tooltip = Lianzhou_4_3_effect_tt
+			hidden_effect = {
+				Y08 = {
+                    if = {
+                        limit = {
+                            has_opinion = {
+                                who = ROOT
+                                value = 150
+                            }
+                        }
+                        add_trust = {
+                            who = ROOT
+                            value = 20
+                        }
+                    }
+                }
+			    Y10 = {
+                    if = {
+                        limit = {
+                            has_opinion = {
+                                who = ROOT
+                                value = 150
+                            }
+                        }
+                        add_trust = {
+                            who = ROOT
+                            value = 20
+                        }
+                    }
+                }
+
+                Y04 = {
+                    if = {
+                        limit = {
+                            has_opinion = {
+                                who = ROOT
+                                value = 150
+                            }
+                        }
+                        add_trust = {
+                            who = ROOT
+                            value = 20
+                        }
+                    }
+                }
+
+                V22 = {
+                    if = {
+                        limit = {
+                            has_opinion = {
+                                who = ROOT
+                                value = 150
+                            }
+                        }
+                        add_trust = {
+                            who = ROOT
+                            value = 20
+                        }
+                    }
+                }
+
+                Y07 = {
+                    if = {
+                        limit = {
+                            has_opinion = {
+                                who = ROOT
+                                value = 150
+                            }
+                        }
+                        add_trust = {
+                            who = ROOT
+                            value = 20
+                        }    
+                    }
+                }
+
+                Y06 = {
+                    if = {
+                        limit = {
+                            has_opinion = {
+                                who = ROOT
+                                value = 150
+                            }
+                        }
+                        add_trust = {
+                            who = ROOT
+                            value = 20
+                        }
+                    }
+                }
+		    }
+		}
+	}
+
+	Lianzhou_4_4 = {
+		icon = mission_plc_governance_act
+		required_missions = { Lianzhou_4_3 Lianzhou_5_3 }
+		position = 4
+		trigger = {
+			num_of_estate_privileges = {
+				estate = estate_eunuchs_anb
+				value = 4
+			}
+			estate_loyalty = {
+				estate = estate_eunuchs_anb
+				loyalty = 60
+			}
+			Y13 = {
+				NOT = {
+					liberty_desire = 30
+				}
+			}
+		}
+		effect = {
+			add_government_reform = YE_lianxiang
+			add_estate_loyalty_modifier = {
+				estate = estate_eunuchs_anb
+                desc = YE_Lianzhou_eunuchs_loyalty
+				loyalty = 20
+				duration = -1
+			}
+		}
+	}
+
+	Lianzhou_4_5 = {
+		icon = mission_writing_book
+		required_missions = { Lianzhou_4_4 }
+		position = 5
+		trigger = {
+			estate_loyalty = {
+				estate = estate_eunuchs_anb
+				higher_than_influence = yes
+			}
+		}
+		effect = {
+			change_government_reform_progress = 50
+			custom_tooltip = Lianzhou_4_5_effect_tt
+			hidden_effect = {
+			    set_country_flag = tsukqiao_better_bureocracy
+			}
+		}
+	}
+
+	Lianzhou_4_6 = {
+		icon = mission_hanseatic_city
+		required_missions = { Lianzhou_4_5 Lianzhou_3_5 }
+		position = 6
+		trigger = {
+			OR = {
+				NOT = { exists = Y07 }
+				Y07 = {
+				    has_opinion_modifier = {
+					    who = ROOT
+					    modifier = sent_gift
+				    }
+			    }
+			}
+			OR = {
+				NOT = { exists = Y06 }
+				Y06 = {
+					has_opinion_modifier = {
+						who = ROOT
+						modifier = sent_gift
+					}
+				}
+			}
+		}
+		effect = {
+			custom_tooltip = Lianzhou_4_6_effect_tt
+			hidden_effect = {
+			    if = {
+				    limit = {
+					    exists = Y07
+				    }
+				    V19 = {
+					    inherit = Y07
+				    }
+			    }
+			    if = {
+				    limit = {
+					    exists = Y06
+				    }
+				    V19 = {
+                        inherit = Y06
+				    }
+			    }
+			    if = {
+				    limit = {
+					    alliance_with = Y08
+					    Y08 = {
+						    has_opinion = {
+							    who = ROOT
+							    value = 200
+						    }
+						    trust = {
+							    who = ROOT
+							    value = 70
+						    }
+					    }
+				    }
+				    V19 = {
+					    inherit = Y08
+			        }
+			    }
+                create_subject = {
+				    subject_type = YE_lianzhou_huanguan
+				    subject = V19
+			    }
+				every_province = {
+					limit = {
+						region = yanxin_region
+					}
+					add_core = V19
+				}
+				if = {
+					limit = {
+						exists = Y04
+					}
+					declare_war_with_cb = {
+						who = Y04
+						casus_belli = cb_crusade_mission
+					}
+					Y09 = {
+						declare_war_with_cb = {
+							who = Y04
+							casus_belli = cb_crusade_mission
+						}
+					}
+				}
+				if = {
+					limit = {
+						exists = Y10
+					}
+					declare_war_with_cb = {
+						who = Y10
+						casus_belli = cb_crusade_mission
+					}
+					Y09 = {
+						declare_war_with_cb = {
+							who = Y10
+							casus_belli = cb_crusade_mission
+						}
+					}
+				}
+				if = {
+					limit = {
+						exists = V22
+					}
+					declare_war_with_cb = {
+						who = V22
+						casus_belli = cb_crusade_mission
+					}
+					Y09 = {
+						declare_war_with_cb = {
+							who = V22
+							casus_belli = cb_crusade_mission
+						}
+					}
+				}
+				if = {
+					limit = {
+						exists = Y08
+					}
+					declare_war_with_cb = {
+						who = Y08
+						casus_belli = cb_crusade_mission
+					}
+					Y09 = {
+						declare_war_with_cb = {
+							who = Y08
+							casus_belli = cb_crusade_mission
+						}
+					}
+				}
+			}
+		}
+	}
+
+	Lianzhou_4_7 = {
+		icon = mission_blademarches_2
+		required_missions = { Lianzhou_4_6 }
+		position = 7
+		trigger = {
+			estate_loyalty = {
+				estate = estate_adventurers
+				higher_than_influence = yes
+			}
+			NOT = {
+				num_of_mercenaries = 1
+			}
+		}
+		effect = {
+			custom_tooltip = Lianzhou_4_7_effect_tt
+			hidden_effect = {
+			    set_country_flag = YE_lianzhou_licensed_adventurers_reformed
+			    clear_adventurers_organization_effect = yes
+			    set_estate_privilege = estate_adventurers_organization_licensed_adventurers
+			}
+		}
+	}
+
+}
+lianzhou_5 = {
+    slot = 5
+    generic = no
+    ai = yes
+
+    potential = {
+        OR = {
+            tag = Y25
+            was_tag = Y25
+        }
+    }
+
+    has_country_shield = yes
+
+    Lianzhou_5_1 = {
+        icon = mission_scholar_officials
+        position = 1
+
+        trigger = {
+            has_estate_privilege = estate_eunuchs_anb_dominance_over_bureaucracy
+        }
+
+        effect = {
+			add_country_modifier = {
+				name = YE_Lianzhou_huanguandehezuo
+				duration = 5475
+			}
+        }
+    }
+
+    Lianzhou_5_3 = {
+        icon = mission_confrontation
+        position = 3
+        required_missions = { Lianzhou_3_2 }
+        trigger = {
+            Y13 = {
+				has_opinion = {
+					who = ROOT
+					value = 100
+				}
+			    trust = {
+					who = ROOT
+					value = 80
+				}
+			}
+        }
+
+        effect = {
+			create_subject = {
+				subject_type = YE_lianzhou_lianxiang
+				subject = Y13
+			}
+        }
+    }
+}
+
+

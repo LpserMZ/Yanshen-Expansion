@@ -1,0 +1,162 @@
+namespace = YE_Lianzhou
+country_event = {  #狐狸精事件
+    id = YE_Lianzhou.1
+    title = YE_Lianzhou.1.t
+    desc = YE_Lianzhou.1.d
+    picture = GREAT_SPIRIT_HUSZIEN_EVIL_eventPicture
+
+    is_triggered_only = yes
+
+    option = {
+        name = YE_Lianzhou.1.a
+    }
+}
+country_event = {
+    id = YE_Lianzhou.2
+    title = YE_Lianzhou.2.t
+    desc = YE_Lianzhou.2.d
+    picture = GREAT_SPIRIT_HUSZIEN_EVIL_eventPicture
+
+    is_triggered_only = yes
+
+    option = {
+        name = YE_Lianzhou.2.a
+    }
+}
+country_event = {
+    id = YE_Lianzhou.3
+    title = YE_Lianzhou.3.t
+    desc = YE_Lianzhou.3.d
+    picture = PIETY_eventPicture
+
+    is_triggered_only = yes
+
+    option = {
+        name = YE_Lianzhou.3.a
+        Y13 = {
+            add_opinion = {
+	            who = ROOT
+		        modifier = YE_Lianzhou_jiangdu_friend
+	        }
+            remove_rival = Y25
+            add_trust = {
+				who = ROOT
+				value = 20
+			}
+        }
+        Y25 = {
+            remove_rival = Y13
+        }
+            
+    }
+}
+
+
+
+
+country_event = {    #入战事件
+    id = YE_Lianzhou.4
+    title = YE_Lianzhou.4.t
+    desc = YE_Lianzhou.4.d
+    picture = AAKHET_DRAGON_SMUG_eventPicture
+    trigger = {
+        NOT = { has_country_flag = YE_Lianzhou_joined_jiangdu_war }
+        mission_completed = Lianzhou_3_1
+        Y05 = {
+            is_in_war = {
+                attacker_leader = Y05
+                defender_leader = Y13
+            }
+        }
+    }
+    mean_time_to_happen = {
+        days = 1
+    }
+    option = {
+        name = YE_Lianzhou.4.a
+        custom_tooltip = YE_Lianzhou.4.a.tt
+        create_alliance = Y13
+        join_all_defensive_wars_of = Y13
+        Y26 = {
+            join_all_offensive_wars_of = Y05
+        }
+        hidden_effect = {
+            set_country_flag = YE_Lianzhou_joined_jiangdu_war
+        }
+    }
+}
+country_event = {#坚墙事件
+    id = YE_Lianzhou.5
+    title = YE_Lianzhou.5.t
+    desc = YE_Lianzhou.5.d
+    picture = HIGH_TEMPLE_IN_DISTANCE_eventPicture
+    is_triggered_only = yes
+    option = {
+        name = YE_Lianzhou.5.a
+        Y16 = {
+                inherit = Y14
+			}
+		Y16 = {
+			every_owned_province = {
+				limit = {
+					NOT = {
+						OR = {
+							area = jw6_area
+							area = jw5_area
+							area = yiguan_area
+							area = jiantsiang_area
+							area = jw4_area
+						}
+					}
+				}
+				cede_province = ROOT
+			}
+			change_subject_type = {
+				subject_type = YE_lianzhou_junzhengjian
+			}
+        }	
+    }
+}
+namespace = YE_lianxiang
+
+country_event = {
+    id = YE_lianxiang.1
+
+    hidden = yes
+    is_triggered_only = yes
+
+    immediate = {
+        if = {
+            limit = {
+                has_government_mechanic = YE_lianxiang_power
+
+                has_country_modifier = human_administration
+
+                NOT = {
+                    has_country_flag = YE_lianxiang_human_administration
+                }
+            }
+
+            add_government_power = {
+                mechanic_type = YE_lianxiang_power
+                power_type = lianxiang_power
+                value = 100
+            }
+
+            set_country_flag = YE_lianxiang_human_administration
+        }
+
+        if = {
+            limit = {
+                NOT = {
+                    has_country_modifier = human_administration
+                }
+
+                has_country_flag = YE_lianxiang_human_administration
+            }
+
+            clr_country_flag = YE_lianxiang_human_administration
+        }
+    }
+}      
+

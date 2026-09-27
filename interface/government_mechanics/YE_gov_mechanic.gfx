@@ -107,4 +107,24 @@ spriteTypes = {
 		texturefile = "gfx//interface//government_mechanics//YE_tyrant_system//benelolent_ruthless_power_ruthless_rank.dds"
 		noOfFrames = 5
 	}
-}	
+
+	#莲相政府能力条
+	spriteType = {
+		name = "GFX_lianxiang_kuang"
+		texturefile = "gfx//interface//government_mechanics//YE_lianxiang//YE_lianxiang_power_bar.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+	progressbartype = {
+        name = "GFX_lianxiang_tiao"
+
+        color = { 1.0 0.0 0.0 }
+        colortwo = { 1.0 1.0 1.0 }
+
+        textureFile1 = "gfx//interface//government_mechanics//YE_lianxiang//lianxiang_full.dds"
+        textureFile2 = "gfx//interface//government_mechanics//YE_lianxiang//lianxiang_void.dds"
+
+        size = { x = 250 y = 120 }
+
+        effectFile = "gfx/FX/progress.lua"
+    }
