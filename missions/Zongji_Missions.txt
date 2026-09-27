@@ -404,13 +404,7 @@ zongji_branch_2_1 = {
 	ai = yes 
 	has_country_shield = yes
 	potential = {
-		OR = {
-			tag = Y25
-			AND = {
-				was_tag = Y25
-				tag = Z67
-			}
-		}
+		always = no
 	}
 	
 	Y25_an_exercise_in_diplomacy = {
@@ -619,13 +613,7 @@ zongji_branch_3_1 = {
 	ai = yes 
 	has_country_shield = yes
 	potential = {
-		OR = {
-			tag = Y25
-			AND = {
-				was_tag = Y25
-				tag = Z67
-			}
-		}
+		always = no
 	}
 	
 	Y25_an_exercise_in_ambition = {
@@ -810,7 +798,7 @@ zongji_branch_3_1 = {
 			OR = {
 				calc_true_if = {
 					amount = 5
-					desc = Y25_masters_of_tianlou_tt #" Eunuch nations are subject of §Y[Root.GetName]§! or capital is controlled by §Y[Root.GetName]§!"
+					desc = Y25_masters_of_tianlou_tt #" Eunuch nations are subject of ï¿½Y[Root.GetName]ï¿½! or capital is controlled by ï¿½Y[Root.GetName]ï¿½!"
 					all_known_country = {
 						OR = {
 							has_reform = eunuch_republic
@@ -831,7 +819,7 @@ zongji_branch_3_1 = {
 					NOT = {
 						calc_true_if = {
 							amount = 1
-							desc = Y25_masters_of_tianlou_tt #" Eunuch nations are subject of §Y[Root.GetName]§! or capital is controlled by §Y[Root.GetName]§!"
+							desc = Y25_masters_of_tianlou_tt #" Eunuch nations are subject of ï¿½Y[Root.GetName]ï¿½! or capital is controlled by ï¿½Y[Root.GetName]ï¿½!"
 							all_known_country = {
 								OR = {
 									has_reform = eunuch_republic
@@ -1006,13 +994,7 @@ zongji_branch_4_1 = {
 	ai = yes 
 	has_country_shield = yes
 	potential = {
-		OR = {
-			tag = Y25
-			AND = {
-				was_tag = Y25
-				tag = Z67
-			}
-		}
+		always = no
 	}
 	
 	Y25_an_exercise_in_understanding = {
@@ -1392,13 +1374,7 @@ zongji_branch_5_1 = {
 	ai = yes 
 	has_country_shield = yes
 	potential = {
-		OR = {
-			tag = Y25
-			AND = {
-				was_tag = Y25
-				tag = Z67
-			}
-		}
+		always = no
 	}
 	
 	Y25_laying_the_groundwork = {
