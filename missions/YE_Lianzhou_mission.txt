@@ -476,7 +476,7 @@ lianzhou_3 = {
 		}
 		trigger = {
 			4871 = {
-				development = 50
+				development = 45
 			    OR = {
                     has_building = temple
                     has_building = cathedral
