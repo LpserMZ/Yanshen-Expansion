@@ -9,6 +9,7 @@ country_event = {  #狐狸精事件
 
     option = {
         name = YE_Lianzhou.1.a
+        add_treasury = 200
     }
 }
 country_event = {
@@ -21,6 +22,7 @@ country_event = {
 
     option = {
         name = YE_Lianzhou.2.a
+        add_treasury = 100
     }
 }
 country_event = {

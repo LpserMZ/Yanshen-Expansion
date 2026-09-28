@@ -551,7 +551,7 @@ lianzhou_3 = {
 			add_casus_belli = {
 				target = Y15
 				type = YE_Lianzhou_beidugang_conquest
-				months = 120
+				months = 1200
 			}
 		}
 	}
