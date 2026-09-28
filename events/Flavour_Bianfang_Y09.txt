@@ -3164,7 +3164,7 @@ province_event = { #Yanification of province
 					change_culture = jichuan
 				}
 				else = {
-					change_culture = yansu
+					change_culture = qingliu
 				}
 			}
 			if = { #因斯亚西北

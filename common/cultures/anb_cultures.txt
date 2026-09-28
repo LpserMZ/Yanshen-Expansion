@@ -7,7 +7,7 @@
 # graphical_culture = westerngfx
 # second_graphical_culture = muslimgfx (fallback if the first does not exist)
 
-# îO9ey˜ÿ yansu jichuan yvying
+# îO9ey˜ÿ qingliu jichuan yvying
 anbennarian = {
 	graphical_culture = westerngfx
 
@@ -6225,28 +6225,33 @@ yan = {	# CN character
 	naamzau = { #Yanification culture
 	}
 
-	yansu = {}
-	jichuan = {}
-	yvying = {} 
-	xianzhong_yan = {}
-	xianyue = {}
-	guyan = {
+	qingliu = {} # nAm
+	jichuan = {} # ÝOYu
+
+	yvying = {} # ßpS
+	xianzhong_yan = {} # ßpS
+	xianyue = {} # ßpS
+	guyan = { # ŸSHr
 		primary = P67 # liufang
 	}
-	kuoliu = {}
-	mangzhou = {}
-	shuanghe_yan = {}
-	yvzhou = {}	
-	sule = {}
-	shahe = {}
-	yangzhou = {}
-	xiangyang = {}
-	haijin = {}
+	kuoliu = {} # ßpS
+	mangzhou = {} # ßpS
+	shuanghe_yan = {} # ßpS
+	yvzhou = {}	# ßpS
+	sule = {} # ßpS
+	shahe = {} # ßpS
+	yangzhou = {} # ßpS
+	xiangyang = {} # ßpS
+	haijin = {} # ßpS
 
-	yinqvan_culture = {}
-	jianwu_culture = {}
-	jinxun_culture = {}
-	tianlou_culture = {}
+	yinqvan_culture = {} # ÝOYu
+	beidu_culture = {} # S!n
+	jinxun_culture = {} # ÝOYu
+	tianlou_culture = {} # ÝOYu
+
+	fengliu = {}
+	shaliu = {}
+	hezuo = {}
 		
 
 	dynasty_names = {
@@ -7712,5 +7717,69 @@ holohana_culture_group = {
 	}
 	dynasty_names = {
 		Holohana
+	}
+}
+
+shen = {	# CN character
+	graphical_culture = asiangfx
+
+	jiaoling = {} # &qu–
+	
+	dynasty_names = {
+		"¿³”3w" "¿HS7u" "¿%VÐY" "¿«ƒ˜b" "¿Tƒ^—" "¿+Y™„" "¿(fŒT"
+		"¿U•N" "¿œek" "¿TDŽ" "¿Á1g" "¿œÎO" "¿XžmN" "¿.nÑ‘"
+		"¿›Qf" "¿ñS÷–" "¿†š÷–" "¿TŸ|" "¿ýf" "¿u3w" "¿„…Î‘"
+		"¿XžZY" "¿kNbS" "¿wƒ>Š" "¿NgpQ" "¿Øž¹R" "¿	NÍy" "¿Tkp"
+		"¿TŒT" "¿KSWS" "¿XžÎ‘" "¿QYþ‚" "¿cwfIQ" "¿?–Ì" "¿ÆNúV"
+		"¿åT‚" "¿gb1Y" "¿‚)R" "¿™lT" "¿™lA–" "¿Ï‚œQ" "¿<OŒT"
+		"¿–™'YÔb" "¿jU¡V" "¿N™„" "¿0W¥T" "¿T†ÁN" "¿:d™„"
+		"¿Î‘)R" "¿¡lÏ…" "¿¹‹" "¿s|" "¿Šb)R" "¿4xN" "¿?bSV"
+		"¿s|Òd" "¿˜b" "¿Î‘ž" "¿Î‘™Ÿ" "¿U" "¿ö–"
+		"¿±" "¿³”" "¿a—" "¿Õ–" "¿Ôk" "¿ÚY" "¿÷–"
+		"¿ZQ" "¿µ" "¿ie" "¿ïg" "¿Á"
+	}
+	male_names = {
+		"VòN" "D‰" "Ì‚" "tQ" "Ól" "êu" "Íu"
+		"Ux·V" "•" "V—" "9SpN" "iT" "s^" "²Q"
+		"Êvu" "å‚" "Äž	w" "¥™" "Œ‚" "ŒTý" "T†"
+		"ïgˆ" "'YÐc" "õVu" ")Yu" "äR" "%VýV" "N†PR"
+		"%V»l" "%V:g" "%VZS" "%V‰˜" "%Vðl" "ÚNšR" "%VšR"
+		"`su" "‚»l" "‚mV" "upgŠ" "äNS" "Ú‹" "™s"
+		"K•" "è”" "CQ<y" "ˆRjt" "S†^" "ÂR" "‡e‰V"
+		"åw‹T" "TIN" "zfÿR" "zfKr" "FZæ‰" "‰0W" "Z"
+		"CQÛ" "CQÄ‰" "Sô‹" "‰R" "Ôb" "Eu" "¾"
+		"‡e" "…" "ñ‚" "Ày" "ïS" "Ëz" "·V"
+		"Q" "r^" "u" "^" "tY" "—" "ðX"
+		"ó—" "õ—" "Qm" "n" ":V" "eP" "û•"
+		"jw" "aƒ" "ÇR" "s" "îX" "fk" "NS"
+		"žR" "³‚" "™™" "b" "ŸR" "6e" "·ƒ"
+		"f" "®N" "z˜" "Eu" "‰R" "R" "Þ˜"
+		"Ô" "UO›R" "IQ" "" "zf" "IQÛ" "IQœ˜"
+		"`i`" "¢s" "Rt" "ð" "Üf" "Cf" "`›R"
+		"`" "CQñ‚" "‰m" "àVIN" ")R" "ål" "Ÿq"
+		"‚" "wS" "cƒ" "‹V" "ck" "Üw" "9N"
+		"R—" "Ûv" ":d" "c" "ÁNcƒ" "G^N" "¹‹ž^"
+		"ž^" "Òd" "N" "SV"
+	}
+	female_names = {
+		"Ày‘N" "‰sn" ".t4t" "à`³‚" "ËyNS" 
+		"Ëy‰s" "gNS" "‘Nn" 
+		"Y—wƒ" "Y—g" "Y—¹R" "Y—R" "‰R!`" 
+		"‰R¦`" "‰RŒT" "‘NqV" "‘Nóˆ" "gqV"
+		"gR" "ê–tf" "ê–¹R" "SfÎ˜" "Sfg"
+		"Zftf" "Rê–" "nó—" "n2—" ".tÃV" 
+		"IZêN" "Ôg	V" "4ZY—" "Å–R" "ÃV!`"
+		"wƒ2—" "vtó—" "<tõ—" "·‚Ôg" "å‚pQ"
+		"+T—" "ÝQê–" "O‘N" "‚Yg" "¦hwƒ"
+		"®fê–" "g2—" "Sfwƒ" "%f™q" "Ëy„o"
+		"wƒñ‚" ")Yga" "‰sñ‚" "yCQ" "œÍs" 
+		"^tcƒ" "Sf›Z" "SfìY" "ŒTY—" "ŒT	V"
+		"f1„" "°eƒ" "<O„" "›Rñƒ" "¦NY…"
+		"ŒT‡…" "‰R‚" "RÊƒ" "Y—Bh" "¦`Ch"
+		"ÔgOg" "IZ1j" "4ZJ…" "Å–Œ…" "êNöS"
+		"-f—" "qVï–" "óˆ—" "—šS" "tf«g"
+		"‘N?Q" "Žr?Q" "‰s?Q" "—?Q" "æf?Q"
+		"-f" "IZ" "4Z" "¦`" "Ôg" "êN" 
+		"óˆ" "tf" "vt" "‡t" "Âs" "ús"
 	}
 }

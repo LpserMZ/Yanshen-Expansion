@@ -1388,7 +1388,298 @@ jianxusi = { start = 4811 #jianxusi
 	}	
 }
 
+shenliu_guan = { start = 4814 #蜃流关
+	date = 1444.1.1
+	time = { months = 1 }
+	build_cost = 5000
+	can_be_moved = no
+	move_days_per_unit_distance = 10
+	starting_tier = 0
 
+	type = monument
+	build_trigger = {} #从tier-1到tier0
+	on_built = {
+
+	}
+	on_destroyed = {
+
+	}
+	can_use_modifiers_trigger = {
+		Y01 = {
+			calc_true_if = {
+				desc = moling_five_great_pass_not_controled_by_Y01_tooltip
+				amount = 3
+				NOT = { owns_or_subject_of = 8257 }
+				NOT = { owns_or_subject_of = 4829 }
+				NOT = { owns_or_subject_of = 8258 }
+				NOT = { owns_or_subject_of = 5430 }
+				NOT = { owns_or_subject_of = 8251 }
+			}
+			calc_true_if = {
+				desc = moling_four_palace_not_controled_by_Y01_tooltip
+				amount = 3
+				NOT = { owns_or_subject_of = 4828 }
+				NOT = { owns_or_subject_of = 4829 }
+				NOT = { owns_or_subject_of = 4831 }
+				NOT = { owns_or_subject_of = 5430 }
+			}
+		}
+	}
+	can_upgrade_trigger = {
+		Y01 = {
+			calc_true_if = {
+				desc = moling_five_great_pass_not_controled_by_Y01_tooltip
+				amount = 3
+				NOT = { owns_or_subject_of = 8257 }
+				NOT = { owns_or_subject_of = 4829 }
+				NOT = { owns_or_subject_of = 8258 }
+				NOT = { owns_or_subject_of = 5430 }
+				NOT = { owns_or_subject_of = 8251 }
+			}
+			calc_true_if = {
+				desc = moling_four_palace_not_controled_by_Y01_tooltip
+				amount = 3
+				NOT = { owns_or_subject_of = 4828 }
+				NOT = { owns_or_subject_of = 4829 }
+				NOT = { owns_or_subject_of = 4831 }
+				NOT = { owns_or_subject_of = 5430 }
+			}
+		}
+	}
+	keep_trigger = {}
+	tier_0 = { #所有奇观的0级都相同，所以cv即可
+		upgrade_time = { months = 0 } #填0
+		cost_to_upgrade = { factor = 0 } #填0
+		province_modifiers = {}
+		area_modifier = {}
+		country_modifiers = {}
+		on_upgraded = {}	
+	}
+	tier_1 = {
+		cost_to_upgrade = { factor = 1000 } #0级——>1级 升级的费用，factor单位是杜卡特
+		upgrade_time = { months = 120 } #0级——>1级 升级的时长
+		province_modifiers = {
+			local_defender_dice_roll_bonus = 1
+			local_defensiveness = 0.10
+		}
+		area_modifier = {}
+		country_modifiers = {
+			defensiveness = 0.05
+		}
+		on_upgraded = {
+			add_great_project = {
+				type = yanhe_river_route
+				instant = yes
+			}
+		}	
+	}
+	tier_2 = {
+		cost_to_upgrade = { factor = 2500 } #0级——>1级 升级的费用，factor单位是杜卡特
+		upgrade_time = { months = 240 } #0级——>1级 升级的时长
+		province_modifiers = {
+			local_defender_dice_roll_bonus = 1
+		}
+		area_modifier = {
+			local_defensiveness = 0.10
+		}
+		country_modifiers = {
+		}
+		on_upgraded = {
+		}
+	}
+	tier_3 = {
+		cost_to_upgrade = { factor = 5000 } #1级——>2级 升级的费用，factor单位是杜卡特
+		upgrade_time = { months = 480 } #1级——>2级 升级的时长
+		province_modifiers = {
+			local_defender_dice_roll_bonus = 2
+		}
+		area_modifier = {
+		}
+		country_modifiers = {
+			defensiveness = 0.10
+		}
+		on_upgraded = {
+			center_of_trade = 1
+		}
+	}
+}
+
+yanhe_river_route = { start = 4814 #烟河航道
+	# province it starts in
+	
+	
+	# date built in real life (so anything built during game time will be there if you start a game after that date)
+	date = 2026.09.25
+	
+	#time to build
+	time = {
+		months = 1
+	}
+	
+	#how much to build one
+	build_cost = 100
+	
+	#can we move it?
+	can_be_moved = no
+	
+	#tier that the project starts at when first placed in the game (be that at game start or when built by a country as the game progresses)
+	starting_tier = 3
+	
+	#project type
+	type = canal
+
+	#can we build it?
+	build_trigger = {
+		has_great_project = {
+			type = shenliu_guan
+			tier = 3
+		}	
+	}
+	
+	#what to do when it's built
+	on_built = {
+		add_canal = yanhe_river_route
+	}
+	
+	#what to do when it's destroyed
+	on_destroyed = {
+		remove_canal = yanhe_river_route
+	}
+
+	#can our country use it?
+	can_use_modifiers_trigger = {
+	}
+
+	#can our country upgrade it?
+	can_upgrade_trigger = {
+	}
+
+	#can our country keep it or is it destroyed when we get hold of it?
+	keep_trigger = {
+	}
+
+	#tier data
+	tier_0 = {
+		#time to upgrade to this level (0 for tier 0)
+		upgrade_time = {
+			months = 0
+		}
+
+		#cost to upgrade to this level (0 for tier 0)
+		cost_to_upgrade = {
+			factor = 0
+		}
+
+		#what modifiers are added to the province when we have this project here on this tier
+		province_modifiers = {
+			province_trade_power_value = 10
+		}
+
+		#what modifiers are added to the provinces in the map area when we have this project here on this tier
+		area_modifier = {
+		}
+
+		#what modifiers are added to the country when we have this project here on this tier
+		country_modifiers = {
+			global_trade_power = 0.01
+		}
+
+		#what effects happen when this tier is achieved
+		on_upgraded = {
+		}
+	}
+
+	tier_1 = {
+		#time to upgrade to this level (0 for tier 0)
+		upgrade_time = {
+			months = 120
+		}
+
+		#cost to upgrade to this level (0 for tier 0)
+		cost_to_upgrade = {
+			factor = 1000
+		}
+
+		#what modifiers are added to the province when we have this project here on this tier
+		province_modifiers = {
+			province_trade_power_value = 20
+		}
+
+		#what modifiers are added to the provinces in the map area when we have this project here on this tier
+		area_modifier = {
+		}
+
+		#what modifiers are added to the country when we have this project here on this tier
+		country_modifiers = {
+			global_trade_power = 0.02
+		}
+
+		#what effects happen when this tier is achieved
+		on_upgraded = {
+			owner = { add_prestige = 30 }
+		}
+	}
+
+	tier_2 = {
+		#time to upgrade to this level (0 for tier 0)
+		upgrade_time = {
+			months = 120
+		}
+
+		#cost to upgrade to this level (0 for tier 0)
+		cost_to_upgrade = {
+			factor = 1000
+		}
+
+		#what modifiers are added to the province when we have this project here on this tier
+		province_modifiers = {
+			province_trade_power_value = 30
+		}
+
+		#what modifiers are added to the provinces in the map area when we have this project here on this tier
+		area_modifier = {
+		}
+
+		#what modifiers are added to the country when we have this project here on this tier
+		country_modifiers = {
+			global_trade_power = 0.03
+		}
+
+		#what effects happen when this tier is achieved
+		on_upgraded = {
+		}
+	}
+
+	tier_3 = {
+		#time to upgrade to this level (0 for tier 0)
+		upgrade_time = {
+			months = 120
+		}
+
+		#cost to upgrade to this level (0 for tier 0)
+		cost_to_upgrade = {
+			factor = 1000
+		}
+
+		#what modifiers are added to the province when we have this project here on this tier
+		province_modifiers = {
+			province_trade_power_value = 50
+		}
+
+		#what modifiers are added to the provinces in the map area when we have this project here on this tier
+		area_modifier = {
+		}
+
+		#what modifiers are added to the country when we have this project here on this tier
+		country_modifiers = {
+			global_trade_power = 0.05
+		}
+
+		#what effects happen when this tier is achieved
+		on_upgraded = {
+		}
+	}
+}
 
 
 

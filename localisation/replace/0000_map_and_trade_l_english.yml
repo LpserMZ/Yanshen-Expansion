@@ -19,8 +19,8 @@
  raghajandi_area:0 "ø‹#W"
  raghajandi_area_name:0 "ø‹#W"
  raghajandi_area_adj:0 "ø‹#W"
- PROV4528:0 "ga»lÎW"
- PROV_ADJ4528:0 "ga»lÎW"
+ PROV4528:0 "ga»l"
+ PROV_ADJ4528:0 "ga»l"
  khasardul_area:0 "ga»l"
  khasardul_area_name:0 "ga»l"
  khasardul_area_adj:0 "ga»l"
@@ -107,6 +107,102 @@
  TRADE_COMPANY_SHAMAKHAD_Root_GetName:0 "[Root.GetAdjective]fkTmlQøS"
  TRADE_COMPANY_SHAMAKHAD_Shamakhad_Trade_Company:0 "fkTm8flQøS"
 
+ PROV4632:0 "gPN"
+ PROV4636:0 "àe/n"
+ PROV4637:0 "*YFU"
+ PROV4815:0 "áQów"
+ PROV4638:0 "TŸl"
+ PROV4634:0 "Su"
+ PROV4642:0 "ŒSN‡sQ"
+ PROV4631:0 "‰R/n"
+ PROV4627:0 "‹vwe"
+ PROV4628:0 "þR²ƒ"
+ PROV4624:0 "2–†W"
+ PROV4629:0 "­dªn"
+ PROV4635:0 "ówãS"
+ PROV4639:0 "v`1u"
+ PROV4545:0 "S7Œ"
+ PROV4542:0 "AS2m"
+ PROV4640:0 "gýl"
+ PROV4543:0 "0túR"
+ PROV4549:0 "nn™l"
+ PROV_ADJ4632:0 "gPN"
+ PROV_ADJ4636:0 "àe/n"
+ PROV_ADJ4637:0 "*YFU"
+ PROV_ADJ4815:0 "áQów"
+ PROV_ADJ4638:0 "TŸl"
+ PROV_ADJ4634:0 "Su"
+ PROV_ADJ4642:0 "ŒSN‡sQ"
+ PROV_ADJ4631:0 "‰R/n"
+ PROV_ADJ4627:0 "‹vwe"
+ PROV_ADJ4628:0 "þR²ƒ"
+ PROV_ADJ4624:0 "2–†W"
+ PROV_ADJ4629:0 "­dªn"
+ PROV_ADJ4635:0 "ówãS"
+ PROV_ADJ4639:0 "v`1u"
+ PROV_ADJ4545:0 "S7Œ"
+ PROV_ADJ4542:0 "AS2m"
+ PROV_ADJ4640:0 "gýl"
+ PROV_ADJ4543:0 "0túR"
+ PROV_ADJ4549:0 "nn™l"
+
+ PROV4513:0 "N4–"
+ PROV4526:0 "+žÞT"
+ PROV4524:0 "^"
+ PROV4514:0 "Ku†u"
+ PROV4523:0 "cwqS"
+ PROV4516:0 "ãyŸS"
+ PROV4522:0 "kƒAm"
+ PROV4529:0 "‹vc"
+ PROV4537:0 "Nu"
+ PROV4530:0 "›l±W"
+ PROV4532:0 "SáS"
+ PROV4533:0 "^yÁX"
+ PROV4534:0 "¢šqS"
+ PROV4539:0 "	qG•"
+ PROV4538:0 "‰s3–"
+ PROV4535:0 "¯†ýV"
+ PROV4531:0 "LNãy"
+ PROV4536:0 "pQŸX"
+ PROV4540:0 "Øšk•"
+ PROV4541:0 "¾|G•"
+ 
+ PROV_ADJ4513:0 "N4–"
+ PROV_ADJ4526:0 "+žÞT"
+ PROV_ADJ4524:0 "^"
+ PROV_ADJ4514:0 "Ku†u"
+ PROV_ADJ4523:0 "cwqS"
+ PROV_ADJ4516:0 "ãyŸS"
+ PROV_ADJ4522:0 "kƒAm"
+ PROV_ADJ4529:0 "‹vc"
+ PROV_ADJ4537:0 "Nu"
+ PROV_ADJ4530:0 "›l±W"
+ PROV_ADJ4532:0 "SáS"
+ PROV_ADJ4533:0 "^yÁX"
+ PROV_ADJ4534:0 "¢šqS"
+ PROV_ADJ4539:0 "	qG•"
+ PROV_ADJ4538:0 "‰s3–"
+ PROV_ADJ4535:0 "¯†ýV"
+ PROV_ADJ4531:0 "LNãy"
+ PROV_ADJ4536:0 "pQŸX"
+ PROV_ADJ4540:0 "Øšk•"
+ PROV_ADJ4541:0 "¾|G•"
+
+ PROV4518:0 "^qS"
+ PROV4521:0 "µtT"
+ PROV4517:0 "OÈu"
+ PROV4476:0 "Îd«R"
+ PROV4515:0 "D‰±W"
+ PROV_ADJ4518:0 "^qS"
+ PROV_ADJ4521:0 "µtT"
+ PROV_ADJ4517:0 "OÈu"
+ PROV_ADJ4476:0 "Îd«R"
+ PROV_ADJ4515:0 "D‰±W"
+
+ PROV4630:0 "Ñ‘‘Nœ^"
+ PROV_ADJ4630:0 "Ñ‘‘Nœ^"
+ PROV4633:0 "^²R"
+ PROV_ADJ4633:0 "^²R"
 #  :0 ""
 #  _name:0 ""
 #  _adj:0 ""
@@ -115,25 +211,4 @@
 #  _name:0 ""
 #  _adj:0 ""
 
-4632 极乐
-4636 无渡
-4637 太商
-4815 凡石
-
-4638 崇沟
-4634 北畿
-4642 厌蝎关
-4631 安渡
-
-4627 皋敷
-4628 勾莲
-4624 防垆
-
-4629 播溪
-4635 石口
-4639 恶由
-4545 尚谷
-4542 十洲
-4640 望泽
-4543 琢勺
 

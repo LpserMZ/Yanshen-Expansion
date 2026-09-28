@@ -1,9 +1,8 @@
 # No previous file for Banten 161
-owner = R78
-controller = R78
-add_core = R78
-culture = shamadhan
-religion = accretive_path
+owner = YC8
+controller = YC8
+culture = qingliu
+religion = guosi_faith
 base_tax = 4
 base_production = 4
 base_manpower = 3
@@ -13,3 +12,4 @@ add_permanent_province_modifier = {
 	name = hobgoblin_minority_integrated_large
 	duration = -1
 }
+add_core = YC8

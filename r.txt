@@ -4,24 +4,21 @@ every_country = {
 		capital_scope = {
 			# continent = europe
 			# continent = africa
-			continent = asia
-			# OR = {
-				# continent = asia
+			# continent = asia
+			OR = {
+				continent = serpentspine
+				continent = asia
 				# continent = africa
 				# region = nomsyulhan_region
-				#superregion = jvzhiguo_superregion
-			# }
+				# superregion = jvzhiguo_superregion
+			}
 			# NOT = { superregion = bulwar_superregion }
 			# NOT = { superregion = north_salahad_superregion }
-			
 		}
 	}
 	disband_all_units = yes
-	remove_country = THIS
+	# remove_country = THIS
 }
-# Y91 = {
-# 	remove_country = THIS
-# }
 
 # every_province = {
 # 	if = { # yanzhou
@@ -758,3 +755,40 @@ every_country = {
 # add_faction = waqiaopai
 # add_faction = renxiapai
 # add_faction = yanzhoupai
+
+
+# ！此效果应由蓝巾会开局事件执行！
+# Y05 = {
+# 	set_ruler_flag = tongleipai_faction_rflag
+# 	every_country = {
+# 		limit = {
+# 			government = monarchy
+# 		}
+# 		add_opinion = {
+# 			who = ROOT
+# 			modifier = YE_ljh_tonleipai_bad_with_monarches
+# 		}
+# 		reverse_add_opinion = {
+# 			who = ROOT
+# 			modifier = YE_ljh_tonleipai_bad_with_monarches
+# 		}
+# 	}	
+# }
+
+# YC6 = { change_country_color = { color = { 219 206 51 } } }
+# YA3 = { change_country_color = { color = { 41 214 197 } } }
+# YC3 = { change_country_color = { color = { 78 117 126 } } }
+# YC4 = { change_country_color = { color = { 241 53 43 } } }
+# YC5 = { change_country_color = { color = { 213 95 24 } } }
+# YA8 = { change_country_color = { color = { 243 239 236 } } }
+# YC7 = { change_country_color = { color = { 31 67 220 } } }
+# YC9 = { change_country_color = { color = { 112 32 114 } } }
+# YD4 = { change_country_color = { color = { 160 19 0 } } }
+# YD2 = { change_country_color = { color = { 43 23 33 } } }
+# YB1 = { change_country_color = { color = { 236 132 155 } } }
+# YD1 = { change_country_color = { color = { 125 106 153 } } }
+# YD3 = { change_country_color = { color = { 75 182 222 } } }
+# YC8 = { change_country_color = { color = { 248 206 27 } } }
+# YA7 = { change_country_color = { color = { 37 24 17 } } }
+#   = { change_country_color = { color = { } } }
+#    = { change_country_color = { color = { } } }

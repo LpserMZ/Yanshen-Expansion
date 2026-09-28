@@ -109,6 +109,7 @@ lanjinhui_military_government = {
 		max_absolutism = -10
 		parliament_effect_duration = -6
 		parliament_backing_chance = 0.25
+		election_cycle = 1
 	}
 	effect = {}
 	factions = {
@@ -129,10 +130,11 @@ lanjinhui_military_government = {
 		has_parliament = yes
 		is_peasants_republic = yes
 		election_on_death = yes
-		
+		anb_special_elections = yes
 	}
-	has_term_election = no
+	has_term_election = yes
 }
+
 # 	icon = "lanjinhui_military_government"
 # 	allow_normal_conversion = no
 # 	lock_level_when_selected = yes

@@ -4,7 +4,7 @@ government = republic
 add_government_reform = oligarchy_reform
 government_rank = 2
 primary_culture = shamadhan
-religion = guosi_faith
+religion = high_philosophy
 technology_group = tech_raheni
 capital = 4633
 religious_school = orange_sash_school
@@ -19,7 +19,3 @@ religious_school = orange_sash_school
 
 
 setup_caste_estates = yes
-
-1444.11.10 = {
-	override_country_name = R78_COLONY_NAME
-}

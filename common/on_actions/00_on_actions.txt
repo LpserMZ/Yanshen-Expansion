@@ -6165,6 +6165,8 @@ on_extend_regency = {
 # country
 on_new_term_election = {
 	events = {
+		YE_ljh.5
+		
 		700		# Election event
 		elections.720		# Dutch Republic
 		elections.800	# Lottery election
@@ -6251,6 +6253,8 @@ on_death_election = {
 		country_event = { id = allclan.1000 }
 	}
 	events = {
+		YE_ljh.6
+
 		701		# Election event
 		shadow.5
 		elections.721		# Dutch Republic

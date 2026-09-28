@@ -209,110 +209,1283 @@ country_event = { #4 战争或和平
 
 }
 
-# country_event = { #5 
-# 	id = YE_ljh.5
-# 	title = YE_ljh.5.T
-# 	desc = YE_ljh.5.D
-# 	picture = GREAT_SPIRIT_YANHE_eventPicture
+country_event = { #5 选举
+	id = YE_ljh.5
+	title = YE_ljh.5.T
+	desc = YE_ljh.5.D
+	picture = GREAT_SPIRIT_YANHE_eventPicture
 
-# 	fire_only_once = yes
-# 	is_triggered_only = yes
+	#fire_only_once = yes
+	is_triggered_only = yes
 
-# 	trigger = {
+	trigger = {
+		has_reform = lanjinhui_military_government
+		NOT = {
+			has_country_flag = YE_in_lanjin_election_flag
+		}
+	}
+	immediate = {
+		set_country_flag = YE_in_lanjin_election_flag
+	}
+
+	option = { #留任
+        name = YE_ljh.5.z
+        trigger = {
+            NOT = { has_ruler_flag = YE_reelection_flag }
+        }
+        change_adm = 1
+		change_dip = 1
+		change_mil = 1
+		add_scaled_republican_tradition = -10
+        set_ruler_flag = YE_reelection_flag
+    }
+	option = { # 铜垒
+        name = YE_ljh.5.a
+        trigger = {
+            OR = {
+                has_faction = tongleipai_I
+                has_faction = tongleipai_II
+            }
+        }
+		if = {
+			limit = {
+				has_ruler_flag = waqiaopai_faction_rflag
+			}
+			custom_tooltip = ljh_waqiaopai_fail_reelection_tooltip
+			add_adm_power = -200
+			add_dip_power = -200
+			add_mil_power = -200
+		}
+
+        define_ruler = {
+            adm = 1
+            mil = 1        
+            max_random_adm = 6
+            max_random_dip = 6
+            max_random_mil = 6
+        }
+		if = {
+			limit = {
+				has_faction = tongleipai_I
+			}
+			add_faction_influence = {
+				faction = tongleipai_I
+				influence = 10
+			}			
+		}
+		if = {
+			limit = {
+				has_faction = tongleipai_II
+			}
+			add_faction_influence = {
+				faction = tongleipai_II
+				influence = 10
+			}			
+		}
+
+        set_ruler_flag = tongleipai_faction_rflag
+		custom_tooltip = ljh_tongleipai_ruler_tooltip
+		hidden_effect = {
+			every_owned_province = {
+				add_nationalism = 5
+			}
+			every_country = {
+				limit = {
+					government = monarchy
+				}
+				add_opinion = {
+					who = ROOT
+					modifier = YE_ljh_tonleipai_bad_with_monarches
+				}
+				reverse_add_opinion = {
+					who = ROOT
+					modifier = YE_ljh_tonleipai_bad_with_monarches
+				}
+			}
+		}
+    }
+    option = { # 农山
+        name = YE_ljh.5.b
+        trigger = {
+            has_faction = nongshanpai
+        }
+		if = {
+			limit = {
+				has_ruler_flag = waqiaopai_faction_rflag
+			}
+			custom_tooltip = ljh_waqiaopai_fail_reelection_tooltip
+			add_adm_power = -200
+			add_dip_power = -200
+			add_mil_power = -200
+		}
+
+        define_ruler = {
+            adm = 1
+            dip = 1
+            max_random_adm = 6
+            max_random_dip = 6
+            max_random_mil = 6
+        }
+		if = {
+			limit = {
+				has_faction = nongshanpai
+			}
+			add_faction_influence = {
+				faction = nongshanpai
+				influence = 10
+			}			
+		}
+        set_ruler_flag = nongshanpai_faction_rflag
+    }
+    option = { # 瓦桥
+        name = YE_ljh.5.c
+        trigger = {
+            has_faction = waqiaopai
+        }
+		custom_tooltip = ljh_waqiaopai_tooltip
+		if = {
+			limit = {
+				has_ruler_flag = waqiaopai_faction_rflag
+			}
+			add_adm_power = 100
+			add_dip_power = 100
+			add_mil_power = 100
+		}
+        define_ruler = {
+            adm = 1
+            dip = 2
+            max_random_adm = 6
+            max_random_dip = 6
+            max_random_mil = 6
+        }
+		if = {
+			limit = {
+				has_faction = waqiaopai
+			}
+			add_faction_influence = {
+				faction = waqiaopai
+				influence = 10
+			}			
+		}   
+		add_ruler_modifier = {
+			name = waqiaopai_ruler_modifier
+			duration = -1
+		}
+		set_ruler_flag = waqiaopai_faction_rflag
+
+    }
+    option = { # 任侠
+        name = YE_ljh.5.d
+        trigger = {
+            has_faction = renxiapai
+        }
+		if = {
+			limit = {
+				has_ruler_flag = waqiaopai_faction_rflag
+			}
+			custom_tooltip = ljh_waqiaopai_fail_reelection_tooltip
+			add_adm_power = -200
+			add_dip_power = -200
+			add_mil_power = -200
+		}
+        define_ruler = {
+            adm = 2
+            max_random_adm = 6
+            max_random_dip = 6
+            max_random_mil = 6
+        }
+		if = {
+			limit = {
+				has_faction = renxiapai
+			}
+			add_faction_influence = {
+				faction = renxiapai
+				influence = 10
+			}			
+		}
+        set_ruler_flag = renxiapai_faction_rflag
+    }
+    option = { # 湮州
+        name = YE_ljh.5.e
+        trigger = {
+            has_faction = yanzhoupai
+        }
+		if = {
+			limit = {
+				has_ruler_flag = waqiaopai_faction_rflag
+			}
+			custom_tooltip = ljh_waqiaopai_fail_reelection_tooltip
+			add_adm_power = -200
+			add_dip_power = -200
+			add_mil_power = -200
+		}
+
+        define_ruler = {
+            dip = 3
+            max_random_adm = 6
+            max_random_dip = 6
+            max_random_mil = 6
+        }
+		if = {
+			limit = {
+				has_faction = yanzhoupai
+			}
+			add_faction_influence = {
+				faction = yanzhoupai
+				influence = 10
+			}			
+		}
+        set_ruler_flag = yanzhoupai_faction_rflag
+    }
+	
+	after = {
+		clr_country_flag = YE_in_lanjin_election_flag
+	}
+}
+
+country_event = { #6 国葬
+	id = YE_ljh.6
+	title = YE_ljh.6.T
+	desc = YE_ljh.6.D
+	picture = GREAT_SPIRIT_YANHE_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		has_reform = lanjinhui_military_government
+		NOT = {
+			has_country_flag = YE_in_lanjin_election_flag
+		}
+	}
+	immediate = {
+		set_country_flag = YE_in_lanjin_election_flag
+	}
+
+	option = {
+        name = YE_ljh.6.a
+        trigger = {
+            OR = {
+                has_faction = tongleipai_I
+                has_faction = tongleipai_II
+            }
+        }
+		if = {
+			limit = {
+				has_ruler_flag = waqiaopai_faction_rflag
+			}
+			custom_tooltip = ljh_waqiaopai_fail_reelection_tooltip
+			add_adm_power = -200
+			add_dip_power = -200
+			add_mil_power = -200
+		}
+
+        define_ruler = {
+            adm = 1
+            mil = 1        
+            max_random_adm = 6
+            max_random_dip = 6
+            max_random_mil = 6
+        }
+		if = {
+			limit = {
+				has_faction = tongleipai_I
+			}
+			add_faction_influence = {
+				faction = tongleipai_I
+				influence = 10
+			}			
+		}
+		if = {
+			limit = {
+				has_faction = tongleipai_II
+			}
+			add_faction_influence = {
+				faction = tongleipai_II
+				influence = 10
+			}			
+		}
+        set_ruler_flag = tongleipai_faction_rflag
+		custom_tooltip = ljh_tongleipai_ruler_tooltip
+		hidden_effect = {
+			every_owned_province = {
+				add_nationalism = 5
+			}
+			every_country = {
+				limit = {
+					government = monarchy
+				}
+				add_opinion = {
+					who = ROOT
+					modifier = YE_ljh_tonleipai_bad_with_monarches
+				}
+				reverse_add_opinion = {
+					who = ROOT
+					modifier = YE_ljh_tonleipai_bad_with_monarches
+				}
+			}
+		}
+    }
+    option = {
+        name = YE_ljh.6.b
+        trigger = {
+            has_faction = nongshanpai
+        }
+        if = {
+			limit = {
+				has_ruler_flag = waqiaopai_faction_rflag
+			}
+			custom_tooltip = ljh_waqiaopai_fail_reelection_tooltip
+			add_adm_power = -200
+			add_dip_power = -200
+			add_mil_power = -200
+		}
+
+		define_ruler = {
+            adm = 1
+            dip = 1
+            max_random_adm = 6
+            max_random_dip = 6
+            max_random_mil = 6
+        }
+		if = {
+			limit = {
+				has_faction = nongshanpai
+			}
+			add_faction_influence = {
+				faction = nongshanpai
+				influence = 10
+			}			
+		}
+        set_ruler_flag = nongshanpai_faction_rflag
+    }
+    option = {
+        name = YE_ljh.6.c
+        trigger = {
+            has_faction = waqiaopai
+        }	
+		custom_tooltip = ljh_waqiaopai_tooltip
+		if = {
+			limit = {
+				has_ruler_flag = waqiaopai_faction_rflag
+			}
+			add_adm_power = 100
+			add_dip_power = 100
+			add_mil_power = 100
+		}
+
+		define_ruler = {
+            adm = 1
+            dip = 2
+            max_random_adm = 6
+            max_random_dip = 6
+            max_random_mil = 6
+        }
+		if = {
+			limit = {
+				has_faction = waqiaopai
+			}
+			add_faction_influence = {
+				faction = waqiaopai
+				influence = 10
+			}			
+		}
+        add_ruler_modifier = {
+			name = waqiaopai_ruler_modifier
+			duration = -1
+		}
+		set_ruler_flag = waqiaopai_faction_rflag
+    }
+    option = {
+        name = YE_ljh.6.d
+        trigger = {
+            has_faction = renxiapai
+        }
+        if = {
+			limit = {
+				has_ruler_flag = waqiaopai_faction_rflag
+			}
+			custom_tooltip = ljh_waqiaopai_fail_reelection_tooltip
+			add_adm_power = -200
+			add_dip_power = -200
+			add_mil_power = -200
+		}
 		
-# 	}
-
-# 	option = {
-# 		name = YE_ljh.5.a
-# 		ai_chance = { factor = 1 }
+		define_ruler = {
+            adm = 2
+            max_random_adm = 6
+            max_random_dip = 6
+            max_random_mil = 6
+        }
+		if = {
+			limit = {
+				has_faction = renxiapai
+			}
+			add_faction_influence = {
+				faction = renxiapai
+				influence = 10
+			}			
+		}
+        set_ruler_flag = renxiapai_faction_rflag
+    }
+    option = {
+        name = YE_ljh.6.e
+        trigger = {
+            has_faction = yanzhoupai
+        }
+        if = {
+			limit = {
+				has_ruler_flag = waqiaopai_faction_rflag
+			}
+			custom_tooltip = ljh_waqiaopai_fail_reelection_tooltip
+			add_adm_power = -200
+			add_dip_power = -200
+			add_mil_power = -200
+		}
 		
-# 	}
-# #本地化，必须空一个格开头	
-#  YE_ljh.5.T:0 ""
-#  YE_ljh.5.D:0 ""
-#  YE_ljh.5.a:0 ""
-# }
+		define_ruler = {
+            dip = 3
+            max_random_adm = 6
+            max_random_dip = 6
+            max_random_mil = 6
+        }
+		if = {
+			limit = {
+				has_faction = yanzhoupai
+			}
+			add_faction_influence = {
+				faction = yanzhoupai
+				influence = 10
+			}			
+		}
+        set_ruler_flag = yanzhoupai_faction_rflag
+    }
+	
+	after = {
+		clr_country_flag = YE_in_lanjin_election_flag
+	}
+}
 
-# country_event = { #6 
-# 	id = YE_ljh.6
-# 	title = YE_ljh.6.T
-# 	desc = YE_ljh.6.D
-# 	picture = GREAT_SPIRIT_YANHE_eventPicture
+country_event = { #7 促进融合
+	id = YE_ljh.7
+	title = YE_ljh.7.T
+	desc = YE_ljh.7.D
+	picture = GREAT_SPIRIT_YANHE_eventPicture
 
-# 	fire_only_once = yes
-# 	is_triggered_only = yes
+	is_triggered_only = yes
 
-# 	trigger = {
-# 	}
+	trigger = {
+	}
 
-# 	option = {
-# 		name = YE_ljh.6.a
-# 		ai_chance = { factor = 1 }
+	option = { #exit
+		name = YE_ljh.7.z
+		highlight = yes
+		ai_chance = { factor = 1 }
 		
-# 	}
-# 	option = {
-# 		name = YE_ljh.6.b
-# 		ai_chance = { factor = 1 }
-# 	}
-# #本地化，必须空一个格开头	
-#  YE_ljh.6.T:0 ""
-#  YE_ljh.6.D:0 ""
-#  YE_ljh.6.a:0 ""
-#  YE_ljh.6.b:0 ""
-# }
+		add_adm_power = 25
+		add_dip_power = 25
+		remove_ruler_modifier = YE_lanjinhui_ruler_action_cooldown_modifier
+	}
+	option = { # elven
+		name = YE_ljh.7.a
+		ai_chance = { factor = 1 }
+		trigger = {
+			any_owned_province = {
+				has_any_elven_pop_trigger = yes
+			}
+			NOT = {
+				check_variable = {
+					which = elven_race_tolerance
+					value = 100
+				}
+			}
+		}
+		generic_increase_of_racial_tolerance_effect = { medium = yes race = elven }
+	}
+	option = { # dwarven
+		name = YE_ljh.7.b
+		ai_chance = { factor = 1 }
+		trigger = {
+			any_owned_province = {
+				has_any_dwarven_pop_trigger = yes
+			}
+			NOT = {
+				check_variable = {
+					which = dwarven_race_tolerance
+					value = 100
+				}
+			}
+		}
+		generic_increase_of_racial_tolerance_effect = { medium = yes race = dwarven }
+	}
+	option = { # gnomish
+		name = YE_ljh.7.c
+		ai_chance = { factor = 1 }
+		trigger = {
+			any_owned_province = {
+				has_any_gnomish_pop_trigger = yes
+			}
+			NOT = {
+				check_variable = {
+					which = gnomish_race_tolerance
+					value = 100
+				}
+			}
+		}
+		generic_increase_of_racial_tolerance_effect = { medium = yes race = gnomish }
+	}
+	option = { # half_orcish
+		name = YE_ljh.7.d
+		ai_chance = { factor = 1 }
+		trigger = {
+			any_owned_province = {
+				has_any_half_orcish_pop_trigger = yes
+			}
+			NOT = {
+				check_variable = {
+					which = half_orcish_race_tolerance
+					value = 100
+				}
+			}
+		}
+		generic_increase_of_racial_tolerance_effect = { medium = yes race = half_orcish }
+	}
+	option = { # kobold
+		name = YE_ljh.7.e
+		ai_chance = { factor = 1 }
+		trigger = {
+			any_owned_province = {
+				has_any_kobold_pop_trigger = yes
+			}
+			NOT = {
+				check_variable = {
+					which = kobold_race_tolerance
+					value = 100
+				}
+			}
+		}
+		generic_increase_of_racial_tolerance_effect = { medium = yes race = kobold }
+	}
+	option = { # gnollish
+		name = YE_ljh.7.f
+		ai_chance = { factor = 1 }
+		trigger = {
+			any_owned_province = {
+				has_any_gnollish_pop_trigger = yes
+			}
+			NOT = {
+				check_variable = {
+					which = gnollish_race_tolerance
+					value = 100
+				}
+			}
+		}
+		generic_increase_of_racial_tolerance_effect = { medium = yes race = gnollish }
+	}
+	option = { # orcish
+		name = YE_ljh.7.g
+		ai_chance = { factor = 1 }
+		trigger = {
+			any_owned_province = {
+				has_any_orcish_pop_trigger = yes
+			}
+			NOT = {
+				check_variable = {
+					which = orcish_race_tolerance
+					value = 100
+				}
+			}
+		}
+		generic_increase_of_racial_tolerance_effect = { medium = yes race = orcish }
+	}
+	option = { # halfling
+		name = YE_ljh.7.h
+		ai_chance = { factor = 1 }
+		trigger = {
+			any_owned_province = {
+				has_any_halfling_pop_trigger = yes
+			}
+			NOT = {
+				check_variable = {
+					which = halfling_race_tolerance
+					value = 100
+				}
+			}
+		}
+		generic_increase_of_racial_tolerance_effect = { medium = yes race = halfling }
+	}
+	option = { # human
+		name = YE_ljh.7.i
+		ai_chance = { factor = 1 }
+		trigger = {
+			any_owned_province = {
+				has_any_human_pop_trigger = yes
+			}
+			NOT = {
+				check_variable = {
+					which = human_race_tolerance
+					value = 100
+				}
+			}
+		}
+		generic_increase_of_racial_tolerance_effect = { medium = yes race = human }
+	}
+	option = { # half_elven
+		name = YE_ljh.7.j
+		ai_chance = { factor = 1 }
+		trigger = {
+			any_owned_province = {
+				has_any_half_elven_pop_trigger = yes
+			}
+			NOT = {
+				check_variable = {
+					which = half_elven_race_tolerance
+					value = 100
+				}
+			}
+		}
+		generic_increase_of_racial_tolerance_effect = { medium = yes race = half_elven }
+	}
+	option = { # ruinborn
+		name = YE_ljh.7.k
+		ai_chance = { factor = 1 }
+		trigger = {
+			any_owned_province = {
+				has_any_ruinborn_pop_trigger = yes
+			}
+			NOT = {
+				check_variable = {
+					which = ruinborn_race_tolerance
+					value = 100
+				}
+			}
+		}
+		generic_increase_of_racial_tolerance_effect = { medium = yes race = ruinborn }
+	}
+	option = { # goblin
+		name = YE_ljh.7.l
+		ai_chance = { factor = 1 }
+		trigger = {
+			any_owned_province = {
+				has_any_goblin_pop_trigger = yes
+			}
+			NOT = {
+				check_variable = {
+					which = goblin_race_tolerance
+					value = 100
+				}
+			}
+		}
+		generic_increase_of_racial_tolerance_effect = { medium = yes race = goblin }
+	}
+	option = { # harpy
+		name = YE_ljh.7.m
+		ai_chance = { factor = 1 }
+		trigger = {
+			any_owned_province = {
+				has_any_harpy_pop_trigger = yes
+			}
+			NOT = {
+				check_variable = {
+					which = harpy_race_tolerance
+					value = 100
+				}
+			}
+		}
+		generic_increase_of_racial_tolerance_effect = { medium = yes race = harpy }
+	}
+	option = { # troll
+		name = YE_ljh.7.n
+		ai_chance = { factor = 1 }
+		trigger = {
+			any_owned_province = {
+				has_any_troll_pop_trigger = yes
+			}
+			NOT = {
+				check_variable = {
+					which = troll_race_tolerance
+					value = 100
+				}
+			}
+		}
+		generic_increase_of_racial_tolerance_effect = { medium = yes race = troll }
+	}
+	option = { # ogre
+		name = YE_ljh.7.o
+		ai_chance = { factor = 1 }
+		trigger = {
+			any_owned_province = {
+				has_any_ogre_pop_trigger = yes
+			}
+			NOT = {
+				check_variable = {
+					which = ogre_race_tolerance
+					value = 100
+				}
+			}
+		}
+		generic_increase_of_racial_tolerance_effect = { medium = yes race = ogre }
+	}
+	option = { # harimari
+		name = YE_ljh.7.p
+		ai_chance = { factor = 1 }
+		trigger = {
+			any_owned_province = {
+				has_any_harimari_pop_trigger = yes
+			}
+			NOT = {
+				check_variable = {
+					which = harimari_race_tolerance
+					value = 100
+				}
+			}
+		}
+		generic_increase_of_racial_tolerance_effect = { medium = yes race = harimari }
+	}
+	option = { # centaur
+		name = YE_ljh.7.q
+		ai_chance = { factor = 1 }
+		trigger = {
+			any_owned_province = {
+				has_any_centaur_pop_trigger = yes
+			}
+			NOT = {
+				check_variable = {
+					which = centaur_race_tolerance
+					value = 100
+				}
+			}
+		}
+		generic_increase_of_racial_tolerance_effect = { medium = yes race = centaur }
+	}
+	option = { # hobgoblin
+		name = YE_ljh.7.r
+		ai_chance = { factor = 1 }
+		trigger = {
+			any_owned_province = {
+				has_any_hobgoblin_pop_trigger = yes
+			}
+			NOT = {
+				check_variable = {
+					which = hobgoblin_race_tolerance
+					value = 100
+				}
+			}
+		}
+		generic_increase_of_racial_tolerance_effect = { medium = yes race = hobgoblin }
+	}
+	option = { # lizardfolk
+		name = YE_ljh.7.s
+		ai_chance = { factor = 1 }
+		trigger = {
+			any_owned_province = {
+				has_any_lizardfolk_pop_trigger = yes
+			}
+			NOT = {
+				check_variable = {
+					which = lizardfolk_race_tolerance
+					value = 100
+				}
+			}
+		}
+		generic_increase_of_racial_tolerance_effect = { medium = yes race = lizardfolk }
+	}
+	option = { # mechanim
+		name = YE_ljh.7.t
+		ai_chance = { factor = 1 }
+		trigger = {
+			any_owned_province = {
+				has_any_mechanim_pop_trigger = yes
+			}
+			NOT = {
+				check_variable = {
+					which = mechanim_race_tolerance
+					value = 100
+				}
+			}
+		}
+		generic_increase_of_racial_tolerance_effect = { medium = yes race = mechanim }
+	}
 
-# country_event = { #空事件7
-# 	id = YE_ljh.7
-# 	title = YE_ljh.7.T
-# 	desc = YE_ljh.7.D
-# 	picture = GREAT_SPIRIT_YANHE_eventPicture
+}
 
-# 	fire_only_once = yes
-# 	is_triggered_only = yes
+country_event = { #8 修建大学
+	id = YE_ljh.8
+	title = YE_ljh.8.T
+	desc = YE_ljh.8.D
+	picture = GREAT_SPIRIT_YANHE_eventPicture
 
-# 	trigger = {
-# 	}
+	is_triggered_only = yes
 
-# 	option = {
-# 		name = YE_ljh.7.a
-# 		ai_chance = { factor = 1 }
-# 	}
-# 	option = {
-# 		name = YE_ljh.7.b
-# 		ai_chance = { factor = 1 }
-# 	}
-# #本地化，必须空一个格开头	
-#  YE_ljh.7.T:0 ""
-#  YE_ljh.7.D:0 ""
-#  YE_ljh.7.a:0 ""
-#  YE_ljh.7.b:0 ""
-# }
-# country_event = { #空事件8
-# 	id = YE_ljh.8
-# 	title = YE_ljh.8.T
-# 	desc = YE_ljh.8.D
-# 	picture = GREAT_SPIRIT_YANHE_eventPicture
+	option = { # exit
+		name = YE_ljh.8.z
+		ai_chance = { factor = 1 }
+	}
+	option = { # 天楼 4871
+		name = YE_ljh.8.a
+		ai_chance = { factor = 1 }
+		trigger = {
+			4871 = {
+				owned_by = ROOT
+			}
+		}
+		if = {
+			limit = {
+				4871 = {
+					NOT = { has_building = university }
+				}
+			}
+			4871 = {
+				add_building = university
+			}
+		}
+		else = {
+			4871 = {
+				area = {
+					add_province_modifier = {
+						name = yanzhou_universities_funded_by_yanzhoupai
+						duration = 1825
+					}
+				}
+			}
+		}
+	}
+	option = { # 北渡港 4907
+		name = YE_ljh.8.b
+		ai_chance = { factor = 1 }
+		trigger = {
+			4907 = {
+				owned_by = ROOT
+			}
+		}
+		if = {
+			limit = {
+				4907 = {
+					NOT = { has_building = university }
+				}
+			}
+			4907 = {
+				add_building = university
+			}
+		}
+		else = {
+			4907 = {
+				area = {
+					add_province_modifier = {
+						name = yanzhou_universities_funded_by_yanzhoupai
+						duration = 1825
+					}
+				}
+			}
+		}
+	}
+	option = { # 江都 4868
+		name = YE_ljh.8.c
+		ai_chance = { factor = 1 }
+		trigger = {
+			4868 = {
+				owned_by = ROOT
+			}
+		}
+		if = {
+			limit = {
+				4868 = {
+					NOT = { has_building = university }
+				}
+			}
+			4868 = {
+				add_building = university
+			}
+		}
+		else = {
+			4868 = {
+				area = {
+					add_province_modifier = {
+						name = yanzhou_universities_funded_by_yanzhoupai
+						duration = 1825
+					}
+				}
+			}
+		}
+	}
+	option = { # 青同 8117
+		name = YE_ljh.8.d
+		ai_chance = { factor = 1 }
+		trigger = {
+			8117 = {
+				owned_by = ROOT
+			}
+		}
+		if = {
+			limit = {
+				8117 = {
+					NOT = { has_building = university }
+				}
+			}
+			8117 = {
+				add_building = university
+			}
+		}
+		else = {
+			8117 = {
+				area = {
+					add_province_modifier = {
+						name = yanzhou_universities_funded_by_yanzhoupai
+						duration = 1825
+					}
+				}
+			}
+		}
+	}
+	option = { # 大矛宫 4979
+		name = YE_ljh.8.e
+		ai_chance = { factor = 1 }
+		trigger = {
+			4979 = {
+				owned_by = ROOT
+			}
+		}
+		if = {
+			limit = {
+				4979 = {
+					NOT = { has_building = university }
+				}
+			}
+			4979 = {
+				add_building = university
+			}
+		}
+		else = {
+			4979 = {
+				area = {
+					add_province_modifier = {
+						name = yanzhou_universities_funded_by_yanzhoupai
+						duration = 1825
+					}
+				}
+			}
+		}
+	}
+	option = { # 坚墙 4925
+		name = YE_ljh.8.f
+		ai_chance = { factor = 1 }
+		trigger = {
+			4925 = {
+				owned_by = ROOT
+			}
+		}
+		if = {
+			limit = {
+				4925 = {
+					NOT = { has_building = university }
+				}
+			}
+			4925 = {
+				add_building = university
+			}
+		}
+		else = {
+			4925 = {
+				area = {
+					add_province_modifier = {
+						name = yanzhou_universities_funded_by_yanzhoupai
+						duration = 1825
+					}
+				}
+			}
+		}
+	}
+	option = { # 央城 4861
+		name = YE_ljh.8.g
+		ai_chance = { factor = 1 }
+		trigger = {
+			4861 = {
+				owned_by = ROOT
+			}
+		}
+		if = {
+			limit = {
+				4861 = {
+					NOT = { has_building = university }
+				}
+			}
+			4861 = {
+				add_building = university
+			}
+		}
+		else = {
+			4861 = {
+				area = {
+					add_province_modifier = {
+						name = yanzhou_universities_funded_by_yanzhoupai
+						duration = 1825
+					}
+				}
+			}
+		}
+	}
+	option = { # 烟中 4859
+		name = YE_ljh.8.h
+		ai_chance = { factor = 1 }
+		trigger = {
+			4859 = {
+				owned_by = ROOT
+			}
+		}
+		if = {
+			limit = {
+				4859 = {
+					NOT = { has_building = university }
+				}
+			}
+			4859 = {
+				add_building = university
+			}
+		}
+		else = {
+			4859 = {
+				area = {
+					add_province_modifier = {
+						name = yanzhou_universities_funded_by_yanzhoupai
+						duration = 1825
+					}
+				}
+			}
+		}
+	}
+	option = { # 西城 4846
+		name = YE_ljh.8.i
+		ai_chance = { factor = 1 }
+		trigger = {
+			4846 = {
+				owned_by = ROOT
+			}
+		}
+		if = {
+			limit = {
+				4846 = {
+					NOT = { has_building = university }
+				}
+			}
+			4846 = {
+				add_building = university
+			}
+		}
+		else = {
+			4846 = {
+				area = {
+					add_province_modifier = {
+						name = yanzhou_universities_funded_by_yanzhoupai
+						duration = 1825
+					}
+				}
+			}
+		}
+	}
+	option = { # 禁城 4842
+		name = YE_ljh.8.j
+		ai_chance = { factor = 1 }
+		trigger = {
+			4842 = {
+				owned_by = ROOT
+			}
+		}
+		if = {
+			limit = {
+				4842 = {
+					NOT = { has_building = university }
+				}
+			}
+			4842 = {
+				add_building = university
+			}
+		}
+		else = {
+			4842 = {
+				area = {
+					add_province_modifier = {
+						name = yanzhou_universities_funded_by_yanzhoupai
+						duration = 1825
+					}
+				}
+			}
+		}
+	}
+	option = { # 昭明 8038
+		name = YE_ljh.8.k
+		ai_chance = { factor = 1 }
+		trigger = {
+			8038 = {
+				owned_by = ROOT
+			}
+		}
+		if = {
+			limit = {
+				8038 = {
+					NOT = { has_building = university }
+				}
+			}
+			8038 = {
+				add_building = university
+			}
+		}
+		else = {
+			8038 = {
+				area = {
+					add_province_modifier = {
+						name = yanzhou_universities_funded_by_yanzhoupai
+						duration = 1825
+					}
+				}
+			}
+		}
+	}
+	option = { # 林垣 4951
+		name = YE_ljh.8.l
+		ai_chance = { factor = 1 }
+		trigger = {
+			4951 = {
+				owned_by = ROOT
+			}
+		}
+		if = {
+			limit = {
+				4951 = {
+					NOT = { has_building = university }
+				}
+			}
+			4951 = {
+				add_building = university
+			}
+		}
+		else = {
+			4951 = {
+				area = {
+					add_province_modifier = {
+						name = yanzhou_universities_funded_by_yanzhoupai
+						duration = 1825
+					}
+				}
+			}
+		}
+	}
+	option = { # 罗邑 4949
+		name = YE_ljh.8.m
+		ai_chance = { factor = 1 }
+		trigger = {
+			4949 = {
+				owned_by = ROOT
+			}
+		}
+		if = {
+			limit = {
+				4949 = {
+					NOT = { has_building = university }
+				}
+			}
+			4949 = {
+				add_building = university
+			}
+		}
+		else = {
+			4949 = {
+				area = {
+					add_province_modifier = {
+						name = yanzhou_universities_funded_by_yanzhoupai
+						duration = 1825
+					}
+				}
+			}
+		}
+	}
+	option = { # 飞腾 4879
+		name = YE_ljh.8.n
+		ai_chance = { factor = 1 }
+		trigger = {
+			4879 = {
+				owned_by = ROOT
+			}
+		}
+		if = {
+			limit = {
+				4879 = {
+					NOT = { has_building = university }
+				}
+			}
+			4879 = {
+				add_building = university
+			}
+		}
+		else = {
+			4879 = {
+				area = {
+					add_province_modifier = {
+						name = yanzhou_universities_funded_by_yanzhoupai
+						duration = 1825
+					}
+				}
+			}
+		}
+	}
+	option = { # 曦云 4893
+		name = YE_ljh.8.o
+		ai_chance = { factor = 1 }
+		trigger = {
+			4893 = {
+				owned_by = ROOT
+			}
+		}
+		if = {
+			limit = {
+				4893 = {
+					NOT = { has_building = university }
+				}
+			}
+			4893 = {
+				add_building = university
+			}
+		}
+		else = {
+			4893 = {
+				area = {
+					add_province_modifier = {
+						name = yanzhou_universities_funded_by_yanzhoupai
+						duration = 1825
+					}
+				}
+			}
+		}
+	}
+	option = { # 清旭 4884
+		name = YE_ljh.8.p
+		ai_chance = { factor = 1 }
+		trigger = {
+			4884 = {
+				owned_by = ROOT
+			}
+		}
+		if = {
+			limit = {
+				4884 = {
+					NOT = { has_building = university }
+				}
+			}
+			4884 = {
+				add_building = university
+			}
+		}
+		else = {
+			4884 = {
+				area = {
+					add_province_modifier = {
+						name = yanzhou_universities_funded_by_yanzhoupai
+						duration = 1825
+					}
+				}
+			}
+		}
+	}
 
-# 	fire_only_once = yes
-# 	is_triggered_only = yes
-
-# 	trigger = {
-# 	}
-
-# 	option = {
-# 		name = YE_ljh.8.a
-# 		ai_chance = { factor = 1 }
-# 	}
-# 	option = {
-# 		name = YE_ljh.8.b
-# 		ai_chance = { factor = 1 }
-# 	}
-# #本地化，必须空一个格开头	
-#  YE_ljh.8.T:0 ""
-#  YE_ljh.8.D:0 ""
-#  YE_ljh.8.a:0 ""
-#  YE_ljh.8.b:0 ""
-# }
+}
 # country_event = { #空事件9
 # 	id = YE_ljh.9
 # 	title = YE_ljh.9.T
@@ -470,28 +1643,28 @@ country_event = { #4 战争或和平
 #  YE_ljh.14.b:0 ""
 # }
 # country_event = { #空事件15
-	id = YE_ljh.15
-	title = YE_ljh.15.T
-	desc = YE_ljh.15.D
-	picture = GREAT_SPIRIT_YANHE_eventPicture
+# 	id = YE_ljh.15
+# 	title = YE_ljh.15.T
+# 	desc = YE_ljh.15.D
+# 	picture = GREAT_SPIRIT_YANHE_eventPicture
 
-	fire_only_once = yes
-	is_triggered_only = yes
+# 	fire_only_once = yes
+# 	is_triggered_only = yes
 
-	trigger = {
-	}
+# 	trigger = {
+# 	}
 
-	option = {
-		name = YE_ljh.15.a
-		ai_chance = { factor = 1 }
-	}
-	option = {
-		name = YE_ljh.15.b
-		ai_chance = { factor = 1 }
-	}
-#本地化，必须空一个格开头	
- YE_ljh.15.T:0 ""
- YE_ljh.15.D:0 ""
- YE_ljh.15.a:0 ""
- YE_ljh.15.b:0 ""
-}
+# 	option = {
+# 		name = YE_ljh.15.a
+# 		ai_chance = { factor = 1 }
+# 	}
+# 	option = {
+# 		name = YE_ljh.15.b
+# 		ai_chance = { factor = 1 }
+# 	}
+# #本地化，必须空一个格开头	
+#  YE_ljh.15.T:0 ""
+#  YE_ljh.15.D:0 ""
+#  YE_ljh.15.a:0 ""
+#  YE_ljh.15.b:0 ""
+# }

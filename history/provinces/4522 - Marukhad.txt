@@ -1,0 +1,15 @@
+# No previous file for Banten
+owner = YC9
+controller = YC9
+culture = fengliu
+religion = transmutative_path
+base_tax = 1
+base_production = 1
+base_manpower = 3
+trade_goods = livestock
+is_city = yes
+add_permanent_province_modifier = { 
+	name = orcish_minority_integrated_large
+	duration = -1
+}
+add_core = YC9

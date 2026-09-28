@@ -1,12 +1,11 @@
 # No previous file for Banten
-owner = YB1
-controller = YB1
-add_core = R78
-culture = shamadhan
-religion = devouring_path
+owner = YD2
+controller = YD2
+culture = hezuo
+religion = guosi_faith
 base_tax = 4
 base_production = 4
 base_manpower = 1
 trade_goods = tea
 is_city = yes
-add_core = YB1
+add_core = YD2

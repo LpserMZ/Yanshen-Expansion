@@ -312,4 +312,28 @@ jianxusi_modifier_tier_II_for_deposit_divination = {
 	picture = "divination_mod_icon_spell_modifier"
 }
 
+YE_lanjinhui_ruler_action_cooldown_modifier = {
+	picture = "modifier_icon_cooldown"
+}
 
+peaceful_image_of_nongshanpai_modifier = {
+	ae_impact = -0.10
+}
+
+waqiaopai_ruler_modifier = {
+	core_creation = 0.15
+	diplomatic_reputation = 2
+}
+
+strong_renxia_ruler = {
+	discipline = 0.10
+	is_samurai_modifier = yes
+}
+
+renxiapai_moral_instruction = {
+	local_missionary_strength = 0.01
+}
+
+yanzhou_universities_funded_by_yanzhoupai = {
+	local_development_cost_modifier = -0.10
+}

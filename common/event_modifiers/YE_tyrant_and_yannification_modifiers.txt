@@ -93,7 +93,7 @@ yannification_development_modifier = {
     local_development_cost = -0.10
 }
 yannification_action_cooldown = {
-	picture = "yannification_action_cooldown"
+	picture = "modifier_icon_cooldown"
 }
 yannification_intermarriage_modifier = {
 	picture = "yannification_intermarriage_modifier"

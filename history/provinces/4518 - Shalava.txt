@@ -1,7 +1,6 @@
 # No previous file for Banten 187
 owner = R84
 controller = R84
-add_core = R11
 culture = khedarid
 religion = high_philosophy
 base_tax = 3

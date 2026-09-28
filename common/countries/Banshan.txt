@@ -267,10 +267,10 @@ ship_names = {
 }
 
 army_names = {
-	"Nephrite Army" "Army of $PROVINCE$" "$PROVINCE$ Legion" "Segbandal Army"
+	"Army of $PROVINCE$" "$PROVINCE$ Legion" "Segbandal Army"
 }
 
 fleet_names = {
-	"Nephrite Fleet" "Axe Squadron" "Shield Squadron" "Beard Squadron" "Hammer Squadron"
+	"Axe Squadron" "Shield Squadron" "Beard Squadron" "Hammer Squadron"
 }
    
