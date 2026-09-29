@@ -1,0 +1,145 @@
+YE_lianxiang_power = {  #莲相
+	alert_icon_gfx = GFX_alerticons_government_mechanics
+	alert_icon_index = 13
+
+	powers = {
+		lianxiang_power = {
+			gui = GFX_lianxiang_gui
+			max = 100
+			min = 0
+			reset_on_new_ruler = no
+			base_monthly_growth = 0.20
+			development_scaled_monthly_growth = 0
+			scaled_modifier = {
+				modifier = {
+					administrative_efficiency = 0.10
+					global_unrest = -4
+					min_autonomy = 30
+					all_estate_influence_modifier = 0.20
+                    tolerance_of_heathens_capacity = 4
+                    tolerance_heathen = 2
+				}
+				start_value = 0
+				end_value = 100
+			}
+			is_good = yes
+			range_modifier = {
+				trigger = {
+					num_of_owned_provinces_with = {
+						value = 1
+						religion = high_philosophy
+						has_province_modifier = temple_complex
+					}
+				}
+				modifier = {
+					monthly_lianxiang_power = -0.05
+				}
+			}
+			range_modifier = {
+				trigger = {
+					num_of_owned_provinces_with = {
+						value = 2
+						religion = high_philosophy
+						has_province_modifier = temple_complex
+					}
+				}
+				modifier = {
+					monthly_lianxiang_power = -0.05
+				}
+			}
+			range_modifier = {
+				trigger = {
+					num_of_owned_provinces_with = {
+						value = 3
+						religion = high_philosophy
+						has_province_modifier = temple_complex
+					}
+				}
+				modifier = {
+					monthly_lianxiang_power = -0.05
+				}
+			}
+			range_modifier = {
+				trigger = {
+					num_of_owned_provinces_with = {
+						value = 4
+						religion = high_philosophy
+						has_province_modifier = temple_complex
+					}
+				}
+				modifier = {
+					monthly_lianxiang_power = -0.05
+				}
+			}
+			range_modifier = {
+				trigger = {
+					num_of_owned_provinces_with = {
+						value = 5
+						religion = high_philosophy
+						has_province_modifier = temple_complex
+					}
+				}
+				modifier = {
+					monthly_lianxiang_power = -0.05
+				}
+			}
+			range_modifier = {
+				trigger = {
+					num_of_owned_provinces_with = {
+						value = 6
+						religion = high_philosophy
+						has_province_modifier = temple_complex
+					}
+				}
+				modifier = {
+					monthly_lianxiang_power = -0.05
+				}
+			}
+			range_modifier = {
+				trigger = {
+					num_of_owned_provinces_with = {
+						value = 7
+						religion = high_philosophy
+						has_province_modifier = temple_complex
+					}
+				}
+				modifier = {
+					monthly_lianxiang_power = -0.05
+				}
+			}
+			range_modifier = {
+				trigger = {
+					num_of_owned_provinces_with = {
+						value = 8
+						religion = high_philosophy
+						has_province_modifier = temple_complex
+					}
+				}
+				modifier = {
+					monthly_lianxiang_power = -0.05
+				}
+			}
+			range_modifier = {
+				trigger = {
+					estate_loyalty = {
+						estate = estate_eunuchs_anb
+						higher_than_influence = no
+					}
+				}
+				modifier = {
+					monthly_lianxiang_power = 0.1
+				}
+			}
+			range_modifier = {
+				trigger = {
+					army_size_percentage = 0.95
+				}
+				modifier = {
+					monthly_lianxiang_power = -0.1
+				}
+			}
+		}
+	}
+	
+	
+}

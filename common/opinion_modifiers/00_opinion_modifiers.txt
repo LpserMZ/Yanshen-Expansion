@@ -5305,3 +5305,6 @@ engaged_in_grain_trade_modifier = {
 	opinion = 25
 	yearly_decay = 2.5
 }
+YE_Lianzhou_jiangdu_friend = {
+	opinion = 100
+}

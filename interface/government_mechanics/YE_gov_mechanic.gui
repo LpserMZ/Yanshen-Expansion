@@ -99,4 +99,26 @@ guiTypes = {
 			alwaystransparent = yes
 		}
 	}
+	windowType = {    #莲相
+        name = "GFX_lianxiang_gui"
+		size = { x = 250 y = 120 }
+		backGround = ""
+		moveable = 0
+		dontRender = ""
+		horizontalBorder = ""
+
+		iconType = {
+			name = "government_power_bar"
+			spriteType = "GFX_lianxiang_tiao"
+			position = { x = 15 y = 7 }
+		}
+
+		iconType = {
+			name = "government_power_bar_frame"
+			spriteType = "GFX_lianxiang_kuang"
+			position = { x = 14 y = 5 }
+			alwaystransparent = yes
+		}
+
+	}
 }

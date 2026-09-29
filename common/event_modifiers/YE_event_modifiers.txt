@@ -312,7 +312,76 @@ jianxusi_modifier_tier_II_for_deposit_divination = {
 	picture = "divination_mod_icon_spell_modifier"
 }
 
-YE_lanjinhui_ruler_action_cooldown_modifier = {
+#江都buff
+YE_Jiangdu_lanjincandang = {
+	local_unrest = 2
+    local_tax_modifier = -0.2
+    local_autonomy = 0.1
+}
+
+#莲州buff
+YE_Lianzhou_jiabing = {
+	land_maintenance_modifier = -0.10
+}
+YE_Lianzhou_chaxiangjiuse = {
+	trade_goods_size = 1
+}
+YE_Lianzhou_shenzhaozhuangyuan = {
+	local_manpower_modifier = 0.25
+}
+YE_Lianzhou_sichoujisandi = {
+	trade_goods_size = 1
+	local_trade_value_modifier = 0.10
+}
+YE_Lianzhou_huanguandehezuo = {
+	stability_cost_modifier = -0.10
+	improve_relation_modifier = 0.10
+}
+YE_Lianzhou_shenzhaozailin = {
+	province_warscore_cost = -0.10
+	diplomatic_reputation = 1
+	war_taxes_cost_modifier = -1.00
+	core_creation = -0.10
+    infantry_shock = 0.2
+}
+YE_Lianzhou_liangshichandi = {
+	local_building_slots = 1
+	local_manufactory_slots = 1
+	local_production_efficiency = 0.20
+	local_manpower_modifier = 0.20
+}
+YE_Lianzhou_tianlou_weakened = {
+	defensiveness = -0.40
+}
+YE_Lianzhou_chongjiantianlou = {
+    local_monthly_devastation = -1
+	local_development_cost = -1.00
+	local_build_cost = -0.40
+	local_build_time = -0.20
+}
+YE_Lianzhou_wulin_ligong = {
+    local_development_cost = -0.20
+	local_building_slots = 1
+	local_build_time = -0.20
+	local_build_cost = -0.20
+}
+YE_Lianzhou_easy_conquest = {
+    province_warscore_cost = -0.25
+}
+
+#莲州属国
+YE_lianzhou_subject_overlord_modifier = {
+	administrative_efficiency = -0.025
+    global_tax_modifier = 0.2
+	trade_efficiency = 0.10
+}
+YE_lianzhou_lianxiang_subject_modifier = {
+	liberty_desire = -50
+}
+YE_lianzhou_subject_jianqiang_modifier = {
+    administrative_efficiency = -0.025
+	global_tax_modifier = -0.1
+}YE_lanjinhui_ruler_action_cooldown_modifier = {
 	picture = "modifier_icon_cooldown"
 }
 
