@@ -1517,7 +1517,7 @@ yanhe_river_route = { start = 4814 #烟河航道
 	}
 	
 	#how much to build one
-	build_cost = 100
+	build_cost = 1
 	
 	#can we move it?
 	can_be_moved = no
@@ -1532,7 +1532,7 @@ yanhe_river_route = { start = 4814 #烟河航道
 	build_trigger = {
 		has_great_project = {
 			type = shenliu_guan
-			tier = 3
+			tier = 1
 		}	
 	}
 	

@@ -258,11 +258,8 @@ country_event = { #5 选举
 		}
 
         define_ruler = {
-            adm = 1
-            mil = 1        
-            max_random_adm = 6
-            max_random_dip = 6
-            max_random_mil = 6
+            change_adm = 1
+            change_mil = 1        
         }
 		if = {
 			limit = {
@@ -320,11 +317,8 @@ country_event = { #5 选举
 		}
 
         define_ruler = {
-            adm = 1
-            dip = 1
-            max_random_adm = 6
-            max_random_dip = 6
-            max_random_mil = 6
+            change_adm = 1
+            change_dip = 1
         }
 		if = {
 			limit = {
@@ -352,11 +346,8 @@ country_event = { #5 选举
 			add_mil_power = 100
 		}
         define_ruler = {
-            adm = 1
-            dip = 2
-            max_random_adm = 6
-            max_random_dip = 6
-            max_random_mil = 6
+            change_adm = 1
+            change_dip = 2
         }
 		if = {
 			limit = {
@@ -389,10 +380,7 @@ country_event = { #5 选举
 			add_mil_power = -200
 		}
         define_ruler = {
-            adm = 2
-            max_random_adm = 6
-            max_random_dip = 6
-            max_random_mil = 6
+            change_adm = 2
         }
 		if = {
 			limit = {
@@ -421,10 +409,7 @@ country_event = { #5 选举
 		}
 
         define_ruler = {
-            dip = 3
-            max_random_adm = 6
-            max_random_dip = 6
-            max_random_mil = 6
+            change_dip = 3
         }
 		if = {
 			limit = {

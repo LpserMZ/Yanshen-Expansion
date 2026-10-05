@@ -7904,7 +7904,7 @@ halessi = {
 			advisor_cost = -0.05
 		}
 
-		uses_harmony = yes
+		# uses_harmony = yes
 		heretic = {
 		}
 	}

@@ -1,311 +1,337 @@
 every_country = {
-	# limit= {
+	limit= {
+		always = no
+		capital_scope = {
 
-	# 	capital_scope = {
-	# 		# continent = europe
-	# 		# continent = africa
-	# 		# continent = asia
-	# 		OR = {
-	# 			continent = serpentspine
-	# 			continent = asia
-	# 			# continent = africa
-	# 			# region = nomsyulhan_region
-	# 			# superregion = jvzhiguo_superregion
-	# 		}
-	# 		# NOT = { superregion = bulwar_superregion }
-	# 		# NOT = { superregion = north_salahad_superregion }
-	# 	}
-	# }
+			OR = {
+				# continent = europe
+				# continent = africa
+				# continent = asia
+				# continent = serpentspine
+				# superregion= rahen_superregion
+				region = wuxun_region
+				# continent = africa
+				# region = nomsyulhan_region
+				# superregion = jvzhiguo_superregion
+			}
+			# NOT = { superregion = bulwar_superregion }
+			# NOT = { superregion = north_salahad_superregion }
+		}
+	}
 	disband_all_units = yes
-	# remove_country = THIS
+	remove_country = THIS
 }
 
-# every_province = {
-# 	if = { # yanzhou
-# 		limit = {
-# 			superregion = yanshen_superregion
-# 		}
-# 		if = {
-# 			limit = {
-# 				region = zhuyue_region
-# 			}
-# 			change_culture = naamjyut
-# 		}
-# 		else_if = {
-# 			limit = {
-# 				OR = {
-# 					region = zhaoxun_region
-# 					region = yanxin_region 
-# 				}
-# 				NOT = { area = moryokang_area }
-# 				NOT = { area = ml_cave5_area }
-# 				NOT = { area = zx3_area }
-# 				NOT = { area = jinqiu_area }
-# 				NOT = { area = zx4_area }
-# 			}
-# 			change_culture = jiangszun
-# 		}
-# 		else_if = {
-# 			limit = {
-# 				OR = {
-# 					area = moryokang_area
-# 					area = ml_cave5_area
-# 					area = zx3_area
-# 					area = jinqiu_area
-# 					area = zx4_area
-# 				}
-# 			}
-# 			change_culture = beikling
-# 		}
-# 		else_if = {
-# 			limit = {
-# 				OR = {
-# 					region = jianwu_region
-# 					region = jinxun_region
-# 				}
-# 			}
-# 			change_culture = jiangyang
-# 		}
-# 		else_if = {
-# 			limit = {
-# 				region = luojiang_region 
-# 			}
-# 			change_culture = gangim
-# 		}
-# 	}
-# 	else_if = { #shenzhou
-# 		limit = {
-# 			superregion = shenzhou_superregion
-# 		}
-# 		if = {
-# 			limit = {
-# 				region = xianjie_region
-# 			}
-# 			change_culture = szitu
-# 		}
-# 		else_if = {
-# 			limit = {
-# 				region = demon_hills_region
-# 			}
-# 			change_culture = beikling
-# 		}
-# 		else_if = { # wuxun part1
-# 			limit = {
-# 				OR = {
-# 					area = wx4_area
-# 					area = pharata_area
-# 					area = yodhilakra_area
-# 					area = sir_area
-# 					area = tietyuan_area
-# 					area = mogutian_area
-
-# 					area = nadida_area
-# 				}
-# 			}
-# 			change_culture = jichuan
-# 		}
-# 		else_if = { # wuxun part2
-# 			limit = {
-# 				region = wuxun_region 
-# 			}
-# 			change_culture = yansu
-# 		}
-# 	}
-# 	else_if = { #rahen
-# 		limit = {
-# 			superregion = rahen_superregion
-# 		}
-# 		if = {
-# 			limit = {
-# 				OR = {
-# 					region = shamakhad_region
-# 					region = dhujat_region
-# 				}
-# 			}
-# 			change_culture = luoxian
-# 		}
-# 		else_if = {
-# 			limit = {
-# 				OR = {
-# 					region = rakhadesh_region
-# 					region = rahen_coast_region
-# 				}
-# 			}
-# 			change_culture = kuoliu
-# 		}
-# 	}
-# 	else_if = { #xianzhong
-# 		limit = {
-# 			superregion = xianzhong_superregion
-# 		}
-# 		change_culture = xianzhong_yan
-# 	}
-# 	else_if = { # gozengun
-# 		limit = {
-# 			superregion = gozengun_superregion
-# 		}
-# 		if = {
-# 			limit = {
-# 				region = shuvuushudi_region
-# 			}
-# 			change_culture = shuokyuan
-# 		}
-# 		else_if = {
-# 			limit = {
-# 				region = nudanhan_region
-# 			}
-# 			change_culture = beikling
-# 		}
-# 		else_if = {
-# 			limit = {
-# 				region = gowon_region
-# 			}
-# 			change_culture = jiangyang
-# 		}
-# 	}
-# 	else_if = { #vimdatrong
-# 		limit = {
-# 			superregion = vimdatrong_superregion
-# 		}
-# 		if = {
-# 			limit = {
-# 				OR = {
-# 					region = pugao_region
-# 					region = thidinkai_region
-# 				}
-				
-# 			}
-# 			change_culture = naamzau
-# 		}
-# 		else_if = {
-# 			limit = {
-# 				region = bomdan_region
-# 			}
-# 			change_culture = mangzhou
-# 		}
-# 		else_if = {
-# 			limit = {
-# 				region = lupulan_rainforest_region
-# 			}
-# 			change_culture = yvzhou
-# 		}
-# 		else_if = {
-# 			limit = {
-# 				region = shuanghe_region
-# 			}
-# 			change_culture = shuanghe_yan
-# 		}
-# 		else_if = {
-# 			limit = {
-# 				owner = { culture = naamjyut }
-# 				region = ringlet_isles_region
-# 			}
-# 			change_culture = pinghoi
-# 		}
-# 		else_if = {
-# 			limit = {
-# 				NOT = { owner = { culture = naamjyut } }
-# 				region = ringlet_isles_region
-# 			}
-# 			change_culture = xianyue
-# 		}
-# 		else = {
-# 			change_culture = naamzau
-# 		}
-# 	}
-	
-# 	else_if = { # bulwar
-# 		limit = {
-# 			superregion = bulwar_superregion
-# 		}
-# 		if = {
-# 			limit = {
-# 				OR = {
-# 					region = bahar_region
-# 					region = bulwar_proper_region
-# 					region = harpy_hills_region
-# 				}
-# 			}
-# 			change_culture = sule
-# 		}
-# 		else_if = {
-# 			limit = {
-# 				OR  = {
-# 					region = far_bulwar_region
-# 					region = far_salahad_region
-# 				}
-# 			}
-# 			change_culture = shahe
-# 		}
-# 	}
-# 	else_if = { # sarhal
-# 		limit = {
-# 			OR = {
-# 				region = gazraak_region
-# 				superregion = east_sarhal_superregion
-# 			}
-# 		}
-# 		if = {
-# 			limit = {
-# 				OR = {
-# 					region = gazraak_region
-
-
-# 					region = yetefesefi_region
-# 					region = denibari_region
-# 					region = telekenid_region
-# 					region = dreksaret_region
-# 				}
-# 			}
-# 			change_culture = yangzhou
-# 		}
-# 		else_if = {
-# 			limit = {
-# 				OR = {
-# 					region = ishyamtumu_region
-# 					region = bamaliwuni_region
-# 				}
-# 			}
-# 			change_culture = xiangyang
-# 		}
-		
-# 	}
-# 	else_if = { # ardimia
-# 		limit = {
-# 			superregion = djinnakah_superregion
-# 		}
-# 		change_culture = haijin
-# 	}
-	
-# 	else_if = { # xvanzhou
-# 		limit = {
-# 			superregion = jvzhiguo_superregion
-# 		}
-# 		change_culture = shuokyuan
-# 	}
-# 	else_if = { # forbidden_lands
-# 		limit = {
-# 			superregion = forbidden_lands_superregion
-# 		}
-# 		change_culture = kuldaakin
-# 	}
-
-# 	else_if = { #因斯亚西北
-# 		limit = {
-# 			superregion = kanolowele_superregion
-# 		}
-# 		change_culture = yvying
-# 	}
-# 	else_if = { #因斯亚西南
-# 		limit = {
-# 			superregion = insyaan_lowlands_superregion
-# 		}
-# 		change_culture = guyan
-# 	}
+# 6838 = {
+# 	add_core = YZ8
+# 	cede_province = YZ8
 # }
+yanshen_superregion = {
+	discover_country  = ROOT
+}
+shenzhou_superregion = {
+	discover_country  = ROOT
+}
+
+# 6838 = {
+# 	add_core = YZ7
+# 	cede_province = YZ7
+# }
+# switch_tag = YZ7
+
 if = {
 	limit = {
-		always = yes
+		always = no
+	}
+	every_province = {
+		if = { # yanzhou
+			limit = {
+				superregion = yanshen_superregion
+			}
+			if = {
+				limit = {
+					region = zhuyue_region
+				}
+				change_culture = naamjyut
+			}
+			else_if = {
+				limit = {
+					OR = {
+						region = zhaoxun_region
+						region = yanxin_region 
+					}
+					NOT = { area = moryokang_area }
+					NOT = { area = ml_cave5_area }
+					NOT = { area = zx3_area }
+					NOT = { area = jinqiu_area }
+					NOT = { area = zx4_area }
+				}
+				change_culture = jiangszun
+			}
+			else_if = {
+				limit = {
+					OR = {
+						area = moryokang_area
+						area = ml_cave5_area
+						area = zx3_area
+						area = jinqiu_area
+						area = zx4_area
+					}
+				}
+				change_culture = beikling
+			}
+			else_if = {
+				limit = {
+					OR = {
+						region = jianwu_region
+						region = jinxun_region
+					}
+				}
+				change_culture = jiangyang
+			}
+			else_if = {
+				limit = {
+					region = luojiang_region 
+				}
+				change_culture = gangim
+			}
+		}
+		else_if = { #shenzhou
+			limit = {
+				superregion = shenzhou_superregion
+			}
+			if = {
+				limit = {
+					region = xianjie_region
+				}
+				change_culture = szitu
+			}
+			else_if = {
+				limit = {
+					region = demon_hills_region
+				}
+				change_culture = beikling
+			}
+			else_if = { # wuxun part1
+				limit = {
+					OR = {
+						area = wx4_area
+						area = pharata_area
+						area = yodhilakra_area
+						area = sir_area
+						area = tietyuan_area
+						area = mogutian_area
+
+						area = nadida_area
+					}
+				}
+				change_culture = jichuan
+			}
+			else_if = { # wuxun part2
+				limit = {
+					region = wuxun_region 
+				}
+				change_culture = yansu
+			}
+		}
+		else_if = { #rahen
+			limit = {
+				superregion = rahen_superregion
+			}
+			if = {
+				limit = {
+					OR = {
+						region = shamakhad_region
+						region = dhujat_region
+					}
+				}
+				change_culture = luoxian
+			}
+			else_if = {
+				limit = {
+					OR = {
+						region = rakhadesh_region
+						region = rahen_coast_region
+					}
+				}
+				change_culture = kuoliu
+			}
+		}
+		else_if = { #xianzhong
+			limit = {
+				superregion = xianzhong_superregion
+			}
+			change_culture = xianzhong_yan
+		}
+		else_if = { # gozengun
+			limit = {
+				superregion = gozengun_superregion
+			}
+			if = {
+				limit = {
+					region = shuvuushudi_region
+				}
+				change_culture = shuokyuan
+			}
+			else_if = {
+				limit = {
+					region = nudanhan_region
+				}
+				change_culture = beikling
+			}
+			else_if = {
+				limit = {
+					region = gowon_region
+				}
+				change_culture = jiangyang
+			}
+		}
+		else_if = { #vimdatrong
+			limit = {
+				superregion = vimdatrong_superregion
+			}
+			if = {
+				limit = {
+					OR = {
+						region = pugao_region
+						region = thidinkai_region
+					}
+					
+				}
+				change_culture = naamzau
+			}
+			else_if = {
+				limit = {
+					region = bomdan_region
+				}
+				change_culture = mangzhou
+			}
+			else_if = {
+				limit = {
+					region = lupulan_rainforest_region
+				}
+				change_culture = yvzhou
+			}
+			else_if = {
+				limit = {
+					region = shuanghe_region
+				}
+				change_culture = shuanghe_yan
+			}
+			else_if = {
+				limit = {
+					owner = { culture = naamjyut }
+					region = ringlet_isles_region
+				}
+				change_culture = pinghoi
+			}
+			else_if = {
+				limit = {
+					NOT = { owner = { culture = naamjyut } }
+					region = ringlet_isles_region
+				}
+				change_culture = xianyue
+			}
+			else = {
+				change_culture = naamzau
+			}
+		}
+		
+		else_if = { # bulwar
+			limit = {
+				superregion = bulwar_superregion
+			}
+			if = {
+				limit = {
+					OR = {
+						region = bahar_region
+						region = bulwar_proper_region
+						region = harpy_hills_region
+					}
+				}
+				change_culture = sule
+			}
+			else_if = {
+				limit = {
+					OR  = {
+						region = far_bulwar_region
+						region = far_salahad_region
+					}
+				}
+				change_culture = shahe
+			}
+		}
+		else_if = { # sarhal
+			limit = {
+				OR = {
+					region = gazraak_region
+					superregion = east_sarhal_superregion
+				}
+			}
+			if = {
+				limit = {
+					OR = {
+						region = gazraak_region
+
+
+						region = yetefesefi_region
+						region = denibari_region
+						region = telekenid_region
+						region = dreksaret_region
+					}
+				}
+				change_culture = yangzhou
+			}
+			else_if = {
+				limit = {
+					OR = {
+						region = ishyamtumu_region
+						region = bamaliwuni_region
+					}
+				}
+				change_culture = xiangyang
+			}
+			
+		}
+		else_if = { # ardimia
+			limit = {
+				superregion = djinnakah_superregion
+			}
+			change_culture = haijin
+		}
+		
+		else_if = { # xvanzhou
+			limit = {
+				superregion = jvzhiguo_superregion
+			}
+			change_culture = shuokyuan
+		}
+		else_if = { # forbidden_lands
+			limit = {
+				superregion = forbidden_lands_superregion
+			}
+			change_culture = kuldaakin
+		}
+
+		else_if = { #因斯亚西北
+			limit = {
+				superregion = kanolowele_superregion
+			}
+			change_culture = yvying
+		}
+		else_if = { #因斯亚西南
+			limit = {
+				superregion = insyaan_lowlands_superregion
+			}
+			change_culture = guyan
+		}
+	}
+
+}
+
+if = {
+	limit = {
+		always = no
 	}
 	golden_highway_upper_yanshen = {
 		add_core = Z01
@@ -437,13 +463,14 @@ if = {
 	phangban_temple_area = { cede_province = B33 }
 	shanyutian_temple_area = { cede_province = B34 }
 }
-# if = {
-# 	limit = {
-# 		always = no
-# 	}
-# 	beikling_homeland_provinces = { cede_province = C01 }
-# 	wall_of_yanshen = { cede_province = C02 }
-# }
+if = {
+	limit = {
+		always = no
+	}
+	beikling_homeland_provinces = { cede_province = C01 }
+	wall_of_yanshen = { cede_province = C02 }
+}
+
 # remove_country_modifier = yannification_action_cooldown
 # 4755 = {
 # 	set_variable = { which = prov_yannification value = 94 }

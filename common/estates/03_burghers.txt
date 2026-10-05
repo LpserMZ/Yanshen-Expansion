@@ -215,6 +215,26 @@ estate_burghers = {
 	#Custom Names
 	#Note, these are applied from top to bottom.
 
+	custom_name = { # 烟
+		desc = estate_jvgu
+		trigger = {
+			culture_group = yan
+			NOT = { government = republic }
+			NOT = { has_institution = new_world_i }
+		}
+	}
+	custom_name = { # 烟
+		desc = estate_shanghui
+		trigger = {
+			culture_group = yan
+			OR = {
+				government = republic
+				has_institution = new_world_i
+			}
+			
+		}
+	}
+
 	custom_name = {
 		desc = estate_the_newly_minted
 		trigger = {
@@ -521,25 +541,7 @@ estate_burghers = {
 	 	}
 	}
 
-	custom_name = { # 烟
-		desc = estate_jvgu
-		trigger = {
-			culture_group = yan
-			NOT = { government = republic }
-			NOT = { has_institution = new_world_i }
-		}
-	}
-	custom_name = { # 烟
-		desc = estate_shanghui
-		trigger = {
-			culture_group = yan
-			OR = {
-				government = republic
-				has_institution = new_world_i
-			}
-			
-		}
-	}
+
 	# custom_name = {
 	# 	desc = estate_bourgeoisie
 	# 	trigger = {
