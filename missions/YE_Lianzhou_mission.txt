@@ -577,8 +577,7 @@ lianzhou_3 = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 			Y16 = {
-				is_subject_of = ROOT
-				is_tributary = no
+				is_subject_other_than_tributary_trigger = yes
 			}
 		}
 		effect = {
@@ -632,14 +631,14 @@ lianzhou_4 = {
 				owned_by = Y08
 			}
 		}
-		owner = {
-			NOT = {
-				has_opinion = {
-					who = ROOT
-					value = 150
-				}
-			}
-		}
+		# owner = {
+		# 	NOT = {
+		# 		has_opinion = {
+		# 			who = ROOT
+		# 			value = 150
+		# 		}
+		# 	}
+		# }
 		trigger = {
 			custom_trigger_tooltip = {
 				tooltip = YE_Lianzhou_4_3_tt

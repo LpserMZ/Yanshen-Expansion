@@ -6252,8 +6252,7 @@ yan = {	# CN character
 	fengliu = {}
 	shaliu = {}
 	hezuo = {}
-		
-
+	
 	dynasty_names = {
 		# A
 		"¿安" 
@@ -7723,7 +7722,9 @@ holohana_culture_group = {
 shen = {	# CN character
 	graphical_culture = asiangfx
 
-	jiaoling = {} # 焦陵
+	jiaoling = {
+		primary = YA8
+	} # 焦陵
 	
 	dynasty_names = {
 		"¿钳耳" "¿屈男" "¿弥姐" "¿莫折" "¿荔非" "¿夫蒙" "¿昨和"
@@ -7783,3 +7784,4 @@ shen = {	# CN character
 		"裳" "晴" "瑶" "璇" "珂" "珺"
 	}
 }
+

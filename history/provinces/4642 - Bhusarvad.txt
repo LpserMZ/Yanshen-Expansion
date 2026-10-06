@@ -1,7 +1,7 @@
 # No previous file for Banten 193
 owner = YA7
 controller = YA7
-culture = pezarangi_harpy
+culture = jichuan
 religion = accretive_path
 base_tax = 3
 base_production = 2

@@ -6527,8 +6527,10 @@ country_event = { #Sir revolt starts #开战
 					form_coalition_against = R62
 				}
 				else_if = {
-					is_in_war = {
-						defenders = R62
+					limit = {
+						is_in_war = {
+							defenders = R62
+						}
 					}
 					white_peace = R62
 				}

@@ -381,7 +381,8 @@ YE_lianzhou_lianxiang_subject_modifier = {
 YE_lianzhou_subject_jianqiang_modifier = {
     administrative_efficiency = -0.025
 	global_tax_modifier = -0.1
-}YE_lanjinhui_ruler_action_cooldown_modifier = {
+}
+YE_lanjinhui_ruler_action_cooldown_modifier = {
 	picture = "modifier_icon_cooldown"
 }
 
