@@ -3700,7 +3700,7 @@ culture_is_short_lived = {
 		culture_group = vurebindu
 		culture_group = west_sarhaly
 		culture_group = akasi
-		culture_group = shen # YE
+		# culture_group = shen # YE
 	}
 }
 
@@ -3853,7 +3853,7 @@ culture_is_human = {
 			culture_group = anakue
 			culture_group = utubodi
 			culture_group = tyvorkan
-			culture_group = shen
+			# culture_group = shen
 		}
 		NOT = { culture_is_half_orcish = yes }
 		NOT = { culture_is_half_elven = yes }
