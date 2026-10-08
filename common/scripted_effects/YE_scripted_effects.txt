@@ -651,6 +651,16 @@ YE_lianxiang_check_promoted_human_culture = {
     YE_lianxiang_check_human_culture = { culture = luoxian }
     YE_lianxiang_check_human_culture = { culture = naamzau }
     YE_lianxiang_check_human_culture = { culture = guyan }
+    # 烟蜃新加的文化
+	YE_lianxiang_check_human_culture = { culture = jinxun_culture }
+	YE_lianxiang_check_human_culture = { culture = tianlou_culture }
+	YE_lianxiang_check_human_culture = { culture = beidu_culture }
+	YE_lianxiang_check_human_culture = { culture = yinqvan_culture }
+    YE_lianxiang_check_human_culture = { culture = fengliu }
+    YE_lianxiang_check_human_culture = { culture = shaliu }
+    YE_lianxiang_check_human_culture = { culture = hezuo }
+    YE_lianxiang_check_human_culture = { culture = qingliu }
+    YE_lianxiang_check_human_culture = { culture = jichuan }
 
     # yan_half_orc 不写
 	YE_lianxiang_check_human_culture = { culture = shuvuush }
