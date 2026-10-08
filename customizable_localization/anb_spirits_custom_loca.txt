@@ -1294,11 +1294,11 @@ defined_text = {
 	text = {
 		localisation_key = DVP_yan_cost_tt
 		trigger = { 
-			culture_group = yan 
-			# OR = {
-			# 	culture_group = yan 
-			# 	culture_group = shen
-			# }
+			# culture_group = yan 
+			OR = {
+				culture_group = yan 
+				culture_group = shen
+			}
 		}
 	}
 	text = {
@@ -1522,11 +1522,11 @@ defined_text = {
 	text = {
 		localisation_key = DVP_yan_boon_tt
 		trigger = {
-			culture_group = yan 
-			# OR = {
-			# 	culture_group = yan 
-			# 	culture_group = shen
-			# }
+			# culture_group = yan 
+			OR = {
+				culture_group = yan 
+				culture_group = shen
+			}
 		}
 	}
 	text = {

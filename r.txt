@@ -1,29 +1,28 @@
-# 
 
-# every_country = {
-# 	limit= {
-# 		always = no
-# 		capital_scope = {
+every_country = {
+	limit= {
+		always = no
+		capital_scope = {
 
-# 			OR = {
-# 				# continent = europe
-# 				# continent = africa
-# 				# continent = asia
-# 				# continent = serpentspine
-# 				# superregion= rahen_superregion
-# 				region = wuxun_region
-# 				# continent = africa
-# 				# region = nomsyulhan_region
-# 				# superregion = jvzhiguo_superregion
-# 			}
-# 			# NOT = { superregion = bulwar_superregion }
-# 			# NOT = { superregion = north_salahad_superregion }
-# 		}
-# 	}
-# 	disband_all_units = yes
-# 	remove_country = THIS
-# }
-
+			OR = {
+				# continent = europe
+				# continent = africa
+				# continent = asia
+				# continent = serpentspine
+				# superregion= rahen_superregion
+				region = wuxun_region
+				# continent = africa
+				# region = nomsyulhan_region
+				# superregion = jvzhiguo_superregion
+			}
+			# NOT = { superregion = bulwar_superregion }
+			# NOT = { superregion = north_salahad_superregion }
+		}
+	}
+	disband_all_units = yes
+	remove_country = THIS
+}
+add_government_reform = YE_lianxiang
 # 6838 = {
 # 	add_core = YZ8
 # 	cede_province = YZ8
@@ -36,18 +35,18 @@
 # }
 
 
-demon_hills_region = {
-	add_core = Y01
-	cede_province = Y01
-	change_culture = horned_ogre
-	change_religion = devouring_path
-}
-ml_cave5_area = {
-	add_core = Y02
-	cede_province = Y02
-	change_culture = beikling
-	change_religion = devouring_path
-}
+# demon_hills_region = {
+# 	add_core = Y01
+# 	cede_province = Y01
+# 	change_culture = horned_ogre
+# 	change_religion = devouring_path
+# }
+# ml_cave5_area = {
+# 	add_core = Y02
+# 	cede_province = Y02
+# 	change_culture = beikling
+# 	change_religion = devouring_path
+# }
 # 6838 = {
 # 	add_core = YZ7
 # 	cede_province = YZ7

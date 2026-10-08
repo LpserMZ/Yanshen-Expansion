@@ -8167,11 +8167,11 @@ anb_changed_ways_effect = {
 	}
 	else_if = {
 		limit = {
-			culture_group = yan
-			# OR = {
-			# 	culture_group = yan
-			# 	culture_group = shen
-			# }	
+			# culture_group = yan
+			OR = {
+				culture_group = yan
+				culture_group = shen
+			}	
 		}
 		if = {
 			limit = { dominant_culture = jiangszun }

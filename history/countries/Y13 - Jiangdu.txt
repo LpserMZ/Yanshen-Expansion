@@ -17,8 +17,8 @@ historical_rival = Y05 #Lanjinhui
 
 1440.7.23 = {
 	monarch = {
-		name = "Ü^"
-		dynasty = "øT" 
+		name = "øw"
+		dynasty = "ø›ê" 
 		birth_date = 1422.8.8
 		adm = 2
 		dip = 1

@@ -3949,11 +3949,11 @@ Airship_sprite_pack = {
 yan_sprite_pack = {
 	# Tests against every tag in game
 	country_trigger = {
-		culture_group = yan 
-		# OR = {
-		# 	culture_group = yan
-		# 	culture_group = shen
-		# }
+		# culture_group = yan 
+		OR = {
+			culture_group = yan
+			culture_group = shen
+		}
 	}
 
 	sprite_infantry = {

@@ -549,11 +549,11 @@ race_yansheni = {
 		tooltip_reason = ""
 		weight = 5
 		trigger = {
-			culture_group = yan 
-			# OR = {
-			# 	culture_group = yan
-			# 	culture_group = shen
-			# }
+			# culture_group = yan 
+			OR = {
+				culture_group = yan
+				culture_group = shen
+			}
 			
 		}
 	}
