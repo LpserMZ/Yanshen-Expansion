@@ -2023,7 +2023,11 @@ wuxun_region = {
 		wx3_area
 		wx4_area
 		wx5_area
-
+		wx6_area
+		wx7_area
+		wx8_area
+		wx9_area
+		
 		khadisrapur_area
 		nakara_area
 		munlanan_area
@@ -2054,6 +2058,8 @@ zhaoxun_region = {
 		zx4_area
 		zx5_area
 		zx6_area
+		zx7_area
+
 		ml_cave5_area
 		moryokang_area
 		jinqiu_area
@@ -2101,6 +2107,8 @@ luojiang_region = {
 		gungi_area
 		luoyip_area
 		jx3_area
+		jx9_area
+		mulim_area
 	}
 	monsoon = {
 		00.05.01
@@ -2131,7 +2139,6 @@ jinxun_region = {
 		jx6_area
 		jx7_area
 		jx8_area
-		jx9_area
 		erluxi_area
 		liuminxiang_area
 		balrijin_area
@@ -2140,7 +2147,7 @@ jinxun_region = {
 		jinjiang_area
 		tianlou_area
 		beidugang_area
-		mulim_area
+		jx10_area
 	}
 	monsoon = {
 		00.05.01

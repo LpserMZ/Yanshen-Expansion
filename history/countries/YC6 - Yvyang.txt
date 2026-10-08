@@ -1,0 +1,25 @@
+
+setup_vision_haless = yes
+government = monarchy
+add_government_reform = autocracy_reform
+government_rank = 1
+primary_culture = nephrite_dwarf
+religion = accretive_path
+technology_group = tech_east_dwarven
+
+capital = 4538
+
+1000.1.1 = { 
+	set_estate_privilege = estate_mages_organization_state
+	set_country_flag = dwarven_pantheon_rediscovery_completed
+	set_country_flag = dwarven_pantheon_rediscovery_disaster_done
+	set_country_flag = dwarven_pantheon_knows_dagrin
+	set_country_flag = dwarven_pantheon_knows_anvelind
+	set_country_flag = dwarven_pantheon_knows_margurz
+	set_country_flag = dwarven_pantheon_knows_urisazirn
+
+	set_country_flag = dwarven_pantheon_knows_dolurazan
+	set_country_flag = dwarven_pantheon_knows_karazlov
+	set_country_flag = dwarven_pantheon_knows_thyrfen
+	set_country_flag = dwarven_pantheon_knows_lorgrim
+}

@@ -1,11 +1,10 @@
-owner = YB1
-culture = kamtarhid
-religion = devouring_path
-controller = YB1
-is_city = no
+owner = YD1
+culture = hezuo
+religion = accretive_path
+controller = YD1
+is_city = yes
 trade_goods = livestock
 base_tax = 2
 base_manpower = 3
 base_production = 1
-add_core = R79
-add_core = YB1
+add_core = YD1

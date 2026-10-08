@@ -1,0 +1,105 @@
+dependency = {
+	subject_type = YE_autonomous_vassal	
+	first = YC8
+	second = YA3
+	start_date = 1444.1.1
+	end_date = 2026.9.29
+}
+dependency = {
+	subject_type = YE_autonomous_vassal	
+	first = YC8
+	second = YC3
+	start_date = 1444.1.1
+	end_date = 2026.9.29
+}
+dependency = {
+	subject_type = YE_autonomous_vassal	
+	first = YC8
+	second = YC6
+	start_date = 1444.1.1
+	end_date = 2026.9.29
+}
+dependency = {
+	subject_type = YE_autonomous_vassal	
+	first = YC8
+	second = YC5
+	start_date = 1444.1.1
+	end_date = 2026.9.29
+}
+dependency = {
+	subject_type = YE_autonomous_vassal	
+	first = YC8
+	second = YC4
+	start_date = 1444.1.1
+	end_date = 2026.9.29
+}
+dependency = {
+	subject_type = YE_autonomous_vassal	
+	first = YC8
+	second = YB8
+	start_date = 1444.1.1
+	end_date = 2026.9.29
+}
+dependency = {
+	subject_type = YE_autonomous_vassal	
+	first = YC8
+	second = YC7
+	start_date = 1444.1.1
+	end_date = 2026.9.29
+}
+dependency = {
+	subject_type = YE_autonomous_vassal	
+	first = YC8
+	second = YA8
+	start_date = 1444.1.1
+	end_date = 2026.9.29
+}
+dependency = {
+	subject_type = YE_autonomous_vassal	
+	first = YC8
+	second = YD1
+	start_date = 1444.1.1
+	end_date = 2026.9.29
+}
+dependency = {
+	subject_type = YE_autonomous_vassal	
+	first = YC8
+	second = YD2
+	start_date = 1444.1.1
+	end_date = 2026.9.29
+}
+dependency = {
+	subject_type = YE_autonomous_vassal	
+	first = YC8
+	second = YC9
+	start_date = 1444.1.1
+	end_date = 2026.9.29
+}
+dependency = {
+	subject_type = YE_autonomous_vassal	
+	first = YC8
+	second = YD4
+	start_date = 1444.1.1
+	end_date = 2026.9.29
+}
+dependency = {
+	subject_type = YE_autonomous_vassal	
+	first = YC8
+	second = YB1
+	start_date = 1444.1.1
+	end_date = 2026.9.29
+}
+dependency = {
+	subject_type = YE_autonomous_vassal	
+	first = YC8
+	second = YD3
+	start_date = 1444.1.1
+	end_date = 2026.9.29
+}
+dependency = {
+	subject_type = YE_autonomous_vassal	
+	first = YC8
+	second = YA7
+	start_date = 1444.1.1
+	end_date = 2026.9.29
+}

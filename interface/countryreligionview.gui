@@ -3811,2027 +3811,2027 @@ guiTypes = {
 				buttonFont = "vic_18"
 			}
 		}
-		###############################
-		########### 天地灵气 ###########
-			# 写在底部的窗口浮在上层
-			# guiButtonType = { #开关
-			# 	name = "button_lingqi_mundi"
-			# 	position = { x = 312 y = 268 } #{ x = 161 y = 242 } 
-			# 	quadTextureSprite ="GFX_button_lingqi_mundi"
-			# 	scripted = yes
-			# }
+		# ###############################
+		# ########### 天地灵气 ###########
+		# 	# 写在底部的窗口浮在上层
+		# 	# guiButtonType = { #开关
+		# 	# 	name = "button_lingqi_mundi"
+		# 	# 	position = { x = 312 y = 268 } #{ x = 161 y = 242 } 
+		# 	# 	quadTextureSprite ="GFX_button_lingqi_mundi"
+		# 	# 	scripted = yes
+		# 	# }
 
-			guiButtonType = { #开关
-				name = "button_lingqi_mundi_accretive"
-				position = { x = 314 y = 277 }
-				quadTextureSprite ="GFX_button_lingqi_mundi"
-				scripted = yes
-			}
-			guiButtonType = { #开关
-				name = "button_lingqi_mundi_transmutative"
-				position = { x = 248 y = 282 }
-				quadTextureSprite ="GFX_button_lingqi_mundi"
-				scripted = yes
-			}
-			guiButtonType = { #开关
-				name = "button_lingqi_mundi_devouring"
-				position = { x = 248 y = 282 }
-				quadTextureSprite ="GFX_button_lingqi_mundi"
-				scripted = yes
-			}
-			guiButtonType = { #开关
-				name = "button_lingqi_mundi_yan"
-				position = { x = 233 y = 238 }
-				quadTextureSprite ="GFX_button_lingqi_mundi"
-				scripted = yes
-			}
+		# 	guiButtonType = { #开关
+		# 		name = "button_lingqi_mundi_accretive"
+		# 		position = { x = 314 y = 277 }
+		# 		quadTextureSprite ="GFX_button_lingqi_mundi"
+		# 		scripted = yes
+		# 	}
+		# 	guiButtonType = { #开关
+		# 		name = "button_lingqi_mundi_transmutative"
+		# 		position = { x = 248 y = 282 }
+		# 		quadTextureSprite ="GFX_button_lingqi_mundi"
+		# 		scripted = yes
+		# 	}
+		# 	guiButtonType = { #开关
+		# 		name = "button_lingqi_mundi_devouring"
+		# 		position = { x = 248 y = 282 }
+		# 		quadTextureSprite ="GFX_button_lingqi_mundi"
+		# 		scripted = yes
+		# 	}
+		# 	guiButtonType = { #开关
+		# 		name = "button_lingqi_mundi_yan"
+		# 		position = { x = 233 y = 238 }
+		# 		quadTextureSprite ="GFX_button_lingqi_mundi"
+		# 		scripted = yes
+		# 	}
 
 
-			windowType = { #天地灵气窗口
-				name = "window_lingqi_mundi"
-				backGround="background_lingqi_mundi"
-				position = { x = 553 y = 46 }
-				size = { x=600 y=669 }
-				moveable = 1
-				dontRender = ""
-				horizontalBorder= ""
-				verticalBorder= ""
-				fullScreen = no
-				Orientation = "UPPER_LEFT"
-				scripted = yes
+		# 	windowType = { #天地灵气窗口
+		# 		name = "window_lingqi_mundi"
+		# 		backGround="background_lingqi_mundi"
+		# 		position = { x = 553 y = 46 }
+		# 		size = { x=600 y=669 }
+		# 		moveable = 1
+		# 		dontRender = ""
+		# 		horizontalBorder= ""
+		# 		verticalBorder= ""
+		# 		fullScreen = no
+		# 		Orientation = "UPPER_LEFT"
+		# 		scripted = yes
 
-				guiButtonType ={ #背景图 为了可拖动窗口，设为button
-					name ="background_lingqi_mundi"
-					spriteType = "GFX_background_lingqi_mundi"
-					position = { x = 0 y = 0 } #居中 #再往下挪挪吧
-					Orientation = "UPPER_LEFT"
-				}
-				guiButtonType ={ # 关闭——按钮
-					name ="lingqi_mundi_ESCAPE"
-					quadTextureSprite = "GFX_development_bonus_ESCAPE"
-					position = { x= 260 y = 642 }
-					Orientation = "UPPER_LEFT"
-					shortcut = "ESCAPE"
+		# 		guiButtonType ={ #背景图 为了可拖动窗口，设为button
+		# 			name ="background_lingqi_mundi"
+		# 			spriteType = "GFX_background_lingqi_mundi"
+		# 			position = { x = 0 y = 0 } #居中 #再往下挪挪吧
+		# 			Orientation = "UPPER_LEFT"
+		# 		}
+		# 		guiButtonType ={ # 关闭——按钮
+		# 			name ="lingqi_mundi_ESCAPE"
+		# 			quadTextureSprite = "GFX_development_bonus_ESCAPE"
+		# 			position = { x= 260 y = 642 }
+		# 			Orientation = "UPPER_LEFT"
+		# 			shortcut = "ESCAPE"
 
-					scripted = yes
-				}
+		# 			scripted = yes
+		# 		}
 
-				#####################
-				##### 主窗口元素 #######
-					iconType = { #灵气点数进度条
-						name ="icon_progressbar_LQpower"
-						spriteType = "GFX_icon_progressbar_LQpower"
-						position = { x = 150 y = 82 }
-						Orientation = "UPPER_LEFT"
+		# 		#####################
+		# 		##### 主窗口元素 #######
+		# 			iconType = { #灵气点数进度条
+		# 				name ="icon_progressbar_LQpower"
+		# 				spriteType = "GFX_icon_progressbar_LQpower"
+		# 				position = { x = 150 y = 82 }
+		# 				Orientation = "UPPER_LEFT"
 
-						scripted = yes
-					}
-					instantTextBoxType = { #灵气点数
-						name = TextBox_LQpower_current_GetValue
-						position = { x = 258  y = 84 }
-						textureFile = ""
-						Orientation = "UPPER_LEFT"
-						text = ""
-						font = ""
-						maxWidth = 150
-						maxHeight = 20
-						format = left
-						alwaystransparent = yes
+		# 				scripted = yes
+		# 			}
+		# 			instantTextBoxType = { #灵气点数
+		# 				name = TextBox_LQpower_current_GetValue
+		# 				position = { x = 258  y = 84 }
+		# 				textureFile = ""
+		# 				Orientation = "UPPER_LEFT"
+		# 				text = ""
+		# 				font = ""
+		# 				maxWidth = 150
+		# 				maxHeight = 20
+		# 				format = left
+		# 				alwaystransparent = yes
 
-						scripted = yes
-					}
-					instantTextBoxType = { #灵气每月回复与获取修正
-						name = TextBox_LQpower_monthly_regen_and_gain_modifier_GetValue
-						position = { x = 216  y = 110 }
-						textureFile = ""
-						Orientation = "UPPER_LEFT"
-						text = ""
-						font = ""
-						maxWidth = 400
-						maxHeight = 20
-						format = left
-						alwaystransparent = yes
+		# 				scripted = yes
+		# 			}
+		# 			instantTextBoxType = { #灵气每月回复与获取修正
+		# 				name = TextBox_LQpower_monthly_regen_and_gain_modifier_GetValue
+		# 				position = { x = 216  y = 110 }
+		# 				textureFile = ""
+		# 				Orientation = "UPPER_LEFT"
+		# 				text = ""
+		# 				font = ""
+		# 				maxWidth = 400
+		# 				maxHeight = 20
+		# 				format = left
+		# 				alwaystransparent = yes
 
-						scripted = yes
-					}
+		# 				scripted = yes
+		# 			}
 
-					guiButtonType = { # 学科1 exp
-						name ="button_exp_LQmundi_discipline_1"
-						quadTextureSprite = "GFX_button_exp_LQmundi_discipline_x_color_1"
-						position = { x = 88 y = 352 }
-						Orientation = "UPPER_LEFT"
+		# 			guiButtonType = { # 学科1 exp
+		# 				name ="button_exp_LQmundi_discipline_1"
+		# 				quadTextureSprite = "GFX_button_exp_LQmundi_discipline_x_color_1"
+		# 				position = { x = 88 y = 352 }
+		# 				Orientation = "UPPER_LEFT"
 
-						scripted = yes
-					}
-					iconType = { #学科1 level
-						name ="icon_level_LQmundi_discipline_1"
-						spriteType = "GFX_icon_level_LQmundi_discipline_x"
-						position = { x = 88 y = 352 }
-						Orientation = "UPPER_LEFT"
-						alwaystransparent = yes
+		# 				scripted = yes
+		# 			}
+		# 			iconType = { #学科1 level
+		# 				name ="icon_level_LQmundi_discipline_1"
+		# 				spriteType = "GFX_icon_level_LQmundi_discipline_x"
+		# 				position = { x = 88 y = 352 }
+		# 				Orientation = "UPPER_LEFT"
+		# 				alwaystransparent = yes
 
-						scripted = yes
-					}
-					iconType = { #学科1 name
-						name ="icon_name_LQmundi_discipline_1"
-						spriteType = "GFX_icon_name_LQmundi_discipline_1"
-						position = { x = 88 y = 352 }
-						Orientation = "UPPER_LEFT"
-						alwaystransparent = yes
+		# 				scripted = yes
+		# 			}
+		# 			iconType = { #学科1 name
+		# 				name ="icon_name_LQmundi_discipline_1"
+		# 				spriteType = "GFX_icon_name_LQmundi_discipline_1"
+		# 				position = { x = 88 y = 352 }
+		# 				Orientation = "UPPER_LEFT"
+		# 				alwaystransparent = yes
 
-						scripted = yes
-					}
+		# 				scripted = yes
+		# 			}
 
-					guiButtonType = { # 学科2
-						name ="button_exp_LQmundi_discipline_2"
-						quadTextureSprite = "GFX_button_exp_LQmundi_discipline_x_color_1"
-						position = { x = 140 y = 231 }
-						Orientation = "UPPER_LEFT"
+		# 			guiButtonType = { # 学科2
+		# 				name ="button_exp_LQmundi_discipline_2"
+		# 				quadTextureSprite = "GFX_button_exp_LQmundi_discipline_x_color_1"
+		# 				position = { x = 140 y = 231 }
+		# 				Orientation = "UPPER_LEFT"
 
-						scripted = yes
-					}
-					iconType = { #学科2 level
-						name ="icon_level_LQmundi_discipline_2"
-						spriteType = "GFX_icon_level_LQmundi_discipline_x"
-						position = { x = 140 y = 231 }
-						Orientation = "UPPER_LEFT"
-						alwaystransparent = yes
+		# 				scripted = yes
+		# 			}
+		# 			iconType = { #学科2 level
+		# 				name ="icon_level_LQmundi_discipline_2"
+		# 				spriteType = "GFX_icon_level_LQmundi_discipline_x"
+		# 				position = { x = 140 y = 231 }
+		# 				Orientation = "UPPER_LEFT"
+		# 				alwaystransparent = yes
 
-						scripted = yes
-					}
-					iconType = { #学科2 name
-						name ="icon_name_LQmundi_discipline_2"
-						spriteType = "GFX_icon_name_LQmundi_discipline_2"
-						position = { x = 140 y = 231 }
-						Orientation = "UPPER_LEFT"
-						alwaystransparent = yes
+		# 				scripted = yes
+		# 			}
+		# 			iconType = { #学科2 name
+		# 				name ="icon_name_LQmundi_discipline_2"
+		# 				spriteType = "GFX_icon_name_LQmundi_discipline_2"
+		# 				position = { x = 140 y = 231 }
+		# 				Orientation = "UPPER_LEFT"
+		# 				alwaystransparent = yes
 
-						scripted = yes
-					}
+		# 				scripted = yes
+		# 			}
 
-					guiButtonType = { # 学科3
-						name ="button_exp_LQmundi_discipline_3"
-						quadTextureSprite = "GFX_button_exp_LQmundi_discipline_x_color_2"
-						position = { x = 261 y = 182 }
-						Orientation = "UPPER_LEFT"
+		# 			guiButtonType = { # 学科3
+		# 				name ="button_exp_LQmundi_discipline_3"
+		# 				quadTextureSprite = "GFX_button_exp_LQmundi_discipline_x_color_2"
+		# 				position = { x = 261 y = 182 }
+		# 				Orientation = "UPPER_LEFT"
 
-						scripted = yes
-					}
-					iconType = { #学科3 level
-						name ="icon_level_LQmundi_discipline_3"
-						spriteType = "GFX_icon_level_LQmundi_discipline_x"
-						position = { x = 261 y = 182 }
-						Orientation = "UPPER_LEFT"
-						alwaystransparent = yes
+		# 				scripted = yes
+		# 			}
+		# 			iconType = { #学科3 level
+		# 				name ="icon_level_LQmundi_discipline_3"
+		# 				spriteType = "GFX_icon_level_LQmundi_discipline_x"
+		# 				position = { x = 261 y = 182 }
+		# 				Orientation = "UPPER_LEFT"
+		# 				alwaystransparent = yes
 
-						scripted = yes
-					}
-					iconType = { #学科3 name
-						name ="icon_name_LQmundi_discipline_3"
-						spriteType = "GFX_icon_name_LQmundi_discipline_3"
-						position = { x = 261 y = 182 }
-						Orientation = "UPPER_LEFT"
-						alwaystransparent = yes
+		# 				scripted = yes
+		# 			}
+		# 			iconType = { #学科3 name
+		# 				name ="icon_name_LQmundi_discipline_3"
+		# 				spriteType = "GFX_icon_name_LQmundi_discipline_3"
+		# 				position = { x = 261 y = 182 }
+		# 				Orientation = "UPPER_LEFT"
+		# 				alwaystransparent = yes
 
-						scripted = yes
-					}
+		# 				scripted = yes
+		# 			}
 
-					guiButtonType = { # 学科4
-						name ="button_exp_LQmundi_discipline_4"
-						quadTextureSprite = "GFX_button_exp_LQmundi_discipline_x_color_2"
-						position = { x = 382 y = 233 }
-						Orientation = "UPPER_LEFT"
+		# 			guiButtonType = { # 学科4
+		# 				name ="button_exp_LQmundi_discipline_4"
+		# 				quadTextureSprite = "GFX_button_exp_LQmundi_discipline_x_color_2"
+		# 				position = { x = 382 y = 233 }
+		# 				Orientation = "UPPER_LEFT"
 
-						scripted = yes
-					}
-					iconType = { #学科4 level
-						name ="icon_level_LQmundi_discipline_4"
-						spriteType = "GFX_icon_level_LQmundi_discipline_x"
-						position = { x = 382 y = 233 }
-						Orientation = "UPPER_LEFT"
-						alwaystransparent = yes
+		# 				scripted = yes
+		# 			}
+		# 			iconType = { #学科4 level
+		# 				name ="icon_level_LQmundi_discipline_4"
+		# 				spriteType = "GFX_icon_level_LQmundi_discipline_x"
+		# 				position = { x = 382 y = 233 }
+		# 				Orientation = "UPPER_LEFT"
+		# 				alwaystransparent = yes
 
-						scripted = yes
-					}
-					iconType = { #学科4 name
-						name ="icon_name_LQmundi_discipline_4"
-						spriteType = "GFX_icon_name_LQmundi_discipline_4"
-						position = { x = 382 y = 233 }
-						Orientation = "UPPER_LEFT"
-						alwaystransparent = yes
+		# 				scripted = yes
+		# 			}
+		# 			iconType = { #学科4 name
+		# 				name ="icon_name_LQmundi_discipline_4"
+		# 				spriteType = "GFX_icon_name_LQmundi_discipline_4"
+		# 				position = { x = 382 y = 233 }
+		# 				Orientation = "UPPER_LEFT"
+		# 				alwaystransparent = yes
 
-						scripted = yes
-					}
+		# 				scripted = yes
+		# 			}
 
-					guiButtonType = { # 学科5
-						name ="button_exp_LQmundi_discipline_5"
-						quadTextureSprite = "GFX_button_exp_LQmundi_discipline_x_color_3"
-						position = { x = 431 y = 355 }
-						Orientation = "UPPER_LEFT"
+		# 			guiButtonType = { # 学科5
+		# 				name ="button_exp_LQmundi_discipline_5"
+		# 				quadTextureSprite = "GFX_button_exp_LQmundi_discipline_x_color_3"
+		# 				position = { x = 431 y = 355 }
+		# 				Orientation = "UPPER_LEFT"
 
-						scripted = yes
-					}
-					iconType = { #学科5 level
-						name ="icon_level_LQmundi_discipline_5"
-						spriteType = "GFX_icon_level_LQmundi_discipline_x"
-						position = { x = 431 y = 355 }
-						Orientation = "UPPER_LEFT"
-						alwaystransparent = yes
+		# 				scripted = yes
+		# 			}
+		# 			iconType = { #学科5 level
+		# 				name ="icon_level_LQmundi_discipline_5"
+		# 				spriteType = "GFX_icon_level_LQmundi_discipline_x"
+		# 				position = { x = 431 y = 355 }
+		# 				Orientation = "UPPER_LEFT"
+		# 				alwaystransparent = yes
 
-						scripted = yes
-					}
-					iconType = { #学科5 name
-						name ="icon_name_LQmundi_discipline_5"
-						spriteType = "GFX_icon_name_LQmundi_discipline_5"
-						position = { x = 431 y = 355 }
-						Orientation = "UPPER_LEFT"
-						alwaystransparent = yes
+		# 				scripted = yes
+		# 			}
+		# 			iconType = { #学科5 name
+		# 				name ="icon_name_LQmundi_discipline_5"
+		# 				spriteType = "GFX_icon_name_LQmundi_discipline_5"
+		# 				position = { x = 431 y = 355 }
+		# 				Orientation = "UPPER_LEFT"
+		# 				alwaystransparent = yes
 
-						scripted = yes
-					}
+		# 				scripted = yes
+		# 			}
 
-					guiButtonType = { # 学科6
-						name ="button_exp_LQmundi_discipline_6"
-						quadTextureSprite = "GFX_button_exp_LQmundi_discipline_x_color_3"
-						position = { x = 380 y = 476 }
-						Orientation = "UPPER_LEFT"
+		# 			guiButtonType = { # 学科6
+		# 				name ="button_exp_LQmundi_discipline_6"
+		# 				quadTextureSprite = "GFX_button_exp_LQmundi_discipline_x_color_3"
+		# 				position = { x = 380 y = 476 }
+		# 				Orientation = "UPPER_LEFT"
 
-						scripted = yes
-					}
-					iconType = { #学科6 level
-						name ="icon_level_LQmundi_discipline_6"
-						spriteType = "GFX_icon_level_LQmundi_discipline_x"
-						position = { x = 380 y = 476 }
-						Orientation = "UPPER_LEFT"
-						alwaystransparent = yes
+		# 				scripted = yes
+		# 			}
+		# 			iconType = { #学科6 level
+		# 				name ="icon_level_LQmundi_discipline_6"
+		# 				spriteType = "GFX_icon_level_LQmundi_discipline_x"
+		# 				position = { x = 380 y = 476 }
+		# 				Orientation = "UPPER_LEFT"
+		# 				alwaystransparent = yes
 
-						scripted = yes
-					}
-					iconType = { #学科6 name
-						name ="icon_name_LQmundi_discipline_6"
-						spriteType = "GFX_icon_name_LQmundi_discipline_6"
-						position = { x = 380 y = 476 }
-						Orientation = "UPPER_LEFT"
-						alwaystransparent = yes
+		# 				scripted = yes
+		# 			}
+		# 			iconType = { #学科6 name
+		# 				name ="icon_name_LQmundi_discipline_6"
+		# 				spriteType = "GFX_icon_name_LQmundi_discipline_6"
+		# 				position = { x = 380 y = 476 }
+		# 				Orientation = "UPPER_LEFT"
+		# 				alwaystransparent = yes
 
-						scripted = yes
-					}
+		# 				scripted = yes
+		# 			}
 
-					guiButtonType = { # 学科7
-						name ="button_exp_LQmundi_discipline_7"
-						quadTextureSprite = "GFX_button_exp_LQmundi_discipline_x_color_4"
-						position = { x = 258 y = 525 }
-						Orientation = "UPPER_LEFT"
+		# 			guiButtonType = { # 学科7
+		# 				name ="button_exp_LQmundi_discipline_7"
+		# 				quadTextureSprite = "GFX_button_exp_LQmundi_discipline_x_color_4"
+		# 				position = { x = 258 y = 525 }
+		# 				Orientation = "UPPER_LEFT"
 
-						scripted = yes
-					}
-					iconType = { #学科7 level
-						name ="icon_level_LQmundi_discipline_7"
-						spriteType = "GFX_icon_level_LQmundi_discipline_x"
-						position = { x = 258 y = 525 }
-						Orientation = "UPPER_LEFT"
-						alwaystransparent = yes
+		# 				scripted = yes
+		# 			}
+		# 			iconType = { #学科7 level
+		# 				name ="icon_level_LQmundi_discipline_7"
+		# 				spriteType = "GFX_icon_level_LQmundi_discipline_x"
+		# 				position = { x = 258 y = 525 }
+		# 				Orientation = "UPPER_LEFT"
+		# 				alwaystransparent = yes
 
-						scripted = yes
-					}
-					iconType = { #学科7 name
-						name ="icon_name_LQmundi_discipline_7"
-						spriteType = "GFX_icon_name_LQmundi_discipline_7"
-						position = { x = 258 y = 525 }
-						Orientation = "UPPER_LEFT"
-						alwaystransparent = yes
+		# 				scripted = yes
+		# 			}
+		# 			iconType = { #学科7 name
+		# 				name ="icon_name_LQmundi_discipline_7"
+		# 				spriteType = "GFX_icon_name_LQmundi_discipline_7"
+		# 				position = { x = 258 y = 525 }
+		# 				Orientation = "UPPER_LEFT"
+		# 				alwaystransparent = yes
 
-						scripted = yes
-					}
+		# 				scripted = yes
+		# 			}
 
-					guiButtonType = { # 学科8
-						name ="button_exp_LQmundi_discipline_8"
-						quadTextureSprite = "GFX_button_exp_LQmundi_discipline_x_color_4"
-						position = { x = 138 y = 473 }
-						Orientation = "UPPER_LEFT"
+		# 			guiButtonType = { # 学科8
+		# 				name ="button_exp_LQmundi_discipline_8"
+		# 				quadTextureSprite = "GFX_button_exp_LQmundi_discipline_x_color_4"
+		# 				position = { x = 138 y = 473 }
+		# 				Orientation = "UPPER_LEFT"
 
-						scripted = yes
-					}
-					iconType = { #学科8 level
-						name ="icon_level_LQmundi_discipline_8"
-						spriteType = "GFX_icon_level_LQmundi_discipline_x"
-						position = { x = 138 y = 473 }
-						Orientation = "UPPER_LEFT"
-						alwaystransparent = yes
+		# 				scripted = yes
+		# 			}
+		# 			iconType = { #学科8 level
+		# 				name ="icon_level_LQmundi_discipline_8"
+		# 				spriteType = "GFX_icon_level_LQmundi_discipline_x"
+		# 				position = { x = 138 y = 473 }
+		# 				Orientation = "UPPER_LEFT"
+		# 				alwaystransparent = yes
 
-						scripted = yes
-					}
-					iconType = { #学科8 name
-						name ="icon_name_LQmundi_discipline_8"
-						spriteType = "GFX_icon_name_LQmundi_discipline_8"
-						position = { x = 138 y = 473 }
-						Orientation = "UPPER_LEFT"
-						alwaystransparent = yes
+		# 				scripted = yes
+		# 			}
+		# 			iconType = { #学科8 name
+		# 				name ="icon_name_LQmundi_discipline_8"
+		# 				spriteType = "GFX_icon_name_LQmundi_discipline_8"
+		# 				position = { x = 138 y = 473 }
+		# 				Orientation = "UPPER_LEFT"
+		# 				alwaystransparent = yes
 
-						scripted = yes
-					}
+		# 				scripted = yes
+		# 			}
 
-				#####################
+		# 		#####################
 				
-				#####################
-				### 学科法术子窗口 ###
-					windowType = { #学科法术子窗口
-						name = "window_LQmundi_sorcery"
-						backGround=""
-						position = { x=15 y=139 }
-						size = { x=570 y=515 }
-						moveable = 0
-						dontRender = ""
-						horizontalBorder= ""
-						verticalBorder= ""
-						fullScreen = no
-						Orientation = "UPPER_LEFT"
-						scripted = yes
+		# 		#####################
+		# 		### 学科法术子窗口 ###
+		# 			windowType = { #学科法术子窗口
+		# 				name = "window_LQmundi_sorcery"
+		# 				backGround=""
+		# 				position = { x=15 y=139 }
+		# 				size = { x=570 y=515 }
+		# 				moveable = 0
+		# 				dontRender = ""
+		# 				horizontalBorder= ""
+		# 				verticalBorder= ""
+		# 				fullScreen = no
+		# 				Orientation = "UPPER_LEFT"
+		# 				scripted = yes
 
-						iconType = { #背景图 
-							name ="background_LQmundi_sorcery"
-							spriteType = "GFX_background_LQmundi_sorcery"
-							position = { x = 0 y = 0 }
-							Orientation = "UPPER_LEFT"
+		# 				iconType = { #背景图 
+		# 					name ="background_LQmundi_sorcery"
+		# 					spriteType = "GFX_background_LQmundi_sorcery"
+		# 					position = { x = 0 y = 0 }
+		# 					Orientation = "UPPER_LEFT"
 
-						}
-						guiButtonType ={ # 关闭——按钮
-							name ="button_LQmundi_sorcery_ESCAPE"
-							quadTextureSprite = "GFX_button_LQmundi_sorcery_ESCAPE"
-							position = { x= 12 y = 12 }
-							Orientation = "UPPER_LEFT"
-							shortcut = "ESCAPE"
+		# 				}
+		# 				guiButtonType ={ # 关闭——按钮
+		# 					name ="button_LQmundi_sorcery_ESCAPE"
+		# 					quadTextureSprite = "GFX_button_LQmundi_sorcery_ESCAPE"
+		# 					position = { x= 12 y = 12 }
+		# 					Orientation = "UPPER_LEFT"
+		# 					shortcut = "ESCAPE"
 
-							scripted = yes
-						}
+		# 					scripted = yes
+		# 				}
 
 
-						windowType = { # 学科1 法术与状态
-							name = "window_LQdspl_1_sorcery"
-							backGround=""
-							position = { x=0 y=0 }
-							size = { x=546 y=282 }
-							moveable = 0
-							dontRender = ""
-							horizontalBorder= ""
-							verticalBorder= ""
-							fullScreen = no
-							Orientation = "UPPER_LEFT"
-							scripted = yes
+		# 				windowType = { # 学科1 法术与状态
+		# 					name = "window_LQdspl_1_sorcery"
+		# 					backGround=""
+		# 					position = { x=0 y=0 }
+		# 					size = { x=546 y=282 }
+		# 					moveable = 0
+		# 					dontRender = ""
+		# 					horizontalBorder= ""
+		# 					verticalBorder= ""
+		# 					fullScreen = no
+		# 					Orientation = "UPPER_LEFT"
+		# 					scripted = yes
 
-							# 经验状态
-								iconType = {
-									name ="icon_progressbar_exp_LQmundi_discipline_1"
-									spriteType = "GFX_icon_progressbar_exp_LQmundi_discipline_x"
-									position = { x = 275 y = 53 }
-									Orientation = "UPPER_LEFT"
-								}
-								iconType = {
-									name ="icon_category_name_LQmindi_discipline_1"
-									spriteType = "GFX_icon_category_name_LQmindi_discipline_1"
-									position = { x = 81 y = 20 }
-									Orientation = "UPPER_LEFT"
-									alwaystransparent = yes
-								}
-								instantTextBoxType={
-									name = TextBox_LQdspl_1_exp
-									position = { x = 320 y = 25}
-									textureFile = ""
-									Orientation = "UPPER_LEFT"
-									text = ""
-									font = ""
-									maxWidth = 150
-									maxHeight = 20
-									format = right
-									alwaystransparent = yes
+		# 					# 经验状态
+		# 						iconType = {
+		# 							name ="icon_progressbar_exp_LQmundi_discipline_1"
+		# 							spriteType = "GFX_icon_progressbar_exp_LQmundi_discipline_x"
+		# 							position = { x = 275 y = 53 }
+		# 							Orientation = "UPPER_LEFT"
+		# 						}
+		# 						iconType = {
+		# 							name ="icon_category_name_LQmindi_discipline_1"
+		# 							spriteType = "GFX_icon_category_name_LQmindi_discipline_1"
+		# 							position = { x = 81 y = 20 }
+		# 							Orientation = "UPPER_LEFT"
+		# 							alwaystransparent = yes
+		# 						}
+		# 						instantTextBoxType={
+		# 							name = TextBox_LQdspl_1_exp
+		# 							position = { x = 320 y = 25}
+		# 							textureFile = ""
+		# 							Orientation = "UPPER_LEFT"
+		# 							text = ""
+		# 							font = ""
+		# 							maxWidth = 150
+		# 							maxHeight = 20
+		# 							format = right
+		# 							alwaystransparent = yes
 
-									scripted = yes
-								}
-							# 通用法术
-								iconType = {
-									name ="icon_LQdspl_1_sorceryclass_common"
-									spriteType = "GFX_icon_sorceryclass_common"
-									position = { x = 21 y = 80 }
-									Orientation = "UPPER_LEFT"
-								}
-								guiButtonType ={ 
-									# 学科 1
-									# 类别 common
-									# 序号 1
-									name ="button_LQdspl_1_sorceryclass_common_Sequence_1"
-									quadTextureSprite = "GFX_button_LQdspl_1_sorceryclass_commmon_Sequence_1"
-									position = { x= 93 y = 85 }
-									Orientation = "UPPER_LEFT"
+		# 							scripted = yes
+		# 						}
+		# 					# 通用法术
+		# 						iconType = {
+		# 							name ="icon_LQdspl_1_sorceryclass_common"
+		# 							spriteType = "GFX_icon_sorceryclass_common"
+		# 							position = { x = 21 y = 80 }
+		# 							Orientation = "UPPER_LEFT"
+		# 						}
+		# 						guiButtonType ={ 
+		# 							# 学科 1
+		# 							# 类别 common
+		# 							# 序号 1
+		# 							name ="button_LQdspl_1_sorceryclass_common_Sequence_1"
+		# 							quadTextureSprite = "GFX_button_LQdspl_1_sorceryclass_commmon_Sequence_1"
+		# 							position = { x= 93 y = 85 }
+		# 							Orientation = "UPPER_LEFT"
 
-									scripted = yes
-								}
-								guiButtonType ={ 
-									# 学科 1
-									# 类别 common
-									# 序号 2
-									name ="button_LQdspl_1_sorceryclass_common_Sequence_2"
-									quadTextureSprite = "GFX_button_LQdspl_1_sorceryclass_commmon_Sequence_2"
-									position = { x= 170 y = 85 }
-									Orientation = "UPPER_LEFT"
+		# 							scripted = yes
+		# 						}
+		# 						guiButtonType ={ 
+		# 							# 学科 1
+		# 							# 类别 common
+		# 							# 序号 2
+		# 							name ="button_LQdspl_1_sorceryclass_common_Sequence_2"
+		# 							quadTextureSprite = "GFX_button_LQdspl_1_sorceryclass_commmon_Sequence_2"
+		# 							position = { x= 170 y = 85 }
+		# 							Orientation = "UPPER_LEFT"
 
-									scripted = yes
-								}
-								guiButtonType ={ 
-									# 学科 1
-									# 类别 common
-									# 序号 3
-									name ="button_LQdspl_1_sorceryclass_common_Sequence_3"
-									quadTextureSprite = "GFX_button_LQdspl_1_sorceryclass_commmon_Sequence_3"
-									position = { x= 247 y = 85 }
-									Orientation = "UPPER_LEFT"
+		# 							scripted = yes
+		# 						}
+		# 						guiButtonType ={ 
+		# 							# 学科 1
+		# 							# 类别 common
+		# 							# 序号 3
+		# 							name ="button_LQdspl_1_sorceryclass_common_Sequence_3"
+		# 							quadTextureSprite = "GFX_button_LQdspl_1_sorceryclass_commmon_Sequence_3"
+		# 							position = { x= 247 y = 85 }
+		# 							Orientation = "UPPER_LEFT"
 
-									scripted = yes
-								}
-								guiButtonType ={ 
-									# 学科 1
-									# 类别 common
-									# 序号 4
-									name ="button_LQdspl_1_sorceryclass_common_Sequence_4"
-									quadTextureSprite = "GFX_button_LQdspl_1_sorceryclass_commmon_Sequence_4"
-									position = { x= 324 y = 85 }
-									Orientation = "UPPER_LEFT"
+		# 							scripted = yes
+		# 						}
+		# 						guiButtonType ={ 
+		# 							# 学科 1
+		# 							# 类别 common
+		# 							# 序号 4
+		# 							name ="button_LQdspl_1_sorceryclass_common_Sequence_4"
+		# 							quadTextureSprite = "GFX_button_LQdspl_1_sorceryclass_commmon_Sequence_4"
+		# 							position = { x= 324 y = 85 }
+		# 							Orientation = "UPPER_LEFT"
 
-									scripted = yes
-								}
-								guiButtonType ={ 
-									# 学科 1
-									# 类别 common
-									# 序号 5
-									name ="button_LQdspl_1_sorceryclass_common_Sequence_5"
-									quadTextureSprite = "GFX_button_LQdspl_1_sorceryclass_commmon_Sequence_5"
-									position = { x= 401 y = 85 }
-									Orientation = "UPPER_LEFT"
+		# 							scripted = yes
+		# 						}
+		# 						guiButtonType ={ 
+		# 							# 学科 1
+		# 							# 类别 common
+		# 							# 序号 5
+		# 							name ="button_LQdspl_1_sorceryclass_common_Sequence_5"
+		# 							quadTextureSprite = "GFX_button_LQdspl_1_sorceryclass_commmon_Sequence_5"
+		# 							position = { x= 401 y = 85 }
+		# 							Orientation = "UPPER_LEFT"
 
-									scripted = yes
-								}
+		# 							scripted = yes
+		# 						}
 
-							# 信仰法术
-								windowType = { #信仰法术-侠道
-									name = "window_LQdspl_1_sorceryclass_religion_accretive" 
-									backGround=""
-									position = { x=12 y=174 }
-									size = { x=546 y=88 }
-									moveable = 0
-									dontRender = ""
-									horizontalBorder= ""
-									verticalBorder= ""
-									fullScreen = no
-									Orientation = "UPPER_LEFT"
-									scripted = yes
+		# 					# 信仰法术
+		# 						windowType = { #信仰法术-侠道
+		# 							name = "window_LQdspl_1_sorceryclass_religion_accretive" 
+		# 							backGround=""
+		# 							position = { x=12 y=174 }
+		# 							size = { x=546 y=88 }
+		# 							moveable = 0
+		# 							dontRender = ""
+		# 							horizontalBorder= ""
+		# 							verticalBorder= ""
+		# 							fullScreen = no
+		# 							Orientation = "UPPER_LEFT"
+		# 							scripted = yes
 
-									iconType = {
-										name ="icon_LQdspl_1_sorceryclass_religion_accretive"
-										spriteType = "GFX_icon_sorceryclass_religion_accretive"
-										position = { x = 9 y = 4}
-										Orientation = "UPPER_LEFT"
-									}
-									#guiButtonType = {} #法术
-								}
-								windowType = { #信仰法术-化道
-									name = "window_LQdspl_1_sorceryclass_religion_transmutative"
-									backGround=""
-									position = { x=12 y=174 }
-									size = { x=546 y=88 }
-									moveable = 0
-									dontRender = ""
-									horizontalBorder= ""
-									verticalBorder= ""
-									fullScreen = no
-									Orientation = "UPPER_LEFT"
-									scripted = yes
+		# 							iconType = {
+		# 								name ="icon_LQdspl_1_sorceryclass_religion_accretive"
+		# 								spriteType = "GFX_icon_sorceryclass_religion_accretive"
+		# 								position = { x = 9 y = 4}
+		# 								Orientation = "UPPER_LEFT"
+		# 							}
+		# 							#guiButtonType = {} #法术
+		# 						}
+		# 						windowType = { #信仰法术-化道
+		# 							name = "window_LQdspl_1_sorceryclass_religion_transmutative"
+		# 							backGround=""
+		# 							position = { x=12 y=174 }
+		# 							size = { x=546 y=88 }
+		# 							moveable = 0
+		# 							dontRender = ""
+		# 							horizontalBorder= ""
+		# 							verticalBorder= ""
+		# 							fullScreen = no
+		# 							Orientation = "UPPER_LEFT"
+		# 							scripted = yes
 
-									iconType = {
-										name ="icon_LQdspl_1_sorceryclass_religion_transmutative"
-										spriteType = "GFX_icon_sorceryclass_religion_transmutative"
-										position = { x = 9 y = 4}
-										Orientation = "UPPER_LEFT"
-									}
-									#guiButtonType = {} #法术
-								}
-								windowType = { #信仰法术-噬道
-									name = "window_LQdspl_1_sorceryclass_religion_devouring"
-									backGround=""
-									position = { x=12 y=174 }
-									size = { x=546 y=88 }
-									moveable = 0
-									dontRender = ""
-									horizontalBorder= ""
-									verticalBorder= ""
-									fullScreen = no
-									Orientation = "UPPER_LEFT"
-									scripted = yes
+		# 							iconType = {
+		# 								name ="icon_LQdspl_1_sorceryclass_religion_transmutative"
+		# 								spriteType = "GFX_icon_sorceryclass_religion_transmutative"
+		# 								position = { x = 9 y = 4}
+		# 								Orientation = "UPPER_LEFT"
+		# 							}
+		# 							#guiButtonType = {} #法术
+		# 						}
+		# 						windowType = { #信仰法术-噬道
+		# 							name = "window_LQdspl_1_sorceryclass_religion_devouring"
+		# 							backGround=""
+		# 							position = { x=12 y=174 }
+		# 							size = { x=546 y=88 }
+		# 							moveable = 0
+		# 							dontRender = ""
+		# 							horizontalBorder= ""
+		# 							verticalBorder= ""
+		# 							fullScreen = no
+		# 							Orientation = "UPPER_LEFT"
+		# 							scripted = yes
 
-									iconType = {
-										name ="icon_LQdspl_1_sorceryclass_religion_devouring"
-										spriteType = "GFX_icon_sorceryclass_religion_devouring"
-										position = { x = 9 y = 4}
-										Orientation = "UPPER_LEFT"
-									}
-									#guiButtonType = {} #法术
-								}
-								windowType = { #信仰法术-环道
-									name = "window_LQdspl_1_sorceryclass_religion_huan"
-									backGround=""
-									position = { x=12 y=174 }
-									size = { x=546 y=88 }
-									moveable = 0
-									dontRender = ""
-									horizontalBorder= ""
-									verticalBorder= ""
-									fullScreen = no
-									Orientation = "UPPER_LEFT"
-									scripted = yes
+		# 							iconType = {
+		# 								name ="icon_LQdspl_1_sorceryclass_religion_devouring"
+		# 								spriteType = "GFX_icon_sorceryclass_religion_devouring"
+		# 								position = { x = 9 y = 4}
+		# 								Orientation = "UPPER_LEFT"
+		# 							}
+		# 							#guiButtonType = {} #法术
+		# 						}
+		# 						windowType = { #信仰法术-环道
+		# 							name = "window_LQdspl_1_sorceryclass_religion_huan"
+		# 							backGround=""
+		# 							position = { x=12 y=174 }
+		# 							size = { x=546 y=88 }
+		# 							moveable = 0
+		# 							dontRender = ""
+		# 							horizontalBorder= ""
+		# 							verticalBorder= ""
+		# 							fullScreen = no
+		# 							Orientation = "UPPER_LEFT"
+		# 							scripted = yes
 
-									iconType = {
-										name ="icon_LQdspl_1_sorceryclass_religion_huan"
-										spriteType = "GFX_icon_sorceryclass_religion_huan"
-										position = { x = 9 y = 4}
-										Orientation = "UPPER_LEFT"
-									}
-									#guiButtonType = {} #法术
-								}
+		# 							iconType = {
+		# 								name ="icon_LQdspl_1_sorceryclass_religion_huan"
+		# 								spriteType = "GFX_icon_sorceryclass_religion_huan"
+		# 								position = { x = 9 y = 4}
+		# 								Orientation = "UPPER_LEFT"
+		# 							}
+		# 							#guiButtonType = {} #法术
+		# 						}
 
-							# 解锁法术
-								iconType = {
-									name ="icon_LQdspl_1_sorceryclass_locked"
-									spriteType = "GFX_icon_sorceryclass_locked"
-									position = { x = 21 y = 276 }
-									Orientation = "UPPER_LEFT"
-								}
-								#guiButtonType = {} #法术
+		# 					# 解锁法术
+		# 						iconType = {
+		# 							name ="icon_LQdspl_1_sorceryclass_locked"
+		# 							spriteType = "GFX_icon_sorceryclass_locked"
+		# 							position = { x = 21 y = 276 }
+		# 							Orientation = "UPPER_LEFT"
+		# 						}
+		# 						#guiButtonType = {} #法术
 								
-						}
-						windowType = { # 学科2 法术与状态
-							name = "window_LQdspl_2_sorcery"
-							backGround=""
-							position = { x=0 y=0 }
-							size = { x=546 y=282 }
-							moveable = 0
-							dontRender = ""
-							horizontalBorder= ""
-							verticalBorder= ""
-							fullScreen = no
-							Orientation = "UPPER_LEFT"
-							scripted = yes
+		# 				}
+		# 				windowType = { # 学科2 法术与状态
+		# 					name = "window_LQdspl_2_sorcery"
+		# 					backGround=""
+		# 					position = { x=0 y=0 }
+		# 					size = { x=546 y=282 }
+		# 					moveable = 0
+		# 					dontRender = ""
+		# 					horizontalBorder= ""
+		# 					verticalBorder= ""
+		# 					fullScreen = no
+		# 					Orientation = "UPPER_LEFT"
+		# 					scripted = yes
 
-							# 经验状态
-								iconType = {
-									name ="icon_progressbar_exp_LQmundi_discipline_2"
-									spriteType = "GFX_icon_progressbar_exp_LQmundi_discipline_x"
-									position = { x = 275 y = 53 }
-									Orientation = "UPPER_LEFT"
-								}
-								iconType = {
-									name ="icon_category_name_LQmindi_discipline_2"
-									spriteType = "GFX_icon_category_name_LQmindi_discipline_2"
-									position = { x = 81 y = 20 }
-									Orientation = "UPPER_LEFT"
-									alwaystransparent = yes
-								}
-								instantTextBoxType={
-									name = TextBox_LQdspl_2_exp
-									position = { x = 320 y = 25}
-									textureFile = ""
-									Orientation = "UPPER_LEFT"
-									text = ""
-									font = ""
-									maxWidth = 150
-									maxHeight = 20
-									format = right
-									alwaystransparent = yes
+		# 					# 经验状态
+		# 						iconType = {
+		# 							name ="icon_progressbar_exp_LQmundi_discipline_2"
+		# 							spriteType = "GFX_icon_progressbar_exp_LQmundi_discipline_x"
+		# 							position = { x = 275 y = 53 }
+		# 							Orientation = "UPPER_LEFT"
+		# 						}
+		# 						iconType = {
+		# 							name ="icon_category_name_LQmindi_discipline_2"
+		# 							spriteType = "GFX_icon_category_name_LQmindi_discipline_2"
+		# 							position = { x = 81 y = 20 }
+		# 							Orientation = "UPPER_LEFT"
+		# 							alwaystransparent = yes
+		# 						}
+		# 						instantTextBoxType={
+		# 							name = TextBox_LQdspl_2_exp
+		# 							position = { x = 320 y = 25}
+		# 							textureFile = ""
+		# 							Orientation = "UPPER_LEFT"
+		# 							text = ""
+		# 							font = ""
+		# 							maxWidth = 150
+		# 							maxHeight = 20
+		# 							format = right
+		# 							alwaystransparent = yes
 
-									scripted = yes
-								}
-							# 通用法术
-								iconType = {
-									name ="icon_LQdspl_2_sorceryclass_common"
-									spriteType = "GFX_icon_sorceryclass_common"
-									position = { x = 21 y = 80 }
-									Orientation = "UPPER_LEFT"
-								}
-								guiButtonType ={ 
-									# 学科 2
-									# 类别 common
-									# 序号 1
-									name ="button_LQdspl_2_sorceryclass_common_Sequence_1"
-									quadTextureSprite = "GFX_button_LQdspl_2_sorceryclass_commmon_Sequence_1"
-									position = { x= 93 y = 85 }
-									Orientation = "UPPER_LEFT"
+		# 							scripted = yes
+		# 						}
+		# 					# 通用法术
+		# 						iconType = {
+		# 							name ="icon_LQdspl_2_sorceryclass_common"
+		# 							spriteType = "GFX_icon_sorceryclass_common"
+		# 							position = { x = 21 y = 80 }
+		# 							Orientation = "UPPER_LEFT"
+		# 						}
+		# 						guiButtonType ={ 
+		# 							# 学科 2
+		# 							# 类别 common
+		# 							# 序号 1
+		# 							name ="button_LQdspl_2_sorceryclass_common_Sequence_1"
+		# 							quadTextureSprite = "GFX_button_LQdspl_2_sorceryclass_commmon_Sequence_1"
+		# 							position = { x= 93 y = 85 }
+		# 							Orientation = "UPPER_LEFT"
 
-									scripted = yes
-								}
-								guiButtonType ={ 
-									# 学科 2
-									# 类别 common
-									# 序号 2
-									name ="button_LQdspl_2_sorceryclass_common_Sequence_2"
-									quadTextureSprite = "GFX_button_LQdspl_2_sorceryclass_commmon_Sequence_2"
-									position = { x= 170 y = 85 }
-									Orientation = "UPPER_LEFT"
+		# 							scripted = yes
+		# 						}
+		# 						guiButtonType ={ 
+		# 							# 学科 2
+		# 							# 类别 common
+		# 							# 序号 2
+		# 							name ="button_LQdspl_2_sorceryclass_common_Sequence_2"
+		# 							quadTextureSprite = "GFX_button_LQdspl_2_sorceryclass_commmon_Sequence_2"
+		# 							position = { x= 170 y = 85 }
+		# 							Orientation = "UPPER_LEFT"
 
-									scripted = yes
-								}
-								guiButtonType ={ 
-									# 学科 2
-									# 类别 common
-									# 序号 3
-									name ="button_LQdspl_2_sorceryclass_common_Sequence_3"
-									quadTextureSprite = "GFX_button_LQdspl_2_sorceryclass_commmon_Sequence_3"
-									position = { x= 247 y = 85 }
-									Orientation = "UPPER_LEFT"
+		# 							scripted = yes
+		# 						}
+		# 						guiButtonType ={ 
+		# 							# 学科 2
+		# 							# 类别 common
+		# 							# 序号 3
+		# 							name ="button_LQdspl_2_sorceryclass_common_Sequence_3"
+		# 							quadTextureSprite = "GFX_button_LQdspl_2_sorceryclass_commmon_Sequence_3"
+		# 							position = { x= 247 y = 85 }
+		# 							Orientation = "UPPER_LEFT"
 
-									scripted = yes
-								}
-								guiButtonType ={ 
-									# 学科 2
-									# 类别 common
-									# 序号 4
-									name ="button_LQdspl_2_sorceryclass_common_Sequence_4"
-									quadTextureSprite = "GFX_button_LQdspl_2_sorceryclass_commmon_Sequence_4"
-									position = { x= 324 y = 85 }
-									Orientation = "UPPER_LEFT"
+		# 							scripted = yes
+		# 						}
+		# 						guiButtonType ={ 
+		# 							# 学科 2
+		# 							# 类别 common
+		# 							# 序号 4
+		# 							name ="button_LQdspl_2_sorceryclass_common_Sequence_4"
+		# 							quadTextureSprite = "GFX_button_LQdspl_2_sorceryclass_commmon_Sequence_4"
+		# 							position = { x= 324 y = 85 }
+		# 							Orientation = "UPPER_LEFT"
 
-									scripted = yes
-								}
-								guiButtonType ={ 
-									# 学科 2
-									# 类别 common
-									# 序号 5
-									name ="button_LQdspl_2_sorceryclass_common_Sequence_5"
-									quadTextureSprite = "GFX_button_LQdspl_2_sorceryclass_commmon_Sequence_5"
-									position = { x= 401 y = 85 }
-									Orientation = "UPPER_LEFT"
+		# 							scripted = yes
+		# 						}
+		# 						guiButtonType ={ 
+		# 							# 学科 2
+		# 							# 类别 common
+		# 							# 序号 5
+		# 							name ="button_LQdspl_2_sorceryclass_common_Sequence_5"
+		# 							quadTextureSprite = "GFX_button_LQdspl_2_sorceryclass_commmon_Sequence_5"
+		# 							position = { x= 401 y = 85 }
+		# 							Orientation = "UPPER_LEFT"
 
-									scripted = yes
-								}
+		# 							scripted = yes
+		# 						}
 
 
-							# 信仰法术
-								windowType = { #信仰法术-侠道
-									name = "window_LQdspl_2_sorceryclass_religion_accretive" 
-									backGround=""
-									position = { x=12 y=174 }
-									size = { x=546 y=88 }
-									moveable = 0
-									dontRender = ""
-									horizontalBorder= ""
-									verticalBorder= ""
-									fullScreen = no
-									Orientation = "UPPER_LEFT"
-									scripted = yes
+		# 					# 信仰法术
+		# 						windowType = { #信仰法术-侠道
+		# 							name = "window_LQdspl_2_sorceryclass_religion_accretive" 
+		# 							backGround=""
+		# 							position = { x=12 y=174 }
+		# 							size = { x=546 y=88 }
+		# 							moveable = 0
+		# 							dontRender = ""
+		# 							horizontalBorder= ""
+		# 							verticalBorder= ""
+		# 							fullScreen = no
+		# 							Orientation = "UPPER_LEFT"
+		# 							scripted = yes
 
-									iconType = {
-										name ="icon_LQdspl_2_sorceryclass_religion_accretive"
-										spriteType = "GFX_icon_sorceryclass_religion_accretive"
-										position = { x = 9 y = 4}
-										Orientation = "UPPER_LEFT"
-									}
-									#guiButtonType = {} #法术
-								}
-								windowType = { #信仰法术-化道
-									name = "window_LQdspl_2_sorceryclass_religion_transmutative"
-									backGround=""
-									position = { x=12 y=174 }
-									size = { x=546 y=88 }
-									moveable = 0
-									dontRender = ""
-									horizontalBorder= ""
-									verticalBorder= ""
-									fullScreen = no
-									Orientation = "UPPER_LEFT"
-									scripted = yes
+		# 							iconType = {
+		# 								name ="icon_LQdspl_2_sorceryclass_religion_accretive"
+		# 								spriteType = "GFX_icon_sorceryclass_religion_accretive"
+		# 								position = { x = 9 y = 4}
+		# 								Orientation = "UPPER_LEFT"
+		# 							}
+		# 							#guiButtonType = {} #法术
+		# 						}
+		# 						windowType = { #信仰法术-化道
+		# 							name = "window_LQdspl_2_sorceryclass_religion_transmutative"
+		# 							backGround=""
+		# 							position = { x=12 y=174 }
+		# 							size = { x=546 y=88 }
+		# 							moveable = 0
+		# 							dontRender = ""
+		# 							horizontalBorder= ""
+		# 							verticalBorder= ""
+		# 							fullScreen = no
+		# 							Orientation = "UPPER_LEFT"
+		# 							scripted = yes
 
-									iconType = {
-										name ="icon_LQdspl_2_sorceryclass_religion_transmutative"
-										spriteType = "GFX_icon_sorceryclass_religion_transmutative"
-										position = { x = 9 y = 4}
-										Orientation = "UPPER_LEFT"
-									}
-									#guiButtonType = {} #法术
-								}
-								windowType = { #信仰法术-噬道
-									name = "window_LQdspl_2_sorceryclass_religion_devouring"
-									backGround=""
-									position = { x=12 y=174 }
-									size = { x=546 y=88 }
-									moveable = 0
-									dontRender = ""
-									horizontalBorder= ""
-									verticalBorder= ""
-									fullScreen = no
-									Orientation = "UPPER_LEFT"
-									scripted = yes
+		# 							iconType = {
+		# 								name ="icon_LQdspl_2_sorceryclass_religion_transmutative"
+		# 								spriteType = "GFX_icon_sorceryclass_religion_transmutative"
+		# 								position = { x = 9 y = 4}
+		# 								Orientation = "UPPER_LEFT"
+		# 							}
+		# 							#guiButtonType = {} #法术
+		# 						}
+		# 						windowType = { #信仰法术-噬道
+		# 							name = "window_LQdspl_2_sorceryclass_religion_devouring"
+		# 							backGround=""
+		# 							position = { x=12 y=174 }
+		# 							size = { x=546 y=88 }
+		# 							moveable = 0
+		# 							dontRender = ""
+		# 							horizontalBorder= ""
+		# 							verticalBorder= ""
+		# 							fullScreen = no
+		# 							Orientation = "UPPER_LEFT"
+		# 							scripted = yes
 
-									iconType = {
-										name ="icon_LQdspl_2_sorceryclass_religion_devouring"
-										spriteType = "GFX_icon_sorceryclass_religion_devouring"
-										position = { x = 9 y = 4}
-										Orientation = "UPPER_LEFT"
-									}
-									#guiButtonType = {} #法术
-								}
-								windowType = { #信仰法术-环道
-									name = "window_LQdspl_2_sorceryclass_religion_huan"
-									backGround=""
-									position = { x=12 y=174 }
-									size = { x=546 y=88 }
-									moveable = 0
-									dontRender = ""
-									horizontalBorder= ""
-									verticalBorder= ""
-									fullScreen = no
-									Orientation = "UPPER_LEFT"
-									scripted = yes
+		# 							iconType = {
+		# 								name ="icon_LQdspl_2_sorceryclass_religion_devouring"
+		# 								spriteType = "GFX_icon_sorceryclass_religion_devouring"
+		# 								position = { x = 9 y = 4}
+		# 								Orientation = "UPPER_LEFT"
+		# 							}
+		# 							#guiButtonType = {} #法术
+		# 						}
+		# 						windowType = { #信仰法术-环道
+		# 							name = "window_LQdspl_2_sorceryclass_religion_huan"
+		# 							backGround=""
+		# 							position = { x=12 y=174 }
+		# 							size = { x=546 y=88 }
+		# 							moveable = 0
+		# 							dontRender = ""
+		# 							horizontalBorder= ""
+		# 							verticalBorder= ""
+		# 							fullScreen = no
+		# 							Orientation = "UPPER_LEFT"
+		# 							scripted = yes
 
-									iconType = {
-										name ="icon_LQdspl_2_sorceryclass_religion_huan"
-										spriteType = "GFX_icon_sorceryclass_religion_huan"
-										position = { x = 9 y = 4}
-										Orientation = "UPPER_LEFT"
-									}
-									#guiButtonType = {} #法术
-								}
+		# 							iconType = {
+		# 								name ="icon_LQdspl_2_sorceryclass_religion_huan"
+		# 								spriteType = "GFX_icon_sorceryclass_religion_huan"
+		# 								position = { x = 9 y = 4}
+		# 								Orientation = "UPPER_LEFT"
+		# 							}
+		# 							#guiButtonType = {} #法术
+		# 						}
 
-							# 解锁法术
-								iconType = {
-									name ="icon_LQdspl_2_sorceryclass_locked"
-									spriteType = "GFX_icon_sorceryclass_locked"
-									position = { x = 21 y = 276 }
-									Orientation = "UPPER_LEFT"
-								}
-								#guiButtonType = {} #法术
+		# 					# 解锁法术
+		# 						iconType = {
+		# 							name ="icon_LQdspl_2_sorceryclass_locked"
+		# 							spriteType = "GFX_icon_sorceryclass_locked"
+		# 							position = { x = 21 y = 276 }
+		# 							Orientation = "UPPER_LEFT"
+		# 						}
+		# 						#guiButtonType = {} #法术
 								
-						}
-						windowType = { # 学科3 法术与状态
-							name = "window_LQdspl_3_sorcery"
-							backGround=""
-							position = { x=0 y=0 }
-							size = { x=546 y=282 }
-							moveable = 0
-							dontRender = ""
-							horizontalBorder= ""
-							verticalBorder= ""
-							fullScreen = no
-							Orientation = "UPPER_LEFT"
-							scripted = yes
+		# 				}
+		# 				windowType = { # 学科3 法术与状态
+		# 					name = "window_LQdspl_3_sorcery"
+		# 					backGround=""
+		# 					position = { x=0 y=0 }
+		# 					size = { x=546 y=282 }
+		# 					moveable = 0
+		# 					dontRender = ""
+		# 					horizontalBorder= ""
+		# 					verticalBorder= ""
+		# 					fullScreen = no
+		# 					Orientation = "UPPER_LEFT"
+		# 					scripted = yes
 
-							# 经验状态
-								iconType = {
-									name ="icon_progressbar_exp_LQmundi_discipline_3"
-									spriteType = "GFX_icon_progressbar_exp_LQmundi_discipline_x"
-									position = { x = 275 y = 53 }
-									Orientation = "UPPER_LEFT"
-								}
-								iconType = {
-									name ="icon_category_name_LQmindi_discipline_3"
-									spriteType = "GFX_icon_category_name_LQmindi_discipline_3"
-									position = { x = 81 y = 20 }
-									Orientation = "UPPER_LEFT"
-									alwaystransparent = yes
-								}
-								instantTextBoxType={
-									name = TextBox_LQdspl_3_exp
-									position = { x = 320 y = 25}
-									textureFile = ""
-									Orientation = "UPPER_LEFT"
-									text = ""
-									font = ""
-									maxWidth = 150
-									maxHeight = 20
-									format = right
-									alwaystransparent = yes
+		# 					# 经验状态
+		# 						iconType = {
+		# 							name ="icon_progressbar_exp_LQmundi_discipline_3"
+		# 							spriteType = "GFX_icon_progressbar_exp_LQmundi_discipline_x"
+		# 							position = { x = 275 y = 53 }
+		# 							Orientation = "UPPER_LEFT"
+		# 						}
+		# 						iconType = {
+		# 							name ="icon_category_name_LQmindi_discipline_3"
+		# 							spriteType = "GFX_icon_category_name_LQmindi_discipline_3"
+		# 							position = { x = 81 y = 20 }
+		# 							Orientation = "UPPER_LEFT"
+		# 							alwaystransparent = yes
+		# 						}
+		# 						instantTextBoxType={
+		# 							name = TextBox_LQdspl_3_exp
+		# 							position = { x = 320 y = 25}
+		# 							textureFile = ""
+		# 							Orientation = "UPPER_LEFT"
+		# 							text = ""
+		# 							font = ""
+		# 							maxWidth = 150
+		# 							maxHeight = 20
+		# 							format = right
+		# 							alwaystransparent = yes
 
-									scripted = yes
-								}
-							# 通用法术
-								iconType = {
-									name ="icon_LQdspl_3_sorceryclass_common"
-									spriteType = "GFX_icon_sorceryclass_common"
-									position = { x = 21 y = 80 }
-									Orientation = "UPPER_LEFT"
-								}
-								guiButtonType ={ 
-									# 学科 3
-									# 类别 common
-									# 序号 1
-									name ="button_LQdspl_3_sorceryclass_common_Sequence_1"
-									quadTextureSprite = "GFX_button_LQdspl_3_sorceryclass_commmon_Sequence_1"
-									position = { x= 93 y = 85 }
-									Orientation = "UPPER_LEFT"
+		# 							scripted = yes
+		# 						}
+		# 					# 通用法术
+		# 						iconType = {
+		# 							name ="icon_LQdspl_3_sorceryclass_common"
+		# 							spriteType = "GFX_icon_sorceryclass_common"
+		# 							position = { x = 21 y = 80 }
+		# 							Orientation = "UPPER_LEFT"
+		# 						}
+		# 						guiButtonType ={ 
+		# 							# 学科 3
+		# 							# 类别 common
+		# 							# 序号 1
+		# 							name ="button_LQdspl_3_sorceryclass_common_Sequence_1"
+		# 							quadTextureSprite = "GFX_button_LQdspl_3_sorceryclass_commmon_Sequence_1"
+		# 							position = { x= 93 y = 85 }
+		# 							Orientation = "UPPER_LEFT"
 
-									scripted = yes
-								}
-								guiButtonType ={ 
-									# 学科 3
-									# 类别 common
-									# 序号 2
-									name ="button_LQdspl_3_sorceryclass_common_Sequence_2"
-									quadTextureSprite = "GFX_button_LQdspl_3_sorceryclass_commmon_Sequence_2"
-									position = { x= 170 y = 85 }
-									Orientation = "UPPER_LEFT"
+		# 							scripted = yes
+		# 						}
+		# 						guiButtonType ={ 
+		# 							# 学科 3
+		# 							# 类别 common
+		# 							# 序号 2
+		# 							name ="button_LQdspl_3_sorceryclass_common_Sequence_2"
+		# 							quadTextureSprite = "GFX_button_LQdspl_3_sorceryclass_commmon_Sequence_2"
+		# 							position = { x= 170 y = 85 }
+		# 							Orientation = "UPPER_LEFT"
 
-									scripted = yes
-								}
-								guiButtonType ={ 
-									# 学科 3
-									# 类别 common
-									# 序号 3
-									name ="button_LQdspl_3_sorceryclass_common_Sequence_3"
-									quadTextureSprite = "GFX_button_LQdspl_3_sorceryclass_commmon_Sequence_3"
-									position = { x= 247 y = 85 }
-									Orientation = "UPPER_LEFT"
+		# 							scripted = yes
+		# 						}
+		# 						guiButtonType ={ 
+		# 							# 学科 3
+		# 							# 类别 common
+		# 							# 序号 3
+		# 							name ="button_LQdspl_3_sorceryclass_common_Sequence_3"
+		# 							quadTextureSprite = "GFX_button_LQdspl_3_sorceryclass_commmon_Sequence_3"
+		# 							position = { x= 247 y = 85 }
+		# 							Orientation = "UPPER_LEFT"
 
-									scripted = yes
-								}
-								guiButtonType ={ 
-									# 学科 3
-									# 类别 common
-									# 序号 4
-									name ="button_LQdspl_3_sorceryclass_common_Sequence_4"
-									quadTextureSprite = "GFX_button_LQdspl_3_sorceryclass_commmon_Sequence_4"
-									position = { x= 324 y = 85 }
-									Orientation = "UPPER_LEFT"
+		# 							scripted = yes
+		# 						}
+		# 						guiButtonType ={ 
+		# 							# 学科 3
+		# 							# 类别 common
+		# 							# 序号 4
+		# 							name ="button_LQdspl_3_sorceryclass_common_Sequence_4"
+		# 							quadTextureSprite = "GFX_button_LQdspl_3_sorceryclass_commmon_Sequence_4"
+		# 							position = { x= 324 y = 85 }
+		# 							Orientation = "UPPER_LEFT"
 
-									scripted = yes
-								}
-								guiButtonType ={ 
-									# 学科 3
-									# 类别 common
-									# 序号 5
-									name ="button_LQdspl_3_sorceryclass_common_Sequence_5"
-									quadTextureSprite = "GFX_button_LQdspl_3_sorceryclass_commmon_Sequence_5"
-									position = { x= 401 y = 85 }
-									Orientation = "UPPER_LEFT"
+		# 							scripted = yes
+		# 						}
+		# 						guiButtonType ={ 
+		# 							# 学科 3
+		# 							# 类别 common
+		# 							# 序号 5
+		# 							name ="button_LQdspl_3_sorceryclass_common_Sequence_5"
+		# 							quadTextureSprite = "GFX_button_LQdspl_3_sorceryclass_commmon_Sequence_5"
+		# 							position = { x= 401 y = 85 }
+		# 							Orientation = "UPPER_LEFT"
 
-									scripted = yes
-								}
+		# 							scripted = yes
+		# 						}
 
-							# 信仰法术
-								windowType = { #信仰法术-侠道
-									name = "window_LQdspl_3_sorceryclass_religion_accretive" 
-									backGround=""
-									position = { x=12 y=174 }
-									size = { x=546 y=88 }
-									moveable = 0
-									dontRender = ""
-									horizontalBorder= ""
-									verticalBorder= ""
-									fullScreen = no
-									Orientation = "UPPER_LEFT"
-									scripted = yes
+		# 					# 信仰法术
+		# 						windowType = { #信仰法术-侠道
+		# 							name = "window_LQdspl_3_sorceryclass_religion_accretive" 
+		# 							backGround=""
+		# 							position = { x=12 y=174 }
+		# 							size = { x=546 y=88 }
+		# 							moveable = 0
+		# 							dontRender = ""
+		# 							horizontalBorder= ""
+		# 							verticalBorder= ""
+		# 							fullScreen = no
+		# 							Orientation = "UPPER_LEFT"
+		# 							scripted = yes
 
-									iconType = {
-										name ="icon_LQdspl_3_sorceryclass_religion_accretive"
-										spriteType = "GFX_icon_sorceryclass_religion_accretive"
-										position = { x = 9 y = 4}
-										Orientation = "UPPER_LEFT"
-									}
-									#guiButtonType = {} #法术
-								}
-								windowType = { #信仰法术-化道
-									name = "window_LQdspl_3_sorceryclass_religion_transmutative"
-									backGround=""
-									position = { x=12 y=174 }
-									size = { x=546 y=88 }
-									moveable = 0
-									dontRender = ""
-									horizontalBorder= ""
-									verticalBorder= ""
-									fullScreen = no
-									Orientation = "UPPER_LEFT"
-									scripted = yes
+		# 							iconType = {
+		# 								name ="icon_LQdspl_3_sorceryclass_religion_accretive"
+		# 								spriteType = "GFX_icon_sorceryclass_religion_accretive"
+		# 								position = { x = 9 y = 4}
+		# 								Orientation = "UPPER_LEFT"
+		# 							}
+		# 							#guiButtonType = {} #法术
+		# 						}
+		# 						windowType = { #信仰法术-化道
+		# 							name = "window_LQdspl_3_sorceryclass_religion_transmutative"
+		# 							backGround=""
+		# 							position = { x=12 y=174 }
+		# 							size = { x=546 y=88 }
+		# 							moveable = 0
+		# 							dontRender = ""
+		# 							horizontalBorder= ""
+		# 							verticalBorder= ""
+		# 							fullScreen = no
+		# 							Orientation = "UPPER_LEFT"
+		# 							scripted = yes
 
-									iconType = {
-										name ="icon_LQdspl_3_sorceryclass_religion_transmutative"
-										spriteType = "GFX_icon_sorceryclass_religion_transmutative"
-										position = { x = 9 y = 4}
-										Orientation = "UPPER_LEFT"
-									}
-									#guiButtonType = {} #法术
-								}
-								windowType = { #信仰法术-噬道
-									name = "window_LQdspl_3_sorceryclass_religion_devouring"
-									backGround=""
-									position = { x=12 y=174 }
-									size = { x=546 y=88 }
-									moveable = 0
-									dontRender = ""
-									horizontalBorder= ""
-									verticalBorder= ""
-									fullScreen = no
-									Orientation = "UPPER_LEFT"
-									scripted = yes
+		# 							iconType = {
+		# 								name ="icon_LQdspl_3_sorceryclass_religion_transmutative"
+		# 								spriteType = "GFX_icon_sorceryclass_religion_transmutative"
+		# 								position = { x = 9 y = 4}
+		# 								Orientation = "UPPER_LEFT"
+		# 							}
+		# 							#guiButtonType = {} #法术
+		# 						}
+		# 						windowType = { #信仰法术-噬道
+		# 							name = "window_LQdspl_3_sorceryclass_religion_devouring"
+		# 							backGround=""
+		# 							position = { x=12 y=174 }
+		# 							size = { x=546 y=88 }
+		# 							moveable = 0
+		# 							dontRender = ""
+		# 							horizontalBorder= ""
+		# 							verticalBorder= ""
+		# 							fullScreen = no
+		# 							Orientation = "UPPER_LEFT"
+		# 							scripted = yes
 
-									iconType = {
-										name ="icon_LQdspl_3_sorceryclass_religion_devouring"
-										spriteType = "GFX_icon_sorceryclass_religion_devouring"
-										position = { x = 9 y = 4}
-										Orientation = "UPPER_LEFT"
-									}
-									#guiButtonType = {} #法术
-								}
-								windowType = { #信仰法术-环道
-									name = "window_LQdspl_3_sorceryclass_religion_huan"
-									backGround=""
-									position = { x=12 y=174 }
-									size = { x=546 y=88 }
-									moveable = 0
-									dontRender = ""
-									horizontalBorder= ""
-									verticalBorder= ""
-									fullScreen = no
-									Orientation = "UPPER_LEFT"
-									scripted = yes
+		# 							iconType = {
+		# 								name ="icon_LQdspl_3_sorceryclass_religion_devouring"
+		# 								spriteType = "GFX_icon_sorceryclass_religion_devouring"
+		# 								position = { x = 9 y = 4}
+		# 								Orientation = "UPPER_LEFT"
+		# 							}
+		# 							#guiButtonType = {} #法术
+		# 						}
+		# 						windowType = { #信仰法术-环道
+		# 							name = "window_LQdspl_3_sorceryclass_religion_huan"
+		# 							backGround=""
+		# 							position = { x=12 y=174 }
+		# 							size = { x=546 y=88 }
+		# 							moveable = 0
+		# 							dontRender = ""
+		# 							horizontalBorder= ""
+		# 							verticalBorder= ""
+		# 							fullScreen = no
+		# 							Orientation = "UPPER_LEFT"
+		# 							scripted = yes
 
-									iconType = {
-										name ="icon_LQdspl_3_sorceryclass_religion_huan"
-										spriteType = "GFX_icon_sorceryclass_religion_huan"
-										position = { x = 9 y = 4}
-										Orientation = "UPPER_LEFT"
-									}
-									#guiButtonType = {} #法术
-								}
+		# 							iconType = {
+		# 								name ="icon_LQdspl_3_sorceryclass_religion_huan"
+		# 								spriteType = "GFX_icon_sorceryclass_religion_huan"
+		# 								position = { x = 9 y = 4}
+		# 								Orientation = "UPPER_LEFT"
+		# 							}
+		# 							#guiButtonType = {} #法术
+		# 						}
 
-							# 解锁法术
-								iconType = {
-									name ="icon_LQdspl_3_sorceryclass_locked"
-									spriteType = "GFX_icon_sorceryclass_locked"
-									position = { x = 21 y = 276 }
-									Orientation = "UPPER_LEFT"
-								}
-								#guiButtonType = {} #法术
+		# 					# 解锁法术
+		# 						iconType = {
+		# 							name ="icon_LQdspl_3_sorceryclass_locked"
+		# 							spriteType = "GFX_icon_sorceryclass_locked"
+		# 							position = { x = 21 y = 276 }
+		# 							Orientation = "UPPER_LEFT"
+		# 						}
+		# 						#guiButtonType = {} #法术
 								
-						}
-						windowType = { # 学科4 法术与状态
-							name = "window_LQdspl_4_sorcery"
-							backGround=""
-							position = { x=0 y=0 }
-							size = { x=546 y=282 }
-							moveable = 0
-							dontRender = ""
-							horizontalBorder= ""
-							verticalBorder= ""
-							fullScreen = no
-							Orientation = "UPPER_LEFT"
-							scripted = yes
+		# 				}
+		# 				windowType = { # 学科4 法术与状态
+		# 					name = "window_LQdspl_4_sorcery"
+		# 					backGround=""
+		# 					position = { x=0 y=0 }
+		# 					size = { x=546 y=282 }
+		# 					moveable = 0
+		# 					dontRender = ""
+		# 					horizontalBorder= ""
+		# 					verticalBorder= ""
+		# 					fullScreen = no
+		# 					Orientation = "UPPER_LEFT"
+		# 					scripted = yes
 
-							# 经验状态
-								iconType = {
-									name ="icon_progressbar_exp_LQmundi_discipline_4"
-									spriteType = "GFX_icon_progressbar_exp_LQmundi_discipline_x"
-									position = { x = 275 y = 53 }
-									Orientation = "UPPER_LEFT"
-								}
-								iconType = {
-									name ="icon_category_name_LQmindi_discipline_4"
-									spriteType = "GFX_icon_category_name_LQmindi_discipline_4"
-									position = { x = 81 y = 20 }
-									Orientation = "UPPER_LEFT"
-									alwaystransparent = yes
-								}
-								instantTextBoxType={
-									name = TextBox_LQdspl_4_exp
-									position = { x = 320 y = 25}
-									textureFile = ""
-									Orientation = "UPPER_LEFT"
-									text = ""
-									font = ""
-									maxWidth = 150
-									maxHeight = 20
-									format = right
-									alwaystransparent = yes
+		# 					# 经验状态
+		# 						iconType = {
+		# 							name ="icon_progressbar_exp_LQmundi_discipline_4"
+		# 							spriteType = "GFX_icon_progressbar_exp_LQmundi_discipline_x"
+		# 							position = { x = 275 y = 53 }
+		# 							Orientation = "UPPER_LEFT"
+		# 						}
+		# 						iconType = {
+		# 							name ="icon_category_name_LQmindi_discipline_4"
+		# 							spriteType = "GFX_icon_category_name_LQmindi_discipline_4"
+		# 							position = { x = 81 y = 20 }
+		# 							Orientation = "UPPER_LEFT"
+		# 							alwaystransparent = yes
+		# 						}
+		# 						instantTextBoxType={
+		# 							name = TextBox_LQdspl_4_exp
+		# 							position = { x = 320 y = 25}
+		# 							textureFile = ""
+		# 							Orientation = "UPPER_LEFT"
+		# 							text = ""
+		# 							font = ""
+		# 							maxWidth = 150
+		# 							maxHeight = 20
+		# 							format = right
+		# 							alwaystransparent = yes
 
-									scripted = yes
-								}
-							# 通用法术
-								iconType = {
-									name ="icon_LQdspl_4_sorceryclass_common"
-									spriteType = "GFX_icon_sorceryclass_common"
-									position = { x = 21 y = 80 }
-									Orientation = "UPPER_LEFT"
-								}
-								guiButtonType ={ 
-									# 学科 4
-									# 类别 common
-									# 序号 1
-									name ="button_LQdspl_4_sorceryclass_common_Sequence_1"
-									quadTextureSprite = "GFX_button_LQdspl_4_sorceryclass_commmon_Sequence_1"
-									position = { x= 93 y = 85 }
-									Orientation = "UPPER_LEFT"
+		# 							scripted = yes
+		# 						}
+		# 					# 通用法术
+		# 						iconType = {
+		# 							name ="icon_LQdspl_4_sorceryclass_common"
+		# 							spriteType = "GFX_icon_sorceryclass_common"
+		# 							position = { x = 21 y = 80 }
+		# 							Orientation = "UPPER_LEFT"
+		# 						}
+		# 						guiButtonType ={ 
+		# 							# 学科 4
+		# 							# 类别 common
+		# 							# 序号 1
+		# 							name ="button_LQdspl_4_sorceryclass_common_Sequence_1"
+		# 							quadTextureSprite = "GFX_button_LQdspl_4_sorceryclass_commmon_Sequence_1"
+		# 							position = { x= 93 y = 85 }
+		# 							Orientation = "UPPER_LEFT"
 
-									scripted = yes
-								}
-								guiButtonType ={ 
-									# 学科 4
-									# 类别 common
-									# 序号 2
-									name ="button_LQdspl_4_sorceryclass_common_Sequence_2"
-									quadTextureSprite = "GFX_button_LQdspl_4_sorceryclass_commmon_Sequence_2"
-									position = { x= 170 y = 85 }
-									Orientation = "UPPER_LEFT"
+		# 							scripted = yes
+		# 						}
+		# 						guiButtonType ={ 
+		# 							# 学科 4
+		# 							# 类别 common
+		# 							# 序号 2
+		# 							name ="button_LQdspl_4_sorceryclass_common_Sequence_2"
+		# 							quadTextureSprite = "GFX_button_LQdspl_4_sorceryclass_commmon_Sequence_2"
+		# 							position = { x= 170 y = 85 }
+		# 							Orientation = "UPPER_LEFT"
 
-									scripted = yes
-								}
-								guiButtonType ={ 
-									# 学科 4
-									# 类别 common
-									# 序号 3
-									name ="button_LQdspl_4_sorceryclass_common_Sequence_3"
-									quadTextureSprite = "GFX_button_LQdspl_4_sorceryclass_commmon_Sequence_3"
-									position = { x= 247 y = 85 }
-									Orientation = "UPPER_LEFT"
+		# 							scripted = yes
+		# 						}
+		# 						guiButtonType ={ 
+		# 							# 学科 4
+		# 							# 类别 common
+		# 							# 序号 3
+		# 							name ="button_LQdspl_4_sorceryclass_common_Sequence_3"
+		# 							quadTextureSprite = "GFX_button_LQdspl_4_sorceryclass_commmon_Sequence_3"
+		# 							position = { x= 247 y = 85 }
+		# 							Orientation = "UPPER_LEFT"
 
-									scripted = yes
-								}
-								guiButtonType ={ 
-									# 学科 4
-									# 类别 common
-									# 序号 4
-									name ="button_LQdspl_4_sorceryclass_common_Sequence_4"
-									quadTextureSprite = "GFX_button_LQdspl_4_sorceryclass_commmon_Sequence_4"
-									position = { x= 324 y = 85 }
-									Orientation = "UPPER_LEFT"
+		# 							scripted = yes
+		# 						}
+		# 						guiButtonType ={ 
+		# 							# 学科 4
+		# 							# 类别 common
+		# 							# 序号 4
+		# 							name ="button_LQdspl_4_sorceryclass_common_Sequence_4"
+		# 							quadTextureSprite = "GFX_button_LQdspl_4_sorceryclass_commmon_Sequence_4"
+		# 							position = { x= 324 y = 85 }
+		# 							Orientation = "UPPER_LEFT"
 
-									scripted = yes
-								}
-								guiButtonType ={ 
-									# 学科 4
-									# 类别 common
-									# 序号 5
-									name ="button_LQdspl_4_sorceryclass_common_Sequence_5"
-									quadTextureSprite = "GFX_button_LQdspl_4_sorceryclass_commmon_Sequence_5"
-									position = { x= 401 y = 85 }
-									Orientation = "UPPER_LEFT"
+		# 							scripted = yes
+		# 						}
+		# 						guiButtonType ={ 
+		# 							# 学科 4
+		# 							# 类别 common
+		# 							# 序号 5
+		# 							name ="button_LQdspl_4_sorceryclass_common_Sequence_5"
+		# 							quadTextureSprite = "GFX_button_LQdspl_4_sorceryclass_commmon_Sequence_5"
+		# 							position = { x= 401 y = 85 }
+		# 							Orientation = "UPPER_LEFT"
 
-									scripted = yes
-								}
+		# 							scripted = yes
+		# 						}
 
-							# 信仰法术
-								windowType = { #信仰法术-侠道
-									name = "window_LQdspl_4_sorceryclass_religion_accretive" 
-									backGround=""
-									position = { x=12 y=174 }
-									size = { x=546 y=88 }
-									moveable = 0
-									dontRender = ""
-									horizontalBorder= ""
-									verticalBorder= ""
-									fullScreen = no
-									Orientation = "UPPER_LEFT"
-									scripted = yes
+		# 					# 信仰法术
+		# 						windowType = { #信仰法术-侠道
+		# 							name = "window_LQdspl_4_sorceryclass_religion_accretive" 
+		# 							backGround=""
+		# 							position = { x=12 y=174 }
+		# 							size = { x=546 y=88 }
+		# 							moveable = 0
+		# 							dontRender = ""
+		# 							horizontalBorder= ""
+		# 							verticalBorder= ""
+		# 							fullScreen = no
+		# 							Orientation = "UPPER_LEFT"
+		# 							scripted = yes
 
-									iconType = {
-										name ="icon_LQdspl_4_sorceryclass_religion_accretive"
-										spriteType = "GFX_icon_sorceryclass_religion_accretive"
-										position = { x = 9 y = 4}
-										Orientation = "UPPER_LEFT"
-									}
-									#guiButtonType = {} #法术
-								}
-								windowType = { #信仰法术-化道
-									name = "window_LQdspl_4_sorceryclass_religion_transmutative"
-									backGround=""
-									position = { x=12 y=174 }
-									size = { x=546 y=88 }
-									moveable = 0
-									dontRender = ""
-									horizontalBorder= ""
-									verticalBorder= ""
-									fullScreen = no
-									Orientation = "UPPER_LEFT"
-									scripted = yes
+		# 							iconType = {
+		# 								name ="icon_LQdspl_4_sorceryclass_religion_accretive"
+		# 								spriteType = "GFX_icon_sorceryclass_religion_accretive"
+		# 								position = { x = 9 y = 4}
+		# 								Orientation = "UPPER_LEFT"
+		# 							}
+		# 							#guiButtonType = {} #法术
+		# 						}
+		# 						windowType = { #信仰法术-化道
+		# 							name = "window_LQdspl_4_sorceryclass_religion_transmutative"
+		# 							backGround=""
+		# 							position = { x=12 y=174 }
+		# 							size = { x=546 y=88 }
+		# 							moveable = 0
+		# 							dontRender = ""
+		# 							horizontalBorder= ""
+		# 							verticalBorder= ""
+		# 							fullScreen = no
+		# 							Orientation = "UPPER_LEFT"
+		# 							scripted = yes
 
-									iconType = {
-										name ="icon_LQdspl_4_sorceryclass_religion_transmutative"
-										spriteType = "GFX_icon_sorceryclass_religion_transmutative"
-										position = { x = 9 y = 4}
-										Orientation = "UPPER_LEFT"
-									}
-									#guiButtonType = {} #法术
-								}
-								windowType = { #信仰法术-噬道
-									name = "window_LQdspl_4_sorceryclass_religion_devouring"
-									backGround=""
-									position = { x=12 y=174 }
-									size = { x=546 y=88 }
-									moveable = 0
-									dontRender = ""
-									horizontalBorder= ""
-									verticalBorder= ""
-									fullScreen = no
-									Orientation = "UPPER_LEFT"
-									scripted = yes
+		# 							iconType = {
+		# 								name ="icon_LQdspl_4_sorceryclass_religion_transmutative"
+		# 								spriteType = "GFX_icon_sorceryclass_religion_transmutative"
+		# 								position = { x = 9 y = 4}
+		# 								Orientation = "UPPER_LEFT"
+		# 							}
+		# 							#guiButtonType = {} #法术
+		# 						}
+		# 						windowType = { #信仰法术-噬道
+		# 							name = "window_LQdspl_4_sorceryclass_religion_devouring"
+		# 							backGround=""
+		# 							position = { x=12 y=174 }
+		# 							size = { x=546 y=88 }
+		# 							moveable = 0
+		# 							dontRender = ""
+		# 							horizontalBorder= ""
+		# 							verticalBorder= ""
+		# 							fullScreen = no
+		# 							Orientation = "UPPER_LEFT"
+		# 							scripted = yes
 
-									iconType = {
-										name ="icon_LQdspl_4_sorceryclass_religion_devouring"
-										spriteType = "GFX_icon_sorceryclass_religion_devouring"
-										position = { x = 9 y = 4}
-										Orientation = "UPPER_LEFT"
-									}
-									#guiButtonType = {} #法术
-								}
-								windowType = { #信仰法术-环道
-									name = "window_LQdspl_4_sorceryclass_religion_huan"
-									backGround=""
-									position = { x=12 y=174 }
-									size = { x=546 y=88 }
-									moveable = 0
-									dontRender = ""
-									horizontalBorder= ""
-									verticalBorder= ""
-									fullScreen = no
-									Orientation = "UPPER_LEFT"
-									scripted = yes
+		# 							iconType = {
+		# 								name ="icon_LQdspl_4_sorceryclass_religion_devouring"
+		# 								spriteType = "GFX_icon_sorceryclass_religion_devouring"
+		# 								position = { x = 9 y = 4}
+		# 								Orientation = "UPPER_LEFT"
+		# 							}
+		# 							#guiButtonType = {} #法术
+		# 						}
+		# 						windowType = { #信仰法术-环道
+		# 							name = "window_LQdspl_4_sorceryclass_religion_huan"
+		# 							backGround=""
+		# 							position = { x=12 y=174 }
+		# 							size = { x=546 y=88 }
+		# 							moveable = 0
+		# 							dontRender = ""
+		# 							horizontalBorder= ""
+		# 							verticalBorder= ""
+		# 							fullScreen = no
+		# 							Orientation = "UPPER_LEFT"
+		# 							scripted = yes
 
-									iconType = {
-										name ="icon_LQdspl_4_sorceryclass_religion_huan"
-										spriteType = "GFX_icon_sorceryclass_religion_huan"
-										position = { x = 9 y = 4}
-										Orientation = "UPPER_LEFT"
-									}
-									#guiButtonType = {} #法术
-								}
+		# 							iconType = {
+		# 								name ="icon_LQdspl_4_sorceryclass_religion_huan"
+		# 								spriteType = "GFX_icon_sorceryclass_religion_huan"
+		# 								position = { x = 9 y = 4}
+		# 								Orientation = "UPPER_LEFT"
+		# 							}
+		# 							#guiButtonType = {} #法术
+		# 						}
 
-							# 解锁法术
-								iconType = {
-									name ="icon_LQdspl_4_sorceryclass_locked"
-									spriteType = "GFX_icon_sorceryclass_locked"
-									position = { x = 21 y = 276 }
-									Orientation = "UPPER_LEFT"
-								}
-								#guiButtonType = {} #法术
+		# 					# 解锁法术
+		# 						iconType = {
+		# 							name ="icon_LQdspl_4_sorceryclass_locked"
+		# 							spriteType = "GFX_icon_sorceryclass_locked"
+		# 							position = { x = 21 y = 276 }
+		# 							Orientation = "UPPER_LEFT"
+		# 						}
+		# 						#guiButtonType = {} #法术
 								
-						}
-						windowType = { # 学科5 法术与状态
-							name = "window_LQdspl_5_sorcery"
-							backGround=""
-							position = { x=0 y=0 }
-							size = { x=546 y=282 }
-							moveable = 0
-							dontRender = ""
-							horizontalBorder= ""
-							verticalBorder= ""
-							fullScreen = no
-							Orientation = "UPPER_LEFT"
-							scripted = yes
+		# 				}
+		# 				windowType = { # 学科5 法术与状态
+		# 					name = "window_LQdspl_5_sorcery"
+		# 					backGround=""
+		# 					position = { x=0 y=0 }
+		# 					size = { x=546 y=282 }
+		# 					moveable = 0
+		# 					dontRender = ""
+		# 					horizontalBorder= ""
+		# 					verticalBorder= ""
+		# 					fullScreen = no
+		# 					Orientation = "UPPER_LEFT"
+		# 					scripted = yes
 
-							# 经验状态
-								iconType = {
-									name ="icon_progressbar_exp_LQmundi_discipline_5"
-									spriteType = "GFX_icon_progressbar_exp_LQmundi_discipline_x"
-									position = { x = 275 y = 53 }
-									Orientation = "UPPER_LEFT"
-								}
-								iconType = {
-									name ="icon_category_name_LQmindi_discipline_5"
-									spriteType = "GFX_icon_category_name_LQmindi_discipline_5"
-									position = { x = 81 y = 20 }
-									Orientation = "UPPER_LEFT"
-									alwaystransparent = yes
-								}
-								instantTextBoxType={
-									name = TextBox_LQdspl_5_exp
-									position = { x = 320 y = 25}
-									textureFile = ""
-									Orientation = "UPPER_LEFT"
-									text = ""
-									font = ""
-									maxWidth = 150
-									maxHeight = 20
-									format = right
-									alwaystransparent = yes
+		# 					# 经验状态
+		# 						iconType = {
+		# 							name ="icon_progressbar_exp_LQmundi_discipline_5"
+		# 							spriteType = "GFX_icon_progressbar_exp_LQmundi_discipline_x"
+		# 							position = { x = 275 y = 53 }
+		# 							Orientation = "UPPER_LEFT"
+		# 						}
+		# 						iconType = {
+		# 							name ="icon_category_name_LQmindi_discipline_5"
+		# 							spriteType = "GFX_icon_category_name_LQmindi_discipline_5"
+		# 							position = { x = 81 y = 20 }
+		# 							Orientation = "UPPER_LEFT"
+		# 							alwaystransparent = yes
+		# 						}
+		# 						instantTextBoxType={
+		# 							name = TextBox_LQdspl_5_exp
+		# 							position = { x = 320 y = 25}
+		# 							textureFile = ""
+		# 							Orientation = "UPPER_LEFT"
+		# 							text = ""
+		# 							font = ""
+		# 							maxWidth = 150
+		# 							maxHeight = 20
+		# 							format = right
+		# 							alwaystransparent = yes
 
-									scripted = yes
-								}
-							# 通用法术
-								iconType = {
-									name ="icon_LQdspl_5_sorceryclass_common"
-									spriteType = "GFX_icon_sorceryclass_common"
-									position = { x = 21 y = 80 }
-									Orientation = "UPPER_LEFT"
-								}
-								guiButtonType ={ 
-									# 学科 5
-									# 类别 common
-									# 序号 1
-									name ="button_LQdspl_5_sorceryclass_common_Sequence_1"
-									quadTextureSprite = "GFX_button_LQdspl_5_sorceryclass_commmon_Sequence_1"
-									position = { x= 93 y = 85 }
-									Orientation = "UPPER_LEFT"
+		# 							scripted = yes
+		# 						}
+		# 					# 通用法术
+		# 						iconType = {
+		# 							name ="icon_LQdspl_5_sorceryclass_common"
+		# 							spriteType = "GFX_icon_sorceryclass_common"
+		# 							position = { x = 21 y = 80 }
+		# 							Orientation = "UPPER_LEFT"
+		# 						}
+		# 						guiButtonType ={ 
+		# 							# 学科 5
+		# 							# 类别 common
+		# 							# 序号 1
+		# 							name ="button_LQdspl_5_sorceryclass_common_Sequence_1"
+		# 							quadTextureSprite = "GFX_button_LQdspl_5_sorceryclass_commmon_Sequence_1"
+		# 							position = { x= 93 y = 85 }
+		# 							Orientation = "UPPER_LEFT"
 
-									scripted = yes
-								}
-								guiButtonType ={ 
-									# 学科 5
-									# 类别 common
-									# 序号 2
-									name ="button_LQdspl_5_sorceryclass_common_Sequence_2"
-									quadTextureSprite = "GFX_button_LQdspl_5_sorceryclass_commmon_Sequence_2"
-									position = { x= 170 y = 85 }
-									Orientation = "UPPER_LEFT"
+		# 							scripted = yes
+		# 						}
+		# 						guiButtonType ={ 
+		# 							# 学科 5
+		# 							# 类别 common
+		# 							# 序号 2
+		# 							name ="button_LQdspl_5_sorceryclass_common_Sequence_2"
+		# 							quadTextureSprite = "GFX_button_LQdspl_5_sorceryclass_commmon_Sequence_2"
+		# 							position = { x= 170 y = 85 }
+		# 							Orientation = "UPPER_LEFT"
 
-									scripted = yes
-								}
-								guiButtonType ={ 
-									# 学科 5
-									# 类别 common
-									# 序号 3
-									name ="button_LQdspl_5_sorceryclass_common_Sequence_3"
-									quadTextureSprite = "GFX_button_LQdspl_5_sorceryclass_commmon_Sequence_3"
-									position = { x= 247 y = 85 }
-									Orientation = "UPPER_LEFT"
+		# 							scripted = yes
+		# 						}
+		# 						guiButtonType ={ 
+		# 							# 学科 5
+		# 							# 类别 common
+		# 							# 序号 3
+		# 							name ="button_LQdspl_5_sorceryclass_common_Sequence_3"
+		# 							quadTextureSprite = "GFX_button_LQdspl_5_sorceryclass_commmon_Sequence_3"
+		# 							position = { x= 247 y = 85 }
+		# 							Orientation = "UPPER_LEFT"
 
-									scripted = yes
-								}
-								guiButtonType ={ 
-									# 学科 5
-									# 类别 common
-									# 序号 4
-									name ="button_LQdspl_5_sorceryclass_common_Sequence_4"
-									quadTextureSprite = "GFX_button_LQdspl_5_sorceryclass_commmon_Sequence_4"
-									position = { x= 324 y = 85 }
-									Orientation = "UPPER_LEFT"
+		# 							scripted = yes
+		# 						}
+		# 						guiButtonType ={ 
+		# 							# 学科 5
+		# 							# 类别 common
+		# 							# 序号 4
+		# 							name ="button_LQdspl_5_sorceryclass_common_Sequence_4"
+		# 							quadTextureSprite = "GFX_button_LQdspl_5_sorceryclass_commmon_Sequence_4"
+		# 							position = { x= 324 y = 85 }
+		# 							Orientation = "UPPER_LEFT"
 
-									scripted = yes
-								}
-								guiButtonType ={ 
-									# 学科 5
-									# 类别 common
-									# 序号 5
-									name ="button_LQdspl_5_sorceryclass_common_Sequence_5"
-									quadTextureSprite = "GFX_button_LQdspl_5_sorceryclass_commmon_Sequence_5"
-									position = { x= 401 y = 85 }
-									Orientation = "UPPER_LEFT"
+		# 							scripted = yes
+		# 						}
+		# 						guiButtonType ={ 
+		# 							# 学科 5
+		# 							# 类别 common
+		# 							# 序号 5
+		# 							name ="button_LQdspl_5_sorceryclass_common_Sequence_5"
+		# 							quadTextureSprite = "GFX_button_LQdspl_5_sorceryclass_commmon_Sequence_5"
+		# 							position = { x= 401 y = 85 }
+		# 							Orientation = "UPPER_LEFT"
 
-									scripted = yes
-								}
-								guiButtonType ={ 
-									# 学科 5
-									# 类别 common
-									# 序号 6
-									name ="button_LQdspl_5_sorceryclass_common_Sequence_6"
-									quadTextureSprite = "GFX_button_LQdspl_x_sorceryclass_y_Sequence_z"
-									position = { x= 478 y = 85 }
-									Orientation = "UPPER_LEFT"
+		# 							scripted = yes
+		# 						}
+		# 						guiButtonType ={ 
+		# 							# 学科 5
+		# 							# 类别 common
+		# 							# 序号 6
+		# 							name ="button_LQdspl_5_sorceryclass_common_Sequence_6"
+		# 							quadTextureSprite = "GFX_button_LQdspl_x_sorceryclass_y_Sequence_z"
+		# 							position = { x= 478 y = 85 }
+		# 							Orientation = "UPPER_LEFT"
 
-									scripted = yes
-								}
+		# 							scripted = yes
+		# 						}
 
 
-							# 信仰法术
-								windowType = { #信仰法术-侠道
-									name = "window_LQdspl_5_sorceryclass_religion_accretive" 
-									backGround=""
-									position = { x=12 y=174 }
-									size = { x=546 y=88 }
-									moveable = 0
-									dontRender = ""
-									horizontalBorder= ""
-									verticalBorder= ""
-									fullScreen = no
-									Orientation = "UPPER_LEFT"
-									scripted = yes
+		# 					# 信仰法术
+		# 						windowType = { #信仰法术-侠道
+		# 							name = "window_LQdspl_5_sorceryclass_religion_accretive" 
+		# 							backGround=""
+		# 							position = { x=12 y=174 }
+		# 							size = { x=546 y=88 }
+		# 							moveable = 0
+		# 							dontRender = ""
+		# 							horizontalBorder= ""
+		# 							verticalBorder= ""
+		# 							fullScreen = no
+		# 							Orientation = "UPPER_LEFT"
+		# 							scripted = yes
 
-									iconType = {
-										name ="icon_LQdspl_5_sorceryclass_religion_accretive"
-										spriteType = "GFX_icon_sorceryclass_religion_accretive"
-										position = { x = 9 y = 4}
-										Orientation = "UPPER_LEFT"
-									}
-									#guiButtonType = {} #法术
-								}
-								windowType = { #信仰法术-化道
-									name = "window_LQdspl_5_sorceryclass_religion_transmutative"
-									backGround=""
-									position = { x=12 y=174 }
-									size = { x=546 y=88 }
-									moveable = 0
-									dontRender = ""
-									horizontalBorder= ""
-									verticalBorder= ""
-									fullScreen = no
-									Orientation = "UPPER_LEFT"
-									scripted = yes
+		# 							iconType = {
+		# 								name ="icon_LQdspl_5_sorceryclass_religion_accretive"
+		# 								spriteType = "GFX_icon_sorceryclass_religion_accretive"
+		# 								position = { x = 9 y = 4}
+		# 								Orientation = "UPPER_LEFT"
+		# 							}
+		# 							#guiButtonType = {} #法术
+		# 						}
+		# 						windowType = { #信仰法术-化道
+		# 							name = "window_LQdspl_5_sorceryclass_religion_transmutative"
+		# 							backGround=""
+		# 							position = { x=12 y=174 }
+		# 							size = { x=546 y=88 }
+		# 							moveable = 0
+		# 							dontRender = ""
+		# 							horizontalBorder= ""
+		# 							verticalBorder= ""
+		# 							fullScreen = no
+		# 							Orientation = "UPPER_LEFT"
+		# 							scripted = yes
 
-									iconType = {
-										name ="icon_LQdspl_5_sorceryclass_religion_transmutative"
-										spriteType = "GFX_icon_sorceryclass_religion_transmutative"
-										position = { x = 9 y = 4}
-										Orientation = "UPPER_LEFT"
-									}
-									#guiButtonType = {} #法术
-								}
-								windowType = { #信仰法术-噬道
-									name = "window_LQdspl_5_sorceryclass_religion_devouring"
-									backGround=""
-									position = { x=12 y=174 }
-									size = { x=546 y=88 }
-									moveable = 0
-									dontRender = ""
-									horizontalBorder= ""
-									verticalBorder= ""
-									fullScreen = no
-									Orientation = "UPPER_LEFT"
-									scripted = yes
+		# 							iconType = {
+		# 								name ="icon_LQdspl_5_sorceryclass_religion_transmutative"
+		# 								spriteType = "GFX_icon_sorceryclass_religion_transmutative"
+		# 								position = { x = 9 y = 4}
+		# 								Orientation = "UPPER_LEFT"
+		# 							}
+		# 							#guiButtonType = {} #法术
+		# 						}
+		# 						windowType = { #信仰法术-噬道
+		# 							name = "window_LQdspl_5_sorceryclass_religion_devouring"
+		# 							backGround=""
+		# 							position = { x=12 y=174 }
+		# 							size = { x=546 y=88 }
+		# 							moveable = 0
+		# 							dontRender = ""
+		# 							horizontalBorder= ""
+		# 							verticalBorder= ""
+		# 							fullScreen = no
+		# 							Orientation = "UPPER_LEFT"
+		# 							scripted = yes
 
-									iconType = {
-										name ="icon_LQdspl_5_sorceryclass_religion_devouring"
-										spriteType = "GFX_icon_sorceryclass_religion_devouring"
-										position = { x = 9 y = 4}
-										Orientation = "UPPER_LEFT"
-									}
-									#guiButtonType = {} #法术
-								}
-								windowType = { #信仰法术-环道
-									name = "window_LQdspl_5_sorceryclass_religion_huan"
-									backGround=""
-									position = { x=12 y=174 }
-									size = { x=546 y=88 }
-									moveable = 0
-									dontRender = ""
-									horizontalBorder= ""
-									verticalBorder= ""
-									fullScreen = no
-									Orientation = "UPPER_LEFT"
-									scripted = yes
+		# 							iconType = {
+		# 								name ="icon_LQdspl_5_sorceryclass_religion_devouring"
+		# 								spriteType = "GFX_icon_sorceryclass_religion_devouring"
+		# 								position = { x = 9 y = 4}
+		# 								Orientation = "UPPER_LEFT"
+		# 							}
+		# 							#guiButtonType = {} #法术
+		# 						}
+		# 						windowType = { #信仰法术-环道
+		# 							name = "window_LQdspl_5_sorceryclass_religion_huan"
+		# 							backGround=""
+		# 							position = { x=12 y=174 }
+		# 							size = { x=546 y=88 }
+		# 							moveable = 0
+		# 							dontRender = ""
+		# 							horizontalBorder= ""
+		# 							verticalBorder= ""
+		# 							fullScreen = no
+		# 							Orientation = "UPPER_LEFT"
+		# 							scripted = yes
 
-									iconType = {
-										name ="icon_LQdspl_5_sorceryclass_religion_huan"
-										spriteType = "GFX_icon_sorceryclass_religion_huan"
-										position = { x = 9 y = 4}
-										Orientation = "UPPER_LEFT"
-									}
-									#guiButtonType = {} #法术
-								}
+		# 							iconType = {
+		# 								name ="icon_LQdspl_5_sorceryclass_religion_huan"
+		# 								spriteType = "GFX_icon_sorceryclass_religion_huan"
+		# 								position = { x = 9 y = 4}
+		# 								Orientation = "UPPER_LEFT"
+		# 							}
+		# 							#guiButtonType = {} #法术
+		# 						}
 
-							# 解锁法术
-								iconType = {
-									name ="icon_LQdspl_5_sorceryclass_locked"
-									spriteType = "GFX_icon_sorceryclass_locked"
-									position = { x = 21 y = 276 }
-									Orientation = "UPPER_LEFT"
-								}
-								#guiButtonType = {} #法术
+		# 					# 解锁法术
+		# 						iconType = {
+		# 							name ="icon_LQdspl_5_sorceryclass_locked"
+		# 							spriteType = "GFX_icon_sorceryclass_locked"
+		# 							position = { x = 21 y = 276 }
+		# 							Orientation = "UPPER_LEFT"
+		# 						}
+		# 						#guiButtonType = {} #法术
 								
-						}
-						windowType = { # 学科6 法术与状态
-							name = "window_LQdspl_6_sorcery"
-							backGround=""
-							position = { x=0 y=0 }
-							size = { x=546 y=282 }
-							moveable = 0
-							dontRender = ""
-							horizontalBorder= ""
-							verticalBorder= ""
-							fullScreen = no
-							Orientation = "UPPER_LEFT"
-							scripted = yes
+		# 				}
+		# 				windowType = { # 学科6 法术与状态
+		# 					name = "window_LQdspl_6_sorcery"
+		# 					backGround=""
+		# 					position = { x=0 y=0 }
+		# 					size = { x=546 y=282 }
+		# 					moveable = 0
+		# 					dontRender = ""
+		# 					horizontalBorder= ""
+		# 					verticalBorder= ""
+		# 					fullScreen = no
+		# 					Orientation = "UPPER_LEFT"
+		# 					scripted = yes
 
-							# 经验状态
-								iconType = {
-									name ="icon_progressbar_exp_LQmundi_discipline_6"
-									spriteType = "GFX_icon_progressbar_exp_LQmundi_discipline_x"
-									position = { x = 275 y = 53 }
-									Orientation = "UPPER_LEFT"
-								}
-								iconType = {
-									name ="icon_category_name_LQmindi_discipline_6"
-									spriteType = "GFX_icon_category_name_LQmindi_discipline_6"
-									position = { x = 81 y = 20 }
-									Orientation = "UPPER_LEFT"
-									alwaystransparent = yes
-								}
-								instantTextBoxType={
-									name = TextBox_LQdspl_6_exp
-									position = { x = 320 y = 25}
-									textureFile = ""
-									Orientation = "UPPER_LEFT"
-									text = ""
-									font = ""
-									maxWidth = 150
-									maxHeight = 20
-									format = right
-									alwaystransparent = yes
+		# 					# 经验状态
+		# 						iconType = {
+		# 							name ="icon_progressbar_exp_LQmundi_discipline_6"
+		# 							spriteType = "GFX_icon_progressbar_exp_LQmundi_discipline_x"
+		# 							position = { x = 275 y = 53 }
+		# 							Orientation = "UPPER_LEFT"
+		# 						}
+		# 						iconType = {
+		# 							name ="icon_category_name_LQmindi_discipline_6"
+		# 							spriteType = "GFX_icon_category_name_LQmindi_discipline_6"
+		# 							position = { x = 81 y = 20 }
+		# 							Orientation = "UPPER_LEFT"
+		# 							alwaystransparent = yes
+		# 						}
+		# 						instantTextBoxType={
+		# 							name = TextBox_LQdspl_6_exp
+		# 							position = { x = 320 y = 25}
+		# 							textureFile = ""
+		# 							Orientation = "UPPER_LEFT"
+		# 							text = ""
+		# 							font = ""
+		# 							maxWidth = 150
+		# 							maxHeight = 20
+		# 							format = right
+		# 							alwaystransparent = yes
 
-									scripted = yes
-								}
-							# 通用法术
-								iconType = {
-									name ="icon_LQdspl_6_sorceryclass_common"
-									spriteType = "GFX_icon_sorceryclass_common"
-									position = { x = 21 y = 80 }
-									Orientation = "UPPER_LEFT"
-								}
-								guiButtonType ={ 
-									# 学科 6
-									# 类别 common
-									# 序号 1
-									name ="button_LQdspl_6_sorceryclass_common_Sequence_1"
-									quadTextureSprite = "GFX_button_LQdspl_6_sorceryclass_commmon_Sequence_1"
-									position = { x= 93 y = 85 }
-									Orientation = "UPPER_LEFT"
+		# 							scripted = yes
+		# 						}
+		# 					# 通用法术
+		# 						iconType = {
+		# 							name ="icon_LQdspl_6_sorceryclass_common"
+		# 							spriteType = "GFX_icon_sorceryclass_common"
+		# 							position = { x = 21 y = 80 }
+		# 							Orientation = "UPPER_LEFT"
+		# 						}
+		# 						guiButtonType ={ 
+		# 							# 学科 6
+		# 							# 类别 common
+		# 							# 序号 1
+		# 							name ="button_LQdspl_6_sorceryclass_common_Sequence_1"
+		# 							quadTextureSprite = "GFX_button_LQdspl_6_sorceryclass_commmon_Sequence_1"
+		# 							position = { x= 93 y = 85 }
+		# 							Orientation = "UPPER_LEFT"
 
-									scripted = yes
-								}
-								guiButtonType ={ 
-									# 学科 6
-									# 类别 common
-									# 序号 2
-									name ="button_LQdspl_6_sorceryclass_common_Sequence_2"
-									quadTextureSprite = "GFX_button_LQdspl_6_sorceryclass_commmon_Sequence_2"
-									position = { x= 170 y = 85 }
-									Orientation = "UPPER_LEFT"
+		# 							scripted = yes
+		# 						}
+		# 						guiButtonType ={ 
+		# 							# 学科 6
+		# 							# 类别 common
+		# 							# 序号 2
+		# 							name ="button_LQdspl_6_sorceryclass_common_Sequence_2"
+		# 							quadTextureSprite = "GFX_button_LQdspl_6_sorceryclass_commmon_Sequence_2"
+		# 							position = { x= 170 y = 85 }
+		# 							Orientation = "UPPER_LEFT"
 
-									scripted = yes
-								}
-								guiButtonType ={ 
-									# 学科 6
-									# 类别 common
-									# 序号 3
-									name ="button_LQdspl_6_sorceryclass_common_Sequence_3"
-									quadTextureSprite = "GFX_button_LQdspl_6_sorceryclass_commmon_Sequence_3"
-									position = { x= 247 y = 85 }
-									Orientation = "UPPER_LEFT"
+		# 							scripted = yes
+		# 						}
+		# 						guiButtonType ={ 
+		# 							# 学科 6
+		# 							# 类别 common
+		# 							# 序号 3
+		# 							name ="button_LQdspl_6_sorceryclass_common_Sequence_3"
+		# 							quadTextureSprite = "GFX_button_LQdspl_6_sorceryclass_commmon_Sequence_3"
+		# 							position = { x= 247 y = 85 }
+		# 							Orientation = "UPPER_LEFT"
 
-									scripted = yes
-								}
-								guiButtonType ={ 
-									# 学科 6
-									# 类别 common
-									# 序号 4
-									name ="button_LQdspl_6_sorceryclass_common_Sequence_4"
-									quadTextureSprite = "GFX_button_LQdspl_x_sorceryclass_y_Sequence_z"
-									position = { x= 324 y = 85 }
-									Orientation = "UPPER_LEFT"
+		# 							scripted = yes
+		# 						}
+		# 						guiButtonType ={ 
+		# 							# 学科 6
+		# 							# 类别 common
+		# 							# 序号 4
+		# 							name ="button_LQdspl_6_sorceryclass_common_Sequence_4"
+		# 							quadTextureSprite = "GFX_button_LQdspl_x_sorceryclass_y_Sequence_z"
+		# 							position = { x= 324 y = 85 }
+		# 							Orientation = "UPPER_LEFT"
 
-									scripted = yes
-								}
-								guiButtonType ={ 
-									# 学科 6
-									# 类别 common
-									# 序号 5
-									name ="button_LQdspl_6_sorceryclass_common_Sequence_5"
-									quadTextureSprite = "GFX_button_LQdspl_x_sorceryclass_y_Sequence_z"
-									position = { x= 401 y = 85 }
-									Orientation = "UPPER_LEFT"
+		# 							scripted = yes
+		# 						}
+		# 						guiButtonType ={ 
+		# 							# 学科 6
+		# 							# 类别 common
+		# 							# 序号 5
+		# 							name ="button_LQdspl_6_sorceryclass_common_Sequence_5"
+		# 							quadTextureSprite = "GFX_button_LQdspl_x_sorceryclass_y_Sequence_z"
+		# 							position = { x= 401 y = 85 }
+		# 							Orientation = "UPPER_LEFT"
 
-									scripted = yes
-								}
-								guiButtonType ={ 
-									# 学科 6
-									# 类别 common
-									# 序号 6
-									name ="button_LQdspl_6_sorceryclass_common_Sequence_6"
-									quadTextureSprite = "GFX_button_LQdspl_x_sorceryclass_y_Sequence_z"
-									position = { x= 478 y = 85 }
-									Orientation = "UPPER_LEFT"
+		# 							scripted = yes
+		# 						}
+		# 						guiButtonType ={ 
+		# 							# 学科 6
+		# 							# 类别 common
+		# 							# 序号 6
+		# 							name ="button_LQdspl_6_sorceryclass_common_Sequence_6"
+		# 							quadTextureSprite = "GFX_button_LQdspl_x_sorceryclass_y_Sequence_z"
+		# 							position = { x= 478 y = 85 }
+		# 							Orientation = "UPPER_LEFT"
 
-									scripted = yes
-								}
+		# 							scripted = yes
+		# 						}
 
 
-							# 信仰法术
-								windowType = { #信仰法术-侠道
-									name = "window_LQdspl_6_sorceryclass_religion_accretive" 
-									backGround=""
-									position = { x=12 y=174 }
-									size = { x=546 y=88 }
-									moveable = 0
-									dontRender = ""
-									horizontalBorder= ""
-									verticalBorder= ""
-									fullScreen = no
-									Orientation = "UPPER_LEFT"
-									scripted = yes
+		# 					# 信仰法术
+		# 						windowType = { #信仰法术-侠道
+		# 							name = "window_LQdspl_6_sorceryclass_religion_accretive" 
+		# 							backGround=""
+		# 							position = { x=12 y=174 }
+		# 							size = { x=546 y=88 }
+		# 							moveable = 0
+		# 							dontRender = ""
+		# 							horizontalBorder= ""
+		# 							verticalBorder= ""
+		# 							fullScreen = no
+		# 							Orientation = "UPPER_LEFT"
+		# 							scripted = yes
 
-									iconType = {
-										name ="icon_LQdspl_6_sorceryclass_religion_accretive"
-										spriteType = "GFX_icon_sorceryclass_religion_accretive"
-										position = { x = 9 y = 4}
-										Orientation = "UPPER_LEFT"
-									}
-									#guiButtonType = {} #法术
-								}
-								windowType = { #信仰法术-化道
-									name = "window_LQdspl_6_sorceryclass_religion_transmutative"
-									backGround=""
-									position = { x=12 y=174 }
-									size = { x=546 y=88 }
-									moveable = 0
-									dontRender = ""
-									horizontalBorder= ""
-									verticalBorder= ""
-									fullScreen = no
-									Orientation = "UPPER_LEFT"
-									scripted = yes
+		# 							iconType = {
+		# 								name ="icon_LQdspl_6_sorceryclass_religion_accretive"
+		# 								spriteType = "GFX_icon_sorceryclass_religion_accretive"
+		# 								position = { x = 9 y = 4}
+		# 								Orientation = "UPPER_LEFT"
+		# 							}
+		# 							#guiButtonType = {} #法术
+		# 						}
+		# 						windowType = { #信仰法术-化道
+		# 							name = "window_LQdspl_6_sorceryclass_religion_transmutative"
+		# 							backGround=""
+		# 							position = { x=12 y=174 }
+		# 							size = { x=546 y=88 }
+		# 							moveable = 0
+		# 							dontRender = ""
+		# 							horizontalBorder= ""
+		# 							verticalBorder= ""
+		# 							fullScreen = no
+		# 							Orientation = "UPPER_LEFT"
+		# 							scripted = yes
 
-									iconType = {
-										name ="icon_LQdspl_6_sorceryclass_religion_transmutative"
-										spriteType = "GFX_icon_sorceryclass_religion_transmutative"
-										position = { x = 9 y = 4}
-										Orientation = "UPPER_LEFT"
-									}
-									#guiButtonType = {} #法术
-								}
-								windowType = { #信仰法术-噬道
-									name = "window_LQdspl_6_sorceryclass_religion_devouring"
-									backGround=""
-									position = { x=12 y=174 }
-									size = { x=546 y=88 }
-									moveable = 0
-									dontRender = ""
-									horizontalBorder= ""
-									verticalBorder= ""
-									fullScreen = no
-									Orientation = "UPPER_LEFT"
-									scripted = yes
+		# 							iconType = {
+		# 								name ="icon_LQdspl_6_sorceryclass_religion_transmutative"
+		# 								spriteType = "GFX_icon_sorceryclass_religion_transmutative"
+		# 								position = { x = 9 y = 4}
+		# 								Orientation = "UPPER_LEFT"
+		# 							}
+		# 							#guiButtonType = {} #法术
+		# 						}
+		# 						windowType = { #信仰法术-噬道
+		# 							name = "window_LQdspl_6_sorceryclass_religion_devouring"
+		# 							backGround=""
+		# 							position = { x=12 y=174 }
+		# 							size = { x=546 y=88 }
+		# 							moveable = 0
+		# 							dontRender = ""
+		# 							horizontalBorder= ""
+		# 							verticalBorder= ""
+		# 							fullScreen = no
+		# 							Orientation = "UPPER_LEFT"
+		# 							scripted = yes
 
-									iconType = {
-										name ="icon_LQdspl_6_sorceryclass_religion_devouring"
-										spriteType = "GFX_icon_sorceryclass_religion_devouring"
-										position = { x = 9 y = 4}
-										Orientation = "UPPER_LEFT"
-									}
-									#guiButtonType = {} #法术
-								}
-								windowType = { #信仰法术-环道
-									name = "window_LQdspl_6_sorceryclass_religion_huan"
-									backGround=""
-									position = { x=12 y=174 }
-									size = { x=546 y=88 }
-									moveable = 0
-									dontRender = ""
-									horizontalBorder= ""
-									verticalBorder= ""
-									fullScreen = no
-									Orientation = "UPPER_LEFT"
-									scripted = yes
+		# 							iconType = {
+		# 								name ="icon_LQdspl_6_sorceryclass_religion_devouring"
+		# 								spriteType = "GFX_icon_sorceryclass_religion_devouring"
+		# 								position = { x = 9 y = 4}
+		# 								Orientation = "UPPER_LEFT"
+		# 							}
+		# 							#guiButtonType = {} #法术
+		# 						}
+		# 						windowType = { #信仰法术-环道
+		# 							name = "window_LQdspl_6_sorceryclass_religion_huan"
+		# 							backGround=""
+		# 							position = { x=12 y=174 }
+		# 							size = { x=546 y=88 }
+		# 							moveable = 0
+		# 							dontRender = ""
+		# 							horizontalBorder= ""
+		# 							verticalBorder= ""
+		# 							fullScreen = no
+		# 							Orientation = "UPPER_LEFT"
+		# 							scripted = yes
 
-									iconType = {
-										name ="icon_LQdspl_6_sorceryclass_religion_huan"
-										spriteType = "GFX_icon_sorceryclass_religion_huan"
-										position = { x = 9 y = 4}
-										Orientation = "UPPER_LEFT"
-									}
-									#guiButtonType = {} #法术
-								}
+		# 							iconType = {
+		# 								name ="icon_LQdspl_6_sorceryclass_religion_huan"
+		# 								spriteType = "GFX_icon_sorceryclass_religion_huan"
+		# 								position = { x = 9 y = 4}
+		# 								Orientation = "UPPER_LEFT"
+		# 							}
+		# 							#guiButtonType = {} #法术
+		# 						}
 
-							# 解锁法术
-								iconType = {
-									name ="icon_LQdspl_6_sorceryclass_locked"
-									spriteType = "GFX_icon_sorceryclass_locked"
-									position = { x = 21 y = 276 }
-									Orientation = "UPPER_LEFT"
-								}
-								#guiButtonType = {} #法术
+		# 					# 解锁法术
+		# 						iconType = {
+		# 							name ="icon_LQdspl_6_sorceryclass_locked"
+		# 							spriteType = "GFX_icon_sorceryclass_locked"
+		# 							position = { x = 21 y = 276 }
+		# 							Orientation = "UPPER_LEFT"
+		# 						}
+		# 						#guiButtonType = {} #法术
 								
-						}
-						windowType = { # 学科7 法术与状态
-							name = "window_LQdspl_7_sorcery"
-							backGround=""
-							position = { x=0 y=0 }
-							size = { x=546 y=282 }
-							moveable = 0
-							dontRender = ""
-							horizontalBorder= ""
-							verticalBorder= ""
-							fullScreen = no
-							Orientation = "UPPER_LEFT"
-							scripted = yes
+		# 				}
+		# 				windowType = { # 学科7 法术与状态
+		# 					name = "window_LQdspl_7_sorcery"
+		# 					backGround=""
+		# 					position = { x=0 y=0 }
+		# 					size = { x=546 y=282 }
+		# 					moveable = 0
+		# 					dontRender = ""
+		# 					horizontalBorder= ""
+		# 					verticalBorder= ""
+		# 					fullScreen = no
+		# 					Orientation = "UPPER_LEFT"
+		# 					scripted = yes
 
-							# 经验状态
-								iconType = {
-									name ="icon_progressbar_exp_LQmundi_discipline_7"
-									spriteType = "GFX_icon_progressbar_exp_LQmundi_discipline_x"
-									position = { x = 275 y = 53 }
-									Orientation = "UPPER_LEFT"
-								}
-								iconType = {
-									name ="icon_category_name_LQmindi_discipline_7"
-									spriteType = "GFX_icon_category_name_LQmindi_discipline_7"
-									position = { x = 81 y = 20 }
-									Orientation = "UPPER_LEFT"
-									alwaystransparent = yes
-								}
-								instantTextBoxType={
-									name = TextBox_LQdspl_7_exp
-									position = { x = 320 y = 25}
-									textureFile = ""
-									Orientation = "UPPER_LEFT"
-									text = ""
-									font = ""
-									maxWidth = 150
-									maxHeight = 20
-									format = right
-									alwaystransparent = yes
+		# 					# 经验状态
+		# 						iconType = {
+		# 							name ="icon_progressbar_exp_LQmundi_discipline_7"
+		# 							spriteType = "GFX_icon_progressbar_exp_LQmundi_discipline_x"
+		# 							position = { x = 275 y = 53 }
+		# 							Orientation = "UPPER_LEFT"
+		# 						}
+		# 						iconType = {
+		# 							name ="icon_category_name_LQmindi_discipline_7"
+		# 							spriteType = "GFX_icon_category_name_LQmindi_discipline_7"
+		# 							position = { x = 81 y = 20 }
+		# 							Orientation = "UPPER_LEFT"
+		# 							alwaystransparent = yes
+		# 						}
+		# 						instantTextBoxType={
+		# 							name = TextBox_LQdspl_7_exp
+		# 							position = { x = 320 y = 25}
+		# 							textureFile = ""
+		# 							Orientation = "UPPER_LEFT"
+		# 							text = ""
+		# 							font = ""
+		# 							maxWidth = 150
+		# 							maxHeight = 20
+		# 							format = right
+		# 							alwaystransparent = yes
 
-									scripted = yes
-								}
-							# 通用法术
-								iconType = {
-									name ="icon_LQdspl_7_sorceryclass_common"
-									spriteType = "GFX_icon_sorceryclass_common"
-									position = { x = 21 y = 80 }
-									Orientation = "UPPER_LEFT"
-								}
-								guiButtonType ={ 
-									# 学科 7
-									# 类别 common
-									# 序号 1
-									name ="button_LQdspl_7_sorceryclass_common_Sequence_1"
-									quadTextureSprite = "GFX_button_LQdspl_7_sorceryclass_commmon_Sequence_1"
-									position = { x= 93 y = 85 }
-									Orientation = "UPPER_LEFT"
+		# 							scripted = yes
+		# 						}
+		# 					# 通用法术
+		# 						iconType = {
+		# 							name ="icon_LQdspl_7_sorceryclass_common"
+		# 							spriteType = "GFX_icon_sorceryclass_common"
+		# 							position = { x = 21 y = 80 }
+		# 							Orientation = "UPPER_LEFT"
+		# 						}
+		# 						guiButtonType ={ 
+		# 							# 学科 7
+		# 							# 类别 common
+		# 							# 序号 1
+		# 							name ="button_LQdspl_7_sorceryclass_common_Sequence_1"
+		# 							quadTextureSprite = "GFX_button_LQdspl_7_sorceryclass_commmon_Sequence_1"
+		# 							position = { x= 93 y = 85 }
+		# 							Orientation = "UPPER_LEFT"
 
-									scripted = yes
-								}
-								guiButtonType ={ 
-									# 学科 7
-									# 类别 common
-									# 序号 2
-									name ="button_LQdspl_7_sorceryclass_common_Sequence_2"
-									quadTextureSprite = "GFX_button_LQdspl_7_sorceryclass_commmon_Sequence_2"
-									position = { x= 170 y = 85 }
-									Orientation = "UPPER_LEFT"
+		# 							scripted = yes
+		# 						}
+		# 						guiButtonType ={ 
+		# 							# 学科 7
+		# 							# 类别 common
+		# 							# 序号 2
+		# 							name ="button_LQdspl_7_sorceryclass_common_Sequence_2"
+		# 							quadTextureSprite = "GFX_button_LQdspl_7_sorceryclass_commmon_Sequence_2"
+		# 							position = { x= 170 y = 85 }
+		# 							Orientation = "UPPER_LEFT"
 
-									scripted = yes
-								}
-								guiButtonType ={ 
-									# 学科 7
-									# 类别 common
-									# 序号 3
-									name ="button_LQdspl_7_sorceryclass_common_Sequence_3"
-									quadTextureSprite = "GFX_button_LQdspl_7_sorceryclass_commmon_Sequence_3"
-									position = { x= 247 y = 85 }
-									Orientation = "UPPER_LEFT"
+		# 							scripted = yes
+		# 						}
+		# 						guiButtonType ={ 
+		# 							# 学科 7
+		# 							# 类别 common
+		# 							# 序号 3
+		# 							name ="button_LQdspl_7_sorceryclass_common_Sequence_3"
+		# 							quadTextureSprite = "GFX_button_LQdspl_7_sorceryclass_commmon_Sequence_3"
+		# 							position = { x= 247 y = 85 }
+		# 							Orientation = "UPPER_LEFT"
 
-									scripted = yes
-								}
-								guiButtonType ={ 
-									# 学科 7
-									# 类别 common
-									# 序号 4
-									name ="button_LQdspl_7_sorceryclass_common_Sequence_4"
-									quadTextureSprite = "GFX_button_LQdspl_7_sorceryclass_commmon_Sequence_4"
-									position = { x= 324 y = 85 }
-									Orientation = "UPPER_LEFT"
+		# 							scripted = yes
+		# 						}
+		# 						guiButtonType ={ 
+		# 							# 学科 7
+		# 							# 类别 common
+		# 							# 序号 4
+		# 							name ="button_LQdspl_7_sorceryclass_common_Sequence_4"
+		# 							quadTextureSprite = "GFX_button_LQdspl_7_sorceryclass_commmon_Sequence_4"
+		# 							position = { x= 324 y = 85 }
+		# 							Orientation = "UPPER_LEFT"
 
-									scripted = yes
-								}
-								guiButtonType ={ 
-									# 学科 7
-									# 类别 common
-									# 序号 5
-									name ="button_LQdspl_7_sorceryclass_common_Sequence_5"
-									quadTextureSprite = "GFX_button_LQdspl_7_sorceryclass_commmon_Sequence_5"
-									position = { x= 401 y = 85 }
-									Orientation = "UPPER_LEFT"
+		# 							scripted = yes
+		# 						}
+		# 						guiButtonType ={ 
+		# 							# 学科 7
+		# 							# 类别 common
+		# 							# 序号 5
+		# 							name ="button_LQdspl_7_sorceryclass_common_Sequence_5"
+		# 							quadTextureSprite = "GFX_button_LQdspl_7_sorceryclass_commmon_Sequence_5"
+		# 							position = { x= 401 y = 85 }
+		# 							Orientation = "UPPER_LEFT"
 
-									scripted = yes
-								}
-								guiButtonType ={ 
-									# 学科 7
-									# 类别 common
-									# 序号 6
-									name ="button_LQdspl_7_sorceryclass_common_Sequence_6"
-									quadTextureSprite = "GFX_button_LQdspl_7_sorceryclass_commmon_Sequence_6"
-									position = { x= 478 y = 85 }
-									Orientation = "UPPER_LEFT"
+		# 							scripted = yes
+		# 						}
+		# 						guiButtonType ={ 
+		# 							# 学科 7
+		# 							# 类别 common
+		# 							# 序号 6
+		# 							name ="button_LQdspl_7_sorceryclass_common_Sequence_6"
+		# 							quadTextureSprite = "GFX_button_LQdspl_7_sorceryclass_commmon_Sequence_6"
+		# 							position = { x= 478 y = 85 }
+		# 							Orientation = "UPPER_LEFT"
 
-									scripted = yes
-								}
+		# 							scripted = yes
+		# 						}
 
 
-							# 信仰法术
-								windowType = { #信仰法术-侠道
-									name = "window_LQdspl_7_sorceryclass_religion_accretive" 
-									backGround=""
-									position = { x=12 y=174 }
-									size = { x=546 y=88 }
-									moveable = 0
-									dontRender = ""
-									horizontalBorder= ""
-									verticalBorder= ""
-									fullScreen = no
-									Orientation = "UPPER_LEFT"
-									scripted = yes
+		# 					# 信仰法术
+		# 						windowType = { #信仰法术-侠道
+		# 							name = "window_LQdspl_7_sorceryclass_religion_accretive" 
+		# 							backGround=""
+		# 							position = { x=12 y=174 }
+		# 							size = { x=546 y=88 }
+		# 							moveable = 0
+		# 							dontRender = ""
+		# 							horizontalBorder= ""
+		# 							verticalBorder= ""
+		# 							fullScreen = no
+		# 							Orientation = "UPPER_LEFT"
+		# 							scripted = yes
 
-									iconType = {
-										name ="icon_LQdspl_7_sorceryclass_religion_accretive"
-										spriteType = "GFX_icon_sorceryclass_religion_accretive"
-										position = { x = 9 y = 4}
-										Orientation = "UPPER_LEFT"
-									}
-									#guiButtonType = {} #法术
-								}
-								windowType = { #信仰法术-化道
-									name = "window_LQdspl_7_sorceryclass_religion_transmutative"
-									backGround=""
-									position = { x=12 y=174 }
-									size = { x=546 y=88 }
-									moveable = 0
-									dontRender = ""
-									horizontalBorder= ""
-									verticalBorder= ""
-									fullScreen = no
-									Orientation = "UPPER_LEFT"
-									scripted = yes
+		# 							iconType = {
+		# 								name ="icon_LQdspl_7_sorceryclass_religion_accretive"
+		# 								spriteType = "GFX_icon_sorceryclass_religion_accretive"
+		# 								position = { x = 9 y = 4}
+		# 								Orientation = "UPPER_LEFT"
+		# 							}
+		# 							#guiButtonType = {} #法术
+		# 						}
+		# 						windowType = { #信仰法术-化道
+		# 							name = "window_LQdspl_7_sorceryclass_religion_transmutative"
+		# 							backGround=""
+		# 							position = { x=12 y=174 }
+		# 							size = { x=546 y=88 }
+		# 							moveable = 0
+		# 							dontRender = ""
+		# 							horizontalBorder= ""
+		# 							verticalBorder= ""
+		# 							fullScreen = no
+		# 							Orientation = "UPPER_LEFT"
+		# 							scripted = yes
 
-									iconType = {
-										name ="icon_LQdspl_7_sorceryclass_religion_transmutative"
-										spriteType = "GFX_icon_sorceryclass_religion_transmutative"
-										position = { x = 9 y = 4}
-										Orientation = "UPPER_LEFT"
-									}
-									#guiButtonType = {} #法术
-								}
-								windowType = { #信仰法术-噬道
-									name = "window_LQdspl_7_sorceryclass_religion_devouring"
-									backGround=""
-									position = { x=12 y=174 }
-									size = { x=546 y=88 }
-									moveable = 0
-									dontRender = ""
-									horizontalBorder= ""
-									verticalBorder= ""
-									fullScreen = no
-									Orientation = "UPPER_LEFT"
-									scripted = yes
+		# 							iconType = {
+		# 								name ="icon_LQdspl_7_sorceryclass_religion_transmutative"
+		# 								spriteType = "GFX_icon_sorceryclass_religion_transmutative"
+		# 								position = { x = 9 y = 4}
+		# 								Orientation = "UPPER_LEFT"
+		# 							}
+		# 							#guiButtonType = {} #法术
+		# 						}
+		# 						windowType = { #信仰法术-噬道
+		# 							name = "window_LQdspl_7_sorceryclass_religion_devouring"
+		# 							backGround=""
+		# 							position = { x=12 y=174 }
+		# 							size = { x=546 y=88 }
+		# 							moveable = 0
+		# 							dontRender = ""
+		# 							horizontalBorder= ""
+		# 							verticalBorder= ""
+		# 							fullScreen = no
+		# 							Orientation = "UPPER_LEFT"
+		# 							scripted = yes
 
-									iconType = {
-										name ="icon_LQdspl_7_sorceryclass_religion_devouring"
-										spriteType = "GFX_icon_sorceryclass_religion_devouring"
-										position = { x = 9 y = 4}
-										Orientation = "UPPER_LEFT"
-									}
-									#guiButtonType = {} #法术
-								}
-								windowType = { #信仰法术-环道
-									name = "window_LQdspl_7_sorceryclass_religion_huan"
-									backGround=""
-									position = { x=12 y=174 }
-									size = { x=546 y=88 }
-									moveable = 0
-									dontRender = ""
-									horizontalBorder= ""
-									verticalBorder= ""
-									fullScreen = no
-									Orientation = "UPPER_LEFT"
-									scripted = yes
+		# 							iconType = {
+		# 								name ="icon_LQdspl_7_sorceryclass_religion_devouring"
+		# 								spriteType = "GFX_icon_sorceryclass_religion_devouring"
+		# 								position = { x = 9 y = 4}
+		# 								Orientation = "UPPER_LEFT"
+		# 							}
+		# 							#guiButtonType = {} #法术
+		# 						}
+		# 						windowType = { #信仰法术-环道
+		# 							name = "window_LQdspl_7_sorceryclass_religion_huan"
+		# 							backGround=""
+		# 							position = { x=12 y=174 }
+		# 							size = { x=546 y=88 }
+		# 							moveable = 0
+		# 							dontRender = ""
+		# 							horizontalBorder= ""
+		# 							verticalBorder= ""
+		# 							fullScreen = no
+		# 							Orientation = "UPPER_LEFT"
+		# 							scripted = yes
 
-									iconType = {
-										name ="icon_LQdspl_7_sorceryclass_religion_huan"
-										spriteType = "GFX_icon_sorceryclass_religion_huan"
-										position = { x = 9 y = 4}
-										Orientation = "UPPER_LEFT"
-									}
-									#guiButtonType = {} #法术
-								}
+		# 							iconType = {
+		# 								name ="icon_LQdspl_7_sorceryclass_religion_huan"
+		# 								spriteType = "GFX_icon_sorceryclass_religion_huan"
+		# 								position = { x = 9 y = 4}
+		# 								Orientation = "UPPER_LEFT"
+		# 							}
+		# 							#guiButtonType = {} #法术
+		# 						}
 
-							# 解锁法术
-								iconType = {
-									name ="icon_LQdspl_7_sorceryclass_locked"
-									spriteType = "GFX_icon_sorceryclass_locked"
-									position = { x = 21 y = 276 }
-									Orientation = "UPPER_LEFT"
-								}
-								#guiButtonType = {} #法术
+		# 					# 解锁法术
+		# 						iconType = {
+		# 							name ="icon_LQdspl_7_sorceryclass_locked"
+		# 							spriteType = "GFX_icon_sorceryclass_locked"
+		# 							position = { x = 21 y = 276 }
+		# 							Orientation = "UPPER_LEFT"
+		# 						}
+		# 						#guiButtonType = {} #法术
 								
-						}
-						windowType = { # 学科8 法术与状态
-							name = "window_LQdspl_8_sorcery"
-							backGround=""
-							position = { x=0 y=0 }
-							size = { x=546 y=282 }
-							moveable = 0
-							dontRender = ""
-							horizontalBorder= ""
-							verticalBorder= ""
-							fullScreen = no
-							Orientation = "UPPER_LEFT"
-							scripted = yes
+		# 				}
+		# 				windowType = { # 学科8 法术与状态
+		# 					name = "window_LQdspl_8_sorcery"
+		# 					backGround=""
+		# 					position = { x=0 y=0 }
+		# 					size = { x=546 y=282 }
+		# 					moveable = 0
+		# 					dontRender = ""
+		# 					horizontalBorder= ""
+		# 					verticalBorder= ""
+		# 					fullScreen = no
+		# 					Orientation = "UPPER_LEFT"
+		# 					scripted = yes
 
-							# 经验状态
-								iconType = {
-									name ="icon_progressbar_exp_LQmundi_discipline_8"
-									spriteType = "GFX_icon_progressbar_exp_LQmundi_discipline_x"
-									position = { x = 275 y = 53 }
-									Orientation = "UPPER_LEFT"
-								}
-								iconType = {
-									name ="icon_category_name_LQmindi_discipline_8"
-									spriteType = "GFX_icon_category_name_LQmindi_discipline_8"
-									position = { x = 81 y = 20 }
-									Orientation = "UPPER_LEFT"
-									alwaystransparent = yes
-								}
-								instantTextBoxType={
-									name = TextBox_LQdspl_8_exp
-									position = { x = 320 y = 25}
-									textureFile = ""
-									Orientation = "UPPER_LEFT"
-									text = ""
-									font = ""
-									maxWidth = 150
-									maxHeight = 20
-									format = right
-									alwaystransparent = yes
+		# 					# 经验状态
+		# 						iconType = {
+		# 							name ="icon_progressbar_exp_LQmundi_discipline_8"
+		# 							spriteType = "GFX_icon_progressbar_exp_LQmundi_discipline_x"
+		# 							position = { x = 275 y = 53 }
+		# 							Orientation = "UPPER_LEFT"
+		# 						}
+		# 						iconType = {
+		# 							name ="icon_category_name_LQmindi_discipline_8"
+		# 							spriteType = "GFX_icon_category_name_LQmindi_discipline_8"
+		# 							position = { x = 81 y = 20 }
+		# 							Orientation = "UPPER_LEFT"
+		# 							alwaystransparent = yes
+		# 						}
+		# 						instantTextBoxType={
+		# 							name = TextBox_LQdspl_8_exp
+		# 							position = { x = 320 y = 25}
+		# 							textureFile = ""
+		# 							Orientation = "UPPER_LEFT"
+		# 							text = ""
+		# 							font = ""
+		# 							maxWidth = 150
+		# 							maxHeight = 20
+		# 							format = right
+		# 							alwaystransparent = yes
 
-									scripted = yes
-								}
-							# 通用法术
-								iconType = {
-									name ="icon_LQdspl_8_sorceryclass_common"
-									spriteType = "GFX_icon_sorceryclass_common"
-									position = { x = 21 y = 80 }
-									Orientation = "UPPER_LEFT"
-								}
-								guiButtonType ={ 
-									# 学科 8
-									# 类别 common
-									# 序号 1
-									name ="button_LQdspl_8_sorceryclass_common_Sequence_1"
-									quadTextureSprite = "GFX_button_LQdspl_8_sorceryclass_commmon_Sequence_1"
-									position = { x= 93 y = 85 }
-									Orientation = "UPPER_LEFT"
+		# 							scripted = yes
+		# 						}
+		# 					# 通用法术
+		# 						iconType = {
+		# 							name ="icon_LQdspl_8_sorceryclass_common"
+		# 							spriteType = "GFX_icon_sorceryclass_common"
+		# 							position = { x = 21 y = 80 }
+		# 							Orientation = "UPPER_LEFT"
+		# 						}
+		# 						guiButtonType ={ 
+		# 							# 学科 8
+		# 							# 类别 common
+		# 							# 序号 1
+		# 							name ="button_LQdspl_8_sorceryclass_common_Sequence_1"
+		# 							quadTextureSprite = "GFX_button_LQdspl_8_sorceryclass_commmon_Sequence_1"
+		# 							position = { x= 93 y = 85 }
+		# 							Orientation = "UPPER_LEFT"
 
-									scripted = yes
-								}
-								guiButtonType ={ 
-									# 学科 8
-									# 类别 common
-									# 序号 2
-									name ="button_LQdspl_8_sorceryclass_common_Sequence_2"
-									quadTextureSprite = "GFX_button_LQdspl_8_sorceryclass_commmon_Sequence_2"
-									position = { x= 170 y = 85 }
-									Orientation = "UPPER_LEFT"
+		# 							scripted = yes
+		# 						}
+		# 						guiButtonType ={ 
+		# 							# 学科 8
+		# 							# 类别 common
+		# 							# 序号 2
+		# 							name ="button_LQdspl_8_sorceryclass_common_Sequence_2"
+		# 							quadTextureSprite = "GFX_button_LQdspl_8_sorceryclass_commmon_Sequence_2"
+		# 							position = { x= 170 y = 85 }
+		# 							Orientation = "UPPER_LEFT"
 
-									scripted = yes
-								}
-								guiButtonType ={ 
-									# 学科 8
-									# 类别 common
-									# 序号 3
-									name ="button_LQdspl_8_sorceryclass_common_Sequence_3"
-									quadTextureSprite = "GFX_button_LQdspl_8_sorceryclass_commmon_Sequence_3"
-									position = { x= 247 y = 85 }
-									Orientation = "UPPER_LEFT"
+		# 							scripted = yes
+		# 						}
+		# 						guiButtonType ={ 
+		# 							# 学科 8
+		# 							# 类别 common
+		# 							# 序号 3
+		# 							name ="button_LQdspl_8_sorceryclass_common_Sequence_3"
+		# 							quadTextureSprite = "GFX_button_LQdspl_8_sorceryclass_commmon_Sequence_3"
+		# 							position = { x= 247 y = 85 }
+		# 							Orientation = "UPPER_LEFT"
 
-									scripted = yes
-								}
-								guiButtonType ={ 
-									# 学科 8
-									# 类别 common
-									# 序号 4
-									name ="button_LQdspl_8_sorceryclass_common_Sequence_4"
-									quadTextureSprite = "GFX_button_LQdspl_8_sorceryclass_commmon_Sequence_4"
-									position = { x= 324 y = 85 }
-									Orientation = "UPPER_LEFT"
+		# 							scripted = yes
+		# 						}
+		# 						guiButtonType ={ 
+		# 							# 学科 8
+		# 							# 类别 common
+		# 							# 序号 4
+		# 							name ="button_LQdspl_8_sorceryclass_common_Sequence_4"
+		# 							quadTextureSprite = "GFX_button_LQdspl_8_sorceryclass_commmon_Sequence_4"
+		# 							position = { x= 324 y = 85 }
+		# 							Orientation = "UPPER_LEFT"
 
-									scripted = yes
-								}
-								guiButtonType ={ 
-									# 学科 8
-									# 类别 common
-									# 序号 5
-									name ="button_LQdspl_8_sorceryclass_common_Sequence_5"
-									quadTextureSprite = "GFX_button_LQdspl_8_sorceryclass_commmon_Sequence_5"
-									position = { x= 401 y = 85 }
-									Orientation = "UPPER_LEFT"
+		# 							scripted = yes
+		# 						}
+		# 						guiButtonType ={ 
+		# 							# 学科 8
+		# 							# 类别 common
+		# 							# 序号 5
+		# 							name ="button_LQdspl_8_sorceryclass_common_Sequence_5"
+		# 							quadTextureSprite = "GFX_button_LQdspl_8_sorceryclass_commmon_Sequence_5"
+		# 							position = { x= 401 y = 85 }
+		# 							Orientation = "UPPER_LEFT"
 
-									scripted = yes
-								}
+		# 							scripted = yes
+		# 						}
 
-							# 信仰法术
-								windowType = { #信仰法术-侠道
-									name = "window_LQdspl_8_sorceryclass_religion_accretive" 
-									backGround=""
-									position = { x=12 y=174 }
-									size = { x=546 y=88 }
-									moveable = 0
-									dontRender = ""
-									horizontalBorder= ""
-									verticalBorder= ""
-									fullScreen = no
-									Orientation = "UPPER_LEFT"
-									scripted = yes
+		# 					# 信仰法术
+		# 						windowType = { #信仰法术-侠道
+		# 							name = "window_LQdspl_8_sorceryclass_religion_accretive" 
+		# 							backGround=""
+		# 							position = { x=12 y=174 }
+		# 							size = { x=546 y=88 }
+		# 							moveable = 0
+		# 							dontRender = ""
+		# 							horizontalBorder= ""
+		# 							verticalBorder= ""
+		# 							fullScreen = no
+		# 							Orientation = "UPPER_LEFT"
+		# 							scripted = yes
 
-									iconType = {
-										name ="icon_LQdspl_8_sorceryclass_religion_accretive"
-										spriteType = "GFX_icon_sorceryclass_religion_accretive"
-										position = { x = 9 y = 4}
-										Orientation = "UPPER_LEFT"
-									}
-									#guiButtonType = {} #法术
-								}
-								windowType = { #信仰法术-化道
-									name = "window_LQdspl_8_sorceryclass_religion_transmutative"
-									backGround=""
-									position = { x=12 y=174 }
-									size = { x=546 y=88 }
-									moveable = 0
-									dontRender = ""
-									horizontalBorder= ""
-									verticalBorder= ""
-									fullScreen = no
-									Orientation = "UPPER_LEFT"
-									scripted = yes
+		# 							iconType = {
+		# 								name ="icon_LQdspl_8_sorceryclass_religion_accretive"
+		# 								spriteType = "GFX_icon_sorceryclass_religion_accretive"
+		# 								position = { x = 9 y = 4}
+		# 								Orientation = "UPPER_LEFT"
+		# 							}
+		# 							#guiButtonType = {} #法术
+		# 						}
+		# 						windowType = { #信仰法术-化道
+		# 							name = "window_LQdspl_8_sorceryclass_religion_transmutative"
+		# 							backGround=""
+		# 							position = { x=12 y=174 }
+		# 							size = { x=546 y=88 }
+		# 							moveable = 0
+		# 							dontRender = ""
+		# 							horizontalBorder= ""
+		# 							verticalBorder= ""
+		# 							fullScreen = no
+		# 							Orientation = "UPPER_LEFT"
+		# 							scripted = yes
 
-									iconType = {
-										name ="icon_LQdspl_8_sorceryclass_religion_transmutative"
-										spriteType = "GFX_icon_sorceryclass_religion_transmutative"
-										position = { x = 9 y = 4}
-										Orientation = "UPPER_LEFT"
-									}
-									#guiButtonType = {} #法术
-								}
-								windowType = { #信仰法术-噬道
-									name = "window_LQdspl_8_sorceryclass_religion_devouring"
-									backGround=""
-									position = { x=12 y=174 }
-									size = { x=546 y=88 }
-									moveable = 0
-									dontRender = ""
-									horizontalBorder= ""
-									verticalBorder= ""
-									fullScreen = no
-									Orientation = "UPPER_LEFT"
-									scripted = yes
+		# 							iconType = {
+		# 								name ="icon_LQdspl_8_sorceryclass_religion_transmutative"
+		# 								spriteType = "GFX_icon_sorceryclass_religion_transmutative"
+		# 								position = { x = 9 y = 4}
+		# 								Orientation = "UPPER_LEFT"
+		# 							}
+		# 							#guiButtonType = {} #法术
+		# 						}
+		# 						windowType = { #信仰法术-噬道
+		# 							name = "window_LQdspl_8_sorceryclass_religion_devouring"
+		# 							backGround=""
+		# 							position = { x=12 y=174 }
+		# 							size = { x=546 y=88 }
+		# 							moveable = 0
+		# 							dontRender = ""
+		# 							horizontalBorder= ""
+		# 							verticalBorder= ""
+		# 							fullScreen = no
+		# 							Orientation = "UPPER_LEFT"
+		# 							scripted = yes
 
-									iconType = {
-										name ="icon_LQdspl_8_sorceryclass_religion_devouring"
-										spriteType = "GFX_icon_sorceryclass_religion_devouring"
-										position = { x = 9 y = 4}
-										Orientation = "UPPER_LEFT"
-									}
-									#guiButtonType = {} #法术
-								}
-								windowType = { #信仰法术-环道
-									name = "window_LQdspl_8_sorceryclass_religion_huan"
-									backGround=""
-									position = { x=12 y=174 }
-									size = { x=546 y=88 }
-									moveable = 0
-									dontRender = ""
-									horizontalBorder= ""
-									verticalBorder= ""
-									fullScreen = no
-									Orientation = "UPPER_LEFT"
-									scripted = yes
+		# 							iconType = {
+		# 								name ="icon_LQdspl_8_sorceryclass_religion_devouring"
+		# 								spriteType = "GFX_icon_sorceryclass_religion_devouring"
+		# 								position = { x = 9 y = 4}
+		# 								Orientation = "UPPER_LEFT"
+		# 							}
+		# 							#guiButtonType = {} #法术
+		# 						}
+		# 						windowType = { #信仰法术-环道
+		# 							name = "window_LQdspl_8_sorceryclass_religion_huan"
+		# 							backGround=""
+		# 							position = { x=12 y=174 }
+		# 							size = { x=546 y=88 }
+		# 							moveable = 0
+		# 							dontRender = ""
+		# 							horizontalBorder= ""
+		# 							verticalBorder= ""
+		# 							fullScreen = no
+		# 							Orientation = "UPPER_LEFT"
+		# 							scripted = yes
 
-									iconType = {
-										name ="icon_LQdspl_8_sorceryclass_religion_huan"
-										spriteType = "GFX_icon_sorceryclass_religion_huan"
-										position = { x = 9 y = 4}
-										Orientation = "UPPER_LEFT"
-									}
-									#guiButtonType = {} #法术
-								}
+		# 							iconType = {
+		# 								name ="icon_LQdspl_8_sorceryclass_religion_huan"
+		# 								spriteType = "GFX_icon_sorceryclass_religion_huan"
+		# 								position = { x = 9 y = 4}
+		# 								Orientation = "UPPER_LEFT"
+		# 							}
+		# 							#guiButtonType = {} #法术
+		# 						}
 
-							# 解锁法术
-								iconType = {
-									name ="icon_LQdspl_8_sorceryclass_locked"
-									spriteType = "GFX_icon_sorceryclass_locked"
-									position = { x = 21 y = 276 }
-									Orientation = "UPPER_LEFT"
-								}
-								#guiButtonType = {} #法术
+		# 					# 解锁法术
+		# 						iconType = {
+		# 							name ="icon_LQdspl_8_sorceryclass_locked"
+		# 							spriteType = "GFX_icon_sorceryclass_locked"
+		# 							position = { x = 21 y = 276 }
+		# 							Orientation = "UPPER_LEFT"
+		# 						}
+		# 						#guiButtonType = {} #法术
 								
-						}
+		# 				}
 
 						
-						windowType = { # 秘传法术
-							name = "window_sorceryclass_secret"
-							backGround=""
-							position = { x=12 y=368 }
-							size = { x=546 y=135 }
-							moveable = 0
-							dontRender = ""
-							horizontalBorder= ""
-							verticalBorder= ""
-							fullScreen = no
-							Orientation = "UPPER_LEFT"
+		# 				windowType = { # 秘传法术
+		# 					name = "window_sorceryclass_secret"
+		# 					backGround=""
+		# 					position = { x=12 y=368 }
+		# 					size = { x=546 y=135 }
+		# 					moveable = 0
+		# 					dontRender = ""
+		# 					horizontalBorder= ""
+		# 					verticalBorder= ""
+		# 					fullScreen = no
+		# 					Orientation = "UPPER_LEFT"
 
-							iconType = {
-								name ="icon_sorceryclass_secret"
-								spriteType = "GFX_icon_sorceryclass_secret"
-								position = { x = 9 y = 25 }
-								Orientation = "UPPER_LEFT"
-							}
-							#guiButtonType = {}
-						}
+		# 					iconType = {
+		# 						name ="icon_sorceryclass_secret"
+		# 						spriteType = "GFX_icon_sorceryclass_secret"
+		# 						position = { x = 9 y = 25 }
+		# 						Orientation = "UPPER_LEFT"
+		# 					}
+		# 					#guiButtonType = {}
+		# 				}
 
-					}
-				#####################
+		# 			}
+		# 		#####################
 				
-			}
+		# 	}
 
-		###############################	
+		# ###############################	
 
 
 	}

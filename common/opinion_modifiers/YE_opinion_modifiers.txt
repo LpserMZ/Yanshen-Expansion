@@ -8,3 +8,9 @@ YE_COMMON_relation_improved = {
 	yearly_decay = 2
 	max = 200
 }
+
+YE_ljh_tonleipai_bad_with_monarches = {
+	opinion = -50
+	yearly_decay = 5
+	min = -50
+}

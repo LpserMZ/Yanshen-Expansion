@@ -6108,7 +6108,7 @@ golden_highway_start_construction = {
 			add_treasury = -1500 # 10 provs
 			add_adm_power = -200
 		}
-		4826 = {
+		8437 = {
 			add_permanent_province_modifier = {
 				name = golden_highway_under_construction
 				duration = -1
@@ -6140,7 +6140,7 @@ golden_highway_start_construction = {
 			add_treasury = -900 # 6 provs
 			add_adm_power = -200
 		}
-		8119 = {
+		8434 = {
 			add_permanent_province_modifier = {
 				name = golden_highway_under_construction
 				duration = -1
@@ -8168,90 +8168,157 @@ anb_changed_ways_effect = {
 	else_if = {
 		limit = {
 			culture_group = yan
+			# OR = {
+			# 	culture_group = yan
+			# 	culture_group = shen
+			# }	
 		}
 		if = {
-			limit = {
-				dominant_culture = jiangszun
-			}
+			limit = { dominant_culture = jiangszun }
 			change_primary_culture = jiangszun
 		}
 		else_if = {
-			limit = {
-				dominant_culture = beikling
-			}
+			limit = { dominant_culture = beikling }
 			change_primary_culture = beikling
 		}
 		else_if = {
-			limit = {
-				dominant_culture = gangim
-			}
+			limit = { dominant_culture = gangim }
 			change_primary_culture = gangim
 		}
 		else_if = {
-			limit = {
-				dominant_culture = naamjyut
-			}
+			limit = { dominant_culture = naamjyut }
 			change_primary_culture = naamjyut
 		}
 		else_if = {
-			limit = {
-				dominant_culture = szitu
-			}
+			limit = { dominant_culture = szitu }
 			change_primary_culture = szitu
 		}
 		else_if = {
-			limit = {
-				dominant_culture = jiangyang
-			}
+			limit = { dominant_culture = jiangyang }
 			change_primary_culture = jiangyang
 		}
 		else_if = {
-			limit = {
-				dominant_culture = pinghoi
-			}
+			limit = { dominant_culture = pinghoi }
 			change_primary_culture = pinghoi
 		}
 		else_if = {
-			limit = {
-				dominant_culture = haiwai
-			}
+			limit = { dominant_culture = haiwai }
 			change_primary_culture = haiwai
 		}
 		else_if = {
-			limit = {
-				dominant_culture = daxug
-			}
+			limit = { dominant_culture = daxug }
 			change_primary_culture = daxug
 		}
 		else_if = {
-			limit = {
-				dominant_culture = kuldaakin
-			}
+			limit = { dominant_culture = kuldaakin }
 			change_primary_culture = kuldaakin
 		}
 		else_if = {
-			limit = {
-				dominant_culture = shuokyuan
-			}
+			limit = { dominant_culture = yan_half_orc }
+			change_primary_culture = yan_half_orc
+		}
+		else_if = {
+			limit = { dominant_culture = shuokyuan }
 			change_primary_culture = shuokyuan
 		}
 		else_if = {
-			limit = {
-				dominant_culture = luoxian
-			}
+			limit = { dominant_culture = luoxian }
 			change_primary_culture = luoxian
 		}
 		else_if = {
-			limit = {
-				dominant_culture = naamzau
-			}
+			limit = { dominant_culture = naamzau }
 			change_primary_culture = naamzau
 		}
 		else_if = {
-			limit = {
-				dominant_culture = guyan
-			}
+			limit = { dominant_culture = qingliu }
+			change_primary_culture = qingliu
+		}
+		else_if = {
+			limit = { dominant_culture = jichuan }
+			change_primary_culture = jichuan
+		}
+		else_if = {
+			limit = { dominant_culture = yvying }
+			change_primary_culture = yvying
+		}
+		else_if = {
+			limit = { dominant_culture = xianzhong_yan }
+			change_primary_culture = xianzhong_yan
+		}
+		else_if = {
+			limit = { dominant_culture = xianyue }
+			change_primary_culture = xianyue
+		}
+		else_if = {
+			limit = { dominant_culture = guyan }
 			change_primary_culture = guyan
+		}
+		else_if = {
+			limit = { dominant_culture = kuoliu }
+			change_primary_culture = kuoliu
+		}
+		else_if = {
+			limit = { dominant_culture = mangzhou }
+			change_primary_culture = mangzhou
+		}
+		else_if = {
+			limit = { dominant_culture = shuanghe_yan }
+			change_primary_culture = shuanghe_yan
+		}
+		else_if = {
+			limit = { dominant_culture = yvzhou }
+			change_primary_culture = yvzhou
+		}
+		else_if = {
+			limit = { dominant_culture = sule }
+			change_primary_culture = sule
+		}
+		else_if = {
+			limit = { dominant_culture = shahe }
+			change_primary_culture = shahe
+		}
+		else_if = {
+			limit = { dominant_culture = yangzhou }
+			change_primary_culture = yangzhou
+		}
+		else_if = {
+			limit = { dominant_culture = xiangyang }
+			change_primary_culture = xiangyang
+		}
+		else_if = {
+			limit = { dominant_culture = haijin }
+			change_primary_culture = haijin
+		}
+		else_if = {
+			limit = { dominant_culture = yinqvan_culture }
+			change_primary_culture = yinqvan_culture
+		}
+		else_if = {
+			limit = { dominant_culture = beidu_culture }
+			change_primary_culture = beidu_culture
+		}
+		else_if = {
+			limit = { dominant_culture = jinxun_culture }
+			change_primary_culture = jinxun_culture
+		}
+		else_if = {
+			limit = { dominant_culture = tianlou_culture }
+			change_primary_culture = tianlou_culture
+		}
+		else_if = {
+			limit = { dominant_culture = fengliu }
+			change_primary_culture = fengliu
+		}
+		else_if = {
+			limit = { dominant_culture = shaliu }
+			change_primary_culture = shaliu
+		}
+		else_if = {
+			limit = { dominant_culture = hezuo }
+			change_primary_culture = hezuo
+		}
+		else = {
+			change_primary_culture = jiaoling
 		}
 	}
 	else_if = {

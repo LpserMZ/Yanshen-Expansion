@@ -503,6 +503,16 @@ spriteTypes = {
         texturefile = "gfx//interface//great_projects//jianxusi.dds"
     }
 
+    spriteType = {
+		name = "GFX_great_project_shenliu_guan"	
+		texturefile = "gfx//interface//great_projects//shenliu_guan.dds"
+	}
+
+    spriteType = {
+		name = "GFX_great_project_yanhe_river_route"	
+		texturefile = "gfx//interface//great_projects//great_project_suez_canal.dds"
+	}
+
     # spriteType = {
     #     name = "GFX_great_project_"	
     #     texturefile = "gfx//interface//great_projects//.dds"

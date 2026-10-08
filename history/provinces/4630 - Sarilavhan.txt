@@ -1,10 +1,8 @@
 # No previous file for Banten 71
-owner = R62
-controller = R62
-add_core = R62
-add_core = R80
-culture = wolf_command
-religion = godlost
+owner = YC7
+controller = YC7
+culture = jichuan
+religion = devouring_path
 center_of_trade = 1
 base_tax = 5
 base_production = 6
@@ -36,4 +34,5 @@ add_province_modifier = {
 	duration = -1
 }
 set_province_flag = command_wolf_warcamp
+add_core = YC7
 fort_15th = yes

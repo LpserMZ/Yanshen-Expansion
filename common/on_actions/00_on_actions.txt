@@ -6165,6 +6165,8 @@ on_extend_regency = {
 # country
 on_new_term_election = {
 	events = {
+		YE_ljh.5
+		
 		700		# Election event
 		elections.720		# Dutch Republic
 		elections.800	# Lottery election
@@ -6251,6 +6253,8 @@ on_death_election = {
 		country_event = { id = allclan.1000 }
 	}
 	events = {
+		YE_ljh.6
+
 		701		# Election event
 		shadow.5
 		elections.721		# Dutch Republic
@@ -9745,8 +9749,8 @@ on_yearly_pulse = {
 				NOT = {
 					has_country_flag = great_revolt_of_xiajie_policys_event_group_flag
 				}
-				set_country_flag = great_revolt_of_xiajie_policys_event_group_flag
 			}
+			set_country_flag = great_revolt_of_xiajie_policys_event_group_flag
 		}
 		if = { # 8个-每年一触发 
 			limit = {
@@ -32117,15 +32121,15 @@ on_culture_promoted = {
     }
 }
 
-on_culture_demoted = {
-    if = {
-        limit = {
-            has_government_mechanic = YE_lianxiang_power
-        }
+# on_culture_demoted = {
+#     if = {
+#         limit = {
+#             has_government_mechanic = YE_lianxiang_power
+#         }
 
-        YE_lianxiang_check_demoted_human_culture = yes
-    }
-}
+#         YE_lianxiang_check_demoted_human_culture = yes
+#     }
+# }
 on_war_won = {
     if = {
         limit = {

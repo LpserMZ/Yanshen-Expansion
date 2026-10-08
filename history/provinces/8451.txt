@@ -1,0 +1,10 @@
+owner = Y89
+controller = Y89
+add_core = Y89
+culture = jichuan
+religion = accretive_path
+base_tax = 4
+base_production = 3
+base_manpower = 1
+trade_goods = wine
+is_city = yes

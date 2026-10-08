@@ -24,6 +24,70 @@
  YE_ljh_4_branch_I_tooltip:0 "§TÝ„þTOÎNNÙuLeºN˜Uo`KN:gÿ§!"
  YE_ljh_4_branch_II_tooltip:0 "§TÝ„þTOSîO‰Quo`ÿïye›RÏ‘0§!"
 
+ YE_ljh.5.T:0 "	>N"
+ YE_ljh.5.D:0 "[Root.GetName]„v[Root.Monarch.GetTitle]ûNgNýw…Ç2NJSÿÙ/fêpQNÙNöeãNVËY«ˆ'YOØž²‹„vqQÆ‹0pQNÙN(W1455t^ëkàe7wK`0W>eN†NÖNòTÅbûNASt^„vßu†˜KNMOÿ±R^dkTNQÂS	ÿ:NTºNjOhˆ‡s0®‹XT(W+o•wÀoÈp„v©º‹-Nÿ(u	hyÙuúQÓuœg0\n®‹OKN	>NÿNlÃVKNNbû|ÿ^y#WwNïSµNn0"
+ YE_ljh.5.z:0 "YuûN[Root.Monarch.GetName]0"
+ YE_ljh.5.a:0 "NMO§TÜ”’W>m§!P	ºN"
+ YE_ljh.5.b:0 "NMO§TœQqS>m§!P	ºN"
+ YE_ljh.5.c:0 "NMO§Væteh>m§!P	ºN"
+ YE_ljh.5.d:0 "NMO§RûN O>m§!P	ºN"
+ YE_ljh.5.e:0 "NMO§TnnÞT>m§!P	ºN"
+ ljh_tongleipai_ruler_tooltip:0 "	éb°eûN§TÜ”’W>m§!ßu»lwSüRôNb	gXR(WR»yININ„vwýN§R+5t^R»yININ§!ÿTöeN§YTINýV§!„vÌS¹sQû|§R-50§!0"
+ ljh_waqiaopai_tooltip:0 "å‚§YNNûN§!ßu»lw/f§Yæteh>m§!R	NÍyTIN¹ppeT§G+100§!0\nå‚§YSVMR§!ßu»lw/f§Yæteh>m§!ÿFO/f(W	>N-NçuûNw/f§YvQÖN>m+R§!ÿR	NÍyTIN¹ppe¹ppeT§R-200§!0"
+ ljh_waqiaopai_fail_reelection_tooltip:0 "§Yæteh>m§!NuÃV“‰c	>NÿÖNìNSùR°eûN[Root.Monarch.GetTitle]OÊuPRÿÙSüRô[Root.GetName]1Y»S	NÍyTIN¹ppeT§R-200§!ÿ"
+
+ YE_ljh.6.T:0 "ÀT¼`N	>N"
+ YE_ljh.6.D:0 "[Root.GetName]„v[Root.Monarch.GetTitle](WNx^ûNN»yNÿhQýV:NKNÀT¼`0®‹XT(WØžÀTKNTÛeQ†N+o•wÀoÈp„v©º‹ÿ(u	hyÙuúQÓuœg0\n®‹OKN	>NÿNlÃVKNNbû|ÿ^y#WwNïSµNn0"
+ YE_ljh.6.a:0 "NMO§TÜ”’W>m§!P	ºN"
+ YE_ljh.6.b:0 "NMO§TœQqS>m§!P	ºN"
+ YE_ljh.6.c:0 "NMO§Væteh>m§!P	ºN"
+ YE_ljh.6.d:0 "NMO§RûN O>m§!P	ºN"
+ YE_ljh.6.e:0 "NMO§TnnÞT>m§!P	ºN"
+
+ YE_ljh.7.T:0 "ÃOÛ‡T"
+ YE_ljh.7.D:0 "œQqS>mùRŽNÍyÏeî•˜˜„v¹eHh/f¥c³uN‡Tÿ¶–^Så‹>m„v®‹XTmNëkàen©c0Whˆ:yêñTNOgkÆ‰vQÖNirÍy0(W[Root.Monarch.GetName][Root.Monarch.GetTitle]„vHh4YÿÃOÛÍyÏeŒTŒ„v°e?eäNck(WIƒßbÿwÙN6–µk„våTjOÍ‘¹pmN(W¨‹º‹-N0"
+ YE_ljh.7.a:0 "¾|up"
+ YE_ljh.7.b:0 "îwºN"
+ YE_ljh.7.c:0 "OQ"
+ YE_ljh.7.d:0 "JS‹QºN"
+ YE_ljh.7.e:0 "×r4YºN"
+ YE_ljh.7.f:0 "zŒürºN"
+ YE_ljh.7.g:0 "‹QºN"
+ YE_ljh.7.h:0 "JS«ŽºN"
+ YE_ljh.7.i:0 "ºN‰|"
+ YE_ljh.7.j:0 "JS¾|up"
+ YE_ljh.7.k:0 "Wù¾|up"
+ YE_ljh.7.l:0 "0W¾|"
+ YE_ljh.7.m:0 "pž«ŽsY–Y"
+ YE_ljh.7.n:0 "èTT›"
+ YE_ljh.7.o:0 "ß˜ºNT›"
+ YE_ljh.7.p:0 "N†ºN"
+ YE_ljh.7.q:0 "JSºNlš"
+ YE_ljh.7.r:0 "'Y0W¾|"
+ YE_ljh.7.s:0 "%‡4‡ºN"
+ YE_ljh.7.t:0 ":ghVºN"
+
+ YE_ljh.8.T:0 "nnÞT>m„vYe²w¡‹R"
+ YE_ljh.8.D:0 "nnÞT>mùR‡eS‹NN2S:NípñVÿàQNN(WýVW…Q„vÏkNµ^ÎW^ý	g˜R¹ežRtbD©R„vfR/hÿKS¡ràV:NÇØš„v/eúQaSm(‘uÿFONïS&T²‹nnÞT‡eS„vi—°eck/fúQêT*N'YfR0[Root.Monarch.GetTitle]NTèè•ck(WOSŒ,gJSûNg…Q„vYe²wèb>k¡‹RÿNýNnUSòTÏuWR†NúQeg0"
+ YE_ljh.8.z:0 "‚fNdn"
+ YE_ljh.8.a:0 "[4871.GetName]"
+ YE_ljh.8.b:0 "[4907.GetName]"
+ YE_ljh.8.c:0 "[4868.GetName]"
+ YE_ljh.8.d:0 "[8117.GetName]"
+ YE_ljh.8.e:0 "[4979.GetName]"
+ YE_ljh.8.f:0 "[4925.GetName]"
+ YE_ljh.8.g:0 "[4861.GetName]"
+ YE_ljh.8.h:0 "[4859.GetName]"
+ YE_ljh.8.i:0 "[4846.GetName]"
+ YE_ljh.8.j:0 "[4842.GetName]"
+ YE_ljh.8.k:0 "[8038.GetName]"
+ YE_ljh.8.l:0 "[4951.GetName]"
+ YE_ljh.8.m:0 "[4949.GetName]"
+ YE_ljh.8.n:0 "[4879.GetName]"
+ YE_ljh.8.o:0 "[4893.GetName]"
+ YE_ljh.8.p:0 "[4884.GetName]"
+
+
 
 
 

@@ -19,7 +19,3 @@ religious_school = orange_sash_school
 
 
 setup_caste_estates = yes
-
-1444.11.10 = {
-	override_country_name = R78_COLONY_NAME
-}

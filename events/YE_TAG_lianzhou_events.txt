@@ -71,6 +71,7 @@ country_event = {    #入战事件
             }
         }
     }
+    fire_only_once = yes
     mean_time_to_happen = {
         days = 1
     }
@@ -123,7 +124,9 @@ namespace = YE_lianxiang
 
 country_event = {
     id = YE_lianxiang.1
-
+    title = YE_lianxiang.1.T
+    desc = YE_lianxiang.1.D
+    picture = HIGH_TEMPLE_IN_DISTANCE_eventPicture
     hidden = yes
     is_triggered_only = yes
 
@@ -159,6 +162,9 @@ country_event = {
 
             clr_country_flag = YE_lianxiang_human_administration
         }
+    }
+    option = {
+        name = YE_lianxiang.1.a
     }
 }      
 

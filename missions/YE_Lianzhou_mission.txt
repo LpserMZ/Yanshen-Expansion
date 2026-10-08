@@ -203,15 +203,23 @@ lianzhou_2 = {
 		required_missions = { Lianzhou_2_3 }
 		position = 4
 		trigger = {
-			has_spy_network_in = {
-				who = Y18
-				value = 50
-			}
-			Y18 = {
-				has_opinion_modifier = {
-					who = ROOT
-					modifier = sent_gift
+			if = {
+				limit = {
+					Y18 = { exists = yes }
 				}
+				has_spy_network_in = {
+					who = Y18
+					value = 50
+				}
+				Y18 = {
+					has_opinion_modifier = {
+						who = ROOT
+						modifier = sent_gift
+					}
+				}
+			}
+			else = {
+				owns = 4869
 			}
 		}
 		effect = {
@@ -294,7 +302,7 @@ lianzhou_2 = {
 	}
 
 	Lianzhou_2_7 = {
-		icon = mission_farm
+		icon = mission_rice_field
 		required_missions = { Lianzhou_1_6 Lianzhou_2_6 }
 		position = 7
 		provinces_to_highlight = {
@@ -569,8 +577,7 @@ lianzhou_3 = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 			Y16 = {
-				is_subject_of = ROOT
-				is_tributary = no
+				is_subject_other_than_tributary_trigger = yes
 			}
 		}
 		effect = {
@@ -624,14 +631,14 @@ lianzhou_4 = {
 				owned_by = Y08
 			}
 		}
-		owner = {
-			NOT = {
-				has_opinion = {
-					who = ROOT
-					value = 150
-				}
-			}
-		}
+		# owner = {
+		# 	NOT = {
+		# 		has_opinion = {
+		# 			who = ROOT
+		# 			value = 150
+		# 		}
+		# 	}
+		# }
 		trigger = {
 			custom_trigger_tooltip = {
 				tooltip = YE_Lianzhou_4_3_tt

@@ -1,10 +1,10 @@
-owner = R79
-culture = kamtarhid
+owner = YA8
+culture = jiaoling
 religion = devouring_path
-controller = R79
-is_city = no
+controller = YA8
+is_city = yes
 trade_goods = cloth
 base_tax = 2
 base_manpower = 2
 base_production = 4
-add_core = R79
+add_core = YA8

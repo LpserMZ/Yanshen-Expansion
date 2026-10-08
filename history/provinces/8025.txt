@@ -1,9 +1,9 @@
 add_core = Y89
 owner = Y89
-culture = jichuan
-religion = accretive_path
+culture = qingliu
+religion = devouring_path
 controller = Y89
-is_city = no
+is_city = yes
 trade_goods = dyes
 base_tax = 3
 base_manpower = 3

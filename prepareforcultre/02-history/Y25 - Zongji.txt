@@ -6,17 +6,13 @@ primary_culture = serene_harimari
 add_accepted_culture = gangim
 add_accepted_culture = jiangszun
 religion = high_philosophy
-religious_school = golden_palace_school
+religious_school = ascendant_soul_school
 technology_group = tech_east_harimari
 capital = 4903
 set_estate_privilege = estate_church_guaranteed_autonomy
 
 1000.1.1 = { 
 	set_estate_privilege = estate_mages_organization_state
-	set_country_flag = has_caste_estates
-	set_estate_privilege = estate_uppercastes_organization_caste
-	set_estate_privilege = estate_middlecastes_organization_caste
-	set_estate_privilege = estate_lowercastes_organization_caste
 }
 
 1444.1.1 = {
@@ -30,6 +26,3 @@ set_estate_privilege = estate_church_guaranteed_autonomy
 		culture = serene_harimari
 	}
 }
-
-
-setup_caste_estates = yes

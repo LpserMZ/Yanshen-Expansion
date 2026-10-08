@@ -1,7 +1,7 @@
 owner = Y89
 controller = Y89
-culture = jichuan
-religion = accretive_path
+culture = qingliu
+religion = guosi_faith
 base_tax = 3
 base_production = 2
 base_manpower = 2

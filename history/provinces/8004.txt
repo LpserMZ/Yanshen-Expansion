@@ -1,11 +1,10 @@
-add_core = R62
-owner = R62
-culture = yansu
-religion = accretive_path
-controller = R62
-is_city = no
+owner = YC3
+culture = jichuan
+religion = devouring_path
+controller = YC3
+is_city = yes
 trade_goods = glass
 base_tax = 3
 base_manpower = 3
 base_production = 3
-add_core = R80
+add_core = YC3

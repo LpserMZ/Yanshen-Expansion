@@ -1,6 +1,6 @@
 add_core = Y27
 owner = Y27
-culture = jinxun_culture
+culture = jiangszun
 religion = accretive_path
 controller = Y27
 is_city = no

@@ -1,0 +1,11 @@
+# No previous file for Banten 182
+owner = YC7
+controller = YC7
+culture = jichuan
+religion = devouring_path
+base_tax = 2
+base_production = 3
+base_manpower = 3
+trade_goods = grain
+is_city = yes
+add_core = YC7

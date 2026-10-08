@@ -978,7 +978,7 @@ ruler_is_human = {
 			ruler_culture = shuokyuan #0
 			ruler_culture = luoxian #0
 			ruler_culture = naamzau #0
-			ruler_culture = yansu # YE
+			ruler_culture = qingliu # YE
 			ruler_culture = jichuan # YE
 			ruler_culture = yvying # YE
 			ruler_culture = xianzhong_yan # YE
@@ -994,9 +994,15 @@ ruler_is_human = {
 			ruler_culture = xiangyang # YE
 			ruler_culture = haijin # YE
 			ruler_culture = yinqvan_culture # YE
-			ruler_culture = jianwu_culture # YE
+			ruler_culture = beidu_culture # YE
 			ruler_culture = jinxun_culture # YE
 			ruler_culture = tianlou_culture # YE
+			ruler_culture = fengliu
+			ruler_culture = shaliu
+			ruler_culture = hezuo
+			ruler_culture = jiaoling
+			# ruler_culture = 
+			# ruler_culture = 
 			#Gowon
 			ruler_culture = giteuni
 			ruler_culture = wonju
@@ -1968,7 +1974,7 @@ consort_is_human = {
 			consort_culture = shuokyuan #0
 			consort_culture = luoxian #0
 			consort_culture = naamzau #0
-			consort_culture = yansu # YE
+			consort_culture = qingliu # YE
 			consort_culture = jichuan # YE
 			consort_culture = yvying # YE
 			consort_culture = xianzhong_yan # YE
@@ -1984,9 +1990,15 @@ consort_is_human = {
 			consort_culture = xiangyang # YE
 			consort_culture = haijin # YE
 			consort_culture = yinqvan_culture # YE
-			consort_culture = jianwu_culture # YE
+			consort_culture = beidu_culture # YE
 			consort_culture = jinxun_culture # YE
 			consort_culture = tianlou_culture # YE
+			consort_culture = fengliu
+			consort_culture = shaliu
+			consort_culture = hezuo
+			consort_culture = jiaoling
+			# consort_culture = 
+			# consort_culture = 
 			#Gowon
 			consort_culture = giteuni
 			consort_culture = wonju
@@ -2934,7 +2946,7 @@ heir_is_human = {
 			heir_culture = shuokyuan #0
 			heir_culture = luoxian #0
 			heir_culture = naamzau #0
-			heir_culture = yansu # YE
+			heir_culture = qingliu # YE
 			heir_culture = jichuan # YE
 			heir_culture = yvying # YE
 			heir_culture = xianzhong_yan # YE
@@ -2950,9 +2962,15 @@ heir_is_human = {
 			heir_culture = xiangyang # YE
 			heir_culture = haijin # YE
 			heir_culture = yinqvan_culture # YE
-			heir_culture = jianwu_culture # YE
+			heir_culture = beidu_culture # YE
 			heir_culture = jinxun_culture # YE
 			heir_culture = tianlou_culture # YE
+			heir_culture = fengliu
+			heir_culture = shaliu
+			heir_culture = hezuo
+			heir_culture = jiaoling
+			# heir_culture = 
+			# heir_culture = 
 			#Gowon
 			heir_culture = giteuni
 			heir_culture = wonju
@@ -3682,6 +3700,7 @@ culture_is_short_lived = {
 		culture_group = vurebindu
 		culture_group = west_sarhaly
 		culture_group = akasi
+		# culture_group = shen # YE
 	}
 }
 
@@ -3834,6 +3853,7 @@ culture_is_human = {
 			culture_group = anakue
 			culture_group = utubodi
 			culture_group = tyvorkan
+			# culture_group = shen
 		}
 		NOT = { culture_is_half_orcish = yes }
 		NOT = { culture_is_half_elven = yes }
@@ -4537,7 +4557,7 @@ has_human_advisor = {
 			employed_advisor = { culture = shuokyuan} #0
 			employed_advisor = { culture = luoxian} #0
 			employed_advisor = { culture = naamzau} #0
-			employed_advisor = { culture = yansu} # YE
+			employed_advisor = { culture = qingliu} # YE
 			employed_advisor = { culture = jichuan} # YE
 			employed_advisor = { culture = yvying} # YE
 			employed_advisor = { culture = xianzhong_yan} # YE
@@ -4553,9 +4573,17 @@ has_human_advisor = {
 			employed_advisor = { culture = xiangyang} # YE
 			employed_advisor = { culture = haijin} # YE
 			employed_advisor = { culture = yinqvan_culture} # YE
-			employed_advisor = { culture = jianwu_culture} # YE
+			employed_advisor = { culture = beidu_culture} # YE
 			employed_advisor = { culture = jinxun_culture} # YE
 			employed_advisor = { culture = tianlou_culture} # YE
+			employed_advisor = { culture = fengliu } # YE
+			employed_advisor = { culture = shaliu } # YE
+			employed_advisor = { culture = hezuo } # YE
+			employed_advisor = { culture = jiaoling } # YE
+			# employed_advisor = { culture = } # YE
+			# employed_advisor = { culture = } # YE
+			# employed_advisor = { culture = } # YE
+			# employed_advisor = { culture = } # YE
 			employed_advisor = { culture = giteuni }
 			employed_advisor = { culture = wonju }
 			employed_advisor = { culture = dudimkkun }
@@ -4840,7 +4868,7 @@ has_human_advisor_of_category = {
 			employed_advisor = { category = $category$ culture = shuokyuan} #0
 			employed_advisor = { category = $category$ culture = luoxian} #0
 			employed_advisor = { category = $category$ culture = naamzau} #0
-			employed_advisor = { category = $category$ culture = yansu} # YE
+			employed_advisor = { category = $category$ culture = qingliu} # YE
 			employed_advisor = { category = $category$ culture = jichuan} # YE
 			employed_advisor = { category = $category$ culture = yvying} # YE
 			employed_advisor = { category = $category$ culture = xianzhong_yan} # YE
@@ -4856,9 +4884,15 @@ has_human_advisor_of_category = {
 			employed_advisor = { category = $category$ culture = xiangyang} # YE
 			employed_advisor = { category = $category$ culture = haijin} # YE
 			employed_advisor = { category = $category$ culture = yinqvan_culture} # YE
-			employed_advisor = { category = $category$ culture = jianwu_culture} # YE
+			employed_advisor = { category = $category$ culture = beidu_culture} # YE
 			employed_advisor = { category = $category$ culture = jinxun_culture} # YE
 			employed_advisor = { category = $category$ culture = tianlou_culture} # YE
+			employed_advisor = { category = $category$ culture = fengliu } # YE
+			employed_advisor = { category = $category$ culture = shaliu } # YE
+			employed_advisor = { category = $category$ culture = hezuo } # YE
+			employed_advisor = { category = $category$ culture = jiaoling } # YE
+			# employed_advisor = { category = $category$ culture = } # YE
+			# employed_advisor = { category = $category$ culture = } # YE
 			employed_advisor = { category = $category$ culture = giteuni }
 			employed_advisor = { category = $category$ culture = wonju }
 			employed_advisor = { category = $category$ culture = dudimkkun }
@@ -5819,7 +5853,7 @@ has_human_accepted_culture = {
 		accepted_culture = shuokyuan #0
 		accepted_culture = luoxian #0
 		accepted_culture = naamzau #0
-		accepted_culture = yansu # YE
+		accepted_culture = qingliu # YE
 		accepted_culture = jichuan # YE
 		accepted_culture = yvying # YE
 		accepted_culture = xianzhong_yan # YE
@@ -5835,9 +5869,15 @@ has_human_accepted_culture = {
 		accepted_culture = xiangyang # YE
 		accepted_culture = haijin # YE
 		accepted_culture = yinqvan_culture # YE
-		accepted_culture = jianwu_culture # YE
+		accepted_culture = beidu_culture # YE
 		accepted_culture = jinxun_culture # YE
 		accepted_culture = tianlou_culture # YE
+		accepted_culture = fengliu # YE
+		accepted_culture = shaliu # YE
+		accepted_culture = hezuo # YE
+		accepted_culture = jiaoling # YE
+		# accepted_culture =  # YE
+		# accepted_culture =  # YE
 		#Gowon
 		accepted_culture = giteuni
 		accepted_culture = wonju

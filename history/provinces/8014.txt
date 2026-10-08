@@ -1,11 +1,10 @@
-owner = YA3
-culture = shamadhan
-religion = high_philosophy
-controller = YA3
-is_city = no
+owner = YD4
+culture = shaliu
+religion = transmutative_path
+controller = YD4
+is_city = yes
 trade_goods = dyes
 base_tax = 3
 base_manpower = 3
 base_production = 4
-add_core = R80
-add_core = YA3
+add_core = YD4

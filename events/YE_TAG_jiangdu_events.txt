@@ -5,6 +5,10 @@ country_event = {
     desc = YE_jiangdu.1.d
     picture = ARTWORK_eventPicture
 
+    fire_only_once = yes
+    mean_time_to_happen = {
+        months = 1
+    }
     trigger = {
         tag = Y13
         check_variable = {
@@ -14,23 +18,23 @@ country_event = {
     }
 
     option = {
-    name = YE_jiangdu.1.a
-    inherit = Y05
-    every_owned_province = {
-        limit = {
-            is_core = Y05
+        name = YE_jiangdu.1.a
+        inherit = Y05
+        every_owned_province = {
+            limit = {
+                is_core = Y05
+            }
+            set_local_autonomy = 50
+            add_province_modifier = {
+                name = YE_Jiangdu_lanjincandang
+                duration = 3650
+            }
         }
-        set_local_autonomy = 50
-        add_province_modifier = {
-            name = YE_Jiangdu_lanjincandang
-            duration = 3650
+        hidden_effect = {
+            set_variable = {
+                which = jiangdu_wins_lanjinhui
+                value = 0
+            }
         }
-    }
-    hidden_effect = {
-        set_variable = {
-            which = jiangdu_wins_lanjinhui
-            value = 0
-        }
-    }
     }
 }

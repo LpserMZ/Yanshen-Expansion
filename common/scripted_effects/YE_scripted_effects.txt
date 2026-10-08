@@ -185,7 +185,7 @@ YE_yanification_change_culture = {
 			limit = {
 				region = wuxun_region 
 			}
-			change_culture = yansu
+			change_culture = qingliu
 		}
 	}
 	else_if = { #rahen

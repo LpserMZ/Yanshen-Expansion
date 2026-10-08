@@ -1,6 +1,6 @@
 add_core = Y11
 owner = Y11
-culture = jichuan
+culture = qingliu
 religion = accretive_path
 controller = Y11
 is_city = no
