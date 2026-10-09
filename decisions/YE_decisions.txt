@@ -366,7 +366,7 @@ country_decisions = {
 			country_event = { id = ideagroups.1 }
 			swap_non_generic_missions = yes
 			###
-			set_capital = 8038
+			set_capital = 7088
 			add_government_reform = yan_empire_reform
 			add_country_modifier = { name = "centralization_modifier" duration = 7300 }
 			set_global_flag = from_hui_rank_II_gflag
@@ -772,7 +772,7 @@ country_decisions = {
 	# 		country_event = { id = ideagroups.1 }
 	# 		swap_non_generic_missions = yes
 	# 		###
-	# 		#set_capital = 8038
+	# 		#set_capital = 
 	# 		#add_government_reform = yan_empire_reform
 	# 		add_country_modifier = { name = "centralization_modifier" duration = 7300 }
 	# 		set_global_flag = form_Yan_imperial_rank_III_gflag
@@ -830,7 +830,7 @@ country_decisions = {
 	# 		country_event = { id = ideagroups.1 }
 	# 		swap_non_generic_missions = yes
 	# 		###
-	# 		#set_capital = 8038
+	# 		#set_capital = 
 	# 		#add_government_reform = yan_empire_reform
 	# 		add_country_modifier = { name = "centralization_modifier" duration = 7300 }
 	# 		set_global_flag = form_Yan_republic_rank_III_gflag
@@ -889,7 +889,7 @@ country_decisions = {
 	# 		country_event = { id = ideagroups.1 }
 	# 		swap_non_generic_missions = yes
 	# 		###
-	# 		#set_capital = 8038
+	# 		#set_capital = 
 	# 		#add_government_reform = yan_empire_reform
 	# 		add_country_modifier = { name = "centralization_modifier" duration = 7300 }
 	# 		set_global_flag = form_YanShen_republic_rank_IV_gflag
@@ -933,8 +933,8 @@ country_decisions = {
 					limit = {
 						OR = {
 							superregion = yanshen_superregion
-							province_id = 8411
-							province_id = 8412
+							province_id = 7461
+							province_id = 7462
 						}
 						NOT = { area = ml_cave5_area }
 						NOT = { is_core = ROOT }

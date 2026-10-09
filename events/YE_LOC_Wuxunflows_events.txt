@@ -123,7 +123,7 @@ province_event = { # 2 黍离之悲-诸圣城
 			add_manpower = 1
 			add_treasury = 10
 		}
-		8004 = { remove_core = R80 add_core = YB8 cede_province = YB8 }
+		7054 = { remove_core = R80 add_core = YB8 cede_province = YB8 }
 		4529 = { remove_core = R80 add_core = YB8 cede_province = YB8 }
 	}
 	option = { # 拒不交付
@@ -557,10 +557,6 @@ country_event = { # 14 颓垣事变-娑梨婆罗汉
 			add_territorial_core = ROOT
 			cede_province = ROOT
 		}
-		# 8124 = {
-		# 	add_territorial_core = ROOT
-		# 	cede_province = ROOT
-		# }
 		YB8 = {
 			country_event = {
 				id = YE_Wuxunflows.16
@@ -594,10 +590,6 @@ country_event = { # 15 被没收-白翼
 			add_territorial_core = R80
 			cede_province = R80
 		}
-		# 8124 = {
-		# 	add_territorial_core = R80
-		# 	cede_province = R80
-		# }
 		R80 = {
 			vassalize = ROOT
 		}

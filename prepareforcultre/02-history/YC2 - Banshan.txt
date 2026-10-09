@@ -7,8 +7,8 @@ primary_culture = nephrite_dwarf
 religion = accretive_path
 technology_group = tech_east_dwarven
 
-capital = 8413
-fixed_capital = 8413
+capital = 7463
+fixed_capital = 7463
 
 1000.1.1 = { 
 	set_estate_privilege = estate_mages_organization_state

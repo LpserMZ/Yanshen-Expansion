@@ -43,7 +43,7 @@ country_event = { #1 定都
 	option = {
 		name = YE_ljh.1.b
 		ai_chance = { factor = 3 }
-		set_capital = 8117
+		set_capital = 7167
 		add_stability = 1
 	}
 	option = {
@@ -103,7 +103,7 @@ country_event = { #2 经济恢复
 	option = {
 		name = YE_ljh.2.c
 		ai_chance = { factor = 1 }
-		8117 = {
+		7167 = {
 			add_base_tax = 1
 			add_base_production = 1
 			add_base_manpower = 1
@@ -1083,26 +1083,26 @@ country_event = { #8 修建大学
 			}
 		}
 	}
-	option = { # 青同 8117
+	option = { # 青同 7167
 		name = YE_ljh.8.d
 		ai_chance = { factor = 1 }
 		trigger = {
-			8117 = {
+			7167 = {
 				owned_by = ROOT
 			}
 		}
 		if = {
 			limit = {
-				8117 = {
+				7167 = {
 					NOT = { has_building = university }
 				}
 			}
-			8117 = {
+			7167 = {
 				add_building = university
 			}
 		}
 		else = {
-			8117 = {
+			7167 = {
 				area = {
 					add_province_modifier = {
 						name = yanzhou_universities_funded_by_yanzhoupai
@@ -1286,26 +1286,26 @@ country_event = { #8 修建大学
 			}
 		}
 	}
-	option = { # 昭明 8038
+	option = { # 昭明 7088
 		name = YE_ljh.8.k
 		ai_chance = { factor = 1 }
 		trigger = {
-			8038 = {
+			7088 = {
 				owned_by = ROOT
 			}
 		}
 		if = {
 			limit = {
-				8038 = {
+				7088 = {
 					NOT = { has_building = university }
 				}
 			}
-			8038 = {
+			7088 = {
 				add_building = university
 			}
 		}
 		else = {
-			8038 = {
+			7088 = {
 				area = {
 					add_province_modifier = {
 						name = yanzhou_universities_funded_by_yanzhoupai

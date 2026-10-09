@@ -17,8 +17,8 @@ cb_yanzhou_unification = {
 			any_owned_province = {
 				OR = {
 					superregion = yanshen_superregion
-					province_id = 8411
-					province_id = 8412
+					province_id = 7461
+					province_id = 7462
 				}
 				NOT = { area = ml_cave5_area }
 			}

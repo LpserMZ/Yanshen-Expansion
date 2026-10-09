@@ -309,9 +309,9 @@ YE_bianfang_2 = {
 		provinces_to_highlight = {  
 			OR = {
 				province_id = 4976
-				province_id = 8117
+				province_id = 7167
 				province_id = 4868
-				province_id = 8121
+				province_id = 7171
 			}
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
@@ -319,9 +319,9 @@ YE_bianfang_2 = {
 		}
 		trigger = {
 			4976 = { country_or_non_sovereign_subject_holds = ROOT }
-			8117 = { country_or_non_sovereign_subject_holds = ROOT }
+			7167 = { country_or_non_sovereign_subject_holds = ROOT }
 			4868 = { country_or_non_sovereign_subject_holds = ROOT }
-			8121 = { country_or_non_sovereign_subject_holds = ROOT }
+			7171 = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		effect = {
 			jianwu_region = {
@@ -658,7 +658,7 @@ YE_bianfang_4 = {
 				province_id = 4914
 				province_id = 4871
 				province_id = 4907
-				province_id = 8138
+				province_id = 7188
 			}
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
@@ -668,7 +668,7 @@ YE_bianfang_4 = {
 			4914 = { country_or_non_sovereign_subject_holds = ROOT }
 			4871 = { country_or_non_sovereign_subject_holds = ROOT }
 			4907 = { country_or_non_sovereign_subject_holds = ROOT }
-			8138 = { country_or_non_sovereign_subject_holds = ROOT }
+			7188 = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		effect = {
 			jianwu_region = {
@@ -1306,25 +1306,25 @@ YE_dahui_4 = {
 		provinces_to_highlight = {
 			OR = {
 				province_id = 5430
-				province_id = 8251
+				province_id = 7301
 				province_id = 4829
-				province_id = 8258
-				province_id = 8257
+				province_id = 7308
+				province_id = 7307
 			}
 			NOT = { owned_by = ROOT }
 		} 
 
 		trigger = {
 			5430 = { owned_by = ROOT }
-			8251 = { owned_by = ROOT }
+			7301 = { owned_by = ROOT }
 			4829 = { owned_by = ROOT }
-			8258 = { owned_by = ROOT }
-			8257 = { owned_by = ROOT }
+			7308 = { owned_by = ROOT }
+			7307 = { owned_by = ROOT }
 			Y01 = { exists = no }
 		} 
 
 		effect = {
-			8257 = {
+			7307 = {
 				change_culture = beikling
 				change_religion = ROOT
 				add_base_manpower = 1

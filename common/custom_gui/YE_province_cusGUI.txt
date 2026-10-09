@@ -9,7 +9,7 @@ custom_button = { #开发领土
 	trigger = { 
 		holy_order = mushihui
 		owner = {
-			owns = 8117
+			owns = 7167
 		}
 		if = {
 			limit = {
@@ -30,7 +30,7 @@ custom_button = { #开发领土
 		}
 		if = {
 			limit = {
-				8117 = {
+				7167 = {
 					OR = {
 						NOT = { base_tax = 8 }
 						NOT = { base_production = 8 }
@@ -83,7 +83,6 @@ custom_button = { #开发领土
 					any_province_in_state = {
 						development = 18
 						NOT = { has_province_modifier = rutual_xia_engineering_team }
-						# 8117 = { development = THIS }
 					}
 				}
 				hidden_trigger = {
@@ -107,7 +106,7 @@ custom_button = { #开发领土
 				}
 			}
 			custom_tooltip = migrate_pop_effect_18_minus_tooltip
-			8117 = {
+			7167 = {
 				add_base_tax = -1
 				add_base_production = -1
 				add_base_manpower = -1
@@ -122,7 +121,6 @@ custom_button = { #开发领土
 				limit = {
 					development = 18
 					NOT = { has_province_modifier = rutual_xia_engineering_team }
-					# 8117 = { development = THIS }
 				}
 				add_province_modifier = {
 					name = rutual_xia_engineering_team

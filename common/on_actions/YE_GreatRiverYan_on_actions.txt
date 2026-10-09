@@ -76,7 +76,7 @@ on_war_ended = { #ROOT - Winer FROM - Loser
 			FROM = {
 				release_all_possible_countries = yes
 				release_all_subjects = yes
-				8043 = {
+				7093 = {
 					if = {
 						limit = {
 							owned_by = PREV
@@ -232,8 +232,8 @@ on_siege_lost_province =  {
 		limit = {
 			OR = {
 				superregion = yanshen_superregion
-				province_id = 8411
-				province_id = 8412
+				province_id = 7461
+				province_id = 7462
 			}
 			NOT = { area = ml_cave5_area }
 		}
@@ -393,7 +393,7 @@ on_province_owner_change = {
 		limit = {
 			OR = {
 				province_id = 4859
-				province_id = 8289
+				province_id = 7339
 			}
 		}
 		4859 = {

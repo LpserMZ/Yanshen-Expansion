@@ -541,7 +541,7 @@ YE_baiyi_4 = {
 		}
 
 		effect = { 
-			8005 = {
+			7055 = {
 				if = {
 					limit = {
 						province_has_center_of_trade_of_level = 3
@@ -773,7 +773,7 @@ YE_baiyi_5 = {
 		position = 5
 		required_missions = { YE_baiyi_5_3 YE_baiyi_4_4 }
 		provinces_to_highlight = {
-			province_id = 8005
+			province_id = 7055
 		}
 
 		trigger = { 

@@ -34,7 +34,7 @@ province_event = { #Complete a highway
 						#zhaoxun
 						province_id = 4906
 						#jinxun
-						province_id = 8129
+						province_id = 7179
 
 					}
 				}
@@ -55,7 +55,7 @@ province_event = { #Complete a highway
 					4906 = { 4846 = { save_event_target_as = golden_highway_next_province } }
 
 					#jinxun
-					8129 = { 8432 = { save_event_target_as = golden_highway_next_province } }
+					7179 = { 7482 = { save_event_target_as = golden_highway_next_province } }
 				}
 			}
 			else = { #so it doesn't fire it with every single province group, prevents the construction from moving to an adjacent province group

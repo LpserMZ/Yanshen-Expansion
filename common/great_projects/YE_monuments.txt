@@ -1,4 +1,4 @@
-suihuigong = { start = 8005 #溯回宫
+suihuigong = { start = 7055 #溯回宫
 	
 	date = 1820.10.10
 	time = { months = 1 }
@@ -73,7 +73,7 @@ suihuigong = { start = 8005 #溯回宫
 		}
 	}
 }
-zhaoming_imperial_palace = { start = 8038 #永延宫
+zhaoming_imperial_palace = { start = 7088 #永延宫
 	date = 1444.1.1
 	time = { months = 1 }
 	build_cost = 5000
@@ -287,7 +287,7 @@ feiteng_harbor = { start = 4879 #飞腾港
 	}	
 }
 
-boling_mont = { start = 8139 #礴灵山
+boling_mont = { start = 7189 #礴灵山
 	date = 1444.1.1
 	time = { months = 1 }
 	build_cost = 5000
@@ -379,7 +379,7 @@ boling_mont = { start = 8139 #礴灵山
 		}
 	}
 }
-huangsheng_mont = { start = 8099 #皇升山
+huangsheng_mont = { start = 7149 #皇升山
 	date = 1444.1.1
 	time = { months = 1 }
 	build_cost = 5000
@@ -490,7 +490,7 @@ huangsheng_mont = { start = 8099 #皇升山
 		
 	}
 }
-hu_ai_mont = { start = 8064 #壶欸山，欸显示不出来
+hu_ai_mont = { start = 7114 #壶欸山，欸显示不出来
 	date = 1444.1.1
 	time = { months = 1 }
 	build_cost = 5000
@@ -1409,11 +1409,11 @@ shenliu_guan = { start = 4814 #蜃流关
 			calc_true_if = {
 				desc = moling_five_great_pass_not_controled_by_Y01_tooltip
 				amount = 3
-				NOT = { owns_or_subject_of = 8257 }
+				NOT = { owns_or_subject_of = 7307 }
 				NOT = { owns_or_subject_of = 4829 }
-				NOT = { owns_or_subject_of = 8258 }
+				NOT = { owns_or_subject_of = 7308 }
 				NOT = { owns_or_subject_of = 5430 }
-				NOT = { owns_or_subject_of = 8251 }
+				NOT = { owns_or_subject_of = 7301 }
 			}
 			calc_true_if = {
 				desc = moling_four_palace_not_controled_by_Y01_tooltip
@@ -1430,11 +1430,11 @@ shenliu_guan = { start = 4814 #蜃流关
 			calc_true_if = {
 				desc = moling_five_great_pass_not_controled_by_Y01_tooltip
 				amount = 3
-				NOT = { owns_or_subject_of = 8257 }
+				NOT = { owns_or_subject_of = 7307 }
 				NOT = { owns_or_subject_of = 4829 }
-				NOT = { owns_or_subject_of = 8258 }
+				NOT = { owns_or_subject_of = 7308 }
 				NOT = { owns_or_subject_of = 5430 }
-				NOT = { owns_or_subject_of = 8251 }
+				NOT = { owns_or_subject_of = 7301 }
 			}
 			calc_true_if = {
 				desc = moling_four_palace_not_controled_by_Y01_tooltip

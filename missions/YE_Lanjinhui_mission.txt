@@ -221,7 +221,7 @@ YE_lanjin_4 = {
 			OR = {
 				province_id = 4862
 				province_id = 4930
-				province_id = 8117
+				province_id = 7167
 				province_id = 4868
 			}
 		} 
@@ -239,7 +239,7 @@ YE_lanjin_4 = {
 					owned_by = ROOT
 					num_of_times_improved = 1
 				}
-				8117 = {
+				7167 = {
 					owned_by = ROOT
 					num_of_times_improved = 1
 				}
@@ -257,7 +257,7 @@ YE_lanjin_4 = {
 					owned_by = ROOT
 					num_of_times_improved = 4
 				}
-				8117 = {
+				7167 = {
 					owned_by = ROOT
 					num_of_times_improved = 4
 				}
@@ -369,7 +369,7 @@ YE_lanjin_5 = {
 					add_permanent_claim = ROOT 
 				}
 			}
-			8129 = {
+			7179 = {
 				add_permanent_claim = ROOT
 			}
 			4872 = {
@@ -384,11 +384,11 @@ YE_lanjin_5 = {
 			YE_lanjin_4_2
 		} 
 		provinces_to_highlight = {
-			province_id = 8117
+			province_id = 7167
 		} 
 
 		trigger = {
-			8117 = {
+			7167 = {
 				owned_by = ROOT
 				development = 24
 			}

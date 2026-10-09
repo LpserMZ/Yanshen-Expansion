@@ -500,15 +500,7 @@ if = {
 # every_province = {
 # 	YE_yanification_change_category = $category$ culture=yes
 # }
-# decolonize = 8054
-# 8054 = {
-# 	save_global_event_target_as = holohana_target_maliu_fanua
-# 	holohana_spawn_effect = { holohana = maliu_fanua}
-# 	holohana_rebel_spawn_effect = { 
-# 		holohana = maliu_fanua
-# 		maliu_fanua_leader = yes
-# 	}
-# }
+
 # every_province = {
 # 	YE_yanification_change_category = $category$ culture = yes
 # }

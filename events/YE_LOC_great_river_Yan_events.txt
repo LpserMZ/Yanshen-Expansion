@@ -273,8 +273,8 @@ province_event = { #8 学者离开
 			4859 = { 4853 = { save_global_event_target_as = loc_of_scholar_from_luojiang } }
 			4853 = { 4855 = { save_global_event_target_as = loc_of_scholar_from_luojiang } }
 			4855 = { 4861 = { save_global_event_target_as = loc_of_scholar_from_luojiang } }
-			4861 = { 8117 = { save_global_event_target_as = loc_of_scholar_from_luojiang } }
-			8117 = { 4869 = { save_global_event_target_as = loc_of_scholar_from_luojiang } }
+			4861 = { 7167 = { save_global_event_target_as = loc_of_scholar_from_luojiang } }
+			7167 = { 4869 = { save_global_event_target_as = loc_of_scholar_from_luojiang } }
 			4869 = { 4907 = { save_global_event_target_as = loc_of_scholar_from_luojiang } }
 			4907 = { 
 				if = {
@@ -420,10 +420,10 @@ province_event = { #10 9号事件的地点判定
 			factor = 4 
 			modifier = {
 				factor = 1.5
-				8117 = { has_building = university }
+				7167 = { has_building = university }
 			}
 		}
-		8117 = { save_global_event_target_as = loc_of_scholar_from_luojiang }
+		7167 = { save_global_event_target_as = loc_of_scholar_from_luojiang }
 	}
 	option = { #祥女
 		name = YE_GRY.10.g
@@ -3332,7 +3332,7 @@ province_event = { #56 烟中帛幡毁坏
 		# 	has_province_modifier = yanzhong_bofan_in_bolu
 		# }
 
-		NOT = { event_target:yanzhong_bofan_owner = { owns = 8289 } } #帛垆
+		NOT = { event_target:yanzhong_bofan_owner = { owns = 7339 } } #帛垆
 
 	}
 	immediate = {
@@ -3340,7 +3340,7 @@ province_event = { #56 烟中帛幡毁坏
 			4859 = {
 				remove_province_modifier = yanzhong_bofan_in_yanzhong
 			}
-			8289 = {
+			7339 = {
 				remove_province_modifier = yanzhong_bofan_in_bolu
 			}
 		}

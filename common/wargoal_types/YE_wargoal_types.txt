@@ -9,8 +9,8 @@ superiority_yanzhou_unification = {
 		allowed_provinces = {
 			OR = {
 				superregion = yanshen_superregion
-				province_id = 8411
-				province_id = 8412
+				province_id = 7461
+				province_id = 7462
 			}
 			NOT = { area = ml_cave5_area }
 		}
@@ -31,8 +31,8 @@ superiority_yanzhou_unification = {
 		allowed_provinces = {
 			OR = {
 				superregion = yanshen_superregion
-				province_id = 8411
-				province_id = 8412
+				province_id = 7461
+				province_id = 7462
 			}
 			NOT = { area = ml_cave5_area }
 		}
