@@ -7403,8 +7403,8 @@ halessi = {
 			army_tradition = 0.5
 			tolerance_heretic = 3
 			church_power_modifier = -1
-			LQpower_capacity = 200
-			monthly_LQpower_regen = 1
+			mages_mana_capacity = 100
+			mages_mana_regen = 0.25
 		}
 		country_as_secondary = {
 			army_tradition = 0.5
@@ -7655,8 +7655,8 @@ halessi = {
 			centralize_state_cost = -0.2
 			tolerance_heretic = 3
 			church_power_modifier = -1
-			LQpower_capacity = 200
-			monthly_LQpower_regen = 1
+			mages_mana_capacity = 100
+			mages_mana_regen = 0.25
 		}
 		country_as_secondary = {
 			centralize_state_cost = -0.2
@@ -7742,8 +7742,8 @@ halessi = {
 			shock_damage = 0.1
 			church_power_modifier = -1
 			reverse_relation_with_heretic_religion = -25
-			LQpower_capacity = 200
-			monthly_LQpower_regen = 1.5
+			mages_mana_capacity = 100
+			mages_mana_regen = 0.25
 		}
 		country_as_secondary = {
 			shock_damage = 0.1
@@ -7818,8 +7818,8 @@ halessi = {
 		country = {
 			stability_cost_modifier = -0.15
 			tolerance_heathen = -3
-			LQpower_capacity = 200
-			monthly_LQpower_regen = 1.5
+			mages_mana_capacity = 100
+			mages_mana_regen = 0.25
 		}
 		country_as_secondary = {
 			stability_cost_modifier = -0.10
@@ -7896,8 +7896,8 @@ halessi = {
 			idea_cost = -0.10
 			country_admin_power = 1
 			yearly_harmony = 0.25
-			LQpower_capacity = 200
-			monthly_LQpower_regen = 1.5
+			mages_mana_capacity = 100
+			mages_mana_regen = 0.25
 		}
 		country_as_secondary = {
 			adm_tech_cost_modifier = -0.10

@@ -3259,8 +3259,7 @@ xia_school_modifier = {
 	religion = yes
 	is_scholar_modifier = yes # Tells the AI and will only show the alert if country has none
 	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
-	LQdspl_1_exp_gain_modifier = 0.75
-	LQdspl_2_exp_gain_modifier = 0.25
+	yearly_army_professionalism = 0.005 # 0.5%
 	picture = "1-64"
 }
 wu_school_modifier = {
@@ -3268,8 +3267,7 @@ wu_school_modifier = {
 	religion = yes
 	is_scholar_modifier = yes # Tells the AI and will only show the alert if country has none
 	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
-	LQdspl_1_exp_gain_modifier = 0.25
-	LQdspl_2_exp_gain_modifier = 0.75
+	army_tradition_from_battle = 0.50
 	picture = "2-64"
 }
 kanli_school_modifier = {
@@ -3277,7 +3275,7 @@ kanli_school_modifier = {
 	religion = yes
 	is_scholar_modifier = yes # Tells the AI and will only show the alert if country has none
 	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
-	LQdspl_4_exp_gain_modifier = 1
+	yearly_innovativeness = 0.25
 	picture = "3-64"
 }
 lingjue_school_modifier = {
@@ -3285,8 +3283,7 @@ lingjue_school_modifier = {
 	religion = yes
 	is_scholar_modifier = yes # Tells the AI and will only show the alert if country has none
 	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
-	LQdspl_3_exp_gain_modifier = 0.75
-	LQdspl_4_exp_gain_modifier = 0.25	
+	mages_mana_regen = 0.5
 	picture = "4-64"
 }
 qingliu_school_modifier = {
@@ -3294,7 +3291,7 @@ qingliu_school_modifier = {
 	religion = yes
 	is_scholar_modifier = yes # Tells the AI and will only show the alert if country has none
 	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
-	LQdspl_5_exp_gain_modifier = 1
+	country_admin_power = 1
 	picture = "5-64"
 }
 mushi_school_modifier = {
@@ -3302,7 +3299,7 @@ mushi_school_modifier = {
 	religion = yes
 	is_scholar_modifier = yes # Tells the AI and will only show the alert if country has none
 	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
-	LQdspl_6_exp_gain_modifier = 1
+	development_cost = -0.15
 	picture = "6-64"
 }
 mozhen_school_modifier = {
@@ -3310,8 +3307,7 @@ mozhen_school_modifier = {
 	religion = yes
 	is_scholar_modifier = yes # Tells the AI and will only show the alert if country has none
 	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
-	LQdspl_7_exp_gain_modifier = 0.75
-	LQdspl_8_exp_gain_modifier = 0.25
+	defensiveness = 0.15
 	picture = "7-64"
 }
 guifu_school_modifier = {
@@ -3319,7 +3315,6 @@ guifu_school_modifier = {
 	religion = yes
 	is_scholar_modifier = yes # Tells the AI and will only show the alert if country has none
 	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
-	LQdspl_7_exp_gain_modifier = 0.25
-	LQdspl_8_exp_gain_modifier = 0.75
+	manpower_recovery_speed = 0.15
 	picture = "8-64"
 }

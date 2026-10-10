@@ -6,9 +6,8 @@ fervor_wuxue = { #武学
 	trigger = {
 	}
 	effect = {
-		morale_damage_received = -0.15
-		LQdspl_1_exp_gain_modifier = 0.75
-		LQdspl_2_exp_gain_modifier = 0.75
+		morale_damage = 0.10
+		land_morale = 0.25
 	}
 	ai_will_do = {
 		factor = 10
@@ -24,8 +23,6 @@ fervor_danqi = { #丹器
 	effect = {
 		diplomatic_reputation = 2
 		improve_relation_modifier = 0.25
-		LQdspl_3_exp_gain_modifier = 0.75
-		LQdspl_4_exp_gain_modifier = 0.75
 	}
 	ai_will_do = {
 		factor = 10
@@ -40,8 +37,7 @@ fervor_shushu = { #术数
 	}
 	effect = {
 		development_cost_modifier = -0.10
-		LQdspl_5_exp_gain_modifier = 0.75
-		LQdspl_6_exp_gain_modifier = 0.75
+		administrative_efficiency = 0.05
 	}
 	ai_will_do = {
 		factor = 10
@@ -55,9 +51,9 @@ fervor_fuzhuan = { #符篆
 	trigger = {
 	}
 	effect = {
-		morale_damage = 0.10
-		LQdspl_7_exp_gain_modifier = 0.75
-		LQdspl_8_exp_gain_modifier = 0.75
+		hostile_attrition = 1
+		max_hostile_attrition = 1
+		manpower_in_true_faith_provinces= 0.20
 	}
 	ai_will_do = {
 		factor = 10
