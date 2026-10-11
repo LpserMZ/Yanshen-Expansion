@@ -324,7 +324,7 @@ YE_bianfang_2 = {
 			7171 = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		effect = {
-			jianwu_region = {
+			north_yanshen_region = {
 				add_permanent_claim = ROOT
 			}
 			bianfang_missions_update_modifier_inexorability_effect = yes
@@ -412,7 +412,7 @@ YE_bianfang_3 = {
 			yanxin_region = {
 				add_permanent_claim = ROOT
 			}
-			luojiang_region = {
+			lower_yanshen_region = {
 				add_permanent_claim = ROOT
 			}
 			zhuyue_region = {
@@ -585,7 +585,7 @@ YE_bianfang_4 = {
 		position = 3
 		required_missions = { YE_bianfang_3_2 } 
 		provinces_to_highlight = {  
-			region = luojiang_region
+			region = lower_yanshen_region
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT 
 			}
@@ -594,7 +594,7 @@ YE_bianfang_4 = {
 		trigger = {
 			num_of_owned_provinces_with = {
 				value = 32
-				region = luojiang_region
+				region = lower_yanshen_region
 			}  
 			iongsim_area = { #1个即可
 				owned_by = ROOT
@@ -671,7 +671,7 @@ YE_bianfang_4 = {
 			7188 = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		effect = {
-			jianwu_region = {
+			north_yanshen_region = {
 				add_permanent_claim = ROOT
 			}
 			bianfang_missions_update_modifier_inexorability_effect = yes
@@ -889,7 +889,7 @@ YE_bianfang_5 = {
 					limit = {
 						OR = {
 							region = zhuyue_region
-							region = luojiang_region
+							region = lower_yanshen_region
 						}
 						has_dock_building_trigger = yes
 						development = 12

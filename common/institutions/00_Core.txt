@@ -850,7 +850,7 @@ new_world_i = {
 			scale = yes
 			OR = {
 				region = zhuyue_region
-				region = luojiang_region
+				region = lower_yanshen_region
 			}
 			has_port = yes
 			province_has_center_of_trade_of_level = 2

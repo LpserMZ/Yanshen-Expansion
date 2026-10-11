@@ -2050,7 +2050,7 @@ wuxun_region = {
 		00.08.30
 	}
 }
-zhaoxun_region = {
+upper_yanshen_region = {
 	areas = {
 		zx1_area
 		zx2_area
@@ -2094,7 +2094,7 @@ zhuyue_region = {
 		00.06.30
 	}
 }
-luojiang_region = {
+lower_yanshen_region = {
 	areas = {
 		lj1_area
 		lj3_area
@@ -2154,7 +2154,7 @@ jinxun_region = {
 		00.06.30
 	}
 }
-jianwu_region = {
+north_yanshen_region = {
 	areas = {
 		jw1_area
 		jw2_area
@@ -2315,14 +2315,7 @@ dhujat_region = {
 	}
 }
 
-lower_yanshen_region = {
-	areas = {
-	}
-	# monsoon = {
-	# 	00.05.01
-	# 	00.06.30
-	# }
-}
+
 
 moduk_region = {
 	areas = {
@@ -2336,16 +2329,6 @@ moduk_region = {
 		nurboesig_area
 		red_vale_area #Red Vale
 	}
-}
-
-upper_yanshen_region = {
-	areas = {
-		
-	}
-	# monsoon = {
-	# 	00.05.01
-	# 	00.06.30
-	# }
 }
 
 demon_hills_region = {
@@ -2508,19 +2491,6 @@ khaashalg_region = {
 		northern_peaks_area
 		southern_shield_area
 	}
-}
-
-north_yanshen_region = {
-	areas = {
-		
-		
-		
-
-	}
-	# monsoon = {
-	# 	00.05.01
-	# 	00.06.30
-	# }
 }
 
 nomsyulhan_region = {

@@ -558,7 +558,7 @@ YE_lanjin_branch_I_3 = {
 			YE_lanjin_3_2
 		} 
 		provinces_to_highlight = {
-			region = jianwu_region 
+			region = north_yanshen_region 
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -568,7 +568,7 @@ YE_lanjin_branch_I_3 = {
 			4979 = { country_or_non_sovereign_subject_holds = ROOT }
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				value = 16
-				region = jianwu_region
+				region = north_yanshen_region
 			}
 		} 
 
@@ -587,7 +587,7 @@ YE_lanjin_branch_I_3 = {
 			YE_lanjin_branch_I_3_3
 		} 
 		provinces_to_highlight = {
-			region = jianwu_region
+			region = north_yanshen_region
 			NOT = {  
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -596,7 +596,7 @@ YE_lanjin_branch_I_3 = {
 		trigger = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				value = 35
-				region = jianwu_region
+				region = north_yanshen_region
 			}
 		} 
 

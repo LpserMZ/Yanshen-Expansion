@@ -203,6 +203,17 @@
  PROV_ADJ4630:0 "Ñ‘‘Nœ^"
  PROV4633:0 "^²R"
  PROV_ADJ4633:0 "^²R"
+
+ lower_yanshen_region:0 "Wml"
+ lower_yanshen_region_name:0 "Wml"
+ lower_yanshen_region_adj:0 "Wml"
+ upper_yanshen_region:0 "-fTm"
+ upper_yanshen_region_name:0 "-fTm"
+ upper_yanshen_region_adj:0 "-fTm"
+ north_yanshen_region:0 "ZWfk"
+ north_yanshen_region_name:0 "ZWfk"
+ north_yanshen_region_adj:0 "ZWfk"
+
 #  :0 ""
 #  _name:0 ""
 #  _adj:0 ""

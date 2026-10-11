@@ -118,16 +118,12 @@ eastern_europe_superregion = {
 }
 
 yanshen_superregion = {
-	lower_yanshen_region
-	upper_yanshen_region
-	north_yanshen_region
-	zhaoxun_region
+	lower_yanshen_region # 罗江 luojiang_region
+	upper_yanshen_region # 昭浔 zhaoxun_region
+	north_yanshen_region # 坚武 jianwu_region
 	zhuyue_region
-	luojiang_region
 	yanxin_region
 	jinxun_region
-	jianwu_region
-
 }
 shenzhou_superregion = {
 	demon_hills_region

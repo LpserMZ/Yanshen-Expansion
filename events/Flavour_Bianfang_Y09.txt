@@ -2996,7 +2996,7 @@ province_event = { #Yanification of province
 			if = {
 				limit = {
 					OR = {
-						region = jianwu_region
+						region = north_yanshen_region
 					}
 				}
 				change_culture = jiangyang

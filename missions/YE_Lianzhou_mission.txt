@@ -571,10 +571,10 @@ lianzhou_3 = {
 		required_missions = { Lianzhou_3_6 Lianzhou_2_6 }
 		position = 7
 		provinces_to_highlight = {
-			region = jianwu_region
+			region = north_yanshen_region
 		}
 		trigger = {
-			jianwu_region = {
+			north_yanshen_region = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}

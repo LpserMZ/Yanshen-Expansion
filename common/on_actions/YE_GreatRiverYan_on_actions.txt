@@ -228,55 +228,55 @@ on_siege_lost_province =  {
 		}
 
 	}
-	if = { # 统一湮州
-		limit = {
-			OR = {
-				superregion = yanshen_superregion
-				province_id = 7461
-				province_id = 7462
-			}
-			NOT = { area = ml_cave5_area }
-		}
+	# if = { # 统一湮州
+	# 	limit = {
+	# 		OR = {
+	# 			superregion = yanshen_superregion
+	# 			province_id = 7461
+	# 			province_id = 7462
+	# 		}
+	# 		NOT = { area = ml_cave5_area }
+	# 	}
 
-		if = {
-			limit = {
-				controller = {
-					OR = { #与cb_yanzhou_unification条件一致
-						is_yan_rank_II_tag = yes
-						has_country_modifier = awareness_of_yan_nation 
-					}
+	# 	if = {
+	# 		limit = {
+	# 			controller = {
+	# 				OR = { #与cb_yanzhou_unification条件一致
+	# 					is_yan_rank_II_tag = yes
+	# 					has_country_modifier = awareness_of_yan_nation 
+	# 				}
 
-					OR = {
-						is_in_war = {
-							attacker_leader = this
-							casus_belli = cb_yanzhou_unification
-						}
-						AND = {
-							is_in_war = {
-								defender_leader = this
-								casus_belli = cb_yanzhou_unification
-							}
-							is_core = ROOT
-						}
-					}
-					NOT = { owns = ROOT } #NOT = { is_core = ROOT }	
-				}
-			}
-			if = {
-				limit = {
-					is_capital = no
-				}
-				cede_province = FROM
-				controller = {
-					country_event = {
-						id = YE_GRY.54 
-					}
-				}
-			}
-		}
+	# 				OR = {
+	# 					is_in_war = {
+	# 						attacker_leader = this
+	# 						casus_belli = cb_yanzhou_unification
+	# 					}
+	# 					AND = {
+	# 						is_in_war = {
+	# 							defender_leader = this
+	# 							casus_belli = cb_yanzhou_unification
+	# 						}
+	# 						is_core = ROOT
+	# 					}
+	# 				}
+	# 				NOT = { owns = ROOT } #NOT = { is_core = ROOT }	
+	# 			}
+	# 		}
+	# 		if = {
+	# 			limit = {
+	# 				is_capital = no
+	# 			}
+	# 			cede_province = FROM
+	# 			controller = {
+	# 				country_event = {
+	# 					id = YE_GRY.54 
+	# 				}
+	# 			}
+	# 		}
+	# 	}
 		
 
-	}
+	# }
 	if = { # 士兵热情-围城
 		limit = {
 			FROM = { has_government_mechanic = YE_blue_dream_soilder_fervor }

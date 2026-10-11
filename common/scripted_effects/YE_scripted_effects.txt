@@ -111,7 +111,7 @@ YE_yanification_change_culture = {
 		else_if = {
 			limit = {
 				OR = {
-					region = zhaoxun_region
+					region = upper_yanshen_region
 					region = yanxin_region 
 				}
 				NOT = { area = moryokang_area }
@@ -137,7 +137,7 @@ YE_yanification_change_culture = {
 		else_if = {
 			limit = {
 				OR = {
-					region = jianwu_region
+					region = north_yanshen_region
 					region = jinxun_region
 				}
 			}
@@ -145,7 +145,7 @@ YE_yanification_change_culture = {
 		}
 		else_if = {
 			limit = {
-				region = luojiang_region 
+				region = lower_yanshen_region 
 			}
 			change_culture = gangim
 		}

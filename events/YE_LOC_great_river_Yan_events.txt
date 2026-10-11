@@ -207,23 +207,22 @@ province_event = { #6 罗邑事件——开始游历
 		name = YE_GRY.6.a
 		ai_chance = { factor = 1 }
 		hidden_effect = {
-			4896 = { save_global_event_target_as = loc_of_scholar_from_luojiang }
-			event_target:loc_of_scholar_from_luojiang = {
+			4896 = {
 				province_event = {
 					id = YE_GRY.7
 					days = 30
 				}
-			}			
+			}
 		}
 	}
 }
+
 province_event = { #7 学者到来
 	id = YE_GRY.7
 	title = YE_GRY.7.T
 	desc = YE_GRY.7.D
 	picture = BAD_WITH_MONARCH_eventPicture
 
-	#fire_only_once = yes
 	is_triggered_only = yes
 
 	trigger = {}
@@ -232,6 +231,7 @@ province_event = { #7 学者到来
 		name = YE_GRY.7.a
 		ai_chance = { factor = 1 }
 		add_province_triggered_modifier = YE_scholar_from_luojiang
+		set_province_flag = YE_scholar_from_luojiang_here
 
 		if = { #学者的抉择
 			limit = {
@@ -248,16 +248,15 @@ province_event = { #7 学者到来
 				days = 1095
 			}
 		}
-
 	}
 }
+
 province_event = { #8 学者离开
 	id = YE_GRY.8
 	title = YE_GRY.8.T
 	desc = YE_GRY.8.D
 	picture = BAD_WITH_MONARCH_eventPicture
 
-	#fire_only_once = yes
 	is_triggered_only = yes
 
 	trigger = {}
@@ -266,16 +265,17 @@ province_event = { #8 学者离开
 		name = YE_GRY.8.a
 		ai_chance = { factor = 1 }
 		remove_province_triggered_modifier = YE_scholar_from_luojiang
+		clr_province_flag = YE_scholar_from_luojiang_here
 
 		trigger_switch = {
 			on_trigger = province_id
-			4896 = { 4859 = { save_global_event_target_as = loc_of_scholar_from_luojiang } }
-			4859 = { 4853 = { save_global_event_target_as = loc_of_scholar_from_luojiang } }
-			4853 = { 4855 = { save_global_event_target_as = loc_of_scholar_from_luojiang } }
-			4855 = { 4861 = { save_global_event_target_as = loc_of_scholar_from_luojiang } }
-			4861 = { 7167 = { save_global_event_target_as = loc_of_scholar_from_luojiang } }
-			7167 = { 4869 = { save_global_event_target_as = loc_of_scholar_from_luojiang } }
-			4869 = { 4907 = { save_global_event_target_as = loc_of_scholar_from_luojiang } }
+			4896 = { 4859 = { province_event = { id = YE_GRY.7 days = 30 } } }
+			4859 = { 4853 = { province_event = { id = YE_GRY.7 days = 30 } } }
+			4853 = { 4855 = { province_event = { id = YE_GRY.7 days = 30 } } }
+			4855 = { 4861 = { province_event = { id = YE_GRY.7 days = 30 } } }
+			4861 = { 7167 = { province_event = { id = YE_GRY.7 days = 30 } } }
+			7167 = { 4869 = { province_event = { id = YE_GRY.7 days = 30 } } }
+			4869 = { 4907 = { province_event = { id = YE_GRY.7 days = 30 } } }
 			4907 = { 
 				if = {
 					limit = { 
@@ -285,23 +285,18 @@ province_event = { #8 学者离开
 							owns = 4979
 						} 
 					}
-					4979 = { save_global_event_target_as = loc_of_scholar_from_luojiang }
+					4979 = { province_event = { id = YE_GRY.7 days = 30 } }
 				}
 				else = {
-					4879 = { save_global_event_target_as = loc_of_scholar_from_luojiang }
+					4879 = { province_event = { id = YE_GRY.7 days = 30 } }
 				}
 			}
-			4979 = { 4879 = { save_global_event_target_as = loc_of_scholar_from_luojiang } }
-			4879 = { 4949 = { save_global_event_target_as = loc_of_scholar_from_luojiang } }
-		}
-		event_target:loc_of_scholar_from_luojiang = {
-			province_event = {
-				id = YE_GRY.7
-				days = 30
-			}
+			4979 = { 4879 = { province_event = { id = YE_GRY.7 days = 30 } } }
+			4879 = { 4949 = { province_event = { id = YE_GRY.7 days = 30 } } }
 		}
 	}
 }
+
 province_event = { #9 最终抉择
 	id = YE_GRY.9
 	title = YE_GRY.9.T
@@ -317,15 +312,15 @@ province_event = { #9 最终抉择
 		name = YE_GRY.9.a
 		ai_chance = { factor = 1 }
 		remove_province_triggered_modifier = YE_scholar_from_luojiang
-
+		clr_province_flag = YE_scholar_from_luojiang_here
 	}
 	after = {
 		province_event = {
 			id = YE_GRY.10
 		}
 	}
-
 }
+
 province_event = { #10 9号事件的地点判定
 	id = YE_GRY.10
 	title = YE_GRY.10.T
@@ -343,183 +338,101 @@ province_event = { #10 9号事件的地点判定
 		name = YE_GRY.10.a
 		ai_chance = { 
 			factor = 1 
-			modifier = {
-				factor = 3
-				4896 = { has_building = university }
-			}
-			modifier = {
-				factor = 0
-				4896 = { NOT = { has_building = university } }
-			}
+			modifier = { factor = 3 4896 = { has_building = university } }
+			modifier = { factor = 0 4896 = { NOT = { has_building = university } } }
 		}
-		4896 = { save_global_event_target_as = loc_of_scholar_from_luojiang }
+		4896 = { province_event = { id = YE_GRY.11 } }
 	}
 	option = { #烟中
 		name = YE_GRY.10.b
 		ai_chance = { 
 			factor = 1 
-			modifier = {
-				factor = 2
-				4859 = { has_building = university }
-			}
-			modifier = {
-				factor = 0
-				4859 = { NOT = { has_building = university } }
-			}
+			modifier = { factor = 2 4859 = { has_building = university } }
+			modifier = { factor = 0 4859 = { NOT = { has_building = university } } }
 		}
-		4859 = { save_global_event_target_as = loc_of_scholar_from_luojiang }
+		4859 = { province_event = { id = YE_GRY.11 } }
 	}
 	option = { #安江
 		name = YE_GRY.10.c
 		ai_chance = { 
 			factor = 1 
-			modifier = {
-				factor = 2
-				4853 = { has_building = university }
-			}
-			modifier = {
-				factor = 0
-				4853 = { NOT = { has_building = university } }
-			}
+			modifier = { factor = 2 4853 = { has_building = university } }
+			modifier = { factor = 0 4853 = { NOT = { has_building = university } } }
 		}
-		4853 = { save_global_event_target_as = loc_of_scholar_from_luojiang }
+		4853 = { province_event = { id = YE_GRY.11 } }
 	}
 	option = { #间林
 		name = YE_GRY.10.d
 		ai_chance = { 
 			factor = 1 
-			modifier = {
-				factor = 2
-				4855 = { has_building = university }
-			}
-			modifier = {
-				factor = 0
-				4855 = { NOT = { has_building = university } }
-			}
+			modifier = { factor = 2 4855 = { has_building = university } }
+			modifier = { factor = 0 4855 = { NOT = { has_building = university } } }
 		}
-		4855 = { save_global_event_target_as = loc_of_scholar_from_luojiang }
+		4855 = { province_event = { id = YE_GRY.11 } }
 	}
 	option = { #央城
 		name = YE_GRY.10.e
 		ai_chance = { 
 			factor = 1 
-			modifier = {
-				factor = 2
-				4861 = { has_building = university }
-			}
-			modifier = {
-				factor = 0
-				4861 = { NOT = { has_building = university } }
-			}
+			modifier = { factor = 2 4861 = { has_building = university } }
+			modifier = { factor = 0 4861 = { NOT = { has_building = university } } }
 		}
-		4861 = { save_global_event_target_as = loc_of_scholar_from_luojiang }
+		4861 = { province_event = { id = YE_GRY.11 } }
 	}
 	option = { #青同
 		name = YE_GRY.10.f
 		ai_chance = { 
 			factor = 4 
-			modifier = {
-				factor = 1.5
-				7167 = { has_building = university }
-			}
+			modifier = { factor = 1.5 7167 = { has_building = university } }
 		}
-		7167 = { save_global_event_target_as = loc_of_scholar_from_luojiang }
+		7167 = { province_event = { id = YE_GRY.11 } }
 	}
 	option = { #祥女
 		name = YE_GRY.10.g
 		ai_chance = { 
 			factor = 1 
-			modifier = {
-				factor = 3
-				4869 = { has_building = university }
-			}
-			modifier = {
-				factor = 0
-				4869 = { NOT = { has_building = university } }
-			}
+			modifier = { factor = 3 4869 = { has_building = university } }
+			modifier = { factor = 0 4869 = { NOT = { has_building = university } } }
 		}
-		4869 = { save_global_event_target_as = loc_of_scholar_from_luojiang }
+		4869 = { province_event = { id = YE_GRY.11 } }
 	}
 	option = { #北渡港
 		name = YE_GRY.10.h
 		ai_chance = { 
 			factor = 2 
-			modifier = {
-				factor = 3
-				4907 = { has_building = university }
-			}
+			modifier = { factor = 3 4907 = { has_building = university } }
 		}
-		4907 = { save_global_event_target_as = loc_of_scholar_from_luojiang }
+		4907 = { province_event = { id = YE_GRY.11 } }
 	}
 	option = { #大矛宫
 		name = YE_GRY.10.i
 		ai_chance = { 
 			factor = 1 
-			modifier = {
-				factor = 3
-				4979 = { has_building = university }
-			}
-			modifier = {
-				factor = 0
-				4979 = { NOT = { has_building = university } }
-			}
+			modifier = { factor = 3 4979 = { has_building = university } }
+			modifier = { factor = 0 4979 = { NOT = { has_building = university } } }
 		}
-		4979 = { save_global_event_target_as = loc_of_scholar_from_luojiang }
+		4979 = { province_event = { id = YE_GRY.11 } }
 	}
 	option = { #飞腾
 		name = YE_GRY.10.j
 		ai_chance = { 
 			factor = 1 
-			modifier = {
-				factor = 3
-				4879 = { has_building = university }
-			}
-			modifier = {
-				factor = 0
-				4879 = { NOT = { has_building = university } }
-			}
+			modifier = { factor = 3 4879 = { has_building = university } }
+			modifier = { factor = 0 4879 = { NOT = { has_building = university } } }
 		}
-		4879 = { save_global_event_target_as = loc_of_scholar_from_luojiang }
+		4879 = { province_event = { id = YE_GRY.11 } }
 	}
 	option = { #罗邑
 		name = YE_GRY.10.k
 		ai_chance = { 
 			factor = 1 
-			modifier = {
-				factor = 4
-				4949 = { has_building = university }
-			}
-			modifier = {
-				factor = 0
-				4949 = { NOT = { has_building = university } }
-			}
+			modifier = { factor = 4 4949 = { has_building = university } }
+			modifier = { factor = 0 4949 = { NOT = { has_building = university } } }
 		}
-		4949 = { save_global_event_target_as = loc_of_scholar_from_luojiang }
-	}
-
-	after = {
-		if = {
-			limit = {
-				event_target:loc_of_scholar_from_luojiang = {
-					province_id = 4949
-				}
-			}
-			event_target:loc_of_scholar_from_luojiang = {
-				province_event = {
-					id = YE_GRY.11
-				}
-			}
-		}
-		else = {
-			event_target:loc_of_scholar_from_luojiang = {
-				province_event = {
-					id = YE_GRY.11
-					days = 7
-				}
-			}
-		}
+		4949 = { province_event = { id = YE_GRY.11 } }
 	}
 }
+
 province_event = { #11 落户于此
 	id = YE_GRY.11
 	title = YE_GRY.11.T
@@ -536,7 +449,7 @@ province_event = { #11 落户于此
 	option = {
 		name = YE_GRY.11.a
 		ai_chance = { factor = 1 }
-		#clear_global_event_target = loc_of_scholar_from_luojiang
+		set_province_flag = YE_scholar_from_luojiang_here
 		add_permanent_province_modifier = {
 			name = taixuegong
 			duration = -1
@@ -573,7 +486,7 @@ province_event = { #12 衍道形成
 		NOT = { has_terrain = cavern }
 
 		OR = {
-			region = zhaoxun_region
+			region = upper_yanshen_region
 			region = yanxin_region
 			religion = devouring_path
 			has_building = university
@@ -892,15 +805,11 @@ country_event = { #19 目的地
 
 	is_triggered_only = yes
 
-	immediate = {
-		save_global_event_target_as = oni_special_operations_team_home_country
-	}
-
 	option = { #昭浔
 		name = YE_GRY.19.a
 		trigger = {
 			any_province = {
-				region = zhaoxun_region
+				region = upper_yanshen_region
 				is_city = yes
 				NOT = { country_or_subject_holds = ROOT }
 				NOT = { 
@@ -920,7 +829,7 @@ country_event = { #19 目的地
 		hidden_effect = {
 			random_province = {
 				limit = {
-					region = zhaoxun_region
+					region = upper_yanshen_region
 					is_city = yes
 					NOT = { country_or_subject_holds = ROOT }
 					NOT = { 
@@ -1095,7 +1004,7 @@ province_event = { #20 特务队来袭
 		ai_chance = { factor = 1 }
 		owner = { 
 			add_opinion = {
-				who = event_target:oni_special_operations_team_home_country
+				who = Y01
 				modifier = destructive_action_of_oni_special_operations_team
 			}
 			add_treasury = -50 
@@ -1116,7 +1025,7 @@ province_event = { #20 特务队来袭
 	}
 	after = {
 		hidden_effect = {
-			event_target:oni_special_operations_team_home_country = {
+			Y01 = {
 				country_event = { id = YE_GRY.21 days = 30 random = 15 }
 			}
 		}
@@ -1151,7 +1060,6 @@ country_event = { #21 特务队复命
 		}
 	}
 	after = {
-		clear_global_event_target = oni_special_operations_team_home_country
 		clear_global_event_target = oni_special_operations_team_target_prov
 	}
 }
@@ -1486,7 +1394,7 @@ country_event = { #29 清武善政
 				remove_province_modifier = rightful_xia_territory_occupied
 				add_nationalism = -100
 			}
-			zhaoxun_region = {
+			upper_yanshen_region = {
 				limit = {
 					has_province_modifier = rightful_xia_territory_occupied
 					owned_by = ROOT
@@ -3222,95 +3130,95 @@ country_event = { #53 大总统-新任统治者出现时触发
 }
 
 #统一战争
-country_event = { #54 案牍劳形
-	id = YE_GRY.54 
-	title = YE_GRY.54.T
-	desc = YE_GRY.54.D
-	picture = BAD_WITH_MONARCH_eventPicture
+# country_event = { #54 案牍劳形
+# 	id = YE_GRY.54 
+# 	title = YE_GRY.54.T
+# 	desc = YE_GRY.54.D
+# 	picture = BAD_WITH_MONARCH_eventPicture
 
-	is_triggered_only = yes
+# 	is_triggered_only = yes
 
-	trigger = {
-		overextension_percentage = 1.4
-		is_in_war = {
-			attacker_leader = THIS
-			casus_belli = cb_yanzhou_unification
-		}
-		NOT = {
-			has_country_modifier = gov_effeciency_decline
-		}
-		NOT = {
-			has_country_flag = YE_GRY_54_flag
-		}
-	}
-	immediate = {
-		set_country_flag = YE_GRY_54_flag
-	}
-	option = {
-		name = YE_GRY.54.a
-		ai_chance = { 
-			factor = 1 
-			modifier = {
-				factor = 2
-				overextension_percentage = 1.8
-			}
-			modifier = {
-				factor = 4
-				overextension_percentage = 2.4
-			}
-		}
-		random_war_enemy_country = {
-			limit = {
-				is_in_war = {
-					attacker_leader = ROOT
-					defender_leader = THIS
-					casus_belli = cb_yanzhou_unification
-				}
-			}
-			white_peace = ROOT
-			save_event_target_as = defender_country
-		}
-		event_target:defender_country = {
-			country_event = {
-				id = YE_GRY.55
-			}
-		}
-	}
-	option = {
-		name = YE_GRY.54.b
-		ai_chance = { factor = 1 }
-		if = {
-			limit = {
-				overextension_percentage = 1
-			}
-			add_country_modifier = {
-				name = gov_effeciency_decline
-				duration = 365
-			}
-		}
+# 	trigger = {
+# 		overextension_percentage = 1.4
+# 		is_in_war = {
+# 			attacker_leader = THIS
+# 			casus_belli = cb_yanzhou_unification
+# 		}
+# 		NOT = {
+# 			has_country_modifier = gov_effeciency_decline
+# 		}
+# 		NOT = {
+# 			has_country_flag = YE_GRY_54_flag
+# 		}
+# 	}
+# 	immediate = {
+# 		set_country_flag = YE_GRY_54_flag
+# 	}
+# 	option = {
+# 		name = YE_GRY.54.a
+# 		ai_chance = { 
+# 			factor = 1 
+# 			modifier = {
+# 				factor = 2
+# 				overextension_percentage = 1.8
+# 			}
+# 			modifier = {
+# 				factor = 4
+# 				overextension_percentage = 2.4
+# 			}
+# 		}
+# 		random_war_enemy_country = {
+# 			limit = {
+# 				is_in_war = {
+# 					attacker_leader = ROOT
+# 					defender_leader = THIS
+# 					casus_belli = cb_yanzhou_unification
+# 				}
+# 			}
+# 			white_peace = ROOT
+# 			save_event_target_as = defender_country
+# 		}
+# 		event_target:defender_country = {
+# 			country_event = {
+# 				id = YE_GRY.55
+# 			}
+# 		}
+# 	}
+# 	option = {
+# 		name = YE_GRY.54.b
+# 		ai_chance = { factor = 1 }
+# 		if = {
+# 			limit = {
+# 				overextension_percentage = 1
+# 			}
+# 			add_country_modifier = {
+# 				name = gov_effeciency_decline
+# 				duration = 365
+# 			}
+# 		}
 		
-	}
-	after = {
-		clr_country_flag = YE_GRY_54_flag
-	}
-}
-country_event = { #55 #停战通知
-	id = YE_GRY.55
-	title = YE_GRY.55.T
-	desc = YE_GRY.55.D
-	picture = BAD_WITH_MONARCH_eventPicture
+# 	}
+# 	after = {
+# 		clr_country_flag = YE_GRY_54_flag
+# 	}
+# }
+# country_event = { #55 #停战通知
+# 	id = YE_GRY.55
+# 	title = YE_GRY.55.T
+# 	desc = YE_GRY.55.D
+# 	picture = BAD_WITH_MONARCH_eventPicture
 
-	is_triggered_only = yes
+# 	is_triggered_only = yes
 
-	trigger = {
-	}
-	immediate = {
-	}
-	option = {
-		name = YE_GRY.55.a
-		ai_chance = { factor = 1 }
-	}
-}
+# 	trigger = {
+# 	}
+# 	immediate = {
+# 	}
+# 	option = {
+# 		name = YE_GRY.55.a
+# 		ai_chance = { factor = 1 }
+# 	}
+# }
 
 
 #烟中帛幡毁坏

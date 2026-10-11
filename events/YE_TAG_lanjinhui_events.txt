@@ -195,7 +195,7 @@ country_event = { #4 战争或和平
 		set_country_flag = YE_lanjinhui_branch_I_flag
 		custom_tooltip = YE_ljh_4_branch_I_tooltip
 		swap_non_generic_missions = yes
-		jianwu_region = {
+		north_yanshen_region = {
 			add_permanent_claim = ROOT
 		}
 	}

@@ -1,42 +1,21 @@
 country_decisions = {
-	YE_invest_academic_center_0 = { # only test
-		major = yes
-		potential = {
-			always = no
-		}
-		provinces_to_highlight = {
-		}
-		allow = {
-			always = no
-		}
-		effect = {
-			set_country_flag = YE_allow_dev_bonus_flag
-		}
-		ai_importance = 1
-		ai_will_do = {
-			factor = 0
-		}	
-	}
 	YE_invest_academic_center = { #学者任务
 		major = yes
 		potential = {
-			event_target:loc_of_scholar_from_luojiang = {
-				owned_by = ROOT
+			any_owned_province = {
+				has_province_flag = YE_scholar_from_luojiang_here
 				NOT = { has_building = university }
 			}
 		}
 		provinces_to_highlight = {
-			province_id = event_target:loc_of_scholar_from_luojiang
+			has_province_flag = YE_scholar_from_luojiang_here
 		}
 		allow = {
-			event_target:loc_of_scholar_from_luojiang = {
+			any_owned_province = {
+				has_province_flag = YE_scholar_from_luojiang_here
 				num_of_times_improved_by_owner = 4
 				if = {
-					limit = {
-						owner = {
-							adm_tech = 4
-						}
-					}
+					limit = { owner = { adm_tech = 4 } }
 					has_building = temple
 				}
 			}
@@ -44,15 +23,20 @@ country_decisions = {
 		}
 		effect = {
 			add_treasury = -200
-			event_target:loc_of_scholar_from_luojiang = {
+			every_owned_province = {
+				limit = { 
+					has_province_flag = YE_scholar_from_luojiang_here 
+					NOT = {
+						has_building = university
+					}
+				}
 				add_building = university
 			}
 		}
 		ai_importance = 300
-		ai_will_do = {
-			factor = 300
-		}
+		ai_will_do = { factor = 300 }
 	}
+
 	visit_official_university = { #探访官学
 		potential = {
 			has_country_flag = allow_visit_official_university_flag
@@ -99,6 +83,9 @@ country_decisions = {
 
 		}
 		allow = {
+			hidden_trigger = {
+				tag = Y01
+			}
 			NOT = {
 				has_country_modifier = send_oni_special_operations_team_cooldown
 			}
@@ -351,7 +338,7 @@ country_decisions = {
 			is_free_or_tributary_trigger = yes
 			capital_scope = {
 				OR = {
-					region = zhaoxun_region
+					region = upper_yanshen_region
 					region = yanxin_region
 				}
 			}
@@ -487,7 +474,7 @@ country_decisions = {
 			is_free_or_tributary_trigger = yes
 			capital_scope = {
 				OR = {
-					region = luojiang_region
+					region = lower_yanshen_region
 				}
 			}
 			num_of_owned_provinces_with = {
@@ -558,7 +545,7 @@ country_decisions = {
 			is_free_or_tributary_trigger = yes
 			capital_scope = {
 				OR = {
-					region = jianwu_region
+					region = north_yanshen_region
 					region = jinxun_region
 				}
 			}
@@ -631,7 +618,7 @@ country_decisions = {
 			is_free_or_tributary_trigger = yes
 			capital_scope = {
 				OR = {
-					region = jianwu_region
+					region = north_yanshen_region
 					region = jinxun_region
 				}
 			}
@@ -698,7 +685,7 @@ country_decisions = {
 			is_free_or_tributary_trigger = yes
 			capital_scope = {
 				OR = {
-					region = luojiang_region
+					region = lower_yanshen_region
 					region = nanyue_region
 				}
 			}
