@@ -1,0 +1,10 @@
+owner = Y92
+controller = Y92
+add_core = Y92
+culture = guwaadun
+religion = saanorgegh
+base_tax = 1
+base_production = 1
+base_manpower = 2
+trade_goods = wool
+is_city = yes

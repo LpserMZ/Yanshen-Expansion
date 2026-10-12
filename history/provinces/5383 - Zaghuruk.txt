@@ -1,0 +1,10 @@
+owner = V03
+controller = V03
+add_core = V03
+culture = runsukhi
+religion = levaajan
+is_city = yes
+base_tax = 2
+base_production = 1
+base_manpower = 2
+trade_goods = livestock

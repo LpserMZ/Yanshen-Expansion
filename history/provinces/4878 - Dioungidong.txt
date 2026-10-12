@@ -1,0 +1,10 @@
+owner = Y20
+controller = Y20
+add_core = Y20
+culture = gangim
+religion = accretive_path
+base_tax = 3
+base_production = 3
+base_manpower = 1
+trade_goods = fish
+is_city = yes

@@ -7,6 +7,6 @@ culture = shuvuush
 trade_goods = livestock
 religion = saanorgegh
 controller = Y93
-is_city = no
+is_city = yes
 add_core = Y94
 add_core = V26

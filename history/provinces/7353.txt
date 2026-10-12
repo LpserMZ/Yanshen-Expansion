@@ -7,4 +7,4 @@ culture = plateau_runsukhi
 trade_goods = livestock
 religion = levaajan
 controller = V05
-is_city = no
+is_city = yes

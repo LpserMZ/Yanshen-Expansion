@@ -1,0 +1,10 @@
+owner = Y93
+controller = Y93
+add_core = Y93
+culture = wonju
+religion = neokttareum
+base_tax = 2
+base_production = 3
+base_manpower = 1
+trade_goods = gold
+is_city = yes

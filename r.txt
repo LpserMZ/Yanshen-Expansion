@@ -465,13 +465,17 @@ if = { # 其他省份组
 
 if = { # 割让
 	limit = {
-		always = no
+		# always = no
 	}
 	yanshen_superregion = {
-		add_core = A01
-		cede_province = A01
+		add_core = A32
+		cede_province = A32
 		change_religion = regent_court
-		change_culture = lencori_half_elf
+		change_culture = moon_elf
+	}
+	A32 = {
+		change_religion = regent_court
+		change_culture = moon_elf
 	}
 }
 if = { # 观察者

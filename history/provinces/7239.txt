@@ -7,4 +7,4 @@ culture = kuuldaar
 trade_goods = cloth
 religion = saanorgegh
 controller = Y90
-is_city = no
+is_city = yes

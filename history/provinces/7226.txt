@@ -7,4 +7,4 @@ culture = shuvuush
 trade_goods = livestock
 religion = saanorgegh
 controller = V24
-is_city = no
+is_city = yes

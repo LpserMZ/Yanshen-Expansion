@@ -7,4 +7,4 @@ culture = gangim
 trade_goods = grain
 religion = accretive_path
 controller = Y27
-is_city = no
+is_city = yes

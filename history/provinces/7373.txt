@@ -7,4 +7,4 @@ culture = runsukhi
 trade_goods = iron
 religion = levaajan
 controller = V01
-is_city = no
+is_city = yes

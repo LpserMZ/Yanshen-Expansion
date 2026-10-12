@@ -7,4 +7,4 @@ culture = guwaadun
 trade_goods = wool
 religion = saanorgegh
 controller = Y92
-is_city = no
+is_city = yes

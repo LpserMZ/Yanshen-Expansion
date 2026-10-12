@@ -7,4 +7,4 @@ culture = oinukhudi
 trade_goods = grain
 religion = un_khudai
 controller = V01
-is_city = no
+is_city = yes

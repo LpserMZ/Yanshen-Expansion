@@ -7,4 +7,4 @@ culture = jinxun_culture
 trade_goods = grain
 religion = accretive_path
 controller = Y19
-is_city = no
+is_city = yes

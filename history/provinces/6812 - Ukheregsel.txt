@@ -1,0 +1,11 @@
+owner = V05
+controller = V05
+add_core = V05
+add_core = V04
+culture = plateau_runsukhi
+religion = levaajan
+base_tax = 1
+base_production = 2
+base_manpower = 2
+trade_goods = iron
+is_city = yes

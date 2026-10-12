@@ -1,0 +1,11 @@
+owner = V02
+controller = V02
+add_core = V02
+culture = runsukhi
+religion = levaajan
+base_tax = 1
+base_production = 1
+base_manpower = 1
+trade_goods = livestock
+add_facestealer_history = { size = 1 }
+is_city = yes
