@@ -12,7 +12,6 @@ superiority_yanzhou_unification = {
 				province_id = 7461
 				province_id = 7462
 			}
-			NOT = { area = ml_cave5_area }
 		}
 		
 		peace_options = {
@@ -34,7 +33,6 @@ superiority_yanzhou_unification = {
 				province_id = 7461
 				province_id = 7462
 			}
-			NOT = { area = ml_cave5_area }
 		}
 		
 		peace_options = {

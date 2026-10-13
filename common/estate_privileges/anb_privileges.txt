@@ -3045,13 +3045,16 @@ estate_church_reverse_guaranteed_autonomy = {
 		always = no 
 
 		
-		OR = {
-			religion = accretive_path
-			religion = transmutative_path
-		}
-		any_owned_province = { religion_group = raheni }
+		# OR = {
+		# 	religion = accretive_path
+		# 	religion = transmutative_path
+		# }
+		# any_owned_province = { religion_group = raheni }
 	}
-	can_select = { any_owned_province = { religion_group = raheni } }
+	can_select = { 
+		always = no 
+		# any_owned_province = { religion_group = raheni } 
+	}
 	on_granted = {
 		custom_tooltip = estate_church_reverse_guaranteed_autonomy_effect_tooltip
 		tooltip = { add_province_modifier = { name = estate_church_guaranteed_autonomy_mod duration = -1 } } #yes this is allowed!

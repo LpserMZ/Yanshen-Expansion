@@ -53,7 +53,6 @@ if = { # 烟化
 						region = yanxin_region 
 					}
 					NOT = { area = moryokang_area }
-					NOT = { area = ml_cave5_area }
 					NOT = { area = zx3_area }
 					NOT = { area = jinqiu_area }
 					NOT = { area = zx4_area }
@@ -64,7 +63,6 @@ if = { # 烟化
 				limit = {
 					OR = {
 						area = moryokang_area
-						area = ml_cave5_area
 						area = zx3_area
 						area = jinqiu_area
 						area = zx4_area
@@ -468,14 +466,29 @@ if = { # 割让
 		# always = no
 	}
 	yanshen_superregion = {
-		add_core = A32
-		cede_province = A32
-		change_religion = regent_court
-		change_culture = moon_elf
+		add_core = Y11
+		cede_province = Y11
+		# change_religion = regent_court
+		# change_culture = moon_elf
 	}
-	A32 = {
-		change_religion = regent_court
-		change_culture = moon_elf
+	# A32 = {
+	# 	change_religion = regent_court
+	# 	change_culture = moon_elf
+	# }
+}
+if = {
+	limit = {
+		always = no
+	}
+	every_country = {
+		limit = {
+			capital_scope = {
+				superregion = yanshen_superregion
+			}
+		}
+		every_owned_province = {
+			cede_province = PREV
+		}
 	}
 }
 if = { # 观察者
@@ -495,8 +508,6 @@ if = { # 观察者
 }
 
 
-
-change_religion = regent_court
 # ！此效果应由蓝巾会开局事件执行！
 # Y05 = {
 # 	set_ruler_flag = tongleipai_faction_rflag

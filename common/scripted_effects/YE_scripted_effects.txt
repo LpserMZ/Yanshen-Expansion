@@ -115,7 +115,6 @@ YE_yanification_change_culture = {
 					region = yanxin_region 
 				}
 				NOT = { area = moryokang_area }
-				NOT = { area = ml_cave5_area }
 				NOT = { area = zx3_area }
 				NOT = { area = jinqiu_area }
 				NOT = { area = zx4_area }
@@ -126,7 +125,6 @@ YE_yanification_change_culture = {
 			limit = {
 				OR = {
 					area = moryokang_area
-					area = ml_cave5_area
 					area = zx3_area
 					area = jinqiu_area
 					area = zx4_area

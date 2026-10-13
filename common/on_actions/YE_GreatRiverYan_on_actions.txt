@@ -235,7 +235,6 @@ on_siege_lost_province =  {
 	# 			province_id = 7461
 	# 			province_id = 7462
 	# 		}
-	# 		NOT = { area = ml_cave5_area }
 	# 	}
 
 	# 	if = {

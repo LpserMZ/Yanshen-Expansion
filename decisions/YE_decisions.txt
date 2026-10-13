@@ -1,41 +1,41 @@
 country_decisions = {
-	YE_invest_academic_center = { #学者任务
-		major = yes
-		potential = {
-			any_owned_province = {
-				has_province_flag = YE_scholar_from_luojiang_here
-				NOT = { has_building = university }
-			}
-		}
-		provinces_to_highlight = {
-			has_province_flag = YE_scholar_from_luojiang_here
-		}
-		allow = {
-			any_owned_province = {
-				has_province_flag = YE_scholar_from_luojiang_here
-				num_of_times_improved_by_owner = 4
-				if = {
-					limit = { owner = { adm_tech = 4 } }
-					has_building = temple
-				}
-			}
-			treasury = 200
-		}
-		effect = {
-			add_treasury = -200
-			every_owned_province = {
-				limit = { 
-					has_province_flag = YE_scholar_from_luojiang_here 
-					NOT = {
-						has_building = university
-					}
-				}
-				add_building = university
-			}
-		}
-		ai_importance = 300
-		ai_will_do = { factor = 300 }
-	}
+	# YE_invest_academic_center = { #学者任务
+	# 	major = yes
+	# 	potential = {
+	# 		any_owned_province = {
+	# 			has_province_flag = YE_scholar_from_luojiang_here
+	# 			NOT = { has_building = university }
+	# 		}
+	# 	}
+	# 	provinces_to_highlight = {
+	# 		has_province_flag = YE_scholar_from_luojiang_here
+	# 	}
+	# 	allow = {
+	# 		any_owned_province = {
+	# 			has_province_flag = YE_scholar_from_luojiang_here
+	# 			num_of_times_improved_by_owner = 4
+	# 			if = {
+	# 				limit = { owner = { adm_tech = 4 } }
+	# 				has_building = temple
+	# 			}
+	# 		}
+	# 		treasury = 200
+	# 	}
+	# 	effect = {
+	# 		add_treasury = -200
+	# 		every_owned_province = {
+	# 			limit = { 
+	# 				has_province_flag = YE_scholar_from_luojiang_here 
+	# 				NOT = {
+	# 					has_building = university
+	# 				}
+	# 			}
+	# 			add_building = university
+	# 		}
+	# 	}
+	# 	ai_importance = 300
+	# 	ai_will_do = { factor = 300 }
+	# }
 
 	visit_official_university = { #探访官学
 		potential = {
@@ -923,7 +923,6 @@ country_decisions = {
 							province_id = 7461
 							province_id = 7462
 						}
-						NOT = { area = ml_cave5_area }
 						NOT = { is_core = ROOT }
 					}
 					add_territorial_core = ROOT

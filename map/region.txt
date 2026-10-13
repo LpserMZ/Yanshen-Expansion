@@ -2060,7 +2060,6 @@ upper_yanshen_region = {
 		zx6_area
 		zx7_area
 
-		ml_cave5_area
 		moryokang_area
 		jinqiu_area
 		bianyuan_area
