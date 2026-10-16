@@ -1,4 +1,10 @@
 ﻿l_english:
+ PROV7039:0 "²P‘S"
+ PROV7040:0 "1Y1ŽqS"
+
+ PROV_ADJ7039:0 "²P‘S"
+ PROV_ADJ7040:0 "1Y1ŽqS"
+
  PROV7051:0 "äQh"
  PROV7052:0 "‡N"
  PROV7053:0 "nn‘x"
@@ -27,7 +33,7 @@
  PROV7076:0 "³lQO"
  PROV7077:0 "µxÎ‘"
  PROV7078:0 "Ísï"
- PROV7079:0 "T›­S"
+ PROV7079:0 "ŠV­S"
  PROV7080:0 "÷x7Œ"
  PROV7081:0 "Ñ‘sQ"
  PROV7082:0 "*rYrB–"
@@ -234,10 +240,10 @@
  PROV7283:0 "4lônm…S"
  PROV7284:0 "Ë†óXŸz"
  PROV7285:0 "|TèTS"
- PROV7286:0 "ÛkÑSáS7Œ"
- PROV7287:0 "Ìw®vŸz"
- PROV7288:0 "+o4l)Y•N"
- PROV7289:0 "sKbm"
+ PROV7286:0 "rýqS"
+ PROV7287:0 "¬NqS"
+ PROV7288:0 "weïy­S"
+ PROV7289:0 "wm4–qS"
  PROV7290:0 "–³ltz"
  PROV7291:0 "-NTŸz"
  PROV7292:0 "‹^ÅV­^"
@@ -480,7 +486,7 @@
  PROV_ADJ7076:0 "³lQO"
  PROV_ADJ7077:0 "µxÎ‘"
  PROV_ADJ7078:0 "Ísï"
- PROV_ADJ7079:0 "T›­S"
+ PROV_ADJ7079:0 "ŠV­S"
  PROV_ADJ7080:0 "÷x7Œ"
  PROV_ADJ7081:0 "Ñ‘sQ"
  PROV_ADJ7082:0 "*rYrB–"
@@ -687,10 +693,10 @@
  PROV_ADJ7283:0 "4lônm…S"
  PROV_ADJ7284:0 "Ë†óXŸz"
  PROV_ADJ7285:0 "|TèTS"
- PROV_ADJ7286:0 "ÛkÑSáS7Œ"
- PROV_ADJ7287:0 "Ìw®vŸz"
- PROV_ADJ7288:0 "+o4l)Y•N"
- PROV_ADJ7289:0 "sKbm"
+ PROV_ADJ7286:0 "rýqS"
+ PROV_ADJ7287:0 "¬NqS"
+ PROV_ADJ7288:0 "weïy­S"
+ PROV_ADJ7289:0 "wm4–qS"
  PROV_ADJ7290:0 "–³ltz"
  PROV_ADJ7291:0 "-NTŸz"
  PROV_ADJ7292:0 "‹^ÅV­^"

@@ -463,7 +463,7 @@ if = { # 其他省份组
 
 if = { # 割让
 	limit = {
-		# always = no
+		always = no
 	}
 	yanshen_superregion = {
 		add_core = Y11
@@ -507,7 +507,7 @@ if = { # 观察者
 	}	
 }
 
-
+change_religion = accretive_path
 # ！此效果应由蓝巾会开局事件执行！
 # Y05 = {
 # 	set_ruler_flag = tongleipai_faction_rflag

@@ -12,7 +12,7 @@ technology_group = tech_halessi
 capital = 4826
 historical_rival = Y24 #Luoyip
 historical_friend = Y03 # Hubao
-set_estate_privilege = estate_church_guaranteed_autonomy
+#set_estate_privilege = estate_church_guaranteed_autonomy
 
 1000.1.1 = {
 	set_estate_privilege = estate_mages_organization_state

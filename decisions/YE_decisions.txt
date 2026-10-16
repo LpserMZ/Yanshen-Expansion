@@ -45,6 +45,9 @@ country_decisions = {
 			is_capital_of = ROOT
 		}
 		allow = {
+			hidden_trigger= {
+				has_country_flag = allow_visit_official_university_flag
+			}
 			NOT = {
 				has_country_modifier = visit_official_university_cooldown
 			}
@@ -110,6 +113,9 @@ country_decisions = {
 
 		}
 		allow = {
+			hidden_trigger = {
+				tag = YA1
+			}
 			is_subject = no
 		}
 		effect = {
@@ -148,6 +154,13 @@ country_decisions = {
 
 		}
 		allow = {
+			hidden_trigger = {
+				tag = Z66
+				ai = no
+				NOT = {
+					has_country_flag = halessi_subject_management_event_flag
+				}
+			}
 			always = yes
 		}
 		
@@ -165,7 +178,12 @@ country_decisions = {
 	switch_mission_branch_Z66 = { #切换任务分支 大辉
 		major = yes
 		potential = { tag= Z66 }
-		allow = { always = yes }
+		allow = { 
+			hidden_trigger = {
+				tag = Z66
+			}
+			always = yes 
+		}
 		effect = {
 			if = {
 				limit = {

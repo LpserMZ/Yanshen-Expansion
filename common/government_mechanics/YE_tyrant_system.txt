@@ -19,7 +19,7 @@ YE_tyrant_system = {
 			scaled_modifier = {
 				start_value = 0 # sets the start value for the scaling [optional, min is default]
 				end_value = 100 # sets the end value for the scaling [optional, max is default]
-				#extend_beyond_value = no # defines whether the scaled modifier also applies outside of the range (but then with its max/min value for the range defined) [optional, yes is default]
+				extend_beyond_value = no # defines whether the scaled modifier also applies outside of the range (but then with its max/min value for the range defined) [optional, yes is default]
 				trigger = {
 					always = yes
 				}

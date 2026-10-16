@@ -632,9 +632,9 @@ country_event = { #15 主界面
 
 	is_triggered_only = yes
 
-	trigger = {
+	# trigger = {
 
-	}
+	# }
 	option = {
 		name = YE_GRY.15.a
 		ai_chance = { factor = 1 }

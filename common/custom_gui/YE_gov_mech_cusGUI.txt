@@ -8,8 +8,12 @@ custom_button = { #1
 	name = "YE_tyrant_system_reward_veterans"
 	tooltip = button_YE_tyrant_system_reward_veterans_tooltip
 	potential = {
+		has_government_mechanic = YE_tyrant_system
 	}
 	trigger = { 
+		hidden_trigger = {
+			has_government_mechanic = YE_tyrant_system
+		}
 		monthly_adm = 10
 		if = {
 			limit = {
@@ -44,8 +48,12 @@ custom_button = { #2
 	name = "YE_tyrant_system_sponsor_harvest_festivals"
 	tooltip = button_YE_tyrant_system_sponsor_harvest_festivals_tooltip
 	potential = {
+		has_government_mechanic = YE_tyrant_system
 	}
 	trigger = { 
+		hidden_trigger = {
+			has_government_mechanic = YE_tyrant_system
+		}
 		monthly_adm = 12
 		years_of_income = 1.5
 		if = {
@@ -83,8 +91,12 @@ custom_button = { #3
 	name = "YE_tyrant_system_return_to_pragmatism"
 	tooltip = button_YE_tyrant_system_return_to_pragmatism_tooltip
 	potential = {
+		has_government_mechanic = YE_tyrant_system
 	}
 	trigger = { 
+		hidden_trigger = {
+			has_government_mechanic = YE_tyrant_system
+		}
 		monthly_dip = 10
 		if = {
 			limit = {
@@ -124,8 +136,12 @@ custom_button = { #4
 	name = "YE_tyrant_system_deploy_the_jadeite_crossguards"
 	tooltip = button_YE_tyrant_system_deploy_the_jadeite_crossguards_tooltip
 	potential = {
+		has_government_mechanic = YE_tyrant_system
 	}
 	trigger = { 
+		hidden_trigger = {
+			has_government_mechanic = YE_tyrant_system
+		}
 		monthly_mil = 10
 		num_of_generals = 1
 		army_tradition = 5
@@ -165,8 +181,12 @@ custom_button = { #5
 	name = "YE_tyrant_system_purge_officers"
 	tooltip = button_YE_tyrant_system_purge_officers_tooltip
 	potential = {
+		has_government_mechanic = YE_tyrant_system
 	}
 	trigger = { 
+		hidden_trigger = {
+			has_government_mechanic = YE_tyrant_system
+		}
 		monthly_mil = 12
 		if = {
 			limit = {
@@ -202,6 +222,7 @@ custom_icon = { # icon benvolent rank
 	name = "benelolent_ruthless_power_benevolent_rank"
 	tooltip = benelolent_ruthless_power_benevolent_rank
 	potential = {
+		has_government_mechanic = YE_tyrant_system
 		OR = {
 			has_country_modifier = benevolent_rank_V
 			has_country_modifier = benevolent_rank_IV
@@ -246,6 +267,7 @@ custom_icon = { # icon ruthless rank
 	name = "benelolent_ruthless_power_ruthless_rank"
 	tooltip = benelolent_ruthless_power_ruthless_rank
 	potential = {
+		has_government_mechanic = YE_tyrant_system
 		OR = {
 			has_country_modifier = ruthless_rank_V
 			has_country_modifier = ruthless_rank_IV

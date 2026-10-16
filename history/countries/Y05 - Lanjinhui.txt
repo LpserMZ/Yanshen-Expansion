@@ -11,9 +11,11 @@ capital = 4930
 historical_rival = Y13 #Jiangdu
 historical_friend = Y85 #Balrijin
 
-1000.1.1 = { set_estate_privilege = estate_mages_organization_state }
-1000.1.1 = { set_country_flag = anti_eunuch_country }
-1000.1.1 = { set_country_flag = ljh_jiangdu_war_flag }
+1000.1.1 = { 
+	set_estate_privilege = estate_mages_organization_state 
+	set_country_flag = anti_eunuch_country
+	set_country_flag = ljh_jiangdu_war_flag
+}
 
 1440.1.1 = {
 	monarch = {
@@ -34,10 +36,9 @@ historical_friend = Y85 #Balrijin
 		siege = 5
 		trait = frontline_holder_personality
 	}
-
-	
 }
 1444.11.1 = {
 	set_country_flag = issue_restrict_nobles_0_flag
 	set_country_flag = development_qingtong_city_0_flag
 }
+
