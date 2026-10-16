@@ -1,31 +1,31 @@
-# cb_yanzhou_unification = {
-# 	valid_for_subject = no
+cb_yanzhou_unification = {
+	valid_for_subject = no
 
-# 	prerequisites_self = { #限定tag
-# 		#is_free_or_tributary_trigger = yes
-# 		#has_government_attribute = has_unify_latin_cb
-# 		OR = { #与on_action条件一致-----on_siege_won_province
-# 			is_yan_rank_II_tag = yes
-# 			has_country_modifier = awareness_of_yan_nation 
-# 		}
+	prerequisites_self = { #限定tag
+		#is_free_or_tributary_trigger = yes
+		#has_government_attribute = has_unify_latin_cb
+		OR = { #与on_action条件一致-----on_siege_won_province
+			is_yan_rank_II_tag = yes
+			has_country_modifier = awareness_of_yan_nation 
+		}
 		
-# 	}
+	}
 
-# 	prerequisites = {
-# 		FROM = { #Applies against other powers in China unless they have the Mandate of Heaven
-# 			NOT = { is_subject_of = ROOT }
-# 			any_owned_province = {
-# 				OR = {
-# 					superregion = yanshen_superregion
-# 					province_id = 7461
-# 					province_id = 7462
-# 				}
-# 			}
-# 		}
-# 	}
+	prerequisites = {
+		FROM = { #Applies against other powers in China unless they have the Mandate of Heaven
+			NOT = { is_subject_of = ROOT }
+			any_owned_province = {
+				OR = {
+					superregion = yanshen_superregion
+					province_id = 7461
+					province_id = 7462
+				}
+			}
+		}
+	}
 
-# 	war_goal = superiority_yanzhou_unification
-# }
+	war_goal = superiority_yanzhou_unification
+}
 YE_Lianzhou_tianlou_conquest = {
 	valid_for_subject = no
     is_triggered_only = yes

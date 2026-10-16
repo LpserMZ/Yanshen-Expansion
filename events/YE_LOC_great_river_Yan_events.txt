@@ -3129,96 +3129,96 @@ country_event = { #53 大总统-新任统治者出现时触发
 	}
 }
 
-#统一战争
-# country_event = { #54 案牍劳形
-# 	id = YE_GRY.54 
-# 	title = YE_GRY.54.T
-# 	desc = YE_GRY.54.D
-# 	picture = BAD_WITH_MONARCH_eventPicture
+# 统一战争
+country_event = { #54 案牍劳形
+	id = YE_GRY.54 
+	title = YE_GRY.54.T
+	desc = YE_GRY.54.D
+	picture = BAD_WITH_MONARCH_eventPicture
 
-# 	is_triggered_only = yes
+	is_triggered_only = yes
 
-# 	trigger = {
-# 		overextension_percentage = 1.4
-# 		is_in_war = {
-# 			attacker_leader = THIS
-# 			casus_belli = cb_yanzhou_unification
-# 		}
-# 		NOT = {
-# 			has_country_modifier = gov_effeciency_decline
-# 		}
-# 		NOT = {
-# 			has_country_flag = YE_GRY_54_flag
-# 		}
-# 	}
-# 	immediate = {
-# 		set_country_flag = YE_GRY_54_flag
-# 	}
-# 	option = {
-# 		name = YE_GRY.54.a
-# 		ai_chance = { 
-# 			factor = 1 
-# 			modifier = {
-# 				factor = 2
-# 				overextension_percentage = 1.8
-# 			}
-# 			modifier = {
-# 				factor = 4
-# 				overextension_percentage = 2.4
-# 			}
-# 		}
-# 		random_war_enemy_country = {
-# 			limit = {
-# 				is_in_war = {
-# 					attacker_leader = ROOT
-# 					defender_leader = THIS
-# 					casus_belli = cb_yanzhou_unification
-# 				}
-# 			}
-# 			white_peace = ROOT
-# 			save_event_target_as = defender_country
-# 		}
-# 		event_target:defender_country = {
-# 			country_event = {
-# 				id = YE_GRY.55
-# 			}
-# 		}
-# 	}
-# 	option = {
-# 		name = YE_GRY.54.b
-# 		ai_chance = { factor = 1 }
-# 		if = {
-# 			limit = {
-# 				overextension_percentage = 1
-# 			}
-# 			add_country_modifier = {
-# 				name = gov_effeciency_decline
-# 				duration = 365
-# 			}
-# 		}
+	trigger = {
+		overextension_percentage = 1.4
+		is_in_war = {
+			attacker_leader = THIS
+			casus_belli = cb_yanzhou_unification
+		}
+		NOT = {
+			has_country_modifier = gov_effeciency_decline
+		}
+		NOT = {
+			has_country_flag = YE_GRY_54_flag
+		}
+	}
+	immediate = {
+		set_country_flag = YE_GRY_54_flag
+	}
+	option = {
+		name = YE_GRY.54.a
+		ai_chance = { 
+			factor = 1 
+			modifier = {
+				factor = 2
+				overextension_percentage = 1.8
+			}
+			modifier = {
+				factor = 4
+				overextension_percentage = 2.4
+			}
+		}
+		random_war_enemy_country = {
+			limit = {
+				is_in_war = {
+					attacker_leader = ROOT
+					defender_leader = THIS
+					casus_belli = cb_yanzhou_unification
+				}
+			}
+			white_peace = ROOT
+			save_event_target_as = defender_country
+		}
+		event_target:defender_country = {
+			country_event = {
+				id = YE_GRY.55
+			}
+		}
+	}
+	option = {
+		name = YE_GRY.54.b
+		ai_chance = { factor = 1 }
+		if = {
+			limit = {
+				overextension_percentage = 1
+			}
+			add_country_modifier = {
+				name = gov_effeciency_decline
+				duration = 365
+			}
+		}
 		
-# 	}
-# 	after = {
-# 		clr_country_flag = YE_GRY_54_flag
-# 	}
-# }
-# country_event = { #55 #停战通知
-# 	id = YE_GRY.55
-# 	title = YE_GRY.55.T
-# 	desc = YE_GRY.55.D
-# 	picture = BAD_WITH_MONARCH_eventPicture
+	}
+	after = {
+		clr_country_flag = YE_GRY_54_flag
+	}
+}
+country_event = { #55 #停战通知
+	id = YE_GRY.55
+	title = YE_GRY.55.T
+	desc = YE_GRY.55.D
+	picture = BAD_WITH_MONARCH_eventPicture
 
-# 	is_triggered_only = yes
+	is_triggered_only = yes
 
-# 	trigger = {
-# 	}
-# 	immediate = {
-# 	}
-# 	option = {
-# 		name = YE_GRY.55.a
-# 		ai_chance = { factor = 1 }
-# 	}
-# }
+	trigger = {
+	}
+	immediate = {
+	}
+	option = {
+		name = YE_GRY.55.a
+		ai_chance = { factor = 1 }
+	}
+}
 
 
 #烟中帛幡毁坏

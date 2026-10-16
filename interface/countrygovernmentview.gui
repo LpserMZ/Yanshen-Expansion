@@ -2721,73 +2721,73 @@ guiTypes = {
 			}
 		}
 	
-		windowType = { #YE_tyrant_system_buttons_window
-			name = "YE_tyrant_system_buttons_window"
-			position = { x = 32 y = 235 }
-			moveable = 0
-			Orientation = "UPPER_LEFT"
-			scripted = yes
+		# windowType = { #YE_tyrant_system_buttons_window
+		# 	name = "YE_tyrant_system_buttons_window"
+		# 	position = { x = 32 y = 235 }
+		# 	moveable = 0
+		# 	Orientation = "UPPER_LEFT"
+		# 	scripted = yes
 
-			guiButtonType ={ # 1
-				name ="YE_tyrant_system_reward_veterans"
-				quadTextureSprite = "GFX_YE_tyrant_system_reward_veterans"
-				position = { x= 43 y = 65 }
-				Orientation = "UPPER_LEFT"
+		# 	guiButtonType ={ # 1
+		# 		name ="YE_tyrant_system_reward_veterans"
+		# 		quadTextureSprite = "GFX_YE_tyrant_system_reward_veterans"
+		# 		position = { x= 43 y = 65 }
+		# 		Orientation = "UPPER_LEFT"
 
-				scripted = yes
-				clicksound = back_click
-			}
-			guiButtonType ={ # 2
-				name ="YE_tyrant_system_sponsor_harvest_festivals"
-				quadTextureSprite = "GFX_YE_tyrant_system_sponsor_harvest_festivals"
-				position = { x= 102 y = 67 }
-				Orientation = "UPPER_LEFT"
+		# 		scripted = yes
+		# 		clicksound = back_click
+		# 	}
+		# 	guiButtonType ={ # 2
+		# 		name ="YE_tyrant_system_sponsor_harvest_festivals"
+		# 		quadTextureSprite = "GFX_YE_tyrant_system_sponsor_harvest_festivals"
+		# 		position = { x= 102 y = 67 }
+		# 		Orientation = "UPPER_LEFT"
 
-				scripted = yes
-				clicksound = back_click
-			}
-			guiButtonType ={ # 3
-				name ="YE_tyrant_system_return_to_pragmatism"
-				quadTextureSprite = "GFX_YE_tyrant_system_return_to_pragmatism"
-				position = { x= 120 y = 5 }
-				Orientation = "UPPER_LEFT"
+		# 		scripted = yes
+		# 		clicksound = back_click
+		# 	}
+		# 	guiButtonType ={ # 3
+		# 		name ="YE_tyrant_system_return_to_pragmatism"
+		# 		quadTextureSprite = "GFX_YE_tyrant_system_return_to_pragmatism"
+		# 		position = { x= 120 y = 5 }
+		# 		Orientation = "UPPER_LEFT"
 
-				scripted = yes
-				clicksound = back_click
-			}
-			guiButtonType ={ # 4
-				name ="YE_tyrant_system_deploy_the_jadeite_crossguards"
-				quadTextureSprite = "GFX_YE_tyrant_system_deploy_the_jadeite_crossguards"
-				position = { x= 158 y = 67 }
-				Orientation = "UPPER_LEFT"
+		# 		scripted = yes
+		# 		clicksound = back_click
+		# 	}
+		# 	guiButtonType ={ # 4
+		# 		name ="YE_tyrant_system_deploy_the_jadeite_crossguards"
+		# 		quadTextureSprite = "GFX_YE_tyrant_system_deploy_the_jadeite_crossguards"
+		# 		position = { x= 158 y = 67 }
+		# 		Orientation = "UPPER_LEFT"
 
-				scripted = yes
-				clicksound = back_click
-			}
-			guiButtonType ={ # 5
-				name ="YE_tyrant_system_purge_officers"
-				quadTextureSprite = "GFX_YE_tyrant_system_purge_officers"
-				position = { x= 210 y = 67 }
-				Orientation = "UPPER_LEFT"
+		# 		scripted = yes
+		# 		clicksound = back_click
+		# 	}
+		# 	guiButtonType ={ # 5
+		# 		name ="YE_tyrant_system_purge_officers"
+		# 		quadTextureSprite = "GFX_YE_tyrant_system_purge_officers"
+		# 		position = { x= 210 y = 67 }
+		# 		Orientation = "UPPER_LEFT"
 
-				scripted = yes
-				clicksound = back_click
-			}
-			iconType = { #
-				name = benelolent_ruthless_power_benevolent_rank
-				position = { x = 9 y = 43 }
-				quadTextureSprite ="GFX_benelolent_ruthless_power_benevolent_rank"
-				scripted = yes
-				#alwaystransparent = yes
-			}
-			iconType = { #
-				name = benelolent_ruthless_power_ruthless_rank
-				position = { x = 263 y = 43 }
-				quadTextureSprite ="GFX_benelolent_ruthless_power_ruthless_rank"
-				scripted = yes
-				#alwaystransparent = yes
-			}
-		}
+		# 		scripted = yes
+		# 		clicksound = back_click
+		# 	}
+		# 	iconType = { #
+		# 		name = benelolent_ruthless_power_benevolent_rank
+		# 		position = { x = 9 y = 43 }
+		# 		quadTextureSprite ="GFX_benelolent_ruthless_power_benevolent_rank"
+		# 		scripted = yes
+		# 		#alwaystransparent = yes
+		# 	}
+		# 	iconType = { #
+		# 		name = benelolent_ruthless_power_ruthless_rank
+		# 		position = { x = 263 y = 43 }
+		# 		quadTextureSprite ="GFX_benelolent_ruthless_power_ruthless_rank"
+		# 		scripted = yes
+		# 		#alwaystransparent = yes
+		# 	}
+		# }
 		
 	}
 	#1.35 new until line 938
