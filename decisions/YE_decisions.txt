@@ -1,41 +1,41 @@
 country_decisions = {
-	# YE_invest_academic_center = { #学者任务
-	# 	major = yes
-	# 	potential = {
-	# 		any_owned_province = {
-	# 			has_province_flag = YE_scholar_from_luojiang_here
-	# 			NOT = { has_building = university }
-	# 		}
-	# 	}
-	# 	provinces_to_highlight = {
-	# 		has_province_flag = YE_scholar_from_luojiang_here
-	# 	}
-	# 	allow = {
-	# 		any_owned_province = {
-	# 			has_province_flag = YE_scholar_from_luojiang_here
-	# 			num_of_times_improved_by_owner = 4
-	# 			if = {
-	# 				limit = { owner = { adm_tech = 4 } }
-	# 				has_building = temple
-	# 			}
-	# 		}
-	# 		treasury = 200
-	# 	}
-	# 	effect = {
-	# 		add_treasury = -200
-	# 		every_owned_province = {
-	# 			limit = { 
-	# 				has_province_flag = YE_scholar_from_luojiang_here 
-	# 				NOT = {
-	# 					has_building = university
-	# 				}
-	# 			}
-	# 			add_building = university
-	# 		}
-	# 	}
-	# 	ai_importance = 300
-	# 	ai_will_do = { factor = 300 }
-	# }
+	YE_invest_academic_center = { #学者任务
+		major = yes
+		potential = {
+			any_owned_province = {
+				has_province_flag = YE_scholar_from_luojiang_here
+				NOT = { has_building = university }
+			}
+		}
+		provinces_to_highlight = {
+			has_province_flag = YE_scholar_from_luojiang_here
+		}
+		allow = {
+			any_owned_province = {
+				has_province_flag = YE_scholar_from_luojiang_here
+				num_of_times_improved_by_owner = 4
+				if = {
+					limit = { owner = { adm_tech = 4 } }
+					has_building = temple
+				}
+			}
+			treasury = 200
+		}
+		effect = {
+			add_treasury = -200
+			every_owned_province = {
+				limit = { 
+					has_province_flag = YE_scholar_from_luojiang_here 
+					NOT = {
+						has_building = university
+					}
+				}
+				add_building = university
+			}
+		}
+		ai_importance = 300
+		ai_will_do = { factor = 300 }
+	}
 
 	visit_official_university = { #探访官学
 		potential = {
@@ -1058,7 +1058,7 @@ country_decisions = {
 	ljh_faction_recuit_armoured_army = {
 		major = no
 		potential = {
-			has_ruler_flag = tongleipai_faction_rflag
+			has_country_flag = tongleipai_faction_flag
 		}
 		allow = {
 			army_tradition = 10
@@ -1097,7 +1097,7 @@ country_decisions = {
 	ljh_faction_racial_tolerance = {
 		major = no
 		potential = {
-			has_ruler_flag = nongshanpai_faction_rflag
+			has_country_flag = nongshanpai_faction_flag
 		}
 		allow = {
 			faction_in_power = nongshanpai
@@ -1122,10 +1122,11 @@ country_decisions = {
 			factor = 50
 		}
 	}
+
 	ljh_faction_peaceful_image = {
 		major = no
 		potential = {
-			has_ruler_flag = nongshanpai_faction_rflag
+			has_country_flag = nongshanpai_faction_flag
 		}
 		allow = {
 			dip_power = 100
@@ -1166,11 +1167,10 @@ country_decisions = {
 		}
 	}
 
-
 	ljh_faction_recuit_wuxia = {
 		major = no
 		potential = {
-			has_ruler_flag = renxiapai_faction_rflag
+			has_country_flag = renxiapai_faction_flag
 		}
 		allow = {
 			treasury = 100
@@ -1291,11 +1291,11 @@ country_decisions = {
 	ljh_faction_moral_instruction = {
 		major = no
 		potential = {
-			has_ruler_flag = renxiapai_faction_rflag
+			has_country_flag = renxiapai_faction_flag
 		}
 		allow = {
 			NOT = { 
-				has_ruler_flag = ljh_faction_moral_instruction 
+				has_ruler_flag = ljh_faction_moral_instruction_flag
 			}
 			NOT = {
 				has_ruler_modifier = YE_lanjinhui_ruler_action_cooldown_modifier
@@ -1328,7 +1328,7 @@ country_decisions = {
 	ljh_faction_build_university = {
 		major = no
 		potential = {
-			has_ruler_flag = yanzhoupai_faction_rflag
+			has_country_flag = yanzhoupai_faction_flag
 		}
 		allow = {
 			treasury = 500
@@ -1352,6 +1352,7 @@ country_decisions = {
 			factor = 50
 		}
 	}
+
 	# <decision> = {
 	# 	major = no
 	# 	potential = {

@@ -1,22 +1,15 @@
 lanjinhui_military_government = {
-	icon = "lanjinhui_military_government"
+	icon = "lanjinhui_military_government_icon"
 	allow_normal_conversion = no
 	lock_level_when_selected = yes
 	potential = {
-		OR = {
-			tag = Y05
-			was_tag = Y05
-		}
-		
-		OR = {
-			has_reform = lanjinhui_military_government
-			have_had_reform = lanjinhui_military_government
-		}
+		has_reform = lanjinhui_military_government
 	}
 	valid_for_nation_designer = yes
-	nation_designer_cost = 20
+	nation_designer_cost = 50
 	legacy_equivalent = peasants_republic_legacy
 	republican_name = no
+	duration = 5
 	modifiers = {
 		production_efficiency = 0.1
 		land_morale = 0.10
@@ -25,8 +18,8 @@ lanjinhui_military_government = {
 		province_warscore_cost = -0.10
 		max_absolutism = -10
 		parliament_effect_duration = -6
+		# max_terms = 2
 		# parliament_backing_chance = 0.25
-		election_cycle = 1
 	}
 	effect = {}
 	factions = {
@@ -46,9 +39,12 @@ lanjinhui_military_government = {
 		enables_aristocratic_idea_group = no
 		has_parliament = yes
 		is_peasants_republic = yes
-		#election_on_death = yes
-		#anb_special_elections = yes
+		has_limited_terms = yes
+		anb_special_elections = yes
 	}
 	has_term_election = yes
 
+	ai = {
+		factor = 1
+	}
 }

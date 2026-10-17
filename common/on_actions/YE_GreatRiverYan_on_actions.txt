@@ -40,6 +40,12 @@ on_startup = {
 
 		Y18 = { country_event = { id = YE_GRY.57 days = 10 } }
 
+		Y05 = {
+			set_variable = {
+				which = election_term
+				value = 1
+			}
+		}
 		YE_add_special_prov_modifier = yes
 		
 		set_global_flag = YE_GRY_startup_gflag

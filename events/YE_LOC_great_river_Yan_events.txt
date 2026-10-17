@@ -206,14 +206,14 @@ province_event = { #6 罗邑事件——开始游历
 	option = {
 		name = YE_GRY.6.a
 		ai_chance = { factor = 1 }
-		# hidden_effect = {
-		# 	4896 = {
-		# 		province_event = {
-		# 			id = YE_GRY.7
-		# 			days = 30
-		# 		}
-		# 	}
-		# }
+		hidden_effect = {
+			4896 = {
+				province_event = {
+					id = YE_GRY.7
+					days = 30
+				}
+			}
+		}
 	}
 }
 

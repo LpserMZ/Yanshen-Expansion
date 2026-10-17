@@ -215,7 +215,6 @@ country_event = { #5 选举
 	desc = YE_ljh.5.D
 	picture = GREAT_SPIRIT_YANHE_eventPicture
 
-	#fire_only_once = yes
 	is_triggered_only = yes
 
 	trigger = {
@@ -226,30 +225,56 @@ country_event = { #5 选举
 	}
 	immediate = {
 		set_country_flag = YE_in_lanjin_election_flag
+		# 记录旧派系
+		if = { limit = { has_country_flag = tongleipai_faction_flag } set_country_flag = YE_was_tongleipai_flag }
+		if = { limit = { has_country_flag = nongshanpai_faction_flag } set_country_flag = YE_was_nongshanpai_flag }
+		if = { limit = { has_country_flag = waqiaopai_faction_flag } set_country_flag = YE_was_waqiaopai_flag }
+		if = { limit = { has_country_flag = renxiapai_faction_flag } set_country_flag = YE_was_renxiapai_flag }
+		if = { limit = { has_country_flag = yanzhoupai_faction_flag } set_country_flag = YE_was_yanzhoupai_flag }
+		# 清除所有派系 flag
+		clr_country_flag = tongleipai_faction_flag
+		clr_country_flag = nongshanpai_faction_flag
+		clr_country_flag = waqiaopai_faction_flag
+		clr_country_flag = renxiapai_faction_flag
+		clr_country_flag = yanzhoupai_faction_flag
+	}
+	after = {
+		clr_country_flag = YE_was_tongleipai_flag
+		clr_country_flag = YE_was_nongshanpai_flag
+		clr_country_flag = YE_was_waqiaopai_flag
+		clr_country_flag = YE_was_renxiapai_flag
+		clr_country_flag = YE_was_yanzhoupai_flag
+		clr_country_flag = YE_in_lanjin_election_flag
 	}
 
-	option = { #留任
-        name = YE_ljh.5.z
-        trigger = {
-            NOT = { has_ruler_flag = YE_reelection_flag }
-        }
-        change_adm = 1
+	option = { # 连任
+		name = YE_ljh.5.z
+		ai_chance = { factor = 2 }
+		trigger = {
+			NOT = { has_country_flag = YE_lanjin_reelection_flag }
+		}
+		custom_tooltip = remains_ruler
+		change_adm = 1
 		change_dip = 1
 		change_mil = 1
 		add_scaled_republican_tradition = -10
-        set_ruler_flag = YE_reelection_flag
-    }
+		set_country_flag = YE_lanjin_reelection_flag
+		# 恢复旧派系 flag
+		if = { limit = { has_country_flag = YE_was_tongleipai_flag } set_country_flag = tongleipai_faction_flag }
+		if = { limit = { has_country_flag = YE_was_nongshanpai_flag } set_country_flag = nongshanpai_faction_flag }
+		if = { limit = { has_country_flag = YE_was_waqiaopai_flag } set_country_flag = waqiaopai_faction_flag }
+		if = { limit = { has_country_flag = YE_was_renxiapai_flag } set_country_flag = renxiapai_faction_flag }
+		if = { limit = { has_country_flag = YE_was_yanzhoupai_flag } set_country_flag = yanzhoupai_faction_flag }
+	}
 	option = { # 铜垒
-        name = YE_ljh.5.a
-        trigger = {
-            OR = {
-                has_faction = tongleipai_I
-                has_faction = tongleipai_II
-            }
-        }
+		name = YE_ljh.5.a
+		ai_chance = { factor = 1 }
+		trigger = {
+			has_faction = tongleipai_I
+		}
 		if = {
 			limit = {
-				has_ruler_flag = waqiaopai_faction_rflag
+				has_country_flag = YE_was_waqiaopai_flag
 			}
 			custom_tooltip = ljh_waqiaopai_fail_reelection_tooltip
 			add_adm_power = -200
@@ -257,30 +282,16 @@ country_event = { #5 选举
 			add_mil_power = -200
 		}
 
-        define_ruler = {
-            change_adm = 1
-            change_mil = 1        
-        }
-		if = {
-			limit = {
-				has_faction = tongleipai_I
-			}
-			add_faction_influence = {
-				faction = tongleipai_I
-				influence = 10
-			}			
+		define_ruler = {
+			change_adm = 1
+			change_mil = 1        
 		}
-		if = {
-			limit = {
-				has_faction = tongleipai_II
-			}
-			add_faction_influence = {
-				faction = tongleipai_II
-				influence = 10
-			}			
+		add_faction_influence = {
+			faction = tongleipai_I
+			influence = 10
 		}
-
-        set_ruler_flag = tongleipai_faction_rflag
+		set_country_flag = tongleipai_faction_flag
+		clr_country_flag = YE_lanjin_reelection_flag
 		custom_tooltip = ljh_tongleipai_ruler_tooltip
 		hidden_effect = {
 			every_owned_province = {
@@ -289,6 +300,7 @@ country_event = { #5 选举
 			every_country = {
 				limit = {
 					government = monarchy
+					NOT = { tag = ROOT }
 				}
 				add_opinion = {
 					who = ROOT
@@ -300,15 +312,16 @@ country_event = { #5 选举
 				}
 			}
 		}
-    }
-    option = { # 农山
-        name = YE_ljh.5.b
-        trigger = {
-            has_faction = nongshanpai
-        }
+	}
+	option = { # 农山
+		name = YE_ljh.5.b
+		ai_chance = { factor = 1 }
+		trigger = {
+			has_faction = nongshanpai
+		}
 		if = {
 			limit = {
-				has_ruler_flag = waqiaopai_faction_rflag
+				has_country_flag = YE_was_waqiaopai_flag
 			}
 			custom_tooltip = ljh_waqiaopai_fail_reelection_tooltip
 			add_adm_power = -200
@@ -316,91 +329,81 @@ country_event = { #5 选举
 			add_mil_power = -200
 		}
 
-        define_ruler = {
-            change_adm = 1
-            change_dip = 1
-        }
-		if = {
-			limit = {
-				has_faction = nongshanpai
-			}
-			add_faction_influence = {
-				faction = nongshanpai
-				influence = 10
-			}			
+		define_ruler = {
+			change_adm = 1
+			change_dip = 1
 		}
-        set_ruler_flag = nongshanpai_faction_rflag
-    }
-    option = { # 瓦桥
-        name = YE_ljh.5.c
-        trigger = {
-            has_faction = waqiaopai
-        }
+		add_faction_influence = {
+			faction = nongshanpai
+			influence = 10
+		}
+		set_country_flag = nongshanpai_faction_flag
+		clr_country_flag = YE_lanjin_reelection_flag
+	}
+	option = { # 瓦桥
+		name = YE_ljh.5.c
+		ai_chance = { factor = 1 }
+		trigger = {
+			has_faction = waqiaopai
+		}
 		custom_tooltip = ljh_waqiaopai_tooltip
 		if = {
 			limit = {
-				has_ruler_flag = waqiaopai_faction_rflag
+				has_country_flag = YE_was_waqiaopai_flag
 			}
 			add_adm_power = 100
 			add_dip_power = 100
 			add_mil_power = 100
 		}
-        define_ruler = {
-            change_adm = 1
-            change_dip = 2
-        }
-		if = {
-			limit = {
-				has_faction = waqiaopai
-			}
-			add_faction_influence = {
-				faction = waqiaopai
-				influence = 10
-			}			
-		}   
+		define_ruler = {
+			change_adm = 1
+			change_dip = 2
+		}
+		add_faction_influence = {
+			faction = waqiaopai
+			influence = 10
+		}
 		add_ruler_modifier = {
 			name = waqiaopai_ruler_modifier
 			duration = -1
 		}
-		set_ruler_flag = waqiaopai_faction_rflag
-
-    }
-    option = { # 任侠
-        name = YE_ljh.5.d
-        trigger = {
-            has_faction = renxiapai
-        }
+		set_country_flag = waqiaopai_faction_flag
+		clr_country_flag = YE_lanjin_reelection_flag
+	}
+	option = { # 任侠
+		name = YE_ljh.5.d
+		ai_chance = { factor = 1 }
+		trigger = {
+			has_faction = renxiapai
+		}
 		if = {
 			limit = {
-				has_ruler_flag = waqiaopai_faction_rflag
+				has_country_flag = YE_was_waqiaopai_flag
 			}
 			custom_tooltip = ljh_waqiaopai_fail_reelection_tooltip
 			add_adm_power = -200
 			add_dip_power = -200
 			add_mil_power = -200
 		}
-        define_ruler = {
-            change_adm = 2
-        }
-		if = {
-			limit = {
-				has_faction = renxiapai
-			}
-			add_faction_influence = {
-				faction = renxiapai
-				influence = 10
-			}			
+		define_ruler = {
+			change_adm = 2
 		}
-        set_ruler_flag = renxiapai_faction_rflag
-    }
-    option = { # 湮州
-        name = YE_ljh.5.e
-        trigger = {
-            has_faction = yanzhoupai
-        }
+		add_faction_influence = {
+			faction = renxiapai
+			influence = 10
+		}
+		set_country_flag = renxiapai_faction_flag
+		clr_country_flag = YE_lanjin_reelection_flag
+	}
+	option = { # 湮州
+		name = YE_ljh.5.e
+		ai_chance = { factor = 1 }
+		trigger = {
+			has_faction = yanzhoupai
+		}
 		if = {
 			limit = {
-				has_ruler_flag = waqiaopai_faction_rflag
+				has_country_flag = YE_was_waqiaopai_flag
 			}
 			custom_tooltip = ljh_waqiaopai_fail_reelection_tooltip
 			add_adm_power = -200
@@ -408,23 +411,15 @@ country_event = { #5 选举
 			add_mil_power = -200
 		}
 
-        define_ruler = {
-            change_dip = 3
-        }
-		if = {
-			limit = {
-				has_faction = yanzhoupai
-			}
-			add_faction_influence = {
-				faction = yanzhoupai
-				influence = 10
-			}			
+		define_ruler = {
+			change_dip = 3
 		}
-        set_ruler_flag = yanzhoupai_faction_rflag
-    }
-	
-	after = {
-		clr_country_flag = YE_in_lanjin_election_flag
+		add_faction_influence = {
+			faction = yanzhoupai
+			influence = 10
+		}
+		set_country_flag = yanzhoupai_faction_flag
+		clr_country_flag = YE_lanjin_reelection_flag
 	}
 }
 
@@ -444,19 +439,32 @@ country_event = { #6 国葬
 	}
 	immediate = {
 		set_country_flag = YE_in_lanjin_election_flag
+		if = { 
+			limit = { 
+				has_country_flag = waqiaopai_faction_flag 
+			} 
+			set_country_flag = YE_was_waqiaopai_flag 
+		}
+		clr_country_flag = tongleipai_faction_flag
+		clr_country_flag = nongshanpai_faction_flag
+		clr_country_flag = waqiaopai_faction_flag
+		clr_country_flag = renxiapai_faction_flag
+		clr_country_flag = yanzhoupai_faction_flag
 	}
-
+	after = {
+		clr_country_flag = YE_was_waqiaopai_flag
+		clr_country_flag = YE_in_lanjin_election_flag
+		clr_country_flag = YE_lanjin_reelection_flag
+	}
 	option = {
-        name = YE_ljh.6.a
-        trigger = {
-            OR = {
-                has_faction = tongleipai_I
-                has_faction = tongleipai_II
-            }
-        }
+		name = YE_ljh.6.a
+		ai_chance = { factor = 1 }
+		trigger = {
+			has_faction = tongleipai_I
+		}
 		if = {
 			limit = {
-				has_ruler_flag = waqiaopai_faction_rflag
+				has_country_flag = YE_was_waqiaopai_flag
 			}
 			custom_tooltip = ljh_waqiaopai_fail_reelection_tooltip
 			add_adm_power = -200
@@ -464,40 +472,24 @@ country_event = { #6 国葬
 			add_mil_power = -200
 		}
 
-        define_ruler = {
-            adm = 1
-            mil = 1        
-            max_random_adm = 6
-            max_random_dip = 6
-            max_random_mil = 6
-        }
-		if = {
-			limit = {
-				has_faction = tongleipai_I
-			}
-			add_faction_influence = {
-				faction = tongleipai_I
-				influence = 10
-			}			
+		define_ruler = {
+			change_adm = 1
+			change_mil = 1        
 		}
-		if = {
-			limit = {
-				has_faction = tongleipai_II
-			}
-			add_faction_influence = {
-				faction = tongleipai_II
-				influence = 10
-			}			
+		add_faction_influence = {
+			faction = tongleipai_I
+			influence = 10
 		}
-        set_ruler_flag = tongleipai_faction_rflag
+		set_country_flag = tongleipai_faction_flag
 		custom_tooltip = ljh_tongleipai_ruler_tooltip
 		hidden_effect = {
 			every_owned_province = {
 				add_nationalism = 5
 			}
-			every_country = {
+			every_known_country = {
 				limit = {
 					government = monarchy
+					NOT = { tag = ROOT }
 				}
 				add_opinion = {
 					who = ROOT
@@ -509,15 +501,16 @@ country_event = { #6 国葬
 				}
 			}
 		}
-    }
-    option = {
-        name = YE_ljh.6.b
-        trigger = {
-            has_faction = nongshanpai
-        }
-        if = {
+	}
+	option = {
+		name = YE_ljh.6.b
+		ai_chance = { factor = 1 }
+		trigger = {
+			has_faction = nongshanpai
+		}
+		if = {
 			limit = {
-				has_ruler_flag = waqiaopai_faction_rflag
+				has_country_flag = YE_was_waqiaopai_flag
 			}
 			custom_tooltip = ljh_waqiaopai_fail_reelection_tooltip
 			add_adm_power = -200
@@ -526,32 +519,25 @@ country_event = { #6 国葬
 		}
 
 		define_ruler = {
-            adm = 1
-            dip = 1
-            max_random_adm = 6
-            max_random_dip = 6
-            max_random_mil = 6
-        }
-		if = {
-			limit = {
-				has_faction = nongshanpai
-			}
-			add_faction_influence = {
-				faction = nongshanpai
-				influence = 10
-			}			
+			change_adm = 1
+			change_dip = 1
 		}
-        set_ruler_flag = nongshanpai_faction_rflag
-    }
-    option = {
-        name = YE_ljh.6.c
-        trigger = {
-            has_faction = waqiaopai
-        }	
+		add_faction_influence = {
+			faction = nongshanpai
+			influence = 10
+		}
+		set_country_flag = nongshanpai_faction_flag
+	}
+	option = {
+		name = YE_ljh.6.c
+		ai_chance = { factor = 1 }
+		trigger = {
+			has_faction = waqiaopai
+		}
 		custom_tooltip = ljh_waqiaopai_tooltip
 		if = {
 			limit = {
-				has_ruler_flag = waqiaopai_faction_rflag
+				has_country_flag = YE_was_waqiaopai_flag
 			}
 			add_adm_power = 100
 			add_dip_power = 100
@@ -559,94 +545,68 @@ country_event = { #6 国葬
 		}
 
 		define_ruler = {
-            adm = 1
-            dip = 2
-            max_random_adm = 6
-            max_random_dip = 6
-            max_random_mil = 6
-        }
-		if = {
-			limit = {
-				has_faction = waqiaopai
-			}
-			add_faction_influence = {
-				faction = waqiaopai
-				influence = 10
-			}			
+			change_adm = 1
+			change_dip = 2
 		}
-        add_ruler_modifier = {
+		add_faction_influence = {
+			faction = waqiaopai
+			influence = 10
+		}
+		add_ruler_modifier = {
 			name = waqiaopai_ruler_modifier
 			duration = -1
 		}
-		set_ruler_flag = waqiaopai_faction_rflag
-    }
-    option = {
-        name = YE_ljh.6.d
-        trigger = {
-            has_faction = renxiapai
-        }
-        if = {
+		set_country_flag = waqiaopai_faction_flag
+	}
+	option = {
+		name = YE_ljh.6.d
+		ai_chance = { factor = 1 }
+		trigger = {
+			has_faction = renxiapai
+		}
+		if = {
 			limit = {
-				has_ruler_flag = waqiaopai_faction_rflag
+				has_country_flag = YE_was_waqiaopai_flag
 			}
 			custom_tooltip = ljh_waqiaopai_fail_reelection_tooltip
 			add_adm_power = -200
 			add_dip_power = -200
 			add_mil_power = -200
 		}
-		
+
 		define_ruler = {
-            adm = 2
-            max_random_adm = 6
-            max_random_dip = 6
-            max_random_mil = 6
-        }
+			change_adm = 2
+		}
+		add_faction_influence = {
+			faction = renxiapai
+			influence = 10
+		}
+		set_country_flag = renxiapai_faction_flag
+	}
+	option = {
+		name = YE_ljh.6.e
+		ai_chance = { factor = 1 }
+		trigger = {
+			has_faction = yanzhoupai
+		}
 		if = {
 			limit = {
-				has_faction = renxiapai
-			}
-			add_faction_influence = {
-				faction = renxiapai
-				influence = 10
-			}			
-		}
-        set_ruler_flag = renxiapai_faction_rflag
-    }
-    option = {
-        name = YE_ljh.6.e
-        trigger = {
-            has_faction = yanzhoupai
-        }
-        if = {
-			limit = {
-				has_ruler_flag = waqiaopai_faction_rflag
+				has_country_flag = YE_was_waqiaopai_flag
 			}
 			custom_tooltip = ljh_waqiaopai_fail_reelection_tooltip
 			add_adm_power = -200
 			add_dip_power = -200
 			add_mil_power = -200
 		}
-		
+
 		define_ruler = {
-            dip = 3
-            max_random_adm = 6
-            max_random_dip = 6
-            max_random_mil = 6
-        }
-		if = {
-			limit = {
-				has_faction = yanzhoupai
-			}
-			add_faction_influence = {
-				faction = yanzhoupai
-				influence = 10
-			}			
+			change_dip = 3
 		}
-        set_ruler_flag = yanzhoupai_faction_rflag
-    }
-	
-	after = {
-		clr_country_flag = YE_in_lanjin_election_flag
+		add_faction_influence = {
+			faction = yanzhoupai
+			influence = 10
+		}
+		set_country_flag = yanzhoupai_faction_flag
 	}
 }
 
