@@ -1,5 +1,7 @@
 country_decisions = {
 	### 修改项 烟心、大辉、烟州
+	
+	### 狐狸修改项 莲州成立决议
 	guwaamud_nation = { #Guwaamud
 		major = yes
 		potential = {
@@ -778,25 +780,25 @@ country_decisions = {
 					move_capital_effect = yes 
 				}
 			}
-			if = {
-				limit = {
-					NOT = {
-						government = monarchy
-					}
-				}
-				change_government = monarchy
-				add_government_reform = liangzhu_reform
-			}
-			else_if = {
-				limit = {
-					government = monarchy
-					NOT = {
-						has_reform = liangzhu_reform
-						has_reform = flame_custodian_reform
-					}
-				}
-				add_government_reform = liangzhu_reform
-			}
+			# if = {
+			# 	limit = {
+			# 		NOT = {
+			# 			government = monarchy
+			# 		}
+			# 	}
+			# 	change_government = monarchy
+			# 	add_government_reform = liangzhu_reform
+			# }
+			# else_if = {
+			# 	limit = {
+			# 		government = monarchy
+			# 		NOT = {
+			# 			has_reform = liangzhu_reform
+			# 			has_reform = flame_custodian_reform
+			# 		}
+			# 	}
+			# 	add_government_reform = liangzhu_reform
+			# }
 			if = {
 				limit = { has_custom_ideas = no }
 				country_event = { id = ideagroups.1 } #Swap Ideas
