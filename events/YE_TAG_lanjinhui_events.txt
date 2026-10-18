@@ -245,6 +245,7 @@ country_event = { #5 选举
 		clr_country_flag = YE_was_renxiapai_flag
 		clr_country_flag = YE_was_yanzhoupai_flag
 		clr_country_flag = YE_in_lanjin_election_flag
+		YE_ljh_clr_death_decision_effect = yes
 	}
 
 	option = { # 连任
@@ -449,12 +450,13 @@ country_event = { #6 国葬
 		clr_country_flag = nongshanpai_faction_flag
 		clr_country_flag = waqiaopai_faction_flag
 		clr_country_flag = renxiapai_faction_flag
-		clr_country_flag = yanzhoupai_faction_flag
+		clr_country_flag = yanzhoupai_faction_flag	
 	}
 	after = {
 		clr_country_flag = YE_was_waqiaopai_flag
 		clr_country_flag = YE_in_lanjin_election_flag
 		clr_country_flag = YE_lanjin_reelection_flag
+		YE_ljh_clr_death_decision_effect = yes
 	}
 	option = {
 		name = YE_ljh.6.a

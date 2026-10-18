@@ -710,7 +710,12 @@ YE_lianxiang_check_promoted_human_culture = {
     YE_lianxiang_check_human_culture = { culture = raghamidesh }
 }
 
-
+YE_ljh_clr_death_decision_effect = {
+	clr_country_flag = ljh_faction_moral_instruction_flag
+	remove_country_modifier = YE_lanjinhui_ruler_action_cooldown_modifier
+	remove_country_modifier = peaceful_image_of_nongshanpai_modifier
+	remove_country_modifier = strong_renxia_ruler
+}
 
 
 # 地宫

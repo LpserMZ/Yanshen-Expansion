@@ -542,27 +542,3 @@ if = { # 观察者
 # YA7 = { change_country_color = { color = { 37 24 17 } } }
 #   = { change_country_color = { color = { } } }
 #    = { change_country_color = { color = { } } }
-
-Y09 = {
-	add_country_modifier = { # 国家
-		name = 我的modifier
-		duration = -1# 生效时间（单位：天）（-1表示永久修正）
-	}
-
-	remove_country_modifier = 我的modifier
-}
-4826 = {
-	add_province_modifier = { # 省份：易主时自动移除
-		name = 我的modifier 
-		duration = 生效时间（单位：天）（-1表示永久修正）
-	}
-
-	remove_province_modifier = 我的modifier
-}
-
-add_ruler_modifier = { # 统治者修正，死亡自动移除
-	name = 我的modifier
-	duration = 生效时间（单位：天）（-1表示永久修正）
-}
-
-add_treasury = 1000

@@ -1059,12 +1059,15 @@ country_decisions = {
 		major = no
 		potential = {
 			has_country_flag = tongleipai_faction_flag
+			NOT = {
+				has_country_flag = YE_in_lanjin_election_flag
+			}
 		}
 		allow = {
 			army_tradition = 10
 			treasury = 100
 			NOT = {
-				has_ruler_modifier = YE_lanjinhui_ruler_action_cooldown_modifier
+				has_country_modifier = YE_lanjinhui_ruler_action_cooldown_modifier
 			}
 		}
 		effect = {
@@ -1072,7 +1075,8 @@ country_decisions = {
 			add_treasury = -100
 			if = {
 				limit = {
-					mil = 5
+					monthly_mil = 10
+					#mil = 5
 				}
 				add_army_professionalism = 0.01
 			}
@@ -1081,7 +1085,7 @@ country_decisions = {
 				add_army_professionalism = 0.005
 			}
 			
-			add_ruler_modifier = {
+			add_country_modifier = {
 				name = YE_lanjinhui_ruler_action_cooldown_modifier
 				duration = 1825
 			}
@@ -1098,13 +1102,16 @@ country_decisions = {
 		major = no
 		potential = {
 			has_country_flag = nongshanpai_faction_flag
+			NOT = {
+				has_country_flag = YE_in_lanjin_election_flag
+			}
 		}
 		allow = {
 			faction_in_power = nongshanpai
 			adm_power = 25
 			dip_power = 25
 			NOT = {
-				has_ruler_modifier = YE_lanjinhui_ruler_action_cooldown_modifier
+				has_country_modifier = YE_lanjinhui_ruler_action_cooldown_modifier
 			}
 		}
 		effect = {
@@ -1113,7 +1120,7 @@ country_decisions = {
 			country_event = {
 				id = YE_ljh.7
 			}
-			add_ruler_modifier = {
+			add_country_modifier = {
 				name = YE_lanjinhui_ruler_action_cooldown_modifier
 				duration = 1825
 			}
@@ -1127,14 +1134,17 @@ country_decisions = {
 		major = no
 		potential = {
 			has_country_flag = nongshanpai_faction_flag
+			NOT = {
+				has_country_flag = YE_in_lanjin_election_flag
+			}
 		}
 		allow = {
 			dip_power = 100
 			NOT = {
-				has_ruler_modifier = peaceful_image_of_nongshanpai_modifier
+				has_country_modifier = peaceful_image_of_nongshanpai_modifier
 			}
 			NOT = {
-				has_ruler_modifier = YE_lanjinhui_ruler_action_cooldown_modifier
+				has_country_modifier = YE_lanjinhui_ruler_action_cooldown_modifier
 			}
 		}
 		effect = {
@@ -1149,11 +1159,11 @@ country_decisions = {
 					}
 				}
 			}
-			add_ruler_modifier = {
+			add_country_modifier = {
 				name = peaceful_image_of_nongshanpai_modifier
 				duration = -1
 			}
-			add_ruler_modifier = {
+			add_country_modifier = {
 				name = YE_lanjinhui_ruler_action_cooldown_modifier
 				duration = 1825
 			}
@@ -1171,52 +1181,26 @@ country_decisions = {
 		major = no
 		potential = {
 			has_country_flag = renxiapai_faction_flag
+			NOT = {
+				has_country_flag = YE_in_lanjin_election_flag
+			}
 		}
 		allow = {
 			treasury = 100
-			mil = 1
-			if = {
-				limit = {
-					mil = 5
-				}
-				manpower = 5
-			}
-			else_if = {
-				limit = {
-					mil = 4
-				}
-				manpower = 4
-			}
-			else_if = {
-				limit = {
-					mil = 3
-				}
-				manpower = 3
-			}
-			else_if = {
-				limit = {
-					mil = 2
-				}
-				manpower = 2
-			}
-			else_if = {
-				limit = {
-					mil = 1
-				}
-				manpower = 1
-			}
-
+			monthly_mil = 6
+			#mil = 1
+			manpower = 5
 			NOT = {
-				has_ruler_modifier = YE_lanjinhui_ruler_action_cooldown_modifier
+				has_country_modifier = YE_lanjinhui_ruler_action_cooldown_modifier
 			}
 		}
 		effect = {
 			add_treasury = -50
 			if = {
 				limit = {
-					mil = 5
+					monthly_mil = 10
 				}
-				add_ruler_modifier = {
+				add_country_modifier = {
 					name = strong_renxia_ruler
 					duration = -1
 				}
@@ -1231,7 +1215,7 @@ country_decisions = {
 			}
 			else_if = {
 				limit = {
-					mil = 4
+					monthly_mil = 9
 				}
 				add_manpower = -4
 				capital_scope = {
@@ -1243,7 +1227,7 @@ country_decisions = {
 			}
 			else_if = {
 				limit = {
-					mil = 3
+					monthly_mil = 8
 				}
 				add_manpower = -3
 				capital_scope = {
@@ -1254,7 +1238,7 @@ country_decisions = {
 			}
 			else_if = {
 				limit = {
-					mil = 2
+					monthly_mil = 7
 				}
 				add_manpower = -2
 				capital_scope = {
@@ -1264,21 +1248,14 @@ country_decisions = {
 			}
 			else_if = {
 				limit = {
-					mil = 1
+					monthly_mil = 6
 				}
 				add_manpower = -1
 				capital_scope = {
 					samurai_infantry = ROOT
 				}
 			}
-			
-			add_unit_construction = {
-				type = qizilbash_infantry
-				amount = 20
-				speed = 0.1
-				cost = 0
-			}
-			add_ruler_modifier = {
+			add_country_modifier = {
 				name = YE_lanjinhui_ruler_action_cooldown_modifier
 				duration = 1825
 			}
@@ -1292,13 +1269,16 @@ country_decisions = {
 		major = no
 		potential = {
 			has_country_flag = renxiapai_faction_flag
+			NOT = {
+				has_country_flag = YE_in_lanjin_election_flag
+			}
 		}
 		allow = {
 			NOT = { 
-				has_ruler_flag = ljh_faction_moral_instruction_flag
+				has_country_flag = ljh_faction_moral_instruction_flag
 			}
 			NOT = {
-				has_ruler_modifier = YE_lanjinhui_ruler_action_cooldown_modifier
+				has_country_modifier = YE_lanjinhui_ruler_action_cooldown_modifier
 			}
 		}
 		effect = {
@@ -1314,8 +1294,8 @@ country_decisions = {
 					}
 				}
 			}
-			set_ruler_flag = ljh_faction_moral_instruction_flag
-			add_ruler_modifier = {
+			set_country_flag = ljh_faction_moral_instruction_flag
+			add_country_modifier = {
 				name = YE_lanjinhui_ruler_action_cooldown_modifier
 				duration = 1825
 			}
@@ -1329,21 +1309,24 @@ country_decisions = {
 		major = no
 		potential = {
 			has_country_flag = yanzhoupai_faction_flag
+			NOT = {
+				has_country_flag = YE_in_lanjin_election_flag
+			}
 		}
 		allow = {
 			treasury = 500
 			adm_power = 25
 			NOT = {
-				has_ruler_modifier = YE_lanjinhui_ruler_action_cooldown_modifier
+				has_country_modifier = YE_lanjinhui_ruler_action_cooldown_modifier
 			}
 		}
 		effect = {
-			add_adm_power = 25
+			add_adm_power = -25
 			add_treasury = -500
 			country_event = {
 				id = YE_ljh.8
 			}
-			add_ruler_modifier = {
+			add_country_modifier = {
 				name = YE_lanjinhui_ruler_action_cooldown_modifier
 				duration = 1825
 			}
@@ -1360,7 +1343,7 @@ country_decisions = {
 	# 	}
 	# 	allow = {
 	# 		NOT = {
-	# 			has_ruler_modifier = YE_lanjinhui_ruler_action_cooldown_modifier
+	# 			has_country_modifier = YE_lanjinhui_ruler_action_cooldown_modifier
 	# 		}
 	# 	}
 	# 	effect = {
@@ -1383,7 +1366,7 @@ country_decisions = {
 	# 	}
 	# 	allow = {
 	# 		NOT = {
-	# 			has_ruler_modifier = YE_lanjinhui_ruler_action_cooldown_modifier
+	# 			has_country_modifier = YE_lanjinhui_ruler_action_cooldown_modifier
 	# 		}
 	# 	}
 	# 	effect = {

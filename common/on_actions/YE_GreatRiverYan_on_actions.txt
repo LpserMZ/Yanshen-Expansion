@@ -45,6 +45,7 @@ on_startup = {
 				which = election_term
 				value = 1
 			}
+			set_country_flag = tongleipai_faction_flag
 		}
 		YE_add_special_prov_modifier = yes
 		
