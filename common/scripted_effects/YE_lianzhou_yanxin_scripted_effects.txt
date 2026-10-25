@@ -1,0 +1,309 @@
+# 在玩家国家作用域执行
+tl_yanxin_start_war_effect = {
+    if = {
+        limit = {
+            tl_yanxin_can_start_war_trigger = yes
+        }
+
+        set_country_flag = tl_yanxin_war_started
+        set_country_flag = tl_yanxin_war_leader
+
+        clr_country_flag = tl_yanxin_war_finished
+        clr_country_flag = tl_yanxin_settlement_pending
+        clr_country_flag = tl_yanxin_strict_settlement
+
+        # 先记录哪些国家直接并入，哪些国家参加防御
+        every_country = {
+            limit = {
+                tl_yanxin_member_trigger = yes
+            }
+
+            clr_country_flag = tl_yanxin_pre_annex
+            clr_country_flag = tl_yanxin_attack_side
+            clr_country_flag = tl_yanxin_defend_side
+
+            if = {
+                limit = {
+                    tl_yanxin_pre_annex_trigger = yes
+                }
+
+                set_country_flag = tl_yanxin_pre_annex
+            }
+            else = {
+                set_country_flag = tl_yanxin_defend_side
+            }
+        }
+
+        # 优先由 Y07 改 TAG 建立 V19
+        if = {
+            limit = {
+                exists = Y07
+            }
+
+            Y07 = {
+                change_tag = V19
+                restore_country_name = yes
+                swap_non_generic_missions = yes
+            }
+        }
+        else_if = {
+            limit = {
+                exists = Y06
+            }
+
+            Y06 = {
+                change_tag = V19
+                restore_country_name = yes
+                swap_non_generic_missions = yes
+            }
+        }
+        else = {
+            # 两国均不存在时，从符合条件的盟友中建立
+            random_country = {
+                limit = {
+                    has_country_flag = tl_yanxin_pre_annex
+                }
+
+                change_tag = V19
+                restore_country_name = yes
+                swap_non_generic_missions = yes
+            }
+        }
+
+        # V19 吞并所有提前并入的国家
+        every_country = {
+            limit = {
+                has_country_flag = tl_yanxin_pre_annex
+                NOT = { tag = V19 }
+            }
+
+            V19 = {
+                # PREV 是当前遍历到的烟心国家
+                inherit = PREV
+            }
+        }
+
+        V19 = {
+            clr_country_flag = tl_yanxin_pre_annex
+
+            every_owned_province = {
+                add_core = V19
+            }
+        }
+
+        # 回到玩家作用域，由玩家建立属国关系
+        create_subject = {
+            subject = V19
+            subject_type = YE_lianzhou_huanguan
+        }
+
+        if = {
+            limit = {
+                V19 = {
+                    is_subject_of = ROOT
+                }
+
+                any_country = {
+                    has_country_flag = tl_yanxin_defend_side
+                }
+            }
+
+            # 剩余成员不能继续与玩家或 Y09 结盟
+            every_country = {
+                limit = {
+                    has_country_flag = tl_yanxin_defend_side
+                }
+
+                if = {
+                    limit = {
+                        alliance_with = ROOT
+                    }
+
+                    break_alliance = ROOT
+                }
+
+                if = {
+                    limit = {
+                        alliance_with = Y09
+                    }
+
+                    break_alliance = Y09
+                }
+            }
+
+            # 两场战争使用同一个防守方主战国
+            random_country = {
+                limit = {
+                    has_country_flag = tl_yanxin_defend_side
+                }
+
+                save_event_target_as = tl_yanxin_main_defender
+
+                capital_scope = {
+                    save_event_target_as = tl_yanxin_y09_wargoal
+                }
+            }
+
+            # 玩家发动原来的烟心战争
+            declare_war_with_cb = {
+                who = event_target:tl_yanxin_main_defender
+                casus_belli = cb_tl_yanxin_unification
+            }
+
+            # 确保 V19 加入玩家的战争
+            V19 = {
+                if = {
+                    limit = {
+                        NOT = {
+                            war_with = event_target:tl_yanxin_main_defender
+                        }
+                    }
+
+                    join_all_offensive_wars_of = ROOT
+                }
+            }
+
+            # Y09 另开一场征服战争
+            Y09 = {
+                set_country_flag = tl_yanxin_competing_war_active
+
+                declare_war_with_cb = {
+                    who = event_target:tl_yanxin_main_defender
+                    casus_belli = cb_conquest
+                    war_goal_province = event_target:tl_yanxin_y09_wargoal
+                }
+            }
+
+            # 其余成员加入主战国的两场防御战争
+            every_country = {
+                limit = {
+                    has_country_flag = tl_yanxin_defend_side
+
+                    NOT = {
+                        tag = event_target:tl_yanxin_main_defender
+                    }
+                }
+
+                join_all_defensive_wars_of = event_target:tl_yanxin_main_defender
+            }
+        }
+        else_if = {
+            limit = {
+                V19 = {
+                    is_subject_of = ROOT
+                }
+            }
+
+            # 所有成员都已提前并入，没有敌人则直接完成
+            tl_yanxin_annex_effect = yes
+        }
+        else = {
+            log = "TL_YANXIN_ERROR_PREWAR_SUBJECT_NOT_CREATED"
+        }
+    }
+}
+
+
+# 仍由玩家的 tl_yanxin.1 执行
+tl_yanxin_annex_effect = {
+    if = {
+        limit = {
+            V19 = {
+                exists = yes
+                is_subject_of = ROOT
+            }
+
+            NOT = {
+                has_country_flag = tl_yanxin_war_finished
+            }
+        }
+
+        # 玩家条款生效后，先结束 Y09 的竞争战争
+        every_country = {
+            limit = {
+                tl_yanxin_member_trigger = yes
+                war_with = Y09
+            }
+
+            white_peace = Y09
+        }
+
+        Y09 = {
+            clr_country_flag = tl_yanxin_competing_war_active
+        }
+
+        # 吞并在 V19 作用域执行
+        V19 = {
+            if = {
+                limit = { exists = Y04 }
+                inherit = Y04
+            }
+
+            if = {
+                limit = { exists = Y06 }
+                inherit = Y06
+            }
+
+            if = {
+                limit = { exists = Y07 }
+                inherit = Y07
+            }
+
+            if = {
+                limit = { exists = Y08 }
+                inherit = Y08
+            }
+
+            if = {
+                limit = { exists = Y10 }
+                inherit = Y10
+            }
+
+            if = {
+                limit = { exists = V22 }
+                inherit = V22
+            }
+
+            every_owned_province = {
+                add_core = V19
+
+                # 保留旧规则：
+                # 非开局烟心地块另外给予宗主核心
+                if = {
+                    limit = {
+                        NOT = {
+                            province_group = original_yanszin
+                        }
+                    }
+
+                    add_core = ROOT
+                }
+            }
+        }
+
+        # 清理参与标志
+        every_country = {
+            limit = {
+                OR = {
+                    has_country_flag = tl_yanxin_pre_annex
+                    has_country_flag = tl_yanxin_attack_side
+                    has_country_flag = tl_yanxin_defend_side
+                }
+            }
+
+            clr_country_flag = tl_yanxin_pre_annex
+            clr_country_flag = tl_yanxin_attack_side
+            clr_country_flag = tl_yanxin_defend_side
+        }
+
+        clr_country_flag = tl_yanxin_war_leader
+        clr_country_flag = tl_yanxin_settlement_pending
+        clr_country_flag = tl_yanxin_strict_settlement
+
+        set_country_flag = tl_yanxin_war_finished
+
+        log = "TL_YANXIN_SETTLEMENT_DONE"
+
+        # 你在新模组里需要的其他战后奖励写在这里
+    }
+}

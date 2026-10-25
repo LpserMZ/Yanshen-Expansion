@@ -103,3 +103,30 @@ YE_Lianzhou_beidugang_claims = {
 	}
 	war_name = YE_LIANZHOU_BEIDUGANG_WAR_NAME
 }
+
+#烟心战争
+tl_yanxin_superiority = {
+    type = superiority
+
+    attacker = {
+        badboy_factor = 1
+        prestige_factor = 1
+        peace_cost_factor = 1
+
+        peace_options = {
+            po_tl_annex_yanxin
+        }
+    }
+
+    defender = {
+        badboy_factor = 1
+        prestige_factor = 1
+        peace_cost_factor = 1
+
+        peace_options = {
+            po_concede_defeat
+        }
+    }
+
+    war_name = TL_YANXIN_UNIFICATION_WAR
+}

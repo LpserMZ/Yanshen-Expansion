@@ -1,0 +1,48 @@
+po_tl_annex_yanxin = {
+    category = 6
+
+    power_cost_base = 0
+    prestige_base = 0
+    ae_base = 0
+
+    # 条款费用暂设 50 分
+    warscore_cost = {
+        no_provinces = 60
+    }
+
+    warscore_cap = 60
+
+    is_make_subject = no
+    requires_is_allowed = yes
+
+    is_visible = {
+        has_country_flag = tl_yanxin_war_leader
+
+        is_in_war = {
+            casus_belli = cb_tl_yanxin_unification
+            attacker_leader = ROOT
+            defender_leader = FROM
+        }
+    }
+
+    # 删除原来必须达到 100 分的额外检查
+    is_allowed = {
+        always = yes
+    }
+
+    effect = {
+        set_country_flag = tl_yanxin_settlement_pending
+
+        country_event = {
+            id = tl_yanxin.1
+            days = 1
+        }
+    }
+
+    ai_weight = {
+        export_to_variable = {
+            variable_name = ai_value
+            value = 1000
+        }
+    }
+}

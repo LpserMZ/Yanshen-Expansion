@@ -298,6 +298,9 @@ lianzhou_2 = {
 			4979 = {
 				change_religion = high_philosophy
 			}
+			jianwu_region = {
+                add_permanent_claim = ROOT
+            }
 		}
 	}
 
@@ -406,6 +409,14 @@ lianzhou_3 = {
 				    add_permanent_claim = ROOT
 			    }
 			}
+			 # 政府等级低于王国时，升级为王国
+                if = {
+                    limit = {
+                        NOT = { government_rank = 2 }
+                    }
+
+                    set_government_rank = 2
+                }
 		}
 	}
 
@@ -834,134 +845,51 @@ lianzhou_4 = {
 		icon = mission_hanseatic_city
 		required_missions = { Lianzhou_4_5 Lianzhou_3_5 }
 		position = 6
+		provinces_to_highlight = {
+
+		}
 		trigger = {
-			OR = {
-				NOT = { exists = Y07 }
-				Y07 = {
-				    has_opinion_modifier = {
-					    who = ROOT
-					    modifier = sent_gift
-				    }
-			    }
-			}
-			OR = {
-				NOT = { exists = Y06 }
-				Y06 = {
-					has_opinion_modifier = {
-						who = ROOT
-						modifier = sent_gift
+			custom_trigger_tooltip = {
+				tooltip = Lianzhou_4_6_tt
+				OR = {
+					tl_yanxin_can_start_war_trigger = yes
+					yanxin_region = {
+						type = all
+						country_or_non_sovereign_subject_holds = ROOT
 					}
 				}
+			    
 			}
 		}
 		effect = {
 			custom_tooltip = Lianzhou_4_6_effect_tt
 			hidden_effect = {
-			    if = {
-				    limit = {
-					    exists = Y07
+				if = {
+					limit = { tl_yanxin_can_start_war_trigger = yes }
+					country_event = {
+                        id = tl_yanxin.2
+                        days = 1
 				    }
-				    V19 = {
-					    inherit = Y07
-				    }
-			    }
-			    if = {
-				    limit = {
-					    exists = Y06
-				    }
-				    V19 = {
-                        inherit = Y06
-				    }
-			    }
-			    if = {
-				    limit = {
-					    alliance_with = Y08
-					    Y08 = {
-						    has_opinion = {
-							    who = ROOT
-							    value = 200
-						    }
-						    trust = {
-							    who = ROOT
-							    value = 70
-						    }
+				}
+				if = {
+					limit = {
+                        yanxin_region = {
+						    type = all
+						    country_or_non_sovereign_subject_holds = ROOT
 					    }
-				    }
-				    V19 = {
-					    inherit = Y08
+					}
+					yanxin_region = {
+                        add_core = V19
+                        cede_province = V19
+                    }
+					create_subject = {
+				        subject_type = YE_lianzhou_huanguan
+				        subject = V19
 			        }
-			    }
-                create_subject = {
-				    subject_type = YE_lianzhou_huanguan
-				    subject = V19
-			    }
-				every_province = {
-					limit = {
-						region = yanxin_region
-					}
-					add_core = V19
 				}
-				if = {
-					limit = {
-						exists = Y04
-					}
-					declare_war_with_cb = {
-						who = Y04
-						casus_belli = cb_crusade_mission
-					}
-					Y09 = {
-						declare_war_with_cb = {
-							who = Y04
-							casus_belli = cb_crusade_mission
-						}
-					}
-				}
-				if = {
-					limit = {
-						exists = Y10
-					}
-					declare_war_with_cb = {
-						who = Y10
-						casus_belli = cb_crusade_mission
-					}
-					Y09 = {
-						declare_war_with_cb = {
-							who = Y10
-							casus_belli = cb_crusade_mission
-						}
-					}
-				}
-				if = {
-					limit = {
-						exists = V22
-					}
-					declare_war_with_cb = {
-						who = V22
-						casus_belli = cb_crusade_mission
-					}
-					Y09 = {
-						declare_war_with_cb = {
-							who = V22
-							casus_belli = cb_crusade_mission
-						}
-					}
-				}
-				if = {
-					limit = {
-						exists = Y08
-					}
-					declare_war_with_cb = {
-						who = Y08
-						casus_belli = cb_crusade_mission
-					}
-					Y09 = {
-						declare_war_with_cb = {
-							who = Y08
-							casus_belli = cb_crusade_mission
-						}
-					}
-				}
+
 			}
+                
 		}
 	}
 

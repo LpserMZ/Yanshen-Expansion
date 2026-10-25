@@ -1,0 +1,115 @@
+# 烟心成员，包含可能重新出现的间林
+tl_yanxin_member_trigger = {
+    exists = yes
+
+    OR = {
+        tag = Y04
+        tag = Y06
+        tag = Y07
+        tag = Y08
+        tag = Y10
+        tag = V22
+    }
+}
+
+
+# 开战前直接并入 V19 的国家
+# 必须在改 TAG、解除同盟之前判断
+# ROOT 为玩家国家
+tl_yanxin_pre_annex_trigger = {
+    tl_yanxin_member_trigger = yes
+
+    OR = {
+        # 这两国直接并入
+        tag = Y06
+        tag = Y07
+
+        # Y08 必须满足全部条件
+        AND = {
+            tag = Y08
+            alliance_with = ROOT
+
+            has_opinion = {
+                who = ROOT
+                value = 200
+            }
+
+            trust = {
+                who = ROOT
+                value = 80
+            }
+        }
+
+        # 其他烟心盟友直接并入
+        # 排除 Y08，避免绕过它的特殊要求
+        AND = {
+            NOT = { tag = Y08 }
+            alliance_with = ROOT
+        }
+    }
+}
+
+
+tl_yanxin_can_start_war_trigger = {
+    is_subject = no
+    is_at_war = no
+
+    NOT = { tl_yanxin_member_trigger = yes }
+    NOT = { tag = V19 }
+    NOT = { tag = Y09 }
+
+    # 沿用原机制：烟心尚未成立
+    NOT = { exists = V19 }
+
+    NOT = {
+        has_country_flag = tl_yanxin_war_started
+    }
+
+    # Y09 必须能够发动另一场战争
+    Y09 = {
+        exists = yes
+        is_subject = no
+        is_at_war = no
+    }
+
+    # 保留原任务“至少一个烟心盟友”的条件
+    any_country = {
+        tl_yanxin_member_trigger = yes
+        alliance_with = ROOT
+    }
+
+    # 至少有一个可以用于建立 V19 的国家
+    any_country = {
+        tl_yanxin_pre_annex_trigger = yes
+    }
+
+    # 避免成员因已有战争或属国身份而无法加入
+    NOT = {
+        any_country = {
+            tl_yanxin_member_trigger = yes
+
+            OR = {
+                is_at_war = yes
+                is_subject = yes
+            }
+        }
+    }
+
+    # 避免玩家或 Y09 对剩余成员破坏停战
+    NOT = {
+        any_country = {
+            tl_yanxin_member_trigger = yes
+            tl_yanxin_pre_annex_trigger = no
+
+            OR = {
+                ROOT = {
+                    truce_with = PREV
+                }
+
+                Y09 = {
+                    truce_with = PREV
+                }
+            }
+        }
+    }
+}

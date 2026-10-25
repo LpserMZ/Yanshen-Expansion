@@ -15,3 +15,24 @@
  YE_Lianzhou.5.t:0 "V—qNZW™X"
  YE_Lianzhou.5.d:0  "Nmp0q«ˆ²b0RÍ‘îO„v^yìS«RöeÿÖN«ˆ:VëNON4Y…˜ÿck‚YÖNCSt^MR„vVyHQ±7h0^yìS«RKSïSýwÿNgqid±öeãN„vÅˆp™ÿÍ‘RV)Y|i„v^yìSKNTzNwäSM|-N°‹‹„v•QgÿR—cˆbÝ„cˆ„v*YÑvñbKbËzŽN2NµOÿNmp0q«ŽNwÑžcˆÿ(W»y‡v^AS”Ns|„vMOnêNÿËeLˆ±›NÖNØNŸq‰`„v<y‚‚0\n0NCSt^†NÿZW™XÍN6q‚YKNMRN7híPŠw‘˜úQ0ÿ^yìSKNTó`0R0‚YÊN„vNSb—N/fNg‘b„vÿ(WppCQ248t^ÿZW™X„v°e‹ss^šR†Nml3–„vqNNSÿ²ƒÞTYŽNÎ˜è–Ø˜Gd-Nÿck/fÖNKSãPR,gR„vöePÿÖNtS(WZW™X„v«R¿k-N«NPNÿûN1uÃ‹)Rãy'Y^„vIQcƒ«ˆqNã<PRµNn0(WÛVŒv‹„vqNNS-NÿZW™XÎN*g”^‡v^„v÷SìSÿÖNìNÏPëkàecƒ‰Š„vºN‰|,‚‰N¢b0WØvÿêøv‹kNgÿ405t^¦R˜RVT„vŒpxyM–4NöeÿÖNìN«R¿k-NµuÅ`´Rn™ÿSVˆlx‚ŒTÝÿaO²ƒÞTYŽNu‰kXR¡N„vsQ4YÿÖNìNtSr<wÁeÂ‰^yìS‹sg„v÷mqN0\n8—œ^„vc6R¡l	gOÖNìNa0RIw±ÿ>k„vSbûQ¡lýwOÖNìN’‘Ÿ`ÇegÿÍSw(WVïzªô‹„vÊ†Ñ`Na RXK„ÿåNóŽNNmp0qÆwbe±RðyêñT/fÃ‹)Rãy'Y^„vlNnÞV0\nZW™X„víPŠS8lÜb:N†SòSÿÖNìNS«ˆÍ‘°eI•.bZWÅk„vbëXÿwN/f(WXK„-N±¡lÎW^„vT÷S0SV,T0R¦R˜RSÑvcwZW™X„vÍ‘ú^ÿÎW^„vNR˜RXTýS«ˆôfbc"
  YE_Lianzhou.5.a:0 "0CSËyíPŠÿNgðyã"
+
+
+ cb_tl_yanxin_unification:0 "NßußpÃV"
+ cb_tl_yanxin_unification_desc:0 "åNfk›R:V¿RÍ‘ú^N†^(WßpÃV„vCgZ0"
+
+ tl_yanxin_superiority:0 "US:y8—Cg"
+ tl_yanxin_superiority_desc:0 "Çb—Vb—eUS:y8—Cg0"
+
+ TL_YANXIN_UNIFICATION_WAR:0 "$ORDER$$FIRST$NßußpÃVKNb"
+
+ po_tl_annex_yanxin:0 "NßußpÃV"
+ po_tl_annex_yanxin_desc:0 "[This.GetName]STv^ÍN6qXR(W„v‰Rml0.YÎW0äS³l0ßp-N0qVG•ŒTô•—gÿSìbOS©RvQÂSb„vßpÃVßvËS0"
+ CB_ALLOWED_po_tl_annex_yanxin:0 "Tv^ßpÃVø‹ýV"
+ PEACE_po_tl_annex_yanxin:0 "1u$TAKER$Tv^ßpÃVø‹ýV"
+
+ tl_yanxin_start_war_tt:0 "ËzsSTN*N*gNbìNÓußv„vßpÃVýV¶RÑS¨RßuNb‰N0NbìNÓußv„vßpÃVýV¶R ReQÛIe¹eÿvQYOßpÃVýV¶R ReQ2–ˆR¹e0b‰Nîvh:N§YUS:y8—Cg§!0"
+ tl_yanxin_no_enforce_peace_tt:0 "NýwùRßpÃVßuNb‰NžRËe:V6RŒTs^0"
+
+ tl_yanxin_enforce_unification_title:0 "gbLˆßpÃVßuNag>k"
+ tl_yanxin_enforce_unification_desc:0 "bìN„vÜw)RòTàeïS‰N©0gbLˆßuNag>kÿÓumgb‰Nÿv^SßpÃVø‹ýV³ueQ»lN0"
+ tl_yanxin_competing_peace_restriction_tt:0 "Ù:WÞz‰Nb‰NS(WßpÃVßuNag¦uÓu—röeÓumg0"

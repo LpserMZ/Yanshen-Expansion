@@ -96,28 +96,38 @@ country_event = {#坚墙事件
     is_triggered_only = yes
     option = {
         name = YE_Lianzhou.5.a
-        Y16 = {
-                inherit = Y14
-			}
-		Y16 = {
-			every_owned_province = {
-				limit = {
-					NOT = {
-						OR = {
-							area = jw6_area
-							area = jw5_area
-							area = yiguan_area
-							area = jiantsiang_area
-							area = jw4_area
-						}
-					}
-				}
-				cede_province = ROOT
-			}
-			change_subject_type = {
-				subject_type = YE_lianzhou_junzhengjian
-			}
-        }	
+        # 我们吞并 Y14、Y16
+        if = {
+            limit = { exists = Y14 }
+            inherit = Y14
+        }
+
+        if = {
+            limit = { exists = Y16 }
+            inherit = Y16
+        }
+
+        # 将五个区域的所有省份交给 Y16，并添加核心
+        every_province = {
+            limit = {
+                OR = {
+                    area = jw6_area
+                    area = jw5_area
+                    area = yiguan_area
+                    area = jiantsiang_area
+                    area = jw4_area
+                }
+            }
+
+            add_core = Y16
+            cede_province = Y16
+        }
+
+        # Y16 成为我们的军政监类型属国
+        create_subject = {
+            subject = Y16
+            subject_type = YE_lianzhou_junzhengjian
+        }
     }
 }
 namespace = YE_lianxiang
@@ -168,3 +178,36 @@ country_event = {
     }
 }      
 
+namespace = tl_yanxin
+
+# 执行吞并
+country_event = {
+    id = tl_yanxin.1
+
+    hidden = yes
+    is_triggered_only = yes
+
+    trigger = {
+        has_country_flag = tl_yanxin_settlement_pending
+    }
+
+    immediate = {
+        tl_yanxin_annex_effect = yes
+    }
+}
+
+# 发动战争
+country_event = {
+    id = tl_yanxin.2
+
+    hidden = yes
+    is_triggered_only = yes
+
+    trigger = {
+        tl_yanxin_can_start_war_trigger = yes
+    }
+
+    immediate = {
+        tl_yanxin_start_war_effect = yes
+    }
+}
