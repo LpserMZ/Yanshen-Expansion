@@ -41,7 +41,7 @@ YE_Lianzhou_beidugang_conquest = {
     is_triggered_only = yes
 	prerequisites = {
 		FROM = {
-			tag = Y19
+			tag = Y15
 		}
 	}
 	war_goal = YE_Lianzhou_beidugang_claims
@@ -51,3 +51,36 @@ YE_Lianzhou_beidugang_conquest = {
 #  ALL_CGROUP_COUNTRIES:0 "所有拥有和我们同一文化组省份的国家"
 #  ALL_LATIN_PROVS:0 "所有位于法兰西地区、伊比利亚地区、意大利地区、不列颠地区的省份"
 #  LATIN_UNIFICATION_WAR_NAME:0 "$ORDER$$FIRST$-$SECOND$争夺拉丁霸权之战"
+
+
+#烟心战争
+cb_tl_yanxin_unification = {
+    valid_for_subject = no
+    is_triggered_only = yes
+
+    war_goal = tl_yanxin_superiority
+
+    # 禁止部分普通进攻方和平要求
+    # 这不能禁止白和平，也不是所有自定义条款的完整名单
+    attacker_disabled_po = {
+        po_demand_provinces
+        po_revoke_cores
+        po_release_vassals
+        po_release_annexed
+        po_return_cores
+        po_become_vassal
+        po_subjugate_vassal
+        po_form_personal_union
+        po_gold
+        po_concede_defeat
+        po_annul_treaties
+        po_change_religion
+        po_change_government
+        po_trade_power
+        po_steer_trade
+        po_humiliate
+        po_humiliate_rival
+        po_transfer_vassals
+        po_anb_tributary
+    }
+}
