@@ -230,7 +230,6 @@
 # 			has_country_modifier = benevolent_rank_II
 # 			has_country_modifier = benevolent_rank_I
 # 		}
-
 # 	}
 # 	frame = {
 # 		number = 5

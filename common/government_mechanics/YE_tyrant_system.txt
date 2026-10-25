@@ -1,7 +1,7 @@
 YE_tyrant_system = {
 	alert_icon_gfx = GFX_alerticons_government_mechanics
 	alert_icon_index = 7
-
+	
 	powers = {
 		benelolent_ruthless_power = {
 			show_before_interactions = yes
@@ -52,160 +52,102 @@ YE_tyrant_system = {
 					id = bianfang.10
 				}
 			}
-			is_good = no
+			is_good = yes
 		}
 	}
 	
-	# interactions = {
-	# 	# reward_veterans = {
-	# 	# 	icon = GFX_YE_tyrant_system_reward_veterans
-	# 	# 	center = no 
-	# 	# 	cost_type = benelolent_ruthless_power
-	# 	# 	trigger = {
-	# 	# 		NOT = {
-	# 	# 			has_government_power = {
-	# 	# 				mechanic_type = YE_tyrant_system
-	# 	# 				power_type = benelolent_ruthless_power
-	# 	# 				value = 100
-	# 	# 			}
-	# 	# 		}
-	# 	# 	}
-	# 	# 	effect = {
-	# 	# 		mil_power_cost = 50
-	# 	# 		add_government_power = {
-	# 	# 			mechanic_type = YE_tyrant_system
-	# 	# 			power_type = benelolent_ruthless_power
-	# 	# 			value = 5
-	# 	# 		}
-	# 	# 	}
-	# 	# 	cooldown_years = 0
-	# 	# 	ai_chance = {
-	# 	# 		factor = 10
-	# 	# 		modifier = {
-	# 	# 			factor = 10
-	# 	# 			always = no
-	# 	# 		}
-	# 	# 	}
-	# 	# }
-	# 	# sponsor_harvest_festivals = {
-	# 	# 	icon = GFX_YE_tyrant_system_sponsor_harvest_festivals
-	# 	# 	center = no 
-	# 	# 	cost_type = benelolent_ruthless_power
-	# 	# 	trigger = {
-	# 	# 		NOT = {
-	# 	# 			has_government_power = {
-	# 	# 				mechanic_type = YE_tyrant_system
-	# 	# 				power_type = benelolent_ruthless_power
-	# 	# 				value = 100
-	# 	# 			}
-	# 	# 		}
-	# 	# 	}
-	# 	# 	effect = {
-	# 	# 		mil_power_cost = 50
-	# 	# 		add_government_power = {
-	# 	# 			mechanic_type = YE_tyrant_system
-	# 	# 			power_type = benelolent_ruthless_power
-	# 	# 			value = 5
-	# 	# 		}
-	# 	# 	}
-	# 	# 	cooldown_years = 0
-	# 	# 	ai_chance = {
-	# 	# 		factor = 10
-	# 	# 		modifier = {
-	# 	# 			factor = 10
-	# 	# 			always = no
-	# 	# 		}
-	# 	# 	}
-	# 	# }
-	# 	# return_to_pragmatism = {
-	# 	# 	icon = GFX_YE_tyrant_system_return_to_pragmatism
-	# 	# 	center = no 
-	# 	# 	cost_type = benelolent_ruthless_power
-	# 	# 	trigger = {
-	# 	# 		NOT = {
-	# 	# 			has_government_power = {
-	# 	# 				mechanic_type = YE_tyrant_system
-	# 	# 				power_type = benelolent_ruthless_power
-	# 	# 				value = 100
-	# 	# 			}
-	# 	# 		}
-	# 	# 	}
-	# 	# 	effect = {
-	# 	# 		mil_power_cost = 50
-	# 	# 		add_government_power = {
-	# 	# 			mechanic_type = YE_tyrant_system
-	# 	# 			power_type = benelolent_ruthless_power
-	# 	# 			value = 5
-	# 	# 		}
-	# 	# 	}
-	# 	# 	cooldown_years = 0
-	# 	# 	ai_chance = {
-	# 	# 		factor = 10
-	# 	# 		modifier = {
-	# 	# 			factor = 10
-	# 	# 			always = no
-	# 	# 		}
-	# 	# 	}
-	# 	# }	
-	# 	# deploy_the_jadeite_crossguards = {
-	# 	# 	icon = GFX_YE_tyrant_system_deploy_the_jadeite_crossguards
-	# 	# 	center = no 
-	# 	# 	cost_type = benelolent_ruthless_power
-	# 	# 	trigger = {
-	# 	# 		NOT = {
-	# 	# 			has_government_power = {
-	# 	# 				mechanic_type = YE_tyrant_system
-	# 	# 				power_type = benelolent_ruthless_power
-	# 	# 				value = 100
-	# 	# 			}
-	# 	# 		}
-	# 	# 	}
-	# 	# 	effect = {
-	# 	# 		mil_power_cost = 50
-	# 	# 		add_government_power = {
-	# 	# 			mechanic_type = YE_tyrant_system
-	# 	# 			power_type = benelolent_ruthless_power
-	# 	# 			value = 5
-	# 	# 		}
-	# 	# 	}
-	# 	# 	cooldown_years = 0
-	# 	# 	ai_chance = {
-	# 	# 		factor = 10
-	# 	# 		modifier = {
-	# 	# 			factor = 10
-	# 	# 			always = no
-	# 	# 		}
-	# 	# 	}
-	# 	# }
-	# 	# purge_officers = {
-	# 	# 	icon = GFX_YE_tyrant_system_purge_officers
-	# 	# 	center = no 
-	# 	# 	cost_type = benelolent_ruthless_power
-	# 	# 	trigger = {
-	# 	# 		NOT = {
-	# 	# 			has_government_power = {
-	# 	# 				mechanic_type = YE_tyrant_system
-	# 	# 				power_type = benelolent_ruthless_power
-	# 	# 				value = 100
-	# 	# 			}
-	# 	# 		}
-	# 	# 	}
-	# 	# 	effect = {
-	# 	# 		mil_power_cost = 50
-	# 	# 		add_government_power = {
-	# 	# 			mechanic_type = YE_tyrant_system
-	# 	# 			power_type = benelolent_ruthless_power
-	# 	# 			value = 5
-	# 	# 		}
-	# 	# 	}
-	# 	# 	cooldown_years = 0
-	# 	# 	ai_chance = {
-	# 	# 		factor = 10
-	# 	# 		modifier = {
-	# 	# 			factor = 10
-	# 	# 			always = no
-	# 	# 		}
-	# 	# 	}
-	# 	# }
-	# }
+	interactions = {
+		sponsor_harvest_festivals = { ###
+			icon = GFX_YE_tyrant_system_button_left
+			gui = YE_tyrant_system_gov_mech_button
+			center = yes 
+			#cost_type = benelolent_ruthless_power
+			trigger = {
+				monthly_adm = 12
+				years_of_income = 1.5
+			}
+			effect = {
+				add_country_modifier = {
+					name = YE_tyrant_system_sponsor_harvest_festivals_modifier
+					duration = 3650
+				}
+				add_stability = 1
+				add_years_of_income = -1.5
+				add_government_power = {
+					mechanic_type = YE_tyrant_system
+					power_type = benelolent_ruthless_power
+					value = -30
+				}
+			}
+			cooldown_years = 4
+			ai_chance = {
+				factor = 10
+				modifier = {
+					factor = 10
+					always = no
+				}
+			}
+		}
+		deploy_the_jadeite_crossguards = { ###
+			icon = GFX_YE_tyrant_system_button_middle
+			gui = YE_tyrant_system_gov_mech_button
+			center = yes 
+			#cost_type = benelolent_ruthless_power
+			trigger = {
+				monthly_mil = 10
+				num_of_generals = 1
+				army_tradition = 5
+			}
+			effect = {
+				add_country_modifier = {
+					name = YE_tyrant_system_deploy_the_jadeite_crossguards_modifier
+					duration = 3650
+				}
+				add_army_tradition=-5
+				kill_leader = { type = general}
+				add_government_power = {
+					mechanic_type = YE_tyrant_system
+					power_type = benelolent_ruthless_power
+					value = 20
+				}
+			}
+			cooldown_years = 4
+			ai_chance = {
+				factor = 10
+				modifier = {
+					factor = 10
+					always = no
+				}
+			}
+		}
+		purge_officers = { ###
+			icon = GFX_YE_tyrant_system_button_right
+			gui = YE_tyrant_system_gov_mech_button
+			center = yes 
+			#cost_type = benelolent_ruthless_power
+			trigger = {
+				monthly_mil = 12
+			}
+			effect = {
+				add_country_modifier = {
+					name = YE_tyrant_system_purge_officers_modifier
+					duration = 3650
+				}
+				add_government_power = {
+					mechanic_type = YE_tyrant_system
+					power_type = benelolent_ruthless_power
+					value = 30
+				}
+			}
+			cooldown_years = 4
+			ai_chance = {
+				factor = 10
+				modifier = {
+					factor = 10
+					always = no
+				}
+			}
+		}
+	}
+
 }

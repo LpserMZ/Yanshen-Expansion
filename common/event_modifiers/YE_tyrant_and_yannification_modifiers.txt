@@ -15,8 +15,8 @@ YE_tyrant_system_deploy_the_jadeite_crossguards_modifier = {
 }
 YE_tyrant_system_purge_officers_modifier = {
 	overextension_impact_modifier=-0.25
-	yearly_corruption=1
-	land_maintenance_modifier=0.10
+	yearly_corruption = 0.50
+	land_maintenance_modifier = 0.10
 }
 
 

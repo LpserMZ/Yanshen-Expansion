@@ -67,45 +67,23 @@ spriteTypes = {
 		loadType = "INGAME"
 		transparencecheck = yes
 	}
-	spriteType = { #button1
-		name = "GFX_YE_tyrant_system_reward_veterans"
-		texturefile = "gfx/interface/government_mechanics/YE_tyrant_system/YE_tyrant_system_reward_veterans.dds"
+	spriteType = { #button left
+		name = "GFX_YE_tyrant_system_button_left"
+		texturefile = "gfx/interface/government_mechanics/YE_tyrant_system/YE_tyrant_system_button_left.dds"
 		loadType = "INGAME"
 		transparencecheck = yes
 	}
-	spriteType = { #button2
-		name = "GFX_YE_tyrant_system_sponsor_harvest_festivals"
-		texturefile = "gfx/interface/government_mechanics/YE_tyrant_system/YE_tyrant_system_sponsor_harvest_festivals.dds"
+	spriteType = { #button middle
+		name = "GFX_YE_tyrant_system_button_middle"
+		texturefile = "gfx/interface/government_mechanics/YE_tyrant_system/YE_tyrant_system_button_middle.dds"
 		loadType = "INGAME"
 		transparencecheck = yes
 	}
-	spriteType = { #button3
-		name = "GFX_YE_tyrant_system_return_to_pragmatism"
-		texturefile = "gfx/interface/government_mechanics/YE_tyrant_system/YE_tyrant_system_return_to_pragmatism.dds"
+	spriteType = { #button right
+		name = "GFX_YE_tyrant_system_button_right"
+		texturefile = "gfx/interface/government_mechanics/YE_tyrant_system/YE_tyrant_system_button_right.dds"
 		loadType = "INGAME"
 		transparencecheck = yes
-	}
-	spriteType = { #button4
-		name = "GFX_YE_tyrant_system_deploy_the_jadeite_crossguards"
-		texturefile = "gfx/interface/government_mechanics/YE_tyrant_system/YE_tyrant_system_deploy_the_jadeite_crossguards.dds"
-		loadType = "INGAME"
-		transparencecheck = yes
-	}
-	spriteType = { #button5
-		name = "GFX_YE_tyrant_system_purge_officers"
-		texturefile = "gfx/interface/government_mechanics/YE_tyrant_system/YE_tyrant_system_purge_officers.dds"
-		loadType = "INGAME"
-		transparencecheck = yes
-	}
-	spriteType = {
-		name = "GFX_benelolent_ruthless_power_benevolent_rank"
-		texturefile = "gfx//interface//government_mechanics//YE_tyrant_system//benelolent_ruthless_power_benevolent_rank.dds"
-		noOfFrames = 5
-	}
-	spriteType = {
-		name = "GFX_benelolent_ruthless_power_ruthless_rank"
-		texturefile = "gfx//interface//government_mechanics//YE_tyrant_system//benelolent_ruthless_power_ruthless_rank.dds"
-		noOfFrames = 5
 	}
 
 	#莲相政府能力条
@@ -128,3 +106,4 @@ spriteTypes = {
 
         effectFile = "gfx/FX/progress.lua"
     }
+}	
