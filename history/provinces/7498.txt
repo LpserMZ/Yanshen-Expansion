@@ -1,6 +1,6 @@
 owner = YD2
 culture = shaliu
-religion = guosi_faith
+religion = accretive_path
 controller = YD2
 is_city = yes
 trade_goods = wool

@@ -130,65 +130,65 @@ province_event = { #4 测试-烟化
 #  YE_bianfang.4.a:0 "a"
 #  YE_bianfang.4.b:0 "b"
 
-# country_event = { #5 
-# 	id = YE_bianfang.5
-# 	title = YE_bianfang.5.T
-# 	desc = YE_bianfang.5.D
-# 	picture = GREAT_SPIRIT_YANHE_eventPicture
+country_event = { #5 
+	id = YE_bianfang.5
+	title = YE_bianfang.5.T
+	desc = YE_bianfang.5.D
+	picture = GREAT_SPIRIT_YANHE_eventPicture
 
-# 	fire_only_once = yes
-# 	is_triggered_only = yes
+	is_triggered_only = yes
 
-# 	trigger = {
-# 	}
+	option = {
+		name = YE_bianfang.5.a
+		ai_chance = { factor = 1 }
+		add_ruler_modifier = {
+			name = endless_ambition_bianfang
+			duration = -1
+		}
+	}
+}	
 
-# 	option = {
-# 		name = YE_bianfang.5.a
-# 		ai_chance = { factor = 1 }
-# 		# 在此添加效果
-# 	}
-# 	option = {
-# 		name = YE_bianfang.5.b
-# 		ai_chance = { factor = 1 }
-# 		# 在此添加效果
-# 		add_stability = -1
-		
-# 	}
-# }	
-#  YE_bianfang.5.T:0 ""
-#  YE_bianfang.5.D:0 ""
-#  YE_bianfang.5.a:0 ""
-#  YE_bianfang.5.b:0 ""
+country_event = { #6 
+	id = YE_bianfang.6
+	title = YE_bianfang.6.T
+	desc = YE_bianfang.6.D
+	picture = GREAT_SPIRIT_YANHE_eventPicture
 
-# country_event = { #6 
-# 	id = YE_bianfang.6
-# 	title = YE_bianfang.6.T
-# 	desc = YE_bianfang.6.D
-# 	picture = GREAT_SPIRIT_YANHE_eventPicture
+	is_triggered_only = yes
 
-# 	fire_only_once = yes
-# 	is_triggered_only = yes
-
-# 	trigger = {
-# 	}
-
-# 	option = {
-# 		name = YE_bianfang.6.a
-# 		ai_chance = { factor = 1 }
-# 		# 在此添加效果
-# 	}
-# 	option = {
-# 		name = YE_bianfang.6.b
-# 		ai_chance = { factor = 1 }
-# 		# 在此添加效果
-# 		add_stability = -1
-		
-# 	}
-# }	
-#  YE_bianfang.6.T:0 ""
-#  YE_bianfang.6.D:0 ""
-#  YE_bianfang.6.a:0 ""
-#  YE_bianfang.6.b:0 ""
+	option = {
+		name = YE_bianfang.6.a
+		ai_chance = { factor = 0 }
+		custom_tooltip = YE_bianfang_6_a_tooltip
+		add_government_power = {
+			mechanic_type = YE_tyrant_system
+			power_type = benelolent_ruthless_power
+			value = 25
+		}
+	}
+	option = {
+		name = YE_bianfang.6.b
+		ai_chance = { factor = 1 }
+		custom_tooltip = YE_bianfang_6_b_tooltip
+		add_government_power = {
+			mechanic_type = YE_tyrant_system
+			power_type = benelolent_ruthless_power
+			value = -25
+		}
+		if = {
+			limit = {
+				4828 = {
+					culture = horned_ogre
+				}
+			}
+			remove_racial_majority = { race = ogre }
+			change_culture = beikling
+		}
+		else = {
+			remove_racial_minority_any_size = { race = ogre }
+		}
+	}
+}	
 
 # country_event = { #7 
 # 	id = YE_bianfang.7

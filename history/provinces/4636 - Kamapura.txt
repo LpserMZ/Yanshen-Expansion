@@ -2,7 +2,7 @@
 owner = YC8
 controller = YC8
 culture = qingliu
-religion = guosi_faith
+religion = accretive_path
 base_tax = 6
 base_production = 4
 base_manpower = 3

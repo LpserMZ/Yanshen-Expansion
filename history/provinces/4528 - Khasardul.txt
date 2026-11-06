@@ -2,7 +2,7 @@
 owner = YB1
 controller = YB1
 culture = shaliu
-religion = guosi_faith
+religion = accretive_path
 base_tax = 4
 base_production = 3
 base_manpower = 3

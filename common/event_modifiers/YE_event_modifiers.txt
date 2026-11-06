@@ -407,3 +407,9 @@ renxiapai_moral_instruction = {
 yanzhou_universities_funded_by_yanzhoupai = {
 	local_development_cost_modifier = -0.10
 }
+
+endless_ambition_bianfang = {
+	core_creation = -0.15
+	province_warscore_cost = -0.15
+	unjustified_demands = -0.50
+}

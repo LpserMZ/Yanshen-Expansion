@@ -1,6 +1,6 @@
 owner = YD3
 culture = qingliu
-religion = guosi_faith
+religion = accretive_path
 controller = YD3
 is_city = yes
 trade_goods = wine

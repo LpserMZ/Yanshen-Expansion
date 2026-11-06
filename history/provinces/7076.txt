@@ -1,6 +1,6 @@
 owner = YC8
 culture = qingliu
-religion = guosi_faith
+religion = accretive_path
 controller = YC8
 is_city = yes
 trade_goods = spices

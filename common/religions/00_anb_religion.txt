@@ -7889,7 +7889,7 @@ halessi = {
 		}
 	}
 
-	guosi_faith = {
+	guosi__faith = {
 		color = { 247 252 56 }
 		icon = 152
 		country = {

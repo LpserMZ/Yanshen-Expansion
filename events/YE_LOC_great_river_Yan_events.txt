@@ -39,6 +39,8 @@ country_event = { #1 边方开局事件
 				}
 			}
 		}
+		custom_tooltip = YE_GRY_1_tooltip
+		set_ruler_flag = is_ruler_longxinzhu_flag
 	}
 }
 country_event = { #2 朱樾开局事件——组织包围网

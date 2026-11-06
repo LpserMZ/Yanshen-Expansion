@@ -113,6 +113,9 @@ YE_bianfang_1 = {
 					}
 				}
 			}	
+			country_event = {
+				id = YE_bianfang.6
+			}
 		} 
 	}
 
@@ -426,6 +429,15 @@ YE_bianfang_3 = {
 			}
 			zx1_area = {
 				add_permanent_claim = ROOT
+			}
+			custom_tooltip = YE_bianfang_3_2_tooltip
+			if = {
+				limit = {
+					has_ruler_flag = is_ruler_longxinzhu_flag
+				}
+				country_event = {
+					id = YE_bianfang.5
+				}
 			}
 		} 
 	}
@@ -794,6 +806,7 @@ YE_bianfang_5 = {
 		} 
 
 		effect = {  
+			custom_tooltip = YE_bianfang_5_2_tooltip
 			country_event = { id = bianfang.5 }
 		} 
 	}
