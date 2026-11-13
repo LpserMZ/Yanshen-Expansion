@@ -11,3 +11,4 @@ is_city = yes
 latent_trade_goods = { 
 	coal 
 }
+fort_15th = yes

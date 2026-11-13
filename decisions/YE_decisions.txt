@@ -14,10 +14,10 @@ country_decisions = {
 			any_owned_province = {
 				has_province_flag = YE_scholar_from_luojiang_here
 				num_of_times_improved_by_owner = 4
-				if = {
-					limit = { owner = { adm_tech = 4 } }
-					has_building = temple
-				}
+				# if = { # 不能正确显示
+				# 	limit = { owner = { adm_tech = 4 } }
+				# 	has_building = temple
+				# }
 			}
 			treasury = 200
 		}

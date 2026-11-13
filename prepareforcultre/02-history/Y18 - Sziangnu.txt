@@ -5,7 +5,7 @@ government_rank = 1
 primary_culture = jinxun_culture
 religion = accretive_path
 religious_school = lingjue_school
-technology_group = tech_halessi
+technology_group = tech_yanshen
 capital = 4869
 fixed_capital = 4869
 

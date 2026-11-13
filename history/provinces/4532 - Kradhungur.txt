@@ -20,3 +20,4 @@ latent_trade_goods = {
 	coal 
 }
 add_core = YC3
+fort_15th = yes

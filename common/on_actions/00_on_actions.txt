@@ -13076,12 +13076,19 @@ on_four_year_pulse = {
 
 	if = { #侠界大叛乱
 		limit = {
+			
 			OR = {
 				has_disaster = great_revolt_of_xiajie
-				has_country_flag = allow_xiake_supression_edit_flag
 				any_state = {
 					has_state_edict = xiake_supression_edit
 				}
+				AND = {
+					has_country_flag = allow_xiake_supression_edit_flag
+					any_owned_province = {
+						has_province_modifier = rightful_xia_territory_occupied
+					}
+				}
+
 			}
 		}
 		country_event = { id = YE_GRY.36 }

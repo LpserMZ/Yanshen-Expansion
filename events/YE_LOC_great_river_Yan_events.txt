@@ -1798,7 +1798,7 @@ country_event = { #36 编户齐民
 	picture = BAD_WITH_MONARCH_eventPicture
 
 	is_triggered_only = yes
-
+	
 	option = {
 		name = YE_GRY.36.a
 		ai_chance = {
@@ -3011,13 +3011,20 @@ country_event = { #52 瓜分古朔关-攻克古朔关首都后触发-仅盟主�
 					}
 					else_if = {
 						limit = {
-							area = jx5_area
+							OR = {
+								area = jx5_area
+								area = linghui_area
+							}
+							
 						}
 						cede_province = Y15
 					}
 					else_if = {
 						limit = {
-							area = beikyuan_area
+							OR = {
+								area = beikyuan_area
+								area = jx10_area
+							}
 							PREV = {
 								is_in_war = {
 									attacker_leader = Y05
@@ -3029,7 +3036,10 @@ country_event = { #52 瓜分古朔关-攻克古朔关首都后触发-仅盟主�
 					}
 					else_if = {
 						limit = {
-							area = beikyuan_area
+							OR = {
+								area = beikyuan_area
+								area = jx10_area
+							}
 							PREV = {
 								is_in_war = {
 									attacker_leader = Y15
@@ -3047,24 +3057,16 @@ country_event = { #52 瓜分古朔关-攻克古朔关首都后触发-仅盟主�
 		else = {
 			Y17 = {
 				every_owned_province = {
-					if = {
-						limit = {
+					limit = {
+						OR = {
 							area = jx4_area
-						}
-						cede_province = ROOT
-					}
-					else_if = {
-						limit = {
 							area = jx5_area
-						}
-						cede_province = ROOT
-					}
-					else_if = {
-						limit = {
 							area = beikyuan_area
+							area = jx10_area
+							area = linghui_area
 						}
-						cede_province = ROOT
 					}
+					cede_province = ROOT
 				}
 			}
 		}
@@ -3411,11 +3413,11 @@ country_event = { #61 存亡之急
 	option = {
 		name = YE_GRY.61.a
 		ai_chance = { factor = 1 }
-		add_treasury = 5000
-		add_manpower = 200
+		add_treasury = 1000
+		add_manpower = 50
 		add_country_modifier = {
 			name = struggle_for_a_chance_to_live
-			duration = 10950
+			duration = 3650
 		}
 		every_neighbor_province = {
 			add_permanent_claim = ROOT

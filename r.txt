@@ -463,11 +463,17 @@ if = { # 其他省份组
 
 if = { # 割让
 	limit = {
-		always = no
+		always = yes
 	}
 	yanshen_superregion = {
-		add_core = Y11
-		cede_province = Y11
+		add_core = ROOT
+		cede_province = ROOT
+		# change_religion = regent_court
+		# change_culture = moon_elf
+	}
+	shenzhou_superregion = {
+		add_core = ROOT
+		cede_province = ROOT
 		# change_religion = regent_court
 		# change_culture = moon_elf
 	}

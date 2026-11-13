@@ -10,3 +10,4 @@ base_manpower = 3
 trade_goods = livestock
 is_city = yes
 add_claim = Y23
+fort_15th = yes

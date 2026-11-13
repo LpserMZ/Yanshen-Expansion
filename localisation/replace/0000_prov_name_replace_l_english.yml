@@ -16,9 +16,9 @@
  kradhungur_area:0 "nnn"
  kradhungur_area_name:0 "nnn"
  kradhungur_area_adj:0 "nnn"
- raghajandi_area:0 "Ñ‘‘N"
- raghajandi_area_name:0 "Ñ‘‘N"
- raghajandi_area_adj:0 "Ñ‘‘N"
+ raghajandi_area:0 "ïo‘N"
+ raghajandi_area_name:0 "ïo‘N"
+ raghajandi_area_adj:0 "ïo‘N"
  PROV4528:0 "ga»l"
  PROV_ADJ4528:0 "ga»l"
  khasardul_area:0 "ga»l"
@@ -203,6 +203,9 @@
  PROV_ADJ4630:0 "ïo‘Nœ^"
  PROV4633:0 "^²R"
  PROV_ADJ4633:0 "^²R"
+
+ PROV1370:0 "ÞàsŒn"
+ PROV_ADJ1370:0 "ÞàsŒn"
 
  lower_yanshen_region:0 "Wml"
  lower_yanshen_region_name:0 "Wml"

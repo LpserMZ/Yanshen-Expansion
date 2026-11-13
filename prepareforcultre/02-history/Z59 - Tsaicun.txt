@@ -5,7 +5,7 @@ primary_culture = jiangszun
 add_accepted_culture = gangim
 religion = accretive_path
 religious_school = lingjue_school
-technology_group = tech_halessi
+technology_group = tech_yanshen
 capital = 4846
 
 1000.1.1 = { set_estate_privilege = estate_mages_organization_state }

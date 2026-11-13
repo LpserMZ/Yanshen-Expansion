@@ -26,7 +26,7 @@ aPUI_tyrant_and_yannification_exempt_tax_modifier = {
 	local_monthly_devastation = -0.20
 }
 aPUI_tyrant_and_yannification_grant_jade_seal_privilege_modifier = {
-	min_local_autonomy = 0.10
+	min_local_autonomy = 10
 	center_of_trade_upgrade_cost = -0.33
 }
 aPUI_tyrant_and_yannification_conscript_people_modifier = {

@@ -8,3 +8,4 @@ base_production = 3
 base_manpower = 1
 trade_goods = wine
 is_city = yes
+fort_15th = yes

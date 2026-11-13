@@ -1190,6 +1190,8 @@ YE_dahui_3 = {
 				area = yodhilakra_area
 				area = mogutian_area
 				area = tietyuan_area
+				area = wx8_area
+				area = wx9_area
 			}
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
@@ -1212,6 +1214,8 @@ YE_dahui_3 = {
 					area = yodhilakra_area
 					area = mogutian_area
 					area = tietyuan_area
+					area = wx8_area
+					area = wx9_area
 				}
 			}
 		} 
@@ -1284,7 +1288,7 @@ YE_dahui_3 = {
 					change_culture = ROOT
 				}
 				add_permanent_province_modifier = {
-					name = deus_wall_stone_inscription
+					name = god_wall_stone_inscription
 					duration = -1
 				}
 			}
@@ -2045,9 +2049,9 @@ YE_dahui_branch_wuxun_4 = {
 		}
 		effect = {
 			4533 = {
-				remove_province_modifier = deus_wall_stone_inscription
+				remove_province_modifier = god_wall_stone_inscription
 				add_permanent_province_modifier = {
-					name = deus_wall_stone_inscription_PLVS_VLTRA
+					name = god_wall_stone_inscription_PLVS_VLTRA
 					duration = -1
 				}
 			}

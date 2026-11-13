@@ -7,7 +7,7 @@ primary_culture = jichuan
 
 religion = accretive_path
 
-technology_group = tech_halessi
+technology_group = tech_yanshen
 
 capital = 7323
 

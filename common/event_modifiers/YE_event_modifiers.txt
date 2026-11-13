@@ -3,7 +3,7 @@ unloyal_governor_vassal = { #命令的属国类型，驻军大营独立倾向达
 }
 hegemon_in_west = { #西朝霸业
 	province_warscore_cost = -0.15
-	regiment_recruit_speed = -0.25
+	global_regiment_recruit_speed = -0.25
 	fort_maintenance_modifier = -0.10
 }
 inexorability_I = { #势不可挡I
@@ -151,14 +151,14 @@ xiajie_directly_administered_territory_IV = {
 
 qingwu_central_city = {
 	local_years_of_nationalism = -10
-	culture_conversion_cost = -0.25
+	local_culture_conversion_cost = -0.25
 }
 
-deus_wall_stone_inscription = {
+god_wall_stone_inscription = {
 	legitimacy = 0.5
 	culture_conversion_cost = -0.10
 }
-deus_wall_stone_inscription_PLVS_VLTRA = {
+god_wall_stone_inscription_PLVS_VLTRA = {
 	legitimacy = 1
 	culture_conversion_cost = -0.10
 	global_missionary_strength = 0.01
@@ -297,13 +297,13 @@ lanjinhui_liberate_tianlou = {
 }
 
 struggle_for_a_chance_to_live = {
-	land_maintenance_modifier = -0.90
-	manpower_recovery_speed = 2
-	regiment_recruit_speed = -0.90
-	infantry_cost = -0.90
-	cavalry_cost = -0.90
-	artillery_cost = -0.90
-	land_forcelimit = 100
+	land_maintenance_modifier = -0.50
+	manpower_recovery_speed = 1
+	global_regiment_recruit_speed = -0.90
+	infantry_cost = -0.50
+	cavalry_cost = -0.50
+	artillery_cost = -0.50
+	land_forcelimit = 50
 }
 
 # jianxusi monument & spell

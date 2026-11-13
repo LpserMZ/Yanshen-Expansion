@@ -5,7 +5,7 @@ add_government_reform = autocracy_reform
 government_rank = 1
 primary_culture = jichuan
 religion = accretive_path
-technology_group = tech_halessi
+technology_group = tech_yanshen
 capital = 4628
 
 1000.1.1 = {

@@ -8,3 +8,4 @@ base_manpower = 2
 trade_goods = livestock
 is_city = yes
 add_core = Y14
+fort_15th = yes

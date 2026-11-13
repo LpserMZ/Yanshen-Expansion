@@ -5,7 +5,7 @@ government_rank = 1
 primary_culture = gangim
 religion = accretive_path
 religious_school = lingjue_school
-technology_group = tech_halessi
+technology_group = tech_yanshen
 capital = 4896
 historical_friend = Y26 #Yinquan
 

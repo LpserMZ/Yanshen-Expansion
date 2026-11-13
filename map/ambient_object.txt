@@ -3948,10 +3948,10 @@ type={
 		name="bal_dostan"
 		hidden_on_start=yes
 		position={
-		3072.000 -0.150 1549.000 
+			3072.000 -0.150 1549.000 
 		}
 		rotation={
-		0.000 13.000 0.000 
+			0.000 13.000 0.000 
 		}
 	}
 }
@@ -4512,7 +4512,7 @@ type={
 	scale=0.180000
 	time_duration=300.000000
 	object={
-		name="LF_Spire_F_1" #kazakesh
+		name="LF_Spire_F_1"
 		hidden_on_start=no
 		position={
 			3092.700 -10.000 778.000 
@@ -4522,7 +4522,7 @@ type={
 		}
 	}
 	object={
-		name="LF_Spire_F_2" #khaga Yatsa
+		name="LF_Spire_F_2"
 		hidden_on_start=no
 		position={
 			3633.700 0.690 753.000 
@@ -4532,7 +4532,7 @@ type={
 		}
 	}
 	object={
-		name="LF_Spire_F_3" #shalazar
+		name="LF_Spire_F_3"
 		hidden_on_start=no
 		position={
 			3766.700 0.200 598.000 
@@ -4542,7 +4542,7 @@ type={
 		}
 	}
 	object={
-		name="LF_Spire_F_4" #arksite
+		name="LF_Spire_F_4"
 		hidden_on_start=no
 		position={
 			3696.000 -7.000 514.000 
@@ -4552,7 +4552,7 @@ type={
 		}
 	}
 	object={
-		name="LF_Spire_F_5" #zerat
+		name="LF_Spire_F_5"
 		hidden_on_start=no
 		position={
 			3514.800 0.300 762.000 
@@ -4588,7 +4588,17 @@ type={
 	scale=0.180000
 	time_duration=300.000000
 	object={
-		name="LF_Spire_B_1" #ashuzal
+		name="LF_Spire_B_3"
+		hidden_on_start=no
+		position={
+			492.000 -0.400 511.000 
+		}
+		rotation={
+			0.000 10.000 0.000 
+		}
+	}
+	object={
+		name="LF_Spire_B_1"
 		hidden_on_start=no
 		position={
 			3428.700 -0.700 628.000 
@@ -4598,7 +4608,7 @@ type={
 		}
 	}
 	object={
-		name="LF_Spire_B_2" #kuikka gamyi
+		name="LF_Spire_B_2"
 		hidden_on_start=no
 		position={
 			3378.700 -0.400 730.000 
@@ -4608,18 +4618,7 @@ type={
 		}
 	}
 	object={
-		name="LF_Spire_B_3" #serenbor
-		hidden_on_start=no
-		position={
-			492.000 -0.400 511.000 
-		}
-		rotation={
-			0.000 10.000 0.000 
-		}
-	}
-	#umbral covenant MT
-	object={
-		name="LF_Spire_B_UC_1" #kazakesh
+		name="LF_Spire_B_UC_1"
 		hidden_on_start=yes
 		position={
 			3092.700 -10.000 778.000 
@@ -4629,7 +4628,7 @@ type={
 		}
 	}
 	object={
-		name="LF_Spire_B_UC_2" #khaga Yatsa
+		name="LF_Spire_B_UC_2"
 		hidden_on_start=yes
 		position={
 			3633.700 0.690 753.000 
@@ -4639,7 +4638,7 @@ type={
 		}
 	}
 	object={
-		name="LF_Spire_B_UC_4" #arksite
+		name="LF_Spire_B_UC_4"
 		hidden_on_start=yes
 		position={
 			3696.000 -7.000 514.000 
@@ -4649,7 +4648,7 @@ type={
 		}
 	}
 	object={
-		name="LF_Spire_B_UC_5" #zerat
+		name="LF_Spire_B_UC_5"
 		hidden_on_start=yes
 		position={
 			3514.800 0.300 762.000 
@@ -4807,44 +4806,42 @@ type={
 		}
 	}
 }
-
 type={
 	type="skywhale_entity"
 	use_animation=yes
-	scale=0.300
+	scale=0.300000
 	time_duration=300.000000
-	object={
-		name="skywhale"
-		hidden_on_start=no
-		position={
-			4868.700 10.000 1265.000  
-		}
-		rotation={
-			0.000 0.000 0.000 
-		}
-	}
 	object={
 		name="skywhale3"
 		hidden_on_start=no
 		position={
-			  4982.000 10.000 827.000
+			4982.000 10.000 827.000 
 		}
 		rotation={
 			0.000 60.000 0.000 
 		}
 	}
+	object={
+		name="skywhale"
+		hidden_on_start=no
+		position={
+			4868.700 10.000 1265.000 
+		}
+		rotation={
+			0.000 0.000 0.000 
+		}
+	}
 }
-
 type={
 	type="skywhale2_entity"
 	use_animation=yes
-	scale=0.300
+	scale=0.300000
 	time_duration=300.000000
 	object={
 		name="skywhale2"
 		hidden_on_start=no
 		position={
-			5278.00 13.000 801.000  
+			5278.000 13.000 801.000 
 		}
 		rotation={
 			0.000 60.000 0.000 
@@ -4854,24 +4851,23 @@ type={
 		name="skywhale4"
 		hidden_on_start=no
 		position={
-			4649.00 13.000 786.000  
+			4649.000 13.000 786.000 
 		}
 		rotation={
 			0.000 60.000 0.000 
 		}
 	}
 }
-
 type={
 	type="windward_entity_ormam"
 	use_animation=no
-	scale=4.00000
+	scale=4.000000
 	time_duration=300.000000
 	object={
 		name="Windward Ormam"
 		hidden_on_start=no
 		position={
-			964.000 0.000 177.200
+			964.000 0.000 177.200 
 		}
 		rotation={
 			0.000 41.000 0.000 
@@ -4881,7 +4877,7 @@ type={
 type={
 	type="windward_entity"
 	use_animation=no
-	scale=3.20000
+	scale=3.200000
 	time_duration=300.000000
 	object={
 		name="Windward Arpedifer"
@@ -4944,9 +4940,6 @@ type={
 		}
 	}
 }
-
-#GENE PILLARS:
-
 type={
 	type="pillar_entity"
 	use_animation=no
@@ -5061,63 +5054,53 @@ type={
 		}
 	}
 }
-
-
-#STORMWALL/KIAMOA:
-
 type={
 	type="frognode_entity"
 	use_animation=yes
-	scale=0.8
+	scale=0.800000
 	time_duration=300.000000
 	object={
 		name="frognode"
 		hidden_on_start=no
 		position={
-			5147.00 0.000 804.000  
+			5147.000 0.000 804.000 
 		}
 		rotation={
 			0.000 180.000 0.000 
 		}
 	}
-	
 }
-
 type={
 	type="turt_entity"
 	use_animation=yes
-	scale= 1
 	time_duration=300.000000
 	object={
 		name="turtle"
 		hidden_on_start=no
 		position={
-			4838.00 3.000 1004.000  
+			4838.000 3.000 1004.000 
 		}
 		rotation={
 			0.000 0.000 0.000 
 		}
 	}
-	
 }
-
 type={
 	type="armadillo_entity"
 	use_animation=yes
-	scale= 2
+	scale=2.000000
 	time_duration=300.000000
 	object={
 		name="armadillo"
 		hidden_on_start=no
 		position={
-			4767.00 0.000 561.000  
+			4767.000 0.000 561.000 
 		}
 		rotation={
 			0.000 120.000 0.000 
 		}
 	}
-}	
-
+}
 type={
 	type="Stormwall_nodes1_entity"
 	use_animation=no
@@ -5562,7 +5545,6 @@ type={
 		}
 	}
 }
-
 type={
 	type="quartz_cothon_entity"
 	use_animation=no
@@ -5572,14 +5554,13 @@ type={
 		name="quartz_cothon"
 		hidden_on_start=no
 		position={
-			3699.000 0.000 1085.000
+			3699.000 0.000 1085.000 
 		}
 		rotation={
 			0.000 -33.000 0.000 
 		}
 	}
 }
-
 type={
 	type="glyphs_of_irdaeos_entity"
 	use_animation=no
@@ -5589,27 +5570,10 @@ type={
 		name="glyphs_of_irdaeos"
 		hidden_on_start=no
 		position={
-			3742.000 0.050 1566.000
+			3742.000 0.050 1566.000 
 		}
 		rotation={
 			0.000 0.000 0.000 
 		}
 	}
 }
-# type={
-# 	type="dice_entity"
-# 	use_animation=no
-# 	scale=1.500000
-# 	time_duration=300.000000
-# 	object={
-# 		name="yanshen_dice"
-# 		hidden_on_start=no
-# 		position={
-# 			4669.000 10 1297.000
-# 		}
-# 		rotation={
-# 			0.000 0.000 0.000 
-# 		}
-# 	}
-
-# }

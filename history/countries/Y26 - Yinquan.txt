@@ -5,7 +5,7 @@ government_rank = 1
 primary_culture = yinqvan_culture
 religion = accretive_path
 religious_school = lingjue_school
-technology_group = tech_halessi
+technology_group = tech_yanshen
 capital = 4931
 historical_friend = Y27 #Kohai
 
