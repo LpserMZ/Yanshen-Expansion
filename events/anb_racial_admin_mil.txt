@@ -1,0 +1,1694 @@
+# Added a list of all the races for future use
+# races = ["centaur", "dwarven", "elven", "gnollish", "gnomish", "goblin", "half_elven", "half_orcish", "halfling", "harimari", "harpy", "hobgoblin", "human", "kobold", "ogre", "orcish", "ruinborn", "troll"]
+
+
+namespace = racial_modifiers
+
+#Change Military
+# deleted racial_modifiers.1
+# deleted racial_modifiers.2
+
+
+#Military Force Switch if Oppressed - Civilized races
+country_event = {
+	id = racial_modifiers.3
+	title = racial_modifiers.3.t
+	desc = racial_modifiers.3.d
+	picture = LAND_MILITARY_eventPicture
+	
+	trigger = {
+		OR = {
+			# AND = {
+				# has_country_modifier = orcish_military
+				# low_tolerance_orcish_race_trigger = yes
+			# }
+			AND = {
+				has_country_modifier = human_military
+				low_tolerance_human_race_trigger = yes
+			}
+			AND = {
+				has_country_modifier = elven_military
+				low_tolerance_elven_race_trigger = yes
+			}
+			AND = {
+				has_country_modifier = half_elven_military
+				low_tolerance_half_elven_race_trigger = yes
+			}
+			AND = {
+				has_country_modifier = half_orcish_military
+				low_tolerance_half_orcish_race_trigger = yes
+			}
+			# AND = {
+				# has_country_modifier = troll_military
+				# low_tolerance_troll_race_trigger = yes
+			# }
+			# AND = {
+				# has_country_modifier = gnollish_military
+				# low_tolerance_gnollish_race_trigger = yes
+			# }
+			# AND = {
+				# has_country_modifier = goblin_military
+				# low_tolerance_goblin_race_trigger = yes
+			# }
+			AND = {
+				has_country_modifier = gnomish_military
+				low_tolerance_gnomish_race_trigger = yes
+			}
+			AND = {
+				has_country_modifier = dwarven_military
+				low_tolerance_dwarven_race_trigger = yes
+			}
+			# AND = {
+				# has_country_modifier = kobold_military
+				# low_tolerance_kobold_race_trigger = yes
+			# }
+			AND = {
+				has_country_modifier = ruinborn_military
+				low_tolerance_ruinborn_race_trigger = yes
+			}
+			# AND = {
+				# has_country_modifier = harpy_military
+				# low_tolerance_harpy_race_trigger = yes
+			# }
+			AND = {
+				has_country_modifier = halfling_military
+				low_tolerance_halfling_race_trigger = yes
+			}
+			# AND = {
+				# has_country_modifier = ogre_military
+				# low_tolerance_ogre_race_trigger = yes
+			# }
+			# AND = {
+				# has_country_modifier = centaur_military
+				# low_tolerance_centaur_race_trigger = yes
+			# }
+			AND = {
+				has_country_modifier = harimari_military
+				low_tolerance_harimari_race_trigger = yes
+			}
+			# AND = {
+				# has_country_modifier = hobgoblin_military
+				# low_tolerance_hobgoblin_race_trigger = yes
+			# }
+			# AND = {
+				# has_country_modifier = lizardfolk_military
+				# low_tolerance_lizardfolk_race_trigger = yes
+			# }
+		}
+				# has_country_modifier = dwarven_administration
+				# has_country_modifier = dwarven_military
+				# low_tolerance_dwarven_race_trigger = yes
+				NOT = { has_country_flag = disable_racial_mil_swap_flag }
+	}
+	
+	is_triggered_only = yes #on_action
+	
+	option = {
+		name = racial_modifiers.3.a
+		
+		clear_racial_military = yes
+		reset_racial_military_via_administration = yes
+		
+		if = {
+			limit = {
+				has_country_modifier = orcish_administration
+			}
+			hidden_effect = {
+				every_owned_province = {
+					if = {
+						limit = {
+							has_orcish_majority_trigger = yes
+						}
+						add_unrest = 10
+					}
+				}
+			}
+			custom_tooltip = racial_modifiers_majority_unrest10.tt
+		}
+		else_if = {
+			limit = {
+				has_country_modifier = human_administration
+			}
+			hidden_effect = {
+				every_owned_province = {
+					if = {
+						limit = {
+							has_human_majority_trigger = yes
+						}
+						add_unrest = 5
+					}
+				}
+			}
+			custom_tooltip = racial_modifiers_majority_unrest5.tt
+		}
+		else_if = {
+			limit = {
+				has_country_modifier = elven_administration
+			}
+			hidden_effect = {
+				every_owned_province = {
+					if = {
+						limit = {
+							has_elven_majority_trigger = yes
+						}
+						add_unrest = 5
+					}
+				}
+			}
+			custom_tooltip = racial_modifiers_majority_unrest5.tt
+		}
+		else_if = {
+			limit = {
+				has_country_modifier = half_elven_administration
+			}
+			hidden_effect = {
+				every_owned_province = {
+					if = {
+						limit = {
+							has_half_elven_majority_trigger = yes
+						}
+						add_unrest = 5
+					}
+				}
+			}
+			custom_tooltip = racial_modifiers_majority_unrest5.tt
+		}
+		else_if = {
+			limit = {
+				has_country_modifier = half_orcish_administration
+			}
+			hidden_effect = {
+				every_owned_province = {
+					if = {
+						limit = {
+							has_half_orcish_majority_trigger = yes
+						}
+						add_unrest = 10
+					}
+				}
+			}
+			custom_tooltip = racial_modifiers_majority_unrest10.tt
+		}
+		else_if = {
+			limit = {
+				has_country_modifier = troll_administration
+			}
+			hidden_effect = {
+				every_owned_province = {
+					if = {
+						limit = {
+							has_troll_majority_trigger = yes
+						}
+						add_unrest = 10
+					}
+				}
+			}
+			custom_tooltip = racial_modifiers_majority_unrest10.tt
+		}
+		else_if = {
+			limit = {
+				has_country_modifier = gnollish_administration
+			}
+			hidden_effect = {
+				every_owned_province = {
+					if = {
+						limit = {
+							has_gnollish_majority_trigger = yes
+						}
+						add_unrest = 10
+					}
+				}
+			}
+			custom_tooltip = racial_modifiers_majority_unrest10.tt
+		}
+		else_if = {
+			limit = {
+				has_country_modifier = goblin_administration
+			}
+			hidden_effect = {
+				every_owned_province = {
+					if = {
+						limit = {
+							has_goblin_majority_trigger = yes
+						}
+						add_unrest = 10
+					}
+				}
+			}
+			custom_tooltip = racial_modifiers_majority_unrest10.tt
+		}
+		else_if = {
+			limit = {
+				has_country_modifier = gnomish_administration
+			}
+			hidden_effect = {
+				every_owned_province = {
+					if = {
+						limit = {
+							has_gnomish_majority_trigger = yes
+						}
+						add_unrest = 5
+					}
+				}
+			}
+			custom_tooltip = racial_modifiers_majority_unrest5.tt
+		}
+		else_if = {
+			limit = {
+				has_country_modifier = dwarven_administration
+			}
+			hidden_effect = {
+				every_owned_province = {
+					if = {
+						limit = {
+							has_dwarven_majority_trigger = yes
+						}
+						add_unrest = 5
+					}
+				}
+			}
+			custom_tooltip = racial_modifiers_majority_unrest5.tt
+		}
+		else_if = {
+			limit = {
+				has_country_modifier = kobold_administration
+			}
+			hidden_effect = {
+				every_owned_province = {
+					if = {
+						limit = {
+							has_kobold_majority_trigger = yes
+						}
+						add_unrest = 10
+					}
+				}
+			}
+			custom_tooltip = racial_modifiers_majority_unrest10.tt
+		}
+		else_if = {
+			limit = {
+				has_country_modifier = ruinborn_administration
+			}
+			hidden_effect = {
+				every_owned_province = {
+					if = {
+						limit = {
+							has_ruinborn_majority_trigger = yes
+						}
+						add_unrest = 5
+					}
+				}
+			}
+			custom_tooltip = racial_modifiers_majority_unrest5.tt
+		}
+		else_if = {
+			limit = {
+				has_country_modifier = harpy_administration
+			}
+			hidden_effect = {
+				every_owned_province = {
+					if = {
+						limit = {
+							has_harpy_majority_trigger = yes
+						}
+						add_unrest = 10
+					}
+				}
+			}
+			custom_tooltip = racial_modifiers_majority_unrest10.tt
+		}
+		else_if = {
+			limit = {
+				has_country_modifier = halfling_administration
+			}
+			hidden_effect = {
+				every_owned_province = {
+					if = {
+						limit = {
+							has_halfling_majority_trigger = yes
+						}
+						add_unrest = 5
+					}
+				}
+			}
+			custom_tooltip = racial_modifiers_majority_unrest5.tt
+		}
+		else_if = {
+			limit = {
+				has_country_modifier = ogre_administration
+			}
+			hidden_effect = {
+				every_owned_province = {
+					if = {
+						limit = {
+							has_ogre_majority_trigger = yes
+						}
+						add_unrest = 10
+					}
+				}
+			}
+			custom_tooltip = racial_modifiers_majority_unrest10.tt
+		}
+		else_if = {
+			limit = {
+				has_country_modifier = centaur_administration
+			}
+			hidden_effect = {
+				every_owned_province = {
+					if = {
+						limit = {
+							has_centaur_majority_trigger = yes
+						}
+						add_unrest = 10
+					}
+				}
+			}
+			custom_tooltip = racial_modifiers_majority_unrest10.tt
+		}
+		else_if = {
+			limit = {
+				has_country_modifier = harimari_administration
+			}
+			hidden_effect = {
+				every_owned_province = {
+					if = {
+						limit = {
+							has_harimari_majority_trigger = yes
+						}
+						add_unrest = 10
+					}
+				}
+			}
+			custom_tooltip = racial_modifiers_majority_unrest10.tt
+		}
+		else_if = {
+			limit = {
+				has_country_modifier = hobgoblin_administration
+			}
+			hidden_effect = {
+				every_owned_province = {
+					if = {
+						limit = {
+							has_hobgoblin_majority_trigger = yes
+						}
+						add_unrest = 10
+					}
+				}
+			}
+			custom_tooltip = racial_modifiers_majority_unrest10.tt
+		}
+		else_if = {
+			limit = {
+				has_country_modifier = lizardfolk_administration
+			}
+			hidden_effect = {
+				every_owned_province = {
+					if = {
+						limit = {
+							has_lizardfolk_majority_trigger = yes
+						}
+						add_unrest = 10
+					}
+				}
+			}
+			custom_tooltip = racial_modifiers_majority_unrest10.tt
+		}
+		else_if = {
+			limit = {
+				has_country_modifier = mechanim_administration
+			}
+			hidden_effect = {
+				every_owned_province = {
+					if = {
+						limit = {
+							has_mechanim_majority_trigger = yes
+						}
+						add_unrest = 10
+					}
+				}
+			}
+			custom_tooltip = racial_modifiers_majority_unrest10.tt
+		}
+	}
+}
+
+
+#Military Force Switch if Oppressed - Monstrous races
+country_event = {
+	id = racial_modifiers.4
+	title = racial_modifiers.3.t
+	desc = racial_modifiers.3.d
+	picture = LAND_MILITARY_eventPicture
+	
+	trigger = {
+		OR = {
+			AND = {
+				has_country_modifier = orcish_military
+				low_tolerance_orcish_race_trigger = yes
+			}
+			AND = {
+				has_country_modifier = troll_military
+				low_tolerance_troll_race_trigger = yes
+			}
+			AND = {
+				has_country_modifier = gnollish_military
+				low_tolerance_gnollish_race_trigger = yes
+			}
+			AND = {
+				has_country_modifier = goblin_military
+				low_tolerance_goblin_race_trigger = yes
+			}
+			AND = {
+				has_country_modifier = kobold_military
+				low_tolerance_kobold_race_trigger = yes
+			}
+			AND = {
+				has_country_modifier = harpy_military
+				low_tolerance_harpy_race_trigger = yes
+			}
+			AND = {
+				has_country_modifier = ogre_military
+				low_tolerance_ogre_race_trigger = yes
+			}
+			AND = {
+				has_country_modifier = centaur_military
+				low_tolerance_centaur_race_trigger = yes
+			}
+			AND = {
+				has_country_modifier = hobgoblin_military
+				low_tolerance_hobgoblin_race_trigger = yes
+			}
+			AND = {
+				has_country_modifier = lizardfolk_military
+				low_tolerance_lizardfolk_race_trigger = yes
+			}
+			AND = {
+				has_country_modifier = mechanim_military
+				low_tolerance_mechanim_race_trigger = yes
+			}
+		}
+		NOT = { has_country_flag = disable_racial_mil_swap_flag }
+	}
+	
+	
+	is_triggered_only = yes #on_action
+	
+	option = {
+		name = racial_modifiers.3.a
+		
+		clear_racial_military = yes
+		reset_racial_military_via_administration = yes
+		
+		if = {
+			limit = {
+				has_country_modifier = orcish_administration
+			}
+			hidden_effect = {
+				every_owned_province = {
+					if = {
+						limit = {
+							has_orcish_majority_trigger = yes
+						}
+						add_unrest = 10
+					}
+				}
+			}
+			custom_tooltip = racial_modifiers_majority_unrest10.tt
+		}
+		else_if = {
+			limit = {
+				has_country_modifier = human_administration
+			}
+			hidden_effect = {
+				every_owned_province = {
+					if = {
+						limit = {
+							has_human_majority_trigger = yes
+						}
+						add_unrest = 5
+					}
+				}
+			}
+			custom_tooltip = racial_modifiers_majority_unrest5.tt
+		}
+		else_if = {
+			limit = {
+				has_country_modifier = elven_administration
+			}
+			hidden_effect = {
+				every_owned_province = {
+					if = {
+						limit = {
+							has_elven_majority_trigger = yes
+						}
+						add_unrest = 5
+					}
+				}
+			}
+			custom_tooltip = racial_modifiers_majority_unrest5.tt
+		}
+		else_if = {
+			limit = {
+				has_country_modifier = half_elven_administration
+			}
+			hidden_effect = {
+				every_owned_province = {
+					if = {
+						limit = {
+							has_half_elven_majority_trigger = yes
+						}
+						add_unrest = 5
+					}
+				}
+			}
+			custom_tooltip = racial_modifiers_majority_unrest5.tt
+		}
+		else_if = {
+			limit = {
+				has_country_modifier = half_orcish_administration
+			}
+			hidden_effect = {
+				every_owned_province = {
+					if = {
+						limit = {
+							has_half_orcish_majority_trigger = yes
+						}
+						add_unrest = 10
+					}
+				}
+			}
+			custom_tooltip = racial_modifiers_majority_unrest10.tt
+		}
+		else_if = {
+			limit = {
+				has_country_modifier = troll_administration
+			}
+			hidden_effect = {
+				every_owned_province = {
+					if = {
+						limit = {
+							has_troll_majority_trigger = yes
+						}
+						add_unrest = 10
+					}
+				}
+			}
+			custom_tooltip = racial_modifiers_majority_unrest10.tt
+		}
+		else_if = {
+			limit = {
+				has_country_modifier = gnollish_administration
+			}
+			hidden_effect = {
+				every_owned_province = {
+					if = {
+						limit = {
+							has_gnollish_majority_trigger = yes
+						}
+						add_unrest = 10
+					}
+				}
+			}
+			custom_tooltip = racial_modifiers_majority_unrest10.tt
+		}
+		else_if = {
+			limit = {
+				has_country_modifier = goblin_administration
+			}
+			hidden_effect = {
+				every_owned_province = {
+					if = {
+						limit = {
+							has_goblin_majority_trigger = yes
+						}
+						add_unrest = 10
+					}
+				}
+			}
+			custom_tooltip = racial_modifiers_majority_unrest10.tt
+		}
+		else_if = {
+			limit = {
+				has_country_modifier = gnomish_administration
+			}
+			hidden_effect = {
+				every_owned_province = {
+					if = {
+						limit = {
+							has_gnomish_majority_trigger = yes
+						}
+						add_unrest = 5
+					}
+				}
+			}
+			custom_tooltip = racial_modifiers_majority_unrest5.tt
+		}
+		else_if = {
+			limit = {
+				has_country_modifier = dwarven_administration
+			}
+			hidden_effect = {
+				every_owned_province = {
+					if = {
+						limit = {
+							has_dwarven_majority_trigger = yes
+						}
+						add_unrest = 5
+					}
+				}
+			}
+			custom_tooltip = racial_modifiers_majority_unrest5.tt
+		}
+		else_if = {
+			limit = {
+				has_country_modifier = kobold_administration
+			}
+			hidden_effect = {
+				every_owned_province = {
+					if = {
+						limit = {
+							has_kobold_majority_trigger = yes
+						}
+						add_unrest = 10
+					}
+				}
+			}
+			custom_tooltip = racial_modifiers_majority_unrest10.tt
+		}
+		else_if = {
+			limit = {
+				has_country_modifier = ruinborn_administration
+			}
+			hidden_effect = {
+				every_owned_province = {
+					if = {
+						limit = {
+							has_ruinborn_majority_trigger = yes
+						}
+						add_unrest = 5
+					}
+				}
+			}
+			custom_tooltip = racial_modifiers_majority_unrest5.tt
+		}
+		else_if = {
+			limit = {
+				has_country_modifier = harpy_administration
+			}
+			hidden_effect = {
+				every_owned_province = {
+					if = {
+						limit = {
+							has_harpy_majority_trigger = yes
+						}
+						add_unrest = 10
+					}
+				}
+			}
+			custom_tooltip = racial_modifiers_majority_unrest10.tt
+		}
+		else_if = {
+			limit = {
+				has_country_modifier = halfling_administration
+			}
+			hidden_effect = {
+				every_owned_province = {
+					if = {
+						limit = {
+							has_halfling_majority_trigger = yes
+						}
+						add_unrest = 5
+					}
+				}
+			}
+			custom_tooltip = racial_modifiers_majority_unrest5.tt
+		}
+		else_if = {
+			limit = {
+				has_country_modifier = ogre_administration
+			}
+			hidden_effect = {
+				every_owned_province = {
+					if = {
+						limit = {
+							has_ogre_majority_trigger = yes
+						}
+						add_unrest = 10
+					}
+				}
+			}
+			custom_tooltip = racial_modifiers_majority_unrest10.tt
+		}
+		else_if = {
+			limit = {
+				has_country_modifier = centaur_administration
+			}
+			hidden_effect = {
+				every_owned_province = {
+					if = {
+						limit = {
+							has_centaur_majority_trigger = yes
+						}
+						add_unrest = 10
+					}
+				}
+			}
+			custom_tooltip = racial_modifiers_majority_unrest10.tt
+		}
+		else_if = {
+			limit = {
+				has_country_modifier = harimari_administration
+			}
+			hidden_effect = {
+				every_owned_province = {
+					if = {
+						limit = {
+							has_harimari_majority_trigger = yes
+						}
+						add_unrest = 10
+					}
+				}
+			}
+			custom_tooltip = racial_modifiers_majority_unrest10.tt
+		}
+		else_if = {
+			limit = {
+				has_country_modifier = hobgoblin_administration
+			}
+			hidden_effect = {
+				every_owned_province = {
+					if = {
+						limit = {
+							has_hobgoblin_majority_trigger = yes
+						}
+						add_unrest = 10
+					}
+				}
+			}
+			custom_tooltip = racial_modifiers_majority_unrest10.tt
+		}
+		else_if = {
+			limit = {
+				has_country_modifier = lizardfolk_administration
+			}
+			hidden_effect = {
+				every_owned_province = {
+					if = {
+						limit = {
+							has_lizardfolk_majority_trigger = yes
+						}
+						add_unrest = 10
+					}
+				}
+			}
+			custom_tooltip = racial_modifiers_majority_unrest10.tt
+		}
+		else_if = {
+			limit = {
+				has_country_modifier = mechanim_administration
+			}
+			hidden_effect = {
+				every_owned_province = {
+					if = {
+						limit = {
+							has_mechanim_majority_trigger = yes
+						}
+						add_unrest = 10
+					}
+				}
+			}
+			custom_tooltip = racial_modifiers_majority_unrest10.tt
+		}
+	}
+}
+
+#Racial Admin - on primary culture change
+country_event = {
+	id =  racial_modifiers.5
+	title =  racial_modifiers.5.t
+	desc =  racial_modifiers.5.d
+	picture = WESTERNISATION_eventPicture
+	
+	#fire_only_once = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		has_unmatching_administration_to_primary_culture = yes
+		NOT = { has_country_flag = locked_racial_administration }
+	}
+	
+	immediate = {
+		hidden_effect = {
+			
+		if = {
+			limit = { has_any_racial_administration = yes }
+			trigger_switch = {
+				on_trigger = has_country_modifier
+				elven_administration = { set_country_flag = old_elven_administration }
+				dwarven_administration = { set_country_flag = old_dwarven_administration }
+				gnollish_administration = { set_country_flag = old_gnollish_administration }
+				gnomish_administration = { set_country_flag = old_gnomish_administration }
+				goblin_administration = { set_country_flag = old_goblin_administration }
+				half_elven_administration = { set_country_flag = old_half_elven_administration }
+				half_orcish_administration = { set_country_flag = old_half_orcish_administration }
+				halfling_administration = { set_country_flag = old_halfling_administration }
+				harpy_administration = { set_country_flag = old_harpy_administration }
+				human_administration = { set_country_flag = old_human_administration }
+				kobold_administration = { set_country_flag = old_kobold_administration }
+				orcish_administration = { set_country_flag = old_orcish_administration }
+				ruinborn_administration = { set_country_flag = old_ruinborn_administration }
+				troll_administration = { set_country_flag = old_troll_administration }
+				harimari_administration = { set_country_flag = old_harimari_administration }
+				hobgoblin_administration = { set_country_flag = old_hobgoblin_administration }
+				centaur_administration = { set_country_flag = old_centaur_administration }
+				ogre_administration = { set_country_flag = old_ogre_administration }
+				lizardfolk_administration = { set_country_flag = old_lizardfolk_administration }
+				mechanim_administration = { set_country_flag = old_mechanim_administration }
+			}
+			clear_racial_administration = yes
+		}
+		
+		#Elven
+		if = {
+			limit = {
+				culture_is_elven = yes
+				NOT = { has_country_modifier = elven_administration }
+			}
+			add_country_modifier = { 
+				name = elven_administration
+				duration = -1
+				hidden = yes
+			}
+			every_country = { generic_purge_expel_opinion_setup_reverse = { race = elven } }
+		}
+		
+		#Dwarven
+		else_if = {
+			limit = {
+				culture_is_dwarven = yes
+				NOT = { has_country_modifier = dwarven_administration }
+			}
+			add_country_modifier = { 
+				name = dwarven_administration
+				duration = -1
+				hidden = yes
+			}
+			every_country = { generic_purge_expel_opinion_setup_reverse = { race = dwarven } }
+		}
+		
+		#Gnollish
+		else_if = {
+			limit = {
+				culture_is_gnollish = yes
+				NOT = { has_country_modifier = gnollish_administration }
+			}
+			add_country_modifier = { 
+				name = gnollish_administration
+				duration = -1
+				hidden = yes
+			}
+			every_country = { generic_purge_expel_opinion_setup_reverse = { race = gnollish } }
+		}
+		
+		#gnomish
+		else_if = {
+			limit = {
+				culture_is_gnomish = yes
+				NOT = { has_country_modifier = gnomish_administration }
+			}
+			add_country_modifier = { 
+				name = gnomish_administration
+				duration = -1
+				hidden = yes
+			}
+			every_country = { generic_purge_expel_opinion_setup_reverse = { race = gnomish } }
+		}
+		
+		#goblin
+		else_if = {
+			limit = {
+				culture_is_goblin = yes
+				NOT = { has_country_modifier = goblin_administration }
+			}
+			add_country_modifier = { 
+				name = goblin_administration
+				duration = -1
+				hidden = yes
+			}
+			every_country = { generic_purge_expel_opinion_setup_reverse = { race = goblin } }
+		}
+		
+		
+		#half_elven
+		else_if = {
+			limit = {
+				culture_is_half_elven = yes
+				NOT = { has_country_modifier = half_elven_administration }
+			}
+			add_country_modifier = { 
+				name = half_elven_administration
+				duration = -1
+				hidden = yes
+			}
+			every_country = { generic_purge_expel_opinion_setup_reverse = { race = half_elven } }
+		}
+		
+		#half_orcish
+		else_if = {
+			limit = {
+				culture_is_half_orcish = yes
+				NOT = { has_country_modifier = half_orcish_administration }
+			}
+			add_country_modifier = { 
+				name = half_orcish_administration
+				duration = -1
+				hidden = yes
+			}
+			every_country = { generic_purge_expel_opinion_setup_reverse = { race = half_orcish } }
+		}
+		
+		#halfling
+		else_if = {
+			limit = {
+				culture_is_halfling = yes
+				NOT = { has_country_modifier = halfling_administration }
+			}
+			add_country_modifier = { 
+				name = halfling_administration
+				duration = -1
+				hidden = yes
+			}
+			every_country = { generic_purge_expel_opinion_setup_reverse = { race = elven } }
+		}
+		
+		#harpy
+		else_if = {
+			limit = {
+				culture_is_harpy = yes
+				NOT = { has_country_modifier = harpy_administration }
+			}
+			add_country_modifier = { 
+				name = harpy_administration
+				duration = -1
+				hidden = yes
+			}
+			every_country = { generic_purge_expel_opinion_setup_reverse = { race = harpy } }
+		}
+		
+		#Human
+		else_if = {
+			limit = {
+				culture_is_human = yes
+				NOT = { has_country_modifier = human_administration }
+			}
+			add_country_modifier = { 
+				name = human_administration
+				duration = -1
+				hidden = yes
+			}
+			every_country = { generic_purge_expel_opinion_setup_reverse = { race = human } }
+		}
+		
+		#kobold
+		else_if = {
+			limit = {
+				culture_is_kobold = yes
+				NOT = { has_country_modifier = kobold_administration }
+			}
+			add_country_modifier = { 
+				name = kobold_administration
+				duration = -1
+				hidden = yes
+			}
+			every_country = { generic_purge_expel_opinion_setup_reverse = { race = kobold } }
+		}
+		
+		#orcish
+		else_if = {
+			limit = {
+				culture_is_orcish = yes
+				NOT = { has_country_modifier = orcish_administration }
+			}
+			add_country_modifier = { 
+				name = orcish_administration
+				duration = -1
+				hidden = yes
+			}
+			every_country = { generic_purge_expel_opinion_setup_reverse = { race = orcish } }
+		}
+		
+		#ruinborn
+		else_if = {
+			limit = {
+				culture_is_ruinborn = yes
+				NOT = { has_country_modifier = ruinborn_administration }
+			}
+			add_country_modifier = { 
+				name = ruinborn_administration
+				duration = -1
+				hidden = yes
+			}
+			every_country = { generic_purge_expel_opinion_setup_reverse = { race = ruinborn } }
+		}
+		
+		#troll
+		else_if = {
+			limit = {
+				culture_is_troll = yes
+				NOT = { has_country_modifier = troll_administration }
+			}
+			add_country_modifier = { 
+				name = troll_administration
+				duration = -1
+				hidden = yes
+			}
+			every_country = { generic_purge_expel_opinion_setup_reverse = { race = troll } }
+		}
+		
+		#harimari
+		else_if = {
+			limit = {
+				culture_is_harimari = yes
+				NOT = { has_country_modifier = harimari_administration }
+			}
+			add_country_modifier = { 
+				name = harimari_administration
+				duration = -1
+				hidden = yes
+			}
+			every_country = { generic_purge_expel_opinion_setup_reverse = { race = harimari } }
+		}
+		
+		#hobgoblin
+		else_if = {
+			limit = {
+				culture_is_hobgoblin = yes
+				NOT = { has_country_modifier = hobgoblin_administration }
+			}
+			add_country_modifier = { 
+				name = hobgoblin_administration
+				duration = -1
+				hidden = yes
+			}
+			every_country = { generic_purge_expel_opinion_setup_reverse = { race = hobgoblin } }
+		}
+		
+		#Centaur
+		else_if = {
+			limit = {
+				culture_is_centaur = yes
+				NOT = { has_country_modifier = centaur_administration }
+			}
+			add_country_modifier = {
+				name = centaur_administration
+				duration = -1
+				hidden = yes
+			}
+			every_country = { generic_purge_expel_opinion_setup_reverse = { race = centaur } }
+		}
+		
+		#Ogre
+		else_if = {
+			limit = {
+				culture_is_ogre = yes
+				NOT = { has_country_modifier = ogre_administration }
+			}
+			add_country_modifier = {
+				name = ogre_administration
+				duration = -1
+				hidden = yes
+			}
+			every_country = { generic_purge_expel_opinion_setup_reverse = { race = ogre } }
+		}
+		
+		#Lizardfolk
+		else_if = {
+			limit = {
+				culture_is_lizardfolk = yes
+				NOT = { has_country_modifier = lizardfolk_administration }
+			}
+			add_country_modifier = {
+				name = lizardfolk_administration
+				duration = -1
+				hidden = yes 
+			}
+			every_country = { generic_purge_expel_opinion_setup_reverse = { race = lizardfolk } }
+		}
+
+		#Mechanim
+		else_if = {
+			limit = {
+				culture_is_mechanim = yes
+				NOT = { has_country_modifier = mechanim_administration }
+			}
+			add_country_modifier = {
+				name = mechanim_administration
+				duration = -1
+				hidden = yes 
+			}
+			every_country = { generic_purge_expel_opinion_setup_reverse = { race = mechanim } }
+		}
+		add_country_modifier = { 
+			name = restructuring_administration
+			duration = 3650
+		}
+		#Ideally, this should be done cleaner, by making each remove_province_modifier thingy in their own if, but someone else will do that. Or me when i recover my sanity -The Pure
+		every_owned_province = {
+			update_racial_province_modifier_tolerance = yes
+		}
+		update_unit_sprites_for_racial_mil = yes 
+		}
+		#Clearing Blorc Plunder
+		if = {
+			limit = {
+				any_owned_province = {
+					OR = {
+						has_any_blorc_camp = yes
+						has_blorc_trophy_pile = yes
+					}
+				}
+			}
+			set_country_flag = blorc_lose_plunder_warning
+			capital_scope = {
+				export_to_variable = {
+					which = blorc_province_adm_var
+					value = trigger_value:base_tax
+				}
+				export_to_variable = {
+					which = blorc_province_dip_var
+					value = trigger_value:base_production
+				}
+				export_to_variable = {
+					which = blorc_province_mil_var
+					value = trigger_value:base_manpower
+				}
+				multiply_variable = {
+					which = blorc_province_adm_var
+					value = 0.75
+				}
+				multiply_variable = {
+					which = blorc_province_dip_var
+					value = 0.75
+				}
+				multiply_variable = {
+					which = blorc_province_mil_var
+					value = 0.75
+				}
+				round_variable = {
+					which = blorc_province_adm_var
+					value = -1
+				}
+				round_variable = {
+					which = blorc_province_dip_var
+					value = -1
+				}
+				round_variable = {
+					which = blorc_province_mil_var
+					value = -1
+				}
+				var_effect = {
+					effect = add_base_tax
+					var = blorc_province_adm_var
+					sign = -
+				}
+				var_effect = {
+					effect = add_base_production
+					var = blorc_province_dip_var
+					sign = -
+				}
+				var_effect = {
+					effect = add_base_manpower
+					var = blorc_province_mil_var
+					sign = -
+				}
+
+				trigger_switch = {
+					on_trigger = has_province_modifier
+
+					blorc_trophy1 = { remove_province_modifier = blorc_trophy1 }
+					blorc_trophy2 = { remove_province_modifier = blorc_trophy2 }
+					blorc_trophy3 = { remove_province_modifier = blorc_trophy3 }
+					blorc_trophy4 = { remove_province_modifier = blorc_trophy4 }
+					blorc_trophy5 = { remove_province_modifier = blorc_trophy5 }
+					blorc_trophy6 = { remove_province_modifier = blorc_trophy6 }
+					blorc_trophy7 = { remove_province_modifier = blorc_trophy7 }
+					blorc_trophy8 = { remove_province_modifier = blorc_trophy8 }
+					blorc_trophy9 = { remove_province_modifier = blorc_trophy9 }
+					blorc_trophy10 = { remove_province_modifier = blorc_trophy10 }
+					blorc_trophy11 = { remove_province_modifier = blorc_trophy11 }
+					blorc_trophy12 = { remove_province_modifier = blorc_trophy12 }
+					blorc_trophy13 = { remove_province_modifier = blorc_trophy13 }
+					blorc_trophy14 = { remove_province_modifier = blorc_trophy14 }
+					blorc_trophy15 = { remove_province_modifier = blorc_trophy15 }
+				}
+				clr_province_flag = blorc_plunder_capital_@ROOT
+			}
+			every_owned_province = {
+				limit = {
+					has_any_blorc_camp = yes
+				}
+				remove_province_modifier = blorc_plunder_camp
+				remove_blorc_war_camp = yes
+			}
+		}
+	}
+	option = {
+		name = racial_modifiers.5.a
+		
+		custom_tooltip = old_racial_administration_tt
+
+		tooltip = {	
+			if = { limit = { has_country_modifier = elven_administration } add_country_modifier = { name = elven_administration duration = -1 hidden = yes } }
+			else_if = { limit = { has_country_modifier = dwarven_administration } add_country_modifier = { name = dwarven_administration duration = -1 hidden = yes } }
+			else_if = { limit = { has_country_modifier = gnollish_administration } add_country_modifier = { name = gnollish_administration duration = -1 hidden = yes } }
+			else_if = { limit = { has_country_modifier = gnomish_administration } add_country_modifier = { name = gnomish_administration duration = -1 hidden = yes } }
+			else_if = { limit = { has_country_modifier = goblin_administration } add_country_modifier = { name = goblin_administration duration = -1 hidden = yes } }
+			else_if = { limit = { has_country_modifier = half_elven_administration } add_country_modifier = { name = half_elven_administration duration = -1 hidden = yes } }
+			else_if = { limit = { has_country_modifier = half_orcish_administration } add_country_modifier = { name = half_orcish_administration duration = -1 hidden = yes } }
+			else_if = { limit = { has_country_modifier = halfling_administration } add_country_modifier = { name = halfling_administration duration = -1 hidden = yes } }
+			else_if = { limit = { has_country_modifier = harpy_administration } add_country_modifier = { name = harpy_administration duration = -1 hidden = yes } }
+			else_if = { limit = { has_country_modifier = human_administration } add_country_modifier = { name = human_administration duration = -1 hidden = yes } }
+			else_if = { limit = { has_country_modifier = kobold_administration } add_country_modifier = { name = kobold_administration duration = -1 hidden = yes } }
+			else_if = { limit = { has_country_modifier = orcish_administration } add_country_modifier = { name = orcish_administration duration = -1 hidden = yes } }
+			else_if = { limit = { has_country_modifier = ruinborn_administration } add_country_modifier = { name = ruinborn_administration duration = -1 hidden = yes } }
+			else_if = { limit = { has_country_modifier = troll_administration } add_country_modifier = { name = troll_administration duration = -1 hidden = yes } }
+			else_if = { limit = { has_country_modifier = harimari_administration } add_country_modifier = { name = harimari_administration duration = -1 hidden = yes } }
+			else_if = { limit = { has_country_modifier = hobgoblin_administration } add_country_modifier = { name = hobgoblin_administration duration = -1 hidden = yes } }
+			else_if = { limit = { has_country_modifier = centaur_administration } add_country_modifier = { name = centaur_administration duration = -1 hidden = yes } }
+			else_if = { limit = { has_country_modifier = ogre_administration } add_country_modifier = { name = ogre_administration duration = -1 hidden = yes } }
+			else_if = { limit = { has_country_modifier = lizardfolk_administration } add_country_modifier = { name = lizardfolk_administration duration = -1 hidden = yes } }
+			else_if = { limit = { has_country_modifier = mechanim_administration } add_country_modifier = { name = mechanim_administration duration = -1 hidden = yes } }
+			add_country_modifier = { name = restructuring_administration duration = 3650 }
+		}
+		if = { limit = { has_country_flag = blorc_lose_plunder_warning } custom_tooltip = blorc_swapped_out_plunder_camp_tt clr_country_flag = blorc_lose_plunder_warning }
+		hidden_effect = {
+			trigger_switch = {
+				on_trigger = has_country_flag
+				old_elven_administration = { clr_country_flag = old_elven_administration }
+				old_dwarven_administration = { clr_country_flag = old_dwarven_administration }
+				old_gnollish_administration = { clr_country_flag = old_gnollish_administration }
+				old_gnomish_administration = { clr_country_flag = old_gnomish_administration }
+				old_goblin_administration = { clr_country_flag = old_goblin_administration }
+				old_half_elven_administration = { clr_country_flag = old_half_elven_administration }
+				old_half_orcish_administration = { clr_country_flag = old_half_orcish_administration }
+				old_halfling_administration = { clr_country_flag = old_halfling_administration }
+				old_harpy_administration = { clr_country_flag = old_harpy_administration }
+				old_human_administration = { clr_country_flag = old_human_administration }
+				old_kobold_administration = { clr_country_flag = old_kobold_administration }
+				old_orcish_administration = { clr_country_flag = old_orcish_administration }
+				old_ruinborn_administration = { clr_country_flag = old_ruinborn_administration }
+				old_troll_administration = { clr_country_flag = old_troll_administration }
+				old_harimari_administration = { clr_country_flag = old_harimari_administration }
+				old_hobgoblin_administration = { clr_country_flag = old_hobgoblin_administration }
+				old_centaur_administration = { clr_country_flag = old_centaur_administration }
+				old_ogre_administration = { clr_country_flag = old_ogre_administration }
+				old_lizardfolk_administration = { clr_country_flag = old_lizardfolk_administration }
+				old_mechanim_administration = { clr_country_flag = old_mechanim_administration }
+			}
+		}
+		if = {
+			limit = {
+				has_country_modifier = B26_everything_in_its_place2
+				NOT = {
+					has_country_modifier = orcish_administration
+					has_country_modifier = half_orcish_administration
+				}
+			}
+			remove_country_modifier = B26_everything_in_its_place2
+		}
+	}
+}
+
+
+#Debug - Has unmatching military? fix that shit (has the mil but no the unit)
+country_event = {
+	id =  racial_modifiers.6
+	title =  racial_modifiers.6.t
+	desc =  racial_modifiers.6.d
+	picture = WESTERNISATION_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		has_unmatching_military_to_unit = yes
+	}
+	
+	#Orcish Option
+	option = {
+        name = racial_modifiers.6.a
+        ai_chance = { factor = 100 }
+		trigger = {
+			has_country_modifier = orcish_military
+			NOT = { unit_type = tech_orcish }
+			NOT = { unit_type = tech_east_orcish }
+			NOT = { unit_type = tech_black_orcish }
+		}
+		racial_mil_military_change_to_orcish_units = yes
+	}	
+	
+	#Human Option
+	option = {
+        name = racial_modifiers.6.b
+        ai_chance = { factor = 100 }
+		trigger = {
+			has_country_modifier = human_military
+			NOT = { unit_type = tech_bulwari }
+			NOT = { unit_type = tech_salahadesi }
+			NOT = { unit_type = tech_inyaswarosa }
+			NOT = { unit_type = tech_cannorian }
+			NOT = { unit_type = tech_gerudian }
+			NOT = { unit_type = tech_raheni }
+			NOT = { unit_type = tech_halessi }
+			NOT = { unit_type = tech_yanshen }
+			NOT = { unit_type = tech_triunic }
+			NOT = { unit_type = tech_ynnsmen }
+			NOT = { unit_type = tech_east_sarhaly }
+			NOT = { unit_type = tech_west_sarhaly }
+			NOT = { unit_type = tech_south_sarhaly }
+			NOT = { unit_type = tech_baashidi }
+			NOT = { unit_type = tech_shuvuush }
+			NOT = { unit_type = tech_utubodi }
+			NOT = { unit_type = tech_kanolowele }
+			NOT = { unit_type = tech_insyaa_lowlands }
+		}
+		racial_mil_military_change_to_human_units = yes
+	}
+	
+	#Elven Option
+	option = {
+        name = racial_modifiers.6.c
+        ai_chance = { factor = 100 }
+		trigger = {
+			has_country_modifier = elven_military
+			NOT = { unit_type = tech_wood_elf }
+			NOT = { unit_type = tech_elven }
+			NOT = { unit_type = tech_east_elven }
+		}
+		racial_mil_military_change_to_elven_units = yes
+	}
+	
+	#HalfElven Option
+	option = {
+        name = racial_modifiers.6.dd
+        ai_chance = { factor = 100 }
+		trigger = {
+			has_country_modifier = half_elven_military
+			NOT = { unit_type = tech_bulwari }
+			NOT = { unit_type = tech_salahadesi }
+			NOT = { unit_type = tech_inyaswarosa }
+			NOT = { unit_type = tech_cannorian }
+			NOT = { unit_type = tech_gerudian }
+			NOT = { unit_type = tech_raheni }
+			NOT = { unit_type = tech_halessi }
+			NOT = { unit_type = tech_yanshen }
+			NOT = { unit_type = tech_triunic }
+			NOT = { unit_type = tech_ynnsmen }
+			NOT = { unit_type = tech_east_sarhaly }
+			NOT = { unit_type = tech_west_sarhaly }
+			NOT = { unit_type = tech_south_sarhaly }
+			NOT = { unit_type = tech_baashidi }
+			NOT = { unit_type = tech_shuvuush }
+			NOT = { unit_type = tech_utubodi }
+			NOT = { unit_type = tech_kanolowele }
+			NOT = { unit_type = tech_insyaa_lowlands }
+		}
+		racial_mil_military_change_to_half_elven_units = yes
+	}
+	
+	#HalfOrcish Option
+	option = {
+        name = racial_modifiers.6.e
+        ai_chance = { factor = 100 }
+		trigger = {
+			has_country_modifier = half_orcish_military
+			NOT = { unit_type = tech_cannorian }
+			NOT = { unit_type = tech_raheni }
+			NOT = { unit_type = tech_gerudian }
+		}
+		racial_mil_military_change_to_half_orcish_units = yes
+	}
+	
+	#Troll Option
+	option = {
+        name = racial_modifiers.6.f
+        ai_chance = { factor = 100 }
+		trigger = {
+			has_country_modifier = troll_military
+			NOT = { unit_type = tech_swamp_troll }
+			NOT = { unit_type = tech_hill_troll }
+			NOT = { unit_type = tech_northern_troll }
+		}
+		racial_mil_military_change_to_troll_units = yes
+	}
+	
+	#Gnollish Option
+	option = {
+        name = racial_modifiers.6.g
+        ai_chance = { factor = 100 }
+		trigger = {
+			has_country_modifier = gnollish_military
+			NOT = { unit_type = tech_gnollish }
+		}
+		racial_mil_military_change_to_gnollish_units = yes
+	}
+	
+	#Goblin Option
+	option = {
+        name = racial_modifiers.6.h
+        ai_chance = { factor = 100 }
+		trigger = {
+			has_country_modifier = goblin_military
+			NOT = { unit_type = tech_goblin }
+			NOT = { unit_type = tech_forest_goblin }
+			NOT = { unit_type = tech_exodus_goblin }
+			NOT = { unit_type = tech_cave_goblin }
+			NOT = { unit_type = tech_east_cave_goblin }
+		}
+		racial_mil_military_change_to_goblin_units = yes
+	}
+	
+	#Gnomish Option
+	option = {
+        name = racial_modifiers.6.i
+        ai_chance = { factor = 100 }
+		trigger = {
+			has_country_modifier = gnomish_military
+			NOT = { unit_type = tech_gnomish }
+		}
+		racial_mil_military_change_to_gnomish_units = yes
+	}
+	
+	#Dwarven Option
+	option = {
+        name = racial_modifiers.6.j
+        ai_chance = { factor = 100 }
+		trigger = {
+			has_country_modifier = dwarven_military
+			NOT = { unit_type = tech_west_dwarven }
+			NOT = { unit_type = tech_east_dwarven }
+		}
+		racial_mil_military_change_to_dwarven_units = yes
+	}
+	
+	#Kobold Option
+	option = {
+        name = racial_modifiers.6.k
+        ai_chance = { factor = 100 }
+		trigger = {
+			has_country_modifier = kobold_military
+			NOT = { unit_type = tech_kobold }
+			NOT = { unit_type = tech_east_kobold }
+			NOT = { unit_type = tech_darkscale_kobold }
+			NOT = { unit_type = tech_insyaa_kobolds }
+		}
+		racial_mil_military_change_to_kobold_units = yes
+	}
+	
+	#Ruinborn Option
+	option = {
+        name = racial_modifiers.6.l
+        ai_chance = { factor = 100 }
+		trigger = {
+			has_country_modifier = ruinborn_military
+			NOT = { unit_type = tech_ynnic }
+			NOT = { unit_type = tech_eordand }
+			NOT = { unit_type = tech_bharbhen }
+			NOT = { unit_type = tech_kheionai }
+			NOT = { unit_type = tech_taychendi }
+			NOT = { unit_type = tech_harafic }
+			NOT = { unit_type = tech_noruin }
+			NOT = { unit_type = tech_south_aelantiri }
+		}
+		racial_mil_military_change_to_ruinborn_units = yes
+	}
+	
+	#Harpy Option
+	option = {
+        name = racial_modifiers.6.m
+        ai_chance = { factor = 100 }
+		trigger = {
+			has_country_modifier = harpy_military
+			NOT = { unit_type = tech_firanyan_harpy }
+			NOT = { unit_type = tech_siadunan_harpy }
+			NOT = { unit_type = tech_nzeri_harpy }
+			NOT = { unit_type = tech_pezarangi_harpy }
+			NOT = { unit_type = tech_nuzenapu_harpy }
+		}
+		racial_mil_military_change_to_harpy_units = yes
+	}
+	
+	#Halfling Option
+	option = {
+        name = racial_modifiers.6.n
+        ai_chance = { factor = 100 }
+		trigger = {
+			has_country_modifier = halfling_military
+			NOT = { unit_type = tech_halfling }
+			NOT = { unit_type = tech_vyzemby }
+		}
+		racial_mil_military_change_to_halfling_units = yes
+	}
+	
+	#Ogre Option
+	option = {
+        name = racial_modifiers.6.o
+        ai_chance = { factor = 100 }
+		trigger = {
+			has_country_modifier = ogre_military
+			NOT = { unit_type = tech_ogre }
+			NOT = { unit_type = tech_eastern_ogre }
+			NOT = { unit_type = tech_soulseeker_ogre }
+			NOT = { unit_type = tech_dunesole_ogre }
+			NOT = { unit_type = tech_insyaa_ogres }
+		}
+		racial_mil_military_change_to_ogre_units = yes
+	}
+	
+	#Centaur Option
+	option = {
+        name = racial_modifiers.6.p
+        ai_chance = { factor = 100 }
+		trigger = {
+			has_country_modifier = centaur_military
+			NOT = { unit_type = tech_centaur }
+		}
+		racial_mil_military_change_to_centaur_units = yes
+	}
+	
+	#Harimari Option
+	option = {
+        name = racial_modifiers.6.q
+        ai_chance = { factor = 100 }
+		trigger = {
+			has_country_modifier = harimari_military
+			NOT = { unit_type = tech_west_harimari }
+			NOT = { unit_type = tech_east_harimari }
+		}
+		racial_mil_military_change_to_harimari_units = yes
+	}
+
+	#Hobgoblin Option
+	option = {
+        name = racial_modifiers.6.r
+        ai_chance = { factor = 100 }
+		trigger = {
+			has_country_modifier = hobgoblin_military
+			OR = {
+				NOT = { unit_type = tech_hobgoblin }
+				NOT = { unit_type = tech_eagle_hobgoblin }
+			}
+		}
+		racial_mil_military_change_to_hobgoblin_units = yes
+	}
+
+	#Lizardfolk Option
+	option = {
+        name = racial_modifiers.6.s
+        ai_chance = { factor = 100 }
+		trigger = {
+			has_country_modifier = lizardfolk_military
+			NOT = { unit_type = tech_lizardfolk }
+		}
+
+		racial_mil_military_change_to_lizardfolk_units = yes
+	}
+
+	#Mechanim Option
+	option = {
+        name = racial_modifiers.6.s
+        ai_chance = { factor = 100 }
+		trigger = {
+			has_country_modifier = mechanim_military
+			NOT = { unit_type = tech_mechanim }
+		}
+		racial_mil_military_change_to_mechanim_units = yes
+	}
+}
+
+
+#Save primary culture
+country_event = {
+	id =  racial_modifiers.7
+	title =  racial_modifiers.7.t
+	desc =  racial_modifiers.7.d
+	picture = WESTERNISATION_eventPicture
+	
+	#fire_only_once = yes
+	is_triggered_only = yes
+	hidden = yes
+	
+	trigger = { NOT = { has_country_flag = locked_racial_administration } }
+	
+	option = {
+        name = racial_modifiers.1.a
+        ai_chance = { factor = 100 }
+		
+		save_primary_culture = yes
+	}
+}
+
+
+#Upon changing primary culture with a locked administration, change primary culture back
+country_event = {
+	id =  racial_modifiers.8
+	title =  racial_modifiers.8.t
+	desc =  racial_modifiers.8.d
+	picture = WESTERNISATION_eventPicture
+	
+	#fire_only_once = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		has_country_flag = locked_racial_administration
+		NOT = { primary_culture = variable:my_primary_culture }
+	}
+	
+	immediate = {
+		hidden_effect = {
+			export_to_variable = {
+				which = temp_primary_culture
+				value = primary_culture
+				who = ROOT
+			}
+			change_primary_culture = variable:my_primary_culture
+		}
+	}
+	
+	#I understand
+	option = {
+        name = racial_modifiers.8.a
+        ai_chance = { factor = 100 }
+		if = {
+			limit = { NOT = { has_country_flag = no_locked_culture_mana_exploit } }
+			add_dip_power = 100
+			if = {
+				limit = { ai = no }
+				set_country_flag = no_locked_culture_mana_exploit
+			}
+		}
+		else = {
+			custom_tooltip = locked_culture_no_exploit_tt
+		}
+		hidden_effect = { add_accepted_culture = variable:temp_primary_culture }
+	}
+}

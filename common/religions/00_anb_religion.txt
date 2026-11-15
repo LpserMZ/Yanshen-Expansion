@@ -6946,8 +6946,9 @@ halessi = {
 			picture = "GFX_religion_school_xia_school"
 
 			# religion_sub_modifier = no is possible, will hide icon in religious screen		
-			LQdspl_1_exp_gain_modifier = 0.75
-			LQdspl_2_exp_gain_modifier = 0.25
+			yearly_army_professionalism = 0.005
+			# LQdspl_1_exp_gain_modifier = 0.75
+			# LQdspl_2_exp_gain_modifier = 0.25
 		}
 		wu_school = { #武道-内功
 			potential_invite_scholar = {
@@ -7008,8 +7009,9 @@ halessi = {
 			picture = "GFX_religion_school_wu_school"
 
 			# religion_sub_modifier = no is possible, will hide icon in religious screen		
-			LQdspl_1_exp_gain_modifier = 0.25
-			LQdspl_2_exp_gain_modifier = 0.75
+			army_tradition_from_battle = 0.50
+			# LQdspl_1_exp_gain_modifier = 0.25
+			# LQdspl_2_exp_gain_modifier = 0.75
 		}
 		kanli_school = { #坎离宫-丹药
 			potential_invite_scholar = {
@@ -7070,7 +7072,8 @@ halessi = {
 			picture = "GFX_religion_school_kanli_school"
 
 			# religion_sub_modifier = no is possible, will hide icon in religious screen		
-			LQdspl_4_exp_gain_modifier = 1
+			yearly_innovativeness = 0.25
+			# LQdspl_4_exp_gain_modifier = 1
 		}
 		lingjue_school = { #灵玦院
 			potential_invite_scholar = {
@@ -7131,8 +7134,9 @@ halessi = {
 			picture = "GFX_religion_school_lingjue_school"
 
 			# religion_sub_modifier = no is possible, will hide icon in religious screen		
-			LQdspl_3_exp_gain_modifier = 0.75
-			LQdspl_4_exp_gain_modifier = 0.25			
+			mages_mana_regen = 0.5
+			# LQdspl_3_exp_gain_modifier = 0.75
+			# LQdspl_4_exp_gain_modifier = 0.25			
 		}
 		qingliu_school = { #清流宫
 			potential_invite_scholar = {
@@ -7193,7 +7197,8 @@ halessi = {
 			picture = "GFX_religion_school_qingliu_school"
 
 			# religion_sub_modifier = no is possible, will hide icon in religious screen		
-			LQdspl_5_exp_gain_modifier = 1
+			country_admin_power = 1
+			# LQdspl_5_exp_gain_modifier = 1
 		}
 		mushi_school = { #木石会
 			potential_invite_scholar = {
@@ -7254,7 +7259,8 @@ halessi = {
 			picture = "GFX_religion_school_mushi_school"
 
 			# religion_sub_modifier = no is possible, will hide icon in religious screen		
-			LQdspl_6_exp_gain_modifier = 1
+			development_cost = -0.15
+			# LQdspl_6_exp_gain_modifier = 1
 		}
 		mozhen_school = { #魔阵学
 			potential_invite_scholar = {
@@ -7315,8 +7321,9 @@ halessi = {
 			picture = "GFX_religion_school_mozhen_school"
 
 			# religion_sub_modifier = no is possible, will hide icon in religious screen		
-			LQdspl_7_exp_gain_modifier = 0.75
-			LQdspl_8_exp_gain_modifier = 0.25
+			defensiveness = 0.15
+			# LQdspl_7_exp_gain_modifier = 0.75
+			# LQdspl_8_exp_gain_modifier = 0.25
 		}
 		guifu_school = { #鬼符学
 			potential_invite_scholar = {
@@ -7377,8 +7384,9 @@ halessi = {
 			picture = "GFX_religion_school_guifu_school"
 
 			# religion_sub_modifier = no is possible, will hide icon in religious screen		
-			LQdspl_7_exp_gain_modifier = 0.25
-			LQdspl_8_exp_gain_modifier = 0.75
+			manpower_recovery_speed = 0.15
+			# LQdspl_7_exp_gain_modifier = 0.25
+			# LQdspl_8_exp_gain_modifier = 0.75
 		}
 	}
 

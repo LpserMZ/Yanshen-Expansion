@@ -198,6 +198,7 @@ has_unmatching_military_to_unit = {
 			NOT = { unit_type = tech_gerudian }
 			NOT = { unit_type = tech_raheni }
 			NOT = { unit_type = tech_halessi }
+			NOT = { unit_type = tech_yanshen }
 			NOT = { unit_type = tech_triunic }
 			NOT = { unit_type = tech_ynnsmen }
 			NOT = { unit_type = tech_east_sarhaly }
@@ -237,6 +238,7 @@ has_unmatching_military_to_unit = {
 			NOT = { unit_type = tech_raheni }
 			NOT = { unit_type = tech_triunic }
 			NOT = { unit_type = tech_halessi }
+			NOT = { unit_type = tech_yanshen }
 			NOT = { unit_type = tech_shuvuush }
 			NOT = { unit_type = tech_wastelander }
 			NOT = { unit_type = tech_west_sarhaly }
