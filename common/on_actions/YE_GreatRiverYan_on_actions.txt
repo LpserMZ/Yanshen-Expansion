@@ -49,6 +49,29 @@ on_startup = {
 		}
 		YE_add_special_prov_modifier = yes
 		
+		# 加强武浔临时措施
+		rahen_superregion = { 
+			add_base_tax = -2
+			add_base_production = -2
+			add_base_manpower = -2
+		}
+		every_country = {
+			limit = {
+				capital_scope = { 
+					region = wuxun_region 
+				}
+				OR = {
+					culture_group = yan
+					culture_group = shen
+					tag = YB8
+				}
+				
+			}
+			add_country_modifier = {
+				name = Wuxun_startup_strengthen
+				duration = -1
+			}
+		}
 		set_global_flag = YE_GRY_startup_gflag
 	}
 }
@@ -134,6 +157,42 @@ on_war_ended = { #ROOT - Winer FROM - Loser
 on_new_age = {
 	events = {
 		YE_GRY.14
+	}
+	if = { # 第零次阳洲贸易船队返航-第二时代
+		limit = {
+			current_age = age_of_reformation
+			OR = {
+				4879 = { is_city = yes } # 飞腾
+				4884 = { is_city = yes } # 清旭
+			}
+			# 6138 = { is_city = yes } # 兰诺
+		}
+		if = {
+			limit = {
+				6138 = {
+					owner = {
+						primary_culture = naamjyut
+					}
+				}
+				4884 = {
+					owner = {
+						primary_culture = naamjyut
+					}
+				}
+			}
+			4884 = {
+				province_event = {
+					id = YE_NTF.1	
+				}
+			}
+		}
+		else  = {
+			4879 = {
+				province_event = {
+					id = YE_NTF.1	
+				}
+			}
+		}
 	}
 }	
 

@@ -1,4 +1,5 @@
 
+
 if = { # 移除地区
 	limit = {
 		always = no
@@ -463,17 +464,19 @@ if = { # 其他省份组
 
 if = { # 割让
 	limit = {
-		always = yes
+		always = no
 	}
 	yanshen_superregion = {
-		add_core = ROOT
-		cede_province = ROOT
+		add_permanent_claim = ROOT
+		# add_core = ROOT
+		# cede_province = ROOT
 		# change_religion = regent_court
 		# change_culture = moon_elf
 	}
 	shenzhou_superregion = {
-		add_core = ROOT
-		cede_province = ROOT
+		add_permanent_claim = ROOT
+		# add_core = ROOT
+		# cede_province = ROOT
 		# change_religion = regent_court
 		# change_culture = moon_elf
 	}
@@ -513,6 +516,22 @@ if = { # 观察者
 	}	
 }
 
+if = { # 颜色
+	limit = {
+		always = no
+	}
+	YB8 = {
+		restore_country_color = yes
+	}
+	Y20 = {
+		change_country_color = {
+			# color = { 80 213 185 } # 独一
+			#color = { 32 178 170 } # 水咏
+			# color = { 58  168  113 } # 齐
+			color = { 42 164 182 }
+		}
+	}
+}
 # ！此效果应由蓝巾会开局事件执行！
 # Y05 = {
 # 	set_ruler_flag = tongleipai_faction_rflag

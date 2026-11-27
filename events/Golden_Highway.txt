@@ -31,6 +31,8 @@ province_event = { #Complete a highway
 						province_id = 487
 
 						###
+						#wuxun
+						province_id = 4531
 						#zhaoxun
 						province_id = 4906
 						#jinxun
@@ -51,9 +53,10 @@ province_event = { #Complete a highway
 					487 = { 486 = { save_event_target_as = golden_highway_next_province } }
 
 					###
+					#wuxun
+					4531 = { 7054 = { save_event_target_as = golden_highway_next_province } }
 					#zhaoxun
 					4906 = { 4846 = { save_event_target_as = golden_highway_next_province } }
-
 					#jinxun
 					7179 = { 7482 = { save_event_target_as = golden_highway_next_province } }
 				}

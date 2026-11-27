@@ -413,3 +413,9 @@ endless_ambition_bianfang = {
 	province_warscore_cost = -0.15
 	unjustified_demands = -0.50
 }
+
+NTF_origin = {
+	prestige_decay = -0.01
+	province_trade_power_modifier = 0.25
+	local_center_of_trade_upgrade_cost = -0.33
+}

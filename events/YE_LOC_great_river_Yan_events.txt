@@ -3464,8 +3464,8 @@ province_event = { #62 香檀珠
 # 	desc = YE_GRY.63.D
 # 	picture = BAD_WITH_MONARCH_eventPicture
 
-# 	fire_only_once = no
-# 	is_triggered_only = yes
+# 	fire_only_once = yes
+# 	is_triggered_only = no
 
 # 	trigger = {
 # 	}
@@ -3523,6 +3523,336 @@ province_event = { #62 香檀珠
 #  YE_GRY.65.T:0 ""
 #  YE_GRY.65.D:0 ""
 #  YE_GRY.65.a:0 ""
+ 
+# country_event = { #66
+# 	id = YE_GRY.66
+# 	title = YE_GRY.66.T
+# 	desc = YE_GRY.66.D
+# 	picture = BAD_WITH_MONARCH_eventPicture
+
+# 	fire_only_once = yes
+# 	is_triggered_only = no
+
+# 	trigger = {
+# 	}
+# 	immediate = {
+# 	}
+# 	option = {
+# 		name = YE_GRY.66.a
+# 		ai_chance = { factor = 1 }
+# 	}
+# }
+#  YE_GRY.66.T:0 ""
+#  YE_GRY.66.D:0 ""
+#  YE_GRY.66.a:0 ""
+
+# country_event = { #67 
+# 	id = YE_GRY.67
+# 	title = YE_GRY.67.T
+# 	desc = YE_GRY.67.D
+# 	picture = BAD_WITH_MONARCH_eventPicture
+
+# 	fire_only_once = yes
+# 	is_triggered_only = no
+
+# 	trigger = {
+# 	}
+# 	immediate = {
+# 	}
+# 	option = {
+# 		name = YE_GRY.67.a
+# 		ai_chance = { factor = 1 }
+# 	}
+# }
+#  YE_GRY.67.T:0 ""
+#  YE_GRY.67.D:0 ""
+#  YE_GRY.67.a:0 ""
+
+# country_event = { #68 
+# 	id = YE_GRY.68
+# 	title = YE_GRY.68.T
+# 	desc = YE_GRY.68.D
+# 	picture = BAD_WITH_MONARCH_eventPicture
+
+# 	fire_only_once = yes
+# 	is_triggered_only = no
+
+# 	trigger = {
+# 	}
+# 	immediate = {
+# 	}
+# 	option = {
+# 		name = YE_GRY.68.a
+# 		ai_chance = { factor = 1 }
+# 	}
+# }
+#  YE_GRY.68.T:0 ""
+#  YE_GRY.68.D:0 ""
+#  YE_GRY.68.a:0 ""
+
+# country_event = { #69
+# 	id = YE_GRY.69
+# 	title = YE_GRY.69.T
+# 	desc = YE_GRY.69.D
+# 	picture = BAD_WITH_MONARCH_eventPicture
+
+# 	fire_only_once = yes
+# 	is_triggered_only = no
+
+# 	trigger = {
+# 	}
+# 	immediate = {
+# 	}
+# 	option = {
+# 		name = YE_GRY.69.a
+# 		ai_chance = { factor = 1 }
+# 	}
+# }
+#  YE_GRY.69.T:0 ""
+#  YE_GRY.69.D:0 ""
+#  YE_GRY.69.a:0 ""
+
+# country_event = { #70
+# 	id = YE_GRY.70
+# 	title = YE_GRY.70.T
+# 	desc = YE_GRY.70.D
+# 	picture = BAD_WITH_MONARCH_eventPicture
+
+# 	fire_only_once = yes
+# 	is_triggered_only = no
+
+# 	trigger = {
+# 	}
+# 	immediate = {
+# 	}
+# 	option = {
+# 		name = YE_GRY.70.a
+# 		ai_chance = { factor = 1 }
+# 	}
+# }
+#  YE_GRY.70.T:0 ""
+#  YE_GRY.70.D:0 ""
+#  YE_GRY.70.a:0 ""
+
+# country_event = { #71
+# 	id = YE_GRY.71
+# 	title = YE_GRY.71.T
+# 	desc = YE_GRY.71.D
+# 	picture = BAD_WITH_MONARCH_eventPicture
+
+# 	fire_only_once = yes
+# 	is_triggered_only = no
+
+# 	trigger = {
+# 	}
+# 	immediate = {
+# 	}
+# 	option = {
+# 		name = YE_GRY.71.a
+# 		ai_chance = { factor = 1 }
+# 	}
+# }
+#  YE_GRY.71.T:0 ""
+#  YE_GRY.71.D:0 ""
+#  YE_GRY.71.a:0 ""
+
+# country_event = { #72
+# 	id = YE_GRY.72
+# 	title = YE_GRY.72.T
+# 	desc = YE_GRY.72.D
+# 	picture = BAD_WITH_MONARCH_eventPicture
+
+# 	fire_only_once = yes
+# 	is_triggered_only = no
+
+# 	trigger = {
+# 	}
+# 	immediate = {
+# 	}
+# 	option = {
+# 		name = YE_GRY.72.a
+# 		ai_chance = { factor = 1 }
+# 	}
+# }
+#  YE_GRY.72.T:0 ""
+#  YE_GRY.72.D:0 ""
+#  YE_GRY.72.a:0 ""
+
+# country_event = { #73
+# 	id = YE_GRY.73
+# 	title = YE_GRY.73.T
+# 	desc = YE_GRY.73.D
+# 	picture = BAD_WITH_MONARCH_eventPicture
+
+# 	fire_only_once = yes
+# 	is_triggered_only = no
+
+# 	trigger = {
+# 	}
+# 	immediate = {
+# 	}
+# 	option = {
+# 		name = YE_GRY.73.a
+# 		ai_chance = { factor = 1 }
+# 	}
+# }
+#  YE_GRY.73.T:0 ""
+#  YE_GRY.73.D:0 ""
+#  YE_GRY.73.a:0 ""
+
+# country_event = { #74
+# 	id = YE_GRY.74
+# 	title = YE_GRY.74.T
+# 	desc = YE_GRY.74.D
+# 	picture = BAD_WITH_MONARCH_eventPicture
+
+# 	fire_only_once = yes
+# 	is_triggered_only = no
+
+# 	trigger = {
+# 	}
+# 	immediate = {
+# 	}
+# 	option = {
+# 		name = YE_GRY.74.a
+# 		ai_chance = { factor = 1 }
+# 	}
+# }
+#  YE_GRY.74.T:0 ""
+#  YE_GRY.74.D:0 ""
+#  YE_GRY.74.a:0 ""
+
+# country_event = { #75
+# 	id = YE_GRY.75
+# 	title = YE_GRY.75.T
+# 	desc = YE_GRY.75.D
+# 	picture = BAD_WITH_MONARCH_eventPicture
+
+# 	fire_only_once = yes
+# 	is_triggered_only = no
+
+# 	trigger = {
+# 	}
+# 	immediate = {
+# 	}
+# 	option = {
+# 		name = YE_GRY.75.a
+# 		ai_chance = { factor = 1 }
+# 	}
+# }
+#  YE_GRY.75.T:0 ""
+#  YE_GRY.75.D:0 ""
+#  YE_GRY.75.a:0 ""
+
+# country_event = { #76
+# 	id = YE_GRY.76
+# 	title = YE_GRY.76.T
+# 	desc = YE_GRY.76.D
+# 	picture = BAD_WITH_MONARCH_eventPicture
+
+# 	fire_only_once = yes
+# 	is_triggered_only = no
+
+# 	trigger = {
+# 	}
+# 	immediate = {
+# 	}
+# 	option = {
+# 		name = YE_GRY.76.a
+# 		ai_chance = { factor = 1 }
+# 	}
+# }
+#  YE_GRY.76.T:0 ""
+#  YE_GRY.76.D:0 ""
+#  YE_GRY.76.a:0 ""
+
+# country_event = { #77
+# 	id = YE_GRY.77
+# 	title = YE_GRY.77.T
+# 	desc = YE_GRY.77.D
+# 	picture = BAD_WITH_MONARCH_eventPicture
+
+# 	fire_only_once = yes
+# 	is_triggered_only = no
+
+# 	trigger = {
+# 	}
+# 	immediate = {
+# 	}
+# 	option = {
+# 		name = YE_GRY.77.a
+# 		ai_chance = { factor = 1 }
+# 	}
+# }
+#  YE_GRY.77.T:0 ""
+#  YE_GRY.77.D:0 ""
+#  YE_GRY.77.a:0 ""
+
+# country_event = { #78
+# 	id = YE_GRY.78
+# 	title = YE_GRY.78.T
+# 	desc = YE_GRY.78.D
+# 	picture = BAD_WITH_MONARCH_eventPicture
+
+# 	fire_only_once = yes
+# 	is_triggered_only = no
+
+# 	trigger = {
+# 	}
+# 	immediate = {
+# 	}
+# 	option = {
+# 		name = YE_GRY.78.a
+# 		ai_chance = { factor = 1 }
+# 	}
+# }
+#  YE_GRY.78.T:0 ""
+#  YE_GRY.78.D:0 ""
+#  YE_GRY.78.a:0 ""
+
+# country_event = { #79
+# 	id = YE_GRY.79
+# 	title = YE_GRY.79.T
+# 	desc = YE_GRY.79.D
+# 	picture = BAD_WITH_MONARCH_eventPicture
+
+# 	fire_only_once = yes
+# 	is_triggered_only = no
+
+# 	trigger = {
+# 	}
+# 	immediate = {
+# 	}
+# 	option = {
+# 		name = YE_GRY.79.a
+# 		ai_chance = { factor = 1 }
+# 	}
+# }
+#  YE_GRY.79.T:0 ""
+#  YE_GRY.79.D:0 ""
+#  YE_GRY.79.a:0 ""
+
+# country_event = { #80
+# 	id = YE_GRY.80
+# 	title = YE_GRY.80.T
+# 	desc = YE_GRY.80.D
+# 	picture = BAD_WITH_MONARCH_eventPicture
+
+# 	fire_only_once = yes
+# 	is_triggered_only = no
+
+# 	trigger = {
+# 	}
+# 	immediate = {
+# 	}
+# 	option = {
+# 		name = YE_GRY.80.a
+# 		ai_chance = { factor = 1 }
+# 	}
+# }
+#  YE_GRY.80.T:0 ""
+#  YE_GRY.80.D:0 ""
+#  YE_GRY.80.a:0 ""
 
 # 瓜分烟心
 # 蛰龙戟-大矛机关枪

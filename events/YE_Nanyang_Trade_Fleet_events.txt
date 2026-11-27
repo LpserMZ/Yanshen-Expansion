@@ -1,0 +1,933 @@
+namespace = YE_NTF
+# 阳洲贸易船队
+
+province_event = { #0 事件跳转
+	id = YE_NTF.0
+	title = YE_NTF.0.T
+	desc = YE_NTF.0.D
+	picture = BAD_WITH_MONARCH_eventPicture
+
+	hidden = yes
+	is_triggered_only = yes
+
+	immediate = {
+		YE_NTF_save_next_prov_as_event_target = yes
+	}
+	option = {
+		name = YE_NTF.0.a
+		ai_chance = { factor = 1 }
+	}
+	after = {
+		
+		if = {
+			limit = {
+				has_global_flag = YE_NTF_end_gflag
+			}
+			event_target:NTF_home_prov = {
+				province_event = { id = YE_NTF.40 days = 1 }
+			}
+		}
+		else = {
+			event_target:NTF_home_prov = {
+				YE_NTF_trigger_home_country_events = yes
+			}
+			event_target:NTF_next_prov = {
+				province_event = { id = YE_NTF.16 days = 60 }
+			}
+		}
+				
+	}
+}
+
+province_event = { #1 第零次船队返航
+	id = YE_NTF.1
+	title = YE_NTF.1.T
+	desc = YE_NTF.1.D
+	picture = BAD_WITH_MONARCH_eventPicture
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	trigger = {
+	}
+	immediate = {
+	}
+	option = {
+		name = YE_NTF.1.a
+		ai_chance = { factor = 1 }
+		set_province_flag = NTF_origin_flag
+		add_permanent_province_modifier = {
+			name = NTF_origin
+			duration = -1
+		}
+		add_center_of_trade_level = 1
+		add_trade_node_income = 1.0
+	}
+}
+
+country_event = { #2 阳洲贸易船队-启航准备  #事件链完成后再消除各选项的gflag
+	id = YE_NTF.2
+	title = YE_NTF.2.T
+	desc = YE_NTF.2.D
+	picture = BAD_WITH_MONARCH_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		OR = {
+			4879 = { 
+				has_province_flag = NTF_origin_flag 
+				owned_by = ROOT 
+			}
+			4884 = { 
+				has_province_flag = NTF_origin_flag 
+				owned_by = ROOT 
+			}
+		}
+	}
+	immediate = {
+		set_country_flag = NTF_hide_decision_flag
+	}
+	option = { # 启航
+		name = YE_NTF.2.a
+		ai_chance = { factor = 1 }
+		clr_country_flag = NTF_hide_decision_flag
+		set_global_flag = NTF_in_progress_gflag
+
+		if = { # 资金
+			limit = { has_country_flag = NTF_c1_flag }
+			set_global_flag = NTF_c1_gflag
+		}
+		else_if = {
+			limit = { has_country_flag = NTF_c2_flag }
+			set_global_flag = NTF_c2_gflag
+		}
+		else_if = {
+			limit = { has_country_flag = NTF_c3_flag }
+			set_global_flag = NTF_c3_gflag
+		}
+
+		if = { # 目的
+			limit = { has_country_flag = NTF_d1_flag }
+			set_global_flag = NTF_d1_gflag
+		}
+		else_if = {
+			limit = { has_country_flag = NTF_d2_flag }
+			set_global_flag = NTF_d2_gflag
+		}
+		else_if = {
+			limit = { has_country_flag = NTF_d3_flag }
+			set_global_flag = NTF_d3_gflag
+		}
+		else_if = {
+			limit = { has_country_flag = NTF_d4_flag }
+			set_global_flag = NTF_d4_gflag
+		}
+		else_if = {
+			limit = { has_country_flag = NTF_d5_flag }
+			set_global_flag = NTF_d5_gflag
+		}
+
+		if = { # 路线
+			limit = { has_country_flag = NTF_e1_flag }
+			set_global_flag = NTF_e1_gflag
+			4884 = { province_event = { id = YE_NTF.4 } }
+		}
+		else_if = {
+			limit = { has_country_flag = NTF_e2_flag }
+			set_global_flag = NTF_e2_gflag
+			4879 = { province_event = { id = YE_NTF.4 } }
+		}
+		else_if = {
+			limit = { has_country_flag = NTF_e3_flag }
+			set_global_flag = NTF_e3_gflag
+			4879 = { province_event = { id = YE_NTF.4 } }
+		}
+		else_if = {
+			limit = { has_country_flag = NTF_e4_flag }
+			set_global_flag = NTF_e4_gflag
+			4879 = { province_event = { id = YE_NTF.4 } }
+		}
+		else_if = {
+			limit = { has_country_flag = NTF_e5_flag }
+			set_global_flag = NTF_e5_gflag
+			4879 = { province_event = { id = YE_NTF.4 } }
+		}
+		else_if = {
+			limit = { has_country_flag = NTF_e6_flag }
+			set_global_flag = NTF_e6_gflag
+			4879 = { province_event = { id = YE_NTF.4 } }
+		}
+		else_if = {
+			limit = { has_country_flag = NTF_e7_flag }
+			set_global_flag = NTF_e7_gflag
+			4879 = { province_event = { id = YE_NTF.4 } }
+		}
+		else_if = {
+			limit = { has_country_flag = NTF_e8_flag }
+			set_global_flag = NTF_e8_gflag
+			4884 = { province_event = { id = YE_NTF.4 } }
+		}
+	}
+	option = { # 取消
+		name = YE_NTF.2.b
+		ai_chance = { factor = 1 }
+		clr_country_flag = NTF_hide_decision_flag
+	}
+	option = { # 资金
+		name = YE_NTF.2.c
+		ai_chance = { factor = 1 }
+		set_country_flag = NTF_setting_c_flag
+		country_event = { id = YE_NTF.3 }
+	}
+	option = { # 目的 利润-间谍-宗教-文化-声誉
+		name = YE_NTF.2.d
+		ai_chance = { factor = 1 }
+		set_country_flag = NTF_setting_d_flag
+		country_event = { id = YE_NTF.3 }
+	}
+	option = { # 终点选择+时间预估
+		name = YE_NTF.2.e
+		ai_chance = { factor = 1 }		
+		set_country_flag = NTF_setting_e_flag
+		country_event = { id = YE_NTF.3 }
+	}
+
+}
+
+country_event = { #3 阳洲贸易船队-设置
+	id = YE_NTF.3
+	title = YE_NTF.3.T
+	desc = YE_NTF.3.D
+	picture = BAD_WITH_MONARCH_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		OR = {
+			4879 = { 
+				has_province_flag = NTF_origin_flag 
+				owned_by = ROOT 
+			}
+			4884 = { 
+				has_province_flag = NTF_origin_flag 
+				owned_by = ROOT 
+			}
+		}
+	}
+
+	option = { # 返回
+		name = YE_NTF.3.z 
+		ai_chance = { factor = 1 }
+	}
+	option = { # 0.5年收入
+		name = YE_NTF.3.c1
+		ai_chance = { factor = 1 }
+		trigger = { has_country_flag = NTF_setting_c_flag }
+		clr_country_flag = NTF_c2_flag
+		clr_country_flag = NTF_c3_flag
+		set_country_flag = NTF_c1_flag
+	}
+	option = { # 0.75年收入
+		name = YE_NTF.3.c2
+		ai_chance = { factor = 1 }
+		trigger = { has_country_flag = NTF_setting_c_flag }
+		clr_country_flag = NTF_c1_flag
+		clr_country_flag = NTF_c3_flag
+		set_country_flag = NTF_c2_flag
+	}
+	option = { # 1年收入
+		name = YE_NTF.3.c3
+		ai_chance = { factor = 1 }
+		trigger = { has_country_flag = NTF_setting_c_flag }
+		clr_country_flag = NTF_c1_flag
+		clr_country_flag = NTF_c2_flag
+		set_country_flag = NTF_c3_flag
+	}
+
+	option = { # 目的1
+		name = YE_NTF.3.d1
+		ai_chance = { factor = 1 }
+		trigger = { has_country_flag = NTF_setting_d_flag }
+		clr_country_flag = NTF_d2_flag
+		clr_country_flag = NTF_d3_flag
+		clr_country_flag = NTF_d4_flag
+		clr_country_flag = NTF_d5_flag
+		set_country_flag = NTF_d1_flag
+	}
+	option = { # 目的2
+		name = YE_NTF.3.d2
+		ai_chance = { factor = 1 }
+		trigger = { has_country_flag = NTF_setting_d_flag }
+		clr_country_flag = NTF_d1_flag
+		clr_country_flag = NTF_d3_flag
+		clr_country_flag = NTF_d4_flag
+		clr_country_flag = NTF_d5_flag
+		set_country_flag = NTF_d2_flag
+	}
+	option = { # 目的3
+		name = YE_NTF.3.d3
+		ai_chance = { factor = 1 }
+		trigger = { has_country_flag = NTF_setting_d_flag }
+		clr_country_flag = NTF_d2_flag
+		clr_country_flag = NTF_d1_flag
+		clr_country_flag = NTF_d4_flag
+		clr_country_flag = NTF_d5_flag
+		set_country_flag = NTF_d3_flag
+	}
+	option = { # 目的4
+		name = YE_NTF.3.d4
+		ai_chance = { factor = 1 }
+		trigger = { has_country_flag = NTF_setting_d_flag }
+		clr_country_flag = NTF_d2_flag
+		clr_country_flag = NTF_d3_flag
+		clr_country_flag = NTF_d1_flag
+		clr_country_flag = NTF_d5_flag
+		set_country_flag = NTF_d4_flag
+	}
+	option = { # 目的5
+		name = YE_NTF.3.d5
+		ai_chance = { factor = 1 }
+		trigger = { has_country_flag = NTF_setting_d_flag }
+		clr_country_flag = NTF_d2_flag
+		clr_country_flag = NTF_d3_flag
+		clr_country_flag = NTF_d4_flag
+		clr_country_flag = NTF_d1_flag
+		set_country_flag = NTF_d5_flag
+	}
+
+	option = { # 终点1-罗祆航线
+		name = YE_NTF.3.e1
+		ai_chance = { factor = 1 }
+		trigger = { has_country_flag = NTF_setting_e_flag }
+		
+		set_country_flag = NTF_e1_flag
+		clr_country_flag = NTF_e2_flag
+		clr_country_flag = NTF_e3_flag
+		clr_country_flag = NTF_e4_flag
+		clr_country_flag = NTF_e5_flag
+		clr_country_flag = NTF_e6_flag
+		clr_country_flag = NTF_e7_flag
+		clr_country_flag = NTF_e8_flag
+	}
+	option = { # 终点2-
+		name = YE_NTF.3.e2
+		ai_chance = { factor = 1 }
+		trigger = { has_country_flag = NTF_setting_e_flag }
+		clr_country_flag = NTF_e1_flag
+		set_country_flag = NTF_e2_flag
+		clr_country_flag = NTF_e3_flag
+		clr_country_flag = NTF_e4_flag
+		clr_country_flag = NTF_e5_flag
+		clr_country_flag = NTF_e6_flag
+		clr_country_flag = NTF_e7_flag
+		clr_country_flag = NTF_e8_flag
+	}
+	option = { # 终点3
+		name = YE_NTF.3.e3
+		ai_chance = { factor = 1 }
+		trigger = { has_country_flag = NTF_setting_e_flag }
+		clr_country_flag = NTF_e1_flag
+		clr_country_flag = NTF_e2_flag
+		set_country_flag = NTF_e3_flag
+		clr_country_flag = NTF_e4_flag
+		clr_country_flag = NTF_e5_flag
+		clr_country_flag = NTF_e6_flag
+		clr_country_flag = NTF_e7_flag
+		clr_country_flag = NTF_e8_flag
+	}
+	option = { # 终点4
+		name = YE_NTF.3.e4
+		ai_chance = { factor = 1 }
+		trigger = { has_country_flag = NTF_setting_e_flag }
+		clr_country_flag = NTF_e1_flag
+		clr_country_flag = NTF_e2_flag
+		clr_country_flag = NTF_e3_flag
+		set_country_flag = NTF_e4_flag
+		clr_country_flag = NTF_e5_flag
+		clr_country_flag = NTF_e6_flag
+		clr_country_flag = NTF_e7_flag
+		clr_country_flag = NTF_e8_flag
+	}
+	option = { # 终点5
+		name = YE_NTF.3.e5
+		ai_chance = { factor = 1 }
+		trigger = { has_country_flag = NTF_setting_e_flag }
+		clr_country_flag = NTF_e1_flag
+		clr_country_flag = NTF_e2_flag
+		clr_country_flag = NTF_e3_flag
+		clr_country_flag = NTF_e4_flag
+		set_country_flag = NTF_e5_flag
+		clr_country_flag = NTF_e6_flag
+		clr_country_flag = NTF_e7_flag
+		clr_country_flag = NTF_e8_flag
+	}
+	option = { # 终点6
+		name = YE_NTF.3.e6
+		ai_chance = { factor = 1 }
+		trigger = { has_country_flag = NTF_setting_e_flag }
+		clr_country_flag = NTF_e1_flag
+		clr_country_flag = NTF_e2_flag
+		clr_country_flag = NTF_e3_flag
+		clr_country_flag = NTF_e4_flag
+		clr_country_flag = NTF_e5_flag
+		set_country_flag = NTF_e6_flag
+		clr_country_flag = NTF_e7_flag
+		clr_country_flag = NTF_e8_flag
+	}
+	option = { # 终点7
+		name = YE_NTF.3.e7
+		ai_chance = { factor = 1 }
+		trigger = { has_country_flag = NTF_setting_e_flag }
+		clr_country_flag = NTF_e1_flag
+		clr_country_flag = NTF_e2_flag
+		clr_country_flag = NTF_e3_flag
+		clr_country_flag = NTF_e4_flag
+		clr_country_flag = NTF_e5_flag
+		clr_country_flag = NTF_e6_flag
+		set_country_flag = NTF_e7_flag
+		clr_country_flag = NTF_e8_flag
+	}
+	option = { # 终点8
+		name = YE_NTF.3.e8
+		ai_chance = { factor = 1 }
+		trigger = { has_country_flag = NTF_setting_e_flag }
+		clr_country_flag = NTF_e1_flag
+		clr_country_flag = NTF_e2_flag
+		clr_country_flag = NTF_e3_flag
+		clr_country_flag = NTF_e4_flag
+		clr_country_flag = NTF_e5_flag
+		clr_country_flag = NTF_e6_flag
+		clr_country_flag = NTF_e7_flag
+		set_country_flag = NTF_e8_flag
+	}
+
+	after = {
+		clr_country_flag = NTF_setting_c_flag
+		clr_country_flag = NTF_setting_d_flag
+		clr_country_flag = NTF_setting_e_flag
+		country_event = { id = YE_NTF.2 }
+	}
+}
+
+province_event = { #4 启航
+	id = YE_NTF.4
+	title = YE_NTF.4.T
+	desc = YE_NTF.4.D
+	picture = BAD_WITH_MONARCH_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+	}
+	
+	option = {
+		name = YE_NTF.4.a
+		ai_chance = { factor = 1 }
+	}
+
+	after = {
+		province_event = { id = YE_NTF.0 days = 1 }
+	}
+}
+
+# 南洋贸易船队-港口事件组 10 16-30
+
+province_event = { #10 抵港
+	id = YE_NTF.10
+	title = YE_NTF.10.T
+	desc = YE_NTF.10.D
+	picture = BAD_WITH_MONARCH_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+	}
+	
+	option = {
+		name = YE_NTF.10.a
+		ai_chance = { factor = 1 }
+	}
+
+	after = {
+		province_event = { id = YE_NTF.0 days = 1 }
+		YE_NTF_trigger_prov_events = yes
+	}
+}
+
+
+province_event = { #16 人鱼命案
+	id = YE_NTF.16
+	title = YE_NTF.16.T
+	desc = YE_NTF.16.D
+	picture = BAD_WITH_MONARCH_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+	}
+	
+	option = {
+		name = YE_NTF.16.a
+		ai_chance = { factor = 1 }
+	}
+
+	after = {
+		province_event = { id = YE_NTF.0 days = 1 }
+	}
+}
+
+province_event = { #17 水手上岸
+	id = YE_NTF.17
+	title = YE_NTF.17.T
+	desc = YE_NTF.17.D
+	picture = BAD_WITH_MONARCH_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+	}
+	
+	option = {
+		name = YE_NTF.17.a
+		ai_chance = { factor = 1 }
+	}
+
+}
+
+province_event = { #18 以物易物 
+	id = YE_NTF.18
+	title = YE_NTF.18.T
+	desc = YE_NTF.18.D
+	picture = BAD_WITH_MONARCH_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+	}
+	
+	option = {
+		name = YE_NTF.18.a
+		ai_chance = { factor = 1 }
+	}
+
+}
+
+province_event = { #19 洋钱 
+	id = YE_NTF.19
+	title = YE_NTF.19.T
+	desc = YE_NTF.19.D
+	picture = BAD_WITH_MONARCH_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+	}
+	
+	option = {
+		name = YE_NTF.19.a
+		ai_chance = { factor = 1 }
+	}
+
+}
+
+province_event = { #20 港口狭小 
+	id = YE_NTF.20
+	title = YE_NTF.20.T
+	desc = YE_NTF.20.D
+	picture = BAD_WITH_MONARCH_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+	}
+	
+	option = {
+		name = YE_NTF.20.a
+		ai_chance = { factor = 1 }
+	}
+
+}
+
+province_event = { #21 繁荣一时
+	id = YE_NTF.21
+	title = YE_NTF.21.T
+	desc = YE_NTF.21.D
+	picture = BAD_WITH_MONARCH_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+	}
+	
+	option = {
+		name = YE_NTF.21.a
+		ai_chance = { factor = 1 }
+	}
+
+}
+
+province_event = { #22 异域信仰 # 转变宗教
+	id = YE_NTF.22
+	title = YE_NTF.22.T
+	desc = YE_NTF.22.D
+	picture = BAD_WITH_MONARCH_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+	}
+	
+	option = {
+		name = YE_NTF.22.a
+		ai_chance = { factor = 1 }
+	}
+
+}
+
+province_event = { #23 生根发芽 # +宗教中心
+	id = YE_NTF.23
+	title = YE_NTF.23.T
+	desc = YE_NTF.23.D
+	picture = BAD_WITH_MONARCH_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+	}
+	
+	option = {
+		name = YE_NTF.23.a
+		ai_chance = { factor = 1 }
+	}
+
+}
+
+province_event = { #24 风俗转变 # +文化进度
+	id = YE_NTF.24
+	title = YE_NTF.24.T
+	desc = YE_NTF.24.D
+	picture = BAD_WITH_MONARCH_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+	}
+	
+	option = {
+		name = YE_NTF.24.a
+		ai_chance = { factor = 1 }
+	}
+
+}
+
+province_event = { #25 崭新面目 # 转变文化
+	id = YE_NTF.25
+	title = YE_NTF.25.T
+	desc = YE_NTF.25.D
+	picture = BAD_WITH_MONARCH_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+	}
+	
+	option = {
+		name = YE_NTF.25.a
+		ai_chance = { factor = 1 }
+	}
+
+}
+
+province_event = { #26 海商会馆 
+	id = YE_NTF.26
+	title = YE_NTF.26.T
+	desc = YE_NTF.26.D
+	picture = BAD_WITH_MONARCH_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+	}
+	
+	option = {
+		name = YE_NTF.26.a
+		ai_chance = { factor = 1 }
+	}
+
+}
+
+province_event = { #27 搜查要犯 #前往政治难民 
+	id = YE_NTF.27
+	title = YE_NTF.27.T
+	desc = YE_NTF.27.D
+	picture = BAD_WITH_MONARCH_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+	}
+	
+	option = {
+		name = YE_NTF.27.a
+		ai_chance = { factor = 1 }
+	}
+
+}
+
+province_event = { #28 物种迁徙
+	id = YE_NTF.28
+	title = YE_NTF.28.T
+	desc = YE_NTF.28.D
+	picture = BAD_WITH_MONARCH_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+	}
+	
+	option = {
+		name = YE_NTF.28.a
+		ai_chance = { factor = 1 }
+	}
+
+}
+
+province_event = { #29 护航请求
+	id = YE_NTF.29
+	title = YE_NTF.29.T
+	desc = YE_NTF.29.D
+	picture = BAD_WITH_MONARCH_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+	}
+	
+	option = {
+		name = YE_NTF.29.a
+		ai_chance = { factor = 1 }
+	}
+
+}
+
+province_event = { #30 烟州探险家
+	id = YE_NTF.30
+	title = YE_NTF.30.T
+	desc = YE_NTF.30.D
+	picture = BAD_WITH_MONARCH_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+	}
+	
+	option = {
+		name = YE_NTF.30.a
+		ai_chance = { factor = 1 }
+	}
+
+}
+
+
+#南洋贸易船队-母国事件组  40-50
+province_event = { #40 结算
+	id = YE_NTF.40
+	title = YE_NTF.40.T
+	desc = YE_NTF.40.D
+	picture = BAD_WITH_MONARCH_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+	}
+	immediate = {
+	}
+	option = {
+		name = YE_NTF.40.a
+		ai_chance = { factor = 1 }
+	}
+	after = {
+		YE_NTF_clr_gflag = yes
+	}
+}
+
+province_event = { #41 海盗猖獗
+	id = YE_NTF.41
+	title = YE_NTF.41.T
+	desc = YE_NTF.41.D
+	picture = BAD_WITH_MONARCH_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+	}
+	immediate = {
+	}
+	option = {
+		name = YE_NTF.41.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+province_event = { #42 遗迹探险
+	id = YE_NTF.42
+	title = YE_NTF.42.T
+	desc = YE_NTF.42.D
+	picture = BAD_WITH_MONARCH_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+	}
+	immediate = {
+	}
+	option = {
+		name = YE_NTF.42.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+province_event = { #43 利润使命
+	id = YE_NTF.43
+	title = YE_NTF.43.T
+	desc = YE_NTF.43.D
+	picture = BAD_WITH_MONARCH_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+	}
+	immediate = {
+	}
+	option = {
+		name = YE_NTF.43.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+province_event = { #44 声誉使命
+	id = YE_NTF.44
+	title = YE_NTF.44.T
+	desc = YE_NTF.44.D
+	picture = BAD_WITH_MONARCH_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+	}
+	immediate = {
+	}
+	option = {
+		name = YE_NTF.44.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+province_event = { #45 宗教使命
+	id = YE_NTF.45
+	title = YE_NTF.45.T
+	desc = YE_NTF.45.D
+	picture = BAD_WITH_MONARCH_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+	}
+	immediate = {
+	}
+	option = {
+		name = YE_NTF.45.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+province_event = { #46 文化使命
+	id = YE_NTF.46
+	title = YE_NTF.46.T
+	desc = YE_NTF.46.D
+	picture = BAD_WITH_MONARCH_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+	}
+	immediate = {
+	}
+	option = {
+		name = YE_NTF.46.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+province_event = { #47 间谍使命
+	id = YE_NTF.47
+	title = YE_NTF.47.T
+	desc = YE_NTF.47.D
+	picture = BAD_WITH_MONARCH_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+	}
+	immediate = {
+	}
+	option = {
+		name = YE_NTF.47.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+province_event = { #48 移民抵港
+	id = YE_NTF.48
+	title = YE_NTF.48.T
+	desc = YE_NTF.48.D
+	picture = BAD_WITH_MONARCH_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+	}
+	immediate = {
+	}
+	option = {
+		name = YE_NTF.48.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+province_event = { #49 异域魔器
+	id = YE_NTF.49
+	title = YE_NTF.49.T
+	desc = YE_NTF.49.D
+	picture = BAD_WITH_MONARCH_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+	}
+	immediate = {
+	}
+	option = {
+		name = YE_NTF.49.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+province_event = { #50 探险家
+	id = YE_NTF.160
+	title = YE_NTF.160.T
+	desc = YE_NTF.160.D
+	picture = BAD_WITH_MONARCH_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+	}
+	immediate = {
+	}
+	option = {
+		name = YE_NTF.160.a
+		ai_chance = { factor = 1 }
+	}
+}

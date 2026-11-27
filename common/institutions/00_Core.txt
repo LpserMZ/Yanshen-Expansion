@@ -87,6 +87,7 @@ feudalism = {
 						technology_group = tech_baashidi
 						
 						technology_group = tech_insyaa_kobolds
+						technology_group = tech_yanshen
 						
 						AND = {
 							technology_group = tech_inyaswarosa

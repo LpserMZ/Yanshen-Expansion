@@ -394,7 +394,7 @@ country_decisions = {
 			factor = 400
 		}
 	}
-	form_Xi_rank_II = { #曦
+	form_Yue_rank_II = { #樾
 		major = yes
 		potential = {
 			government = monarchy
@@ -406,7 +406,7 @@ country_decisions = {
 			was_never_end_game_tag_trigger = yes
 
 			NOT = { exists = YZ1 }
-			NOT = { has_global_flag = form_Xi_rank_II_gflag }
+			NOT = { has_global_flag = form_Yue_rank_II_gflag }
 		}
 		provinces_to_highlight = {
 			superregion = yanshen_superregion
@@ -423,7 +423,7 @@ country_decisions = {
 			is_free_or_tributary_trigger = yes
 			capital_scope = {
 				OR = {
-					region = nanyue_region
+					region = zhuyue_region
 					area = xiyun_area
 				}
 			}
@@ -441,7 +441,7 @@ country_decisions = {
 			set_capital = 4893
 			add_government_reform = yan_empire_reform
 			add_country_modifier = { name = "centralization_modifier" duration = 7300 }
-			set_global_flag = form_Xi_rank_II_gflag
+			set_global_flag = form_Yue_rank_II_gflag
 			###
 			yanshen_superregion = {
 				add_permanent_claim = ROOT
@@ -704,7 +704,7 @@ country_decisions = {
 			capital_scope = {
 				OR = {
 					region = lower_yanshen_region
-					region = nanyue_region
+					region = zhuyue_region
 				}
 			}
 			num_of_owned_provinces_with = {
@@ -1336,6 +1336,59 @@ country_decisions = {
 		}
 	}
 
+	# NTF_start_and_setting = { # 阳洲贸易船队-启动与设置
+	# 	major = yes
+	# 	potential = {
+	# 		OR = {
+	# 			4879 = { 
+	# 				has_province_flag = NTF_origin_flag 
+	# 				owned_by = ROOT 
+	# 			}
+	# 			4884 = { 
+	# 				has_province_flag = NTF_origin_flag 
+	# 				owned_by = ROOT 
+	# 			}
+	# 		}
+	# 	}
+	# 	allow = {
+	# 		custom_trigger_tooltip = {
+	# 			tooltip = NTF_start_and_setting_trigger_1_tooltip
+	# 			OR = {
+	# 				4879 = { 
+	# 					has_province_flag = NTF_origin_flag 
+	# 					owned_by = ROOT 
+	# 				}
+	# 				4884 = { 
+	# 					has_province_flag = NTF_origin_flag 
+	# 					owned_by = ROOT 
+	# 				}
+	# 			}
+	# 		}
+	# 		custom_trigger_tooltip = {
+	# 			tooltip = NTF_start_and_setting_trigger_2_tooltip
+	# 			OR = {
+	# 				NOT = { has_global_flag = NTF_in_progress_gflag }
+	# 				had_global_flag = {
+	# 					flag = NTF_in_progress_gflag
+	# 					days = 3650
+	# 				}
+	# 			}
+	# 		}	
+
+	# 	}
+	# 	effect = {
+	# 		country_event = { id = YE_NTF.2 }
+	# 	}
+	# 	ai_will_do = {
+	# 		factor = 100
+	# 	}
+	# 	NTF_start_and_setting_title:0 "阳洲贸易船队,启航！"
+	# 	NTF_start_and_setting_desc:0 "文本"
+	# 	#NTF_start_and_setting_tooltip:0 ""
+	# 	NTF_start_and_setting_trigger_1_tooltip:0 "阳洲贸易船队启航地由我国拥有"
+	# 	NTF_start_and_setting_trigger_2_tooltip:0 "十年内此决议只能启用一次"
+	# }
+
 	# <decision> = {
 	# 	major = no
 	# 	potential = {
@@ -1382,9 +1435,167 @@ country_decisions = {
 	# 	_desc:0 ""
 	# 	_tooltip:0 ""
 	# }
-
-
-
+	# <decision> = {
+	# 	major = no
+	# 	potential = {
+	# 		has_ruler_flag = 
+	# 	}
+	# 	allow = {
+	# 		NOT = {
+	# 			has_country_modifier = YE_lanjinhui_ruler_action_cooldown_modifier
+	# 		}
+	# 	}
+	# 	effect = {
+	# 		add_ruler_modifier = {
+	# 			name = YE_lanjinhui_ruler_action_cooldown_modifier
+	# 			duration = 1825
+	# 		}
+	# 	}
+	# 	ai_will_do = {
+	# 		factor = 0
+	# 	}
+	# 	_title:0 ""
+	# 	_desc:0 ""
+	# 	_tooltip:0 ""
+	# }
+	# <decision> = {
+	# 	major = no
+	# 	potential = {
+	# 		has_ruler_flag = 
+	# 	}
+	# 	allow = {
+	# 		NOT = {
+	# 			has_country_modifier = YE_lanjinhui_ruler_action_cooldown_modifier
+	# 		}
+	# 	}
+	# 	effect = {
+	# 		add_ruler_modifier = {
+	# 			name = YE_lanjinhui_ruler_action_cooldown_modifier
+	# 			duration = 1825
+	# 		}
+	# 	}
+	# 	ai_will_do = {
+	# 		factor = 0
+	# 	}
+	# 	_title:0 ""
+	# 	_desc:0 ""
+	# 	_tooltip:0 ""
+	# }
+	# <decision> = {
+	# 	major = no
+	# 	potential = {
+	# 		has_ruler_flag = 
+	# 	}
+	# 	allow = {
+	# 		NOT = {
+	# 			has_country_modifier = YE_lanjinhui_ruler_action_cooldown_modifier
+	# 		}
+	# 	}
+	# 	effect = {
+	# 		add_ruler_modifier = {
+	# 			name = YE_lanjinhui_ruler_action_cooldown_modifier
+	# 			duration = 1825
+	# 		}
+	# 	}
+	# 	ai_will_do = {
+	# 		factor = 0
+	# 	}
+	# 	_title:0 ""
+	# 	_desc:0 ""
+	# 	_tooltip:0 ""
+	# }	
+	# <decision> = {
+	# 	major = no
+	# 	potential = {
+	# 		has_ruler_flag = 
+	# 	}
+	# 	allow = {
+	# 		NOT = {
+	# 			has_country_modifier = YE_lanjinhui_ruler_action_cooldown_modifier
+	# 		}
+	# 	}
+	# 	effect = {
+	# 		add_ruler_modifier = {
+	# 			name = YE_lanjinhui_ruler_action_cooldown_modifier
+	# 			duration = 1825
+	# 		}
+	# 	}
+	# 	ai_will_do = {
+	# 		factor = 0
+	# 	}
+	# 	_title:0 ""
+	# 	_desc:0 ""
+	# 	_tooltip:0 ""
+	# }
+	# <decision> = {
+	# 	major = no
+	# 	potential = {
+	# 		has_ruler_flag = 
+	# 	}
+	# 	allow = {
+	# 		NOT = {
+	# 			has_country_modifier = YE_lanjinhui_ruler_action_cooldown_modifier
+	# 		}
+	# 	}
+	# 	effect = {
+	# 		add_ruler_modifier = {
+	# 			name = YE_lanjinhui_ruler_action_cooldown_modifier
+	# 			duration = 1825
+	# 		}
+	# 	}
+	# 	ai_will_do = {
+	# 		factor = 0
+	# 	}
+	# 	_title:0 ""
+	# 	_desc:0 ""
+	# 	_tooltip:0 ""
+	# }
+	# <decision> = {
+	# 	major = no
+	# 	potential = {
+	# 		has_ruler_flag = 
+	# 	}
+	# 	allow = {
+	# 		NOT = {
+	# 			has_country_modifier = YE_lanjinhui_ruler_action_cooldown_modifier
+	# 		}
+	# 	}
+	# 	effect = {
+	# 		add_ruler_modifier = {
+	# 			name = YE_lanjinhui_ruler_action_cooldown_modifier
+	# 			duration = 1825
+	# 		}
+	# 	}
+	# 	ai_will_do = {
+	# 		factor = 0
+	# 	}
+	# 	_title:0 ""
+	# 	_desc:0 ""
+	# 	_tooltip:0 ""
+	# }
+	# <decision> = {
+	# 	major = no
+	# 	potential = {
+	# 		has_ruler_flag = 
+	# 	}
+	# 	allow = {
+	# 		NOT = {
+	# 			has_country_modifier = YE_lanjinhui_ruler_action_cooldown_modifier
+	# 		}
+	# 	}
+	# 	effect = {
+	# 		add_ruler_modifier = {
+	# 			name = YE_lanjinhui_ruler_action_cooldown_modifier
+	# 			duration = 1825
+	# 		}
+	# 	}
+	# 	ai_will_do = {
+	# 		factor = 0
+	# 	}
+	# 	_title:0 ""
+	# 	_desc:0 ""
+	# 	_tooltip:0 ""
+	# }
 
 
 
